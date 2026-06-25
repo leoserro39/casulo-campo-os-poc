@@ -1,0 +1,19 @@
+# CASULO Campo OS - Promotion Decision
+
+- status: RECORDED
+- decided_utc: 20260625_201247Z
+- operator: Leonardo Serro
+- decision: EXTEND_PILOT
+- source_pilot_report: 05_outputs/reports/pilot_measurement_report.json
+- measurement_count: 1
+- overall_signal: EXTEND_PILOT
+- canonical_effect: NONE_EXTEND_PILOT
+- promotion_allowed: false
+
+## Notes
+
+Only one pilot measurement exists. Extend pilot before long-term branch promotion.
+
+## Next action
+
+- Collect more pilot measurements before promotion.

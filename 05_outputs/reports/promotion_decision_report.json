@@ -1,0 +1,31 @@
+{
+  "generated_utc": "2026-06-25T20:12:47.690396+00:00",
+  "status": "PROMOTION_DECISION_REPORT",
+  "decision_count": 1,
+  "latest_decision": {
+    "path": "05_outputs/promotion_decisions/promotion_decision_extend_pilot_20260625_201247Z.json",
+    "decided_utc": "20260625_201247Z",
+    "operator": "Leonardo Serro",
+    "decision": "EXTEND_PILOT",
+    "measurement_count": 1,
+    "overall_signal": "EXTEND_PILOT",
+    "promotion_allowed": false,
+    "canonical_effect": "NONE_EXTEND_PILOT",
+    "next_action": "Collect more pilot measurements before promotion."
+  },
+  "promotion_status": "EXTEND_PILOT",
+  "promotion_allowed": false,
+  "decisions": [
+    {
+      "path": "05_outputs/promotion_decisions/promotion_decision_extend_pilot_20260625_201247Z.json",
+      "decided_utc": "20260625_201247Z",
+      "operator": "Leonardo Serro",
+      "decision": "EXTEND_PILOT",
+      "measurement_count": 1,
+      "overall_signal": "EXTEND_PILOT",
+      "promotion_allowed": false,
+      "canonical_effect": "NONE_EXTEND_PILOT",
+      "next_action": "Collect more pilot measurements before promotion."
+    }
+  ]
+}
