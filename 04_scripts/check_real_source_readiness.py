@@ -26,6 +26,13 @@ REQUIRED_COLUMNS = [
 PHONE_RE = re.compile(r"(\+?\d[\d\s().-]{7,}\d)")
 EMAIL_RE = re.compile(r"[\w\.-]+@[\w\.-]+\.\w+")
 
+PII_SKIP_COLUMNS = {
+    "created_at",
+    "response_time_minutes",
+}
+
+DATETIME_LIKE_RE = re.compile(r"^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}Z?$")
+
 
 def rel(path):
     return str(path.relative_to(ROOT))
@@ -47,11 +54,23 @@ def pii_hits(rows):
     hits = []
     for idx, row in enumerate(rows, start=1):
         for key, value in row.items():
-            text = value or ""
+            text = (value or "").strip()
+
+            if not text:
+                continue
+
+            if key in PII_SKIP_COLUMNS:
+                continue
+
+            if DATETIME_LIKE_RE.match(text):
+                continue
+
             if EMAIL_RE.search(text):
                 hits.append({"row": idx, "column": key, "type": "email"})
             elif PHONE_RE.search(text):
-                hits.append({"row": idx, "column": key, "type": "phone_like"})
+                digits = re.sub(r"\D", "", text)
+                if len(digits) >= 10:
+                    hits.append({"row": idx, "column": key, "type": "phone_like"})
     return hits
 
 
