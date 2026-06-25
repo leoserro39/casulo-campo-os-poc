@@ -1,44 +1,44 @@
 {
   "evidence_delta": {
     "status": "REAL_EVIDENCE_DELTA",
-    "generated_utc": "20260625_213619Z",
+    "generated_utc": "20260625_214440Z",
     "source": "00_inbox/sources/real_atendimento_test/atendimento_real_sanitized.csv",
-    "source_name": "real_atendimento_cycle_002_local_demo",
+    "source_name": "real_atendimento_cycle_003_local_demo",
     "intake_report": "05_outputs/reports/real_source_intake_report.json",
     "readiness_gate": "READY_FOR_INTAKE",
     "intake_gate": "ALLOW_EVIDENCE_ONLY_WITH_HUMAN_REVIEW",
-    "trust_score": 0.945,
+    "trust_score": 0.947,
     "hallucination_risk": "MEDIUM",
     "delta": {
-      "Delta_L": 0.528,
-      "H_pre": 0.273,
-      "unresolved_ratio": 0.667,
-      "unknown_status_ratio": 0.083,
-      "missing_response_time_ratio": 0.5,
+      "Delta_L": 0.437,
+      "H_pre": 0.27,
+      "unresolved_ratio": 0.462,
+      "unknown_status_ratio": 0.077,
+      "missing_response_time_ratio": 0.462,
       "contradiction_ratio": 0.0
     },
     "canonical_effect": "NONE"
   },
   "proposal": {
     "status": "REAL_EVIDENCE_PROPOSAL",
-    "generated_utc": "20260625_213619Z",
-    "proposal_name": "real_atendimento_cycle_002_local_demo_proposal",
+    "generated_utc": "20260625_214440Z",
+    "proposal_name": "real_atendimento_cycle_003_local_demo_proposal",
     "source": "00_inbox/sources/real_atendimento_test/atendimento_real_sanitized.csv",
-    "source_name": "real_atendimento_cycle_002_local_demo",
+    "source_name": "real_atendimento_cycle_003_local_demo",
     "proposal_gate": "PROPOSAL_REQUIRES_HUMAN_REVIEW",
     "requires_human_review": true,
     "canonical_effect": "NONE",
     "evidence_summary": {
-      "row_count": 12,
-      "contact_count": 7,
-      "resolved_rows": 3,
-      "unresolved_rows": 8,
+      "row_count": 13,
+      "contact_count": 8,
+      "resolved_rows": 6,
+      "unresolved_rows": 6,
       "unknown_status_rows": 1,
-      "avg_response_time_minutes": 15.0,
-      "trust_score": 0.945,
+      "avg_response_time_minutes": 8.57,
+      "trust_score": 0.947,
       "hallucination_risk": "MEDIUM",
-      "Delta_L": 0.528,
-      "H_pre": 0.273
+      "Delta_L": 0.437,
+      "H_pre": 0.27
     },
     "proposed_actions": [
       {
@@ -65,7 +65,7 @@
         "action": "set_initial_response_time_watch",
         "description": "Use the current average response time as baseline and watch it during the next pilot cycle.",
         "reason": "The evidence baseline is available for comparison.",
-        "baseline_avg_response_time_minutes": 15.0
+        "baseline_avg_response_time_minutes": 8.57
       }
     ],
     "human_review_questions": [

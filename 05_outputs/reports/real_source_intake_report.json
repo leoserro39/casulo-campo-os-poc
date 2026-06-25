@@ -1,9 +1,9 @@
 {
   "manifest": {
     "status": "REAL_SOURCE_INTAKE_MANIFEST",
-    "generated_utc": "20260625_213619Z",
+    "generated_utc": "20260625_214440Z",
     "source": "00_inbox/sources/real_atendimento_test/atendimento_real_sanitized.csv",
-    "source_name": "real_atendimento_cycle_002_local_demo",
+    "source_name": "real_atendimento_cycle_003_local_demo",
     "columns": [
       "record_id",
       "created_at",
@@ -16,28 +16,28 @@
       "resolved_status",
       "notes"
     ],
-    "row_count": 12,
+    "row_count": 13,
     "readiness_gate": "READY_FOR_INTAKE",
     "canonical_effect": "EVIDENCE_ONLY"
   },
   "trust": {
     "status": "REAL_SOURCE_TRUST_REPORT",
-    "generated_utc": "20260625_213619Z",
+    "generated_utc": "20260625_214440Z",
     "source": "00_inbox/sources/real_atendimento_test/atendimento_real_sanitized.csv",
-    "source_name": "real_atendimento_cycle_002_local_demo",
-    "trust_score": 0.945,
+    "source_name": "real_atendimento_cycle_003_local_demo",
+    "trust_score": 0.947,
     "hallucination_risk": "MEDIUM",
     "quality": {
-      "row_count": 12,
-      "contact_count": 7,
-      "inbound_rows": 8,
-      "outbound_rows": 4,
-      "resolved_rows": 3,
-      "unresolved_rows": 8,
+      "row_count": 13,
+      "contact_count": 8,
+      "inbound_rows": 10,
+      "outbound_rows": 3,
+      "resolved_rows": 6,
+      "unresolved_rows": 6,
       "unknown_status_rows": 1,
-      "response_time_count": 6,
-      "avg_response_time_minutes": 15.0,
-      "empty_ratio": 0.05,
+      "response_time_count": 7,
+      "avg_response_time_minutes": 8.57,
+      "empty_ratio": 0.046,
       "contradictions_count": 0,
       "contradictions_sample": []
     },
@@ -50,20 +50,20 @@
   },
   "delta": {
     "status": "REAL_SOURCE_INTAKE_DELTA",
-    "generated_utc": "20260625_213619Z",
+    "generated_utc": "20260625_214440Z",
     "source": "00_inbox/sources/real_atendimento_test/atendimento_real_sanitized.csv",
-    "source_name": "real_atendimento_cycle_002_local_demo",
+    "source_name": "real_atendimento_cycle_003_local_demo",
     "gate": "ALLOW_EVIDENCE_ONLY_WITH_HUMAN_REVIEW",
     "canonical_effect": "EVIDENCE_ONLY",
     "next_action": "Use this evidence for a gated mesh delta/proposal. Do not mutate branch state automatically.",
     "summary": {
-      "row_count": 12,
-      "contact_count": 7,
-      "resolved_rows": 3,
-      "unresolved_rows": 8,
+      "row_count": 13,
+      "contact_count": 8,
+      "resolved_rows": 6,
+      "unresolved_rows": 6,
       "unknown_status_rows": 1,
-      "avg_response_time_minutes": 15.0,
-      "trust_score": 0.945,
+      "avg_response_time_minutes": 8.57,
+      "trust_score": 0.947,
       "hallucination_risk": "MEDIUM"
     }
   }
