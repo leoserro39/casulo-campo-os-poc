@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+import argparse
 import json
 import subprocess
 from datetime import datetime, timezone
@@ -42,9 +43,14 @@ def artifact(name, pattern):
 
 
 def main():
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--cycle-name", default="real_atendimento_sample_cycle_001")
+    args = parser.parse_args()
+
     OUT.mkdir(parents=True, exist_ok=True)
     REPORTS.mkdir(parents=True, exist_ok=True)
 
+    cycle_name = args.cycle_name
     generated = datetime.now(timezone.utc).strftime("%Y%m%d_%H%M%SZ")
     commit = run(["git", "rev-parse", "--short", "HEAD"])
     branch = run(["git", "branch", "--show-current"])
@@ -98,7 +104,7 @@ def main():
     snapshot = {
         "status": "REAL_TEST_CYCLE_SNAPSHOT",
         "generated_utc": generated,
-        "cycle": "real_atendimento_sample_cycle_001",
+        "cycle": cycle_name,
         "branch": branch,
         "commit": commit,
         "source_of_truth": "git",
@@ -128,8 +134,9 @@ def main():
         "recent_commits": recent_commits,
     }
 
-    json_path = OUT / "real_atendimento_sample_cycle_001_snapshot.json"
-    md_path = OUT / "REAL_ATENDIMENTO_SAMPLE_CYCLE_001_SNAPSHOT.md"
+    safe_cycle_name = "".join(ch if ch.isalnum() or ch in "-_" else "_" for ch in cycle_name).strip("_").lower()
+    json_path = OUT / ("%s_snapshot.json" % safe_cycle_name)
+    md_path = OUT / ("%s_SNAPSHOT.md" % safe_cycle_name.upper())
     report_json = REPORTS / "real_test_cycle_snapshot_report.json"
     report_md = REPORTS / "real_test_cycle_snapshot_report.md"
 
@@ -142,7 +149,7 @@ def main():
         "",
         "- status: REAL_TEST_CYCLE_SNAPSHOT",
         "- generated_utc: %s" % generated,
-        "- cycle: real_atendimento_sample_cycle_001",
+        "- cycle: %s" % cycle_name,
         "- branch: %s" % branch,
         "- commit: %s" % commit,
         "- source_of_truth: git",

@@ -92,6 +92,8 @@ def main():
     run([
         "python",
         "04_scripts/build_real_test_cycle_snapshot.py",
+        "--cycle-name",
+        args.cycle_name,
     ])
 
     run([
