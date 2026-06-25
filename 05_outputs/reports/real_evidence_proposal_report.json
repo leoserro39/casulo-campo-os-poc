@@ -1,0 +1,80 @@
+{
+  "evidence_delta": {
+    "status": "REAL_EVIDENCE_DELTA",
+    "generated_utc": "20260625_205033Z",
+    "source": "00_inbox/sources/real_atendimento_test/atendimento_real_sanitized_SAMPLE.csv",
+    "source_name": "real_atendimento_sample",
+    "intake_report": "05_outputs/reports/real_source_intake_report.json",
+    "readiness_gate": "READY_FOR_INTAKE",
+    "intake_gate": "ALLOW_EVIDENCE_ONLY_WITH_HUMAN_REVIEW",
+    "trust_score": 0.945,
+    "hallucination_risk": "MEDIUM",
+    "delta": {
+      "Delta_L": 0.504,
+      "H_pre": 0.278,
+      "unresolved_ratio": 0.6,
+      "unknown_status_ratio": 0.1,
+      "missing_response_time_ratio": 0.5,
+      "contradiction_ratio": 0.0
+    },
+    "canonical_effect": "NONE"
+  },
+  "proposal": {
+    "status": "REAL_EVIDENCE_PROPOSAL",
+    "generated_utc": "20260625_205033Z",
+    "proposal_name": "real_atendimento_sample_proposal",
+    "source": "00_inbox/sources/real_atendimento_test/atendimento_real_sanitized_SAMPLE.csv",
+    "source_name": "real_atendimento_sample",
+    "proposal_gate": "PROPOSAL_REQUIRES_HUMAN_REVIEW",
+    "requires_human_review": true,
+    "canonical_effect": "NONE",
+    "evidence_summary": {
+      "row_count": 10,
+      "contact_count": 6,
+      "resolved_rows": 3,
+      "unresolved_rows": 6,
+      "unknown_status_rows": 1,
+      "avg_response_time_minutes": 18.0,
+      "trust_score": 0.945,
+      "hallucination_risk": "MEDIUM",
+      "Delta_L": 0.504,
+      "H_pre": 0.278
+    },
+    "proposed_actions": [
+      {
+        "action": "standardize_status_taxonomy",
+        "description": "Use only new_contact, waiting_confirmation and resolved as the first controlled atendimento statuses.",
+        "reason": "The pilot evidence has unresolved and unknown status records."
+      },
+      {
+        "action": "create_daily_unresolved_queue",
+        "description": "Create a daily queue for unresolved conversations and contacts waiting for confirmation.",
+        "reason": "Unresolved rows should become visible before sales or operations depend on the flow."
+      },
+      {
+        "action": "measure_first_response_time",
+        "description": "Keep recording response_time_minutes for every first response event.",
+        "reason": "The current evidence has response time values but not for every record."
+      },
+      {
+        "action": "require_resolved_status",
+        "description": "Every atendimento record should carry resolved, unresolved or waiting_confirmation status.",
+        "reason": "Unknown status rows increase uncertainty and keep promotion blocked."
+      },
+      {
+        "action": "set_initial_response_time_watch",
+        "description": "Use the current average response time as baseline and watch it during the next pilot cycle.",
+        "reason": "The evidence baseline is available for comparison.",
+        "baseline_avg_response_time_minutes": 18.0
+      }
+    ],
+    "human_review_questions": [
+      "Does the status taxonomy match the real atendimento operation?",
+      "Is it acceptable to use this dataset as pilot evidence?",
+      "Should unknown status records be corrected before the next pilot cycle?",
+      "Who owns the daily unresolved queue?",
+      "What response time target should be used for the next cycle?"
+    ],
+    "next_action": "Send this proposal to human review. Do not mutate branch state automatically."
+  }
+}
