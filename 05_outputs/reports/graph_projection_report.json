@@ -1,0 +1,386 @@
+{
+  "generated_utc": "2026-06-25T20:25:05.175943+00:00",
+  "status": "GRAPH_PROJECTION",
+  "source_of_truth": "git",
+  "canonical_effect": "NONE",
+  "commit": "28cecca",
+  "node_count": 21,
+  "edge_count": 29,
+  "nodes": [
+    {
+      "id": "repo:casulo-campo-os-poc",
+      "type": "repo",
+      "label": "casulo-campo-os-poc",
+      "properties": {
+        "branch": "main",
+        "commit": "28cecca"
+      }
+    },
+    {
+      "id": "milestone:v1.0",
+      "type": "milestone",
+      "label": "Closed micrograph loop",
+      "properties": {
+        "version": "v1.0"
+      }
+    },
+    {
+      "id": "milestone:v1.1",
+      "type": "milestone",
+      "label": "Applied Delta Awareness",
+      "properties": {
+        "version": "v1.1"
+      }
+    },
+    {
+      "id": "milestone:v1.2",
+      "type": "milestone",
+      "label": "Pilot Measurement Loop",
+      "properties": {
+        "version": "v1.2"
+      }
+    },
+    {
+      "id": "milestone:v1.3",
+      "type": "milestone",
+      "label": "Promotion Decision Gate",
+      "properties": {
+        "version": "v1.3"
+      }
+    },
+    {
+      "id": "milestone:v1.4",
+      "type": "milestone",
+      "label": "Cross-Branch Sync Delta",
+      "properties": {
+        "version": "v1.4"
+      }
+    },
+    {
+      "id": "milestone:v1.5",
+      "type": "milestone",
+      "label": "Context Memory Packet",
+      "properties": {
+        "version": "v1.5"
+      }
+    },
+    {
+      "id": "milestone:v1.6",
+      "type": "milestone",
+      "label": "Graph Projection",
+      "properties": {
+        "version": "v1.6"
+      }
+    },
+    {
+      "id": "artifact:applied_return_delta",
+      "type": "artifact",
+      "label": "applied_return_delta",
+      "properties": {
+        "path": "05_outputs/applied_return_deltas/applied_return_delta_propor_melhoria_para_atendimento_whatsapp_20260625_194649Z.json",
+        "status": "APPLIED",
+        "decision": null,
+        "signal": null,
+        "canonical_effect": "APPEND_DOMAIN_DELTA_RECORD"
+      }
+    },
+    {
+      "id": "artifact:pilot_measurement",
+      "type": "artifact",
+      "label": "pilot_measurement",
+      "properties": {
+        "path": "05_outputs/pilot_measurements/pilot_measurement_atendimento_20260625_200828Z.json",
+        "status": "RECORDED",
+        "decision": null,
+        "signal": "PROMOTION_CANDIDATE",
+        "canonical_effect": null
+      }
+    },
+    {
+      "id": "artifact:promotion_decision",
+      "type": "artifact",
+      "label": "promotion_decision",
+      "properties": {
+        "path": "05_outputs/promotion_decisions/promotion_decision_extend_pilot_20260625_201247Z.json",
+        "status": "RECORDED",
+        "decision": "EXTEND_PILOT",
+        "signal": "EXTEND_PILOT",
+        "canonical_effect": "NONE_EXTEND_PILOT"
+      }
+    },
+    {
+      "id": "artifact:sync_delta",
+      "type": "artifact",
+      "label": "sync_delta",
+      "properties": {
+        "path": "05_outputs/sync_deltas/sync_delta_atendimento_20260625_201654Z.json",
+        "status": "SYNC_DELTA_PROPOSED",
+        "decision": null,
+        "signal": null,
+        "canonical_effect": "NONE"
+      }
+    },
+    {
+      "id": "artifact:context_packet",
+      "type": "artifact",
+      "label": "context_packet",
+      "properties": {
+        "path": "05_outputs/context_packets/context_memory_packet_latest.json",
+        "status": "CONTEXT_MEMORY_PACKET",
+        "decision": null,
+        "signal": null,
+        "canonical_effect": null
+      }
+    },
+    {
+      "id": "artifact:pilot_report",
+      "type": "artifact",
+      "label": "pilot_report",
+      "properties": {
+        "path": "05_outputs/reports/pilot_measurement_report.json",
+        "status": "PILOT_MEASUREMENT_REPORT",
+        "decision": null,
+        "signal": null,
+        "canonical_effect": null
+      }
+    },
+    {
+      "id": "artifact:promotion_report",
+      "type": "artifact",
+      "label": "promotion_report",
+      "properties": {
+        "path": "05_outputs/reports/promotion_decision_report.json",
+        "status": "PROMOTION_DECISION_REPORT",
+        "decision": null,
+        "signal": null,
+        "canonical_effect": null
+      }
+    },
+    {
+      "id": "artifact:sync_report",
+      "type": "artifact",
+      "label": "sync_report",
+      "properties": {
+        "path": "05_outputs/reports/cross_branch_sync_delta_report.json",
+        "status": "CROSS_BRANCH_SYNC_DELTA_REPORT",
+        "decision": null,
+        "signal": null,
+        "canonical_effect": "NONE"
+      }
+    },
+    {
+      "id": "branch:atendimento",
+      "type": "branch",
+      "label": "atendimento",
+      "properties": {}
+    },
+    {
+      "id": "gate:promotion",
+      "type": "gate",
+      "label": "Promotion Gate",
+      "properties": {
+        "promotion_allowed": false
+      }
+    },
+    {
+      "id": "branch:vendas",
+      "type": "branch",
+      "label": "vendas",
+      "properties": {}
+    },
+    {
+      "id": "branch:operacao",
+      "type": "branch",
+      "label": "operacao",
+      "properties": {}
+    },
+    {
+      "id": "branch:gestao",
+      "type": "branch",
+      "label": "gestao",
+      "properties": {}
+    }
+  ],
+  "edges": [
+    {
+      "source": "repo:casulo-campo-os-poc",
+      "target": "milestone:v1.0",
+      "type": "PRODUCED",
+      "properties": {}
+    },
+    {
+      "source": "repo:casulo-campo-os-poc",
+      "target": "milestone:v1.1",
+      "type": "PRODUCED",
+      "properties": {}
+    },
+    {
+      "source": "milestone:v1.0",
+      "target": "milestone:v1.1",
+      "type": "PRECEDES",
+      "properties": {}
+    },
+    {
+      "source": "repo:casulo-campo-os-poc",
+      "target": "milestone:v1.2",
+      "type": "PRODUCED",
+      "properties": {}
+    },
+    {
+      "source": "milestone:v1.1",
+      "target": "milestone:v1.2",
+      "type": "PRECEDES",
+      "properties": {}
+    },
+    {
+      "source": "repo:casulo-campo-os-poc",
+      "target": "milestone:v1.3",
+      "type": "PRODUCED",
+      "properties": {}
+    },
+    {
+      "source": "milestone:v1.2",
+      "target": "milestone:v1.3",
+      "type": "PRECEDES",
+      "properties": {}
+    },
+    {
+      "source": "repo:casulo-campo-os-poc",
+      "target": "milestone:v1.4",
+      "type": "PRODUCED",
+      "properties": {}
+    },
+    {
+      "source": "milestone:v1.3",
+      "target": "milestone:v1.4",
+      "type": "PRECEDES",
+      "properties": {}
+    },
+    {
+      "source": "repo:casulo-campo-os-poc",
+      "target": "milestone:v1.5",
+      "type": "PRODUCED",
+      "properties": {}
+    },
+    {
+      "source": "milestone:v1.4",
+      "target": "milestone:v1.5",
+      "type": "PRECEDES",
+      "properties": {}
+    },
+    {
+      "source": "repo:casulo-campo-os-poc",
+      "target": "milestone:v1.6",
+      "type": "PRODUCED",
+      "properties": {}
+    },
+    {
+      "source": "milestone:v1.5",
+      "target": "milestone:v1.6",
+      "type": "PRECEDES",
+      "properties": {}
+    },
+    {
+      "source": "repo:casulo-campo-os-poc",
+      "target": "artifact:applied_return_delta",
+      "type": "PRODUCED",
+      "properties": {}
+    },
+    {
+      "source": "repo:casulo-campo-os-poc",
+      "target": "artifact:pilot_measurement",
+      "type": "PRODUCED",
+      "properties": {}
+    },
+    {
+      "source": "repo:casulo-campo-os-poc",
+      "target": "artifact:promotion_decision",
+      "type": "PRODUCED",
+      "properties": {}
+    },
+    {
+      "source": "repo:casulo-campo-os-poc",
+      "target": "artifact:sync_delta",
+      "type": "PRODUCED",
+      "properties": {}
+    },
+    {
+      "source": "repo:casulo-campo-os-poc",
+      "target": "artifact:context_packet",
+      "type": "PRODUCED",
+      "properties": {}
+    },
+    {
+      "source": "repo:casulo-campo-os-poc",
+      "target": "artifact:pilot_report",
+      "type": "PRODUCED",
+      "properties": {}
+    },
+    {
+      "source": "repo:casulo-campo-os-poc",
+      "target": "artifact:promotion_report",
+      "type": "PRODUCED",
+      "properties": {}
+    },
+    {
+      "source": "repo:casulo-campo-os-poc",
+      "target": "artifact:sync_report",
+      "type": "PRODUCED",
+      "properties": {}
+    },
+    {
+      "source": "artifact:applied_return_delta",
+      "target": "branch:atendimento",
+      "type": "APPLIES_TO",
+      "properties": {}
+    },
+    {
+      "source": "artifact:applied_return_delta",
+      "target": "artifact:pilot_measurement",
+      "type": "MEASURED_BY",
+      "properties": {}
+    },
+    {
+      "source": "artifact:pilot_report",
+      "target": "artifact:promotion_decision",
+      "type": "DECIDED_BY",
+      "properties": {}
+    },
+    {
+      "source": "artifact:promotion_decision",
+      "target": "gate:promotion",
+      "type": "BLOCKED_BY",
+      "properties": {}
+    },
+    {
+      "source": "artifact:sync_delta",
+      "target": "branch:vendas",
+      "type": "SYNCS_TO",
+      "properties": {
+        "requires_human_review": true
+      }
+    },
+    {
+      "source": "artifact:sync_delta",
+      "target": "branch:operacao",
+      "type": "SYNCS_TO",
+      "properties": {
+        "requires_human_review": true
+      }
+    },
+    {
+      "source": "artifact:sync_delta",
+      "target": "branch:gestao",
+      "type": "SYNCS_TO",
+      "properties": {
+        "requires_human_review": true
+      }
+    },
+    {
+      "source": "artifact:context_packet",
+      "target": "repo:casulo-campo-os-poc",
+      "type": "SUMMARIZES",
+      "properties": {}
+    }
+  ]
+}
