@@ -1,0 +1,11 @@
+record_id,created_at,channel,contact_id_hash,direction,message_or_event_type,status,response_time_minutes,resolved_status,notes
+r001,2026-06-25T09:00:00Z,whatsapp,contact_hash_001,inbound,new_contact,open,,unresolved,sanitized sample
+r002,2026-06-25T09:08:00Z,whatsapp,contact_hash_001,outbound,first_response,waiting_confirmation,8,unresolved,sanitized sample
+r003,2026-06-25T09:30:00Z,whatsapp,contact_hash_001,inbound,customer_reply,resolved,,resolved,sanitized sample
+r004,2026-06-25T10:00:00Z,whatsapp,contact_hash_002,inbound,new_contact,open,,unresolved,sanitized sample
+r005,2026-06-25T10:25:00Z,whatsapp,contact_hash_002,outbound,first_response,waiting_confirmation,25,unresolved,sanitized sample
+r006,2026-06-25T11:00:00Z,whatsapp,contact_hash_003,inbound,new_contact,resolved,15,resolved,sanitized sample
+r007,2026-06-25T11:40:00Z,whatsapp,contact_hash_004,inbound,new_contact,open,,unresolved,sanitized sample
+r008,2026-06-25T12:10:00Z,whatsapp,contact_hash_004,outbound,first_response,waiting_confirmation,30,unresolved,sanitized sample
+r009,2026-06-25T13:00:00Z,whatsapp,contact_hash_005,inbound,new_contact,resolved,12,resolved,sanitized sample
+r010,2026-06-25T13:45:00Z,whatsapp,contact_hash_006,inbound,new_contact,no_status,,unknown,sanitized sample
