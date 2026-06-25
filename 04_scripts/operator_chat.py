@@ -23,6 +23,18 @@ def run_script(script, ask):
     return proc.returncode
 
 
+def is_delta_request(query):
+    q = norm(query)
+    triggers = [
+        "delta",
+        "computar malha",
+        "malha",
+        "diferenca",
+        "diferenca dimensional",
+    ]
+    return any(t in q for t in triggers)
+
+
 def is_proposal_request(query):
     q = norm(query)
     triggers = [
@@ -45,6 +57,9 @@ def handle(query):
 
     if nq in ("sair", "exit", "quit", "q"):
         return 99
+
+    if is_delta_request(q):
+        return run_script("compute_mesh_delta.py", q)
 
     if is_proposal_request(q):
         return run_script("propose_from_mesh.py", q)
