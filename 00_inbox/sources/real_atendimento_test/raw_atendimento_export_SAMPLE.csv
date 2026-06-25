@@ -1,0 +1,11 @@
+id,created_at,phone,direction,event_type,status,response_time_minutes,resolved_status,message
+m001,2026-06-25T09:00:00Z,+55 11 99999-0001,cliente,new_contact,open,,unresolved,"Oi, preciso de ajuda"
+m002,2026-06-25T09:08:00Z,+55 11 99999-0001,atendente,first_response,waiting_confirmation,8,unresolved,"Olá, vou verificar"
+m003,2026-06-25T09:30:00Z,+55 11 99999-0001,cliente,customer_reply,resolved,,resolved,"Obrigado"
+m004,2026-06-25T10:00:00Z,+55 11 99999-0002,cliente,new_contact,open,,unresolved,"Tenho uma dúvida"
+m005,2026-06-25T10:25:00Z,+55 11 99999-0002,atendente,first_response,waiting_confirmation,25,unresolved,"Já retorno"
+m006,2026-06-25T11:00:00Z,+55 11 99999-0003,cliente,new_contact,resolved,15,resolved,"Resolvido"
+m007,2026-06-25T11:40:00Z,+55 11 99999-0004,cliente,new_contact,open,,unresolved,"Preciso falar com alguém"
+m008,2026-06-25T12:10:00Z,+55 11 99999-0004,atendente,first_response,waiting_confirmation,30,unresolved,"Recebido"
+m009,2026-06-25T13:00:00Z,+55 11 99999-0005,cliente,new_contact,resolved,12,resolved,"Ok"
+m010,2026-06-25T13:45:00Z,+55 11 99999-0006,cliente,new_contact,no_status,,unknown,"Sem status definido"

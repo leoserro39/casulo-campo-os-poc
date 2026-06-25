@@ -1,0 +1,11 @@
+record_id,created_at,channel,contact_id_hash,direction,message_or_event_type,status,response_time_minutes,resolved_status,notes
+m001,2026-06-25T09:00:00Z,whatsapp,contact_hash_021112bde61423c4,inbound,new_contact,open,,unresolved,sanitized
+m002,2026-06-25T09:08:00Z,whatsapp,contact_hash_021112bde61423c4,outbound,first_response,waiting_confirmation,8,unresolved,sanitized
+m003,2026-06-25T09:30:00Z,whatsapp,contact_hash_021112bde61423c4,inbound,customer_reply,resolved,,resolved,sanitized
+m004,2026-06-25T10:00:00Z,whatsapp,contact_hash_0f5a04a01ed1bad7,inbound,new_contact,open,,unresolved,sanitized
+m005,2026-06-25T10:25:00Z,whatsapp,contact_hash_0f5a04a01ed1bad7,outbound,first_response,waiting_confirmation,25,unresolved,sanitized
+m006,2026-06-25T11:00:00Z,whatsapp,contact_hash_380924557d36ac1a,inbound,new_contact,resolved,15,resolved,sanitized
+m007,2026-06-25T11:40:00Z,whatsapp,contact_hash_41a75f844529f08f,inbound,new_contact,open,,unresolved,sanitized
+m008,2026-06-25T12:10:00Z,whatsapp,contact_hash_41a75f844529f08f,outbound,first_response,waiting_confirmation,30,unresolved,sanitized
+m009,2026-06-25T13:00:00Z,whatsapp,contact_hash_9a33a5943d853129,inbound,new_contact,resolved,12,resolved,sanitized
+m010,2026-06-25T13:45:00Z,whatsapp,contact_hash_8f843b6a24b8d0f4,inbound,new_contact,no_status,,unknown,sanitized
