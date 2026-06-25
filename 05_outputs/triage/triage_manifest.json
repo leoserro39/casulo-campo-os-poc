@@ -1,6 +1,6 @@
 {
   "manifest_id": "triage_manifest_demo_001",
-  "generated_at_utc": "2026-06-25T17:49:09.352182+00:00",
+  "generated_at_utc": "2026-06-25T17:52:46.361881+00:00",
   "source_dir": "00_inbox/raw_docs",
   "rules": {
     "create_domains_automatically": false,

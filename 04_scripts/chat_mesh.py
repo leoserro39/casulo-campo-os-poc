@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 import argparse
 import json
+import unicodedata
 import re
 from pathlib import Path
 from datetime import datetime, timezone
@@ -153,6 +154,13 @@ def answer(query):
     return propose_next_action(query)
 
 
+def normalize_query(value):
+    value = value.strip().lower()
+    value = unicodedata.normalize("NFKD", value)
+    value = "".join(ch for ch in value if not unicodedata.combining(ch))
+    return value
+
+
 def main():
     parser = argparse.ArgumentParser(description='Chat local deterministico da malha CASULO Campo OS.')
     parser.add_argument('--ask', help='Pergunta unica para o chat local')
@@ -166,7 +174,7 @@ def main():
     print('Digite: estado, problemas, solucoes, grafo, consumo, ou sair')
     while True:
         try:
-            q = input('casulo> ').strip()
+            q = normalize_query(input('casulo> '))
         except EOFError:
             break
         if not q:

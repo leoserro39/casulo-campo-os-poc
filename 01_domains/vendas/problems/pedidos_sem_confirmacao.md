@@ -5,7 +5,7 @@ Domain: vendas
 Source: 00_inbox/raw_docs/demo_sales_problem.md
 Evidence level: raw
 Confidence: 0.45
-Generated at UTC: 2026-06-25T17:49:09.419781+00:00
+Generated at UTC: 2026-06-25T17:52:46.400623+00:00
 
 ## Summary
 
