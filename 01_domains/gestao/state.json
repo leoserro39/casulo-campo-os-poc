@@ -1,0 +1,14 @@
+{
+  "domain_id": "gestao",
+  "name": "gestao",
+  "description": "Papeis, prioridades, decisoes, rotina do dono, responsabilidades e governanca.",
+  "state_status": "initial",
+  "allowed_records": [
+    "problem",
+    "solution",
+    "delta",
+    "evidence"
+  ],
+  "open_gaps": [],
+  "last_review": null
+}

@@ -1,0 +1,81 @@
+{
+  "manifest_id": "triage_manifest_demo_001",
+  "generated_at_utc": "2026-06-25T17:49:09.352182+00:00",
+  "source_dir": "00_inbox/raw_docs",
+  "rules": {
+    "create_domains_automatically": false,
+    "allowed_domains": [
+      "atendimento",
+      "vendas",
+      "operacao",
+      "financeiro",
+      "marketing",
+      "gestao",
+      "tecnologia",
+      "impacto"
+    ],
+    "do_not_delete_or_move_originals": true
+  },
+  "items": [
+    {
+      "source_path": "00_inbox/raw_docs/demo_business_notes.md",
+      "proposed_domain": "vendas",
+      "problem_id": "pedidos_sem_confirmacao",
+      "record_slug": "pedidos_sem_confirmacao",
+      "evidence_level": "raw",
+      "confidence": 0.25,
+      "domain_scores": {
+        "atendimento": 2,
+        "vendas": 3,
+        "operacao": 2,
+        "financeiro": 1,
+        "marketing": 0,
+        "gestao": 1,
+        "tecnologia": 3,
+        "impacto": 0
+      },
+      "action": "create_problem_record",
+      "summary": "Triagem automatica por palavras-chave para POC repo-as-mesh."
+    },
+    {
+      "source_path": "00_inbox/raw_docs/demo_sales_problem.md",
+      "proposed_domain": "vendas",
+      "problem_id": "pedidos_sem_confirmacao",
+      "record_slug": "pedidos_sem_confirmacao",
+      "evidence_level": "raw",
+      "confidence": 0.45,
+      "domain_scores": {
+        "atendimento": 2,
+        "vendas": 5,
+        "operacao": 0,
+        "financeiro": 0,
+        "marketing": 0,
+        "gestao": 1,
+        "tecnologia": 2,
+        "impacto": 1
+      },
+      "action": "create_problem_record",
+      "summary": "Triagem automatica por palavras-chave para POC repo-as-mesh."
+    },
+    {
+      "source_path": "00_inbox/raw_docs/demo_whatsapp_observation.md",
+      "proposed_domain": "atendimento",
+      "problem_id": "demora_resposta_whatsapp",
+      "record_slug": "demora_resposta_whatsapp",
+      "evidence_level": "raw",
+      "confidence": 0.56,
+      "domain_scores": {
+        "atendimento": 5,
+        "vendas": 1,
+        "operacao": 1,
+        "financeiro": 0,
+        "marketing": 0,
+        "gestao": 1,
+        "tecnologia": 1,
+        "impacto": 0
+      },
+      "action": "create_problem_record",
+      "summary": "Triagem automatica por palavras-chave para POC repo-as-mesh."
+    }
+  ]
+}

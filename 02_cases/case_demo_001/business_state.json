@@ -1,0 +1,28 @@
+{
+  "case_id": "case_demo_001",
+  "business_name": "Padaria Demo",
+  "sector": "alimentacao_comercio_local",
+  "domains": {
+    "atendimento": {
+      "status": "fragil",
+      "summary": "WhatsApp sem fila, etiquetas ou rotina padronizada."
+    },
+    "vendas": {
+      "status": "parcial",
+      "summary": "Pedidos podem se perder entre WhatsApp e caderno."
+    },
+    "operacao": {
+      "status": "parcial",
+      "summary": "Rotina depende do dono e do caixa."
+    }
+  },
+  "priority_domain": "atendimento",
+  "priority_problem": "demora_resposta_whatsapp",
+  "risk_level": "low",
+  "evidence_status": "raw_observed",
+  "next_actions": [
+    "validar perguntas frequentes",
+    "criar roteiro de resposta",
+    "criar quadro simples de pedidos"
+  ]
+}

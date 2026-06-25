@@ -1,0 +1,21 @@
+business_name,case_id,delta_id,domain,evidence_id,id,label,metric_id,name,source_path,status,summary
+,,,,,domain:atendimento,Domain,,atendimento,01_domains/atendimento/DOMAIN.md,,
+,,,atendimento,,problem:demora_resposta_whatsapp,Problem,,demora_resposta_whatsapp,01_domains/atendimento/problems/demora_resposta_whatsapp.md,,
+,,,,,domain:financeiro,Domain,,financeiro,01_domains/financeiro/DOMAIN.md,,
+,,,,,domain:gestao,Domain,,gestao,01_domains/gestao/DOMAIN.md,,
+,,,,,domain:impacto,Domain,,impacto,01_domains/impacto/DOMAIN.md,,
+,,,,,domain:marketing,Domain,,marketing,01_domains/marketing/DOMAIN.md,,
+,,,,,domain:operacao,Domain,,operacao,01_domains/operacao/DOMAIN.md,,
+,,,,,domain:tecnologia,Domain,,tecnologia,01_domains/tecnologia/DOMAIN.md,,
+,,,,,domain:vendas,Domain,,vendas,01_domains/vendas/DOMAIN.md,,
+,,,vendas,,problem:pedidos_sem_confirmacao,Problem,,pedidos_sem_confirmacao,01_domains/vendas/problems/pedidos_sem_confirmacao.md,,
+Padaria Demo,case_demo_001,,,,case:case_demo_001,Case,,,02_cases/case_demo_001/business_state.json,,
+,,,atendimento,ev_demo_001,evidence:ev_demo_001,Evidence,,,00_inbox/raw_docs/demo_business_notes.md,,Dono relata mensagens perdidas no WhatsApp em horarios de pico.
+,,,atendimento,ev_demo_002,evidence:ev_demo_002,Evidence,,,00_inbox/raw_docs/demo_whatsapp_observation.md,,Clientes fazem perguntas repetitivas e algumas respostas demoram mais de duas horas.
+,,,,,problem:respostas_repetitivas,Problem,,respostas_repetitivas,02_cases/case_demo_001/evidence_ledger.jsonl,,
+,,,vendas,ev_demo_003,evidence:ev_demo_003,Evidence,,,00_inbox/raw_docs/demo_sales_problem.md,,Pedidos por mensagem nem sempre sao confirmados no fechamento do dia.
+,case_demo_001,,,,solution:case_demo_001:solution_packet,Solution,,solution_packet,02_cases/case_demo_001/solution_packet.md,,
+,,delta_demo_001,,,delta:delta_demo_001,Delta,,,02_cases/case_demo_001/return_delta.json,proposed,
+,case_demo_001,,,,metric:case_demo_001:unanswered_messages_per_day,Metric,unanswered_messages_per_day,,02_cases/case_demo_001/metrics_before_after.json,to_measure,
+,case_demo_001,,,,metric:case_demo_001:forgotten_orders_per_week,Metric,forgotten_orders_per_week,,02_cases/case_demo_001/metrics_before_after.json,to_measure,
+,case_demo_001,,,,metric:case_demo_001:first_response_time_minutes,Metric,first_response_time_minutes,,02_cases/case_demo_001/metrics_before_after.json,to_measure,

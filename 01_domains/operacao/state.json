@@ -1,0 +1,14 @@
+{
+  "domain_id": "operacao",
+  "name": "operacao",
+  "description": "Processos internos, estoque, producao, agenda, entrega e execucao diaria.",
+  "state_status": "initial",
+  "allowed_records": [
+    "problem",
+    "solution",
+    "delta",
+    "evidence"
+  ],
+  "open_gaps": [],
+  "last_review": null
+}

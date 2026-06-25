@@ -1,0 +1,14 @@
+{
+  "domain_id": "marketing",
+  "name": "marketing",
+  "description": "Conteudo, posicionamento, campanhas, redes sociais, vitrine e comunicacao.",
+  "state_status": "initial",
+  "allowed_records": [
+    "problem",
+    "solution",
+    "delta",
+    "evidence"
+  ],
+  "open_gaps": [],
+  "last_review": null
+}

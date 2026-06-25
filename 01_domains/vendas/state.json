@@ -1,0 +1,14 @@
+{
+  "domain_id": "vendas",
+  "name": "vendas",
+  "description": "Conversao, pedidos, proposta, funil simples, retorno comercial e registro de oportunidades.",
+  "state_status": "initial",
+  "allowed_records": [
+    "problem",
+    "solution",
+    "delta",
+    "evidence"
+  ],
+  "open_gaps": [],
+  "last_review": null
+}

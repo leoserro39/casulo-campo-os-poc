@@ -1,0 +1,26 @@
+{
+  "delta_id": "delta_demo_001",
+  "case_id": "case_demo_001",
+  "status": "proposed",
+  "evidence_refs": [
+    "ev_demo_001",
+    "ev_demo_002",
+    "ev_demo_003"
+  ],
+  "changed_state": [
+    {
+      "path": "domains.atendimento.status",
+      "from": "fragil",
+      "to": "em_melhoria_proposta"
+    }
+  ],
+  "open_gaps": [
+    "medir baseline antes da execucao",
+    "validar roteiro com dono"
+  ],
+  "next_actions": [
+    "rodar por 7 dias",
+    "registrar metricas antes/depois"
+  ],
+  "memory_promotion_posture": "do_not_promote_until_measured"
+}

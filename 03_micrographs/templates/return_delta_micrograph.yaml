@@ -1,0 +1,8 @@
+id: return_delta_micrograph_template
+intent: compactar mudancas validadas em delta
+rules:
+  - exigir evidence_refs
+  - registrar open_gaps
+  - definir memory_promotion_posture
+manifestation: return_delta_json
+return_delta: state_patch

@@ -1,0 +1,14 @@
+{
+  "domain_id": "impacto",
+  "name": "impacto",
+  "description": "Resultados, antes/depois, indicadores, aprendizagem, case publico e efeitos territoriais.",
+  "state_status": "initial",
+  "allowed_records": [
+    "problem",
+    "solution",
+    "delta",
+    "evidence"
+  ],
+  "open_gaps": [],
+  "last_review": null
+}

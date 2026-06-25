@@ -1,0 +1,259 @@
+{
+  "generated_at_utc": "2026-06-25T17:49:09.781696+00:00",
+  "source_root": "/workspaces/casulo-campo-os-poc",
+  "nodes": [
+    {
+      "id": "domain:atendimento",
+      "label": "Domain",
+      "name": "atendimento",
+      "source_path": "01_domains/atendimento/DOMAIN.md"
+    },
+    {
+      "id": "problem:demora_resposta_whatsapp",
+      "label": "Problem",
+      "name": "demora_resposta_whatsapp",
+      "domain": "atendimento",
+      "source_path": "01_domains/atendimento/problems/demora_resposta_whatsapp.md"
+    },
+    {
+      "id": "domain:financeiro",
+      "label": "Domain",
+      "name": "financeiro",
+      "source_path": "01_domains/financeiro/DOMAIN.md"
+    },
+    {
+      "id": "domain:gestao",
+      "label": "Domain",
+      "name": "gestao",
+      "source_path": "01_domains/gestao/DOMAIN.md"
+    },
+    {
+      "id": "domain:impacto",
+      "label": "Domain",
+      "name": "impacto",
+      "source_path": "01_domains/impacto/DOMAIN.md"
+    },
+    {
+      "id": "domain:marketing",
+      "label": "Domain",
+      "name": "marketing",
+      "source_path": "01_domains/marketing/DOMAIN.md"
+    },
+    {
+      "id": "domain:operacao",
+      "label": "Domain",
+      "name": "operacao",
+      "source_path": "01_domains/operacao/DOMAIN.md"
+    },
+    {
+      "id": "domain:tecnologia",
+      "label": "Domain",
+      "name": "tecnologia",
+      "source_path": "01_domains/tecnologia/DOMAIN.md"
+    },
+    {
+      "id": "domain:vendas",
+      "label": "Domain",
+      "name": "vendas",
+      "source_path": "01_domains/vendas/DOMAIN.md"
+    },
+    {
+      "id": "problem:pedidos_sem_confirmacao",
+      "label": "Problem",
+      "name": "pedidos_sem_confirmacao",
+      "domain": "vendas",
+      "source_path": "01_domains/vendas/problems/pedidos_sem_confirmacao.md"
+    },
+    {
+      "id": "case:case_demo_001",
+      "label": "Case",
+      "case_id": "case_demo_001",
+      "business_name": "Padaria Demo",
+      "source_path": "02_cases/case_demo_001/business_state.json"
+    },
+    {
+      "id": "evidence:ev_demo_001",
+      "label": "Evidence",
+      "evidence_id": "ev_demo_001",
+      "domain": "atendimento",
+      "source_path": "00_inbox/raw_docs/demo_business_notes.md",
+      "summary": "Dono relata mensagens perdidas no WhatsApp em horarios de pico."
+    },
+    {
+      "id": "evidence:ev_demo_002",
+      "label": "Evidence",
+      "evidence_id": "ev_demo_002",
+      "domain": "atendimento",
+      "source_path": "00_inbox/raw_docs/demo_whatsapp_observation.md",
+      "summary": "Clientes fazem perguntas repetitivas e algumas respostas demoram mais de duas horas."
+    },
+    {
+      "id": "problem:respostas_repetitivas",
+      "label": "Problem",
+      "name": "respostas_repetitivas",
+      "source_path": "02_cases/case_demo_001/evidence_ledger.jsonl"
+    },
+    {
+      "id": "evidence:ev_demo_003",
+      "label": "Evidence",
+      "evidence_id": "ev_demo_003",
+      "domain": "vendas",
+      "source_path": "00_inbox/raw_docs/demo_sales_problem.md",
+      "summary": "Pedidos por mensagem nem sempre sao confirmados no fechamento do dia."
+    },
+    {
+      "id": "solution:case_demo_001:solution_packet",
+      "label": "Solution",
+      "name": "solution_packet",
+      "case_id": "case_demo_001",
+      "source_path": "02_cases/case_demo_001/solution_packet.md"
+    },
+    {
+      "id": "delta:delta_demo_001",
+      "label": "Delta",
+      "delta_id": "delta_demo_001",
+      "status": "proposed",
+      "source_path": "02_cases/case_demo_001/return_delta.json"
+    },
+    {
+      "id": "metric:case_demo_001:unanswered_messages_per_day",
+      "label": "Metric",
+      "metric_id": "unanswered_messages_per_day",
+      "case_id": "case_demo_001",
+      "status": "to_measure",
+      "source_path": "02_cases/case_demo_001/metrics_before_after.json"
+    },
+    {
+      "id": "metric:case_demo_001:forgotten_orders_per_week",
+      "label": "Metric",
+      "metric_id": "forgotten_orders_per_week",
+      "case_id": "case_demo_001",
+      "status": "to_measure",
+      "source_path": "02_cases/case_demo_001/metrics_before_after.json"
+    },
+    {
+      "id": "metric:case_demo_001:first_response_time_minutes",
+      "label": "Metric",
+      "metric_id": "first_response_time_minutes",
+      "case_id": "case_demo_001",
+      "status": "to_measure",
+      "source_path": "02_cases/case_demo_001/metrics_before_after.json"
+    }
+  ],
+  "relationships": [
+    {
+      "start": "problem:demora_resposta_whatsapp",
+      "type": "PROBLEM_IN_DOMAIN",
+      "end": "domain:atendimento",
+      "source_path": "01_domains/atendimento/problems/demora_resposta_whatsapp.md"
+    },
+    {
+      "start": "problem:pedidos_sem_confirmacao",
+      "type": "PROBLEM_IN_DOMAIN",
+      "end": "domain:vendas",
+      "source_path": "01_domains/vendas/problems/pedidos_sem_confirmacao.md"
+    },
+    {
+      "start": "case:case_demo_001",
+      "type": "CASE_HAS_DOMAIN",
+      "end": "domain:atendimento",
+      "source_path": "02_cases/case_demo_001/business_state.json"
+    },
+    {
+      "start": "case:case_demo_001",
+      "type": "CASE_HAS_DOMAIN",
+      "end": "domain:vendas",
+      "source_path": "02_cases/case_demo_001/business_state.json"
+    },
+    {
+      "start": "case:case_demo_001",
+      "type": "CASE_HAS_DOMAIN",
+      "end": "domain:operacao",
+      "source_path": "02_cases/case_demo_001/business_state.json"
+    },
+    {
+      "start": "case:case_demo_001",
+      "type": "CASE_HAS_PROBLEM",
+      "end": "problem:demora_resposta_whatsapp",
+      "source_path": "02_cases/case_demo_001/business_state.json"
+    },
+    {
+      "start": "problem:demora_resposta_whatsapp",
+      "type": "PROBLEM_IN_DOMAIN",
+      "end": "domain:atendimento",
+      "source_path": "02_cases/case_demo_001/business_state.json"
+    },
+    {
+      "start": "case:case_demo_001",
+      "type": "CASE_HAS_EVIDENCE",
+      "end": "evidence:ev_demo_001",
+      "source_path": "02_cases/case_demo_001/evidence_ledger.jsonl"
+    },
+    {
+      "start": "evidence:ev_demo_001",
+      "type": "EVIDENCE_SUPPORTS_PROBLEM",
+      "end": "problem:demora_resposta_whatsapp",
+      "source_path": "02_cases/case_demo_001/evidence_ledger.jsonl"
+    },
+    {
+      "start": "case:case_demo_001",
+      "type": "CASE_HAS_EVIDENCE",
+      "end": "evidence:ev_demo_002",
+      "source_path": "02_cases/case_demo_001/evidence_ledger.jsonl"
+    },
+    {
+      "start": "evidence:ev_demo_002",
+      "type": "EVIDENCE_SUPPORTS_PROBLEM",
+      "end": "problem:demora_resposta_whatsapp",
+      "source_path": "02_cases/case_demo_001/evidence_ledger.jsonl"
+    },
+    {
+      "start": "evidence:ev_demo_002",
+      "type": "EVIDENCE_SUPPORTS_PROBLEM",
+      "end": "problem:respostas_repetitivas",
+      "source_path": "02_cases/case_demo_001/evidence_ledger.jsonl"
+    },
+    {
+      "start": "case:case_demo_001",
+      "type": "CASE_HAS_EVIDENCE",
+      "end": "evidence:ev_demo_003",
+      "source_path": "02_cases/case_demo_001/evidence_ledger.jsonl"
+    },
+    {
+      "start": "evidence:ev_demo_003",
+      "type": "EVIDENCE_SUPPORTS_PROBLEM",
+      "end": "problem:pedidos_sem_confirmacao",
+      "source_path": "02_cases/case_demo_001/evidence_ledger.jsonl"
+    },
+    {
+      "start": "solution:case_demo_001:solution_packet",
+      "type": "SOLUTION_ADDRESSES_PROBLEM",
+      "end": "problem:demora_resposta_whatsapp",
+      "source_path": "02_cases/case_demo_001/solution_packet.md"
+    },
+    {
+      "start": "delta:delta_demo_001",
+      "type": "DELTA_CHANGES_CASE",
+      "end": "case:case_demo_001",
+      "source_path": "02_cases/case_demo_001/return_delta.json"
+    },
+    {
+      "start": "case:case_demo_001",
+      "type": "CASE_HAS_METRIC",
+      "end": "metric:case_demo_001:unanswered_messages_per_day",
+      "source_path": "02_cases/case_demo_001/metrics_before_after.json"
+    },
+    {
+      "start": "case:case_demo_001",
+      "type": "CASE_HAS_METRIC",
+      "end": "metric:case_demo_001:forgotten_orders_per_week",
+      "source_path": "02_cases/case_demo_001/metrics_before_after.json"
+    },
+    {
+      "start": "case:case_demo_001",
+      "type": "CASE_HAS_METRIC",
+      "end": "metric:case_demo_001:first_response_time_minutes",
+      "source_path": "02_cases/case_demo_001/metrics_before_after.json"
+    }
+  ]
+}

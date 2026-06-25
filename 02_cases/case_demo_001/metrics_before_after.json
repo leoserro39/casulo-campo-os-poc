@@ -1,0 +1,27 @@
+{
+  "case_id": "case_demo_001",
+  "period": "demo",
+  "metrics": [
+    {
+      "metric_id": "unanswered_messages_per_day",
+      "before": null,
+      "after": null,
+      "unit": "count",
+      "status": "to_measure"
+    },
+    {
+      "metric_id": "forgotten_orders_per_week",
+      "before": null,
+      "after": null,
+      "unit": "count",
+      "status": "to_measure"
+    },
+    {
+      "metric_id": "first_response_time_minutes",
+      "before": null,
+      "after": null,
+      "unit": "minutes",
+      "status": "to_measure"
+    }
+  ]
+}

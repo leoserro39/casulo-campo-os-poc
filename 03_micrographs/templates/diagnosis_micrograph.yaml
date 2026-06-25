@@ -1,0 +1,8 @@
+id: diagnosis_micrograph_template
+intent: diagnosticar uma dor prioritaria a partir de evidencias
+rules:
+  - separar evidencia de hipotese
+  - nao prometer resultado
+  - escolher uma dor por rodada
+manifestation: diagnosis_md
+return_delta: diagnosis_status

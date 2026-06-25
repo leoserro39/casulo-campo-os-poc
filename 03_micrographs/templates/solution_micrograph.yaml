@@ -1,0 +1,9 @@
+id: solution_micrograph_template
+intent: gerar uma micro-solucao executavel
+rules:
+  - solucao pequena
+  - metrica clara
+  - gate humano obrigatorio
+  - prazo curto
+manifestation: solution_packet_md
+return_delta: proposed_solution

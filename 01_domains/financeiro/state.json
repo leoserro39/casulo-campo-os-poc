@@ -1,0 +1,14 @@
+{
+  "domain_id": "financeiro",
+  "name": "financeiro",
+  "description": "Controles simples de entrada, saida, margem, cobranca, inadimplencia e caixa.",
+  "state_status": "initial",
+  "allowed_records": [
+    "problem",
+    "solution",
+    "delta",
+    "evidence"
+  ],
+  "open_gaps": [],
+  "last_review": null
+}

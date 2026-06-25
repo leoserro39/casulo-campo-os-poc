@@ -1,0 +1,17 @@
+id: triage_micrograph_template
+intent: classificar documentos de inbox em dominios existentes
+allowed_domains:
+  - atendimento
+  - vendas
+  - operacao
+  - financeiro
+  - marketing
+  - gestao
+  - tecnologia
+  - impacto
+rules:
+  - nao criar dominio novo automaticamente
+  - nao apagar inbox
+  - registrar confianca e fonte
+manifestation: triage_manifest
+return_delta: proposed_problem_records

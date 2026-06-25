@@ -1,0 +1,14 @@
+{
+  "domain_id": "tecnologia",
+  "name": "tecnologia",
+  "description": "Ferramentas, automacoes, planilhas, sistemas, IA, dados e integracoes.",
+  "state_status": "initial",
+  "allowed_records": [
+    "problem",
+    "solution",
+    "delta",
+    "evidence"
+  ],
+  "open_gaps": [],
+  "last_review": null
+}

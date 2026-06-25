@@ -1,0 +1,14 @@
+{
+  "domain_id": "atendimento",
+  "name": "atendimento",
+  "description": "Canais, mensagens, recepcao, resposta ao cliente, pos-venda e rotina de contato.",
+  "state_status": "initial",
+  "allowed_records": [
+    "problem",
+    "solution",
+    "delta",
+    "evidence"
+  ],
+  "open_gaps": [],
+  "last_review": null
+}
