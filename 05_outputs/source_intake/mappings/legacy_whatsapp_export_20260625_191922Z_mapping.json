@@ -1,0 +1,16 @@
+{
+  "source_id": "legacy_whatsapp_export_20260625_191922Z",
+  "target_branch": "atendimento",
+  "mapping": {
+    "message_id": "evidence.message_id",
+    "created_at": "evidence.created_at",
+    "customer_id": "atendimento.customer_ref",
+    "channel": "atendimento.channel",
+    "direction": "atendimento.message_direction",
+    "message": "evidence.raw_message",
+    "status": "atendimento.conversation_status",
+    "response_time_minutes": "atendimento.response_time_minutes"
+  },
+  "mapping_status": "PROPOSED",
+  "requires_human_review": true
+}

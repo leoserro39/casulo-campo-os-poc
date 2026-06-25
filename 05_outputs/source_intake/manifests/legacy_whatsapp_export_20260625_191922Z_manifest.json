@@ -1,0 +1,25 @@
+{
+  "source_id": "legacy_whatsapp_export_20260625_191922Z",
+  "source_name": "legacy_whatsapp_export",
+  "source_type": "csv_export",
+  "owner": "demo_consulting_client",
+  "target_branch": "atendimento",
+  "created_utc": "20260625_191922Z",
+  "source_path": "00_inbox/sources/legacy_whatsapp_export/legacy_whatsapp_export.csv",
+  "raw_snapshot": "05_outputs/source_intake/raw_snapshots/legacy_whatsapp_export_20260625_191922Z.csv",
+  "sha256": "1b3e528503d09fb6e632df18657c804525a369410be70234ecc07a0c596b2403",
+  "fields": [
+    "message_id",
+    "created_at",
+    "customer_id",
+    "channel",
+    "direction",
+    "message",
+    "status",
+    "response_time_minutes"
+  ],
+  "row_count": 6,
+  "trust_score": 0.899,
+  "hallucination_risk": "MEDIUM",
+  "gate": "ALLOW_WITH_HUMAN_REVIEW"
+}

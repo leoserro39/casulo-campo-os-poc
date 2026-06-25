@@ -1,0 +1,7 @@
+message_id,created_at,customer_id,channel,direction,message,status,response_time_minutes
+m001,2026-06-25T09:00:00Z,c001,whatsapp,inbound,Oi gostaria de saber sobre meu pedido,open,
+m002,2026-06-25T09:12:00Z,c001,whatsapp,outbound,Ola vamos verificar seu pedido,waiting_customer,12
+m003,2026-06-25T10:05:00Z,c002,whatsapp,inbound,Estou sem resposta desde ontem,open,
+m004,2026-06-25T11:30:00Z,c003,whatsapp,inbound,Quero confirmar a compra,open,
+m005,2026-06-25T11:40:00Z,c003,whatsapp,outbound,Compra confirmada obrigado,resolved,10
+m006,2026-06-25T12:10:00Z,c004,whatsapp,inbound,Meu pedido foi resolvido,resolved,
