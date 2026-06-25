@@ -1,0 +1,20 @@
+{
+  "generated_utc": "2026-06-25T19:53:38.763988+00:00",
+  "status": "APPLIED_DELTA_ACTIVE",
+  "return_delta_count": 1,
+  "applied_return_delta_count": 1,
+  "domain_delta_count": 1,
+  "review_count": 1,
+  "proposal_count": 3,
+  "latest_applied_return_delta": "05_outputs/applied_return_deltas/applied_return_delta_propor_melhoria_para_atendimento_whatsapp_20260625_194649Z.json",
+  "latest_domain_delta": "01_domains/atendimento/deltas/applied_return_delta_propor_melhoria_para_atendimento_whatsapp_20260625_194649Z.md",
+  "latest_applied_summary": {
+    "operator": "Leonardo Serro",
+    "target_branch": "atendimento",
+    "canonical_effect": "APPEND_DOMAIN_DELTA_RECORD",
+    "source_return_delta": "05_outputs/return_deltas/return_delta_propor_melhoria_para_atendimento_whatsapp_20260625_194122Z.json",
+    "source_review": "05_outputs/reviews/review_proposal_propor_melhoria_para_atendimento_whatsapp_20260625_193823Z.json",
+    "source_proposal": "05_outputs/proposals/proposal_propor_melhoria_para_atendimento_whatsapp_20260625_184859Z.json",
+    "question": "propor melhoria para atendimento whatsapp"
+  }
+}
