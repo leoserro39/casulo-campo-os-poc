@@ -1,0 +1,13 @@
+{
+  "generated_utc": "20260625_201654Z",
+  "status": "CROSS_BRANCH_SYNC_DELTA_REPORT",
+  "sync_delta": "05_outputs/sync_deltas/sync_delta_atendimento_20260625_201654Z.json",
+  "candidate_count": 3,
+  "canonical_effect": "NONE",
+  "requires_human_review": true,
+  "target_branches": [
+    "vendas",
+    "operacao",
+    "gestao"
+  ]
+}
