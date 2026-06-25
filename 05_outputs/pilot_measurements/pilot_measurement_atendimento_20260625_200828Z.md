@@ -1,0 +1,21 @@
+# CASULO Campo OS - Pilot Measurement
+
+- status: RECORDED
+- recorded_utc: 20260625_200828Z
+- branch: atendimento
+- operator: Leonardo Serro
+- total_conversations: 20
+- resolved_conversations: 15
+- unresolved_conversations: 3
+- conversations_without_resolved_status: 2
+- response_time_minutes: 28.0
+- pilot_signal: PROMOTION_CANDIDATE
+- promotion_effect: BLOCKED_UNTIL_HUMAN_DECISION
+
+## Notes
+
+Initial controlled pilot measurement for WhatsApp atendimento delta.
+
+## Evidence
+
+Synthetic pilot sample for POC v1.2 flow validation.
