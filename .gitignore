@@ -1,2 +1,10 @@
 *.zip
 __pycache__/
+
+# CASULO Campo OS - real sensitive local inputs
+# Keep real raw/sanitized operational exports local unless explicitly approved.
+00_inbox/sources/real_atendimento_test/raw_*.csv
+!00_inbox/sources/real_atendimento_test/raw_atendimento_export_SAMPLE.csv
+00_inbox/sources/real_atendimento_test/atendimento_real_sanitized.csv
+00_inbox/sources/real_atendimento_test/*REAL*.csv
+!00_inbox/sources/real_atendimento_test/atendimento_real_sanitized_FROM_RAW_SAMPLE.csv
