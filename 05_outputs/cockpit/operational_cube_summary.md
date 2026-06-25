@@ -1,6 +1,6 @@
 # CASULO Campo OS - Operational Cube Summary
 
-- generated_utc: 2026-06-25T19:28:27.117733+00:00
+- generated_utc: 2026-06-25T19:48:18.767488+00:00
 - source: 05_outputs/reports/state_timeline.json
 - source_intake_count: 1
 - mesh_delta_count: 3

@@ -1,7 +1,7 @@
 # CASULO Campo OS - POC Final Snapshot
 
-- generated_utc: 2026-06-25T19:34:01.092094+00:00
-- latest_commit: ff23b76
+- generated_utc: 2026-06-25T19:48:19.009519+00:00
+- latest_commit: b26d263
 - proposal_count: 3
 - mesh_delta_count: 3
 - source_intake_count: 1
@@ -38,6 +38,10 @@ POC vNext: Review Gate + Return Delta promotion.
 
 ## Recent commits
 
+- b26d263 Apply approved return delta as controlled pilot
+- 28a377d Add return delta proposal from approved review
+- 15832ac Add human review gate for proposals
+- 93c9297 Add POC final snapshot report
 - ff23b76 Add operational cube cockpit projection
 - c7149f4 Add state timeline report for POC cockpit
 - 2335642 Add legacy source demo and intake artifacts
@@ -46,7 +50,3 @@ POC vNext: Review Gate + Return Delta promotion.
 - 1b90fc4 Keep single gated proposal proof artifact
 - b4a27c4 Gate proposal generation with mesh delta
 - c4eda4b Ignore Python cache artifacts
-- 988a91f Add mesh delta computation for operational proposals
-- 57492f8 Add mesh delta computer task prompt
-- ff2d146 Record controlled atendimento WhatsApp proposal
-- 427fd34 Add operator chat for mesh queries and proposal generation
