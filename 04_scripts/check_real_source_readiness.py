@@ -23,134 +23,147 @@ REQUIRED_COLUMNS = [
     "notes",
 ]
 
-PHONE_RE = re.compile(r"(\+?\d[\d\s().-]{7,}\d)")
-EMAIL_RE = re.compile(r"[\w\.-]+@[\w\.-]+\.\w+")
+SAFE_HASH_COLUMNS = {"contact_id_hash"}
+SAFE_VALUE_PREFIXES = ("contact_hash_",)
 
-PII_SKIP_COLUMNS = {
-    "created_at",
-    "response_time_minutes",
+PII_PATTERNS = {
+    "email": re.compile(r"[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}"),
+    "phone_br": re.compile(r"(?<!\w)(?:\+?55\s*)?(?:\(?\d{2}\)?\s*)?9?\d{4}[-\s]?\d{4}(?!\w)"),
+    "cpf_like": re.compile(r"(?<!\w)\d{3}\.?\d{3}\.?\d{3}-?\d{2}(?!\w)"),
 }
 
-DATETIME_LIKE_RE = re.compile(r"^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}Z?$")
+ISO_TS = re.compile(r"^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}Z$")
 
 
 def rel(path):
     return str(path.relative_to(ROOT))
 
 
-def utc_stamp():
+def stamp():
     return datetime.now(timezone.utc).strftime("%Y%m%d_%H%M%SZ")
+
+
+def safe_name(value):
+    value = str(value or "").strip().lower()
+    value = re.sub(r"[^a-z0-9_]+", "_", value)
+    return value.strip("_") or "real_source"
 
 
 def read_csv(path):
     with path.open("r", encoding="utf-8-sig", newline="") as f:
         reader = csv.DictReader(f)
-        rows = list(reader)
-        columns = reader.fieldnames or []
-    return columns, rows
+        return list(reader), reader.fieldnames or []
 
 
-def pii_hits(rows):
+def is_safe_value(column, value):
+    text = str(value or "").strip()
+
+    if not text:
+        return True
+
+    if column in SAFE_HASH_COLUMNS:
+        return True
+
+    if text.startswith(SAFE_VALUE_PREFIXES):
+        return True
+
+    if ISO_TS.match(text):
+        return True
+
+    return False
+
+
+def find_pii(rows):
     hits = []
+
     for idx, row in enumerate(rows, start=1):
-        for key, value in row.items():
-            text = (value or "").strip()
+        for column, raw_value in row.items():
+            value = str(raw_value or "").strip()
 
-            if not text:
+            if is_safe_value(column, value):
                 continue
 
-            if key in PII_SKIP_COLUMNS:
-                continue
+            for kind, pattern in PII_PATTERNS.items():
+                if pattern.search(value):
+                    hits.append({
+                        "row": idx,
+                        "column": column,
+                        "kind": kind,
+                    })
 
-            if DATETIME_LIKE_RE.match(text):
-                continue
-
-            if EMAIL_RE.search(text):
-                hits.append({"row": idx, "column": key, "type": "email"})
-            elif PHONE_RE.search(text):
-                digits = re.sub(r"\D", "", text)
-                if len(digits) >= 10:
-                    hits.append({"row": idx, "column": key, "type": "phone_like"})
     return hits
 
 
-def empty_ratio(rows):
-    total = 0
+def empty_ratio(rows, columns):
+    if not rows or not columns:
+        return 0.0
+
+    total = len(rows) * len(columns)
     empty = 0
+
     for row in rows:
-        for value in row.values():
-            total += 1
-            if value is None or str(value).strip() == "":
+        for column in columns:
+            if str(row.get(column, "") or "").strip() == "":
                 empty += 1
-    if total == 0:
-        return 1.0
-    return round(empty / total, 3)
 
-
-def decide(row_count, missing_required, pii, empty):
-    if row_count == 0:
-        return "BLOCKED"
-    if missing_required:
-        return "NEEDS_MAPPING"
-    if pii:
-        return "NEEDS_SANITIZATION"
-    if empty > 0.35:
-        return "NEEDS_REVIEW"
-    return "READY_FOR_INTAKE"
+    return round(empty / total, 3) if total else 0.0
 
 
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("--source", required=True)
-    parser.add_argument("--source-name", default="real_source")
+    parser.add_argument("--source-name", required=True)
     args = parser.parse_args()
 
-    source_path = Path(args.source)
-    if not source_path.is_absolute():
-        source_path = ROOT / source_path
+    source = Path(args.source)
+    if not source.is_absolute():
+        source = ROOT / source
 
-    if not source_path.exists():
-        raise SystemExit("source not found: %s" % source_path)
-
-    columns, rows = read_csv(source_path)
-    missing = [c for c in REQUIRED_COLUMNS if c not in columns]
-    pii = pii_hits(rows)
-    empty = empty_ratio(rows)
-    gate = decide(len(rows), missing, pii, empty)
+    if not source.exists():
+        raise SystemExit("source not found: %s" % source)
 
     OUT.mkdir(parents=True, exist_ok=True)
     REPORTS.mkdir(parents=True, exist_ok=True)
 
-    stamp = utc_stamp()
-    base = "source_readiness_%s_%s" % (args.source_name, stamp)
+    rows, columns = read_csv(source)
+    missing = [column for column in REQUIRED_COLUMNS if column not in columns]
+    pii_hits = find_pii(rows)
+    ratio = empty_ratio(rows, columns)
+
+    gate = "READY_FOR_INTAKE"
+    next_action = "Run evidence-only intake gate."
+
+    if missing:
+        gate = "NEEDS_SCHEMA_FIX"
+        next_action = "Fix required columns before intake."
+    elif pii_hits:
+        gate = "NEEDS_SANITIZATION"
+        next_action = "Sanitize PII before intake."
+
+    generated = stamp()
+    name = safe_name(args.source_name)
+    base = "source_readiness_%s_%s" % (name, generated)
+
+    result = {
+        "status": "REAL_SOURCE_READINESS_CHECK",
+        "checked_utc": generated,
+        "source": rel(source),
+        "source_name": args.source_name,
+        "row_count": len(rows),
+        "columns": columns,
+        "missing_required_columns": missing,
+        "empty_ratio": ratio,
+        "pii_hit_count": len(pii_hits),
+        "pii_hits": pii_hits,
+        "gate": gate,
+        "canonical_effect": "NONE",
+        "next_action": next_action,
+    }
 
     json_path = OUT / (base + ".json")
     md_path = OUT / (base + ".md")
     report_json = REPORTS / "real_source_readiness_report.json"
     report_md = REPORTS / "real_source_readiness_report.md"
-
-    result = {
-        "status": "REAL_SOURCE_READINESS_CHECK",
-        "checked_utc": stamp,
-        "source": rel(source_path),
-        "source_name": args.source_name,
-        "row_count": len(rows),
-        "columns": columns,
-        "required_columns": REQUIRED_COLUMNS,
-        "missing_required_columns": missing,
-        "empty_ratio": empty,
-        "pii_hit_count": len(pii),
-        "pii_hits_sample": pii[:10],
-        "gate": gate,
-        "canonical_effect": "NONE",
-        "next_action": {
-            "READY_FOR_INTAKE": "Run controlled source intake.",
-            "NEEDS_MAPPING": "Map missing source columns before intake.",
-            "NEEDS_SANITIZATION": "Sanitize PII before intake.",
-            "NEEDS_REVIEW": "Review empty fields and source quality before intake.",
-            "BLOCKED": "Do not ingest this source.",
-        }.get(gate, "Review source manually."),
-    }
 
     text_json = json.dumps(result, indent=2, ensure_ascii=False)
     json_path.write_text(text_json, encoding="utf-8")
@@ -160,36 +173,47 @@ def main():
         "# CASULO Campo OS - Real Source Readiness",
         "",
         "- status: REAL_SOURCE_READINESS_CHECK",
-        "- checked_utc: %s" % stamp,
-        "- source: %s" % rel(source_path),
+        "- checked_utc: %s" % generated,
+        "- source: %s" % rel(source),
         "- source_name: %s" % args.source_name,
         "- row_count: %s" % len(rows),
         "- missing_required_columns: %s" % (", ".join(missing) if missing else "none"),
-        "- empty_ratio: %s" % empty,
-        "- pii_hit_count: %s" % len(pii),
+        "- empty_ratio: %s" % ratio,
+        "- pii_hit_count: %s" % len(pii_hits),
         "- gate: %s" % gate,
         "- canonical_effect: NONE",
         "",
         "## Next action",
         "",
-        "- %s" % result["next_action"],
+        "- %s" % next_action,
         "",
         "## Columns",
         "",
     ]
-    lines.extend(["- " + c for c in columns])
+
+    lines.extend(["- " + column for column in columns])
+
+    if pii_hits:
+        lines.extend(["", "## PII hits", ""])
+        for hit in pii_hits:
+            lines.append("- row=%s column=%s kind=%s" % (
+                hit["row"],
+                hit["column"],
+                hit["kind"],
+            ))
+
     lines.append("")
 
-    md_text = "\n".join(lines)
-    md_path.write_text(md_text, encoding="utf-8")
-    report_md.write_text(md_text, encoding="utf-8")
+    text_md = "\n".join(lines)
+    md_path.write_text(text_md, encoding="utf-8")
+    report_md.write_text(text_md, encoding="utf-8")
 
     print("REAL_SOURCE_READINESS_CHECK_CREATED")
     print("gate:", gate)
-    print("source:", rel(source_path))
+    print("source:", rel(source))
     print("rows:", len(rows))
     print("missing_required_columns:", len(missing))
-    print("pii_hit_count:", len(pii))
+    print("pii_hit_count:", len(pii_hits))
     print("report:", rel(report_md))
     print("trace:", rel(report_json))
     print("canonical_effect: NONE")
