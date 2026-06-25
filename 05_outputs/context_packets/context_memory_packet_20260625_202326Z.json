@@ -1,0 +1,265 @@
+{
+  "generated_utc": "2026-06-25T20:23:26.544456+00:00",
+  "status": "CONTEXT_MEMORY_PACKET",
+  "repo": {
+    "branch": "main",
+    "commit": "aa2c0d8",
+    "recent_commits": [
+      "aa2c0d8 Add cross-branch sync delta proposal",
+      "4384e8b Add promotion decision gate",
+      "d5ba60f Add pilot measurement loop",
+      "b3bdab6 Add CASULO Campo OS roadmap",
+      "f25a39d Add applied delta awareness cockpit layer",
+      "705d2a1 Refresh cockpit after applied return delta",
+      "b26d263 Apply approved return delta as controlled pilot",
+      "28a377d Add return delta proposal from approved review",
+      "15832ac Add human review gate for proposals",
+      "93c9297 Add POC final snapshot report"
+    ]
+  },
+  "poc_version": {
+    "current": "v1.5",
+    "completed": [
+      "v1.0 closed micrograph loop",
+      "v1.1 applied delta awareness",
+      "v1.2 pilot measurement loop",
+      "v1.3 promotion decision gate",
+      "v1.4 cross-branch sync delta"
+    ],
+    "active": "v1.5 context memory packet",
+    "next": "v1.6 graph projection or cockpit refresh with v1.5 context"
+  },
+  "latest_artifacts": {
+    "applied_return_delta": {
+      "path": "05_outputs/applied_return_deltas/applied_return_delta_propor_melhoria_para_atendimento_whatsapp_20260625_194649Z.json",
+      "data": {
+        "status": "APPLIED",
+        "applied_utc": "20260625_194649Z",
+        "operator": "Leonardo Serro",
+        "source_return_delta": "05_outputs/return_deltas/return_delta_propor_melhoria_para_atendimento_whatsapp_20260625_194122Z.json",
+        "target_branch": "atendimento",
+        "canonical_effect": "APPEND_DOMAIN_DELTA_RECORD",
+        "applied_domain_delta": "01_domains/atendimento/deltas/applied_return_delta_propor_melhoria_para_atendimento_whatsapp_20260625_194649Z.md",
+        "source_review": "05_outputs/reviews/review_proposal_propor_melhoria_para_atendimento_whatsapp_20260625_193823Z.json",
+        "source_proposal": "05_outputs/proposals/proposal_propor_melhoria_para_atendimento_whatsapp_20260625_184859Z.json",
+        "question": "propor melhoria para atendimento whatsapp",
+        "proposed_changes": [
+          "Criar roteiro minimo de atendimento WhatsApp com respostas base.",
+          "Separar mensagens em: novo contato, aguardando confirmacao e resolvido.",
+          "Medir tempo de primeira resposta ou mensagens sem resposta por dia.",
+          "Rodar por 7 dias antes de promover mudanca para estado canonico."
+        ],
+        "mesh_delta": {
+          "path": "05_outputs/deltas/mesh_delta_propor_melhoria_para_atendimento_whatsapp_20260625_184859Z.json",
+          "Delta_L": 0.389,
+          "H_pre": 0.339,
+          "gate": "ALLOW_PROPOSAL",
+          "support_ratio": 0.556,
+          "missing_ratio": 0.444,
+          "missing_dimensions": [
+            "evidencia",
+            "metrica",
+            "resolvido",
+            "tempo"
+          ]
+        },
+        "safety_note": "This apply operation appended a domain delta record only. It did not overwrite domain state."
+      }
+    },
+    "pilot_measurement": {
+      "path": "05_outputs/pilot_measurements/pilot_measurement_atendimento_20260625_200828Z.json",
+      "data": {
+        "status": "RECORDED",
+        "recorded_utc": "20260625_200828Z",
+        "branch": "atendimento",
+        "operator": "Leonardo Serro",
+        "total_conversations": 20,
+        "resolved_conversations": 15,
+        "unresolved_conversations": 3,
+        "conversations_without_resolved_status": 2,
+        "response_time_minutes": 28.0,
+        "pilot_signal": "PROMOTION_CANDIDATE",
+        "notes": "Initial controlled pilot measurement for WhatsApp atendimento delta.",
+        "evidence": "Synthetic pilot sample for POC v1.2 flow validation.",
+        "promotion_effect": "BLOCKED_UNTIL_HUMAN_DECISION"
+      }
+    },
+    "promotion_decision": {
+      "path": "05_outputs/promotion_decisions/promotion_decision_extend_pilot_20260625_201247Z.json",
+      "data": {
+        "status": "RECORDED",
+        "decided_utc": "20260625_201247Z",
+        "operator": "Leonardo Serro",
+        "decision": "EXTEND_PILOT",
+        "source_pilot_report": "05_outputs/reports/pilot_measurement_report.json",
+        "measurement_count": 1,
+        "overall_signal": "EXTEND_PILOT",
+        "canonical_effect": "NONE_EXTEND_PILOT",
+        "promotion_allowed": false,
+        "notes": "Only one pilot measurement exists. Extend pilot before long-term branch promotion.",
+        "next_action": "Collect more pilot measurements before promotion."
+      }
+    },
+    "sync_delta": {
+      "path": "05_outputs/sync_deltas/sync_delta_atendimento_20260625_201654Z.json",
+      "data": {
+        "status": "SYNC_DELTA_PROPOSED",
+        "generated_utc": "20260625_201654Z",
+        "source_applied_delta": "05_outputs/applied_return_deltas/applied_return_delta_propor_melhoria_para_atendimento_whatsapp_20260625_194649Z.json",
+        "source_branch": "atendimento",
+        "question": "propor melhoria para atendimento whatsapp",
+        "source_changes": [
+          "Criar roteiro minimo de atendimento WhatsApp com respostas base.",
+          "Separar mensagens em: novo contato, aguardando confirmacao e resolvido.",
+          "Medir tempo de primeira resposta ou mensagens sem resposta por dia.",
+          "Rodar por 7 dias antes de promover mudanca para estado canonico."
+        ],
+        "canonical_effect": "NONE",
+        "requires_human_review": true,
+        "sync_rule": "Derived sync proposal only. No target branch state mutation.",
+        "candidates": [
+          {
+            "target_branch": "vendas",
+            "sync_type": "metric_dependency",
+            "reason": "Sales may benefit from visibility into WhatsApp response quality and unresolved contacts.",
+            "proposed_signal": "Expose response_time_minutes and unresolved_conversations as sales-facing operational indicators.",
+            "risk": "Do not expose raw atendimento conversations or private customer data.",
+            "requires_human_review": true
+          },
+          {
+            "target_branch": "operacao",
+            "sync_type": "process_dependency",
+            "reason": "Operations may depend on whether customer requests are being resolved or waiting for confirmation.",
+            "proposed_signal": "Expose aggregate unresolved_conversations and without_resolved_status counts.",
+            "risk": "Do not treat atendimento pilot metrics as operational SLA until promoted.",
+            "requires_human_review": true
+          },
+          {
+            "target_branch": "gestao",
+            "sync_type": "governance_dependency",
+            "reason": "Management should track whether the pilot is improving customer response flow before promotion.",
+            "proposed_signal": "Expose pilot_signal, promotion_decision and measurement_count.",
+            "risk": "Management view must show pilot status, not permanent state.",
+            "requires_human_review": true
+          }
+        ]
+      }
+    },
+    "applied_delta_awareness": {
+      "path": "05_outputs/reports/applied_delta_awareness.json",
+      "data": {
+        "generated_utc": "2026-06-25T19:53:38.763988+00:00",
+        "status": "APPLIED_DELTA_ACTIVE",
+        "return_delta_count": 1,
+        "applied_return_delta_count": 1,
+        "domain_delta_count": 1,
+        "review_count": 1,
+        "proposal_count": 3,
+        "latest_applied_return_delta": "05_outputs/applied_return_deltas/applied_return_delta_propor_melhoria_para_atendimento_whatsapp_20260625_194649Z.json",
+        "latest_domain_delta": "01_domains/atendimento/deltas/applied_return_delta_propor_melhoria_para_atendimento_whatsapp_20260625_194649Z.md",
+        "latest_applied_summary": {
+          "operator": "Leonardo Serro",
+          "target_branch": "atendimento",
+          "canonical_effect": "APPEND_DOMAIN_DELTA_RECORD",
+          "source_return_delta": "05_outputs/return_deltas/return_delta_propor_melhoria_para_atendimento_whatsapp_20260625_194122Z.json",
+          "source_review": "05_outputs/reviews/review_proposal_propor_melhoria_para_atendimento_whatsapp_20260625_193823Z.json",
+          "source_proposal": "05_outputs/proposals/proposal_propor_melhoria_para_atendimento_whatsapp_20260625_184859Z.json",
+          "question": "propor melhoria para atendimento whatsapp"
+        }
+      }
+    },
+    "pilot_measurement_report": {
+      "path": "05_outputs/reports/pilot_measurement_report.json",
+      "data": {
+        "generated_utc": "2026-06-25T20:08:29.071696+00:00",
+        "status": "PILOT_MEASUREMENT_REPORT",
+        "aggregate": {
+          "measurement_count": 1,
+          "overall_signal": "EXTEND_PILOT",
+          "promotion_allowed": false,
+          "promotion_rule": "Promotion is blocked until explicit human decision in v1.3."
+        },
+        "measurements": [
+          {
+            "path": "05_outputs/pilot_measurements/pilot_measurement_atendimento_20260625_200828Z.json",
+            "recorded_utc": "20260625_200828Z",
+            "branch": "atendimento",
+            "operator": "Leonardo Serro",
+            "total_conversations": 20,
+            "resolved_conversations": 15,
+            "unresolved_conversations": 3,
+            "conversations_without_resolved_status": 2,
+            "response_time_minutes": 28.0,
+            "pilot_signal": "PROMOTION_CANDIDATE",
+            "promotion_effect": "BLOCKED_UNTIL_HUMAN_DECISION"
+          }
+        ]
+      }
+    },
+    "promotion_decision_report": {
+      "path": "05_outputs/reports/promotion_decision_report.json",
+      "data": {
+        "generated_utc": "2026-06-25T20:12:47.690396+00:00",
+        "status": "PROMOTION_DECISION_REPORT",
+        "decision_count": 1,
+        "latest_decision": {
+          "path": "05_outputs/promotion_decisions/promotion_decision_extend_pilot_20260625_201247Z.json",
+          "decided_utc": "20260625_201247Z",
+          "operator": "Leonardo Serro",
+          "decision": "EXTEND_PILOT",
+          "measurement_count": 1,
+          "overall_signal": "EXTEND_PILOT",
+          "promotion_allowed": false,
+          "canonical_effect": "NONE_EXTEND_PILOT",
+          "next_action": "Collect more pilot measurements before promotion."
+        },
+        "promotion_status": "EXTEND_PILOT",
+        "promotion_allowed": false,
+        "decisions": [
+          {
+            "path": "05_outputs/promotion_decisions/promotion_decision_extend_pilot_20260625_201247Z.json",
+            "decided_utc": "20260625_201247Z",
+            "operator": "Leonardo Serro",
+            "decision": "EXTEND_PILOT",
+            "measurement_count": 1,
+            "overall_signal": "EXTEND_PILOT",
+            "promotion_allowed": false,
+            "canonical_effect": "NONE_EXTEND_PILOT",
+            "next_action": "Collect more pilot measurements before promotion."
+          }
+        ]
+      }
+    },
+    "cross_branch_sync_delta_report": {
+      "path": "05_outputs/reports/cross_branch_sync_delta_report.json",
+      "data": {
+        "generated_utc": "20260625_201654Z",
+        "status": "CROSS_BRANCH_SYNC_DELTA_REPORT",
+        "sync_delta": "05_outputs/sync_deltas/sync_delta_atendimento_20260625_201654Z.json",
+        "candidate_count": 3,
+        "canonical_effect": "NONE",
+        "requires_human_review": true,
+        "target_branches": [
+          "vendas",
+          "operacao",
+          "gestao"
+        ]
+      }
+    }
+  },
+  "operational_state": {
+    "applied_delta_active": true,
+    "pilot_measurement_count": 1,
+    "pilot_overall_signal": "EXTEND_PILOT",
+    "promotion_status": "EXTEND_PILOT",
+    "promotion_allowed": false,
+    "sync_candidate_count": 3,
+    "sync_requires_human_review": true
+  },
+  "pending_gates": [
+    "Long-term promotion is not allowed yet.",
+    "Cross-branch sync candidates require human review.",
+    "Pilot needs more measurements before promotion."
+  ],
+  "next_safe_action": "Collect more pilot measurements or review cross-branch sync candidates. Do not promote or mutate target branches automatically."
+}
