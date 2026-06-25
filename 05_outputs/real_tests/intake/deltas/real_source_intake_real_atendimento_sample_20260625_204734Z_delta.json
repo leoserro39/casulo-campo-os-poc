@@ -1,0 +1,19 @@
+{
+  "status": "REAL_SOURCE_INTAKE_DELTA",
+  "generated_utc": "20260625_204734Z",
+  "source": "00_inbox/sources/real_atendimento_test/atendimento_real_sanitized_SAMPLE.csv",
+  "source_name": "real_atendimento_sample",
+  "gate": "ALLOW_EVIDENCE_ONLY_WITH_HUMAN_REVIEW",
+  "canonical_effect": "EVIDENCE_ONLY",
+  "next_action": "Use this evidence for a gated mesh delta/proposal. Do not mutate branch state automatically.",
+  "summary": {
+    "row_count": 10,
+    "contact_count": 6,
+    "resolved_rows": 3,
+    "unresolved_rows": 6,
+    "unknown_status_rows": 1,
+    "avg_response_time_minutes": 18.0,
+    "trust_score": 0.945,
+    "hallucination_risk": "MEDIUM"
+  }
+}

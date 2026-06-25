@@ -1,0 +1,21 @@
+{
+  "status": "REAL_SOURCE_INTAKE_MANIFEST",
+  "generated_utc": "20260625_204734Z",
+  "source": "00_inbox/sources/real_atendimento_test/atendimento_real_sanitized_SAMPLE.csv",
+  "source_name": "real_atendimento_sample",
+  "columns": [
+    "record_id",
+    "created_at",
+    "channel",
+    "contact_id_hash",
+    "direction",
+    "message_or_event_type",
+    "status",
+    "response_time_minutes",
+    "resolved_status",
+    "notes"
+  ],
+  "row_count": 10,
+  "readiness_gate": "READY_FOR_INTAKE",
+  "canonical_effect": "EVIDENCE_ONLY"
+}
