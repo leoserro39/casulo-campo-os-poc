@@ -1,0 +1,59 @@
+# CASULO Campo OS - Real Test Cycle Snapshot
+
+- status: REAL_TEST_CYCLE_SNAPSHOT
+- generated_utc: 20260625_211125Z
+- cycle: real_atendimento_sample_cycle_001
+- branch: main
+- commit: 0677730
+- source_of_truth: git
+- canonical_effect: NONE
+- cycle_result: EXTEND_PILOT
+- cycle_reason: Positive signal exists, but more measurements are required.
+- promotion_execution_allowed: false
+- branch_mutation_allowed: false
+
+## Gates
+
+- Gate 1 - Readiness: READY_FOR_INTAKE | canonical_effect=NONE
+- Gate 2 - Intake: ALLOW_EVIDENCE_ONLY_WITH_HUMAN_REVIEW | canonical_effect=EVIDENCE_ONLY
+- Gate 3 - Proposal: PROPOSAL_REQUIRES_HUMAN_REVIEW | canonical_effect=NONE
+- Gate 4 - Human Review: APPROVED_FOR_PILOT | canonical_effect=NONE
+- Gate 5 - Pilot Measurement: PILOT_SIGNAL_POSITIVE | canonical_effect=EVIDENCE_ONLY
+- Gate 6 - Promotion Decision: EXTEND_PILOT | canonical_effect=NONE
+
+## Measurement summary
+
+- total_conversations: 6
+- resolved_conversations: 3
+- unresolved_conversations: 2
+- conversations_without_resolved_status: 1
+- response_time_minutes: 18.0
+- pilot_signal: PILOT_SIGNAL_POSITIVE
+
+## Artifacts
+
+- readiness: 05_outputs/reports/real_source_readiness_report.json
+- intake: 05_outputs/reports/real_source_intake_report.json
+- proposal: 05_outputs/reports/real_evidence_proposal_report.json
+- human_review: 05_outputs/reports/real_human_review_report.json
+- pilot_measurement: 05_outputs/reports/real_pilot_measurement_report.json
+- promotion_decision: 05_outputs/reports/real_promotion_decision_report.json
+
+## Next action
+
+- Collect at least two more real pilot measurements before any promotion candidate decision.
+
+## Recent commits
+
+- 0677730 Add real promotion decision gate
+- 1d04578 Add real pilot measurement gate
+- 7f107d5 Add real human review gate
+- fc7e96d Add real evidence proposal gate
+- 2b0a8e7 Add gated real source intake wrapper
+- b676ddd Prepare real atendimento test source gate
+- dcd23d8 Calibrate real source PII readiness check
+- cfcd684 Add real source readiness check
+- 3c1dea5 Add real world test protocol
+- 9c13d54 Add v1.7 release snapshot
+- 649a8eb Add orchestration action manifest
+- 4146cf9 Add graph projection layer
