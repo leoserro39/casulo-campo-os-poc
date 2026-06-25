@@ -1,0 +1,41 @@
+{
+  "generated_utc": "2026-06-25T19:38:24.027699+00:00",
+  "pending_count": 3,
+  "review_count": 1,
+  "pending": [
+    {
+      "type": "proposal",
+      "path": "05_outputs/proposals/proposal_sugira_uma_melhoria_para_atendimento_whatsapp_20260625_175958Z.json",
+      "question": "sugira uma melhoria para atendimento whatsapp",
+      "status": "PROPOSED",
+      "domain": "atendimento",
+      "reason": "proposal is waiting for human decision"
+    },
+    {
+      "type": "proposal",
+      "path": "05_outputs/proposals/proposal_propor_melhoria_para_atendimento_whatsapp_20260625_182513Z.json",
+      "question": "propor melhoria para atendimento whatsapp",
+      "status": "PROPOSED",
+      "domain": "atendimento",
+      "reason": "proposal is waiting for human decision"
+    },
+    {
+      "type": "source_manifest",
+      "path": "05_outputs/source_intake/manifests/legacy_whatsapp_export_20260625_191922Z_manifest.json",
+      "source_id": "legacy_whatsapp_export_20260625_191922Z",
+      "gate": "ALLOW_WITH_HUMAN_REVIEW",
+      "hallucination_risk": "MEDIUM",
+      "reason": "source intake requires human review"
+    }
+  ],
+  "reviews": [
+    {
+      "path": "05_outputs/reviews/review_proposal_propor_melhoria_para_atendimento_whatsapp_20260625_193823Z.json",
+      "artifact_path": "05_outputs/proposals/proposal_propor_melhoria_para_atendimento_whatsapp_20260625_184859Z.json",
+      "artifact_type": "proposal",
+      "decision": "APPROVED",
+      "reviewer": "Leonardo Serro",
+      "next_action": "Eligible for return delta proposal. Canonical state is still unchanged."
+    }
+  ]
+}

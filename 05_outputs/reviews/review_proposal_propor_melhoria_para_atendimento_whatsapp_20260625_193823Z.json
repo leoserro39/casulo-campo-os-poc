@@ -1,0 +1,34 @@
+{
+  "status": "RECORDED",
+  "reviewed_utc": "20260625_193823Z",
+  "reviewer": "Leonardo Serro",
+  "decision": "APPROVED",
+  "artifact_type": "proposal",
+  "artifact_path": "05_outputs/proposals/proposal_propor_melhoria_para_atendimento_whatsapp_20260625_184859Z.json",
+  "artifact_id": "propor melhoria para atendimento whatsapp",
+  "notes": "Approved for controlled pilot only. No canonical state change yet. Next step is return delta proposal.",
+  "canonical_effect": "NONE",
+  "next_action": "Eligible for return delta proposal. Canonical state is still unchanged.",
+  "source_summary": {
+    "status": "PROPOSED",
+    "question": "propor melhoria para atendimento whatsapp",
+    "inferred_domain": "atendimento",
+    "gate": null,
+    "hallucination_risk": null,
+    "trust_score": null,
+    "mesh_delta": {
+      "path": "05_outputs/deltas/mesh_delta_propor_melhoria_para_atendimento_whatsapp_20260625_184859Z.json",
+      "Delta_L": 0.389,
+      "H_pre": 0.339,
+      "gate": "ALLOW_PROPOSAL",
+      "support_ratio": 0.556,
+      "missing_ratio": 0.444,
+      "missing_dimensions": [
+        "evidencia",
+        "metrica",
+        "resolvido",
+        "tempo"
+      ]
+    }
+  }
+}
