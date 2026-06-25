@@ -1,0 +1,38 @@
+# CASULO Campo OS - Real Promotion Decision
+
+- status: REAL_PROMOTION_DECISION
+- generated_utc: 20260625_210723Z
+- decision_name: real_atendimento_sample_promotion_decision
+- decision: EXTEND_PILOT
+- reason: Positive signal exists, but more measurements are required.
+- review_decision: APPROVED_FOR_PILOT
+- canonical_effect: NONE
+- promotion_execution_allowed: false
+- branch_mutation_allowed: false
+- sync_allowed: false
+
+## Thresholds
+
+- min_measurements: 3
+- max_unresolved_ratio: 0.35
+- max_unknown_ratio: 0.2
+
+## Aggregate
+
+- measurement_count: 1
+- total_conversations: 6
+- resolved_conversations: 3
+- unresolved_conversations: 2
+- conversations_without_resolved_status: 1
+- resolved_ratio: 0.5
+- unresolved_ratio: 0.333
+- unknown_status_ratio: 0.167
+- avg_response_time_minutes: 18.0
+- positive_signal_count: 1
+- cleanup_signal_count: 0
+- insufficient_signal_count: 0
+- signals: ['PILOT_SIGNAL_POSITIVE']
+
+## Next action
+
+- Collect more pilot measurements before promotion.
