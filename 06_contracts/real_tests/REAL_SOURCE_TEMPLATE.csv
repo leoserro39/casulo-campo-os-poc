@@ -1,0 +1,4 @@
+record_id,created_at,channel,contact_id_hash,direction,message_or_event_type,status,response_time_minutes,resolved_status,notes
+r001,2026-06-25T09:00:00Z,whatsapp,contact_hash_001,inbound,new_contact,open,,unresolved,Example sanitized row
+r002,2026-06-25T09:12:00Z,whatsapp,contact_hash_001,outbound,first_response,waiting_confirmation,12,unresolved,Example sanitized row
+r003,2026-06-25T10:30:00Z,whatsapp,contact_hash_002,inbound,new_contact,resolved,18,resolved,Example sanitized row
