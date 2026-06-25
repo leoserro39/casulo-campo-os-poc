@@ -1,0 +1,71 @@
+# CASULO Campo OS - Release v1.7 Orchestration Contract
+
+- generated_utc: 2026-06-25T20:30:23.497620+00:00
+- release: v1.7-orchestration-contract
+- branch: main
+- commit: 649a8eb
+- status: RELEASE_CANDIDATE
+- source_of_truth: git
+- canonical_effect: NONE
+
+## Completed milestones
+
+- v1.0 closed micrograph loop
+- v1.1 applied delta awareness
+- v1.2 pilot measurement loop
+- v1.3 promotion decision gate
+- v1.4 cross-branch sync delta
+- v1.5 context memory packet
+- v1.6 graph projection
+- v1.7 orchestration action manifest
+
+## Key artifacts
+
+- context_packet: 05_outputs/context_packets/context_memory_packet_latest.md
+- operational_cube: 05_outputs/cockpit/operational_cube_v11.html
+- graph_projection: 05_outputs/graph_projection/casulo_graph_projection.json
+- orchestration_manifest: 05_outputs/orchestration/action_manifest.md
+- roadmap: 06_contracts/roadmap/CASULO_CAMPO_OS_ROADMAP.md
+- pilot_report: 05_outputs/reports/pilot_measurement_report.md
+- promotion_report: 05_outputs/reports/promotion_decision_report.md
+- sync_report: 05_outputs/reports/cross_branch_sync_delta_report.md
+
+## Readiness
+
+- context_packet: True
+- operational_cube: True
+- graph_projection: True
+- orchestration_manifest: True
+- roadmap: True
+
+## Pending gates
+
+- Long-term promotion remains blocked.
+- Cross-branch sync candidates require human review.
+- Pilot needs more real measurements.
+- n8n/MCP tools should start read-only and evidence-only.
+
+## Next phase
+
+- Real-world controlled tests with real source data and real pilot measurements.
+
+## Recent commits
+
+- 649a8eb Add orchestration action manifest
+- 4146cf9 Add graph projection layer
+- 28cecca Add context memory packet
+- aa2c0d8 Add cross-branch sync delta proposal
+- 4384e8b Add promotion decision gate
+- d5ba60f Add pilot measurement loop
+- b3bdab6 Add CASULO Campo OS roadmap
+- f25a39d Add applied delta awareness cockpit layer
+- 705d2a1 Refresh cockpit after applied return delta
+- b26d263 Apply approved return delta as controlled pilot
+- 28a377d Add return delta proposal from approved review
+- 15832ac Add human review gate for proposals
+- 93c9297 Add POC final snapshot report
+- ff23b76 Add operational cube cockpit projection
+- c7149f4 Add state timeline report for POC cockpit
+- 2335642 Add legacy source demo and intake artifacts
+- 451f1fb Add legacy source intake with trust and hallucination risk
+- c80a117 Document n8n MCP orchestration model
