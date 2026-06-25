@@ -1,0 +1,220 @@
+{
+  "generated_utc": "2026-06-25T19:28:27.117733+00:00",
+  "source": "05_outputs/reports/state_timeline.json",
+  "faces": {
+    "source_intake": {
+      "title": "Source Intake",
+      "description": "Legados, APIs, snapshots, manifests e trust.",
+      "events": [
+        {
+          "type": "source_intake",
+          "path": "05_outputs/source_intake/manifests/legacy_whatsapp_export_20260625_191922Z_manifest.json",
+          "source_id": "legacy_whatsapp_export_20260625_191922Z",
+          "target_branch": "atendimento",
+          "trust_score": 0.899,
+          "hallucination_risk": "MEDIUM",
+          "gate": "ALLOW_WITH_HUMAN_REVIEW"
+        }
+      ]
+    },
+    "delta_engine": {
+      "title": "Delta Engine",
+      "description": "Delta_L, H_pre, dimensoes comuns e faltantes.",
+      "events": [
+        {
+          "type": "mesh_delta",
+          "path": "05_outputs/deltas/mesh_delta_computar_malha_para_melhoria_atendimento_whatsapp_20260625_184005Z.json",
+          "question": "computar malha para melhoria de atendimento whatsapp",
+          "domain": "atendimento",
+          "Delta_L": 0.244,
+          "H_pre": 0.194,
+          "gate": "ALLOW_PROPOSAL"
+        },
+        {
+          "type": "mesh_delta",
+          "path": "05_outputs/deltas/mesh_delta_delta_atendimento_whatsapp_20260625_184014Z.json",
+          "question": "delta atendimento whatsapp",
+          "domain": "atendimento",
+          "Delta_L": 0.389,
+          "H_pre": 0.339,
+          "gate": "ALLOW_PROPOSAL"
+        },
+        {
+          "type": "mesh_delta",
+          "path": "05_outputs/deltas/mesh_delta_propor_melhoria_para_atendimento_whatsapp_20260625_184859Z.json",
+          "question": "propor melhoria para atendimento whatsapp",
+          "domain": "atendimento",
+          "Delta_L": 0.389,
+          "H_pre": 0.339,
+          "gate": "ALLOW_PROPOSAL"
+        }
+      ]
+    },
+    "manifestation": {
+      "title": "Manifestation",
+      "description": "Propostas controladas geradas pela malha.",
+      "events": [
+        {
+          "type": "proposal",
+          "path": "05_outputs/proposals/proposal_sugira_uma_melhoria_para_atendimento_whatsapp_20260625_175958Z.json",
+          "question": "sugira uma melhoria para atendimento whatsapp",
+          "domain": "atendimento",
+          "status": "PROPOSED",
+          "gate": null,
+          "Delta_L": null,
+          "H_pre": null
+        },
+        {
+          "type": "proposal",
+          "path": "05_outputs/proposals/proposal_propor_melhoria_para_atendimento_whatsapp_20260625_182513Z.json",
+          "question": "propor melhoria para atendimento whatsapp",
+          "domain": "atendimento",
+          "status": "PROPOSED",
+          "gate": null,
+          "Delta_L": null,
+          "H_pre": null
+        },
+        {
+          "type": "proposal",
+          "path": "05_outputs/proposals/proposal_propor_melhoria_para_atendimento_whatsapp_20260625_184859Z.json",
+          "question": "propor melhoria para atendimento whatsapp",
+          "domain": "atendimento",
+          "status": "PROPOSED",
+          "gate": "ALLOW_PROPOSAL",
+          "Delta_L": 0.389,
+          "H_pre": 0.339
+        }
+      ]
+    },
+    "human_gate": {
+      "title": "Human Gate",
+      "description": "Itens aguardando revisao humana.",
+      "events": [
+        {
+          "type": "source_intake",
+          "path": "05_outputs/source_intake/manifests/legacy_whatsapp_export_20260625_191922Z_manifest.json",
+          "source_id": "legacy_whatsapp_export_20260625_191922Z",
+          "target_branch": "atendimento",
+          "trust_score": 0.899,
+          "hallucination_risk": "MEDIUM",
+          "gate": "ALLOW_WITH_HUMAN_REVIEW"
+        },
+        {
+          "type": "proposal",
+          "path": "05_outputs/proposals/proposal_sugira_uma_melhoria_para_atendimento_whatsapp_20260625_175958Z.json",
+          "question": "sugira uma melhoria para atendimento whatsapp",
+          "domain": "atendimento",
+          "status": "PROPOSED",
+          "gate": null,
+          "Delta_L": null,
+          "H_pre": null
+        },
+        {
+          "type": "proposal",
+          "path": "05_outputs/proposals/proposal_propor_melhoria_para_atendimento_whatsapp_20260625_182513Z.json",
+          "question": "propor melhoria para atendimento whatsapp",
+          "domain": "atendimento",
+          "status": "PROPOSED",
+          "gate": null,
+          "Delta_L": null,
+          "H_pre": null
+        },
+        {
+          "type": "proposal",
+          "path": "05_outputs/proposals/proposal_propor_melhoria_para_atendimento_whatsapp_20260625_184859Z.json",
+          "question": "propor melhoria para atendimento whatsapp",
+          "domain": "atendimento",
+          "status": "PROPOSED",
+          "gate": "ALLOW_PROPOSAL",
+          "Delta_L": 0.389,
+          "H_pre": 0.339
+        }
+      ]
+    },
+    "sync_layer": {
+      "title": "Sync Layer",
+      "description": "Contratos de sincronizacao entre ramificacoes.",
+      "events": [],
+      "planned_note": "Planned: cross-branch sync delta and protection gate."
+    },
+    "timeline": {
+      "title": "State Timeline",
+      "description": "Sequencia operacional consolidada.",
+      "events": [
+        {
+          "type": "source_intake",
+          "path": "05_outputs/source_intake/manifests/legacy_whatsapp_export_20260625_191922Z_manifest.json",
+          "source_id": "legacy_whatsapp_export_20260625_191922Z",
+          "target_branch": "atendimento",
+          "trust_score": 0.899,
+          "hallucination_risk": "MEDIUM",
+          "gate": "ALLOW_WITH_HUMAN_REVIEW"
+        },
+        {
+          "type": "mesh_delta",
+          "path": "05_outputs/deltas/mesh_delta_computar_malha_para_melhoria_atendimento_whatsapp_20260625_184005Z.json",
+          "question": "computar malha para melhoria de atendimento whatsapp",
+          "domain": "atendimento",
+          "Delta_L": 0.244,
+          "H_pre": 0.194,
+          "gate": "ALLOW_PROPOSAL"
+        },
+        {
+          "type": "mesh_delta",
+          "path": "05_outputs/deltas/mesh_delta_delta_atendimento_whatsapp_20260625_184014Z.json",
+          "question": "delta atendimento whatsapp",
+          "domain": "atendimento",
+          "Delta_L": 0.389,
+          "H_pre": 0.339,
+          "gate": "ALLOW_PROPOSAL"
+        },
+        {
+          "type": "mesh_delta",
+          "path": "05_outputs/deltas/mesh_delta_propor_melhoria_para_atendimento_whatsapp_20260625_184859Z.json",
+          "question": "propor melhoria para atendimento whatsapp",
+          "domain": "atendimento",
+          "Delta_L": 0.389,
+          "H_pre": 0.339,
+          "gate": "ALLOW_PROPOSAL"
+        },
+        {
+          "type": "proposal",
+          "path": "05_outputs/proposals/proposal_sugira_uma_melhoria_para_atendimento_whatsapp_20260625_175958Z.json",
+          "question": "sugira uma melhoria para atendimento whatsapp",
+          "domain": "atendimento",
+          "status": "PROPOSED",
+          "gate": null,
+          "Delta_L": null,
+          "H_pre": null
+        },
+        {
+          "type": "proposal",
+          "path": "05_outputs/proposals/proposal_propor_melhoria_para_atendimento_whatsapp_20260625_182513Z.json",
+          "question": "propor melhoria para atendimento whatsapp",
+          "domain": "atendimento",
+          "status": "PROPOSED",
+          "gate": null,
+          "Delta_L": null,
+          "H_pre": null
+        },
+        {
+          "type": "proposal",
+          "path": "05_outputs/proposals/proposal_propor_melhoria_para_atendimento_whatsapp_20260625_184859Z.json",
+          "question": "propor melhoria para atendimento whatsapp",
+          "domain": "atendimento",
+          "status": "PROPOSED",
+          "gate": "ALLOW_PROPOSAL",
+          "Delta_L": 0.389,
+          "H_pre": 0.339
+        }
+      ]
+    }
+  },
+  "summary": {
+    "source_intake_count": 1,
+    "mesh_delta_count": 3,
+    "proposal_count": 3,
+    "event_count": 7,
+    "human_gate_count": 4
+  }
+}

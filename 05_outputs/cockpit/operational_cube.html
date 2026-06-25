@@ -1,0 +1,316 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<title>CASULO Campo OS - Operational Cube</title>
+<style>
+:root {
+  --bg: #0b1020;
+  --panel: #121a30;
+  --line: #26314f;
+  --text: #e9eefc;
+  --muted: #9ba8c7;
+  --allow: #25b36a;
+  --review: #d6a11f;
+  --proposed: #3f82ff;
+  --blocked: #d94a4a;
+  --planned: #7b8194;
+}
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: radial-gradient(circle at top, #1d2a50, var(--bg));
+  color: var(--text);
+}
+.main {
+  padding: 28px;
+}
+.top {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr;
+  gap: 18px;
+  margin-bottom: 18px;
+}
+.panel, .face {
+  background: rgba(18, 26, 48, .92);
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  box-shadow: 0 10px 30px rgba(0,0,0,.25);
+}
+.panel {
+  padding: 20px;
+}
+h1, h2 {
+  margin: 0 0 8px 0;
+}
+p {
+  color: var(--muted);
+}
+.cube {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(220px, 1fr));
+  gap: 16px;
+}
+.face {
+  min-height: 280px;
+  padding: 16px;
+  position: relative;
+  overflow: hidden;
+}
+.face:before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(140deg, rgba(255,255,255,.07), transparent 42%);
+  pointer-events: none;
+}
+.cards {
+  display: grid;
+  gap: 10px;
+  position: relative;
+}
+.card {
+  border-left: 5px solid var(--planned);
+  background: rgba(255,255,255,.045);
+  border-radius: 12px;
+  padding: 10px;
+}
+.card.allow { border-left-color: var(--allow); }
+.card.review { border-left-color: var(--review); }
+.card.proposed { border-left-color: var(--proposed); }
+.card.blocked { border-left-color: var(--blocked); }
+.card.planned { border-left-color: var(--planned); }
+.meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin: 8px 0;
+}
+.meta span, .chip {
+  font-size: 12px;
+  color: var(--text);
+  border: 1px solid var(--line);
+  border-radius: 99px;
+  padding: 3px 8px;
+  background: rgba(255,255,255,.06);
+}
+.chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin: 8px 0 12px 0;
+}
+.chip.allow { border-color: var(--allow); }
+.chip.review { border-color: var(--review); }
+.chip.proposed { border-color: var(--proposed); }
+.chip.blocked { border-color: var(--blocked); }
+small {
+  color: var(--muted);
+  word-break: break-word;
+}
+.axis {
+  display: grid;
+  gap: 8px;
+}
+.axis div {
+  padding: 8px 10px;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  background: rgba(255,255,255,.04);
+}
+@media (max-width: 900px) {
+  .top, .cube { grid-template-columns: 1fr; }
+}
+</style>
+</head>
+<body>
+<div class="main">
+  <div class="top">
+    <section class="panel">
+      <h1>CASULO Campo OS - Operational Cube</h1>
+      <p>Cubo Operacional de Estado. Projecao derivada do repo, nao fonte canonica.</p>
+      <p>Generated: 2026-06-25T19:28:27.117733+00:00</p>
+    </section>
+    <section class="panel">
+      <h2>State Axis</h2>
+      <div class="axis">
+        <div>source intake -> trust -> mapping</div>
+        <div>mesh delta -> Delta_L/H_pre -> gate</div>
+        <div>manifestation -> proposal -> human review</div>
+        <div>return delta -> canonical state after approval</div>
+      </div>
+    </section>
+  </div>
+  <div class="cube">
+    
+    <section class="face" id="source_intake">
+      <header>
+        <h2>Source Intake</h2>
+        <p>Legados, APIs, snapshots, manifests e trust.</p>
+        <div class="chips"><span class="chip review">review 1</span></div>
+      </header>
+      <div class="cards">
+      <article class="card review">
+        <strong>legacy_whatsapp_export_20260625_191922Z</strong>
+        <div class="meta"><span>type=source_intake</span> <span>target_branch=atendimento</span> <span>gate=ALLOW_WITH_HUMAN_REVIEW</span> <span>trust_score=0.899</span> <span>hallucination_risk=MEDIUM</span></div>
+        <small>05_outputs/source_intake/manifests/legacy_whatsapp_export_20260625_191922Z_manifest.json</small>
+      </article>
+    </div>
+    </section>
+    
+
+    <section class="face" id="delta_engine">
+      <header>
+        <h2>Delta Engine</h2>
+        <p>Delta_L, H_pre, dimensoes comuns e faltantes.</p>
+        <div class="chips"><span class="chip allow">allow 3</span></div>
+      </header>
+      <div class="cards">
+      <article class="card allow">
+        <strong>computar malha para melhoria de atendimento whatsapp</strong>
+        <div class="meta"><span>type=mesh_delta</span> <span>domain=atendimento</span> <span>gate=ALLOW_PROPOSAL</span> <span>Delta_L=0.244</span> <span>H_pre=0.194</span></div>
+        <small>05_outputs/deltas/mesh_delta_computar_malha_para_melhoria_atendimento_whatsapp_20260625_184005Z.json</small>
+      </article>
+    
+      <article class="card allow">
+        <strong>delta atendimento whatsapp</strong>
+        <div class="meta"><span>type=mesh_delta</span> <span>domain=atendimento</span> <span>gate=ALLOW_PROPOSAL</span> <span>Delta_L=0.389</span> <span>H_pre=0.339</span></div>
+        <small>05_outputs/deltas/mesh_delta_delta_atendimento_whatsapp_20260625_184014Z.json</small>
+      </article>
+    
+      <article class="card allow">
+        <strong>propor melhoria para atendimento whatsapp</strong>
+        <div class="meta"><span>type=mesh_delta</span> <span>domain=atendimento</span> <span>gate=ALLOW_PROPOSAL</span> <span>Delta_L=0.389</span> <span>H_pre=0.339</span></div>
+        <small>05_outputs/deltas/mesh_delta_propor_melhoria_para_atendimento_whatsapp_20260625_184859Z.json</small>
+      </article>
+    </div>
+    </section>
+    
+
+    <section class="face" id="manifestation">
+      <header>
+        <h2>Manifestation</h2>
+        <p>Propostas controladas geradas pela malha.</p>
+        <div class="chips"><span class="chip proposed">proposed 3</span></div>
+      </header>
+      <div class="cards">
+      <article class="card proposed">
+        <strong>sugira uma melhoria para atendimento whatsapp</strong>
+        <div class="meta"><span>type=proposal</span> <span>domain=atendimento</span> <span>status=PROPOSED</span></div>
+        <small>05_outputs/proposals/proposal_sugira_uma_melhoria_para_atendimento_whatsapp_20260625_175958Z.json</small>
+      </article>
+    
+      <article class="card proposed">
+        <strong>propor melhoria para atendimento whatsapp</strong>
+        <div class="meta"><span>type=proposal</span> <span>domain=atendimento</span> <span>status=PROPOSED</span></div>
+        <small>05_outputs/proposals/proposal_propor_melhoria_para_atendimento_whatsapp_20260625_182513Z.json</small>
+      </article>
+    
+      <article class="card proposed">
+        <strong>propor melhoria para atendimento whatsapp</strong>
+        <div class="meta"><span>type=proposal</span> <span>domain=atendimento</span> <span>status=PROPOSED</span> <span>gate=ALLOW_PROPOSAL</span> <span>Delta_L=0.389</span> <span>H_pre=0.339</span></div>
+        <small>05_outputs/proposals/proposal_propor_melhoria_para_atendimento_whatsapp_20260625_184859Z.json</small>
+      </article>
+    </div>
+    </section>
+    
+
+    <section class="face" id="human_gate">
+      <header>
+        <h2>Human Gate</h2>
+        <p>Itens aguardando revisao humana.</p>
+        <div class="chips"><span class="chip review">review 1</span><span class="chip proposed">proposed 3</span></div>
+      </header>
+      <div class="cards">
+      <article class="card review">
+        <strong>legacy_whatsapp_export_20260625_191922Z</strong>
+        <div class="meta"><span>type=source_intake</span> <span>target_branch=atendimento</span> <span>gate=ALLOW_WITH_HUMAN_REVIEW</span> <span>trust_score=0.899</span> <span>hallucination_risk=MEDIUM</span></div>
+        <small>05_outputs/source_intake/manifests/legacy_whatsapp_export_20260625_191922Z_manifest.json</small>
+      </article>
+    
+      <article class="card proposed">
+        <strong>sugira uma melhoria para atendimento whatsapp</strong>
+        <div class="meta"><span>type=proposal</span> <span>domain=atendimento</span> <span>status=PROPOSED</span></div>
+        <small>05_outputs/proposals/proposal_sugira_uma_melhoria_para_atendimento_whatsapp_20260625_175958Z.json</small>
+      </article>
+    
+      <article class="card proposed">
+        <strong>propor melhoria para atendimento whatsapp</strong>
+        <div class="meta"><span>type=proposal</span> <span>domain=atendimento</span> <span>status=PROPOSED</span></div>
+        <small>05_outputs/proposals/proposal_propor_melhoria_para_atendimento_whatsapp_20260625_182513Z.json</small>
+      </article>
+    
+      <article class="card proposed">
+        <strong>propor melhoria para atendimento whatsapp</strong>
+        <div class="meta"><span>type=proposal</span> <span>domain=atendimento</span> <span>status=PROPOSED</span> <span>gate=ALLOW_PROPOSAL</span> <span>Delta_L=0.389</span> <span>H_pre=0.339</span></div>
+        <small>05_outputs/proposals/proposal_propor_melhoria_para_atendimento_whatsapp_20260625_184859Z.json</small>
+      </article>
+    </div>
+    </section>
+    
+
+    <section class="face" id="sync_layer">
+      <header>
+        <h2>Sync Layer</h2>
+        <p>Contratos de sincronizacao entre ramificacoes.</p>
+        <div class="chips"></div>
+      </header>
+      <div class="cards"><article class="card planned"><strong>Planned: cross-branch sync delta and protection gate.</strong><div class="meta">status=planned</div></article></div>
+    </section>
+    
+
+    <section class="face" id="timeline">
+      <header>
+        <h2>State Timeline</h2>
+        <p>Sequencia operacional consolidada.</p>
+        <div class="chips"><span class="chip allow">allow 3</span><span class="chip review">review 1</span><span class="chip proposed">proposed 3</span></div>
+      </header>
+      <div class="cards">
+      <article class="card review">
+        <strong>legacy_whatsapp_export_20260625_191922Z</strong>
+        <div class="meta"><span>type=source_intake</span> <span>target_branch=atendimento</span> <span>gate=ALLOW_WITH_HUMAN_REVIEW</span> <span>trust_score=0.899</span> <span>hallucination_risk=MEDIUM</span></div>
+        <small>05_outputs/source_intake/manifests/legacy_whatsapp_export_20260625_191922Z_manifest.json</small>
+      </article>
+    
+      <article class="card allow">
+        <strong>computar malha para melhoria de atendimento whatsapp</strong>
+        <div class="meta"><span>type=mesh_delta</span> <span>domain=atendimento</span> <span>gate=ALLOW_PROPOSAL</span> <span>Delta_L=0.244</span> <span>H_pre=0.194</span></div>
+        <small>05_outputs/deltas/mesh_delta_computar_malha_para_melhoria_atendimento_whatsapp_20260625_184005Z.json</small>
+      </article>
+    
+      <article class="card allow">
+        <strong>delta atendimento whatsapp</strong>
+        <div class="meta"><span>type=mesh_delta</span> <span>domain=atendimento</span> <span>gate=ALLOW_PROPOSAL</span> <span>Delta_L=0.389</span> <span>H_pre=0.339</span></div>
+        <small>05_outputs/deltas/mesh_delta_delta_atendimento_whatsapp_20260625_184014Z.json</small>
+      </article>
+    
+      <article class="card allow">
+        <strong>propor melhoria para atendimento whatsapp</strong>
+        <div class="meta"><span>type=mesh_delta</span> <span>domain=atendimento</span> <span>gate=ALLOW_PROPOSAL</span> <span>Delta_L=0.389</span> <span>H_pre=0.339</span></div>
+        <small>05_outputs/deltas/mesh_delta_propor_melhoria_para_atendimento_whatsapp_20260625_184859Z.json</small>
+      </article>
+    
+      <article class="card proposed">
+        <strong>sugira uma melhoria para atendimento whatsapp</strong>
+        <div class="meta"><span>type=proposal</span> <span>domain=atendimento</span> <span>status=PROPOSED</span></div>
+        <small>05_outputs/proposals/proposal_sugira_uma_melhoria_para_atendimento_whatsapp_20260625_175958Z.json</small>
+      </article>
+    
+      <article class="card proposed">
+        <strong>propor melhoria para atendimento whatsapp</strong>
+        <div class="meta"><span>type=proposal</span> <span>domain=atendimento</span> <span>status=PROPOSED</span></div>
+        <small>05_outputs/proposals/proposal_propor_melhoria_para_atendimento_whatsapp_20260625_182513Z.json</small>
+      </article>
+    
+      <article class="card proposed">
+        <strong>propor melhoria para atendimento whatsapp</strong>
+        <div class="meta"><span>type=proposal</span> <span>domain=atendimento</span> <span>status=PROPOSED</span> <span>gate=ALLOW_PROPOSAL</span> <span>Delta_L=0.389</span> <span>H_pre=0.339</span></div>
+        <small>05_outputs/proposals/proposal_propor_melhoria_para_atendimento_whatsapp_20260625_184859Z.json</small>
+      </article>
+    </div>
+    </section>
+    
+  </div>
+</div>
+</body>
+</html>
