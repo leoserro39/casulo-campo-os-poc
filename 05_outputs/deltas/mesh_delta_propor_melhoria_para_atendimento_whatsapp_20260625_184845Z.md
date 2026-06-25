@@ -1,0 +1,39 @@
+# CASULO Campo OS Mesh Delta
+
+- status: COMPUTED
+- question: propor melhoria para atendimento whatsapp
+- inferred_domain: atendimento
+- graph_nodes: 20
+- graph_relationships: 19
+- chunks_used: 7
+- estimated_tokens: 884
+- support_ratio: 0.556
+- missing_ratio: 0.444
+- Delta_L: 0.389
+- H_pre: 0.339
+- gate: ALLOW_PROPOSAL
+
+## Sources
+- 01_domains/atendimento/problems/demora_resposta_whatsapp.md
+- 00_inbox/raw_docs/demo_business_notes.md
+- 00_program/sponsor_pitch_notes.md
+- 02_cases/case_demo_001/business_state.json
+- 02_cases/case_demo_001/diagnosis.md
+- 02_cases/case_demo_001/evidence_ledger.jsonl
+- 02_cases/case_demo_001/intake.md
+
+## Common dimensions
+- cliente
+- confirmacao
+- resposta
+- roteiro
+- whatsapp
+
+## Missing dimensions
+- evidencia
+- metrica
+- resolvido
+- tempo
+
+## Next action
+- Generate or review a controlled proposal.

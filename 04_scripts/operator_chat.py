@@ -62,7 +62,7 @@ def handle(query):
         return run_script("compute_mesh_delta.py", q)
 
     if is_proposal_request(q):
-        return run_script("propose_from_mesh.py", q)
+        return run_script("propose_with_delta_gate.py", q)
 
     return run_script("chat_mesh.py", q)
 
