@@ -1,9 +1,9 @@
 # CASULO Campo OS - Real Source Intake Report
 
 - status: REAL_SOURCE_INTAKE
-- generated_utc: 20260625_212550Z
-- source: 00_inbox/sources/real_atendimento_test/atendimento_real_sanitized_FROM_RAW_SAMPLE.csv
-- source_name: sanitizer_raw_sample_cycle
+- generated_utc: 20260625_213619Z
+- source: 00_inbox/sources/real_atendimento_test/atendimento_real_sanitized.csv
+- source_name: real_atendimento_cycle_002_local_demo
 - readiness_gate: READY_FOR_INTAKE
 - intake_gate: ALLOW_EVIDENCE_ONLY_WITH_HUMAN_REVIEW
 - canonical_effect: EVIDENCE_ONLY
@@ -12,23 +12,23 @@
 
 ## Quality
 
-- row_count: 10
-- contact_count: 6
-- inbound_rows: 7
-- outbound_rows: 3
+- row_count: 12
+- contact_count: 7
+- inbound_rows: 8
+- outbound_rows: 4
 - resolved_rows: 3
-- unresolved_rows: 6
+- unresolved_rows: 8
 - unknown_status_rows: 1
-- response_time_count: 5
-- avg_response_time_minutes: 18.0
+- response_time_count: 6
+- avg_response_time_minutes: 15.0
 - empty_ratio: 0.05
 - contradictions_count: 0
 
 ## Artifacts
 
-- manifest: 05_outputs/real_tests/intake/manifests/real_source_intake_sanitizer_raw_sample_cycle_20260625_212550Z_manifest.json
-- trust_report: 05_outputs/real_tests/intake/trust_reports/real_source_intake_sanitizer_raw_sample_cycle_20260625_212550Z_trust_report.json
-- intake_delta: 05_outputs/real_tests/intake/deltas/real_source_intake_sanitizer_raw_sample_cycle_20260625_212550Z_delta.json
+- manifest: 05_outputs/real_tests/intake/manifests/real_source_intake_real_atendimento_cycle_002_local_demo_20260625_213619Z_manifest.json
+- trust_report: 05_outputs/real_tests/intake/trust_reports/real_source_intake_real_atendimento_cycle_002_local_demo_20260625_213619Z_trust_report.json
+- intake_delta: 05_outputs/real_tests/intake/deltas/real_source_intake_real_atendimento_cycle_002_local_demo_20260625_213619Z_delta.json
 
 ## Next action
 

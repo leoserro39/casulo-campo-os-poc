@@ -1,6 +1,6 @@
 {
   "status": "REAL_SOURCE_READINESS_CHECK",
-  "checked_utc": "20260625_213619Z",
+  "checked_utc": "20260625_213618Z",
   "source": "00_inbox/sources/real_atendimento_test/atendimento_real_sanitized.csv",
   "source_name": "real_atendimento_cycle_002_local_demo",
   "row_count": 12,

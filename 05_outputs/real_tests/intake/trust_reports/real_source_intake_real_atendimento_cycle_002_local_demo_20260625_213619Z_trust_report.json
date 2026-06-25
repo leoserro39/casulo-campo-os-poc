@@ -1,0 +1,28 @@
+{
+  "status": "REAL_SOURCE_TRUST_REPORT",
+  "generated_utc": "20260625_213619Z",
+  "source": "00_inbox/sources/real_atendimento_test/atendimento_real_sanitized.csv",
+  "source_name": "real_atendimento_cycle_002_local_demo",
+  "trust_score": 0.945,
+  "hallucination_risk": "MEDIUM",
+  "quality": {
+    "row_count": 12,
+    "contact_count": 7,
+    "inbound_rows": 8,
+    "outbound_rows": 4,
+    "resolved_rows": 3,
+    "unresolved_rows": 8,
+    "unknown_status_rows": 1,
+    "response_time_count": 6,
+    "avg_response_time_minutes": 15.0,
+    "empty_ratio": 0.05,
+    "contradictions_count": 0,
+    "contradictions_sample": []
+  },
+  "readiness": {
+    "gate": "READY_FOR_INTAKE",
+    "pii_hit_count": 0,
+    "missing_required_columns": []
+  },
+  "canonical_effect": "EVIDENCE_ONLY"
+}

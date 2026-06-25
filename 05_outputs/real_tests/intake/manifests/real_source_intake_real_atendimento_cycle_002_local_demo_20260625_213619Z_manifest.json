@@ -1,9 +1,8 @@
 {
-  "status": "REAL_SOURCE_READINESS_CHECK",
-  "checked_utc": "20260625_213619Z",
+  "status": "REAL_SOURCE_INTAKE_MANIFEST",
+  "generated_utc": "20260625_213619Z",
   "source": "00_inbox/sources/real_atendimento_test/atendimento_real_sanitized.csv",
   "source_name": "real_atendimento_cycle_002_local_demo",
-  "row_count": 12,
   "columns": [
     "record_id",
     "created_at",
@@ -16,11 +15,7 @@
     "resolved_status",
     "notes"
   ],
-  "missing_required_columns": [],
-  "empty_ratio": 0.05,
-  "pii_hit_count": 0,
-  "pii_hits": [],
-  "gate": "READY_FOR_INTAKE",
-  "canonical_effect": "NONE",
-  "next_action": "Run evidence-only intake gate."
+  "row_count": 12,
+  "readiness_gate": "READY_FOR_INTAKE",
+  "canonical_effect": "EVIDENCE_ONLY"
 }
