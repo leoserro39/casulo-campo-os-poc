@@ -1,0 +1,33 @@
+{
+  "status": "APPLIED",
+  "applied_utc": "20260625_194649Z",
+  "operator": "Leonardo Serro",
+  "source_return_delta": "05_outputs/return_deltas/return_delta_propor_melhoria_para_atendimento_whatsapp_20260625_194122Z.json",
+  "target_branch": "atendimento",
+  "canonical_effect": "APPEND_DOMAIN_DELTA_RECORD",
+  "applied_domain_delta": "01_domains/atendimento/deltas/applied_return_delta_propor_melhoria_para_atendimento_whatsapp_20260625_194649Z.md",
+  "source_review": "05_outputs/reviews/review_proposal_propor_melhoria_para_atendimento_whatsapp_20260625_193823Z.json",
+  "source_proposal": "05_outputs/proposals/proposal_propor_melhoria_para_atendimento_whatsapp_20260625_184859Z.json",
+  "question": "propor melhoria para atendimento whatsapp",
+  "proposed_changes": [
+    "Criar roteiro minimo de atendimento WhatsApp com respostas base.",
+    "Separar mensagens em: novo contato, aguardando confirmacao e resolvido.",
+    "Medir tempo de primeira resposta ou mensagens sem resposta por dia.",
+    "Rodar por 7 dias antes de promover mudanca para estado canonico."
+  ],
+  "mesh_delta": {
+    "path": "05_outputs/deltas/mesh_delta_propor_melhoria_para_atendimento_whatsapp_20260625_184859Z.json",
+    "Delta_L": 0.389,
+    "H_pre": 0.339,
+    "gate": "ALLOW_PROPOSAL",
+    "support_ratio": 0.556,
+    "missing_ratio": 0.444,
+    "missing_dimensions": [
+      "evidencia",
+      "metrica",
+      "resolvido",
+      "tempo"
+    ]
+  },
+  "safety_note": "This apply operation appended a domain delta record only. It did not overwrite domain state."
+}
