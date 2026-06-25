@@ -28,8 +28,10 @@ def read_json(path):
     return json.loads(path.read_text(encoding="utf-8"))
 
 
-def latest_measurements(folder):
+def latest_measurements(folder, prefix=None):
     files = sorted(folder.glob("*.json"), key=lambda p: p.stat().st_mtime)
+    if prefix:
+        files = [p for p in files if p.name.startswith(prefix)]
     return files
 
 
@@ -134,6 +136,7 @@ def main():
     parser.add_argument("--review-report", default="05_outputs/reports/real_human_review_report.json")
     parser.add_argument("--measurements-dir", default="05_outputs/real_tests/pilot_measurements")
     parser.add_argument("--decision-name", default="real_atendimento_promotion_decision")
+    parser.add_argument("--measurement-prefix", default="")
     parser.add_argument("--min-measurements", type=int, default=3)
     parser.add_argument("--max-unresolved-ratio", type=float, default=0.35)
     parser.add_argument("--max-unknown-ratio", type=float, default=0.20)
@@ -160,7 +163,7 @@ def main():
         print("canonical_effect: NONE")
         raise SystemExit(2)
 
-    files = latest_measurements(measurements_dir)
+    files = latest_measurements(measurements_dir, args.measurement_prefix or None)
     measurements = [read_json(path) for path in files]
     agg = aggregate(measurements)
     decision, reason = decide(
@@ -186,6 +189,7 @@ def main():
         "review_report": rel(review_path),
         "review_decision": review.get("decision"),
         "measurement_count": agg["measurement_count"],
+        "measurement_prefix": args.measurement_prefix,
         "measurement_files": [rel(path) for path in files],
         "thresholds": {
             "min_measurements": args.min_measurements,
@@ -251,6 +255,7 @@ def main():
     print("REAL_PROMOTION_DECISION_CREATED")
     print("decision:", decision)
     print("reason:", reason)
+    print("measurement_prefix:", args.measurement_prefix)
     print("measurement_count:", agg["measurement_count"])
     print("positive_signal_count:", agg["positive_signal_count"])
     print("unresolved_ratio:", agg["unresolved_ratio"])

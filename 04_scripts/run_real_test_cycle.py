@@ -85,6 +85,8 @@ def main():
         "05_outputs/real_tests/pilot_measurements",
         "--decision-name",
         decision_name,
+        "--measurement-prefix",
+        measurement_name,
         "--min-measurements",
         args.min_measurements,
     ])
