@@ -1,0 +1,142 @@
+{
+  "generated_utc": "2026-06-25T20:27:48.098284+00:00",
+  "status": "ORCHESTRATION_ACTION_MANIFEST",
+  "branch": "main",
+  "commit": "4146cf9",
+  "source_of_truth": "git",
+  "canonical_effect": "NONE",
+  "orchestrators": [
+    "human",
+    "ChatGPT",
+    "Codex",
+    "Devin",
+    "n8n",
+    "MCP"
+  ],
+  "allowed_actions": [
+    {
+      "action": "read_context_packet",
+      "mode": "read_only",
+      "input": "05_outputs/context_packets/context_memory_packet_latest.json",
+      "canonical_effect": "NONE",
+      "allowed_for": [
+        "human",
+        "ChatGPT",
+        "Codex",
+        "Devin",
+        "n8n",
+        "MCP"
+      ]
+    },
+    {
+      "action": "read_graph_projection",
+      "mode": "read_only",
+      "input": "05_outputs/graph_projection/casulo_graph_projection.json",
+      "canonical_effect": "NONE",
+      "allowed_for": [
+        "human",
+        "ChatGPT",
+        "Neo4j importer",
+        "n8n",
+        "MCP"
+      ]
+    },
+    {
+      "action": "build_reports",
+      "mode": "derived_write",
+      "canonical_effect": "NONE",
+      "allowed_for": [
+        "human",
+        "n8n",
+        "MCP"
+      ]
+    },
+    {
+      "action": "record_pilot_measurement",
+      "mode": "append_evidence",
+      "script": "04_scripts/record_pilot_measurement.py",
+      "canonical_effect": "EVIDENCE_ONLY",
+      "requires": [
+        "operator",
+        "measurement values"
+      ],
+      "allowed_for": [
+        "human",
+        "n8n form",
+        "MCP controlled tool"
+      ]
+    },
+    {
+      "action": "request_human_review",
+      "mode": "append_request",
+      "canonical_effect": "NONE",
+      "allowed_for": [
+        "human",
+        "ChatGPT",
+        "n8n",
+        "MCP"
+      ]
+    },
+    {
+      "action": "propose_sync_review",
+      "mode": "proposal_only",
+      "script": "04_scripts/build_cross_branch_sync_delta.py",
+      "canonical_effect": "NONE",
+      "requires_human_review": true,
+      "allowed_for": [
+        "human",
+        "ChatGPT",
+        "n8n",
+        "MCP"
+      ]
+    }
+  ],
+  "conditional_actions": [
+    {
+      "action": "apply_return_delta",
+      "mode": "controlled_mutation",
+      "script": "04_scripts/apply_return_delta.py",
+      "canonical_effect": "APPEND_DOMAIN_DELTA_RECORD",
+      "requires": [
+        "explicit confirmation",
+        "approved review",
+        "return delta"
+      ],
+      "confirmation": "APPLY_CANONICAL_DELTA",
+      "allowed_for": [
+        "human only",
+        "MCP only if explicit human confirmation is passed"
+      ]
+    },
+    {
+      "action": "register_promotion_decision",
+      "mode": "human_decision",
+      "script": "04_scripts/promotion_decision_gate.py",
+      "canonical_effect": "NONE unless future promote flow is explicitly added",
+      "requires": [
+        "human operator",
+        "pilot report"
+      ],
+      "allowed_for": [
+        "human only"
+      ]
+    }
+  ],
+  "forbidden_actions": [
+    "auto_promote_branch_state",
+    "auto_sync_branches",
+    "overwrite_domain_state",
+    "mutate_from_graph_projection",
+    "mutate_from_llm_answer_without_review",
+    "treat_neo4j_as_source_of_truth",
+    "delete_or_rewrite_evidence_history"
+  ],
+  "readiness": {
+    "context_packet_exists": true,
+    "graph_projection_exists": true,
+    "pilot_report_exists": true,
+    "promotion_report_exists": true,
+    "sync_report_exists": true
+  },
+  "next_safe_action": "Expose only read/report/measurement/review-request tools first. Keep mutation tools human-confirmed."
+}
