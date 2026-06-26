@@ -1,0 +1,192 @@
+{
+  "contract_version": "workbench.real_intake.v0.4",
+  "case_id": "real_controlled_template_001",
+  "case_title": "Real Controlled Intake Template",
+  "vertical": "controlled_real_case",
+  "scope": {
+    "objective": "Prepare controlled diagnostic from anonymized operational evidence.",
+    "diagnostic_allowed": true,
+    "human_review_required": true,
+    "implementation_allowed": false,
+    "notes": "Template for controlled tests. Do not add raw personal data."
+  },
+  "privacy": {
+    "privacy_mode": "ANONYMIZED_OR_SYNTHETIC",
+    "raw_personal_data_allowed": false,
+    "client_identification_allowed": false,
+    "retention_policy": "local controlled test only"
+  },
+  "sources": [
+    {
+      "id": "src_controlled_interview",
+      "name": "Controlled owner interview notes",
+      "type": "interview",
+      "domains": [
+        "entrada",
+        "atendimento",
+        "gestao"
+      ],
+      "classification": "INTERNAL",
+      "contains_personal_data": false,
+      "anonymization_status": "ANONYMIZED",
+      "quality_inputs": {
+        "completeness": 0.7,
+        "freshness": 0.9,
+        "consistency": 0.65,
+        "traceability": 0.45,
+        "trust": 0.7
+      },
+      "allowed_use": "DIAGNOSTIC_ONLY"
+    },
+    {
+      "id": "src_controlled_sheet",
+      "name": "Controlled operational sheet",
+      "type": "spreadsheet",
+      "domains": [
+        "operacao",
+        "tarefas",
+        "financeiro"
+      ],
+      "classification": "CONFIDENTIAL",
+      "contains_personal_data": false,
+      "anonymization_status": "ANONYMIZED",
+      "quality_inputs": {
+        "completeness": 0.62,
+        "freshness": 0.75,
+        "consistency": 0.58,
+        "traceability": 0.55,
+        "trust": 0.72
+      },
+      "allowed_use": "DIAGNOSTIC_ONLY"
+    }
+  ],
+  "domains": [
+    {
+      "id": "entrada",
+      "name": "Entrada",
+      "branches": [
+        "origem",
+        "tipo",
+        "status"
+      ],
+      "risks": [
+        "entrada informal"
+      ]
+    },
+    {
+      "id": "atendimento",
+      "name": "Atendimento",
+      "branches": [
+        "canal",
+        "retorno",
+        "pendencia"
+      ],
+      "risks": [
+        "canais misturados"
+      ]
+    },
+    {
+      "id": "operacao",
+      "name": "Operacao",
+      "branches": [
+        "fila",
+        "responsavel",
+        "execucao"
+      ],
+      "risks": [
+        "status nao padronizado"
+      ]
+    },
+    {
+      "id": "tarefas",
+      "name": "Tarefas",
+      "branches": [
+        "prioridade",
+        "prazo",
+        "dono"
+      ],
+      "risks": [
+        "prioridade informal"
+      ]
+    },
+    {
+      "id": "financeiro",
+      "name": "Financeiro",
+      "branches": [
+        "receita",
+        "custo",
+        "pendencia"
+      ],
+      "risks": [
+        "baixa granularidade"
+      ]
+    },
+    {
+      "id": "gestao",
+      "name": "Gestao",
+      "branches": [
+        "indicador",
+        "rotina",
+        "decisao"
+      ],
+      "risks": [
+        "centralizacao"
+      ]
+    }
+  ],
+  "intersections": [
+    {
+      "id": "ix_atendimento_operacao",
+      "domains": [
+        "atendimento",
+        "operacao"
+      ],
+      "description": "Atendimento gera fila operacional sem status claro",
+      "impact": "medium",
+      "delta_id": "delta_fila_operacional"
+    },
+    {
+      "id": "ix_tarefas_gestao",
+      "domains": [
+        "tarefas",
+        "gestao"
+      ],
+      "description": "Prioridade operacional depende de decisao informal",
+      "impact": "medium",
+      "delta_id": "delta_priorizacao"
+    },
+    {
+      "id": "ix_financeiro_operacao",
+      "domains": [
+        "financeiro",
+        "operacao"
+      ],
+      "description": "Operacao nao mostra impacto financeiro com clareza",
+      "impact": "high",
+      "delta_id": "delta_visao_financeira"
+    }
+  ],
+  "deltas": [
+    {
+      "id": "delta_fila_operacional",
+      "title": "Criar fila operacional controlada",
+      "gate_hint": "PREPARE",
+      "solution_package": "fila_operacional_controlada",
+      "expected_metric": "reduzir perda de atendimento"
+    },
+    {
+      "id": "delta_priorizacao",
+      "title": "Criar criterio simples de priorizacao",
+      "gate_hint": "MEASURE_FIRST",
+      "solution_package": "priorizacao_simples",
+      "expected_metric": "reduzir decisao informal"
+    },
+    {
+      "id": "delta_visao_financeira",
+      "title": "Conectar operacao com sinal financeiro",
+      "gate_hint": "MEASURE_FIRST",
+      "solution_package": "painel_sinal_financeiro",
+      "expected_metric": "melhorar visibilidade de impacto"
+    }
+  ]
+}

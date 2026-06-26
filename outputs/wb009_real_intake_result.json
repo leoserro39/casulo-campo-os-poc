@@ -1,0 +1,26 @@
+{
+  "generated_at": "2026-06-26T14:49:25+00:00",
+  "task": "TASK-WB-009",
+  "status": "PASS",
+  "stage": "complete",
+  "exit_code": 0,
+  "repo": "/workspaces/casulo-campo-os-poc",
+  "contracts": {
+    "real_intake": true,
+    "evidence_manifest": true
+  },
+  "runtime": {
+    "real_intake_engine": true,
+    "validate_real_intake": true,
+    "build_real_case_from_intake": true,
+    "template": true
+  },
+  "validation": {
+    "real_intake_check": "PASS",
+    "real_case_build_check": "PASS",
+    "workbench_strict": "PASS",
+    "casulo_campo_validate": "PASS"
+  },
+  "git_status": "M workbench/README.md\n M workbench/scripts/validate_workbench.py\n?? docs/casulo_workbench_atlas/14_REAL_INTAKE_EVIDENCE_MANIFEST.md\n?? outputs/wb009_real_intake_backups/\n?? workbench/api/services/real_intake_engine.py\n?? workbench/contracts/evidence_manifest.contract.json\n?? workbench/contracts/real_intake.contract.json\n?? workbench/real_cases/\n?? workbench/scripts/build_real_case_from_intake.py\n?? workbench/scripts/validate_real_intake.py",
+  "next_step": "Review report, commit, push, then tag workbench-real-intake-v0.4."
+}

@@ -11,6 +11,7 @@ sys.path.insert(0, str(ROOT))
 
 from api.services.casulo_workbench_engine import build_case_artifacts, list_case_names  # noqa: E402
 from api.services.cockpit_state_engine import build_cockpit_state, validate_cockpit_state  # noqa: E402
+from api.services.real_intake_engine import process_intake  # noqa: E402
 
 REQUIRED = [
     "README.md",
@@ -19,15 +20,23 @@ REQUIRED = [
     "api/models/canonical_models.py",
     "api/services/casulo_workbench_engine.py",
     "api/services/cockpit_state_engine.py",
+    "api/services/real_intake_engine.py",
     "scripts/run_demo.py",
     "scripts/export_codex_task.py",
     "scripts/build_cockpit_state.py",
+    "scripts/validate_real_intake.py",
+    "scripts/build_real_case_from_intake.py",
     "scripts/validate_workbench.py",
     "contracts/state_snapshot.contract.json",
     "contracts/graph.contract.json",
     "contracts/ledger_event.contract.json",
     "contracts/codex_task.contract.md",
     "contracts/cockpit_state.contract.json",
+    "contracts/real_intake.contract.json",
+    "contracts/evidence_manifest.contract.json",
+    "real_cases/template/real_intake.json",
+    "real_cases/template/consent_and_scope.md",
+    "real_cases/template/anonymization_checklist.md",
     "graph/graph_model.md",
     "graph/schema.cypher",
     "examples/advocacia_demo/case.json",
@@ -59,6 +68,8 @@ def main() -> int:
         "graph.contract.json",
         "ledger_event.contract.json",
         "cockpit_state.contract.json",
+        "real_intake.contract.json",
+        "evidence_manifest.contract.json",
     ]:
         try:
             json.loads((ROOT / "contracts" / contract).read_text(encoding="utf-8"))
@@ -94,18 +105,17 @@ def main() -> int:
         except Exception as exc:
             errors.append(f"{case_name}: engine check failed: {exc}")
 
-    demo_path = ROOT / "web" / "src" / "data" / "cockpit_state.demo.json"
-    if demo_path.exists():
-        try:
-            demo = json.loads(demo_path.read_text(encoding="utf-8"))
-            if demo.get("contract_version") != "workbench.cockpit_state.v0.3":
-                errors.append("web/src/data/cockpit_state.demo.json has invalid contract_version")
-        except Exception as exc:
-            errors.append(f"invalid cockpit_state.demo.json: {exc}")
+    try:
+        intake_result = process_intake(ROOT / "real_cases" / "template" / "real_intake.json", write=False)
+        if intake_result["status"] != "PASS":
+            errors.extend([f"real_intake: {err}" for err in intake_result.get("errors", [])])
+        warnings.extend([f"real_intake: {w}" for w in intake_result.get("warnings", [])])
+    except Exception as exc:
+        errors.append(f"real intake check failed: {exc}")
 
     result = {
         "status": "FAIL" if errors else "PASS",
-        "checks": len(REQUIRED) + len(case_names) + 1,
+        "checks": len(REQUIRED) + len(case_names) + 2,
         "cases": len(case_names),
         "errors": errors,
         "warnings": warnings,

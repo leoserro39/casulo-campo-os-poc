@@ -1,0 +1,29 @@
+{
+  "contract": "workbench.evidence_manifest.v0.4",
+  "purpose": "Manifest of evidences accepted into CASULO state computation.",
+  "required_top_level_keys": [
+    "contract_version",
+    "case_id",
+    "generated_at",
+    "scope_gate",
+    "privacy_gate",
+    "sources",
+    "evidence_items",
+    "blocked_items",
+    "decision"
+  ],
+  "allowed_decision": [
+    "ALLOW_CONTROLLED_DIAGNOSTIC",
+    "NEED_HUMAN_REVIEW",
+    "BLOCK_INTAKE"
+  ],
+  "source_required_keys": [
+    "source_id",
+    "quality_score",
+    "quality_label",
+    "allowed_use",
+    "privacy_status",
+    "gate"
+  ],
+  "note": "The evidence manifest is the bridge between real intake and CASULO diagnostic engine."
+}

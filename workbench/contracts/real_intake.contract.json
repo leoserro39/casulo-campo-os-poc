@@ -1,0 +1,51 @@
+{
+  "contract": "workbench.real_intake.v0.4",
+  "purpose": "Controlled intake for real or near-real anonymized evidence before diagnostic execution.",
+  "required_top_level_keys": [
+    "contract_version",
+    "case_id",
+    "case_title",
+    "vertical",
+    "scope",
+    "privacy",
+    "sources",
+    "domains",
+    "intersections",
+    "deltas"
+  ],
+  "source_required_keys": [
+    "id",
+    "name",
+    "type",
+    "domains",
+    "classification",
+    "contains_personal_data",
+    "anonymization_status",
+    "quality_inputs",
+    "allowed_use"
+  ],
+  "allowed_classification": [
+    "PUBLIC",
+    "INTERNAL",
+    "CONFIDENTIAL",
+    "SENSITIVE"
+  ],
+  "allowed_anonymization_status": [
+    "NOT_NEEDED",
+    "ANONYMIZED",
+    "PSEUDONYMIZED",
+    "PENDING",
+    "BLOCKED"
+  ],
+  "allowed_use": [
+    "DIAGNOSTIC_ONLY",
+    "DEMO_ALLOWED",
+    "NEED_REVIEW",
+    "BLOCKED"
+  ],
+  "blocking_rules": [
+    "Any source with contains_personal_data=true and anonymization_status=PENDING must block diagnostic execution.",
+    "Any source with allowed_use=BLOCKED must block diagnostic execution.",
+    "Any SENSITIVE source must require human review before write mode."
+  ]
+}
