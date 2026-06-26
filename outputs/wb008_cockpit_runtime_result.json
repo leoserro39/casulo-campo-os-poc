@@ -1,0 +1,23 @@
+{
+  "generated_at": "2026-06-26T14:19:47+00:00",
+  "task": "TASK-WB-008",
+  "status": "PASS",
+  "stage": "complete",
+  "exit_code": 0,
+  "repo": "/workspaces/casulo-campo-os-poc",
+  "contracts": {
+    "cockpit_state": true
+  },
+  "runtime": {
+    "cockpit_state_engine": true,
+    "build_cockpit_state_script": true,
+    "demo_state": true
+  },
+  "validation": {
+    "workbench_strict": "PASS",
+    "cockpit_check_mode": "PASS",
+    "demo_check_mode": "PASS"
+  },
+  "git_status": "M workbench/README.md\n M workbench/scripts/validate_workbench.py\n M workbench/web/src/App.jsx\n M workbench/web/src/components/ChatAxial.jsx\n M workbench/web/src/components/DataQualityPanel.jsx\n M workbench/web/src/components/DeltaGatePanel.jsx\n M workbench/web/src/components/DomainGraph.jsx\n M workbench/web/src/components/GravitationalDome.jsx\n M workbench/web/src/components/LedgerPanel.jsx\n M workbench/web/src/components/OperationalCube.jsx\n M workbench/web/src/components/ReportPanel.jsx\n?? docs/casulo_workbench_atlas/13_COCKPIT_STATE_CUBE_RUNTIME.md\n?? outputs/wb008_cockpit_runtime_backups/\n?? workbench/api/services/cockpit_state_engine.py\n?? workbench/contracts/cockpit_state.contract.json\n?? workbench/scripts/build_cockpit_state.py\n?? workbench/web/src/data/",
+  "next_step": "Review report, commit, push, then tag workbench-cockpit-runtime-v0.3."
+}

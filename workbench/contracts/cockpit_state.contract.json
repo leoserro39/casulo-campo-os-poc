@@ -1,0 +1,35 @@
+{
+  "contract": "workbench.cockpit_state.v0.3",
+  "required_top_level_keys": [
+    "contract_version",
+    "generated_at",
+    "case",
+    "summary",
+    "gravitational_dome",
+    "operational_cube",
+    "chat_axial",
+    "graph_projection"
+  ],
+  "required_summary_keys": [
+    "data_quality",
+    "data_quality_label",
+    "h_pre",
+    "h_post",
+    "delta_l",
+    "decision",
+    "state_confidence",
+    "domains",
+    "gates",
+    "graph_nodes",
+    "graph_edges"
+  ],
+  "required_cube_faces": [
+    "objective",
+    "evidence",
+    "risks",
+    "tasks",
+    "deltas",
+    "gates"
+  ],
+  "note": "This is the UI-facing state contract consumed by Cubo/Cupula runtime."
+}

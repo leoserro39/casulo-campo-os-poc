@@ -1,26 +1,32 @@
 # CASULO Workbench
 
-Workbench v0.2 para diagnostico de Estado Operacional.
+Workbench v0.3 para diagnostico de Estado Operacional e cockpit Cubo/Cupula.
 
-## Hardening v0.2
+## Runtime contracts
 
-- `run_demo.py` agora usa check mode por default e nao escreve outputs.
-- `--write` e obrigatorio para gerar arquivos novos.
-- Runtime outputs locais vao para `workbench/runtime_outputs/`, ignorado pelo Git.
-- Contratos foram adicionados em `workbench/contracts/`.
-- `validate_workbench.py --strict` valida estrutura, contratos e engine sem escrever.
+- `state_snapshot.contract.json`
+- `graph.contract.json`
+- `ledger_event.contract.json`
+- `codex_task.contract.md`
+- `cockpit_state.contract.json`
 
-## Comandos seguros
+## Safe commands
 
 ```bash
 python workbench/scripts/validate_workbench.py --strict
 python workbench/scripts/run_demo.py --case all --check
 python workbench/scripts/export_codex_task.py --case all --check
+python workbench/scripts/build_cockpit_state.py --case all --check
 ```
 
-## Escrita explicita
+## Explicit writes
 
 ```bash
 python workbench/scripts/run_demo.py --case all --write --stable-time
 python workbench/scripts/export_codex_task.py --case all --write --stable-time
+python workbench/scripts/build_cockpit_state.py --case all --write --stable-time
 ```
+
+## Cockpit
+
+The UI-facing state is `cockpit_state`, a contracted projection generated from CASULO state artifacts.

@@ -1,0 +1,150 @@
+{
+  "contract_version": "workbench.cockpit_state.v0.3",
+  "generated_at": "1970-01-01T00:00:00+00:00",
+  "case": {
+    "case_id": "advocacia_demo_001",
+    "title": "Escritorio de Advocacia Demo",
+    "vertical": "advocacia"
+  },
+  "summary": {
+    "data_quality": 0.571,
+    "data_quality_label": "CONTROLLED",
+    "h_pre": 0.457,
+    "h_post": 0.337,
+    "delta_l": 0.12,
+    "decision": "RECOMMEND_SMALLER_DELTA",
+    "state_confidence": 0.48,
+    "domains": 7,
+    "gates": 3,
+    "graph_nodes": 33,
+    "graph_edges": 31
+  },
+  "gravitational_dome": {
+    "description": "Domains ranked by operational gravity.",
+    "domains": [
+      {
+        "id": "documentos",
+        "name": "Documentos",
+        "data_quality": 0.538,
+        "state_confidence": 0.49,
+        "gravity_weight": 0.562,
+        "priority": "ATTENTION",
+        "risks": [
+          "documentos espalhados",
+          "alta sensibilidade"
+        ],
+        "branches": [
+          "recebidos",
+          "faltantes",
+          "origem"
+        ]
+      },
+      {
+        "id": "prazos",
+        "name": "Prazos",
+        "data_quality": 0.612,
+        "state_confidence": 0.588,
+        "gravity_weight": 0.431,
+        "priority": "WATCH",
+        "risks": [
+          "responsavel pouco claro"
+        ],
+        "branches": [
+          "data",
+          "responsavel",
+          "status"
+        ]
+      },
+      {
+        "id": "atendimento",
+        "name": "Atendimento",
+        "data_quality": 0.657,
+        "state_confidence": 0.633,
+        "gravity_weight": 0.392,
+        "priority": "WATCH",
+        "risks": [
+          "canais misturados"
+        ],
+        "branches": [
+          "retorno",
+          "cliente sem resposta"
+        ]
+      }
+    ]
+  },
+  "operational_cube": {
+    "faces": {
+      "objective": "Organizar documentos, prazos, atendimento, casos e honorarios sem substituir o trabalho juridico.",
+      "evidence": {
+        "data_quality": 0.571,
+        "label": "CONTROLLED",
+        "sources": 3
+      },
+      "risks": {
+        "h_pre": 0.457,
+        "h_post": 0.337,
+        "decision": "RECOMMEND_SMALLER_DELTA"
+      },
+      "tasks": [
+        {
+          "delta_id": "delta_checklist_documental",
+          "title": "Checklist documental por tipo de caso",
+          "package": "formulario_checklist_documental"
+        }
+      ],
+      "deltas": [
+        {
+          "delta_id": "delta_checklist_documental",
+          "title": "Checklist documental por tipo de caso",
+          "expected_metric": "reduzir documentos faltantes"
+        }
+      ],
+      "gates": [
+        {
+          "delta_id": "delta_checklist_documental",
+          "delta_title": "Checklist documental por tipo de caso",
+          "gate_status": "PREPARE",
+          "solution_package": "formulario_checklist_documental",
+          "expected_metric": "reduzir documentos faltantes"
+        }
+      ]
+    }
+  },
+  "chat_axial": {
+    "allowed_intents": [
+      "explain_state",
+      "explain_gate",
+      "list_fragile_domains",
+      "request_more_evidence",
+      "generate_codex_task"
+    ],
+    "source_of_truth": [
+      "state_snapshot",
+      "graph",
+      "contracts",
+      "ledger",
+      "diagnostic_report"
+    ]
+  },
+  "graph_projection": {
+    "nodes": [
+      {
+        "id": "advocacia_demo_001",
+        "type": "Case",
+        "label": "Escritorio de Advocacia Demo"
+      },
+      {
+        "id": "documentos",
+        "type": "Domain",
+        "label": "Documentos"
+      }
+    ],
+    "edges": [
+      {
+        "source": "advocacia_demo_001",
+        "target": "documentos",
+        "type": "HAS_DOMAIN"
+      }
+    ]
+  }
+}
