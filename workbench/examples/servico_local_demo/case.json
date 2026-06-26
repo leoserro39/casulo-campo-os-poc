@@ -1,0 +1,195 @@
+{
+  "case_id": "servico_local_demo_001",
+  "title": "Servico Local Demo",
+  "vertical": "servico_local",
+  "objective": "Controlar atendimento, orcamentos, execucao, retrabalho e financeiro.",
+  "sources": [
+    {
+      "id": "src_whatsapp",
+      "name": "WhatsApp de atendimento",
+      "type": "messages",
+      "domains": [
+        "atendimento",
+        "clientes"
+      ],
+      "completeness": 0.55,
+      "freshness": 0.9,
+      "consistency": 0.45,
+      "traceability": 0.35,
+      "trust": 0.6,
+      "sensitivity": 0.4
+    },
+    {
+      "id": "src_orders",
+      "name": "Controle de ordens de servico",
+      "type": "spreadsheet",
+      "domains": [
+        "execucao",
+        "financeiro",
+        "retrabalho"
+      ],
+      "completeness": 0.68,
+      "freshness": 0.75,
+      "consistency": 0.6,
+      "traceability": 0.55,
+      "trust": 0.7,
+      "sensitivity": 0.2
+    },
+    {
+      "id": "src_owner_notes",
+      "name": "Notas do dono",
+      "type": "interview",
+      "domains": [
+        "gestao",
+        "orcamentos"
+      ],
+      "completeness": 0.5,
+      "freshness": 0.85,
+      "consistency": 0.45,
+      "traceability": 0.3,
+      "trust": 0.6,
+      "sensitivity": 0.2
+    }
+  ],
+  "domains": [
+    {
+      "id": "atendimento",
+      "name": "Atendimento",
+      "branches": [
+        "entrada",
+        "retorno",
+        "status"
+      ],
+      "risks": [
+        "canais misturados"
+      ]
+    },
+    {
+      "id": "orcamentos",
+      "name": "Orcamentos",
+      "branches": [
+        "valor",
+        "aprovacao",
+        "prazo"
+      ],
+      "risks": [
+        "sem follow-up"
+      ]
+    },
+    {
+      "id": "execucao",
+      "name": "Execucao",
+      "branches": [
+        "ordem de servico",
+        "responsavel",
+        "status"
+      ],
+      "risks": [
+        "status manual"
+      ]
+    },
+    {
+      "id": "financeiro",
+      "name": "Financeiro",
+      "branches": [
+        "receber",
+        "margem",
+        "custo"
+      ],
+      "risks": [
+        "margem pouco visivel"
+      ]
+    },
+    {
+      "id": "clientes",
+      "name": "Clientes",
+      "branches": [
+        "historico",
+        "retorno",
+        "satisfacao"
+      ],
+      "risks": [
+        "sem historico consolidado"
+      ]
+    },
+    {
+      "id": "retrabalho",
+      "name": "Retrabalho",
+      "branches": [
+        "causa",
+        "custo",
+        "recorrencia"
+      ],
+      "risks": [
+        "nao medido"
+      ]
+    },
+    {
+      "id": "gestao",
+      "name": "Gestao",
+      "branches": [
+        "prioridade",
+        "rotina",
+        "indicadores"
+      ],
+      "risks": [
+        "decisao informal"
+      ]
+    }
+  ],
+  "intersections": [
+    {
+      "id": "ix_atendimento_orcamentos",
+      "domains": [
+        "atendimento",
+        "orcamentos"
+      ],
+      "description": "Orcamento enviado sem follow-up",
+      "impact": "medium",
+      "delta_id": "delta_followup_orcamento"
+    },
+    {
+      "id": "ix_execucao_financeiro",
+      "domains": [
+        "execucao",
+        "financeiro"
+      ],
+      "description": "Servico executado sem margem clara",
+      "impact": "high",
+      "delta_id": "delta_margem_servico"
+    },
+    {
+      "id": "ix_retrabalho_clientes",
+      "domains": [
+        "retrabalho",
+        "clientes"
+      ],
+      "description": "Retrabalho afeta retorno e reputacao",
+      "impact": "medium",
+      "delta_id": "delta_controle_retrabalho"
+    }
+  ],
+  "deltas": [
+    {
+      "id": "delta_followup_orcamento",
+      "title": "Rotina de follow-up de orcamentos",
+      "gate_hint": "DO_NOW",
+      "solution_package": "automacao_followup",
+      "expected_metric": "aumentar taxa de resposta"
+    },
+    {
+      "id": "delta_margem_servico",
+      "title": "Controle de margem por servico",
+      "gate_hint": "PREPARE",
+      "solution_package": "painel_margem",
+      "expected_metric": "melhorar margem operacional"
+    },
+    {
+      "id": "delta_controle_retrabalho",
+      "title": "Registro de retrabalho",
+      "gate_hint": "MEASURE_FIRST",
+      "solution_package": "formulario_retrabalho",
+      "expected_metric": "reduzir recorrencia"
+    }
+  ]
+}

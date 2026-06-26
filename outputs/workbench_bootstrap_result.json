@@ -1,0 +1,30 @@
+{
+  "generated_at": "2026-06-26T13:16:56+00:00",
+  "status": "PASS",
+  "stage": "complete",
+  "exit_code": 0,
+  "repo": "/workspaces/casulo-campo-os-poc",
+  "atlas_files": 13,
+  "workbench_files": 56,
+  "cases": [
+    {
+      "case": "advocacia_demo",
+      "data_quality": 0.571,
+      "h_pre": 0.457,
+      "decision": "RECOMMEND_SMALLER_DELTA"
+    },
+    {
+      "case": "contabilidade_demo",
+      "data_quality": 0.619,
+      "h_pre": 0.405,
+      "decision": "RECOMMEND_SMALLER_DELTA"
+    },
+    {
+      "case": "servico_local_demo",
+      "data_quality": 0.562,
+      "h_pre": 0.46,
+      "decision": "RECOMMEND_SMALLER_DELTA"
+    }
+  ],
+  "next_step": "Review git status, inspect report, then commit if approved."
+}

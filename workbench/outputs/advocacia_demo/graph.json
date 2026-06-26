@@ -1,0 +1,495 @@
+{
+  "nodes": [
+    {
+      "id": "advocacia_demo_001",
+      "type": "Case",
+      "label": "Escritorio de Advocacia Demo"
+    },
+    {
+      "id": "triagem",
+      "type": "Domain",
+      "label": "Triagem",
+      "state_confidence": 0.616
+    },
+    {
+      "id": "triagem::entrada",
+      "type": "ComputableBranch",
+      "label": "entrada"
+    },
+    {
+      "id": "triagem::qualificacao",
+      "type": "ComputableBranch",
+      "label": "qualificacao"
+    },
+    {
+      "id": "triagem::tipo_de_caso",
+      "type": "ComputableBranch",
+      "label": "tipo de caso"
+    },
+    {
+      "id": "documentos",
+      "type": "Domain",
+      "label": "Documentos",
+      "state_confidence": 0.422
+    },
+    {
+      "id": "documentos::recebidos",
+      "type": "ComputableBranch",
+      "label": "recebidos"
+    },
+    {
+      "id": "documentos::faltantes",
+      "type": "ComputableBranch",
+      "label": "faltantes"
+    },
+    {
+      "id": "documentos::origem",
+      "type": "ComputableBranch",
+      "label": "origem"
+    },
+    {
+      "id": "prazos",
+      "type": "Domain",
+      "label": "Prazos",
+      "state_confidence": 0.58
+    },
+    {
+      "id": "prazos::data",
+      "type": "ComputableBranch",
+      "label": "data"
+    },
+    {
+      "id": "prazos::responsavel",
+      "type": "ComputableBranch",
+      "label": "responsavel"
+    },
+    {
+      "id": "prazos::status",
+      "type": "ComputableBranch",
+      "label": "status"
+    },
+    {
+      "id": "casos",
+      "type": "Domain",
+      "label": "Casos",
+      "state_confidence": 0.513
+    },
+    {
+      "id": "casos::status",
+      "type": "ComputableBranch",
+      "label": "status"
+    },
+    {
+      "id": "casos::fase",
+      "type": "ComputableBranch",
+      "label": "fase"
+    },
+    {
+      "id": "casos::proxima_acao",
+      "type": "ComputableBranch",
+      "label": "proxima acao"
+    },
+    {
+      "id": "atendimento",
+      "type": "Domain",
+      "label": "Atendimento",
+      "state_confidence": 0.616
+    },
+    {
+      "id": "atendimento::retorno",
+      "type": "ComputableBranch",
+      "label": "retorno"
+    },
+    {
+      "id": "atendimento::cliente_sem_resposta",
+      "type": "ComputableBranch",
+      "label": "cliente sem resposta"
+    },
+    {
+      "id": "honorarios",
+      "type": "Domain",
+      "label": "Honorarios",
+      "state_confidence": 0.58
+    },
+    {
+      "id": "honorarios::contrato",
+      "type": "ComputableBranch",
+      "label": "contrato"
+    },
+    {
+      "id": "honorarios::parcela",
+      "type": "ComputableBranch",
+      "label": "parcela"
+    },
+    {
+      "id": "honorarios::pendencia",
+      "type": "ComputableBranch",
+      "label": "pendencia"
+    },
+    {
+      "id": "gestao",
+      "type": "Domain",
+      "label": "Gestao",
+      "state_confidence": 0.616
+    },
+    {
+      "id": "gestao::prioridades",
+      "type": "ComputableBranch",
+      "label": "prioridades"
+    },
+    {
+      "id": "gestao::rotina",
+      "type": "ComputableBranch",
+      "label": "rotina"
+    },
+    {
+      "id": "gestao::revisao",
+      "type": "ComputableBranch",
+      "label": "revisao"
+    },
+    {
+      "id": "src_interview_owner",
+      "type": "Source",
+      "label": "Entrevista com socio"
+    },
+    {
+      "id": "src_case_sheet",
+      "type": "Source",
+      "label": "Planilha de casos"
+    },
+    {
+      "id": "src_doc_folder",
+      "type": "Source",
+      "label": "Pastas de documentos"
+    },
+    {
+      "id": "ix_prazos_documentos",
+      "type": "Intersection",
+      "label": "Prazo proximo com documento faltante",
+      "impact": "high"
+    },
+    {
+      "id": "ix_atendimento_casos",
+      "type": "Intersection",
+      "label": "Cliente pede status, mas caso nao tem estado padronizado",
+      "impact": "medium"
+    },
+    {
+      "id": "ix_honorarios_casos",
+      "type": "Intersection",
+      "label": "Caso avanca sem reflexo claro em honorarios",
+      "impact": "medium"
+    },
+    {
+      "id": "delta_checklist_documental",
+      "type": "Delta",
+      "label": "Checklist documental por tipo de caso"
+    },
+    {
+      "id": "gate::delta_checklist_documental",
+      "type": "Gate",
+      "label": "DO_NOW"
+    },
+    {
+      "id": "delta_cockpit_casos",
+      "type": "Delta",
+      "label": "Cockpit de status por caso"
+    },
+    {
+      "id": "gate::delta_cockpit_casos",
+      "type": "Gate",
+      "label": "PREPARE"
+    },
+    {
+      "id": "delta_controle_honorarios",
+      "type": "Delta",
+      "label": "Controle de honorarios por caso"
+    },
+    {
+      "id": "gate::delta_controle_honorarios",
+      "type": "Gate",
+      "label": "MEASURE_FIRST"
+    }
+  ],
+  "edges": [
+    {
+      "source": "advocacia_demo_001",
+      "target": "triagem",
+      "type": "HAS_DOMAIN"
+    },
+    {
+      "source": "triagem",
+      "target": "triagem::entrada",
+      "type": "HAS_BRANCH"
+    },
+    {
+      "source": "triagem",
+      "target": "triagem::qualificacao",
+      "type": "HAS_BRANCH"
+    },
+    {
+      "source": "triagem",
+      "target": "triagem::tipo_de_caso",
+      "type": "HAS_BRANCH"
+    },
+    {
+      "source": "advocacia_demo_001",
+      "target": "documentos",
+      "type": "HAS_DOMAIN"
+    },
+    {
+      "source": "documentos",
+      "target": "documentos::recebidos",
+      "type": "HAS_BRANCH"
+    },
+    {
+      "source": "documentos",
+      "target": "documentos::faltantes",
+      "type": "HAS_BRANCH"
+    },
+    {
+      "source": "documentos",
+      "target": "documentos::origem",
+      "type": "HAS_BRANCH"
+    },
+    {
+      "source": "advocacia_demo_001",
+      "target": "prazos",
+      "type": "HAS_DOMAIN"
+    },
+    {
+      "source": "prazos",
+      "target": "prazos::data",
+      "type": "HAS_BRANCH"
+    },
+    {
+      "source": "prazos",
+      "target": "prazos::responsavel",
+      "type": "HAS_BRANCH"
+    },
+    {
+      "source": "prazos",
+      "target": "prazos::status",
+      "type": "HAS_BRANCH"
+    },
+    {
+      "source": "advocacia_demo_001",
+      "target": "casos",
+      "type": "HAS_DOMAIN"
+    },
+    {
+      "source": "casos",
+      "target": "casos::status",
+      "type": "HAS_BRANCH"
+    },
+    {
+      "source": "casos",
+      "target": "casos::fase",
+      "type": "HAS_BRANCH"
+    },
+    {
+      "source": "casos",
+      "target": "casos::proxima_acao",
+      "type": "HAS_BRANCH"
+    },
+    {
+      "source": "advocacia_demo_001",
+      "target": "atendimento",
+      "type": "HAS_DOMAIN"
+    },
+    {
+      "source": "atendimento",
+      "target": "atendimento::retorno",
+      "type": "HAS_BRANCH"
+    },
+    {
+      "source": "atendimento",
+      "target": "atendimento::cliente_sem_resposta",
+      "type": "HAS_BRANCH"
+    },
+    {
+      "source": "advocacia_demo_001",
+      "target": "honorarios",
+      "type": "HAS_DOMAIN"
+    },
+    {
+      "source": "honorarios",
+      "target": "honorarios::contrato",
+      "type": "HAS_BRANCH"
+    },
+    {
+      "source": "honorarios",
+      "target": "honorarios::parcela",
+      "type": "HAS_BRANCH"
+    },
+    {
+      "source": "honorarios",
+      "target": "honorarios::pendencia",
+      "type": "HAS_BRANCH"
+    },
+    {
+      "source": "advocacia_demo_001",
+      "target": "gestao",
+      "type": "HAS_DOMAIN"
+    },
+    {
+      "source": "gestao",
+      "target": "gestao::prioridades",
+      "type": "HAS_BRANCH"
+    },
+    {
+      "source": "gestao",
+      "target": "gestao::rotina",
+      "type": "HAS_BRANCH"
+    },
+    {
+      "source": "gestao",
+      "target": "gestao::revisao",
+      "type": "HAS_BRANCH"
+    },
+    {
+      "source": "triagem",
+      "target": "src_interview_owner",
+      "type": "CONSUMES_SOURCE"
+    },
+    {
+      "source": "atendimento",
+      "target": "src_interview_owner",
+      "type": "CONSUMES_SOURCE"
+    },
+    {
+      "source": "gestao",
+      "target": "src_interview_owner",
+      "type": "CONSUMES_SOURCE"
+    },
+    {
+      "source": "casos",
+      "target": "src_case_sheet",
+      "type": "CONSUMES_SOURCE"
+    },
+    {
+      "source": "prazos",
+      "target": "src_case_sheet",
+      "type": "CONSUMES_SOURCE"
+    },
+    {
+      "source": "honorarios",
+      "target": "src_case_sheet",
+      "type": "CONSUMES_SOURCE"
+    },
+    {
+      "source": "documentos",
+      "target": "src_doc_folder",
+      "type": "CONSUMES_SOURCE"
+    },
+    {
+      "source": "casos",
+      "target": "src_doc_folder",
+      "type": "CONSUMES_SOURCE"
+    },
+    {
+      "source": "prazos",
+      "target": "ix_prazos_documentos",
+      "type": "INTERSECTS_WITH"
+    },
+    {
+      "source": "documentos",
+      "target": "ix_prazos_documentos",
+      "type": "INTERSECTS_WITH"
+    },
+    {
+      "source": "ix_prazos_documentos",
+      "target": "delta_checklist_documental",
+      "type": "GENERATES_DELTA"
+    },
+    {
+      "source": "atendimento",
+      "target": "ix_atendimento_casos",
+      "type": "INTERSECTS_WITH"
+    },
+    {
+      "source": "casos",
+      "target": "ix_atendimento_casos",
+      "type": "INTERSECTS_WITH"
+    },
+    {
+      "source": "ix_atendimento_casos",
+      "target": "delta_cockpit_casos",
+      "type": "GENERATES_DELTA"
+    },
+    {
+      "source": "honorarios",
+      "target": "ix_honorarios_casos",
+      "type": "INTERSECTS_WITH"
+    },
+    {
+      "source": "casos",
+      "target": "ix_honorarios_casos",
+      "type": "INTERSECTS_WITH"
+    },
+    {
+      "source": "ix_honorarios_casos",
+      "target": "delta_controle_honorarios",
+      "type": "GENERATES_DELTA"
+    },
+    {
+      "source": "delta_checklist_documental",
+      "target": "gate::delta_checklist_documental",
+      "type": "HAS_GATE"
+    },
+    {
+      "source": "delta_cockpit_casos",
+      "target": "gate::delta_cockpit_casos",
+      "type": "HAS_GATE"
+    },
+    {
+      "source": "delta_controle_honorarios",
+      "target": "gate::delta_controle_honorarios",
+      "type": "HAS_GATE"
+    }
+  ],
+  "data_quality": {
+    "overall_score": 0.571,
+    "overall_label": "CONTROLLED",
+    "sources": [
+      {
+        "source_id": "src_interview_owner",
+        "name": "Entrevista com socio",
+        "type": "interview",
+        "domains": [
+          "triagem",
+          "atendimento",
+          "gestao"
+        ],
+        "score": 0.64,
+        "label": "ACCEPTABLE",
+        "use_policy": "USE"
+      },
+      {
+        "source_id": "src_case_sheet",
+        "name": "Planilha de casos",
+        "type": "spreadsheet",
+        "domains": [
+          "casos",
+          "prazos",
+          "honorarios"
+        ],
+        "score": 0.604,
+        "label": "CONTROLLED",
+        "use_policy": "USE_WITH_CAUTION"
+      },
+      {
+        "source_id": "src_doc_folder",
+        "name": "Pastas de documentos",
+        "type": "documents",
+        "domains": [
+          "documentos",
+          "casos"
+        ],
+        "score": 0.47,
+        "label": "CONTROLLED",
+        "use_policy": "USE_WITH_CAUTION"
+      }
+    ]
+  }
+}

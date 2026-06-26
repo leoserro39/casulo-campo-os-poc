@@ -1,0 +1,473 @@
+{
+  "nodes": [
+    {
+      "id": "contabilidade_demo_001",
+      "type": "Case",
+      "label": "Escritorio Contabil Demo"
+    },
+    {
+      "id": "clientes",
+      "type": "Domain",
+      "label": "Clientes",
+      "state_confidence": 0.626
+    },
+    {
+      "id": "clientes::cadastro",
+      "type": "ComputableBranch",
+      "label": "cadastro"
+    },
+    {
+      "id": "clientes::status",
+      "type": "ComputableBranch",
+      "label": "status"
+    },
+    {
+      "id": "clientes::responsavel",
+      "type": "ComputableBranch",
+      "label": "responsavel"
+    },
+    {
+      "id": "documentos",
+      "type": "Domain",
+      "label": "Documentos",
+      "state_confidence": 0.428
+    },
+    {
+      "id": "documentos::recebidos",
+      "type": "ComputableBranch",
+      "label": "recebidos"
+    },
+    {
+      "id": "documentos::faltantes",
+      "type": "ComputableBranch",
+      "label": "faltantes"
+    },
+    {
+      "id": "documentos::mes",
+      "type": "ComputableBranch",
+      "label": "mes"
+    },
+    {
+      "id": "prazos_fiscais",
+      "type": "Domain",
+      "label": "Prazos Fiscais",
+      "state_confidence": 0.706
+    },
+    {
+      "id": "prazos_fiscais::data",
+      "type": "ComputableBranch",
+      "label": "data"
+    },
+    {
+      "id": "prazos_fiscais::obrigacao",
+      "type": "ComputableBranch",
+      "label": "obrigacao"
+    },
+    {
+      "id": "prazos_fiscais::cliente",
+      "type": "ComputableBranch",
+      "label": "cliente"
+    },
+    {
+      "id": "obrigacoes",
+      "type": "Domain",
+      "label": "Obrigacoes",
+      "state_confidence": 0.706
+    },
+    {
+      "id": "obrigacoes::recorrencia",
+      "type": "ComputableBranch",
+      "label": "recorrencia"
+    },
+    {
+      "id": "obrigacoes::status",
+      "type": "ComputableBranch",
+      "label": "status"
+    },
+    {
+      "id": "obrigacoes::responsavel",
+      "type": "ComputableBranch",
+      "label": "responsavel"
+    },
+    {
+      "id": "atendimento",
+      "type": "Domain",
+      "label": "Atendimento",
+      "state_confidence": 0.452
+    },
+    {
+      "id": "atendimento::cobranca_documental",
+      "type": "ComputableBranch",
+      "label": "cobranca documental"
+    },
+    {
+      "id": "atendimento::retorno",
+      "type": "ComputableBranch",
+      "label": "retorno"
+    },
+    {
+      "id": "financeiro",
+      "type": "Domain",
+      "label": "Financeiro",
+      "state_confidence": 0.626
+    },
+    {
+      "id": "financeiro::mensalidade",
+      "type": "ComputableBranch",
+      "label": "mensalidade"
+    },
+    {
+      "id": "financeiro::inadimplencia",
+      "type": "ComputableBranch",
+      "label": "inadimplencia"
+    },
+    {
+      "id": "gestao",
+      "type": "Domain",
+      "label": "Gestao",
+      "state_confidence": 0.0
+    },
+    {
+      "id": "gestao::fila",
+      "type": "ComputableBranch",
+      "label": "fila"
+    },
+    {
+      "id": "gestao::prioridade",
+      "type": "ComputableBranch",
+      "label": "prioridade"
+    },
+    {
+      "id": "gestao::snapshot_mensal",
+      "type": "ComputableBranch",
+      "label": "snapshot mensal"
+    },
+    {
+      "id": "src_client_sheet",
+      "type": "Source",
+      "label": "Planilha de clientes"
+    },
+    {
+      "id": "src_deadlines",
+      "type": "Source",
+      "label": "Calendario de obrigacoes"
+    },
+    {
+      "id": "src_email_docs",
+      "type": "Source",
+      "label": "Emails de documentos"
+    },
+    {
+      "id": "ix_documentos_prazos",
+      "type": "Intersection",
+      "label": "Documento faltante afeta prazo fiscal",
+      "impact": "high"
+    },
+    {
+      "id": "ix_atendimento_obrigacoes",
+      "type": "Intersection",
+      "label": "Pendencia documental precisa virar fila operacional",
+      "impact": "medium"
+    },
+    {
+      "id": "ix_financeiro_clientes",
+      "type": "Intersection",
+      "label": "Cliente recorrente sem visao integrada de status financeiro",
+      "impact": "medium"
+    },
+    {
+      "id": "delta_cobranca_documental",
+      "type": "Delta",
+      "label": "Cobranca documental por cliente/mes"
+    },
+    {
+      "id": "gate::delta_cobranca_documental",
+      "type": "Gate",
+      "label": "DO_NOW"
+    },
+    {
+      "id": "delta_cockpit_mensal",
+      "type": "Delta",
+      "label": "Cockpit mensal de obrigacoes"
+    },
+    {
+      "id": "gate::delta_cockpit_mensal",
+      "type": "Gate",
+      "label": "PREPARE"
+    },
+    {
+      "id": "delta_status_cliente",
+      "type": "Delta",
+      "label": "Status operacional por cliente"
+    },
+    {
+      "id": "gate::delta_status_cliente",
+      "type": "Gate",
+      "label": "MEASURE_FIRST"
+    }
+  ],
+  "edges": [
+    {
+      "source": "contabilidade_demo_001",
+      "target": "clientes",
+      "type": "HAS_DOMAIN"
+    },
+    {
+      "source": "clientes",
+      "target": "clientes::cadastro",
+      "type": "HAS_BRANCH"
+    },
+    {
+      "source": "clientes",
+      "target": "clientes::status",
+      "type": "HAS_BRANCH"
+    },
+    {
+      "source": "clientes",
+      "target": "clientes::responsavel",
+      "type": "HAS_BRANCH"
+    },
+    {
+      "source": "contabilidade_demo_001",
+      "target": "documentos",
+      "type": "HAS_DOMAIN"
+    },
+    {
+      "source": "documentos",
+      "target": "documentos::recebidos",
+      "type": "HAS_BRANCH"
+    },
+    {
+      "source": "documentos",
+      "target": "documentos::faltantes",
+      "type": "HAS_BRANCH"
+    },
+    {
+      "source": "documentos",
+      "target": "documentos::mes",
+      "type": "HAS_BRANCH"
+    },
+    {
+      "source": "contabilidade_demo_001",
+      "target": "prazos_fiscais",
+      "type": "HAS_DOMAIN"
+    },
+    {
+      "source": "prazos_fiscais",
+      "target": "prazos_fiscais::data",
+      "type": "HAS_BRANCH"
+    },
+    {
+      "source": "prazos_fiscais",
+      "target": "prazos_fiscais::obrigacao",
+      "type": "HAS_BRANCH"
+    },
+    {
+      "source": "prazos_fiscais",
+      "target": "prazos_fiscais::cliente",
+      "type": "HAS_BRANCH"
+    },
+    {
+      "source": "contabilidade_demo_001",
+      "target": "obrigacoes",
+      "type": "HAS_DOMAIN"
+    },
+    {
+      "source": "obrigacoes",
+      "target": "obrigacoes::recorrencia",
+      "type": "HAS_BRANCH"
+    },
+    {
+      "source": "obrigacoes",
+      "target": "obrigacoes::status",
+      "type": "HAS_BRANCH"
+    },
+    {
+      "source": "obrigacoes",
+      "target": "obrigacoes::responsavel",
+      "type": "HAS_BRANCH"
+    },
+    {
+      "source": "contabilidade_demo_001",
+      "target": "atendimento",
+      "type": "HAS_DOMAIN"
+    },
+    {
+      "source": "atendimento",
+      "target": "atendimento::cobranca_documental",
+      "type": "HAS_BRANCH"
+    },
+    {
+      "source": "atendimento",
+      "target": "atendimento::retorno",
+      "type": "HAS_BRANCH"
+    },
+    {
+      "source": "contabilidade_demo_001",
+      "target": "financeiro",
+      "type": "HAS_DOMAIN"
+    },
+    {
+      "source": "financeiro",
+      "target": "financeiro::mensalidade",
+      "type": "HAS_BRANCH"
+    },
+    {
+      "source": "financeiro",
+      "target": "financeiro::inadimplencia",
+      "type": "HAS_BRANCH"
+    },
+    {
+      "source": "contabilidade_demo_001",
+      "target": "gestao",
+      "type": "HAS_DOMAIN"
+    },
+    {
+      "source": "gestao",
+      "target": "gestao::fila",
+      "type": "HAS_BRANCH"
+    },
+    {
+      "source": "gestao",
+      "target": "gestao::prioridade",
+      "type": "HAS_BRANCH"
+    },
+    {
+      "source": "gestao",
+      "target": "gestao::snapshot_mensal",
+      "type": "HAS_BRANCH"
+    },
+    {
+      "source": "clientes",
+      "target": "src_client_sheet",
+      "type": "CONSUMES_SOURCE"
+    },
+    {
+      "source": "financeiro",
+      "target": "src_client_sheet",
+      "type": "CONSUMES_SOURCE"
+    },
+    {
+      "source": "prazos_fiscais",
+      "target": "src_deadlines",
+      "type": "CONSUMES_SOURCE"
+    },
+    {
+      "source": "obrigacoes",
+      "target": "src_deadlines",
+      "type": "CONSUMES_SOURCE"
+    },
+    {
+      "source": "documentos",
+      "target": "src_email_docs",
+      "type": "CONSUMES_SOURCE"
+    },
+    {
+      "source": "atendimento",
+      "target": "src_email_docs",
+      "type": "CONSUMES_SOURCE"
+    },
+    {
+      "source": "documentos",
+      "target": "ix_documentos_prazos",
+      "type": "INTERSECTS_WITH"
+    },
+    {
+      "source": "prazos_fiscais",
+      "target": "ix_documentos_prazos",
+      "type": "INTERSECTS_WITH"
+    },
+    {
+      "source": "ix_documentos_prazos",
+      "target": "delta_cobranca_documental",
+      "type": "GENERATES_DELTA"
+    },
+    {
+      "source": "atendimento",
+      "target": "ix_atendimento_obrigacoes",
+      "type": "INTERSECTS_WITH"
+    },
+    {
+      "source": "obrigacoes",
+      "target": "ix_atendimento_obrigacoes",
+      "type": "INTERSECTS_WITH"
+    },
+    {
+      "source": "ix_atendimento_obrigacoes",
+      "target": "delta_cockpit_mensal",
+      "type": "GENERATES_DELTA"
+    },
+    {
+      "source": "financeiro",
+      "target": "ix_financeiro_clientes",
+      "type": "INTERSECTS_WITH"
+    },
+    {
+      "source": "clientes",
+      "target": "ix_financeiro_clientes",
+      "type": "INTERSECTS_WITH"
+    },
+    {
+      "source": "ix_financeiro_clientes",
+      "target": "delta_status_cliente",
+      "type": "GENERATES_DELTA"
+    },
+    {
+      "source": "delta_cobranca_documental",
+      "target": "gate::delta_cobranca_documental",
+      "type": "HAS_GATE"
+    },
+    {
+      "source": "delta_cockpit_mensal",
+      "target": "gate::delta_cockpit_mensal",
+      "type": "HAS_GATE"
+    },
+    {
+      "source": "delta_status_cliente",
+      "target": "gate::delta_status_cliente",
+      "type": "HAS_GATE"
+    }
+  ],
+  "data_quality": {
+    "overall_score": 0.619,
+    "overall_label": "ACCEPTABLE",
+    "sources": [
+      {
+        "source_id": "src_client_sheet",
+        "name": "Planilha de clientes",
+        "type": "spreadsheet",
+        "domains": [
+          "clientes",
+          "financeiro"
+        ],
+        "score": 0.65,
+        "label": "ACCEPTABLE",
+        "use_policy": "USE"
+      },
+      {
+        "source_id": "src_deadlines",
+        "name": "Calendario de obrigacoes",
+        "type": "calendar",
+        "domains": [
+          "prazos_fiscais",
+          "obrigacoes"
+        ],
+        "score": 0.73,
+        "label": "ACCEPTABLE",
+        "use_policy": "USE"
+      },
+      {
+        "source_id": "src_email_docs",
+        "name": "Emails de documentos",
+        "type": "messages",
+        "domains": [
+          "documentos",
+          "atendimento"
+        ],
+        "score": 0.476,
+        "label": "CONTROLLED",
+        "use_policy": "USE_WITH_CAUTION"
+      }
+    ]
+  }
+}

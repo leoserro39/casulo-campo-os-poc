@@ -1,0 +1,5 @@
+{"ts": "2026-06-26T13:16:56+00:00", "event": "CASE_LOADED", "case_id": "servico_local_demo_001"}
+{"ts": "2026-06-26T13:16:56+00:00", "event": "DATA_QUALITY_COMPUTED", "score": 0.562, "label": "CONTROLLED"}
+{"ts": "2026-06-26T13:16:56+00:00", "event": "FRAGILITY_COMPUTED", "h_pre": 0.46, "decision": "RECOMMEND_SMALLER_DELTA"}
+{"ts": "2026-06-26T13:16:56+00:00", "event": "GATES_COMPUTED", "count": 3}
+{"ts": "2026-06-26T13:16:56+00:00", "event": "SNAPSHOT_READY", "case_id": "servico_local_demo_001"}

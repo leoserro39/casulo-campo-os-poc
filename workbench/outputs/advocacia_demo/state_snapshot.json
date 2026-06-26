@@ -1,0 +1,207 @@
+{
+  "generated_at": "2026-06-26T13:16:56+00:00",
+  "case": {
+    "case_id": "advocacia_demo_001",
+    "title": "Escritorio de Advocacia Demo",
+    "vertical": "advocacia"
+  },
+  "data_quality": {
+    "overall_score": 0.571,
+    "overall_label": "CONTROLLED",
+    "sources": [
+      {
+        "source_id": "src_interview_owner",
+        "name": "Entrevista com socio",
+        "type": "interview",
+        "domains": [
+          "triagem",
+          "atendimento",
+          "gestao"
+        ],
+        "score": 0.64,
+        "label": "ACCEPTABLE",
+        "use_policy": "USE"
+      },
+      {
+        "source_id": "src_case_sheet",
+        "name": "Planilha de casos",
+        "type": "spreadsheet",
+        "domains": [
+          "casos",
+          "prazos",
+          "honorarios"
+        ],
+        "score": 0.604,
+        "label": "CONTROLLED",
+        "use_policy": "USE_WITH_CAUTION"
+      },
+      {
+        "source_id": "src_doc_folder",
+        "name": "Pastas de documentos",
+        "type": "documents",
+        "domains": [
+          "documentos",
+          "casos"
+        ],
+        "score": 0.47,
+        "label": "CONTROLLED",
+        "use_policy": "USE_WITH_CAUTION"
+      }
+    ]
+  },
+  "domains": [
+    {
+      "id": "triagem",
+      "name": "Triagem",
+      "branches": [
+        "entrada",
+        "qualificacao",
+        "tipo de caso"
+      ],
+      "risks": [
+        "criterios informais"
+      ],
+      "supporting_sources": [
+        "src_interview_owner"
+      ],
+      "data_quality": 0.64,
+      "state_confidence": 0.616
+    },
+    {
+      "id": "documentos",
+      "name": "Documentos",
+      "branches": [
+        "recebidos",
+        "faltantes",
+        "origem"
+      ],
+      "risks": [
+        "documentos espalhados",
+        "alta sensibilidade"
+      ],
+      "supporting_sources": [
+        "src_doc_folder"
+      ],
+      "data_quality": 0.47,
+      "state_confidence": 0.422
+    },
+    {
+      "id": "prazos",
+      "name": "Prazos",
+      "branches": [
+        "data",
+        "responsavel",
+        "status"
+      ],
+      "risks": [
+        "responsavel pouco claro"
+      ],
+      "supporting_sources": [
+        "src_case_sheet"
+      ],
+      "data_quality": 0.604,
+      "state_confidence": 0.58
+    },
+    {
+      "id": "casos",
+      "name": "Casos",
+      "branches": [
+        "status",
+        "fase",
+        "proxima acao"
+      ],
+      "risks": [
+        "status nao padronizado"
+      ],
+      "supporting_sources": [
+        "src_case_sheet",
+        "src_doc_folder"
+      ],
+      "data_quality": 0.537,
+      "state_confidence": 0.513
+    },
+    {
+      "id": "atendimento",
+      "name": "Atendimento",
+      "branches": [
+        "retorno",
+        "cliente sem resposta"
+      ],
+      "risks": [
+        "canais misturados"
+      ],
+      "supporting_sources": [
+        "src_interview_owner"
+      ],
+      "data_quality": 0.64,
+      "state_confidence": 0.616
+    },
+    {
+      "id": "honorarios",
+      "name": "Honorarios",
+      "branches": [
+        "contrato",
+        "parcela",
+        "pendencia"
+      ],
+      "risks": [
+        "controle parcial"
+      ],
+      "supporting_sources": [
+        "src_case_sheet"
+      ],
+      "data_quality": 0.604,
+      "state_confidence": 0.58
+    },
+    {
+      "id": "gestao",
+      "name": "Gestao",
+      "branches": [
+        "prioridades",
+        "rotina",
+        "revisao"
+      ],
+      "risks": [
+        "centralizacao"
+      ],
+      "supporting_sources": [
+        "src_interview_owner"
+      ],
+      "data_quality": 0.64,
+      "state_confidence": 0.616
+    }
+  ],
+  "fragility": {
+    "h_pre": 0.457,
+    "h_post": 0.337,
+    "delta_l": 0.12,
+    "missing_ratio": 0.571,
+    "contradiction_count": 1,
+    "sync_coverage": 0.429,
+    "state_confidence": 0.567,
+    "decision": "RECOMMEND_SMALLER_DELTA"
+  },
+  "gates": [
+    {
+      "delta_id": "delta_checklist_documental",
+      "delta_title": "Checklist documental por tipo de caso",
+      "gate_status": "PREPARE",
+      "solution_package": "formulario_checklist_documental",
+      "expected_metric": "reduzir documentos faltantes"
+    },
+    {
+      "delta_id": "delta_cockpit_casos",
+      "delta_title": "Cockpit de status por caso",
+      "gate_status": "PREPARE",
+      "solution_package": "painel_casos_status",
+      "expected_metric": "reduzir retornos manuais"
+    },
+    {
+      "delta_id": "delta_controle_honorarios",
+      "delta_title": "Controle de honorarios por caso",
+      "gate_status": "MEASURE_FIRST",
+      "solution_package": "controle_honorarios",
+      "expected_metric": "aumentar previsibilidade financeira"
+    }
+  ]
+}

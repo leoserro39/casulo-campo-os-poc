@@ -1,0 +1,205 @@
+{
+  "generated_at": "2026-06-26T13:16:56+00:00",
+  "case": {
+    "case_id": "servico_local_demo_001",
+    "title": "Servico Local Demo",
+    "vertical": "servico_local"
+  },
+  "data_quality": {
+    "overall_score": 0.562,
+    "overall_label": "CONTROLLED",
+    "sources": [
+      {
+        "source_id": "src_whatsapp",
+        "name": "WhatsApp de atendimento",
+        "type": "messages",
+        "domains": [
+          "atendimento",
+          "clientes"
+        ],
+        "score": 0.53,
+        "label": "CONTROLLED",
+        "use_policy": "USE_WITH_CAUTION"
+      },
+      {
+        "source_id": "src_orders",
+        "name": "Controle de ordens de servico",
+        "type": "spreadsheet",
+        "domains": [
+          "execucao",
+          "financeiro",
+          "retrabalho"
+        ],
+        "score": 0.636,
+        "label": "ACCEPTABLE",
+        "use_policy": "USE"
+      },
+      {
+        "source_id": "src_owner_notes",
+        "name": "Notas do dono",
+        "type": "interview",
+        "domains": [
+          "gestao",
+          "orcamentos"
+        ],
+        "score": 0.52,
+        "label": "CONTROLLED",
+        "use_policy": "USE_WITH_CAUTION"
+      }
+    ]
+  },
+  "domains": [
+    {
+      "id": "atendimento",
+      "name": "Atendimento",
+      "branches": [
+        "entrada",
+        "retorno",
+        "status"
+      ],
+      "risks": [
+        "canais misturados"
+      ],
+      "supporting_sources": [
+        "src_whatsapp"
+      ],
+      "data_quality": 0.53,
+      "state_confidence": 0.506
+    },
+    {
+      "id": "orcamentos",
+      "name": "Orcamentos",
+      "branches": [
+        "valor",
+        "aprovacao",
+        "prazo"
+      ],
+      "risks": [
+        "sem follow-up"
+      ],
+      "supporting_sources": [
+        "src_owner_notes"
+      ],
+      "data_quality": 0.52,
+      "state_confidence": 0.496
+    },
+    {
+      "id": "execucao",
+      "name": "Execucao",
+      "branches": [
+        "ordem de servico",
+        "responsavel",
+        "status"
+      ],
+      "risks": [
+        "status manual"
+      ],
+      "supporting_sources": [
+        "src_orders"
+      ],
+      "data_quality": 0.636,
+      "state_confidence": 0.612
+    },
+    {
+      "id": "financeiro",
+      "name": "Financeiro",
+      "branches": [
+        "receber",
+        "margem",
+        "custo"
+      ],
+      "risks": [
+        "margem pouco visivel"
+      ],
+      "supporting_sources": [
+        "src_orders"
+      ],
+      "data_quality": 0.636,
+      "state_confidence": 0.612
+    },
+    {
+      "id": "clientes",
+      "name": "Clientes",
+      "branches": [
+        "historico",
+        "retorno",
+        "satisfacao"
+      ],
+      "risks": [
+        "sem historico consolidado"
+      ],
+      "supporting_sources": [
+        "src_whatsapp"
+      ],
+      "data_quality": 0.53,
+      "state_confidence": 0.506
+    },
+    {
+      "id": "retrabalho",
+      "name": "Retrabalho",
+      "branches": [
+        "causa",
+        "custo",
+        "recorrencia"
+      ],
+      "risks": [
+        "nao medido"
+      ],
+      "supporting_sources": [
+        "src_orders"
+      ],
+      "data_quality": 0.636,
+      "state_confidence": 0.612
+    },
+    {
+      "id": "gestao",
+      "name": "Gestao",
+      "branches": [
+        "prioridade",
+        "rotina",
+        "indicadores"
+      ],
+      "risks": [
+        "decisao informal"
+      ],
+      "supporting_sources": [
+        "src_owner_notes"
+      ],
+      "data_quality": 0.52,
+      "state_confidence": 0.496
+    }
+  ],
+  "fragility": {
+    "h_pre": 0.46,
+    "h_post": 0.34,
+    "delta_l": 0.12,
+    "missing_ratio": 0.571,
+    "contradiction_count": 1,
+    "sync_coverage": 0.429,
+    "state_confidence": 0.556,
+    "decision": "RECOMMEND_SMALLER_DELTA"
+  },
+  "gates": [
+    {
+      "delta_id": "delta_followup_orcamento",
+      "delta_title": "Rotina de follow-up de orcamentos",
+      "gate_status": "PREPARE",
+      "solution_package": "automacao_followup",
+      "expected_metric": "aumentar taxa de resposta"
+    },
+    {
+      "delta_id": "delta_margem_servico",
+      "delta_title": "Controle de margem por servico",
+      "gate_status": "PREPARE",
+      "solution_package": "painel_margem",
+      "expected_metric": "melhorar margem operacional"
+    },
+    {
+      "delta_id": "delta_controle_retrabalho",
+      "delta_title": "Registro de retrabalho",
+      "gate_status": "MEASURE_FIRST",
+      "solution_package": "formulario_retrabalho",
+      "expected_metric": "reduzir recorrencia"
+    }
+  ]
+}

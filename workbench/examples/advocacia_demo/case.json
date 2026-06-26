@@ -1,0 +1,196 @@
+{
+  "case_id": "advocacia_demo_001",
+  "title": "Escritorio de Advocacia Demo",
+  "vertical": "advocacia",
+  "objective": "Organizar documentos, prazos, atendimento, casos e honorarios sem substituir o trabalho juridico.",
+  "sources": [
+    {
+      "id": "src_interview_owner",
+      "name": "Entrevista com socio",
+      "type": "interview",
+      "domains": [
+        "triagem",
+        "atendimento",
+        "gestao"
+      ],
+      "completeness": 0.7,
+      "freshness": 0.9,
+      "consistency": 0.65,
+      "traceability": 0.4,
+      "trust": 0.7,
+      "sensitivity": 0.3
+    },
+    {
+      "id": "src_case_sheet",
+      "name": "Planilha de casos",
+      "type": "spreadsheet",
+      "domains": [
+        "casos",
+        "prazos",
+        "honorarios"
+      ],
+      "completeness": 0.62,
+      "freshness": 0.8,
+      "consistency": 0.55,
+      "traceability": 0.55,
+      "trust": 0.75,
+      "sensitivity": 0.5
+    },
+    {
+      "id": "src_doc_folder",
+      "name": "Pastas de documentos",
+      "type": "documents",
+      "domains": [
+        "documentos",
+        "casos"
+      ],
+      "completeness": 0.5,
+      "freshness": 0.65,
+      "consistency": 0.45,
+      "traceability": 0.5,
+      "trust": 0.65,
+      "sensitivity": 0.8
+    }
+  ],
+  "domains": [
+    {
+      "id": "triagem",
+      "name": "Triagem",
+      "branches": [
+        "entrada",
+        "qualificacao",
+        "tipo de caso"
+      ],
+      "risks": [
+        "criterios informais"
+      ]
+    },
+    {
+      "id": "documentos",
+      "name": "Documentos",
+      "branches": [
+        "recebidos",
+        "faltantes",
+        "origem"
+      ],
+      "risks": [
+        "documentos espalhados",
+        "alta sensibilidade"
+      ]
+    },
+    {
+      "id": "prazos",
+      "name": "Prazos",
+      "branches": [
+        "data",
+        "responsavel",
+        "status"
+      ],
+      "risks": [
+        "responsavel pouco claro"
+      ]
+    },
+    {
+      "id": "casos",
+      "name": "Casos",
+      "branches": [
+        "status",
+        "fase",
+        "proxima acao"
+      ],
+      "risks": [
+        "status nao padronizado"
+      ]
+    },
+    {
+      "id": "atendimento",
+      "name": "Atendimento",
+      "branches": [
+        "retorno",
+        "cliente sem resposta"
+      ],
+      "risks": [
+        "canais misturados"
+      ]
+    },
+    {
+      "id": "honorarios",
+      "name": "Honorarios",
+      "branches": [
+        "contrato",
+        "parcela",
+        "pendencia"
+      ],
+      "risks": [
+        "controle parcial"
+      ]
+    },
+    {
+      "id": "gestao",
+      "name": "Gestao",
+      "branches": [
+        "prioridades",
+        "rotina",
+        "revisao"
+      ],
+      "risks": [
+        "centralizacao"
+      ]
+    }
+  ],
+  "intersections": [
+    {
+      "id": "ix_prazos_documentos",
+      "domains": [
+        "prazos",
+        "documentos"
+      ],
+      "description": "Prazo proximo com documento faltante",
+      "impact": "high",
+      "delta_id": "delta_checklist_documental"
+    },
+    {
+      "id": "ix_atendimento_casos",
+      "domains": [
+        "atendimento",
+        "casos"
+      ],
+      "description": "Cliente pede status, mas caso nao tem estado padronizado",
+      "impact": "medium",
+      "delta_id": "delta_cockpit_casos"
+    },
+    {
+      "id": "ix_honorarios_casos",
+      "domains": [
+        "honorarios",
+        "casos"
+      ],
+      "description": "Caso avanca sem reflexo claro em honorarios",
+      "impact": "medium",
+      "delta_id": "delta_controle_honorarios"
+    }
+  ],
+  "deltas": [
+    {
+      "id": "delta_checklist_documental",
+      "title": "Checklist documental por tipo de caso",
+      "gate_hint": "DO_NOW",
+      "solution_package": "formulario_checklist_documental",
+      "expected_metric": "reduzir documentos faltantes"
+    },
+    {
+      "id": "delta_cockpit_casos",
+      "title": "Cockpit de status por caso",
+      "gate_hint": "PREPARE",
+      "solution_package": "painel_casos_status",
+      "expected_metric": "reduzir retornos manuais"
+    },
+    {
+      "id": "delta_controle_honorarios",
+      "title": "Controle de honorarios por caso",
+      "gate_hint": "MEASURE_FIRST",
+      "solution_package": "controle_honorarios",
+      "expected_metric": "aumentar previsibilidade financeira"
+    }
+  ]
+}

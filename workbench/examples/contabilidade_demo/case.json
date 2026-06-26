@@ -1,0 +1,193 @@
+{
+  "case_id": "contabilidade_demo_001",
+  "title": "Escritorio Contabil Demo",
+  "vertical": "contabilidade",
+  "objective": "Controlar documentos, prazos, obrigacoes recorrentes, atendimento e pendencias por cliente.",
+  "sources": [
+    {
+      "id": "src_client_sheet",
+      "name": "Planilha de clientes",
+      "type": "spreadsheet",
+      "domains": [
+        "clientes",
+        "financeiro"
+      ],
+      "completeness": 0.75,
+      "freshness": 0.7,
+      "consistency": 0.65,
+      "traceability": 0.6,
+      "trust": 0.75,
+      "sensitivity": 0.4
+    },
+    {
+      "id": "src_deadlines",
+      "name": "Calendario de obrigacoes",
+      "type": "calendar",
+      "domains": [
+        "prazos_fiscais",
+        "obrigacoes"
+      ],
+      "completeness": 0.8,
+      "freshness": 0.85,
+      "consistency": 0.7,
+      "traceability": 0.65,
+      "trust": 0.8,
+      "sensitivity": 0.3
+    },
+    {
+      "id": "src_email_docs",
+      "name": "Emails de documentos",
+      "type": "messages",
+      "domains": [
+        "documentos",
+        "atendimento"
+      ],
+      "completeness": 0.48,
+      "freshness": 0.8,
+      "consistency": 0.4,
+      "traceability": 0.45,
+      "trust": 0.6,
+      "sensitivity": 0.7
+    }
+  ],
+  "domains": [
+    {
+      "id": "clientes",
+      "name": "Clientes",
+      "branches": [
+        "cadastro",
+        "status",
+        "responsavel"
+      ],
+      "risks": [
+        "base parcialmente atualizada"
+      ]
+    },
+    {
+      "id": "documentos",
+      "name": "Documentos",
+      "branches": [
+        "recebidos",
+        "faltantes",
+        "mes"
+      ],
+      "risks": [
+        "chegada por email",
+        "sensibilidade"
+      ]
+    },
+    {
+      "id": "prazos_fiscais",
+      "name": "Prazos Fiscais",
+      "branches": [
+        "data",
+        "obrigacao",
+        "cliente"
+      ],
+      "risks": [
+        "dependencia de documento"
+      ]
+    },
+    {
+      "id": "obrigacoes",
+      "name": "Obrigacoes",
+      "branches": [
+        "recorrencia",
+        "status",
+        "responsavel"
+      ],
+      "risks": [
+        "volume recorrente"
+      ]
+    },
+    {
+      "id": "atendimento",
+      "name": "Atendimento",
+      "branches": [
+        "cobranca documental",
+        "retorno"
+      ],
+      "risks": [
+        "pendencia dispersa"
+      ]
+    },
+    {
+      "id": "financeiro",
+      "name": "Financeiro",
+      "branches": [
+        "mensalidade",
+        "inadimplencia"
+      ],
+      "risks": [
+        "visao separada da operacao"
+      ]
+    },
+    {
+      "id": "gestao",
+      "name": "Gestao",
+      "branches": [
+        "fila",
+        "prioridade",
+        "snapshot mensal"
+      ],
+      "risks": [
+        "sem cockpit unificado"
+      ]
+    }
+  ],
+  "intersections": [
+    {
+      "id": "ix_documentos_prazos",
+      "domains": [
+        "documentos",
+        "prazos_fiscais"
+      ],
+      "description": "Documento faltante afeta prazo fiscal",
+      "impact": "high",
+      "delta_id": "delta_cobranca_documental"
+    },
+    {
+      "id": "ix_atendimento_obrigacoes",
+      "domains": [
+        "atendimento",
+        "obrigacoes"
+      ],
+      "description": "Pendencia documental precisa virar fila operacional",
+      "impact": "medium",
+      "delta_id": "delta_cockpit_mensal"
+    },
+    {
+      "id": "ix_financeiro_clientes",
+      "domains": [
+        "financeiro",
+        "clientes"
+      ],
+      "description": "Cliente recorrente sem visao integrada de status financeiro",
+      "impact": "medium",
+      "delta_id": "delta_status_cliente"
+    }
+  ],
+  "deltas": [
+    {
+      "id": "delta_cobranca_documental",
+      "title": "Cobranca documental por cliente/mes",
+      "gate_hint": "DO_NOW",
+      "solution_package": "painel_documentos_faltantes",
+      "expected_metric": "reduzir pendencias no mes"
+    },
+    {
+      "id": "delta_cockpit_mensal",
+      "title": "Cockpit mensal de obrigacoes",
+      "gate_hint": "PREPARE",
+      "solution_package": "cockpit_obrigacoes",
+      "expected_metric": "aumentar visibilidade da fila"
+    },
+    {
+      "id": "delta_status_cliente",
+      "title": "Status operacional por cliente",
+      "gate_hint": "MEASURE_FIRST",
+      "solution_package": "status_cliente",
+      "expected_metric": "reduzir retrabalho no atendimento"
+    }
+  ]
+}
