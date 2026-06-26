@@ -1,0 +1,32 @@
+{
+  "contract": "workbench.human_review_gate.v0.6",
+  "purpose": "Human review gate for controlled diagnostics before any client-facing or implementation action.",
+  "required_top_level_keys": [
+    "contract_version",
+    "case_id",
+    "case_title",
+    "generated_at",
+    "controlled_diagnostic_status",
+    "review_required",
+    "review_status",
+    "review_items",
+    "allowed_next_actions",
+    "blocked_next_actions",
+    "decision"
+  ],
+  "allowed_review_status": [
+    "PENDING_HUMAN_REVIEW",
+    "APPROVED_FOR_INTERNAL_REVIEW",
+    "APPROVED_FOR_CLIENT_REVIEW",
+    "NEEDS_MORE_EVIDENCE",
+    "BLOCKED"
+  ],
+  "allowed_decision": [
+    "PENDING_HUMAN_REVIEW",
+    "ALLOW_INTERNAL_REVIEW_ONLY",
+    "ALLOW_CLIENT_REVIEW",
+    "NEED_MORE_EVIDENCE",
+    "BLOCK"
+  ],
+  "rule": "No controlled diagnostic can become client-facing truth or implementation input without explicit human review."
+}

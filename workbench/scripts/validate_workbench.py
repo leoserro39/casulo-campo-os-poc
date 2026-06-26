@@ -13,6 +13,7 @@ from api.services.casulo_workbench_engine import build_case_artifacts, list_case
 from api.services.cockpit_state_engine import build_cockpit_state, validate_cockpit_state  # noqa: E402
 from api.services.real_intake_engine import process_intake  # noqa: E402
 from api.services.controlled_diagnostic_runner import run_controlled_diagnostic  # noqa: E402
+from api.services.human_review_gate import run_human_review_gate  # noqa: E402
 
 REQUIRED = [
     "README.md",
@@ -23,12 +24,14 @@ REQUIRED = [
     "api/services/cockpit_state_engine.py",
     "api/services/real_intake_engine.py",
     "api/services/controlled_diagnostic_runner.py",
+    "api/services/human_review_gate.py",
     "scripts/run_demo.py",
     "scripts/export_codex_task.py",
     "scripts/build_cockpit_state.py",
     "scripts/validate_real_intake.py",
     "scripts/build_real_case_from_intake.py",
     "scripts/run_controlled_diagnostic.py",
+    "scripts/run_human_review_gate.py",
     "scripts/validate_workbench.py",
     "contracts/state_snapshot.contract.json",
     "contracts/graph.contract.json",
@@ -38,6 +41,8 @@ REQUIRED = [
     "contracts/real_intake.contract.json",
     "contracts/evidence_manifest.contract.json",
     "contracts/controlled_diagnostic.contract.json",
+    "contracts/human_review_gate.contract.json",
+    "review_templates/human_review_gate_template.md",
     "real_cases/template/real_intake.json",
     "real_cases/template/consent_and_scope.md",
     "real_cases/template/anonymization_checklist.md",
@@ -75,6 +80,7 @@ def main() -> int:
         "real_intake.contract.json",
         "evidence_manifest.contract.json",
         "controlled_diagnostic.contract.json",
+        "human_review_gate.contract.json",
     ]:
         try:
             json.loads((ROOT / "contracts" / contract).read_text(encoding="utf-8"))
@@ -111,6 +117,7 @@ def main() -> int:
             errors.append(f"{case_name}: engine check failed: {exc}")
 
     intake_path = ROOT / "real_cases" / "template" / "real_intake.json"
+
     try:
         intake_result = process_intake(intake_path, write=False)
         if intake_result["status"] != "PASS":
@@ -126,9 +133,16 @@ def main() -> int:
     except Exception as exc:
         errors.append(f"controlled diagnostic check failed: {exc}")
 
+    try:
+        review = run_human_review_gate(intake_path=intake_path, write=False)
+        if review.get("status") != "PASS":
+            errors.append(f"human review gate failed: {review}")
+    except Exception as exc:
+        errors.append(f"human review gate check failed: {exc}")
+
     result = {
         "status": "FAIL" if errors else "PASS",
-        "checks": len(REQUIRED) + len(case_names) + 3,
+        "checks": len(REQUIRED) + len(case_names) + 4,
         "cases": len(case_names),
         "errors": errors,
         "warnings": warnings,

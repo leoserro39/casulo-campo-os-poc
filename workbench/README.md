@@ -1,35 +1,21 @@
 # CASULO Workbench
 
-Workbench v0.5 with controlled diagnostic runner.
+Workbench v0.6 with human review gate for controlled diagnostics.
 
 ## Safe commands
 
 ```bash
 python workbench/scripts/validate_workbench.py --strict
-python workbench/scripts/validate_real_intake.py --intake workbench/real_cases/template/real_intake.json
-python workbench/scripts/build_real_case_from_intake.py --intake workbench/real_cases/template/real_intake.json --check
 python workbench/scripts/run_controlled_diagnostic.py --intake workbench/real_cases/template/real_intake.json --check
-python workbench/scripts/build_cockpit_state.py --case all --check
+python workbench/scripts/run_human_review_gate.py --intake workbench/real_cases/template/real_intake.json --check
 ```
 
 ## Explicit write
 
 ```bash
-python workbench/scripts/run_controlled_diagnostic.py --intake workbench/real_cases/template/real_intake.json --write --stable-time
+python workbench/scripts/run_human_review_gate.py --intake workbench/real_cases/template/real_intake.json --write --stable-time
 ```
 
-## Controlled diagnostic flow
+## Gate rule
 
-```text
-real_intake
--> evidence_manifest
--> controlled_case
--> state_snapshot
--> graph
--> diagnostic_report
--> cockpit_state
--> codex_task
--> human_review
-```
-
-Human review is required before client-facing use.
+Controlled diagnostic output is not client-facing truth and cannot authorize implementation until human review explicitly approves the next step.

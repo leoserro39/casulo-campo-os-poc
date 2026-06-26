@@ -1,0 +1,24 @@
+{
+  "generated_at": "2026-06-26T15:30:58+00:00",
+  "task": "TASK-WB-011",
+  "status": "PASS",
+  "stage": "complete",
+  "exit_code": 0,
+  "repo": "/workspaces/casulo-campo-os-poc",
+  "contracts": {
+    "human_review_gate": true
+  },
+  "runtime": {
+    "human_review_gate": true,
+    "run_human_review_gate": true,
+    "review_template": true
+  },
+  "validation": {
+    "human_review_check": "PASS",
+    "controlled_diagnostic_check": "PASS",
+    "workbench_strict": "PASS",
+    "casulo_campo_validate": "PASS"
+  },
+  "git_status": "M workbench/README.md\n M workbench/scripts/validate_workbench.py\n?? docs/casulo_workbench_atlas/16_HUMAN_REVIEW_GATE.md\n?? outputs/wb011_human_review_gate_backups/\n?? workbench/api/services/human_review_gate.py\n?? workbench/contracts/human_review_gate.contract.json\n?? workbench/review_templates/\n?? workbench/scripts/run_human_review_gate.py",
+  "next_step": "Review report, commit, push, then tag workbench-human-review-gate-v0.6."
+}
