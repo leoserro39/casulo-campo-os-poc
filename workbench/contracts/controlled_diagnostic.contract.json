@@ -1,0 +1,24 @@
+{
+  "contract": "workbench.controlled_diagnostic.v0.5",
+  "purpose": "Run a controlled diagnostic from validated real_intake without using uncontrolled raw data.",
+  "required_outputs": [
+    "evidence_manifest.json",
+    "controlled_case.json",
+    "state_snapshot.json",
+    "graph.json",
+    "diagnostic_report.md",
+    "cockpit_state.json",
+    "codex_task.md",
+    "controlled_diagnostic_result.json"
+  ],
+  "required_decisions": [
+    "ALLOW_CONTROLLED_DIAGNOSTIC",
+    "NEED_HUMAN_REVIEW",
+    "BLOCK_INTAKE"
+  ],
+  "safe_mode": {
+    "check": "must not write output files",
+    "write": "must be explicit"
+  },
+  "human_review": "Required before treating any controlled diagnostic as client-facing truth."
+}

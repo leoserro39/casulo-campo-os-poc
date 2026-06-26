@@ -12,6 +12,7 @@ sys.path.insert(0, str(ROOT))
 from api.services.casulo_workbench_engine import build_case_artifacts, list_case_names  # noqa: E402
 from api.services.cockpit_state_engine import build_cockpit_state, validate_cockpit_state  # noqa: E402
 from api.services.real_intake_engine import process_intake  # noqa: E402
+from api.services.controlled_diagnostic_runner import run_controlled_diagnostic  # noqa: E402
 
 REQUIRED = [
     "README.md",
@@ -21,11 +22,13 @@ REQUIRED = [
     "api/services/casulo_workbench_engine.py",
     "api/services/cockpit_state_engine.py",
     "api/services/real_intake_engine.py",
+    "api/services/controlled_diagnostic_runner.py",
     "scripts/run_demo.py",
     "scripts/export_codex_task.py",
     "scripts/build_cockpit_state.py",
     "scripts/validate_real_intake.py",
     "scripts/build_real_case_from_intake.py",
+    "scripts/run_controlled_diagnostic.py",
     "scripts/validate_workbench.py",
     "contracts/state_snapshot.contract.json",
     "contracts/graph.contract.json",
@@ -34,6 +37,7 @@ REQUIRED = [
     "contracts/cockpit_state.contract.json",
     "contracts/real_intake.contract.json",
     "contracts/evidence_manifest.contract.json",
+    "contracts/controlled_diagnostic.contract.json",
     "real_cases/template/real_intake.json",
     "real_cases/template/consent_and_scope.md",
     "real_cases/template/anonymization_checklist.md",
@@ -70,6 +74,7 @@ def main() -> int:
         "cockpit_state.contract.json",
         "real_intake.contract.json",
         "evidence_manifest.contract.json",
+        "controlled_diagnostic.contract.json",
     ]:
         try:
             json.loads((ROOT / "contracts" / contract).read_text(encoding="utf-8"))
@@ -105,17 +110,25 @@ def main() -> int:
         except Exception as exc:
             errors.append(f"{case_name}: engine check failed: {exc}")
 
+    intake_path = ROOT / "real_cases" / "template" / "real_intake.json"
     try:
-        intake_result = process_intake(ROOT / "real_cases" / "template" / "real_intake.json", write=False)
+        intake_result = process_intake(intake_path, write=False)
         if intake_result["status"] != "PASS":
             errors.extend([f"real_intake: {err}" for err in intake_result.get("errors", [])])
         warnings.extend([f"real_intake: {w}" for w in intake_result.get("warnings", [])])
     except Exception as exc:
         errors.append(f"real intake check failed: {exc}")
 
+    try:
+        controlled = run_controlled_diagnostic(intake_path=intake_path, write=False)
+        if controlled.get("status") != "PASS":
+            errors.append(f"controlled diagnostic failed: {controlled}")
+    except Exception as exc:
+        errors.append(f"controlled diagnostic check failed: {exc}")
+
     result = {
         "status": "FAIL" if errors else "PASS",
-        "checks": len(REQUIRED) + len(case_names) + 2,
+        "checks": len(REQUIRED) + len(case_names) + 3,
         "cases": len(case_names),
         "errors": errors,
         "warnings": warnings,

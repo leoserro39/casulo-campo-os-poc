@@ -1,0 +1,22 @@
+{
+  "generated_at": "2026-06-26T15:15:41+00:00",
+  "task": "TASK-WB-010",
+  "status": "PASS",
+  "stage": "complete",
+  "exit_code": 0,
+  "repo": "/workspaces/casulo-campo-os-poc",
+  "contracts": {
+    "controlled_diagnostic": true
+  },
+  "runtime": {
+    "controlled_diagnostic_runner": true,
+    "run_controlled_diagnostic": true
+  },
+  "validation": {
+    "controlled_diagnostic_check": "PASS",
+    "workbench_strict": "PASS",
+    "casulo_campo_validate": "PASS"
+  },
+  "git_status": "M workbench/README.md\n M workbench/scripts/validate_workbench.py\n?? docs/casulo_workbench_atlas/15_CONTROLLED_DIAGNOSTIC_RUNNER.md\n?? outputs/wb010_controlled_runner_backups/\n?? workbench/api/services/controlled_diagnostic_runner.py\n?? workbench/contracts/controlled_diagnostic.contract.json\n?? workbench/scripts/run_controlled_diagnostic.py",
+  "next_step": "Review report, commit, push, then tag workbench-controlled-runner-v0.5."
+}
