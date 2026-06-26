@@ -15,6 +15,7 @@ from api.services.real_intake_engine import process_intake  # noqa: E402
 from api.services.controlled_diagnostic_runner import run_controlled_diagnostic  # noqa: E402
 from api.services.human_review_gate import run_human_review_gate  # noqa: E402
 from api.services.controlled_test_report_pack import run_controlled_test_report_pack  # noqa: E402
+from api.services.controlled_test_execution import run_controlled_test_execution  # noqa: E402
 
 REQUIRED = [
     "README.md",
@@ -27,6 +28,7 @@ REQUIRED = [
     "api/services/controlled_diagnostic_runner.py",
     "api/services/human_review_gate.py",
     "api/services/controlled_test_report_pack.py",
+    "api/services/controlled_test_execution.py",
     "scripts/run_demo.py",
     "scripts/export_codex_task.py",
     "scripts/build_cockpit_state.py",
@@ -35,6 +37,7 @@ REQUIRED = [
     "scripts/run_controlled_diagnostic.py",
     "scripts/run_human_review_gate.py",
     "scripts/build_controlled_test_report.py",
+    "scripts/execute_controlled_test.py",
     "scripts/validate_workbench.py",
     "contracts/state_snapshot.contract.json",
     "contracts/graph.contract.json",
@@ -46,8 +49,10 @@ REQUIRED = [
     "contracts/controlled_diagnostic.contract.json",
     "contracts/human_review_gate.contract.json",
     "contracts/controlled_test_report.contract.json",
+    "contracts/controlled_test_execution.contract.json",
     "review_templates/human_review_gate_template.md",
     "report_templates/controlled_test_report_template.md",
+    "runbooks/controlled_test_execution_runbook.md",
     "real_cases/template/real_intake.json",
     "real_cases/template/consent_and_scope.md",
     "real_cases/template/anonymization_checklist.md",
@@ -87,6 +92,7 @@ def main() -> int:
         "controlled_diagnostic.contract.json",
         "human_review_gate.contract.json",
         "controlled_test_report.contract.json",
+        "controlled_test_execution.contract.json",
     ]:
         try:
             json.loads((ROOT / "contracts" / contract).read_text(encoding="utf-8"))
@@ -129,6 +135,7 @@ def main() -> int:
         ("controlled diagnostic", lambda: run_controlled_diagnostic(intake_path=intake_path, write=False)),
         ("human review gate", lambda: run_human_review_gate(intake_path=intake_path, write=False)),
         ("controlled test report", lambda: run_controlled_test_report_pack(intake_path=intake_path, write=False)),
+        ("controlled test execution", lambda: run_controlled_test_execution(intake_path=intake_path, write=False)),
     ]:
         try:
             result = fn()
@@ -140,7 +147,7 @@ def main() -> int:
 
     result = {
         "status": "FAIL" if errors else "PASS",
-        "checks": len(REQUIRED) + len(case_names) + 5,
+        "checks": len(REQUIRED) + len(case_names) + 6,
         "cases": len(case_names),
         "errors": errors,
         "warnings": warnings,

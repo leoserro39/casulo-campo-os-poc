@@ -1,22 +1,20 @@
 # CASULO Workbench
 
-Workbench v0.7 with controlled test report pack.
+Workbench v0.8 with full controlled test execution lane.
 
 ## Safe commands
 
 ```bash
 python workbench/scripts/validate_workbench.py --strict
-python workbench/scripts/run_controlled_diagnostic.py --intake workbench/real_cases/template/real_intake.json --check
-python workbench/scripts/run_human_review_gate.py --intake workbench/real_cases/template/real_intake.json --check
-python workbench/scripts/build_controlled_test_report.py --intake workbench/real_cases/template/real_intake.json --check
+python workbench/scripts/execute_controlled_test.py --intake workbench/real_cases/template/real_intake.json --check
 ```
 
 ## Explicit write
 
 ```bash
-python workbench/scripts/build_controlled_test_report.py --intake workbench/real_cases/template/real_intake.json --write --stable-time
+python workbench/scripts/execute_controlled_test.py --intake workbench/real_cases/template/real_intake.json --write --stable-time
 ```
 
-## Controlled test report
+## Runtime outputs
 
-The report pack is internal/controlled by default. It does not authorize implementation.
+Write mode generates artifacts under `workbench/runtime_outputs/`, which is ignored by Git.

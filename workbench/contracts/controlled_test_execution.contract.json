@@ -1,0 +1,24 @@
+{
+  "contract": "workbench.controlled_test_execution.v0.8",
+  "purpose": "Execute the first full controlled test lane with write artifacts stored under ignored runtime_outputs.",
+  "flow": [
+    "real_intake",
+    "evidence_manifest",
+    "controlled_diagnostic",
+    "human_review_gate",
+    "controlled_test_report",
+    "execution_index"
+  ],
+  "required_runtime_outputs": [
+    "controlled_diagnostics/<case_id>/",
+    "human_review/<case_id>/",
+    "controlled_test_reports/<case_id>/",
+    "controlled_test_runs/<case_id>/controlled_test_execution_result.json",
+    "controlled_test_runs/<case_id>/README.md"
+  ],
+  "safe_mode": {
+    "check": "must compute and validate without writing runtime outputs",
+    "write": "must explicitly write runtime outputs only under workbench/runtime_outputs"
+  },
+  "rule": "Execution outputs are runtime evidence, not source fixtures. They must remain outside Git unless explicitly promoted later."
+}

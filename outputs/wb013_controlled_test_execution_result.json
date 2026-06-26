@@ -1,0 +1,23 @@
+{
+  "generated_at": "2026-06-26T18:24:03+00:00",
+  "task": "TASK-WB-013",
+  "status": "PASS",
+  "stage": "complete",
+  "exit_code": 0,
+  "repo": "/workspaces/casulo-campo-os-poc",
+  "contracts": {
+    "controlled_test_execution": true
+  },
+  "runtime": {
+    "controlled_test_execution": true,
+    "execute_controlled_test": true,
+    "execution_runbook": true
+  },
+  "validation": {
+    "controlled_execution_check": "PASS",
+    "workbench_strict": "PASS",
+    "casulo_campo_validate": "PASS"
+  },
+  "git_status": "M workbench/README.md\n M workbench/scripts/validate_workbench.py\n?? docs/casulo_workbench_atlas/18_CONTROLLED_TEST_EXECUTION.md\n?? outputs/wb013_controlled_test_execution_backups/\n?? workbench/api/services/controlled_test_execution.py\n?? workbench/contracts/controlled_test_execution.contract.json\n?? workbench/runbooks/\n?? workbench/scripts/execute_controlled_test.py",
+  "next_step": "Review report, commit, push, then tag workbench-controlled-execution-v0.8."
+}
