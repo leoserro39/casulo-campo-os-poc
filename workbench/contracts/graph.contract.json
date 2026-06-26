@@ -1,0 +1,27 @@
+{
+  "contract": "workbench.graph.v0.2",
+  "required_top_level_keys": [
+    "nodes",
+    "edges",
+    "data_quality"
+  ],
+  "required_node_keys": [
+    "id",
+    "type",
+    "label"
+  ],
+  "required_edge_keys": [
+    "source",
+    "target",
+    "type"
+  ],
+  "canonical_edge_types": [
+    "HAS_DOMAIN",
+    "HAS_BRANCH",
+    "CONSUMES_SOURCE",
+    "INTERSECTS_WITH",
+    "GENERATES_DELTA",
+    "HAS_GATE"
+  ],
+  "note": "Graph is the computable mesh of operational state."
+}

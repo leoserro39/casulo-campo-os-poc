@@ -1,8 +1,10 @@
-"""CASULO Workbench v0.1 engine.
+"""CASULO Workbench v0.2 runtime-hardened engine.
 
-Pure-stdlib diagnostic engine for demo cases.
-It creates data-quality scores, graph.json, state snapshots, ledgers, reports,
-and Codex executor tasks.
+Hardening goals:
+- check mode can compute all artifacts without writing files
+- write mode is explicit
+- contracts can be validated before the Cubo/Cupula consumes state
+- generated artifacts are grouped by case and can be redirected to runtime output dirs
 """
 from __future__ import annotations
 
@@ -10,12 +12,13 @@ import json
 from datetime import datetime, timezone
 from pathlib import Path
 from statistics import mean
-from typing import Any, Dict, List
+from typing import Any, Dict, List, Optional
 
 
 ROOT = Path(__file__).resolve().parents[2]
 EXAMPLES = ROOT / "examples"
 OUTPUTS = ROOT / "outputs"
+DEFAULT_STABLE_TS = "1970-01-01T00:00:00+00:00"
 
 
 def utc_now() -> str:
@@ -31,6 +34,12 @@ def load_case(case_name: str) -> Dict[str, Any]:
     if not path.exists():
         raise FileNotFoundError(f"case not found: {case_name} ({path})")
     return json.loads(path.read_text(encoding="utf-8"))
+
+
+def list_case_names() -> List[str]:
+    if not EXAMPLES.exists():
+        return []
+    return [path.name for path in sorted(EXAMPLES.iterdir()) if (path / "case.json").exists()]
 
 
 def source_quality(source: Dict[str, Any]) -> float:
@@ -99,10 +108,8 @@ def compute_domain_scores(case: Dict[str, Any], dq: Dict[str, Any]) -> List[Dict
 
 
 def build_graph(case: Dict[str, Any], domains: List[Dict[str, Any]], dq: Dict[str, Any]) -> Dict[str, Any]:
-    nodes = []
+    nodes = [{"id": case["case_id"], "type": "Case", "label": case["title"]}]
     edges = []
-
-    nodes.append({"id": case["case_id"], "type": "Case", "label": case["title"]})
 
     for domain in domains:
         nodes.append({"id": domain["id"], "type": "Domain", "label": domain["name"], "state_confidence": domain["state_confidence"]})
@@ -183,20 +190,19 @@ def compute_gates(case: Dict[str, Any], fragility: Dict[str, Any], dq: Dict[str,
     return gates
 
 
-def ledger_events(case: Dict[str, Any], dq: Dict[str, Any], fragility: Dict[str, Any], gates: List[Dict[str, Any]]) -> List[Dict[str, Any]]:
-    now = utc_now()
+def ledger_events(case: Dict[str, Any], dq: Dict[str, Any], fragility: Dict[str, Any], gates: List[Dict[str, Any]], generated_at: str) -> List[Dict[str, Any]]:
     return [
-        {"ts": now, "event": "CASE_LOADED", "case_id": case["case_id"]},
-        {"ts": now, "event": "DATA_QUALITY_COMPUTED", "score": dq["overall_score"], "label": dq["overall_label"]},
-        {"ts": now, "event": "FRAGILITY_COMPUTED", "h_pre": fragility["h_pre"], "decision": fragility["decision"]},
-        {"ts": now, "event": "GATES_COMPUTED", "count": len(gates)},
-        {"ts": now, "event": "SNAPSHOT_READY", "case_id": case["case_id"]},
+        {"ts": generated_at, "event": "CASE_LOADED", "case_id": case["case_id"]},
+        {"ts": generated_at, "event": "DATA_QUALITY_COMPUTED", "score": dq["overall_score"], "label": dq["overall_label"]},
+        {"ts": generated_at, "event": "FRAGILITY_COMPUTED", "h_pre": fragility["h_pre"], "decision": fragility["decision"]},
+        {"ts": generated_at, "event": "GATES_COMPUTED", "count": len(gates)},
+        {"ts": generated_at, "event": "SNAPSHOT_READY", "case_id": case["case_id"]},
     ]
 
 
 def report_markdown(case: Dict[str, Any], dq: Dict[str, Any], domains: List[Dict[str, Any]], fragility: Dict[str, Any], gates: List[Dict[str, Any]]) -> str:
     lines = [
-        f"# CASULO Workbench Diagnostic Report — {case['title']}",
+        f"# CASULO Workbench Diagnostic Report - {case['title']}",
         "",
         f"- Case ID: `{case['case_id']}`",
         f"- Vertical: `{case.get('vertical', 'unknown')}`",
@@ -214,17 +220,17 @@ def report_markdown(case: Dict[str, Any], dq: Dict[str, Any], domains: List[Dict
         "## Domains",
     ]
     for d in domains:
-        lines.append(f"- **{d['name']}** — quality `{d['data_quality']}`, confidence `{d['state_confidence']}`")
+        lines.append(f"- **{d['name']}** - quality `{d['data_quality']}`, confidence `{d['state_confidence']}`")
     lines += ["", "## Gates"]
     for gate in gates:
-        lines.append(f"- `{gate['gate_status']}` — {gate['delta_title']} -> {gate['solution_package']}")
+        lines.append(f"- `{gate['gate_status']}` - {gate['delta_title']} -> {gate['solution_package']}")
     return "\n".join(lines) + "\n"
 
 
 def codex_task_markdown(case: Dict[str, Any], gates: List[Dict[str, Any]], fragility: Dict[str, Any]) -> str:
     actionable = [g for g in gates if g["gate_status"] in {"DO_NOW", "PREPARE", "MEASURE_FIRST"}]
     lines = [
-        f"# Codex Executor Task — {case['title']}",
+        f"# Codex Executor Task - {case['title']}",
         "",
         f"Case ID: `{case['case_id']}`",
         f"Fragility decision: `{fragility['decision']}`",
@@ -246,46 +252,90 @@ def codex_task_markdown(case: Dict[str, Any], gates: List[Dict[str, Any]], fragi
     return "\n".join(lines) + "\n"
 
 
-def write_json(path: Path, data: Any) -> None:
-    path.parent.mkdir(parents=True, exist_ok=True)
-    path.write_text(json.dumps(data, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
-
-
-def run_case(case_name: str) -> Dict[str, Any]:
+def build_case_artifacts(case_name: str, generated_at: Optional[str] = None) -> Dict[str, Any]:
+    ts = generated_at or utc_now()
     case = load_case(case_name)
     dq = compute_data_quality(case)
     domains = compute_domain_scores(case, dq)
     graph = build_graph(case, domains, dq)
     fragility = compute_fragility(case, domains, dq)
     gates = compute_gates(case, fragility, dq)
-    events = ledger_events(case, dq, fragility, gates)
-
+    events = ledger_events(case, dq, fragility, gates, ts)
     snapshot = {
-        "generated_at": utc_now(),
+        "contract_version": "workbench.state_snapshot.v0.2",
+        "generated_at": ts,
         "case": {"case_id": case["case_id"], "title": case["title"], "vertical": case.get("vertical")},
         "data_quality": dq,
         "domains": domains,
         "fragility": fragility,
         "gates": gates,
     }
-
-    case_out = OUTPUTS / case_name
-    write_json(case_out / "state_snapshot.json", snapshot)
-    write_json(case_out / "graph.json", graph)
-    (case_out / "ledger.jsonl").write_text("\n".join(json.dumps(e, ensure_ascii=False) for e in events) + "\n", encoding="utf-8")
-    (case_out / "diagnostic_report.md").write_text(report_markdown(case, dq, domains, fragility, gates), encoding="utf-8")
-    (case_out / "codex_task.md").write_text(codex_task_markdown(case, gates, fragility), encoding="utf-8")
-
     return {
         "case_name": case_name,
+        "case": case,
+        "data_quality": dq,
+        "domains": domains,
+        "graph": graph,
+        "fragility": fragility,
+        "gates": gates,
+        "ledger_events": events,
+        "state_snapshot": snapshot,
+        "diagnostic_report": report_markdown(case, dq, domains, fragility, gates),
+        "codex_task": codex_task_markdown(case, gates, fragility),
+    }
+
+
+def summarize_artifacts(artifacts: Dict[str, Any], output_path: Optional[Path] = None) -> Dict[str, Any]:
+    case = artifacts["case"]
+    dq = artifacts["data_quality"]
+    fragility = artifacts["fragility"]
+    gates = artifacts["gates"]
+    result = {
+        "case_name": artifacts["case_name"],
         "case_id": case["case_id"],
         "data_quality": dq["overall_score"],
         "fragility": fragility["h_pre"],
         "decision": fragility["decision"],
         "gates": len(gates),
-        "outputs": str(case_out),
     }
+    if output_path is not None:
+        result["outputs"] = str(output_path)
+    return result
 
 
-def run_all_cases() -> List[Dict[str, Any]]:
-    return [run_case(path.name) for path in sorted(EXAMPLES.iterdir()) if (path / "case.json").exists()]
+def write_json(path: Path, data: Any) -> None:
+    path.parent.mkdir(parents=True, exist_ok=True)
+    path.write_text(json.dumps(data, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
+
+
+def write_case_artifacts(artifacts: Dict[str, Any], output_root: Path = OUTPUTS) -> Path:
+    case_out = output_root / artifacts["case_name"]
+    case_out.mkdir(parents=True, exist_ok=True)
+    write_json(case_out / "state_snapshot.json", artifacts["state_snapshot"])
+    write_json(case_out / "graph.json", artifacts["graph"])
+    (case_out / "ledger.jsonl").write_text(
+        "\n".join(json.dumps(e, ensure_ascii=False) for e in artifacts["ledger_events"]) + "\n",
+        encoding="utf-8",
+    )
+    (case_out / "diagnostic_report.md").write_text(artifacts["diagnostic_report"], encoding="utf-8")
+    (case_out / "codex_task.md").write_text(artifacts["codex_task"], encoding="utf-8")
+    return case_out
+
+
+def run_case(case_name: str, write: bool = False, output_root: Path = OUTPUTS, stable_time: bool = False) -> Dict[str, Any]:
+    generated_at = DEFAULT_STABLE_TS if stable_time else None
+    artifacts = build_case_artifacts(case_name, generated_at=generated_at)
+    output_path = write_case_artifacts(artifacts, output_root=output_root) if write else None
+    return summarize_artifacts(artifacts, output_path=output_path)
+
+
+def run_all_cases(write: bool = False, output_root: Path = OUTPUTS, stable_time: bool = False) -> List[Dict[str, Any]]:
+    return [run_case(name, write=write, output_root=output_root, stable_time=stable_time) for name in list_case_names()]
+
+
+def export_codex_task(case_name: str, output_dir: Path, stable_time: bool = False) -> Path:
+    artifacts = build_case_artifacts(case_name, generated_at=DEFAULT_STABLE_TS if stable_time else None)
+    output_dir.mkdir(parents=True, exist_ok=True)
+    dst = output_dir / f"{case_name}_codex_task.md"
+    dst.write_text(artifacts["codex_task"], encoding="utf-8")
+    return dst

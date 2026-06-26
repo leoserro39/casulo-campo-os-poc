@@ -1,0 +1,6 @@
+# Runtime writes must be explicit and local by default.
+runtime_outputs/
+__pycache__/
+*.pyc
+web/node_modules/
+web/dist/

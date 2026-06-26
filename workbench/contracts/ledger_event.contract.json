@@ -1,0 +1,15 @@
+{
+  "contract": "workbench.ledger_event.v0.2",
+  "required_keys": [
+    "ts",
+    "event"
+  ],
+  "canonical_events": [
+    "CASE_LOADED",
+    "DATA_QUALITY_COMPUTED",
+    "FRAGILITY_COMPUTED",
+    "GATES_COMPUTED",
+    "SNAPSHOT_READY"
+  ],
+  "note": "Ledger events preserve runtime audit trail."
+}

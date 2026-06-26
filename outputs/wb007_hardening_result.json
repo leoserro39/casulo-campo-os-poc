@@ -1,0 +1,21 @@
+{
+  "generated_at": "2026-06-26T13:57:37+00:00",
+  "task": "TASK-WB-007",
+  "status": "PASS",
+  "stage": "complete",
+  "exit_code": 0,
+  "repo": "/workspaces/casulo-campo-os-poc",
+  "contracts": {
+    "state_snapshot": true,
+    "graph": true,
+    "ledger_event": true,
+    "codex_task": true
+  },
+  "validation": {
+    "workbench_strict": "PASS",
+    "demo_check_mode": "PASS",
+    "codex_export_check_mode": "PASS"
+  },
+  "git_status": "M workbench/README.md\n M workbench/api/services/casulo_workbench_engine.py\n M workbench/scripts/export_codex_task.py\n M workbench/scripts/run_demo.py\n M workbench/scripts/validate_workbench.py\n?? docs/casulo_workbench_atlas/12_RUNTIME_HARDENING_CONTRACTS.md\n?? outputs/wb007_hardening_backups/\n?? workbench/.gitignore\n?? workbench/contracts/",
+  "next_step": "Review report, commit, push, then tag workbench-runtime-contract-v0.2."
+}

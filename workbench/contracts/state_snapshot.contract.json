@@ -1,0 +1,30 @@
+{
+  "contract": "workbench.state_snapshot.v0.2",
+  "required_top_level_keys": [
+    "contract_version",
+    "generated_at",
+    "case",
+    "data_quality",
+    "domains",
+    "fragility",
+    "gates"
+  ],
+  "required_fragility_keys": [
+    "h_pre",
+    "h_post",
+    "delta_l",
+    "missing_ratio",
+    "contradiction_count",
+    "sync_coverage",
+    "state_confidence",
+    "decision"
+  ],
+  "allowed_decisions": [
+    "ALLOW_SOLUTION",
+    "RECOMMEND_SMALLER_DELTA",
+    "NEED_MORE_EVIDENCE",
+    "HUMAN_REVIEW_REQUIRED",
+    "BLOCK_SOLUTION"
+  ],
+  "note": "This contract is used by the Cubo/Cupula cockpit and by runtime validation."
+}
