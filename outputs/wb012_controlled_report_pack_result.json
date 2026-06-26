@@ -1,0 +1,24 @@
+{
+  "generated_at": "2026-06-26T15:40:35+00:00",
+  "task": "TASK-WB-012",
+  "status": "PASS",
+  "stage": "complete",
+  "exit_code": 0,
+  "repo": "/workspaces/casulo-campo-os-poc",
+  "contracts": {
+    "controlled_test_report": true
+  },
+  "runtime": {
+    "controlled_test_report_pack": true,
+    "build_controlled_test_report": true,
+    "report_template": true
+  },
+  "validation": {
+    "controlled_report_check": "PASS",
+    "human_review_check": "PASS",
+    "workbench_strict": "PASS",
+    "casulo_campo_validate": "PASS"
+  },
+  "git_status": "M workbench/README.md\n M workbench/scripts/validate_workbench.py\n?? docs/casulo_workbench_atlas/17_CONTROLLED_TEST_REPORT_PACK.md\n?? outputs/wb012_controlled_report_pack_backups/\n?? workbench/api/services/controlled_test_report_pack.py\n?? workbench/contracts/controlled_test_report.contract.json\n?? workbench/report_templates/\n?? workbench/scripts/build_controlled_test_report.py",
+  "next_step": "Review report, commit, push, then tag workbench-controlled-report-v0.7."
+}

@@ -1,0 +1,20 @@
+{
+  "contract": "workbench.controlled_test_report.v0.7",
+  "purpose": "Assemble the controlled test report pack after intake, diagnostic, cockpit and human review gates.",
+  "required_outputs": [
+    "controlled_test_report.md",
+    "controlled_test_result.json",
+    "executive_summary.md",
+    "next_actions.md"
+  ],
+  "required_sections": [
+    "scope",
+    "intake",
+    "diagnostic",
+    "cockpit",
+    "human_review",
+    "limits",
+    "next_actions"
+  ],
+  "rule": "This report pack is for controlled/internal review unless human review explicitly allows client review."
+}

@@ -14,6 +14,7 @@ from api.services.cockpit_state_engine import build_cockpit_state, validate_cock
 from api.services.real_intake_engine import process_intake  # noqa: E402
 from api.services.controlled_diagnostic_runner import run_controlled_diagnostic  # noqa: E402
 from api.services.human_review_gate import run_human_review_gate  # noqa: E402
+from api.services.controlled_test_report_pack import run_controlled_test_report_pack  # noqa: E402
 
 REQUIRED = [
     "README.md",
@@ -25,6 +26,7 @@ REQUIRED = [
     "api/services/real_intake_engine.py",
     "api/services/controlled_diagnostic_runner.py",
     "api/services/human_review_gate.py",
+    "api/services/controlled_test_report_pack.py",
     "scripts/run_demo.py",
     "scripts/export_codex_task.py",
     "scripts/build_cockpit_state.py",
@@ -32,6 +34,7 @@ REQUIRED = [
     "scripts/build_real_case_from_intake.py",
     "scripts/run_controlled_diagnostic.py",
     "scripts/run_human_review_gate.py",
+    "scripts/build_controlled_test_report.py",
     "scripts/validate_workbench.py",
     "contracts/state_snapshot.contract.json",
     "contracts/graph.contract.json",
@@ -42,7 +45,9 @@ REQUIRED = [
     "contracts/evidence_manifest.contract.json",
     "contracts/controlled_diagnostic.contract.json",
     "contracts/human_review_gate.contract.json",
+    "contracts/controlled_test_report.contract.json",
     "review_templates/human_review_gate_template.md",
+    "report_templates/controlled_test_report_template.md",
     "real_cases/template/real_intake.json",
     "real_cases/template/consent_and_scope.md",
     "real_cases/template/anonymization_checklist.md",
@@ -81,6 +86,7 @@ def main() -> int:
         "evidence_manifest.contract.json",
         "controlled_diagnostic.contract.json",
         "human_review_gate.contract.json",
+        "controlled_test_report.contract.json",
     ]:
         try:
             json.loads((ROOT / "contracts" / contract).read_text(encoding="utf-8"))
@@ -118,31 +124,23 @@ def main() -> int:
 
     intake_path = ROOT / "real_cases" / "template" / "real_intake.json"
 
-    try:
-        intake_result = process_intake(intake_path, write=False)
-        if intake_result["status"] != "PASS":
-            errors.extend([f"real_intake: {err}" for err in intake_result.get("errors", [])])
-        warnings.extend([f"real_intake: {w}" for w in intake_result.get("warnings", [])])
-    except Exception as exc:
-        errors.append(f"real intake check failed: {exc}")
-
-    try:
-        controlled = run_controlled_diagnostic(intake_path=intake_path, write=False)
-        if controlled.get("status") != "PASS":
-            errors.append(f"controlled diagnostic failed: {controlled}")
-    except Exception as exc:
-        errors.append(f"controlled diagnostic check failed: {exc}")
-
-    try:
-        review = run_human_review_gate(intake_path=intake_path, write=False)
-        if review.get("status") != "PASS":
-            errors.append(f"human review gate failed: {review}")
-    except Exception as exc:
-        errors.append(f"human review gate check failed: {exc}")
+    for name, fn in [
+        ("real intake", lambda: process_intake(intake_path, write=False)),
+        ("controlled diagnostic", lambda: run_controlled_diagnostic(intake_path=intake_path, write=False)),
+        ("human review gate", lambda: run_human_review_gate(intake_path=intake_path, write=False)),
+        ("controlled test report", lambda: run_controlled_test_report_pack(intake_path=intake_path, write=False)),
+    ]:
+        try:
+            result = fn()
+            if result.get("status") != "PASS":
+                errors.append(f"{name} failed: {result}")
+            warnings.extend([f"{name}: {w}" for w in result.get("warnings", [])])
+        except Exception as exc:
+            errors.append(f"{name} check failed: {exc}")
 
     result = {
         "status": "FAIL" if errors else "PASS",
-        "checks": len(REQUIRED) + len(case_names) + 4,
+        "checks": len(REQUIRED) + len(case_names) + 5,
         "cases": len(case_names),
         "errors": errors,
         "warnings": warnings,
