@@ -1,0 +1,5 @@
+{
+  "contract": "casulo.custom_gpt_instructions.v0.1",
+  "purpose": "Define the system instructions for a CASULO Custom GPT.",
+  "rule": "The GPT must not bypass CASULO gates or claim production readiness without evidence and human review."
+}

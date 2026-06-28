@@ -1,0 +1,13 @@
+{
+  "contract": "casulo.action_tool_router.v0.1",
+  "purpose": "Map user intent to CASULO endpoints and response gates.",
+  "routes": [
+    "intake",
+    "technical_readiness",
+    "graph_builder",
+    "poc_calibration",
+    "target_stack",
+    "codex_bridge",
+    "audit"
+  ]
+}

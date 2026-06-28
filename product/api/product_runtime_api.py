@@ -60,19 +60,24 @@ class ProductRuntimeHandler(BaseHTTPRequestHandler):
                 if UI_ROOT.resolve() not in requested.parents and requested != UI_ROOT.resolve():
                     return self.send_json({"status": "FORBIDDEN"}, status=403)
                 return self.send_static(requested)
+
             route_map = {
                 "api/health": self.service.health,
                 "api/product/status": self.service.product_status,
-                "api/casulo/poc-calibration/results": self.service.poc_calibration_results,
                 "api/casulo/readiness/technical-memo": self.service.technical_readiness_memo,
                 "api/casulo/readiness/chat-agent-model": self.service.chat_agent_operating_model,
                 "api/casulo/readiness/target-stack": self.service.target_stack,
                 "api/casulo/readiness/codex-github-bridge": self.service.codex_github_bridge,
                 "api/casulo/readiness/poc-service-blueprint": self.service.poc_service_blueprint,
-                "api/casulo/readiness/risk-control-matrix": self.service.risk_control_matrix,
-                "api/casulo/readiness/roadmap-90d": self.service.technical_roadmap_90d,
                 "api/casulo/readiness/incubator-pack": self.service.incubator_technical_pack,
-                "api/casulo/readiness/audit": self.service.technical_readiness_audit,
+                "api/casulo/agent/openapi-spec": self.service.custom_gpt_openapi_spec,
+                "api/casulo/agent/custom-gpt-instructions": self.service.custom_gpt_instructions,
+                "api/casulo/agent/action-manifest": self.service.action_manifest,
+                "api/casulo/agent/tool-router": self.service.tool_router,
+                "api/casulo/agent/connector-session": self.service.connector_session,
+                "api/casulo/agent/security-policy": self.service.connector_security_policy,
+                "api/casulo/agent/readiness": self.service.connector_readiness,
+                "api/casulo/agent/audit": self.service.connector_audit,
                 "api/reports": self.service.reports,
             }
             if clean in route_map:
@@ -90,7 +95,7 @@ def main() -> int:
     server = HTTPServer((args.host, args.port), ProductRuntimeHandler)
     print(f"Operational Cube product runtime API/UI running at http://{args.host}:{args.port}")
     print("Open: /ui")
-    print("Try: /api/health, /api/casulo/readiness/technical-memo")
+    print("Try: /api/health, /api/casulo/agent/openapi-spec")
     try:
         server.serve_forever()
     except KeyboardInterrupt:

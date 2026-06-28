@@ -1,0 +1,12 @@
+{
+  "contract": "casulo.agent_connector_security.v0.1",
+  "purpose": "Security controls for custom GPT actions and agent connector.",
+  "controls": [
+    "no credentials in chat",
+    "no production secrets",
+    "redacted/anonymized data by default",
+    "read-only action prototype",
+    "blocked actions preserved",
+    "human review required for external claim, implementation and production"
+  ]
+}

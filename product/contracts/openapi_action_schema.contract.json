@@ -1,0 +1,6 @@
+{
+  "contract": "casulo.openapi_action_schema.v0.1",
+  "purpose": "Expose CASULO runtime endpoints as an OpenAPI action schema.",
+  "requires_public_https": true,
+  "local_prototype_allowed": true
+}

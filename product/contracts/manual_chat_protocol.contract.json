@@ -1,0 +1,13 @@
+{
+  "contract": "casulo.manual_chat_protocol.v0.1",
+  "purpose": "Define how CASULO operates in chat before the Custom GPT connector is live.",
+  "steps": [
+    "receive sanitized user/company context",
+    "apply intake/redaction rules",
+    "build or retrieve state",
+    "route to graph/evaluation/readiness endpoints",
+    "apply response gate",
+    "answer/report/task only within allowed scope",
+    "record audit notes"
+  ]
+}

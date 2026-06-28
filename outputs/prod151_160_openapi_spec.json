@@ -1,0 +1,226 @@
+{
+  "openapi": "3.1.0",
+  "info": {
+    "title": "CASULO / Cubo Operational Runtime Actions",
+    "version": "0.1.0",
+    "description": "Read-only action schema for Custom GPT / agent connector prototype."
+  },
+  "servers": [
+    {
+      "url": "http://127.0.0.1:8097",
+      "description": "CASULO runtime endpoint. For Custom GPT this must be public HTTPS."
+    }
+  ],
+  "paths": {
+    "/api/product/status": {
+      "get": {
+        "operationId": "getProductStatus",
+        "summary": "Return CASULO/Cubo runtime status and readiness checks.",
+        "tags": [
+          "status"
+        ],
+        "responses": {
+          "200": {
+            "description": "CASULO response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/casulo/readiness/technical-memo": {
+      "get": {
+        "operationId": "getTechnicalReadinessMemo",
+        "summary": "Return technical readiness memo.",
+        "tags": [
+          "readiness"
+        ],
+        "responses": {
+          "200": {
+            "description": "CASULO response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/casulo/readiness/chat-agent-model": {
+      "get": {
+        "operationId": "getChatAgentModel",
+        "summary": "Return chat agent operating model.",
+        "tags": [
+          "agent"
+        ],
+        "responses": {
+          "200": {
+            "description": "CASULO response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/casulo/readiness/target-stack": {
+      "get": {
+        "operationId": "getTargetStack",
+        "summary": "Return target stack plan.",
+        "tags": [
+          "stack"
+        ],
+        "responses": {
+          "200": {
+            "description": "CASULO response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/casulo/readiness/codex-github-bridge": {
+      "get": {
+        "operationId": "getCodexGithubBridge",
+        "summary": "Return Codex/GitHub bridge plan.",
+        "tags": [
+          "development"
+        ],
+        "responses": {
+          "200": {
+            "description": "CASULO response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/casulo/readiness/poc-service-blueprint": {
+      "get": {
+        "operationId": "getPocServiceBlueprint",
+        "summary": "Return controlled POC service blueprint.",
+        "tags": [
+          "poc"
+        ],
+        "responses": {
+          "200": {
+            "description": "CASULO response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/casulo/poc-calibration/results": {
+      "get": {
+        "operationId": "getPocCalibrationResults",
+        "summary": "Return POC calibration results.",
+        "tags": [
+          "calibration"
+        ],
+        "responses": {
+          "200": {
+            "description": "CASULO response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/casulo/poc-calibration/delta-control": {
+      "get": {
+        "operationId": "getPocCalibrationDeltaControl",
+        "summary": "Return delta control report.",
+        "tags": [
+          "calibration"
+        ],
+        "responses": {
+          "200": {
+            "description": "CASULO response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/casulo/readiness/incubator-pack": {
+      "get": {
+        "operationId": "getIncubatorPack",
+        "summary": "Return incubator technical pack.",
+        "tags": [
+          "incubator"
+        ],
+        "responses": {
+          "200": {
+            "description": "CASULO response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/casulo/readiness/audit": {
+      "get": {
+        "operationId": "getReadinessAudit",
+        "summary": "Return technical readiness audit.",
+        "tags": [
+          "audit"
+        ],
+        "responses": {
+          "200": {
+            "description": "CASULO response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

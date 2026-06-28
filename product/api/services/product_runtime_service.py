@@ -46,17 +46,18 @@ class ProductRuntimeService:
 
     def product_status(self) -> Dict:
         checks = {
-            "poc_calibration_readiness": exists(self.outputs_root / "prod131_140_poc_calibration_readiness.json"),
-            "calibration_results": exists(self.outputs_root / "prod131_140_calibration_results.json"),
             "technical_readiness_memo": exists(self.outputs_root / "prod141_150_technical_readiness_memo.json"),
             "chat_agent_operating_model": exists(self.outputs_root / "prod141_150_chat_agent_operating_model.json"),
             "target_stack": exists(self.outputs_root / "prod141_150_target_stack.json"),
             "codex_github_bridge": exists(self.outputs_root / "prod141_150_codex_github_bridge.json"),
-            "poc_service_blueprint": exists(self.outputs_root / "prod141_150_poc_service_blueprint.json"),
-            "risk_control_matrix": exists(self.outputs_root / "prod141_150_risk_control_matrix.json"),
-            "technical_roadmap_90d": exists(self.outputs_root / "prod141_150_technical_roadmap_90d.json"),
-            "incubator_technical_pack": exists(self.outputs_root / "prod141_150_incubator_technical_pack.json"),
-            "technical_readiness_audit": exists(self.outputs_root / "prod141_150_audit_report.json"),
+            "custom_gpt_openapi_spec": exists(self.outputs_root / "prod151_160_openapi_spec.json"),
+            "custom_gpt_instructions": exists(self.outputs_root / "prod151_160_custom_gpt_instructions.json"),
+            "action_manifest": exists(self.outputs_root / "prod151_160_action_manifest.json"),
+            "tool_router": exists(self.outputs_root / "prod151_160_tool_router.json"),
+            "connector_session": exists(self.outputs_root / "prod151_160_connector_session.json"),
+            "connector_security_policy": exists(self.outputs_root / "prod151_160_security_policy.json"),
+            "connector_readiness": exists(self.outputs_root / "prod151_160_connector_readiness.json"),
+            "connector_audit": exists(self.outputs_root / "prod151_160_audit_report.json"),
         }
         return {
             "status": "PASS" if all(checks.values()) else "INCOMPLETE",
@@ -64,7 +65,7 @@ class ProductRuntimeService:
             "runtime_mode": RUNTIME_MODE,
             "checks": checks,
             "blocked_actions": BLOCKED_ACTIONS,
-            "next_recommended_step": "Build Custom GPT Actions / Agent Connector Prototype.",
+            "next_recommended_step": "Expose runtime via public HTTPS or deploy FastAPI adapter, then import OpenAPI schema into Custom GPT Actions.",
         }
 
     def _payload(self, stem: str, key: str) -> Dict:
@@ -72,16 +73,20 @@ class ProductRuntimeService:
 
     def __getattr__(self, name):
         mapping = {
-            "poc_calibration_results": ("prod131_140_calibration_results.json", "calibration_results"),
             "technical_readiness_memo": ("prod141_150_technical_readiness_memo.json", "technical_readiness_memo"),
             "chat_agent_operating_model": ("prod141_150_chat_agent_operating_model.json", "chat_agent_operating_model"),
             "target_stack": ("prod141_150_target_stack.json", "target_stack"),
             "codex_github_bridge": ("prod141_150_codex_github_bridge.json", "codex_github_bridge"),
             "poc_service_blueprint": ("prod141_150_poc_service_blueprint.json", "poc_service_blueprint"),
-            "risk_control_matrix": ("prod141_150_risk_control_matrix.json", "risk_control_matrix"),
-            "technical_roadmap_90d": ("prod141_150_technical_roadmap_90d.json", "technical_roadmap_90d"),
             "incubator_technical_pack": ("prod141_150_incubator_technical_pack.json", "incubator_technical_pack"),
-            "technical_readiness_audit": ("prod141_150_audit_report.json", "technical_readiness_audit"),
+            "custom_gpt_openapi_spec": ("prod151_160_openapi_spec.json", "openapi_spec"),
+            "custom_gpt_instructions": ("prod151_160_custom_gpt_instructions.json", "custom_gpt_instructions"),
+            "action_manifest": ("prod151_160_action_manifest.json", "action_manifest"),
+            "tool_router": ("prod151_160_tool_router.json", "tool_router"),
+            "connector_session": ("prod151_160_connector_session.json", "connector_session"),
+            "connector_security_policy": ("prod151_160_security_policy.json", "connector_security_policy"),
+            "connector_readiness": ("prod151_160_connector_readiness.json", "connector_readiness"),
+            "connector_audit": ("prod151_160_audit_report.json", "connector_audit"),
         }
         if name in mapping:
             stem, key = mapping[name]
@@ -90,15 +95,14 @@ class ProductRuntimeService:
 
     def reports(self) -> Dict:
         patterns = [
-            "prod141_150_technical_readiness_memo.md",
-            "prod141_150_chat_agent_operating_model.md",
-            "prod141_150_target_stack.md",
-            "prod141_150_codex_github_bridge.md",
-            "prod141_150_poc_service_blueprint.md",
-            "prod141_150_risk_control_matrix.md",
-            "prod141_150_technical_roadmap_90d.md",
-            "prod141_150_incubator_technical_pack.md",
-            "prod141_150_audit_report.md",
+            "prod151_160_openapi_spec.md",
+            "prod151_160_custom_gpt_instructions.md",
+            "prod151_160_action_manifest.md",
+            "prod151_160_tool_router.md",
+            "prod151_160_connector_session.md",
+            "prod151_160_security_policy.md",
+            "prod151_160_connector_readiness.md",
+            "prod151_160_audit_report.md",
         ]
         reports = []
         for name in patterns:

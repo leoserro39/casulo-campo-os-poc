@@ -1,0 +1,16 @@
+{
+  "task": "PROD-151..160",
+  "status": "PASS",
+  "phase": "Custom GPT Actions / Agent Connector Prototype",
+  "endpoints": [
+    "/api/casulo/agent/openapi-spec",
+    "/api/casulo/agent/custom-gpt-instructions",
+    "/api/casulo/agent/action-manifest",
+    "/api/casulo/agent/tool-router",
+    "/api/casulo/agent/connector-session",
+    "/api/casulo/agent/security-policy",
+    "/api/casulo/agent/readiness",
+    "/api/casulo/agent/audit"
+  ],
+  "next_recommended_bundle": "PROD-161..170 Public HTTPS Runtime / FastAPI Deploy Adapter"
+}

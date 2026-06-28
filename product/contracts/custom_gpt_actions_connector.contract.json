@@ -1,0 +1,14 @@
+{
+  "contract": "casulo.custom_gpt_actions_connector.v0.1",
+  "purpose": "Create the first connector prototype for a Custom GPT or agent to call CASULO runtime endpoints as governed actions.",
+  "mode": "local_openapi_prototype_public_https_required_for_real_custom_gpt",
+  "primary_script": "product/scripts/build_custom_gpt_actions_connector.py",
+  "blocked_actions": [
+    "client_facing_claim",
+    "automatic_nomination",
+    "implementation_execution",
+    "production_activation",
+    "automatic_merge",
+    "credential_handling"
+  ]
+}

@@ -1,0 +1,9 @@
+{
+  "status": "PASS",
+  "audit": "Custom GPT Actions / Agent Connector audit",
+  "openapi_paths": 10,
+  "actions": 10,
+  "requires_public_https": true,
+  "readiness": "READY_FOR_LOCAL_CUSTOM_GPT_ACTIONS_CONNECTOR_PROTOTYPE",
+  "finding": "PASS: local connector prototype is ready. Real Custom GPT Actions require public HTTPS runtime endpoint."
+}

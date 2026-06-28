@@ -1,0 +1,33 @@
+# Agent Connector Session
+
+- contract_version: `casulo.agent_connector_session.v0.1`
+- status: `PASS`
+- session_mode: `local_connector_prototype`
+
+## Flow
+- `manual chat protocol remains valid now`
+- `Custom GPT imports OpenAPI action schema`
+- `GPT instruction enforces CASULO gates`
+- `GPT calls read-only endpoints`
+- `agent generates answer/report/task only within allowed scope`
+- `human reviews before external claim, implementation or production`
+
+## Tool Router
+- `item` — {"intent": "status or readiness", "endpoint": "/api/product/status"}
+- `item` — {"intent": "technical readiness / company / incubator", "endpoint": "/api/casulo/readiness/technical-memo"}
+- `item` — {"intent": "how chat/agent should operate", "endpoint": "/api/casulo/readiness/chat-agent-model"}
+- `item` — {"intent": "stack plan", "endpoint": "/api/casulo/readiness/target-stack"}
+- `item` — {"intent": "codex or github development bridge", "endpoint": "/api/casulo/readiness/codex-github-bridge"}
+- `item` — {"intent": "poc service design", "endpoint": "/api/casulo/readiness/poc-service-blueprint"}
+- `item` — {"intent": "calibration or hallucination evidence", "endpoint": "/api/casulo/poc-calibration/results"}
+- `item` — {"intent": "delta control", "endpoint": "/api/casulo/poc-calibration/delta-control"}
+- `item` — {"intent": "incubator package", "endpoint": "/api/casulo/readiness/incubator-pack"}
+- `item` — {"intent": "audit", "endpoint": "/api/casulo/readiness/audit"}
+
+## Blocked Actions
+- `client_facing_claim`
+- `automatic_nomination`
+- `implementation_execution`
+- `production_activation`
+- `automatic_merge`
+- `credential_handling`

@@ -1,0 +1,11 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "CASULO Agent Connector Session",
+  "type": "object",
+  "required": [
+    "status",
+    "session_mode",
+    "flow",
+    "tool_router"
+  ]
+}
