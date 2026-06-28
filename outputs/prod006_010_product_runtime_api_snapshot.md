@@ -21,4 +21,4 @@
 - `production_activation`
 
 ## Next
-Build UI shell and case workspace after local API validation.
+Load real/anonymized VesselFlow data or enhance UI with report export review.

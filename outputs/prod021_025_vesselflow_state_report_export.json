@@ -1,0 +1,107 @@
+{
+  "contract_version": "operational_cube.vesselflow_state_report_export.v0.7",
+  "status": "PASS",
+  "title": "VesselFlow Controlled State Definition Report",
+  "case_id": "vesselflow_demo_controlled_001",
+  "decision": "WAITING_FOR_REAL_DATA_OR_HUMAN_REVIEW",
+  "risk_level": "HIGH",
+  "data_mode": "sample_placeholder",
+  "domain_count": 15,
+  "entity_count": 12,
+  "evidence_manifest": [
+    {
+      "evidence": "dataset_or_workbook",
+      "status": "SAMPLE_PLACEHOLDER",
+      "available": true
+    },
+    {
+      "evidence": "expected_nomination_flow",
+      "status": "AVAILABLE",
+      "available": true
+    },
+    {
+      "evidence": "qualification_rules",
+      "status": "AVAILABLE",
+      "available": true
+    },
+    {
+      "evidence": "known_blocking_rules",
+      "status": "AVAILABLE",
+      "available": true
+    },
+    {
+      "evidence": "contract_records",
+      "status": "NOT_PROVIDED",
+      "available": false
+    },
+    {
+      "evidence": "pvq_q88_extract",
+      "status": "NOT_PROVIDED",
+      "available": false
+    },
+    {
+      "evidence": "certificate_list",
+      "status": "NOT_PROVIDED",
+      "available": false
+    },
+    {
+      "evidence": "cargo_platform_matrix",
+      "status": "NOT_PROVIDED",
+      "available": false
+    },
+    {
+      "evidence": "decision_logs",
+      "status": "NOT_PROVIDED",
+      "available": false
+    },
+    {
+      "evidence": "audit_reports",
+      "status": "NOT_PROVIDED",
+      "available": false
+    }
+  ],
+  "gate_matrix": [
+    {
+      "gate": "pvq_completeness",
+      "status": "BLOCKED_SAMPLE_DATA"
+    },
+    {
+      "gate": "document_validity",
+      "status": "BLOCKED_SAMPLE_DATA"
+    },
+    {
+      "gate": "contract_alignment",
+      "status": "BLOCKED_SAMPLE_DATA"
+    },
+    {
+      "gate": "qualification_gate",
+      "status": "BLOCKED_SAMPLE_DATA"
+    },
+    {
+      "gate": "sync_gate",
+      "status": "BLOCKED_SAMPLE_DATA"
+    },
+    {
+      "gate": "nomination_gate",
+      "status": "BLOCKED_SAMPLE_DATA"
+    },
+    {
+      "gate": "human_review",
+      "status": "REQUIRED"
+    }
+  ],
+  "delta_recommendations": [
+    "Provide real/anonymized VesselFlow workbook or dataset.",
+    "Provide expected nomination flow if different from seed.",
+    "Provide qualification rules and known blocking rules.",
+    "Run human review before any external claim or implementation."
+  ],
+  "blocked_actions": [
+    "automatic_nomination",
+    "client_facing_claim",
+    "implementation_execution",
+    "production_activation"
+  ],
+  "default_policy": "No automatic nomination. Controlled state definition only.",
+  "internal_use_only": true
+}

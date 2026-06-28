@@ -4,6 +4,8 @@ const api = {
   verticals: "/api/verticals",
   vfState: "/api/verticals/vesselflow/state-request",
   vfManifest: "/api/vesselflow/import-manifest",
+  vfStateDefinition: "/api/vesselflow/state-definition",
+  vfReport: "/api/vesselflow/state-definition/report",
   reports: "/api/reports",
 };
 
@@ -15,15 +17,8 @@ async function fetchJson(url) {
   return await res.json();
 }
 
-function pretty(obj) {
-  return JSON.stringify(obj, null, 2);
-}
-
-function setText(id, text) {
-  const el = document.getElementById(id);
-  if (el) el.textContent = text;
-}
-
+function pretty(obj) { return JSON.stringify(obj, null, 2); }
+function setText(id, text) { const el = document.getElementById(id); if (el) el.textContent = text; }
 function list(id, items) {
   const el = document.getElementById(id);
   if (!el) return;
@@ -49,6 +44,7 @@ function card(title, body) {
 
 function renderVerticals(data) {
   const root = document.getElementById("verticalCards");
+  if (!root) return;
   root.innerHTML = "";
   data.verticals.forEach(v => {
     const article = document.createElement("article");
@@ -67,6 +63,7 @@ function renderVerticals(data) {
 
 function renderCubeFaces(vfState) {
   const root = document.getElementById("cubeFaces");
+  if (!root) return;
   root.innerHTML = "";
   const faces = vfState.state_request.cube.faces || {};
   Object.entries(faces).forEach(([name, meaning]) => {
@@ -79,10 +76,24 @@ function renderCubeFaces(vfState) {
 
 function renderReports(data) {
   const root = document.getElementById("reportCards");
+  if (!root) return;
   root.innerHTML = "";
   data.reports.forEach(r => {
     root.appendChild(card(r.name, r.exists ? r.preview : "Nao encontrado"));
   });
+}
+
+function ensureStateDefinitionPanel() {
+  const screen = document.getElementById("screen-state");
+  if (!screen || document.getElementById("stateDefinitionPanel")) return;
+  const panel = document.createElement("div");
+  panel.id = "stateDefinitionPanel";
+  panel.className = "grid two";
+  panel.innerHTML = `
+    <article class="card"><h3>Definição de Estado Controlada</h3><pre id="stateDefinition">Carregando...</pre></article>
+    <article class="card"><h3>Export do Relatório</h3><pre id="stateReportExport">Carregando...</pre></article>
+  `;
+  screen.appendChild(panel);
 }
 
 async function load() {
@@ -92,6 +103,8 @@ async function load() {
     state.verticals = await fetchJson(api.verticals);
     state.vfState = await fetchJson(api.vfState);
     state.vfManifest = await fetchJson(api.vfManifest);
+    state.vfDefinition = await fetchJson(api.vfStateDefinition);
+    state.vfReport = await fetchJson(api.vfReport);
     state.reports = await fetchJson(api.reports);
 
     setText("runtimeStatus", `API ${state.health.status}`);
@@ -108,6 +121,11 @@ async function load() {
 
     setText("stateRequest", pretty(state.vfState.state_request));
     setText("importManifest", pretty(state.vfManifest.manifest));
+
+    ensureStateDefinitionPanel();
+    setText("stateDefinition", pretty(state.vfDefinition.state_definition));
+    setText("stateReportExport", pretty(state.vfReport.report_export));
+
     renderReports(state.reports);
   } catch (err) {
     setText("runtimeStatus", "ERRO");

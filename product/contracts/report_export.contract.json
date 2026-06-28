@@ -1,0 +1,9 @@
+{
+  "contract": "operational_cube.report_export.v0.7",
+  "purpose": "Generate local markdown and JSON report exports for controlled VesselFlow state definition.",
+  "outputs": [
+    "outputs/prod021_025_vesselflow_state_report_export.json",
+    "outputs/prod021_025_vesselflow_state_report_export.md"
+  ],
+  "mode": "local_demo_internal_only"
+}

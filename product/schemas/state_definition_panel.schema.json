@@ -1,0 +1,32 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Operational Cube State Definition Panel",
+  "type": "object",
+  "required": [
+    "status",
+    "case_id",
+    "decision",
+    "risk_level",
+    "blocked_actions"
+  ],
+  "properties": {
+    "status": {
+      "type": "string"
+    },
+    "case_id": {
+      "type": "string"
+    },
+    "decision": {
+      "type": "string"
+    },
+    "risk_level": {
+      "type": "string"
+    },
+    "blocked_actions": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  }
+}

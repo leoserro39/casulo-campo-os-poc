@@ -1,0 +1,22 @@
+{
+  "contract": "operational_cube.state_definition_panel.v0.7",
+  "purpose": "Render VesselFlow controlled state definition inside the product UI.",
+  "screens_added_or_enhanced": [
+    "VesselFlow State Definition Panel",
+    "Evidence Manifest Panel",
+    "Gate Matrix Panel",
+    "Risk and Delta Panel",
+    "Report Export Panel"
+  ],
+  "api_dependencies": [
+    "/api/vesselflow/state-definition",
+    "/api/vesselflow/state-definition/report",
+    "/api/product/status"
+  ],
+  "safety": [
+    "no automatic nomination",
+    "no client-facing claim",
+    "no implementation execution",
+    "no production activation"
+  ]
+}

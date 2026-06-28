@@ -67,44 +67,24 @@ class ProductRuntimeHandler(BaseHTTPRequestHandler):
 
             if clean == "api/health":
                 return self.send_json(self.service.health())
-
             if clean == "api/product/status":
                 return self.send_json(self.service.product_status())
-
             if clean == "api/verticals":
                 return self.send_json(self.service.verticals())
-
             if len(parts) == 3 and parts[0] == "api" and parts[1] == "verticals":
                 return self.send_json(self.service.vertical(parts[2]))
-
             if len(parts) == 4 and parts[0] == "api" and parts[1] == "verticals" and parts[3] == "state-request":
                 return self.send_json(self.service.state_request(parts[2]))
-
             if clean == "api/vesselflow/import-manifest":
                 return self.send_json(self.service.vesselflow_import_manifest())
-
             if clean == "api/vesselflow/state-definition":
                 return self.send_json(self.service.vesselflow_state_definition())
-
+            if clean == "api/vesselflow/state-definition/report":
+                return self.send_json(self.service.vesselflow_state_report_export())
             if clean == "api/reports":
                 return self.send_json(self.service.reports())
 
-            return self.send_json({
-                "status": "NOT_FOUND",
-                "path": path,
-                "available_endpoints": [
-                    "/",
-                    "/ui",
-                    "/api/health",
-                    "/api/product/status",
-                    "/api/verticals",
-                    "/api/verticals/{vertical_id}",
-                    "/api/verticals/{vertical_id}/state-request",
-                    "/api/vesselflow/import-manifest",
-                    "/api/vesselflow/state-definition",
-                    "/api/reports",
-                ],
-            }, status=404)
+            return self.send_json({"status": "NOT_FOUND", "path": path}, status=404)
         except Exception as exc:
             return self.send_json({"status": "ERROR", "error": str(exc)}, status=500)
 
@@ -118,7 +98,7 @@ def main() -> int:
     server = HTTPServer((args.host, args.port), ProductRuntimeHandler)
     print(f"Operational Cube product runtime API/UI running at http://{args.host}:{args.port}")
     print("Open: /ui")
-    print("Try: /api/health, /api/verticals, /api/vesselflow/state-definition")
+    print("Try: /api/health, /api/vesselflow/state-definition, /api/vesselflow/state-definition/report")
     try:
         server.serve_forever()
     except KeyboardInterrupt:

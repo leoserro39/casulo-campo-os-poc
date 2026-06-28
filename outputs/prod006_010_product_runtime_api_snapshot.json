@@ -23,7 +23,10 @@
       "verticals_dir": true,
       "vertical_runtime_adapter": true,
       "vesselflow_state_request": true,
-      "vesselflow_import_manifest": true
+      "vesselflow_import_manifest": true,
+      "product_ui": true,
+      "vesselflow_state_definition": true,
+      "vesselflow_state_report_export": true
     },
     "blocked_actions": [
       "client_facing_claim",
@@ -31,7 +34,7 @@
       "implementation_execution",
       "production_activation"
     ],
-    "next_recommended_step": "Build UI shell and case workspace after local API validation."
+    "next_recommended_step": "Load real/anonymized VesselFlow data or enhance UI with report export review."
   },
   "verticals": {
     "status": "PASS",
@@ -510,6 +513,30 @@
         "exists": true,
         "path": "outputs/prod_vert004_006_vertical_runtime_adapter_report.md",
         "preview": "# PROD-VERT-004..006 Vertical Runtime Adapter Report\n\n- Status: `PASS`\n- Phase: `Vertical Runtime Adapter and VesselFlow Import Protocol`\n- Product direction: `Cubo Operacional / Operational Cube`\n\n## Generated\n\n- vertical runtime adapter;\n- vertical pack inspector;\n- VesselFlow import manifest builder;\n- vertical runtime validator;\n- state requests for small_service, legal_office and vesselflow;\n- VesselFlow import manifest;\n- runtime adapter docs.\n\n## Generated state requests\n\n- `outputs/prod_vert004_006_small_service_state_request.md`\n- `outputs/prod_vert004_006_legal_office_state_request.md`\n- `outputs/prod_vert004_006_vesselflow_state_request.md`\n\n## VesselFlow status\n\nWaiting for user data/workbook, expected nomination flow, qualification rules and known blocking rules.\n\n## Recommended next bundle\n\n`PROD-006..010 Product Runtime API and Case Adapter`\n"
+      },
+      {
+        "name": "prod006_010_product_runtime_api_report.md",
+        "exists": true,
+        "path": "outputs/prod006_010_product_runtime_api_report.md",
+        "preview": "# PROD-006..010 Product Runtime API Report\n\n- Status: `PASS`\n- Phase: `Product Runtime API and Case Adapter`\n- Product direction: `Cubo Operacional / Operational Cube`\n- Runtime mode: `local_demo`\n- Default port: `8097`\n\n## Generated\n\n- local product API;\n- product runtime service;\n- case/vertical adapter;\n- snapshot script;\n- validation script;\n- local run script;\n- API docs;\n- API snapshot outputs.\n\n## Endpoints\n\n- `GET /api/health`\n- `GET /api/product/status`\n- `GET /api/verticals`\n- `GET /api/verticals/{vertical_id}`\n- `GET /api/verticals/{vertical_id}/state-request`\n- `GET /api/vesselflow/import-manifest`\n- `GET /api/reports`\n\n## Safety\n\nNo client-facing claim, automatic nomination, implementation execution or production activation is authorized.\n\n## Recommended next bundle\n\n`PROD-011..015 Product UI Shell and Case Workspace`\n"
+      },
+      {
+        "name": "prod011_015_product_ui_shell_report.md",
+        "exists": true,
+        "path": "outputs/prod011_015_product_ui_shell_report.md",
+        "preview": "# PROD-011..015 Product UI Shell Report\n\n- Status: `PASS`\n- Phase: `Product UI Shell and Case Workspace`\n- Product direction: `Cubo Operacional / Operational Cube`\n- Runtime mode: `local_demo`\n- UI path: `/ui`\n\n## Generated\n\n- local UI shell;\n- UI served by product runtime API;\n- VesselFlow workspace;\n- cube card model;\n- state request view;\n- import manifest view;\n- report previews;\n- UI validation script.\n\n## Screens\n\n- Home\n- Verticals\n- VesselFlow\n- State Request\n- Import Manifest\n- Reports\n\n## Safety\n\nNo client-facing claim, automatic nomination, implementation execution or production activation is authorized.\n\n## Recommended next bundle\n\n`PROD-016..020 VesselFlow Data Import and State Definition Runner`\n"
+      },
+      {
+        "name": "prod016_020_vesselflow_state_definition.md",
+        "exists": true,
+        "path": "outputs/prod016_020_vesselflow_state_definition.md",
+        "preview": "# VesselFlow Controlled State Definition\n\n- Case: `vesselflow_demo_controlled_001`\n- Status: `CONTROLLED_STATE_DEFINED`\n- Decision: `WAITING_FOR_REAL_DATA_OR_HUMAN_REVIEW`\n- Risk level: `HIGH`\n\n## Domains\n- `navio`\n- `master`\n- `pvq_q88`\n- `documentos`\n- `certificados`\n- `contratos`\n- `carga`\n- `plataforma`\n- `lifter`\n- `analista_un`\n- `qualificacao`\n- `sincronizacao`\n- `nomeacao`\n- `pendencias`\n- `gates`\n\n## Evidence Manifest\n- `dataset_or_workbook`: `SAMPLE_PLACEHOLDER`\n- `expected_nomination_flow`: `AVAILABLE`\n- `qualification_rules`: `AVAILABLE`\n- `known_blocking_rules`: `AVAILABLE`\n- `contract_records`: `NOT_PROVIDED`\n- `pvq_q88_extract`: `NOT_PROVIDED`\n- `certificate_list`: `NOT_PROVIDED`\n- `cargo_platform_matrix`: `NOT_PROVIDED`\n- `decision_logs`: `NOT_PROVIDED`\n- `audit_reports`: `NOT_PROVIDED`\n\n## Gate Matrix\n- `pvq_completeness`: `BLOCKED_SAMPLE_DATA`\n- `document_validity`: `BLOCKED_SAMPLE_DATA`\n- `contract_alignment`: `BLOCKED_SAMPLE_DATA`\n- `qualification_gate`: `BLOCKED_SAMPLE_DATA`\n- `sync_gate`: `BLOCKED_SAMPLE_DATA`\n- `nomination_gate`: `BLOCKED_SAMPLE_DATA`\n- `human_review`: `REQUIRED`\n\n## Delta Recommendations\n- Provide real/anonymized VesselFlow workbook or datas"
+      },
+      {
+        "name": "prod021_025_vesselflow_state_report_export.md",
+        "exists": true,
+        "path": "outputs/prod021_025_vesselflow_state_report_export.md",
+        "preview": "# VesselFlow Controlled State Definition Report\n\n- Status: `PASS`\n- Case: `vesselflow_demo_controlled_001`\n- Decision: `WAITING_FOR_REAL_DATA_OR_HUMAN_REVIEW`\n- Risk level: `HIGH`\n- Data mode: `sample_placeholder`\n- Domain count: `15`\n- Entity count: `12`\n\n## Evidence Manifest\n- `dataset_or_workbook`: `SAMPLE_PLACEHOLDER`\n- `expected_nomination_flow`: `AVAILABLE`\n- `qualification_rules`: `AVAILABLE`\n- `known_blocking_rules`: `AVAILABLE`\n- `contract_records`: `NOT_PROVIDED`\n- `pvq_q88_extract`: `NOT_PROVIDED`\n- `certificate_list`: `NOT_PROVIDED`\n- `cargo_platform_matrix`: `NOT_PROVIDED`\n- `decision_logs`: `NOT_PROVIDED`\n- `audit_reports`: `NOT_PROVIDED`\n\n## Gate Matrix\n- `pvq_completeness`: `BLOCKED_SAMPLE_DATA`\n- `document_validity`: `BLOCKED_SAMPLE_DATA`\n- `contract_alignment`: `BLOCKED_SAMPLE_DATA`\n- `qualification_gate`: `BLOCKED_SAMPLE_DATA`\n- `sync_gate`: `BLOCKED_SAMPLE_DATA`\n- `nomination_gate`: `BLOCKED_SAMPLE_DATA`\n- `human_review`: `REQUIRED`\n\n## Delta Recommendations\n- Provide real/anonymized VesselFlow workbook or dataset.\n- Provide expected nomination flow if different from seed.\n- Provide qualification rules and known blocking rules.\n- Run human review before any exte"
       },
       {
         "name": "wb020_poc_completion_report.md",
