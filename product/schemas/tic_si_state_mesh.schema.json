@@ -1,0 +1,36 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "TIC/SI Operational State Mesh",
+  "type": "object",
+  "required": [
+    "status",
+    "vertical_id",
+    "mesh_decision",
+    "entities",
+    "gates",
+    "blocked_actions"
+  ],
+  "properties": {
+    "status": {
+      "type": "string"
+    },
+    "vertical_id": {
+      "type": "string"
+    },
+    "mesh_decision": {
+      "type": "string"
+    },
+    "entities": {
+      "type": "object"
+    },
+    "gates": {
+      "type": "array"
+    },
+    "blocked_actions": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  }
+}

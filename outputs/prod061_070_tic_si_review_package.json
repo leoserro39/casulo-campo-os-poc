@@ -1,0 +1,40 @@
+{
+  "contract_version": "operational_cube.tic_si_review_package.v1.4",
+  "status": "PASS",
+  "vertical_id": "tic_si",
+  "review_decision": "SOFTWARE_REVIEW_HANDOFF_REQUIRED",
+  "review_reason": "TIC/SI mesh found blockers that should become software review and development gate tasks.",
+  "candidate_systems": [
+    {
+      "system": "Customer Portal",
+      "handoff": "software_review_gate",
+      "reasons": [
+        "no rollback plan",
+        "missing access review",
+        "tests and docs required"
+      ]
+    },
+    {
+      "system": "Internal Finance Tool",
+      "handoff": "software_review_gate",
+      "reasons": [
+        "owner review required",
+        "data classification and access review required"
+      ]
+    }
+  ],
+  "required_human_decisions": [
+    "Confirm system owners.",
+    "Confirm whether customer portal can enter controlled software review.",
+    "Confirm access and data classification evidence.",
+    "Confirm no implementation or production activation is authorized yet."
+  ],
+  "next_recommended_bundle": "PROD-071..080 Software Review and Codex Development Gate",
+  "blocked_actions": [
+    "client_facing_claim",
+    "automatic_nomination",
+    "implementation_execution",
+    "production_activation"
+  ],
+  "internal_use_only": true
+}

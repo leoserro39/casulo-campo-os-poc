@@ -1,0 +1,45 @@
+{
+  "vertical_id": "tic_si",
+  "domains": {
+    "applications": {
+      "owner": "TIC/SI",
+      "state_focus": "business criticality, owner, lifecycle, dependencies"
+    },
+    "services": {
+      "owner": "TIC/SI",
+      "state_focus": "SLA, support, availability, ownership"
+    },
+    "integrations": {
+      "owner": "TIC/SI",
+      "state_focus": "data flow, schedule, credentials, failure mode"
+    },
+    "data": {
+      "owner": "Data/Business",
+      "state_focus": "classification, source, retention, quality"
+    },
+    "access": {
+      "owner": "Security",
+      "state_focus": "profiles, privileges, evidence, review"
+    },
+    "incidents": {
+      "owner": "Support",
+      "state_focus": "impact, recurrence, root cause, action"
+    },
+    "changes": {
+      "owner": "Change management",
+      "state_focus": "approval, risk, rollback, window"
+    },
+    "suppliers": {
+      "owner": "Contracts/TIC",
+      "state_focus": "support contract, SLA, dependency risk"
+    },
+    "deployments": {
+      "owner": "Engineering",
+      "state_focus": "pipeline, rollback, logs, validation"
+    },
+    "repositories": {
+      "owner": "Engineering",
+      "state_focus": "tests, docs, branch policy, ownership"
+    }
+  }
+}

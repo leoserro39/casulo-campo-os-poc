@@ -1,0 +1,44 @@
+{
+  "vertical_id": "tic_si",
+  "faces": {
+    "state": [
+      "application",
+      "service",
+      "integration",
+      "data",
+      "access"
+    ],
+    "evidence": [
+      "repository",
+      "test_result",
+      "runbook",
+      "incident_record",
+      "change_record"
+    ],
+    "gate": [
+      "security_gate",
+      "production_gate",
+      "support_gate",
+      "rollback_gate"
+    ],
+    "delta": [
+      "current_state",
+      "target_state",
+      "gap",
+      "next_action"
+    ],
+    "decision": [
+      "blocked",
+      "check_required",
+      "ready_for_internal_review",
+      "approved_for_controlled_development"
+    ],
+    "development": [
+      "task",
+      "test",
+      "pull_request",
+      "validation",
+      "release_gate"
+    ]
+  }
+}

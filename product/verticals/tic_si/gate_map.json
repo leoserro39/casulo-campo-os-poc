@@ -1,0 +1,89 @@
+{
+  "vertical_id": "tic_si",
+  "default_gate_policy": "blocked_until_evidence_and_human_review",
+  "gates": {
+    "security_gate": {
+      "blocks": [
+        "production_activation"
+      ],
+      "requires": [
+        "access_review",
+        "risk_classification"
+      ]
+    },
+    "production_gate": {
+      "blocks": [
+        "production_activation"
+      ],
+      "requires": [
+        "tests",
+        "rollback_plan",
+        "owner"
+      ]
+    },
+    "support_gate": {
+      "blocks": [
+        "implementation_execution"
+      ],
+      "requires": [
+        "support_owner",
+        "runbook"
+      ]
+    },
+    "continuity_gate": {
+      "blocks": [
+        "production_activation"
+      ],
+      "requires": [
+        "backup_or_recovery_plan",
+        "criticality"
+      ]
+    },
+    "data_gate": {
+      "blocks": [
+        "client_facing_claim"
+      ],
+      "requires": [
+        "data_classification",
+        "source_evidence"
+      ]
+    },
+    "integration_gate": {
+      "blocks": [
+        "implementation_execution"
+      ],
+      "requires": [
+        "dependency_map",
+        "failure_mode"
+      ]
+    },
+    "change_gate": {
+      "blocks": [
+        "implementation_execution"
+      ],
+      "requires": [
+        "change_record",
+        "approval"
+      ]
+    },
+    "rollback_gate": {
+      "blocks": [
+        "production_activation"
+      ],
+      "requires": [
+        "rollback_plan",
+        "test_evidence"
+      ]
+    },
+    "software_review_gate": {
+      "blocks": [
+        "implementation_execution"
+      ],
+      "requires": [
+        "architecture_review",
+        "test_evidence",
+        "human_review"
+      ]
+    }
+  }
+}

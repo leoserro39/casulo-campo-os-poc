@@ -1,0 +1,17 @@
+{
+  "contract": "operational_cube.tic_si_operational_mesh.v1.4",
+  "vertical_id": "tic_si",
+  "purpose": "Build a computable TIC/SI mesh connecting systems, services, integrations, data, access, incidents, changes, repositories and deployments.",
+  "primary_script": "product/scripts/build_tic_si_operational_mesh.py",
+  "endpoints": [
+    "/api/tic-si/state-mesh",
+    "/api/tic-si/gate-matrix",
+    "/api/tic-si/review-package"
+  ],
+  "blocked_actions": [
+    "client_facing_claim",
+    "automatic_nomination",
+    "implementation_execution",
+    "production_activation"
+  ]
+}

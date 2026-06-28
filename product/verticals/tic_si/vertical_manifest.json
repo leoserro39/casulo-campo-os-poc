@@ -1,0 +1,48 @@
+{
+  "vertical_id": "tic_si",
+  "vertical_name": "TIC/SI Operational State Mesh",
+  "complexity": "medium_high",
+  "description": "Computable state mesh for applications, services, integrations, data, access, incidents, changes, deployments and suppliers.",
+  "domains": [
+    "applications",
+    "services",
+    "integrations",
+    "data",
+    "access",
+    "incidents",
+    "changes",
+    "suppliers",
+    "deployments",
+    "repositories"
+  ],
+  "entities": [
+    "application",
+    "service",
+    "integration",
+    "database",
+    "access_profile",
+    "incident",
+    "change_request",
+    "supplier",
+    "certificate",
+    "deployment",
+    "repository"
+  ],
+  "gates": [
+    "security_gate",
+    "production_gate",
+    "support_gate",
+    "continuity_gate",
+    "data_gate",
+    "integration_gate",
+    "change_gate",
+    "rollback_gate",
+    "software_review_gate"
+  ],
+  "blocked_by_default": [
+    "client_facing_claim",
+    "automatic_nomination",
+    "implementation_execution",
+    "production_activation"
+  ]
+}

@@ -1,0 +1,124 @@
+{
+  "contract_version": "operational_cube.tic_si_gate_matrix.v1.4",
+  "status": "PASS",
+  "vertical_id": "tic_si",
+  "gate_status_counts": {
+    "BLOCKED_MISSING_EVIDENCE": 1,
+    "BLOCKED_NO_ROLLBACK": 1,
+    "CHECK_REQUIRED": 4,
+    "BLOCKED_ACCESS_REVIEW_REQUIRED": 1,
+    "BLOCKED_CHANGE_RECORD_REQUIRED": 1
+  },
+  "gates": [
+    {
+      "gate": "security_gate",
+      "status": "BLOCKED_MISSING_EVIDENCE",
+      "reason": "admin access review is missing",
+      "blocks": [
+        "production_activation",
+        "client_facing_claim"
+      ],
+      "required_evidence": [
+        "access review",
+        "risk classification"
+      ]
+    },
+    {
+      "gate": "production_gate",
+      "status": "BLOCKED_NO_ROLLBACK",
+      "reason": "portal deployment has no rollback plan",
+      "blocks": [
+        "production_activation"
+      ],
+      "required_evidence": [
+        "rollback plan",
+        "test evidence",
+        "release owner"
+      ]
+    },
+    {
+      "gate": "support_gate",
+      "status": "CHECK_REQUIRED",
+      "reason": "support runbook and owner must be confirmed",
+      "blocks": [
+        "implementation_execution"
+      ],
+      "required_evidence": [
+        "runbook",
+        "support owner"
+      ]
+    },
+    {
+      "gate": "continuity_gate",
+      "status": "CHECK_REQUIRED",
+      "reason": "recovery expectations are not defined",
+      "blocks": [
+        "production_activation"
+      ],
+      "required_evidence": [
+        "recovery plan",
+        "criticality review"
+      ]
+    },
+    {
+      "gate": "data_gate",
+      "status": "BLOCKED_ACCESS_REVIEW_REQUIRED",
+      "reason": "customer and finance data need access and classification review",
+      "blocks": [
+        "client_facing_claim",
+        "production_activation"
+      ],
+      "required_evidence": [
+        "data classification",
+        "access review"
+      ]
+    },
+    {
+      "gate": "integration_gate",
+      "status": "CHECK_REQUIRED",
+      "reason": "ERP failure mode and credential handling are not documented",
+      "blocks": [
+        "implementation_execution"
+      ],
+      "required_evidence": [
+        "integration map",
+        "failure mode",
+        "credential handling"
+      ]
+    },
+    {
+      "gate": "change_gate",
+      "status": "BLOCKED_CHANGE_RECORD_REQUIRED",
+      "reason": "release candidate change record is missing",
+      "blocks": [
+        "implementation_execution"
+      ],
+      "required_evidence": [
+        "change record",
+        "approval trail"
+      ]
+    },
+    {
+      "gate": "software_review_gate",
+      "status": "CHECK_REQUIRED",
+      "reason": "repositories need tests, docs and ownership review",
+      "blocks": [
+        "implementation_execution",
+        "production_activation"
+      ],
+      "required_evidence": [
+        "test results",
+        "architecture review",
+        "repository ownership"
+      ]
+    }
+  ],
+  "decision": "TIC_SI_INTERNAL_REVIEW_REQUIRED",
+  "blocked_actions": [
+    "client_facing_claim",
+    "automatic_nomination",
+    "implementation_execution",
+    "production_activation"
+  ],
+  "internal_use_only": true
+}

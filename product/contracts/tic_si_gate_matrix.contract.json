@@ -1,0 +1,11 @@
+{
+  "contract": "operational_cube.tic_si_gate_matrix.v1.4",
+  "purpose": "Evaluate technical-operational gates before development, implementation or production use.",
+  "decision_states": [
+    "BLOCKED_NO_OWNER",
+    "BLOCKED_MISSING_EVIDENCE",
+    "CHECK_REQUIRED",
+    "READY_FOR_INTERNAL_REVIEW",
+    "APPROVED_FOR_CONTROLLED_DEVELOPMENT"
+  ]
+}
