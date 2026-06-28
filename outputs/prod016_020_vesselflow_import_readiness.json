@@ -1,0 +1,18 @@
+{
+  "status": "PASS",
+  "case_id": "vesselflow_demo_controlled_001",
+  "decision": "WAITING_FOR_REAL_DATA_OR_HUMAN_REVIEW",
+  "risk_level": "HIGH",
+  "blocked_actions": [
+    "automatic_nomination",
+    "client_facing_claim",
+    "implementation_execution",
+    "production_activation"
+  ],
+  "next_required_user_input": [
+    "real/anonymized VesselFlow workbook or dataset",
+    "expected nomination flow",
+    "qualification rules",
+    "known blocking rules"
+  ]
+}

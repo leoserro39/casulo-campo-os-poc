@@ -1,0 +1,21 @@
+{
+  "contract": "operational_cube.vesselflow_state_definition_runner.v0.6",
+  "purpose": "Transform VesselFlow import inputs into controlled operational state, gates, risk summary and next deltas.",
+  "default_decision": "WAITING_FOR_REAL_DATA_OR_HUMAN_REVIEW",
+  "allowed_outputs": [
+    "state_snapshot",
+    "domain_summary",
+    "evidence_manifest",
+    "gate_matrix",
+    "risk_fragility_summary",
+    "delta_recommendations",
+    "cube_state",
+    "internal_report"
+  ],
+  "blocked_actions": [
+    "automatic_nomination",
+    "client_facing_claim",
+    "implementation_execution",
+    "production_activation"
+  ]
+}

@@ -39,8 +39,10 @@ class ProductRuntimeHandler(BaseHTTPRequestHandler):
             return self.send_json({"status": "NOT_FOUND", "path": str(path)}, status=404)
         body = path.read_bytes()
         content_type = mimetypes.guess_type(str(path))[0] or "application/octet-stream"
+        if content_type.startswith("text/") or content_type in ["application/javascript", "text/css"]:
+            content_type += "; charset=utf-8"
         self.send_response(200)
-        self.send_header("Content-Type", content_type + ("; charset=utf-8" if content_type.startswith("text/") or content_type == "application/javascript" else ""))
+        self.send_header("Content-Type", content_type)
         self.send_header("Content-Length", str(len(body)))
         self.end_headers()
         self.wfile.write(body)
@@ -81,6 +83,9 @@ class ProductRuntimeHandler(BaseHTTPRequestHandler):
             if clean == "api/vesselflow/import-manifest":
                 return self.send_json(self.service.vesselflow_import_manifest())
 
+            if clean == "api/vesselflow/state-definition":
+                return self.send_json(self.service.vesselflow_state_definition())
+
             if clean == "api/reports":
                 return self.send_json(self.service.reports())
 
@@ -96,6 +101,7 @@ class ProductRuntimeHandler(BaseHTTPRequestHandler):
                     "/api/verticals/{vertical_id}",
                     "/api/verticals/{vertical_id}/state-request",
                     "/api/vesselflow/import-manifest",
+                    "/api/vesselflow/state-definition",
                     "/api/reports",
                 ],
             }, status=404)
@@ -112,7 +118,7 @@ def main() -> int:
     server = HTTPServer((args.host, args.port), ProductRuntimeHandler)
     print(f"Operational Cube product runtime API/UI running at http://{args.host}:{args.port}")
     print("Open: /ui")
-    print("Try: /api/health, /api/verticals, /api/vesselflow/import-manifest")
+    print("Try: /api/health, /api/verticals, /api/vesselflow/state-definition")
     try:
         server.serve_forever()
     except KeyboardInterrupt:

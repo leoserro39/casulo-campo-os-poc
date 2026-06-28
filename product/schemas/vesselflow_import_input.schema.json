@@ -1,0 +1,35 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "VesselFlow Import Input",
+  "type": "object",
+  "required": [
+    "case_id",
+    "dataset_or_workbook",
+    "expected_nomination_flow",
+    "qualification_rules",
+    "known_blocking_rules"
+  ],
+  "properties": {
+    "case_id": {
+      "type": "string"
+    },
+    "dataset_or_workbook": {
+      "type": "object"
+    },
+    "expected_nomination_flow": {
+      "type": "array"
+    },
+    "qualification_rules": {
+      "type": "array"
+    },
+    "known_blocking_rules": {
+      "type": "array"
+    },
+    "optional_inputs": {
+      "type": "object"
+    },
+    "human_notes": {
+      "type": "string"
+    }
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "task": "PROD-016..020",
+  "status": "PASS",
+  "phase": "VesselFlow Data Import and State Definition Runner",
+  "endpoint": "/api/vesselflow/state-definition",
+  "mode": "sample_placeholder_until_real_data",
+  "next_recommended_bundle": "PROD-021..025 UI State Definition Panel and Report Export"
+}

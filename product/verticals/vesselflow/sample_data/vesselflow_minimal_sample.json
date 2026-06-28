@@ -1,0 +1,24 @@
+{
+  "sample": true,
+  "vessel": {
+    "name": "SAMPLE VESSEL",
+    "imo": "0000000",
+    "state": "CONTROLLED_SAMPLE"
+  },
+  "pvq_q88": {
+    "status": "NOT_REAL_DATA",
+    "required_fields_known": false
+  },
+  "documents": {
+    "status": "NOT_PROVIDED",
+    "certificates": []
+  },
+  "contracts": {
+    "status": "NOT_PROVIDED",
+    "restrictions": []
+  },
+  "nomination": {
+    "status": "NOT_AUTHORIZED",
+    "reason": "sample data only"
+  }
+}

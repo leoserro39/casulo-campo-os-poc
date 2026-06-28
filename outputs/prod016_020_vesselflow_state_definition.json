@@ -1,0 +1,243 @@
+{
+  "contract_version": "operational_cube.vesselflow_state_definition.v0.6",
+  "case_id": "vesselflow_demo_controlled_001",
+  "status": "CONTROLLED_STATE_DEFINED",
+  "vertical": {
+    "vertical_id": "vesselflow",
+    "name": "VesselFlow / Nomeacao Operacional Maritima",
+    "complexity": "complex"
+  },
+  "state_snapshot": {
+    "data_mode": "sample_placeholder",
+    "domains": [
+      "navio",
+      "master",
+      "pvq_q88",
+      "documentos",
+      "certificados",
+      "contratos",
+      "carga",
+      "plataforma",
+      "lifter",
+      "analista_un",
+      "qualificacao",
+      "sincronizacao",
+      "nomeacao",
+      "pendencias",
+      "gates"
+    ],
+    "domain_count": 15,
+    "entities": [
+      "vessel",
+      "master",
+      "pvq",
+      "q88",
+      "certificate",
+      "contract",
+      "cargo",
+      "platform",
+      "lifter",
+      "nomination",
+      "validation_rule",
+      "decision_gate"
+    ],
+    "entity_count": 12,
+    "decision": "WAITING_FOR_REAL_DATA_OR_HUMAN_REVIEW"
+  },
+  "domain_map": {
+    "domains": {
+      "navio": [
+        "identificacao",
+        "dimensoes",
+        "capacidade",
+        "status_operacional"
+      ],
+      "master": [
+        "responsavel",
+        "perfil",
+        "acao_pendente"
+      ],
+      "pvq_q88": [
+        "campos",
+        "completude",
+        "validacao"
+      ],
+      "documentos": [
+        "certificados",
+        "validade",
+        "pendencias"
+      ],
+      "contratos": [
+        "partes",
+        "escopo",
+        "restricoes"
+      ],
+      "carga": [
+        "tipo",
+        "volume",
+        "janela"
+      ],
+      "plataforma": [
+        "compatibilidade",
+        "restricao",
+        "sync"
+      ],
+      "lifter": [
+        "solicitacao",
+        "preferencia",
+        "sincronizacao"
+      ],
+      "analista_un": [
+        "validacao",
+        "decisao",
+        "observacao"
+      ],
+      "qualificacao": [
+        "criterios",
+        "status",
+        "bloqueios"
+      ],
+      "nomeacao": [
+        "candidato",
+        "gate",
+        "decisao_final"
+      ],
+      "gates": [
+        "validade",
+        "completude",
+        "contrato",
+        "sincronizacao",
+        "humano"
+      ]
+    }
+  },
+  "evidence_manifest": [
+    {
+      "evidence": "dataset_or_workbook",
+      "status": "SAMPLE_PLACEHOLDER",
+      "available": true
+    },
+    {
+      "evidence": "expected_nomination_flow",
+      "status": "AVAILABLE",
+      "available": true
+    },
+    {
+      "evidence": "qualification_rules",
+      "status": "AVAILABLE",
+      "available": true
+    },
+    {
+      "evidence": "known_blocking_rules",
+      "status": "AVAILABLE",
+      "available": true
+    },
+    {
+      "evidence": "contract_records",
+      "status": "NOT_PROVIDED",
+      "available": false
+    },
+    {
+      "evidence": "pvq_q88_extract",
+      "status": "NOT_PROVIDED",
+      "available": false
+    },
+    {
+      "evidence": "certificate_list",
+      "status": "NOT_PROVIDED",
+      "available": false
+    },
+    {
+      "evidence": "cargo_platform_matrix",
+      "status": "NOT_PROVIDED",
+      "available": false
+    },
+    {
+      "evidence": "decision_logs",
+      "status": "NOT_PROVIDED",
+      "available": false
+    },
+    {
+      "evidence": "audit_reports",
+      "status": "NOT_PROVIDED",
+      "available": false
+    }
+  ],
+  "gate_matrix": [
+    {
+      "gate": "pvq_completeness",
+      "status": "BLOCKED_SAMPLE_DATA"
+    },
+    {
+      "gate": "document_validity",
+      "status": "BLOCKED_SAMPLE_DATA"
+    },
+    {
+      "gate": "contract_alignment",
+      "status": "BLOCKED_SAMPLE_DATA"
+    },
+    {
+      "gate": "qualification_gate",
+      "status": "BLOCKED_SAMPLE_DATA"
+    },
+    {
+      "gate": "sync_gate",
+      "status": "BLOCKED_SAMPLE_DATA"
+    },
+    {
+      "gate": "nomination_gate",
+      "status": "BLOCKED_SAMPLE_DATA"
+    },
+    {
+      "gate": "human_review",
+      "status": "REQUIRED"
+    }
+  ],
+  "risk_fragility_summary": {
+    "risk_level": "HIGH",
+    "reason": "sample data or missing real VesselFlow evidence",
+    "missing_required": []
+  },
+  "delta_recommendations": [
+    "Provide real/anonymized VesselFlow workbook or dataset.",
+    "Provide expected nomination flow if different from seed.",
+    "Provide qualification rules and known blocking rules.",
+    "Run human review before any external claim or implementation."
+  ],
+  "cube_state": {
+    "principle": "Every cube move must map to evidence, gate, delta or state change.",
+    "faces": {
+      "objetivo": "Define objective and desired state.",
+      "evidencias": "Evidence manifest, source quality and missing evidence.",
+      "risco": "H_pre, H_post, fragility, contradictions.",
+      "tarefas": "Actionable deltas and review tasks.",
+      "deltas": "Delta_L and expected reduction of fragility.",
+      "gates": "Allowed/blocked actions and human review status."
+    },
+    "blocked_actions": [
+      "automatic_nomination",
+      "client_facing_claim",
+      "implementation_execution",
+      "production_activation"
+    ]
+  },
+  "nomination_flow": [
+    "load_master_workbook",
+    "extract_vessel_state",
+    "validate_pvq_q88",
+    "validate_documents_certificates",
+    "map_contract_constraints",
+    "evaluate_vessel_platform_sync",
+    "run_qualification_gate",
+    "run_nomination_gate",
+    "require_human_review",
+    "produce_nomination_state_report"
+  ],
+  "blocked_actions": [
+    "automatic_nomination",
+    "client_facing_claim",
+    "implementation_execution",
+    "production_activation"
+  ],
+  "default_policy": "No automatic nomination. Controlled state definition only."
+}

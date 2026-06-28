@@ -1,0 +1,23 @@
+{
+  "contract": "operational_cube.vesselflow_data_import_runner.v0.6",
+  "purpose": "Create a controlled VesselFlow data import area and state definition runner.",
+  "mode": "local_demo_controlled_import",
+  "inputs": [
+    "product/verticals/vesselflow/import_inputs/vesselflow_import_input.json",
+    "optional user dataset/workbook reference",
+    "qualification rules",
+    "known blocking rules",
+    "expected nomination flow"
+  ],
+  "outputs": [
+    "outputs/prod016_020_vesselflow_import_readiness.json",
+    "outputs/prod016_020_vesselflow_state_definition.json",
+    "outputs/prod016_020_vesselflow_state_definition.md"
+  ],
+  "safety": [
+    "no automatic nomination",
+    "no client-facing claim",
+    "no implementation execution",
+    "no production activation"
+  ]
+}

@@ -49,6 +49,8 @@ class ProductRuntimeService:
             "vertical_runtime_adapter": exists(self.product_root / "scripts" / "build_vertical_state_request.py"),
             "vesselflow_state_request": exists(self.outputs_root / "prod_vert004_006_vesselflow_state_request.json"),
             "vesselflow_import_manifest": exists(self.outputs_root / "prod_vert004_006_vesselflow_import_manifest.json"),
+            "product_ui": exists(self.product_root / "ui" / "index.html"),
+            "vesselflow_state_definition": exists(self.outputs_root / "prod016_020_vesselflow_state_definition.json"),
         }
         return {
             "status": "PASS" if all(checks.values()) else "INCOMPLETE",
@@ -56,7 +58,7 @@ class ProductRuntimeService:
             "runtime_mode": RUNTIME_MODE,
             "checks": checks,
             "blocked_actions": BLOCKED_ACTIONS,
-            "next_recommended_step": "Build UI shell and case workspace after local API validation.",
+            "next_recommended_step": "Provide real/anonymized VesselFlow data and run controlled state definition.",
         }
 
     def verticals(self) -> Dict[str, Any]:
@@ -118,11 +120,28 @@ class ProductRuntimeService:
             "markdown_preview": read_text(md_path)[:4000] if md_path.exists() else "",
         }
 
+    def vesselflow_state_definition(self) -> Dict[str, Any]:
+        json_path = self.outputs_root / "prod016_020_vesselflow_state_definition.json"
+        md_path = self.outputs_root / "prod016_020_vesselflow_state_definition.md"
+        readiness_path = self.outputs_root / "prod016_020_vesselflow_import_readiness.json"
+        if not json_path.exists():
+            return {"status": "MISSING", "error": "VesselFlow state definition has not been generated yet."}
+        return {
+            "status": "PASS",
+            "state_definition": read_json(json_path),
+            "readiness": read_json(readiness_path) if readiness_path.exists() else {},
+            "markdown_path": str(md_path),
+            "markdown_preview": read_text(md_path)[:4000] if md_path.exists() else "",
+        }
+
     def reports(self) -> Dict[str, Any]:
         patterns = [
             "prod001_005_product_foundation_report.md",
             "prod_vert001_003_vertical_case_pack_report.md",
             "prod_vert004_006_vertical_runtime_adapter_report.md",
+            "prod006_010_product_runtime_api_report.md",
+            "prod011_015_product_ui_shell_report.md",
+            "prod016_020_vesselflow_state_definition.md",
             "wb020_poc_completion_report.md",
         ]
         reports = []

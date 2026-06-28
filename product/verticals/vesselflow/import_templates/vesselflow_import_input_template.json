@@ -1,0 +1,41 @@
+{
+  "case_id": "vesselflow_demo_controlled_001",
+  "dataset_or_workbook": {
+    "status": "SAMPLE_PLACEHOLDER",
+    "path_or_reference": "product/verticals/vesselflow/sample_data/vesselflow_minimal_sample.json",
+    "description": "Controlled sample until real/anonymized VesselFlow workbook is provided."
+  },
+  "expected_nomination_flow": [
+    "load_master_workbook",
+    "extract_vessel_state",
+    "validate_pvq_q88",
+    "validate_documents_certificates",
+    "map_contract_constraints",
+    "evaluate_vessel_platform_sync",
+    "run_qualification_gate",
+    "run_nomination_gate",
+    "require_human_review",
+    "produce_nomination_state_report"
+  ],
+  "qualification_rules": [
+    "PVQ/Q88 must have required fields available or explicitly marked missing.",
+    "Certificates/documents must be present and validity must be checkable.",
+    "Contract constraints must not conflict with vessel/platform/cargo requirements.",
+    "Human review is required before any external use."
+  ],
+  "known_blocking_rules": [
+    "Do not execute nomination automatically.",
+    "Do not create client-facing claim without human approval.",
+    "Do not authorize implementation or production activation from sample data.",
+    "Block when required evidence is missing."
+  ],
+  "optional_inputs": {
+    "contract_records": [],
+    "pvq_q88_extract": {},
+    "certificate_list": [],
+    "cargo_platform_matrix": [],
+    "decision_logs": [],
+    "audit_reports": []
+  },
+  "human_notes": "Replace this sample with real/anonymized VesselFlow data when available."
+}
