@@ -1,0 +1,10 @@
+{
+  "contract": "operational_cube.local_demo_runtime.v0.4",
+  "purpose": "Allow local product demo without cloud, database, auth or production dependencies.",
+  "mode": "local_only",
+  "blocked_by_default": [
+    "external_client_review",
+    "implementation_execution",
+    "production_activation"
+  ]
+}

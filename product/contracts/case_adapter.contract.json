@@ -1,0 +1,11 @@
+{
+  "contract": "operational_cube.case_adapter.v0.4",
+  "purpose": "Read product outputs and expose them as case/runtime summaries.",
+  "sources": [
+    "product/verticals",
+    "outputs/prod_vert004_006_*_state_request.json",
+    "outputs/prod_vert004_006_vesselflow_import_manifest.json",
+    "outputs/prod_vert004_006_vertical_runtime_adapter_result.json"
+  ],
+  "case_policy": "Vertical state requests are treated as controlled demo cases until real data is imported."
+}

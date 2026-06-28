@@ -1,0 +1,21 @@
+{
+  "contract": "operational_cube.product_runtime_api.v0.4",
+  "purpose": "Expose local product runtime endpoints over existing vertical packs and generated state requests.",
+  "runtime": "stdlib_http_server",
+  "default_port": 8097,
+  "endpoints": [
+    "GET /api/health",
+    "GET /api/verticals",
+    "GET /api/verticals/{vertical_id}",
+    "GET /api/verticals/{vertical_id}/state-request",
+    "GET /api/vesselflow/import-manifest",
+    "GET /api/product/status",
+    "GET /api/reports"
+  ],
+  "safety": [
+    "No implementation authorization",
+    "No client-facing claim",
+    "No automatic nomination",
+    "No production activation"
+  ]
+}

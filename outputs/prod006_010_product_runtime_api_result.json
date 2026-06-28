@@ -1,0 +1,18 @@
+{
+  "task": "PROD-006..010",
+  "status": "PASS",
+  "phase": "Product Runtime API and Case Adapter",
+  "product_direction": "Cubo Operacional / Operational Cube",
+  "runtime_mode": "local_demo",
+  "port": 8097,
+  "endpoints": [
+    "/api/health",
+    "/api/product/status",
+    "/api/verticals",
+    "/api/verticals/{vertical_id}",
+    "/api/verticals/{vertical_id}/state-request",
+    "/api/vesselflow/import-manifest",
+    "/api/reports"
+  ],
+  "next_recommended_bundle": "PROD-011..015 Product UI Shell and Case Workspace"
+}

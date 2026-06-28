@@ -1,0 +1,522 @@
+{
+  "health": {
+    "status": "PASS",
+    "product_direction": "Cubo Operacional / Operational Cube",
+    "runtime_mode": "local_demo",
+    "verticals": [
+      "small_service",
+      "legal_office",
+      "vesselflow"
+    ],
+    "blocked_actions": [
+      "client_facing_claim",
+      "automatic_nomination",
+      "implementation_execution",
+      "production_activation"
+    ]
+  },
+  "product_status": {
+    "status": "PASS",
+    "product_direction": "Cubo Operacional / Operational Cube",
+    "runtime_mode": "local_demo",
+    "checks": {
+      "verticals_dir": true,
+      "vertical_runtime_adapter": true,
+      "vesselflow_state_request": true,
+      "vesselflow_import_manifest": true
+    },
+    "blocked_actions": [
+      "client_facing_claim",
+      "automatic_nomination",
+      "implementation_execution",
+      "production_activation"
+    ],
+    "next_recommended_step": "Build UI shell and case workspace after local API validation."
+  },
+  "verticals": {
+    "status": "PASS",
+    "verticals": [
+      {
+        "vertical_id": "small_service",
+        "vertical_name": "Servico Local / Pequena Operacao",
+        "complexity": "small",
+        "domains_count": 8,
+        "entities_count": 8,
+        "gates_count": 4,
+        "blocked_by_default": [
+          "client_facing_claim",
+          "implementation_execution",
+          "production_activation"
+        ],
+        "domain_keys": [
+          "entrada",
+          "cliente",
+          "orcamento",
+          "execucao",
+          "agenda",
+          "pendencias",
+          "financeiro",
+          "retrabalho"
+        ],
+        "gate_policy": "block external/implementation use until human approval",
+        "cube_faces": [
+          "objetivo",
+          "evidencias",
+          "risco",
+          "tarefas",
+          "deltas",
+          "gates"
+        ]
+      },
+      {
+        "vertical_id": "legal_office",
+        "vertical_name": "Escritorio Juridico / Operacao Documental",
+        "complexity": "medium",
+        "domains_count": 9,
+        "entities_count": 8,
+        "gates_count": 4,
+        "blocked_by_default": [
+          "legal_opinion",
+          "client_facing_claim",
+          "implementation_execution",
+          "production_activation"
+        ],
+        "domain_keys": [
+          "captacao",
+          "triagem",
+          "cliente",
+          "caso",
+          "documentos",
+          "prazos",
+          "atendimento",
+          "honorarios",
+          "risco"
+        ],
+        "gate_policy": "block external/implementation use until human approval",
+        "cube_faces": [
+          "objetivo",
+          "evidencias",
+          "risco",
+          "tarefas",
+          "deltas",
+          "gates"
+        ]
+      },
+      {
+        "vertical_id": "vesselflow",
+        "vertical_name": "VesselFlow / Nomeacao Operacional Maritima",
+        "complexity": "complex",
+        "domains_count": 15,
+        "entities_count": 12,
+        "gates_count": 7,
+        "blocked_by_default": [
+          "client_facing_claim",
+          "nomination_execution",
+          "implementation_execution",
+          "production_activation"
+        ],
+        "domain_keys": [
+          "navio",
+          "master",
+          "pvq_q88",
+          "documentos",
+          "contratos",
+          "carga",
+          "plataforma",
+          "lifter",
+          "analista_un",
+          "qualificacao",
+          "nomeacao",
+          "gates"
+        ],
+        "gate_policy": "block external/implementation use until human approval",
+        "cube_faces": [
+          "objetivo",
+          "evidencias",
+          "risco",
+          "tarefas",
+          "deltas",
+          "gates"
+        ]
+      }
+    ]
+  },
+  "vesselflow": {
+    "status": "PASS",
+    "vertical": {
+      "vertical_id": "vesselflow",
+      "vertical_name": "VesselFlow / Nomeacao Operacional Maritima",
+      "complexity": "complex",
+      "domains_count": 15,
+      "entities_count": 12,
+      "gates_count": 7,
+      "blocked_by_default": [
+        "client_facing_claim",
+        "nomination_execution",
+        "implementation_execution",
+        "production_activation"
+      ],
+      "domain_keys": [
+        "navio",
+        "master",
+        "pvq_q88",
+        "documentos",
+        "contratos",
+        "carga",
+        "plataforma",
+        "lifter",
+        "analista_un",
+        "qualificacao",
+        "nomeacao",
+        "gates"
+      ],
+      "gate_policy": "block external/implementation use until human approval",
+      "cube_faces": [
+        "objetivo",
+        "evidencias",
+        "risco",
+        "tarefas",
+        "deltas",
+        "gates"
+      ]
+    }
+  },
+  "vesselflow_state_request": {
+    "status": "PASS",
+    "vertical_id": "vesselflow",
+    "state_request": {
+      "contract_version": "operational_cube.vertical_state_request.v0.3",
+      "vertical_id": "vesselflow",
+      "vertical_name": "VesselFlow / Nomeacao Operacional Maritima",
+      "complexity": "complex",
+      "objective": "Demonstrar capacidade de definir estado operacional de navio, PVQ/Q88, contratos, qualificacao, sincronizacao e nomeacao.",
+      "target_user": "Operador, consultor tecnico, analista UN, gestor de operacao maritima ou equipe de qualificacao.",
+      "domains": [
+        "navio",
+        "master",
+        "pvq_q88",
+        "documentos",
+        "certificados",
+        "contratos",
+        "carga",
+        "plataforma",
+        "lifter",
+        "analista_un",
+        "qualificacao",
+        "sincronizacao",
+        "nomeacao",
+        "pendencias",
+        "gates"
+      ],
+      "domain_map": {
+        "domains": {
+          "navio": [
+            "identificacao",
+            "dimensoes",
+            "capacidade",
+            "status_operacional"
+          ],
+          "master": [
+            "responsavel",
+            "perfil",
+            "acao_pendente"
+          ],
+          "pvq_q88": [
+            "campos",
+            "completude",
+            "validacao"
+          ],
+          "documentos": [
+            "certificados",
+            "validade",
+            "pendencias"
+          ],
+          "contratos": [
+            "partes",
+            "escopo",
+            "restricoes"
+          ],
+          "carga": [
+            "tipo",
+            "volume",
+            "janela"
+          ],
+          "plataforma": [
+            "compatibilidade",
+            "restricao",
+            "sync"
+          ],
+          "lifter": [
+            "solicitacao",
+            "preferencia",
+            "sincronizacao"
+          ],
+          "analista_un": [
+            "validacao",
+            "decisao",
+            "observacao"
+          ],
+          "qualificacao": [
+            "criterios",
+            "status",
+            "bloqueios"
+          ],
+          "nomeacao": [
+            "candidato",
+            "gate",
+            "decisao_final"
+          ],
+          "gates": [
+            "validade",
+            "completude",
+            "contrato",
+            "sincronizacao",
+            "humano"
+          ]
+        }
+      },
+      "entities": [
+        "vessel",
+        "master",
+        "pvq",
+        "q88",
+        "certificate",
+        "contract",
+        "cargo",
+        "platform",
+        "lifter",
+        "nomination",
+        "validation_rule",
+        "decision_gate"
+      ],
+      "entity_map": {
+        "vertical_id": "vesselflow",
+        "entities": [
+          {
+            "name": "vessel",
+            "role": "operational_entity"
+          },
+          {
+            "name": "master",
+            "role": "operational_entity"
+          },
+          {
+            "name": "pvq",
+            "role": "operational_entity"
+          },
+          {
+            "name": "q88",
+            "role": "operational_entity"
+          },
+          {
+            "name": "certificate",
+            "role": "operational_entity"
+          },
+          {
+            "name": "contract",
+            "role": "operational_entity"
+          },
+          {
+            "name": "cargo",
+            "role": "operational_entity"
+          },
+          {
+            "name": "platform",
+            "role": "operational_entity"
+          },
+          {
+            "name": "lifter",
+            "role": "operational_entity"
+          },
+          {
+            "name": "nomination",
+            "role": "operational_entity"
+          },
+          {
+            "name": "validation_rule",
+            "role": "operational_entity"
+          },
+          {
+            "name": "decision_gate",
+            "role": "operational_entity"
+          }
+        ]
+      },
+      "evidence_types": [
+        "master_workbook",
+        "pvq_q88",
+        "contract_record",
+        "certificate",
+        "nomination_matrix",
+        "decision_log",
+        "audit_report"
+      ],
+      "gates": [
+        "pvq_completeness",
+        "document_validity",
+        "contract_alignment",
+        "qualification_gate",
+        "sync_gate",
+        "nomination_gate",
+        "human_review"
+      ],
+      "gate_map": {
+        "vertical_id": "vesselflow",
+        "default_gate_policy": "block external/implementation use until human approval",
+        "gates": [
+          {
+            "gate": "pvq_completeness",
+            "default": "CHECK_REQUIRED"
+          },
+          {
+            "gate": "document_validity",
+            "default": "CHECK_REQUIRED"
+          },
+          {
+            "gate": "contract_alignment",
+            "default": "CHECK_REQUIRED"
+          },
+          {
+            "gate": "qualification_gate",
+            "default": "CHECK_REQUIRED"
+          },
+          {
+            "gate": "sync_gate",
+            "default": "CHECK_REQUIRED"
+          },
+          {
+            "gate": "nomination_gate",
+            "default": "CHECK_REQUIRED"
+          },
+          {
+            "gate": "human_review",
+            "default": "CHECK_REQUIRED"
+          }
+        ],
+        "blocked_by_default": [
+          "client_facing_claim",
+          "nomination_execution",
+          "implementation_execution",
+          "production_activation"
+        ]
+      },
+      "cube": {
+        "vertical_id": "vesselflow",
+        "cube_metaphor": "operational_cube_solver",
+        "principle": "Every cube move must map to evidence, gate, delta or state change.",
+        "faces": {
+          "objetivo": "Define objective and desired state.",
+          "evidencias": "Evidence manifest, source quality and missing evidence.",
+          "risco": "H_pre, H_post, fragility, contradictions.",
+          "tarefas": "Actionable deltas and review tasks.",
+          "deltas": "Delta_L and expected reduction of fragility.",
+          "gates": "Allowed/blocked actions and human review status."
+        }
+      },
+      "sample_input": "# VesselFlow State Definition Prompt\n\nUsando os dados do VesselFlow, defina o estado operacional atual do sistema, dos contratos existentes e do processo de nomeacao.\n\nIdentifique:\n\n1. dominios operacionais;\n2. entidades;\n3. evidencias disponiveis;\n4. lacunas;\n5. contratos e restricoes;\n6. gates de qualificacao, sincronizacao e nomeacao;\n7. riscos e fragilidade;\n8. deltas necessarios;\n9. fluxo computavel de nomeacao;\n10. Cube/Cupula state;\n11. relatorio final.\n\nO retorno deve incluir State Snapshot, Operational Graph, Domain Map, Contract Map, Nomination Flow, Gate Matrix, Evidence Manifest, Risk/Fragility Index, Delta Recommendations, Cube State, Replay e Report.",
+      "expected_outputs": [
+        "State Snapshot",
+        "Operational Graph",
+        "Domain Map",
+        "Evidence Manifest",
+        "Gate Matrix",
+        "Risk/Fragility Summary",
+        "Delta Recommendations",
+        "Cube/Cupula State",
+        "Cockpit Replay",
+        "Micrograph Timeline",
+        "Internal Review Report"
+      ],
+      "blocked_actions": [
+        "client_facing_claim",
+        "nomination_execution",
+        "implementation_execution",
+        "production_activation"
+      ],
+      "instruction": "Define the operational state for this vertical. Produce state, evidence, gates, deltas, Cube/Cupula state, replay, timeline and internal report. Do not authorize external use or implementation."
+    },
+    "markdown_path": "outputs/prod_vert004_006_vesselflow_state_request.md",
+    "markdown_preview": "# Vertical State Request — VesselFlow / Nomeacao Operacional Maritima\n\n- Vertical ID: `vesselflow`\n- Complexity: `complex`\n- Target user: Operador, consultor tecnico, analista UN, gestor de operacao maritima ou equipe de qualificacao.\n\n## Objective\n\nDemonstrar capacidade de definir estado operacional de navio, PVQ/Q88, contratos, qualificacao, sincronizacao e nomeacao.\n\n## Domains\n- `navio`\n- `master`\n- `pvq_q88`\n- `documentos`\n- `certificados`\n- `contratos`\n- `carga`\n- `plataforma`\n- `lifter`\n- `analista_un`\n- `qualificacao`\n- `sincronizacao`\n- `nomeacao`\n- `pendencias`\n- `gates`\n\n## Entities\n- `vessel`\n- `master`\n- `pvq`\n- `q88`\n- `certificate`\n- `contract`\n- `cargo`\n- `platform`\n- `lifter`\n- `nomination`\n- `validation_rule`\n- `decision_gate`\n\n## Evidence Types\n- `master_workbook`\n- `pvq_q88`\n- `contract_record`\n- `certificate`\n- `nomination_matrix`\n- `decision_log`\n- `audit_report`\n\n## Gates\n- `pvq_completeness`\n- `document_validity`\n- `contract_alignment`\n- `qualification_gate`\n- `sync_gate`\n- `nomination_gate`\n- `human_review`\n\n## Cube Faces\n- `objetivo`: Define objective and desired state.\n- `evidencias`: Evidence manifest, source quality and missing evidence.\n- `risco`: H_pre, H_post, fragility, contradictions.\n- `tarefas`: Actionable deltas and review tasks.\n- `deltas`: Delta_L and expected reduction of fragility.\n- `gates`: Allowed/blocked actions and human review status.\n\n## Expected Outputs\n- State Snapshot\n- Operational Graph\n- Domain Map\n- Evidence Manifest\n- Gate Matrix\n- Risk/Fragility Summary\n- Delta Recommendations\n- Cube/Cupula State\n- Cockpit Replay\n- Micrograph Timeline\n- Internal Review Report\n\n## Blocked Actions\n- `client_facing_claim`\n- `nomination_execution`\n- `implementation_execution`\n- `production_activation`\n\n## Sample Input\n\n# VesselFlow State Definition Prompt\n\nUsando os dados do VesselFlow, defina o estado operacional atual do sistema, dos contratos existentes e do processo de nomeacao.\n\nIdentifique:\n\n1. dominios operacionais;\n2. entidades;\n3. evidencias disponiveis;\n4. lacunas;\n5. contratos e restricoes;\n6. gates de qualificacao, sincronizacao e nomeacao;\n7. riscos e fragilidade;\n8. deltas necessarios;\n9. fluxo computavel de nomeacao;\n10. Cube/Cupula state;\n11. relatorio final.\n\nO retorno deve incluir State Snapshot, Operational Graph, Domain Map, Contract Map, Nomination Flow, Gate Matrix, Evidence Manifest, Risk/Fragility Index, Delta Recommendations, Cube State, Replay e Report.\n\n## Product Instruction\n\nDefine the operational state for this vertical. Produce state, evidence, gates, deltas, Cube/Cupula state, replay, timeline and internal report. Do not authorize external use or implementation.\n"
+  },
+  "vesselflow_import_manifest": {
+    "status": "PASS",
+    "manifest": {
+      "contract_version": "operational_cube.vesselflow_import_manifest.v0.3",
+      "vertical_id": "vesselflow",
+      "status": "WAITING_FOR_USER_DATA",
+      "required_inputs": [
+        "dataset_or_workbook",
+        "expected_nomination_flow",
+        "qualification_rules",
+        "known_blocking_rules"
+      ],
+      "optional_inputs": [
+        "contract_records",
+        "pvq_q88_extract",
+        "certificate_list",
+        "cargo_platform_matrix",
+        "decision_logs",
+        "audit_reports"
+      ],
+      "received_inputs": [],
+      "missing_required_inputs": [
+        "dataset_or_workbook",
+        "expected_nomination_flow",
+        "qualification_rules",
+        "known_blocking_rules"
+      ],
+      "default_policy": "Do not execute nomination automatically. Define controlled operational state only.",
+      "expected_outputs": [
+        "State Snapshot",
+        "Operational Graph",
+        "Domain Map",
+        "Contract Map",
+        "Nomination Flow",
+        "Gate Matrix",
+        "Evidence Manifest",
+        "Risk/Fragility Index",
+        "Delta Recommendations",
+        "Cube/Cupula State",
+        "Cockpit Replay",
+        "Report"
+      ],
+      "blocked_actions": [
+        "automatic_nomination",
+        "client_facing_claim",
+        "implementation_execution",
+        "production_activation"
+      ]
+    },
+    "markdown_path": "outputs/prod_vert004_006_vesselflow_import_manifest.md",
+    "markdown_preview": "# VesselFlow Import Manifest\n\n- Status: `WAITING_FOR_USER_DATA`\n- Default policy: Do not execute nomination automatically. Define controlled operational state only.\n\n## Required Inputs\n- `dataset_or_workbook`\n- `expected_nomination_flow`\n- `qualification_rules`\n- `known_blocking_rules`\n\n## Optional Inputs\n- `contract_records`\n- `pvq_q88_extract`\n- `certificate_list`\n- `cargo_platform_matrix`\n- `decision_logs`\n- `audit_reports`\n\n## Expected Outputs\n- State Snapshot\n- Operational Graph\n- Domain Map\n- Contract Map\n- Nomination Flow\n- Gate Matrix\n- Evidence Manifest\n- Risk/Fragility Index\n- Delta Recommendations\n- Cube/Cupula State\n- Cockpit Replay\n- Report\n\n## Blocked Actions\n- `automatic_nomination`\n- `client_facing_claim`\n- `implementation_execution`\n- `production_activation`\n"
+  },
+  "reports": {
+    "status": "PASS",
+    "reports": [
+      {
+        "name": "prod001_005_product_foundation_report.md",
+        "exists": true,
+        "path": "outputs/prod001_005_product_foundation_report.md",
+        "preview": "# PROD-001..005 Product Foundation Report\n\n- Status: `PASS`\n- Phase: `Product Foundation`\n- Product: `CASULO Workbench`\n- Experience: `Operational Cube Solver`\n\n## Generated\n\n- `docs/product/01_PRODUCT_VISION.md`\n- `docs/product/02_MVP_SCOPE.md`\n- `docs/product/03_PRODUCT_ARCHITECTURE.md`\n- `docs/product/04_USER_JOURNEY.md`\n- `docs/product/05_API_SURFACE.md`\n- `docs/product/06_DATA_MODEL.md`\n- `docs/product/07_UI_MAP.md`\n- `docs/product/08_ROADMAP_TO_V1.md`\n- `docs/product/09_USER_INPUTS_NEEDED.md`\n- `docs/product/10_PRODUCT_PHASE_DONE.md`\n- `product/contracts/*.json`\n- `product/templates/product_review_checklist.md`\n- `product/requirements/user_answers_template.md`\n\n## What is done\n\nProduct direction is frozen enough to start product runtime implementation.\n\n## What is still needed from user\n\nSee `docs/product/09_USER_INPUTS_NEEDED.md`.\n\n## Recommended next bundle\n\n`PROD-006..010 Product Runtime API and Case Adapter`.\n"
+      },
+      {
+        "name": "prod_vert001_003_vertical_case_pack_report.md",
+        "exists": true,
+        "path": "outputs/prod_vert001_003_vertical_case_pack_report.md",
+        "preview": "# PROD-VERT-001..003 Vertical Case Pack Report\n\n- Status: `PASS`\n- Phase: `Vertical Case Pack Foundation`\n- Product direction: `Cubo Operacional / Operational Cube`\n- Method origin: `CASULO internal method`\n\n## Generated verticals\n\n- `small_service`\n- `legal_office`\n- `vesselflow`\n\n## Generated assets\n\n- vertical manifests\n- domain maps\n- entity maps\n- gate maps\n- operational cube seeds\n- sample intakes/prompts\n- expected output definitions\n- VesselFlow nomination/state protocol\n- naming document\n- case input requirements\n- validation script\n\n## Recommended next bundle\n\n`PROD-VERT-004..006 Vertical Runtime Adapter and VesselFlow Import Protocol`\n\n## What is needed from user for VesselFlow\n\n- dataset/workbook;\n- expected nomination flow;\n- qualification rules;\n- known blocking rules.\n"
+      },
+      {
+        "name": "prod_vert004_006_vertical_runtime_adapter_report.md",
+        "exists": true,
+        "path": "outputs/prod_vert004_006_vertical_runtime_adapter_report.md",
+        "preview": "# PROD-VERT-004..006 Vertical Runtime Adapter Report\n\n- Status: `PASS`\n- Phase: `Vertical Runtime Adapter and VesselFlow Import Protocol`\n- Product direction: `Cubo Operacional / Operational Cube`\n\n## Generated\n\n- vertical runtime adapter;\n- vertical pack inspector;\n- VesselFlow import manifest builder;\n- vertical runtime validator;\n- state requests for small_service, legal_office and vesselflow;\n- VesselFlow import manifest;\n- runtime adapter docs.\n\n## Generated state requests\n\n- `outputs/prod_vert004_006_small_service_state_request.md`\n- `outputs/prod_vert004_006_legal_office_state_request.md`\n- `outputs/prod_vert004_006_vesselflow_state_request.md`\n\n## VesselFlow status\n\nWaiting for user data/workbook, expected nomination flow, qualification rules and known blocking rules.\n\n## Recommended next bundle\n\n`PROD-006..010 Product Runtime API and Case Adapter`\n"
+      },
+      {
+        "name": "wb020_poc_completion_report.md",
+        "exists": true,
+        "path": "outputs/wb020_poc_completion_report.md",
+        "preview": "# WB-020 POC Completion Report\n\n- Status: `PASS`\n- POC status: `CONTROLLED_INTERNAL_POC_COMPLETE`\n\n## Completed Tasks\n- WB-016 Client Review Readiness Gate\n- WB-017 Cockpit Story Replay\n- WB-018 Micrograph Event Timeline\n- WB-019 Cube/Cupula UI State Contract\n- WB-020 POC Completion Report\n\n## Readiness\n- `internal_review`: `True`\n- `client_review`: `False`\n- `implementation_authorized`: `False`\n\n## Definition of Done\n- Controlled runtime evidence audited.\n- Internal handoff created.\n- Client review gate blocks external use until explicit approval.\n- Cockpit replay explains the lane.\n- Micrograph timeline exists.\n- Cube/Cupula state contract exists.\n\n## Not Done\n- Production cloud runtime.\n- Real tenant/auth/security.\n- Real client approval.\n- Implementation authorization.\n- 3D polished UI.\n"
+      }
+    ]
+  }
+}

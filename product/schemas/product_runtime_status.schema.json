@@ -1,0 +1,29 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Operational Cube Product Runtime Status",
+  "type": "object",
+  "required": [
+    "status",
+    "product_direction",
+    "runtime_mode",
+    "verticals",
+    "blocked_actions"
+  ],
+  "properties": {
+    "status": {
+      "type": "string"
+    },
+    "product_direction": {
+      "type": "string"
+    },
+    "runtime_mode": {
+      "type": "string"
+    },
+    "verticals": {
+      "type": "array"
+    },
+    "blocked_actions": {
+      "type": "array"
+    }
+  }
+}
