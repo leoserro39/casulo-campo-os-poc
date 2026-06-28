@@ -1,0 +1,18 @@
+{
+  "contract": "casulo.enterprise_import_parser_poc.v0.1",
+  "purpose": "Package Enterprise Custom GPT import and parser POC runbook around the case runner.",
+  "requires": [
+    "Enterprise GPT permissions",
+    "public HTTPS endpoint for Actions",
+    "read-only action schema",
+    "redacted cases"
+  ],
+  "blocked_actions": [
+    "client_facing_claim",
+    "automatic_nomination",
+    "implementation_execution",
+    "production_activation",
+    "automatic_merge",
+    "credential_handling"
+  ]
+}

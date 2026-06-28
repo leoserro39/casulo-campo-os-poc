@@ -1,0 +1,37 @@
+{
+  "case_id": "PARSER-001-SERVICE-INTAKE",
+  "case_type": "parser_documental",
+  "document_type": "redacted service intake form",
+  "difficulty": "low",
+  "input_mode": "synthetic_redacted",
+  "document_excerpt": "ID: SRV-001 | Category: Maintenance | Date: 2026-06-01 | Service: Equipment inspection | Attachment: yes | Status: PENDING",
+  "fields_expected": [
+    "document_id",
+    "client_category",
+    "request_date",
+    "requested_service",
+    "required_attachment",
+    "approval_status"
+  ],
+  "rules": [
+    "request_date is required",
+    "required_attachment must be yes/no",
+    "approval_status allowed values: PENDING, APPROVED, REJECTED"
+  ],
+  "known_gaps": [
+    "date format variations",
+    "attachment evidence validation"
+  ],
+  "expected_allowed_outputs": [
+    "field inventory",
+    "parser contract",
+    "test plan",
+    "code skeleton"
+  ],
+  "blocked_outputs": [
+    "production parser claim",
+    "deployment",
+    "automatic merge",
+    "credential handling"
+  ]
+}

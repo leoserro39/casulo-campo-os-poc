@@ -1,0 +1,13 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "CASULO Parser Case",
+  "type": "object",
+  "required": [
+    "case_id",
+    "case_type",
+    "document_type",
+    "fields_expected",
+    "rules",
+    "known_gaps"
+  ]
+}

@@ -1,0 +1,10 @@
+# Case Catalog
+
+- contract_version: `casulo.case_catalog.v0.1`
+- status: `PASS`
+- case_count: `3`
+
+## Cases
+- `PARSER-001-SERVICE-INTAKE` — {"case_id": "PARSER-001-SERVICE-INTAKE", "case_type": "parser_documental", "document_type": "redacted service intake form", "difficulty": "low", "fields_expected": ["document_id", "client_category", "request_date", "requested_service", "required_attachment", "approval_status"], "known_gaps": ["date format variations", "attachment evidence validation"]}
+- `PARSER-002-INVOICE-RECEIPT` — {"case_id": "PARSER-002-INVOICE-RECEIPT", "case_type": "parser_documental", "document_type": "redacted invoice/receipt", "difficulty": "medium", "fields_expected": ["invoice_id", "issue_date", "vendor", "currency", "total_amount", "tax_withheld", "approval_status"], "known_gaps": ["missing approval", "tax_withheld not informed", "currency format variations"]}
+- `PARSER-003-CONTRACT-CHECKLIST` — {"case_id": "PARSER-003-CONTRACT-CHECKLIST", "case_type": "audit_documental", "document_type": "redacted contract clause checklist", "difficulty": "high", "fields_expected": ["contract_id", "effective_date", "termination_clause", "liability_cap", "data_processing_clause", "review_required"], "known_gaps": ["liability cap absent", "ambiguous data processing clause", "legal interpretation requires human review"]}

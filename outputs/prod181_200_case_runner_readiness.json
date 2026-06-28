@@ -1,0 +1,26 @@
+{
+  "contract_version": "casulo.first_parser_case_runner_readiness.v0.1",
+  "status": "PASS",
+  "decision": "READY_TO_RUN_FIRST_THREE_CASES_THEN_BATCH_CALIBRATION",
+  "ready_for": [
+    "single case parser test",
+    "three-case manual analysis",
+    "batch calibration by type",
+    "Enterprise Custom GPT import planning"
+  ],
+  "not_ready_for": [
+    "production parser deployment",
+    "write actions",
+    "unredacted company data",
+    "automatic merge"
+  ],
+  "next": "Run PROD-191..200 First Parser POC Execution / Calibration Evidence using real Enterprise GPT outputs.",
+  "blocked_actions": [
+    "client_facing_claim",
+    "automatic_nomination",
+    "implementation_execution",
+    "production_activation",
+    "automatic_merge",
+    "credential_handling"
+  ]
+}

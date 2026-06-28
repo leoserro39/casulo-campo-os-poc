@@ -1,0 +1,37 @@
+{
+  "case_id": "PARSER-003-CONTRACT-CHECKLIST",
+  "case_type": "audit_documental",
+  "document_type": "redacted contract clause checklist",
+  "difficulty": "high",
+  "input_mode": "synthetic_redacted",
+  "document_excerpt": "Contract CT-88 | Parties: redacted | Effective date: present | Termination clause: present | Liability cap: absent | Data processing clause: ambiguous",
+  "fields_expected": [
+    "contract_id",
+    "effective_date",
+    "termination_clause",
+    "liability_cap",
+    "data_processing_clause",
+    "review_required"
+  ],
+  "rules": [
+    "liability cap must not be invented",
+    "ambiguous data processing clause requires human review",
+    "missing clause creates delta, not automatic failure"
+  ],
+  "known_gaps": [
+    "liability cap absent",
+    "ambiguous data processing clause",
+    "legal interpretation requires human review"
+  ],
+  "expected_allowed_outputs": [
+    "clause inventory",
+    "evidence map",
+    "risk/delta report",
+    "human review task"
+  ],
+  "blocked_outputs": [
+    "legal final opinion",
+    "client-facing claim",
+    "production approval"
+  ]
+}

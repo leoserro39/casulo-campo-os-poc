@@ -53,63 +53,40 @@ class ProductRuntimeService:
 
     def product_status(self) -> Dict:
         checks = {
-            "public_runtime_readiness": exists(self.outputs_root / "prod161_170_public_runtime_readiness.json"),
-            "parser_task_mode": exists(self.outputs_root / "prod161_170_parser_task_mode.json"),
-            "store_status": exists(self.outputs_root / "prod171_180_store_status.json"),
-            "state_store_index": exists(self.outputs_root / "prod171_180_state_store_index.json"),
-            "evidence_store_index": exists(self.outputs_root / "prod171_180_evidence_store_index.json"),
-            "graph_store_index": exists(self.outputs_root / "prod171_180_graph_store_index.json"),
-            "store_write_policy": exists(self.outputs_root / "prod171_180_store_write_policy.json"),
-            "enterprise_workspace_integration": exists(self.outputs_root / "prod171_180_enterprise_workspace_integration.json"),
-            "store_migration_path": exists(self.outputs_root / "prod171_180_store_migration_path.json"),
             "store_readiness": exists(self.outputs_root / "prod171_180_store_readiness.json"),
-            "store_audit": exists(self.outputs_root / "prod171_180_audit_report.json"),
-            "state_records": exists(self.store_root / "state_records.jsonl"),
-            "evidence_records": exists(self.store_root / "evidence_records.jsonl"),
-            "graph_records": exists(self.store_root / "graph_records.jsonl"),
-            "audit_records": exists(self.store_root / "audit_records.jsonl"),
+            "case_catalog": exists(self.outputs_root / "prod181_200_case_catalog.json"),
+            "first_three_case_plan": exists(self.outputs_root / "prod181_200_first_three_case_plan.json"),
+            "batch_calibration_plan": exists(self.outputs_root / "prod181_200_batch_calibration_plan.json"),
+            "case_runner_results": exists(self.outputs_root / "prod181_200_case_runner_results.json"),
+            "enterprise_import_kit": exists(self.outputs_root / "prod181_200_enterprise_import_kit.json"),
+            "case_runner_readiness": exists(self.outputs_root / "prod181_200_case_runner_readiness.json"),
+            "case_runner_audit": exists(self.outputs_root / "prod181_200_audit_report.json"),
+            "case_runs_jsonl": exists(self.outputs_root / "prod181_200_case_runs.jsonl"),
         }
         return {
             "status": "PASS" if all(checks.values()) else "INCOMPLETE",
             "product_direction": PRODUCT_DIRECTION,
             "runtime_mode": RUNTIME_MODE,
             "checks": checks,
-            "store_counts": {
-                "state_records": len(read_jsonl(self.store_root / "state_records.jsonl")),
-                "evidence_records": len(read_jsonl(self.store_root / "evidence_records.jsonl")),
-                "graph_records": len(read_jsonl(self.store_root / "graph_records.jsonl")),
-                "audit_records": len(read_jsonl(self.store_root / "audit_records.jsonl")),
-            },
             "blocked_actions": BLOCKED_ACTIONS,
-            "next_recommended_step": "Build Enterprise Custom GPT Import Kit / Parser POC Runbook.",
+            "next_recommended_step": "Run first three parser cases one by one; then expand batch calibration by type.",
         }
 
     def _payload(self, stem: str, key: str) -> Dict:
         return payload(self.outputs_root / stem, key)
 
-    def state_records(self) -> Dict:
-        return {"status": "PASS", "state_records": read_jsonl(self.store_root / "state_records.jsonl")}
-
-    def evidence_records(self) -> Dict:
-        return {"status": "PASS", "evidence_records": read_jsonl(self.store_root / "evidence_records.jsonl")}
-
-    def graph_records(self) -> Dict:
-        return {"status": "PASS", "graph_records": read_jsonl(self.store_root / "graph_records.jsonl")}
-
-    def store_audit_records(self) -> Dict:
-        return {"status": "PASS", "audit_records": read_jsonl(self.store_root / "audit_records.jsonl")}
+    def case_runs(self) -> Dict:
+        return {"status": "PASS", "case_runs": read_jsonl(self.outputs_root / "prod181_200_case_runs.jsonl")}
 
     def __getattr__(self, name):
         mapping = {
-            "store_status": ("prod171_180_store_status.json", "store_status"),
-            "state_store_index": ("prod171_180_state_store_index.json", "state_store_index"),
-            "evidence_store_index": ("prod171_180_evidence_store_index.json", "evidence_store_index"),
-            "graph_store_index": ("prod171_180_graph_store_index.json", "graph_store_index"),
-            "store_write_policy": ("prod171_180_store_write_policy.json", "store_write_policy"),
-            "enterprise_workspace_integration": ("prod171_180_enterprise_workspace_integration.json", "enterprise_workspace_integration"),
-            "store_migration_path": ("prod171_180_store_migration_path.json", "store_migration_path"),
-            "store_readiness": ("prod171_180_store_readiness.json", "store_readiness"),
-            "store_audit": ("prod171_180_audit_report.json", "store_audit"),
+            "case_catalog": ("prod181_200_case_catalog.json", "case_catalog"),
+            "first_three_case_plan": ("prod181_200_first_three_case_plan.json", "first_three_case_plan"),
+            "batch_calibration_plan": ("prod181_200_batch_calibration_plan.json", "batch_calibration_plan"),
+            "case_runner_results": ("prod181_200_case_runner_results.json", "case_runner_results"),
+            "enterprise_import_kit": ("prod181_200_enterprise_import_kit.json", "enterprise_import_kit"),
+            "case_runner_readiness": ("prod181_200_case_runner_readiness.json", "case_runner_readiness"),
+            "case_runner_audit": ("prod181_200_audit_report.json", "case_runner_audit"),
         }
         if name in mapping:
             stem, key = mapping[name]
@@ -118,14 +95,13 @@ class ProductRuntimeService:
 
     def reports(self) -> Dict:
         patterns = [
-            "prod171_180_store_status.md",
-            "prod171_180_state_store_index.md",
-            "prod171_180_evidence_store_index.md",
-            "prod171_180_graph_store_index.md",
-            "prod171_180_store_write_policy.md",
-            "prod171_180_enterprise_workspace_integration.md",
-            "prod171_180_store_readiness.md",
-            "prod171_180_audit_report.md",
+            "prod181_200_case_catalog.md",
+            "prod181_200_first_three_case_plan.md",
+            "prod181_200_batch_calibration_plan.md",
+            "prod181_200_case_runner_results.md",
+            "prod181_200_enterprise_import_kit.md",
+            "prod181_200_case_runner_readiness.md",
+            "prod181_200_audit_report.md",
         ]
         reports = []
         for name in patterns:

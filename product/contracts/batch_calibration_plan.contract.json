@@ -1,0 +1,12 @@
+{
+  "contract": "casulo.batch_calibration_plan.v0.1",
+  "purpose": "Define how many cases to run per type for proper calibration.",
+  "case_types": [
+    "parser_documental",
+    "audit_documental",
+    "rule_extraction",
+    "software_review"
+  ],
+  "minimum_cases_per_type": 10,
+  "target_cases_per_type": 30
+}

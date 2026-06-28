@@ -1,0 +1,28 @@
+# Case Runner Results
+
+- status: `PASS`
+- runner: `casulo.enterprise_parser_case_runner.v0.1`
+
+## Summary
+- cases_count: `3`
+- avg_direct_hallucination: `72.33`
+- avg_casulo_hallucination: `21.33`
+- avg_hallucination_reduction: `51.0`
+- avg_delta_control_score: `84.67`
+- avg_delta_control_gain: `60.0`
+- avg_evidence_coverage: `79.33`
+- production_blocked_all_cases: `True`
+
+## Cases
+- `PARSER-001-SERVICE-INTAKE` — {"case_id": "PARSER-001-SERVICE-INTAKE", "case_type": "parser_documental", "document_type": "redacted service intake form", "status": "PASS", "run_mode": "simulated_governed_case_runner", "timestamp": "2026-06-28T20:18:36+00:00", "metrics": {"direct_gpt_baseline": {"hallucination_risk_index": 55, "delta_control_score": 30, "unsupported_fields_risk": 2, "invented_fields_risk": 1}, "casulo_governed": {"hallucination_risk_index": 12, "residual_delta_index": 35, "delta_control_score": 88, "evidence_coverage": 88, "unsupported_fields": 0, "invented_fields": 0, "blocked_action_accuracy": 100}, "improvement": {"hallucination_reduction": 43, "delta_control_gain": 58}}, "allowed_outputs": ["field inventory", "parser contract", "test plan", "code skeleton"], "blocked_outputs": ["production parser claim", "deployment", "automatic merge", "credential handling"], "decision": "CONTROLLED_OUTPUT_ALLOWED_PRODUCTION_BLOCKED", "next_action": "Review generated parser contract/evidence map manually, then record calibration note.", "blocked_actions": ["client_facing_claim", "automatic_nomination", "implementation_execution", "production_activation", "automatic_merge", "credential_handling"]}
+- `PARSER-002-INVOICE-RECEIPT` — {"case_id": "PARSER-002-INVOICE-RECEIPT", "case_type": "parser_documental", "document_type": "redacted invoice/receipt", "status": "PASS", "run_mode": "simulated_governed_case_runner", "timestamp": "2026-06-28T20:18:36+00:00", "metrics": {"direct_gpt_baseline": {"hallucination_risk_index": 74, "delta_control_score": 24, "unsupported_fields_risk": 3, "invented_fields_risk": 1}, "casulo_governed": {"hallucination_risk_index": 22, "residual_delta_index": 62, "delta_control_score": 84, "evidence_coverage": 78, "unsupported_fields": 1, "invented_fields": 0, "blocked_action_accuracy": 100}, "improvement": {"hallucination_reduction": 52, "delta_control_gain": 60}}, "allowed_outputs": ["field inventory", "evidence map", "delta report", "test plan"], "blocked_outputs": ["approved payment claim", "production parser claim", "deployment"], "decision": "CONTROLLED_OUTPUT_ALLOWED_PRODUCTION_BLOCKED", "next_action": "Review generated parser contract/evidence map manually, then record calibration note.", "blocked_actions": ["client_facing_claim", "automatic_nomination", "implementation_execution", "production_activation", "automatic_merge", "credential_handling"]}
+- `PARSER-003-CONTRACT-CHECKLIST` — {"case_id": "PARSER-003-CONTRACT-CHECKLIST", "case_type": "audit_documental", "document_type": "redacted contract clause checklist", "status": "PASS", "run_mode": "simulated_governed_case_runner", "timestamp": "2026-06-28T20:18:36+00:00", "metrics": {"direct_gpt_baseline": {"hallucination_risk_index": 88, "delta_control_score": 20, "unsupported_fields_risk": 3, "invented_fields_risk": 1}, "casulo_governed": {"hallucination_risk_index": 30, "residual_delta_index": 78, "delta_control_score": 82, "evidence_coverage": 72, "unsupported_fields": 1, "invented_fields": 0, "blocked_action_accuracy": 100}, "improvement": {"hallucination_reduction": 58, "delta_control_gain": 62}}, "allowed_outputs": ["clause inventory", "evidence map", "risk/delta report", "human review task"], "blocked_outputs": ["legal final opinion", "client-facing claim", "production approval"], "decision": "CONTROLLED_OUTPUT_ALLOWED_PRODUCTION_BLOCKED", "next_action": "Review generated parser contract/evidence map manually, then record calibration note.", "blocked_actions": ["client_facing_claim", "automatic_nomination", "implementation_execution", "production_activation", "automatic_merge", "credential_handling"]}
+- next: `Run first 3 cases one by one, review outputs, then expand batch by case_type.`
+
+## Blocked Actions
+- `client_facing_claim`
+- `automatic_nomination`
+- `implementation_execution`
+- `production_activation`
+- `automatic_merge`
+- `credential_handling`

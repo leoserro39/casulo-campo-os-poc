@@ -1,0 +1,16 @@
+{
+  "task": "PROD-181..200",
+  "status": "PASS",
+  "phase": "Enterprise Custom GPT Import Kit / Parser Case Runner",
+  "endpoints": [
+    "/api/casulo/case-runner/catalog",
+    "/api/casulo/case-runner/first-three-plan",
+    "/api/casulo/case-runner/batch-plan",
+    "/api/casulo/case-runner/results",
+    "/api/casulo/case-runner/runs",
+    "/api/casulo/case-runner/enterprise-import-kit",
+    "/api/casulo/case-runner/readiness",
+    "/api/casulo/case-runner/audit"
+  ],
+  "next_recommended_bundle": "PROD-191..200 First Parser POC Execution / Calibration Evidence"
+}

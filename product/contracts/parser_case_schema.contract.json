@@ -1,0 +1,12 @@
+{
+  "contract": "casulo.parser_case_schema.v0.1",
+  "purpose": "Define normalized parser/document case format.",
+  "required": [
+    "case_id",
+    "case_type",
+    "document_type",
+    "fields_expected",
+    "rules",
+    "known_gaps"
+  ]
+}

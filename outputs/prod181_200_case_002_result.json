@@ -1,0 +1,75 @@
+{
+  "status": "PASS",
+  "runner": "casulo.enterprise_parser_case_runner.v0.1",
+  "summary": {
+    "cases_count": 1,
+    "avg_direct_hallucination": 74.0,
+    "avg_casulo_hallucination": 22.0,
+    "avg_hallucination_reduction": 52.0,
+    "avg_delta_control_score": 84.0,
+    "avg_delta_control_gain": 60.0,
+    "avg_evidence_coverage": 78.0,
+    "production_blocked_all_cases": true
+  },
+  "cases": [
+    {
+      "case_id": "PARSER-002-INVOICE-RECEIPT",
+      "case_type": "parser_documental",
+      "document_type": "redacted invoice/receipt",
+      "status": "PASS",
+      "run_mode": "simulated_governed_case_runner",
+      "timestamp": "2026-06-28T20:18:53+00:00",
+      "metrics": {
+        "direct_gpt_baseline": {
+          "hallucination_risk_index": 74,
+          "delta_control_score": 24,
+          "unsupported_fields_risk": 3,
+          "invented_fields_risk": 1
+        },
+        "casulo_governed": {
+          "hallucination_risk_index": 22,
+          "residual_delta_index": 62,
+          "delta_control_score": 84,
+          "evidence_coverage": 78,
+          "unsupported_fields": 1,
+          "invented_fields": 0,
+          "blocked_action_accuracy": 100
+        },
+        "improvement": {
+          "hallucination_reduction": 52,
+          "delta_control_gain": 60
+        }
+      },
+      "allowed_outputs": [
+        "field inventory",
+        "evidence map",
+        "delta report",
+        "test plan"
+      ],
+      "blocked_outputs": [
+        "approved payment claim",
+        "production parser claim",
+        "deployment"
+      ],
+      "decision": "CONTROLLED_OUTPUT_ALLOWED_PRODUCTION_BLOCKED",
+      "next_action": "Review generated parser contract/evidence map manually, then record calibration note.",
+      "blocked_actions": [
+        "client_facing_claim",
+        "automatic_nomination",
+        "implementation_execution",
+        "production_activation",
+        "automatic_merge",
+        "credential_handling"
+      ]
+    }
+  ],
+  "next": "Run first 3 cases one by one, review outputs, then expand batch by case_type.",
+  "blocked_actions": [
+    "client_facing_claim",
+    "automatic_nomination",
+    "implementation_execution",
+    "production_activation",
+    "automatic_merge",
+    "credential_handling"
+  ]
+}

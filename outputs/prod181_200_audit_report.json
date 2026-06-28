@@ -1,0 +1,10 @@
+{
+  "status": "PASS",
+  "audit": "Enterprise parser case runner audit",
+  "cases_count": 3,
+  "avg_hallucination_reduction": 51.0,
+  "avg_delta_control_score": 84.67,
+  "production_blocked_all_cases": true,
+  "readiness": "READY_TO_RUN_FIRST_THREE_CASES_THEN_BATCH_CALIBRATION",
+  "finding": "PASS: run 3 cases one by one first, then batch cases by type for calibration."
+}

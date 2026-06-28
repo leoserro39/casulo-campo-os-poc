@@ -1,0 +1,39 @@
+{
+  "case_id": "PARSER-002-INVOICE-RECEIPT",
+  "case_type": "parser_documental",
+  "document_type": "redacted invoice/receipt",
+  "difficulty": "medium",
+  "input_mode": "synthetic_redacted",
+  "document_excerpt": "Invoice INV-2041 | Issue date 2026-06-07 | Vendor ACME REDACTED | Total BRL 1,240.80 | Tax withheld: not informed | Approval: missing",
+  "fields_expected": [
+    "invoice_id",
+    "issue_date",
+    "vendor",
+    "currency",
+    "total_amount",
+    "tax_withheld",
+    "approval_status"
+  ],
+  "rules": [
+    "invoice_id is required",
+    "total_amount must be numeric",
+    "approval_status cannot be assumed when missing",
+    "tax_withheld can be unknown"
+  ],
+  "known_gaps": [
+    "missing approval",
+    "tax_withheld not informed",
+    "currency format variations"
+  ],
+  "expected_allowed_outputs": [
+    "field inventory",
+    "evidence map",
+    "delta report",
+    "test plan"
+  ],
+  "blocked_outputs": [
+    "approved payment claim",
+    "production parser claim",
+    "deployment"
+  ]
+}

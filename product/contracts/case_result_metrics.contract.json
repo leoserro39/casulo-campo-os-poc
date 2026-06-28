@@ -1,0 +1,13 @@
+{
+  "contract": "casulo.case_result_metrics.v0.1",
+  "purpose": "Measure hallucination risk, delta control, evidence coverage and task quality per case.",
+  "metrics": [
+    "hallucination_risk_index",
+    "residual_delta_index",
+    "delta_control_score",
+    "evidence_coverage",
+    "unsupported_fields",
+    "invented_fields",
+    "blocked_action_accuracy"
+  ]
+}
