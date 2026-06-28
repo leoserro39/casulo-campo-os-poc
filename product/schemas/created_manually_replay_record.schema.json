@@ -1,0 +1,12 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "CASULO Created Manually Replay Record",
+  "type": "object",
+  "required": [
+    "issue_id",
+    "synthetic_manual_issue_url",
+    "target_state",
+    "closure_status",
+    "synthetic_only"
+  ]
+}

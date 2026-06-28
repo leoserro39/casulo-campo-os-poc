@@ -1,0 +1,10 @@
+{
+  "contract": "casulo.synthetic_url_policy.v0.1",
+  "purpose": "Ensure synthetic URLs are marked as synthetic, local-only and not treated as real operational evidence.",
+  "policy": [
+    "synthetic_url_must_be_explicit",
+    "no_network_validation",
+    "no_real_issue_claim",
+    "no_state_closure_without_real_evidence"
+  ]
+}

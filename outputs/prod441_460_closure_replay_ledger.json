@@ -1,0 +1,72 @@
+{
+  "status": "PASS",
+  "ledger": "casulo.closure_replay_ledger.v0.1",
+  "synthetic_only": true,
+  "records": [
+    {
+      "issue_id": "REAL-GRAPH-001-ONBOARDING-ISSUE-CANDIDATE-002",
+      "synthetic_manual_issue_url": "https://github.com/leoserro39/casulo-campo-os-poc/issues/900001",
+      "manual_issue_url_present": true,
+      "source_delta": "delta_evidence",
+      "priority": "P0_BLOCKER",
+      "review_route": "evidence_owner",
+      "previous_closure_status": "PENDING_MANUAL_ISSUE_CREATION",
+      "target_state": "CREATED_MANUALLY",
+      "closure_status": "CREATED_MANUALLY_READY_TO_LINK",
+      "next_action": "link_manual_issue_to_task_or_state_replay_only",
+      "synthetic_only": true,
+      "real_evidence_claim": false,
+      "valid": true,
+      "auto_execution_allowed": false,
+      "blocked_actions": [
+        "client_facing_claim",
+        "automatic_nomination",
+        "implementation_execution",
+        "production_activation",
+        "automatic_merge",
+        "credential_handling"
+      ]
+    },
+    {
+      "issue_id": "REAL-GRAPH-002-DOCUMENT-AUDIT-ISSUE-CANDIDATE-002",
+      "manual_issue_url": "",
+      "manual_issue_url_present": false,
+      "source_delta": "delta_evidence",
+      "priority": "P0_BLOCKER",
+      "review_route": "evidence_owner",
+      "target_state": "APPROVED_FOR_MANUAL_CREATE",
+      "closure_status": "PENDING_MANUAL_ISSUE_CREATION",
+      "next_action": "wait_for_manual_issue_url_evidence",
+      "valid": true,
+      "reason": "no_url_yet_pending_manual_creation",
+      "auto_execution_allowed": false,
+      "blocked_actions": [
+        "client_facing_claim",
+        "automatic_nomination",
+        "implementation_execution",
+        "production_activation",
+        "automatic_merge",
+        "credential_handling"
+      ],
+      "synthetic_only": false,
+      "real_evidence_claim": false
+    }
+  ],
+  "summary": {
+    "source_record_count": 2,
+    "replay_count": 1,
+    "synthetic_url_count": 1,
+    "created_manually_ready_to_link_count": 1,
+    "pending_manual_creation_count": 1,
+    "real_evidence_claim_count": 0,
+    "auto_execution_allowed": false
+  },
+  "blocked_actions": [
+    "client_facing_claim",
+    "automatic_nomination",
+    "implementation_execution",
+    "production_activation",
+    "automatic_merge",
+    "credential_handling"
+  ]
+}

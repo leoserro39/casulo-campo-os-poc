@@ -1,0 +1,11 @@
+# PROD-441..460 Audit Report
+
+- status: `PASS`
+- audit: `Closure Replay with Synthetic Manual URL audit`
+- synthetic_only: `True`
+- replay_count: `1`
+- created_manually_ready_to_link_count: `1`
+- real_evidence_claim_count: `0`
+- auto_execution_allowed: `False`
+- readiness: `READY_FOR_REAL_MANUAL_URL_CAPTURE_AFTER_SYNTHETIC_REPLAY`
+- finding: `PASS: synthetic closure replay validates linkage logic without creating, verifying or claiming real issues.`

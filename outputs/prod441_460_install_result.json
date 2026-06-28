@@ -1,0 +1,13 @@
+{
+  "task": "PROD-441..460",
+  "status": "PASS",
+  "phase": "Closure Replay with Synthetic Manual URL",
+  "endpoints": [
+    "/api/casulo/closure-replay/synthetic-url-manifest",
+    "/api/casulo/closure-replay/ledger",
+    "/api/casulo/closure-replay/result",
+    "/api/casulo/closure-replay/readiness",
+    "/api/casulo/closure-replay/audit"
+  ],
+  "next_recommended_bundle": "PROD-461..480 Real Manual Evidence Handoff Pack"
+}

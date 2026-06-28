@@ -1,0 +1,17 @@
+{
+  "contract": "casulo.closure_replay_synthetic_manual_url.v0.1",
+  "purpose": "Replay closure path with a synthetic manual issue URL to validate CREATED_MANUALLY linkage without creating or verifying a real GitHub issue.",
+  "input": [
+    "outputs/prod421_440_closure_ledger.json",
+    "outputs/prod401_420_manual_issue_evidence_capture.json",
+    "outputs/prod381_400_dry_run_transition_ledger.json"
+  ],
+  "blocked_actions": [
+    "client_facing_claim",
+    "automatic_nomination",
+    "implementation_execution",
+    "production_activation",
+    "automatic_merge",
+    "credential_handling"
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "CASULO Closure Replay Result",
+  "type": "object",
+  "required": [
+    "status",
+    "replay_count",
+    "created_manually_ready_to_link_count",
+    "synthetic_only"
+  ]
+}

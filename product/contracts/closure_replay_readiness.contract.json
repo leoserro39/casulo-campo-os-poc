@@ -1,0 +1,4 @@
+{
+  "contract": "casulo.closure_replay_readiness.v0.1",
+  "purpose": "Gate readiness for real manual URL capture after synthetic replay passes."
+}

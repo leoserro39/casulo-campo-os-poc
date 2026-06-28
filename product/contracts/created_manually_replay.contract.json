@@ -1,0 +1,4 @@
+{
+  "contract": "casulo.created_manually_replay.v0.1",
+  "purpose": "Validate transition preview from pending manual creation to CREATED_MANUALLY_READY_TO_LINK using synthetic evidence."
+}

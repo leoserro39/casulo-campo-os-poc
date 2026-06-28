@@ -1,0 +1,19 @@
+{
+  "status": "PASS",
+  "phase": "Closure Replay with Synthetic Manual URL",
+  "decision": "SYNTHETIC_CREATED_MANUALLY_REPLAY_READY_FOR_REVIEW",
+  "synthetic_only": true,
+  "replay_count": 1,
+  "created_manually_ready_to_link_count": 1,
+  "real_evidence_claim_count": 0,
+  "auto_execution_allowed": false,
+  "interpretation": "Synthetic manual URL replay validates CREATED_MANUALLY linkage logic without creating, verifying or claiming a real GitHub issue.",
+  "blocked_actions": [
+    "client_facing_claim",
+    "automatic_nomination",
+    "implementation_execution",
+    "production_activation",
+    "automatic_merge",
+    "credential_handling"
+  ]
+}

@@ -1,0 +1,4 @@
+{
+  "contract": "casulo.closure_replay_ledger.v0.1",
+  "purpose": "Record replay-only linkage state while preserving real closure ledger semantics."
+}

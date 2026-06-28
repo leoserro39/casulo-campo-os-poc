@@ -1,0 +1,35 @@
+{
+  "status": "PASS",
+  "synthetic": true,
+  "repo_slug": "leoserro39/casulo-campo-os-poc",
+  "generated_at": "2026-06-28T23:08:32+00:00",
+  "policy": [
+    "Synthetic URLs validate local state transitions only.",
+    "Synthetic URLs are not real issue evidence.",
+    "No network call is performed.",
+    "No issue is created automatically.",
+    "Real CREATED_MANUALLY requires human-provided URL evidence."
+  ],
+  "records": [
+    {
+      "issue_id": "REAL-GRAPH-001-ONBOARDING-ISSUE-CANDIDATE-002",
+      "synthetic_manual_issue_url": "https://github.com/leoserro39/casulo-campo-os-poc/issues/900001",
+      "synthetic": true,
+      "created_by": "CASULO_SYNTHETIC_REPLAY",
+      "created_at": "2026-06-28T23:08:32+00:00",
+      "evidence_note": "Synthetic replay URL for local closure path validation only. Not a real issue evidence claim.",
+      "source_delta": "delta_evidence",
+      "priority": "P0_BLOCKER",
+      "review_route": "evidence_owner",
+      "valid_shape": true
+    }
+  ],
+  "blocked_actions": [
+    "client_facing_claim",
+    "automatic_nomination",
+    "implementation_execution",
+    "production_activation",
+    "automatic_merge",
+    "credential_handling"
+  ]
+}
