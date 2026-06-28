@@ -1,0 +1,5 @@
+{
+  "contract": "casulo.approved_issue_manifest.v0.1",
+  "purpose": "Human-editable manifest declaring which issue candidates are approved for manual promotion.",
+  "default_policy": "no_issue_is_approved_by_default"
+}

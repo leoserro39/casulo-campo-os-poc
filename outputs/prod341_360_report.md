@@ -1,0 +1,23 @@
+# PROD-341..360 Manual Issue Promotion Pack Report
+
+- task: `PROD-341..360`
+- status: `PASS`
+- phase: `Manual Issue Promotion Pack`
+- decision: `READY_FOR_MANUAL_ISSUE_REVIEW_NOT_AUTO_CREATE`
+
+## Outputs
+- `outputs/prod341_360_manual_issue_promotion.json`
+- `outputs/prod341_360_manual_issue_promotion.md`
+- `outputs/prod341_360_gh_issue_command_templates.md`
+- `outputs/prod341_360_approved_issue_manifest_snapshot.json`
+- `outputs/prod341_360_manual_issue_promotion_readiness.json`
+- `outputs/prod341_360_audit_report.json`
+- next_recommended_bundle: `PROD-361..380 Formal Approval Workflow and Issue Execution Guard`
+
+## Blocked Actions
+- `client_facing_claim`
+- `automatic_nomination`
+- `implementation_execution`
+- `production_activation`
+- `automatic_merge`
+- `credential_handling`

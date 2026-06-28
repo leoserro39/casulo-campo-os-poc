@@ -1,0 +1,18 @@
+{
+  "status": "PASS",
+  "manual_promotion_policy": [
+    "No issue is created automatically.",
+    "Approval manifest starts empty by default.",
+    "Issue markdown can be reviewed before command execution.",
+    "Commands are manual templates only.",
+    "Production automation and client-facing claims remain blocked."
+  ],
+  "blocked_actions": [
+    "client_facing_claim",
+    "automatic_nomination",
+    "implementation_execution",
+    "production_activation",
+    "automatic_merge",
+    "credential_handling"
+  ]
+}

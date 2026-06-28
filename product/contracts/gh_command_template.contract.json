@@ -1,0 +1,5 @@
+{
+  "contract": "casulo.gh_command_template.v0.1",
+  "purpose": "Generate review-only gh issue create command templates; do not execute them.",
+  "execution_policy": "manual_copy_only"
+}

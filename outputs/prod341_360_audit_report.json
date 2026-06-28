@@ -1,0 +1,11 @@
+{
+  "status": "PASS",
+  "audit": "Manual Issue Promotion Pack audit",
+  "selected_count": 12,
+  "approved_count": 0,
+  "generated_issue_files": 12,
+  "command_templates": 12,
+  "auto_created_count": 0,
+  "readiness": "READY_FOR_MANUAL_ISSUE_REVIEW_NOT_AUTO_CREATE",
+  "finding": "PASS: promotion pack generated manual issue artifacts without automatic issue creation."
+}

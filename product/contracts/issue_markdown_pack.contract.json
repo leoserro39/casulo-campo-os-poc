@@ -1,0 +1,4 @@
+{
+  "contract": "casulo.issue_markdown_pack.v0.1",
+  "purpose": "Generate issue markdown files for selected/approved candidates."
+}

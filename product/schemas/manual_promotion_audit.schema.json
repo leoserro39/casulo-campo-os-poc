@@ -1,0 +1,12 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "CASULO Manual Promotion Audit",
+  "type": "object",
+  "required": [
+    "status",
+    "selected_count",
+    "approved_count",
+    "auto_created_count",
+    "finding"
+  ]
+}

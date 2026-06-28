@@ -1,0 +1,16 @@
+{
+  "contract": "casulo.manual_issue_promotion_pack.v0.1",
+  "purpose": "Convert selected review candidates into manual GitHub issue promotion artifacts without creating issues automatically.",
+  "input": [
+    "outputs/prod321_340_issue_selection.json",
+    "outputs/prod321_340_review_decision_log.json"
+  ],
+  "blocked_actions": [
+    "client_facing_claim",
+    "automatic_nomination",
+    "implementation_execution",
+    "production_activation",
+    "automatic_merge",
+    "credential_handling"
+  ]
+}

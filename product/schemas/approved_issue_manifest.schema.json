@@ -1,0 +1,10 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "CASULO Approved Issue Manifest",
+  "type": "object",
+  "required": [
+    "status",
+    "approval_policy",
+    "approved_issue_ids"
+  ]
+}

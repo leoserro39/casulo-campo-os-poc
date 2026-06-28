@@ -1,0 +1,32 @@
+{
+  "status": "DRAFT_REVIEW_REQUIRED",
+  "approval_policy": "no_issue_is_approved_by_default",
+  "instructions": [
+    "Edit approved_issue_ids manually after human review.",
+    "Only include issue IDs explicitly approved by the reviewer.",
+    "Do not approve production automation or client-facing claims."
+  ],
+  "available_issue_ids": [
+    "REAL-GRAPH-001-ONBOARDING-ISSUE-CANDIDATE-002",
+    "REAL-GRAPH-002-DOCUMENT-AUDIT-ISSUE-CANDIDATE-002",
+    "REAL-GRAPH-003-SOFTWARE-REVIEW-ISSUE-CANDIDATE-001",
+    "REAL-GRAPH-004-RULE-POLICY-ISSUE-CANDIDATE-003",
+    "REAL-GRAPH-001-ONBOARDING-ISSUE-CANDIDATE-001",
+    "REAL-GRAPH-002-DOCUMENT-AUDIT-ISSUE-CANDIDATE-001",
+    "REAL-GRAPH-004-RULE-POLICY-ISSUE-CANDIDATE-001",
+    "REAL-GRAPH-004-RULE-POLICY-ISSUE-CANDIDATE-002",
+    "REAL-GRAPH-003-SOFTWARE-REVIEW-ISSUE-CANDIDATE-002",
+    "REAL-GRAPH-002-DOCUMENT-AUDIT-ISSUE-CANDIDATE-003",
+    "REAL-GRAPH-003-SOFTWARE-REVIEW-ISSUE-CANDIDATE-003",
+    "REAL-GRAPH-003-SOFTWARE-REVIEW-ISSUE-CANDIDATE-004"
+  ],
+  "approved_issue_ids": [],
+  "blocked_actions": [
+    "client_facing_claim",
+    "automatic_nomination",
+    "implementation_execution",
+    "production_activation",
+    "automatic_merge",
+    "credential_handling"
+  ]
+}

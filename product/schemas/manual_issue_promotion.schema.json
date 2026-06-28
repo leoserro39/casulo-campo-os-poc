@@ -1,0 +1,11 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "CASULO Manual Issue Promotion",
+  "type": "object",
+  "required": [
+    "status",
+    "approved_count",
+    "issue_files",
+    "command_templates"
+  ]
+}

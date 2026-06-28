@@ -1,0 +1,4 @@
+{
+  "contract": "casulo.manual_promotion_readiness.v0.1",
+  "purpose": "Gate whether selected candidates can move from review pack to manual issue promotion."
+}

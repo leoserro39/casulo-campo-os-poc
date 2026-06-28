@@ -1,0 +1,13 @@
+{
+  "task": "PROD-341..360",
+  "status": "PASS",
+  "phase": "Manual Issue Promotion Pack",
+  "endpoints": [
+    "/api/casulo/manual-issue-promotion/pack",
+    "/api/casulo/manual-issue-promotion/manifest",
+    "/api/casulo/manual-issue-promotion/commands",
+    "/api/casulo/manual-issue-promotion/readiness",
+    "/api/casulo/manual-issue-promotion/audit"
+  ],
+  "next_recommended_bundle": "PROD-361..380 Formal Approval Workflow and Issue Execution Guard"
+}
