@@ -29,12 +29,12 @@ class ProductRuntimeHandler(BaseHTTPRequestHandler):
             routes={
                 "api/health":self.service.health,
                 "api/product/status":self.service.product_status,
-                "api/casulo/real-manual-evidence/manifest":self.service.real_evidence_manifest,
-                "api/casulo/real-manual-evidence/handoff":self.service.real_evidence_handoff,
-                "api/casulo/real-manual-evidence/validation":self.service.real_evidence_validation,
-                "api/casulo/real-manual-evidence/checklist":self.service.real_evidence_checklist,
-                "api/casulo/real-manual-evidence/readiness":self.service.real_evidence_readiness,
-                "api/casulo/real-manual-evidence/audit":self.service.real_evidence_audit,
+                "api/casulo/milestone-snapshot/summary":self.service.milestone_snapshot,
+                "api/casulo/milestone-snapshot/tag-chain":self.service.tag_chain_inventory,
+                "api/casulo/milestone-snapshot/dossier":self.service.operational_readiness_dossier,
+                "api/casulo/milestone-snapshot/pending-evidence":self.service.pending_evidence_register,
+                "api/casulo/milestone-snapshot/readiness":self.service.milestone_readiness,
+                "api/casulo/milestone-snapshot/audit":self.service.milestone_audit,
                 "api/reports":self.service.reports,
             }
             if clean in routes: return self.send_json(routes[clean]())
@@ -47,7 +47,7 @@ def main():
     server=HTTPServer((args.host,args.port),ProductRuntimeHandler)
     print(f"Operational Cube product runtime API/UI running at http://{args.host}:{args.port}")
     print("Open: /ui")
-    print("Try: /api/health, /api/casulo/real-manual-evidence/handoff")
+    print("Try: /api/health, /api/casulo/milestone-snapshot/dossier")
     try: server.serve_forever()
     except KeyboardInterrupt: print("Stopping product runtime API/UI.")
 if __name__=="__main__": main()

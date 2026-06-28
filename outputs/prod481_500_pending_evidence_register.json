@@ -1,0 +1,8 @@
+{
+  "pending_real_manual_url_count": 2,
+  "valid_real_evidence_count": 0,
+  "pending_manual_creation_count": 2,
+  "synthetic_created_manually_ready_to_link_count": 1,
+  "real_evidence_required": true,
+  "real_evidence_status": "PENDING_REAL_MANUAL_URL"
+}

@@ -1,0 +1,35 @@
+{
+  "status": "PASS",
+  "decision": "MILESTONE_SNAPSHOT_GENERATED_REQUIRES_COMMIT",
+  "ready_for": [
+    "milestone review",
+    "repo state handoff",
+    "real manual URL evidence capture",
+    "next-cycle planning",
+    "controlled investor/incubator technical explanation"
+  ],
+  "not_ready_for": [
+    "automatic issue creation",
+    "automatic closure",
+    "production activation",
+    "external client claims",
+    "network verification of issues"
+  ],
+  "pending_evidence": {
+    "pending_real_manual_url_count": 2,
+    "valid_real_evidence_count": 0,
+    "pending_manual_creation_count": 2,
+    "synthetic_created_manually_ready_to_link_count": 1,
+    "real_evidence_required": true,
+    "real_evidence_status": "PENDING_REAL_MANUAL_URL"
+  },
+  "interpretation": "The product has a complete evidence-gated path from graph case selection to synthetic closure replay and real manual evidence handoff. It remains correctly blocked for automatic execution and external claims until real human-provided evidence is captured.",
+  "blocked_actions": [
+    "client_facing_claim",
+    "automatic_nomination",
+    "implementation_execution",
+    "production_activation",
+    "automatic_merge",
+    "credential_handling"
+  ]
+}

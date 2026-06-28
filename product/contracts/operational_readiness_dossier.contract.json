@@ -1,0 +1,4 @@
+{
+  "contract": "casulo.operational_readiness_dossier.v0.1",
+  "purpose": "Produce a human-readable dossier of what is ready, what remains blocked and what evidence is still required."
+}

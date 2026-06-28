@@ -1,0 +1,17 @@
+{
+  "contract": "casulo.milestone_snapshot_operational_readiness.v0.1",
+  "purpose": "Freeze a product milestone snapshot after graph, review, approval, synthetic replay and real manual evidence handoff phases.",
+  "input": [
+    "outputs/prod461_480_real_manual_evidence_handoff.json",
+    "outputs/prod441_460_closure_replay_result.json",
+    "outputs/prod421_440_closure_ledger.json"
+  ],
+  "blocked_actions": [
+    "client_facing_claim",
+    "automatic_nomination",
+    "implementation_execution",
+    "production_activation",
+    "automatic_merge",
+    "credential_handling"
+  ]
+}

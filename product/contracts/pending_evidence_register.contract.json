@@ -1,0 +1,4 @@
+{
+  "contract": "casulo.pending_evidence_register.v0.1",
+  "purpose": "Track pending real manual URLs, missing production evidence and blocked actions before any external claim."
+}

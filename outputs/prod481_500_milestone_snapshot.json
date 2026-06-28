@@ -1,0 +1,83 @@
+{
+  "status": "PASS",
+  "milestone": "PROD-181..480 Operational Cube Evidence-Gated Issue Workflow",
+  "generated_at": "2026-06-28T23:31:39+00:00",
+  "latest_commit": "4583ff9",
+  "branch": "main",
+  "phase_count": 15,
+  "phase_tags_found": 15,
+  "missing_tags": [],
+  "output_inventory": [
+    {
+      "path": "outputs/prod461_480_real_manual_evidence_handoff.json",
+      "exists": true,
+      "status": "PASS"
+    },
+    {
+      "path": "outputs/prod461_480_readiness.json",
+      "exists": true,
+      "status": "PASS"
+    },
+    {
+      "path": "outputs/prod461_480_audit_report.json",
+      "exists": true,
+      "status": "PASS"
+    },
+    {
+      "path": "outputs/prod441_460_closure_replay_result.json",
+      "exists": true,
+      "status": "PASS"
+    },
+    {
+      "path": "outputs/prod441_460_readiness.json",
+      "exists": true,
+      "status": "PASS"
+    },
+    {
+      "path": "outputs/prod421_440_closure_ledger.json",
+      "exists": true,
+      "status": "PASS"
+    },
+    {
+      "path": "outputs/prod401_420_manual_issue_evidence_capture.json",
+      "exists": true,
+      "status": "PASS"
+    },
+    {
+      "path": "outputs/prod381_400_execution_guard.json",
+      "exists": true,
+      "status": "PASS"
+    },
+    {
+      "path": "outputs/prod361_380_issue_execution_guard.json",
+      "exists": true,
+      "status": "PASS"
+    },
+    {
+      "path": "outputs/prod321_340_review_console.json",
+      "exists": true,
+      "status": "PASS"
+    },
+    {
+      "path": "outputs/prod301_320_real_graph_case_aggregate.json",
+      "exists": true,
+      "status": "PASS"
+    }
+  ],
+  "pending_evidence": {
+    "pending_real_manual_url_count": 2,
+    "valid_real_evidence_count": 0,
+    "pending_manual_creation_count": 2,
+    "synthetic_created_manually_ready_to_link_count": 1,
+    "real_evidence_required": true,
+    "real_evidence_status": "PENDING_REAL_MANUAL_URL"
+  },
+  "blocked_actions": [
+    "client_facing_claim",
+    "automatic_nomination",
+    "implementation_execution",
+    "production_activation",
+    "automatic_merge",
+    "credential_handling"
+  ]
+}

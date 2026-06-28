@@ -1,0 +1,5 @@
+{
+  "contract": "casulo.tag_chain_inventory.v0.1",
+  "purpose": "Capture local git commit/tag lineage for the current product milestone.",
+  "scope": "local_git_metadata_only"
+}

@@ -1,0 +1,11 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "CASULO Tag Chain Inventory",
+  "type": "object",
+  "required": [
+    "status",
+    "head",
+    "tags_at_head",
+    "recent_commits"
+  ]
+}

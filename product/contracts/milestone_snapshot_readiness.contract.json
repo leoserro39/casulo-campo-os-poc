@@ -1,0 +1,4 @@
+{
+  "contract": "casulo.milestone_snapshot_readiness.v0.1",
+  "purpose": "Gate readiness for next phase after milestone snapshot."
+}

@@ -1,0 +1,139 @@
+{
+  "status": "PASS",
+  "head": "4583ff9",
+  "branch": "main",
+  "tags_at_head": [
+    "product-real-manual-evidence-handoff-pack-v0.1"
+  ],
+  "recent_commits": [
+    "4583ff9 Add real manual evidence handoff pack",
+    "95af9ca Add closure replay synthetic manual url",
+    "d68aaf8 Add issue to state linkage closure ledger",
+    "2894f3f Add manual issue creation evidence capture",
+    "5e12cf7 Add minimal approved issue dry run",
+    "64da0d3 Add formal approval workflow issue guard",
+    "c7e862d Add manual issue promotion pack",
+    "1a2a6bc Add graph case review console",
+    "79c3bfc Add real anonymized graph case runner",
+    "960e9b6 Add graph task bridge practical backlog",
+    "fe7967c Add graph builder telemetry integration",
+    "d149c2c Add graph sync telemetry delta library v2",
+    "56dd64c Add multi seed stability drift runner",
+    "57a87a2 Add stochastic calibration anomaly lab",
+    "da0194d Add Enterprise parser case runner",
+    "e2d8a95 Add state evidence graph store baseline",
+    "9ff6c42 Add public HTTPS runtime FastAPI adapter",
+    "02fa1f4 Add Custom GPT Actions agent connector prototype",
+    "df31ef0 Add technical readiness incubator pack",
+    "6f40a0f Add real anonymous POC calibration runner"
+  ],
+  "status_short": "M product/api/product_runtime_api.py\n M product/api/services/product_runtime_service.py\n?? docs/product/321_MILESTONE_SNAPSHOT_OPERATIONAL_READINESS.md\n?? docs/product/322_TAG_CHAIN_INVENTORY.md\n?? docs/product/323_OPERATIONAL_READINESS_DOSSIER.md\n?? docs/product/324_PENDING_EVIDENCE_REGISTER.md\n?? docs/product/325_NO_AUTO_EXECUTION_MILESTONE.md\n?? docs/product/326_MILESTONE_REVIEW_POLICY.md\n?? docs/product/327_NEXT_CYCLE_OPTIONS.md\n?? docs/product/328_MILESTONE_ENDPOINTS.md\n?? docs/product/329_MILESTONE_AUDIT.md\n?? docs/product/330_SNAPSHOT_OVERVIEW.md\n?? outputs/prod481_500_milestone_snapshot_backups/\n?? product/contracts/milestone_snapshot_operational_readiness.contract.json\n?? product/contracts/milestone_snapshot_readiness.contract.json\n?? product/contracts/operational_readiness_dossier.contract.json\n?? product/contracts/pending_evidence_register.contract.json\n?? product/contracts/tag_chain_inventory.contract.json\n?? product/schemas/milestone_snapshot.schema.json\n?? product/schemas/operational_readiness_dossier.schema.json\n?? product/schemas/tag_chain_inventory.schema.json\n?? product/scripts/audit_milestone_snapshot_operational_readiness.py\n?? product/scripts/build_milestone_snapshot_operational_readiness.py\n?? product/scripts/run_milestone_snapshot_operational_readiness.py\n?? product/scripts/validate_milestone_snapshot_operational_readiness.py",
+  "phase_tags": [
+    {
+      "phase_id": "PROD-181..200",
+      "title": "Enterprise Parser Case Runner",
+      "tag": "product-enterprise-parser-case-runner-v0.1",
+      "commit": "da0194d",
+      "tag_found": true
+    },
+    {
+      "phase_id": "PROD-201..220",
+      "title": "Stochastic Calibration Anomaly Lab",
+      "tag": "product-stochastic-calibration-anomaly-lab-v0.1",
+      "commit": "57a87a2",
+      "tag_found": true
+    },
+    {
+      "phase_id": "PROD-221..240",
+      "title": "Multi Seed Stability Drift",
+      "tag": "product-multi-seed-stability-drift-v0.1",
+      "commit": "56dd64c",
+      "tag_found": true
+    },
+    {
+      "phase_id": "PROD-241..260",
+      "title": "Graph Sync Telemetry Delta Library v2",
+      "tag": "product-graph-sync-telemetry-delta-v2-v0.1",
+      "commit": "d149c2c",
+      "tag_found": true
+    },
+    {
+      "phase_id": "PROD-261..280",
+      "title": "Graph Builder Telemetry Integration",
+      "tag": "product-graph-builder-telemetry-integration-v0.1",
+      "commit": "fe7967c",
+      "tag_found": true
+    },
+    {
+      "phase_id": "PROD-281..300",
+      "title": "Graph Task Bridge Practical Backlog",
+      "tag": "product-graph-task-bridge-practical-backlog-v0.1",
+      "commit": "960e9b6",
+      "tag_found": true
+    },
+    {
+      "phase_id": "PROD-301..320",
+      "title": "Real Anonymized Graph Case Runner",
+      "tag": "product-real-anonymized-graph-case-runner-v0.1",
+      "commit": "79c3bfc",
+      "tag_found": true
+    },
+    {
+      "phase_id": "PROD-321..340",
+      "title": "Graph Case Review Console",
+      "tag": "product-graph-case-review-console-v0.1",
+      "commit": "1a2a6bc",
+      "tag_found": true
+    },
+    {
+      "phase_id": "PROD-341..360",
+      "title": "Manual Issue Promotion Pack",
+      "tag": "product-manual-issue-promotion-pack-v0.1",
+      "commit": "c7e862d",
+      "tag_found": true
+    },
+    {
+      "phase_id": "PROD-361..380",
+      "title": "Formal Approval Workflow Issue Guard",
+      "tag": "product-formal-approval-workflow-issue-guard-v0.1",
+      "commit": "64da0d3",
+      "tag_found": true
+    },
+    {
+      "phase_id": "PROD-381..400",
+      "title": "Minimal Approved Issue Dry Run",
+      "tag": "product-minimal-approved-issue-dry-run-v0.1",
+      "commit": "5e12cf7",
+      "tag_found": true
+    },
+    {
+      "phase_id": "PROD-401..420",
+      "title": "Manual Issue Creation Evidence Capture",
+      "tag": "product-manual-issue-creation-evidence-capture-v0.1",
+      "commit": "2894f3f",
+      "tag_found": true
+    },
+    {
+      "phase_id": "PROD-421..440",
+      "title": "Issue-to-State Linkage Closure Ledger",
+      "tag": "product-issue-to-state-linkage-closure-ledger-v0.1",
+      "commit": "d68aaf8",
+      "tag_found": true
+    },
+    {
+      "phase_id": "PROD-441..460",
+      "title": "Closure Replay Synthetic Manual URL",
+      "tag": "product-closure-replay-synthetic-manual-url-v0.1",
+      "commit": "95af9ca",
+      "tag_found": true
+    },
+    {
+      "phase_id": "PROD-461..480",
+      "title": "Real Manual Evidence Handoff Pack",
+      "tag": "product-real-manual-evidence-handoff-pack-v0.1",
+      "commit": "4583ff9",
+      "tag_found": true
+    }
+  ],
+  "missing_tags": []
+}
