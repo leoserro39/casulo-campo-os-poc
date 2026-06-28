@@ -1,0 +1,11 @@
+{
+  "contract": "casulo.task_prioritization.v0.1",
+  "purpose": "Prioritize task candidates by gate severity, delta type, repetition, origin and production impact.",
+  "priority_levels": [
+    "P0_BLOCKER",
+    "P1_REVIEW",
+    "P2_EVIDENCE_OR_TASK",
+    "P3_STRUCTURE",
+    "P4_CALIBRATION"
+  ]
+}

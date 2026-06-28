@@ -1,0 +1,11 @@
+{
+  "contract": "casulo.task_closure_rules.v0.1",
+  "closure_states": [
+    "OPEN_CANDIDATE",
+    "READY_FOR_ISSUE",
+    "MERGED_WITH_CLUSTER",
+    "HUMAN_REVIEW_REQUIRED",
+    "BLOCKED_PRODUCTION",
+    "CLOSED_NO_ACTION"
+  ]
+}

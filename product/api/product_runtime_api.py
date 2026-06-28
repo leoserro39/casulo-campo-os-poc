@@ -4,9 +4,16 @@ import argparse,json,mimetypes,sys
 from http.server import BaseHTTPRequestHandler,HTTPServer
 from pathlib import Path
 from urllib.parse import urlparse
-THIS_FILE=Path(__file__).resolve(); PRODUCT_ROOT=THIS_FILE.parents[1]; REPO_ROOT=PRODUCT_ROOT.parent; UI_ROOT=PRODUCT_ROOT/"ui"; sys.path.insert(0,str(PRODUCT_ROOT))
+
+THIS_FILE=Path(__file__).resolve()
+PRODUCT_ROOT=THIS_FILE.parents[1]
+REPO_ROOT=PRODUCT_ROOT.parent
+UI_ROOT=PRODUCT_ROOT/"ui"
+sys.path.insert(0,str(PRODUCT_ROOT))
 from api.services.product_runtime_service import ProductRuntimeService
+
 def json_bytes(data): return json.dumps(data,indent=2,ensure_ascii=False).encode("utf-8")
+
 class ProductRuntimeHandler(BaseHTTPRequestHandler):
     service=ProductRuntimeService(REPO_ROOT)
     def send_json(self,data,status=200):
@@ -19,13 +26,28 @@ class ProductRuntimeHandler(BaseHTTPRequestHandler):
         path=urlparse(self.path).path; clean=path.strip("/")
         try:
             if path in ["/","/ui","/ui/"]: return self.send_static(UI_ROOT/"index.html")
-            routes={"api/health":self.service.health,"api/product/status":self.service.product_status,"api/casulo/graph-builder-telemetry/candidate-graph":self.service.candidate_graph,"api/casulo/graph-builder-telemetry/missing-artifact-tasks":self.service.missing_artifact_tasks,"api/casulo/graph-builder-telemetry/result":self.service.graph_builder_result,"api/casulo/graph-builder-telemetry/native-policy":self.service.native_telemetry_policy,"api/casulo/graph-builder-telemetry/readiness":self.service.graph_builder_readiness,"api/casulo/graph-builder-telemetry/audit":self.service.graph_builder_audit,"api/reports":self.service.reports}
+            routes={
+                "api/health":self.service.health,
+                "api/product/status":self.service.product_status,
+                "api/casulo/graph-task-bridge/clusters":self.service.task_clusters,
+                "api/casulo/graph-task-bridge/issue-candidates":self.service.issue_candidates,
+                "api/casulo/graph-task-bridge/practical-backlog":self.service.practical_backlog,
+                "api/casulo/graph-task-bridge/closure-policy":self.service.task_closure_policy,
+                "api/casulo/graph-task-bridge/readiness":self.service.graph_task_bridge_readiness,
+                "api/casulo/graph-task-bridge/audit":self.service.graph_task_bridge_audit,
+                "api/reports":self.service.reports,
+            }
             if clean in routes: return self.send_json(routes[clean]())
             return self.send_json({"status":"NOT_FOUND","path":path},404)
-        except Exception as exc: return self.send_json({"status":"ERROR","error":str(exc)},500)
+        except Exception as exc:
+            return self.send_json({"status":"ERROR","error":str(exc)},500)
+
 def main():
     ap=argparse.ArgumentParser(); ap.add_argument("--host",default="127.0.0.1"); ap.add_argument("--port",type=int,default=8097); args=ap.parse_args()
-    server=HTTPServer((args.host,args.port),ProductRuntimeHandler); print(f"Operational Cube product runtime API/UI running at http://{args.host}:{args.port}"); print("Open: /ui"); print("Try: /api/health, /api/casulo/graph-builder-telemetry/result")
+    server=HTTPServer((args.host,args.port),ProductRuntimeHandler)
+    print(f"Operational Cube product runtime API/UI running at http://{args.host}:{args.port}")
+    print("Open: /ui")
+    print("Try: /api/health, /api/casulo/graph-task-bridge/practical-backlog")
     try: server.serve_forever()
     except KeyboardInterrupt: print("Stopping product runtime API/UI.")
 if __name__=="__main__": main()

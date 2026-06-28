@@ -1,0 +1,25 @@
+# Graph Task Bridge Readiness
+
+- contract_version: `casulo.graph_task_bridge_readiness.v0.1`
+- status: `PASS`
+- decision: `READY_FOR_PRACTICAL_TASK_SELECTION_BEFORE_REAL_GRAPH_CASES`
+
+## Ready For
+- `task clustering`
+- `issue candidate review`
+- `practical backlog selection`
+- `human approval before issue creation`
+
+## Not Ready For
+- `automatic issue creation`
+- `production graph automation`
+- `external client claims`
+- next: `Select P0/P1/P2 issue candidates, then run real anonymized graph cases.`
+
+## Blocked Actions
+- `client_facing_claim`
+- `automatic_nomination`
+- `implementation_execution`
+- `production_activation`
+- `automatic_merge`
+- `credential_handling`

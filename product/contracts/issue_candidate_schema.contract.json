@@ -1,0 +1,4 @@
+{
+  "contract": "casulo.issue_candidate_schema.v0.1",
+  "purpose": "Generate GitHub issue-ready candidates without opening issues automatically."
+}

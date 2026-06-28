@@ -1,0 +1,43 @@
+{
+  "status": "PASS",
+  "bridge": "casulo.graph_task_bridge.v0.1",
+  "source_graph_id": "GBTI-261280",
+  "source_task_count": 50,
+  "cluster_count": 11,
+  "issue_candidate_count": 11,
+  "priority_counts": {
+    "P0_BLOCKER": 4,
+    "P1_REVIEW": 3,
+    "P2_EVIDENCE_OR_TASK": 4
+  },
+  "gate_counts": {
+    "HUMAN_REVIEW_REQUIRED": 3,
+    "BLOCKED_UNSUPPORTED": 1,
+    "ASK_FOR_EVIDENCE": 1,
+    "TASK_ONLY": 3,
+    "STRUCTURE_ONLY": 3
+  },
+  "delta_counts": {
+    "delta_conflict": 1,
+    "delta_domain": 1,
+    "delta_human_review": 1,
+    "delta_production": 1,
+    "delta_evidence": 1,
+    "delta_model_behavior": 1,
+    "delta_execution": 1,
+    "delta_missingness": 1,
+    "delta_graph_structure": 1,
+    "delta_ambiguity": 1,
+    "delta_rule": 1
+  },
+  "decision": "P0_BLOCKERS_REQUIRE_REVIEW_BEFORE_REAL_CASES",
+  "interpretation": "Graph-builder task candidates were deduplicated and converted into reviewable backlog/issue candidates. This keeps the system practical and prevents endless recommendation loops.",
+  "blocked_actions": [
+    "client_facing_claim",
+    "automatic_nomination",
+    "implementation_execution",
+    "production_activation",
+    "automatic_merge",
+    "credential_handling"
+  ]
+}

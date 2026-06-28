@@ -1,0 +1,20 @@
+{
+  "status": "PASS",
+  "policy": "Graph task bridge practical closure policy",
+  "rules": [
+    "Do not create one issue per raw task.",
+    "Group by delta, artifact type and gate.",
+    "Promote only P0/P1/P2 clusters to issue candidates.",
+    "Keep P3/P4 as candidate backlog unless repeated in real cases.",
+    "Never auto-create GitHub issues without human approval.",
+    "Production blockers stop the real-case sequence until reviewed."
+  ],
+  "blocked_actions": [
+    "client_facing_claim",
+    "automatic_nomination",
+    "implementation_execution",
+    "production_activation",
+    "automatic_merge",
+    "credential_handling"
+  ]
+}

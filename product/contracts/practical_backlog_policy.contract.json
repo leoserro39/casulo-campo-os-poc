@@ -1,0 +1,4 @@
+{
+  "contract": "casulo.practical_backlog_policy.v0.1",
+  "purpose": "Avoid endless recommendations by deduplicating, grouping and selecting actionable next tasks."
+}

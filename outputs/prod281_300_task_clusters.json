@@ -1,0 +1,270 @@
+{
+  "status": "PASS",
+  "clusters": [
+    {
+      "cluster_id": "CLUSTER-002",
+      "source_delta": "delta_conflict",
+      "artifact_type": "arbitration",
+      "recommended_gate": "HUMAN_REVIEW_REQUIRED",
+      "priority": "P0_BLOCKER",
+      "priority_score": 100,
+      "task_count": 3,
+      "task_ids": [
+        "TASK-003",
+        "TASK-021",
+        "TASK-046"
+      ],
+      "origins": [
+        "GBTI-261280-N03",
+        "GBTI-261280-E03",
+        "GBTI-261280-E28"
+      ],
+      "reason": "Resolve conflicting sources/states/rules.",
+      "closure_state": "READY_FOR_ISSUE"
+    },
+    {
+      "cluster_id": "CLUSTER-003",
+      "source_delta": "delta_domain",
+      "artifact_type": "domain_owner",
+      "recommended_gate": "HUMAN_REVIEW_REQUIRED",
+      "priority": "P0_BLOCKER",
+      "priority_score": 100,
+      "task_count": 9,
+      "task_ids": [
+        "TASK-006",
+        "TASK-011",
+        "TASK-016",
+        "TASK-019",
+        "TASK-020",
+        "TASK-022",
+        "TASK-024",
+        "TASK-031",
+        "TASK-047"
+      ],
+      "origins": [
+        "GBTI-261280-N06",
+        "GBTI-261280-N11",
+        "GBTI-261280-N16",
+        "GBTI-261280-E01",
+        "GBTI-261280-E02",
+        "GBTI-261280-E04",
+        "GBTI-261280-E06",
+        "GBTI-261280-E13",
+        "GBTI-261280-E29"
+      ],
+      "reason": "Assign domain owner for sensitive decision.",
+      "closure_state": "READY_FOR_ISSUE"
+    },
+    {
+      "cluster_id": "CLUSTER-007",
+      "source_delta": "delta_human_review",
+      "artifact_type": "human_review",
+      "recommended_gate": "HUMAN_REVIEW_REQUIRED",
+      "priority": "P0_BLOCKER",
+      "priority_score": 100,
+      "task_count": 3,
+      "task_ids": [
+        "TASK-002",
+        "TASK-036",
+        "TASK-043"
+      ],
+      "origins": [
+        "GBTI-261280-N02",
+        "GBTI-261280-E18",
+        "GBTI-261280-E25"
+      ],
+      "reason": "Route to human owner or reviewer.",
+      "closure_state": "READY_FOR_ISSUE"
+    },
+    {
+      "cluster_id": "CLUSTER-010",
+      "source_delta": "delta_production",
+      "artifact_type": "production_readiness",
+      "recommended_gate": "BLOCKED_UNSUPPORTED",
+      "priority": "P0_BLOCKER",
+      "priority_score": 100,
+      "task_count": 1,
+      "task_ids": [
+        "TASK-017"
+      ],
+      "origins": [
+        "GBTI-261280-N17"
+      ],
+      "reason": "Provide auth, audit, rollback, monitoring and support plan.",
+      "closure_state": "READY_FOR_ISSUE"
+    },
+    {
+      "cluster_id": "CLUSTER-004",
+      "source_delta": "delta_evidence",
+      "artifact_type": "evidence",
+      "recommended_gate": "ASK_FOR_EVIDENCE",
+      "priority": "P1_REVIEW",
+      "priority_score": 93,
+      "task_count": 4,
+      "task_ids": [
+        "TASK-008",
+        "TASK-018",
+        "TASK-023",
+        "TASK-035"
+      ],
+      "origins": [
+        "GBTI-261280-N08",
+        "GBTI-261280-N18",
+        "GBTI-261280-E05",
+        "GBTI-261280-E17"
+      ],
+      "reason": "Attach source/evidence before committing graph relation.",
+      "closure_state": "READY_FOR_ISSUE"
+    },
+    {
+      "cluster_id": "CLUSTER-009",
+      "source_delta": "delta_model_behavior",
+      "artifact_type": "calibration_review",
+      "recommended_gate": "TASK_ONLY",
+      "priority": "P1_REVIEW",
+      "priority_score": 89,
+      "task_count": 7,
+      "task_ids": [
+        "TASK-009",
+        "TASK-027",
+        "TASK-032",
+        "TASK-037",
+        "TASK-039",
+        "TASK-048",
+        "TASK-049"
+      ],
+      "origins": [
+        "GBTI-261280-N09",
+        "GBTI-261280-E09",
+        "GBTI-261280-E14",
+        "GBTI-261280-E19",
+        "GBTI-261280-E21",
+        "GBTI-261280-E30",
+        "GBTI-261280-E31"
+      ],
+      "reason": "Review anomaly pattern against calibration history.",
+      "closure_state": "READY_FOR_ISSUE"
+    },
+    {
+      "cluster_id": "CLUSTER-005",
+      "source_delta": "delta_execution",
+      "artifact_type": "test_plan",
+      "recommended_gate": "TASK_ONLY",
+      "priority": "P1_REVIEW",
+      "priority_score": 87,
+      "task_count": 3,
+      "task_ids": [
+        "TASK-005",
+        "TASK-010",
+        "TASK-040"
+      ],
+      "origins": [
+        "GBTI-261280-N05",
+        "GBTI-261280-N10",
+        "GBTI-261280-E22"
+      ],
+      "reason": "Provide runtime, dependency and test context before execution.",
+      "closure_state": "READY_FOR_ISSUE"
+    },
+    {
+      "cluster_id": "CLUSTER-008",
+      "source_delta": "delta_missingness",
+      "artifact_type": "document",
+      "recommended_gate": "TASK_ONLY",
+      "priority": "P2_EVIDENCE_OR_TASK",
+      "priority_score": 79,
+      "task_count": 1,
+      "task_ids": [
+        "TASK-030"
+      ],
+      "origins": [
+        "GBTI-261280-E12"
+      ],
+      "reason": "Provide missing required document, field, test or domain artifact.",
+      "closure_state": "READY_FOR_ISSUE"
+    },
+    {
+      "cluster_id": "CLUSTER-006",
+      "source_delta": "delta_graph_structure",
+      "artifact_type": "graph_repair",
+      "recommended_gate": "STRUCTURE_ONLY",
+      "priority": "P2_EVIDENCE_OR_TASK",
+      "priority_score": 73,
+      "task_count": 11,
+      "task_ids": [
+        "TASK-001",
+        "TASK-007",
+        "TASK-014",
+        "TASK-025",
+        "TASK-028",
+        "TASK-029",
+        "TASK-034",
+        "TASK-038",
+        "TASK-044",
+        "TASK-045",
+        "TASK-050"
+      ],
+      "origins": [
+        "GBTI-261280-N01",
+        "GBTI-261280-N07",
+        "GBTI-261280-N14",
+        "GBTI-261280-E07",
+        "GBTI-261280-E10",
+        "GBTI-261280-E11",
+        "GBTI-261280-E16",
+        "GBTI-261280-E20",
+        "GBTI-261280-E26",
+        "GBTI-261280-E27",
+        "GBTI-261280-E32"
+      ],
+      "reason": "Repair bridge, relation type or orphan node.",
+      "closure_state": "READY_FOR_ISSUE"
+    },
+    {
+      "cluster_id": "CLUSTER-001",
+      "source_delta": "delta_ambiguity",
+      "artifact_type": "interpretation_split",
+      "recommended_gate": "STRUCTURE_ONLY",
+      "priority": "P2_EVIDENCE_OR_TASK",
+      "priority_score": 66,
+      "task_count": 6,
+      "task_ids": [
+        "TASK-012",
+        "TASK-015",
+        "TASK-026",
+        "TASK-033",
+        "TASK-041",
+        "TASK-042"
+      ],
+      "origins": [
+        "GBTI-261280-N12",
+        "GBTI-261280-N15",
+        "GBTI-261280-E08",
+        "GBTI-261280-E15",
+        "GBTI-261280-E23",
+        "GBTI-261280-E24"
+      ],
+      "reason": "Split possible interpretations and keep candidate-only relation.",
+      "closure_state": "READY_FOR_ISSUE"
+    },
+    {
+      "cluster_id": "CLUSTER-011",
+      "source_delta": "delta_rule",
+      "artifact_type": "rule_map",
+      "recommended_gate": "STRUCTURE_ONLY",
+      "priority": "P2_EVIDENCE_OR_TASK",
+      "priority_score": 60,
+      "task_count": 2,
+      "task_ids": [
+        "TASK-004",
+        "TASK-013"
+      ],
+      "origins": [
+        "GBTI-261280-N04",
+        "GBTI-261280-N13"
+      ],
+      "reason": "Map rule source, scope, exception and applicability.",
+      "closure_state": "READY_FOR_ISSUE"
+    }
+  ]
+}

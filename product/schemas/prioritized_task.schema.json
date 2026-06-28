@@ -1,0 +1,13 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "CASULO Prioritized Task",
+  "type": "object",
+  "required": [
+    "cluster_id",
+    "priority",
+    "source_delta",
+    "artifact_type",
+    "recommended_gate",
+    "task_count"
+  ]
+}
