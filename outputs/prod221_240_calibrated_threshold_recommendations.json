@@ -1,0 +1,13 @@
+{
+  "status": "PASS",
+  "recommendations": {
+    "status": "PROVISIONAL",
+    "hallucination_attention_threshold": 35,
+    "hallucination_review_threshold": 45,
+    "delta_control_attention_threshold": 82,
+    "delta_control_review_threshold": 80,
+    "evidence_coverage_attention_threshold": 45,
+    "anomaly_rate_attention_threshold": 0.25,
+    "note": "Synthetic thresholds only. Confirm with anonymized real documents before external claims."
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "contract": "casulo.stability_thresholds.v0.1",
+  "purpose": "Define when a metric is stable enough for calibration discussion.",
+  "thresholds": {
+    "max_cv_core_metric": 0.08,
+    "max_cv_delta_control": 0.04,
+    "max_anomaly_rate_warning": 0.25,
+    "min_delta_control_mean": 80
+  }
+}

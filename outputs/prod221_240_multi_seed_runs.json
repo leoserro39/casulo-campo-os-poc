@@ -1,0 +1,2935 @@
+{
+  "status": "PASS",
+  "runs": [
+    {
+      "seed": 101,
+      "summary": {
+        "seed": 101,
+        "cases_count": 300,
+        "avg_direct_hallucination": 83.72,
+        "avg_casulo_hallucination": 27.5,
+        "avg_hallucination_reduction": 56.22,
+        "avg_delta_control": 85.97,
+        "avg_residual_delta": 52.97,
+        "avg_evidence_coverage": 45.95,
+        "anomaly_count": 51,
+        "anomaly_rate": 0.17,
+        "invented_fields_total": 56,
+        "unsupported_fields_total": 521,
+        "production_blocked_all_cases": true
+      },
+      "family_behavior": [
+        {
+          "case_family": "audit_documental",
+          "count": 76,
+          "avg_direct_hallucination": 87.39,
+          "avg_casulo_hallucination": 28.22,
+          "avg_hallucination_reduction": 59.17,
+          "avg_residual_delta": 54.49,
+          "avg_delta_control": 85.92,
+          "avg_evidence_coverage": 44.83,
+          "std_casulo_hallucination": 7.0982,
+          "std_delta_control": 2.6939
+        },
+        {
+          "case_family": "parser_documental",
+          "count": 72,
+          "avg_direct_hallucination": 64.42,
+          "avg_casulo_hallucination": 20.06,
+          "avg_hallucination_reduction": 44.36,
+          "avg_residual_delta": 52.96,
+          "avg_delta_control": 85.83,
+          "avg_evidence_coverage": 45.86,
+          "std_casulo_hallucination": 4.9802,
+          "std_delta_control": 2.7538
+        },
+        {
+          "case_family": "rule_extraction",
+          "count": 76,
+          "avg_direct_hallucination": 92.47,
+          "avg_casulo_hallucination": 32.13,
+          "avg_hallucination_reduction": 60.34,
+          "avg_residual_delta": 54.22,
+          "avg_delta_control": 85.76,
+          "avg_evidence_coverage": 44.75,
+          "std_casulo_hallucination": 7.6164,
+          "std_delta_control": 2.7714
+        },
+        {
+          "case_family": "software_review",
+          "count": 76,
+          "avg_direct_hallucination": 89.58,
+          "avg_casulo_hallucination": 29.2,
+          "avg_hallucination_reduction": 60.38,
+          "avg_residual_delta": 50.21,
+          "avg_delta_control": 86.36,
+          "avg_evidence_coverage": 48.34,
+          "std_casulo_hallucination": 6.1001,
+          "std_delta_control": 2.5063
+        }
+      ],
+      "ambiguity_behavior": [
+        {
+          "ambiguity_bucket": "A0_very_low",
+          "count": 54,
+          "avg_direct_hallucination": 69.85,
+          "avg_casulo_hallucination": 21.61,
+          "avg_hallucination_reduction": 48.24,
+          "avg_residual_delta": 39.59,
+          "avg_delta_control": 88.76,
+          "avg_evidence_coverage": 60.96,
+          "std_casulo_hallucination": 5.9517,
+          "std_delta_control": 1.9994
+        },
+        {
+          "ambiguity_bucket": "A1_low",
+          "count": 52,
+          "avg_direct_hallucination": 78.1,
+          "avg_casulo_hallucination": 24.58,
+          "avg_hallucination_reduction": 53.52,
+          "avg_residual_delta": 48.88,
+          "avg_delta_control": 87.19,
+          "avg_evidence_coverage": 51.4,
+          "std_casulo_hallucination": 6.0712,
+          "std_delta_control": 1.6295
+        },
+        {
+          "ambiguity_bucket": "A2_medium",
+          "count": 71,
+          "avg_direct_hallucination": 83.69,
+          "avg_casulo_hallucination": 26.99,
+          "avg_hallucination_reduction": 56.7,
+          "avg_residual_delta": 53.93,
+          "avg_delta_control": 85.86,
+          "avg_evidence_coverage": 46.2,
+          "std_casulo_hallucination": 7.1611,
+          "std_delta_control": 2.203
+        },
+        {
+          "ambiguity_bucket": "A3_high",
+          "count": 58,
+          "avg_direct_hallucination": 92.45,
+          "avg_casulo_hallucination": 31.57,
+          "avg_hallucination_reduction": 60.88,
+          "avg_residual_delta": 58.72,
+          "avg_delta_control": 84.81,
+          "avg_evidence_coverage": 37.97,
+          "std_casulo_hallucination": 7.2922,
+          "std_delta_control": 2.2008
+        },
+        {
+          "ambiguity_bucket": "A4_extreme",
+          "count": 65,
+          "avg_direct_hallucination": 91.98,
+          "avg_casulo_hallucination": 31.66,
+          "avg_hallucination_reduction": 60.32,
+          "avg_residual_delta": 61.17,
+          "avg_delta_control": 83.83,
+          "avg_evidence_coverage": 35.95,
+          "std_casulo_hallucination": 7.6002,
+          "std_delta_control": 2.2227
+        }
+      ],
+      "risk_behavior": [
+        {
+          "domain_risk": "high",
+          "count": 102,
+          "avg_direct_hallucination": 95.79,
+          "avg_casulo_hallucination": 33.66,
+          "avg_hallucination_reduction": 62.14,
+          "avg_residual_delta": 55.54,
+          "avg_delta_control": 85.56,
+          "avg_evidence_coverage": 43.46,
+          "std_casulo_hallucination": 6.9317,
+          "std_delta_control": 2.6479
+        },
+        {
+          "domain_risk": "low",
+          "count": 40,
+          "avg_direct_hallucination": 57.2,
+          "avg_casulo_hallucination": 17.88,
+          "avg_hallucination_reduction": 39.33,
+          "avg_residual_delta": 49.52,
+          "avg_delta_control": 86.45,
+          "avg_evidence_coverage": 50.23,
+          "std_casulo_hallucination": 3.6276,
+          "std_delta_control": 2.4182
+        },
+        {
+          "domain_risk": "medium",
+          "count": 158,
+          "avg_direct_hallucination": 82.64,
+          "avg_casulo_hallucination": 25.96,
+          "avg_hallucination_reduction": 56.68,
+          "avg_residual_delta": 52.18,
+          "avg_delta_control": 86.11,
+          "avg_evidence_coverage": 46.47,
+          "std_casulo_hallucination": 5.8232,
+          "std_delta_control": 2.7512
+        }
+      ],
+      "anomalies": [
+        {
+          "case_id": "SEED-101-STOCH-0014-AUDIT_DOCUMENTAL",
+          "case_family": "audit_documental",
+          "ambiguity_bucket": "A4_extreme",
+          "metric": "casulo_hallucination",
+          "value": 49,
+          "reason": "z_score_outlier"
+        },
+        {
+          "case_id": "SEED-101-STOCH-0119-SOFTWARE_REVIEW",
+          "case_family": "software_review",
+          "ambiguity_bucket": "A3_high",
+          "metric": "casulo_hallucination",
+          "value": 49,
+          "reason": "z_score_outlier"
+        },
+        {
+          "case_id": "SEED-101-STOCH-0165-RULE_EXTRACTION",
+          "case_family": "rule_extraction",
+          "ambiguity_bucket": "A3_high",
+          "metric": "casulo_hallucination",
+          "value": 47,
+          "reason": "z_score_outlier"
+        },
+        {
+          "case_id": "SEED-101-STOCH-0166-RULE_EXTRACTION",
+          "case_family": "rule_extraction",
+          "ambiguity_bucket": "A3_high",
+          "metric": "casulo_hallucination",
+          "value": 47,
+          "reason": "z_score_outlier"
+        },
+        {
+          "case_id": "SEED-101-STOCH-0045-PARSER_DOCUMENTAL",
+          "case_family": "parser_documental",
+          "ambiguity_bucket": "A2_medium",
+          "metric": "hallucination_reduction",
+          "value": 30,
+          "reason": "z_score_outlier"
+        },
+        {
+          "case_id": "SEED-101-STOCH-0089-PARSER_DOCUMENTAL",
+          "case_family": "parser_documental",
+          "ambiguity_bucket": "A1_low",
+          "metric": "hallucination_reduction",
+          "value": 32,
+          "reason": "z_score_outlier"
+        },
+        {
+          "case_id": "SEED-101-STOCH-0094-PARSER_DOCUMENTAL",
+          "case_family": "parser_documental",
+          "ambiguity_bucket": "A0_very_low",
+          "metric": "hallucination_reduction",
+          "value": 25,
+          "reason": "z_score_outlier"
+        },
+        {
+          "case_id": "SEED-101-STOCH-0094-PARSER_DOCUMENTAL",
+          "case_family": "parser_documental",
+          "ambiguity_bucket": "A0_very_low",
+          "metric": "hallucination_reduction",
+          "value": 25,
+          "reason": "iqr_outlier"
+        },
+        {
+          "case_id": "SEED-101-STOCH-0120-PARSER_DOCUMENTAL",
+          "case_family": "parser_documental",
+          "ambiguity_bucket": "A0_very_low",
+          "metric": "hallucination_reduction",
+          "value": 25,
+          "reason": "z_score_outlier"
+        },
+        {
+          "case_id": "SEED-101-STOCH-0120-PARSER_DOCUMENTAL",
+          "case_family": "parser_documental",
+          "ambiguity_bucket": "A0_very_low",
+          "metric": "hallucination_reduction",
+          "value": 25,
+          "reason": "iqr_outlier"
+        },
+        {
+          "case_id": "SEED-101-STOCH-0142-PARSER_DOCUMENTAL",
+          "case_family": "parser_documental",
+          "ambiguity_bucket": "A1_low",
+          "metric": "hallucination_reduction",
+          "value": 31,
+          "reason": "z_score_outlier"
+        },
+        {
+          "case_id": "SEED-101-STOCH-0168-PARSER_DOCUMENTAL",
+          "case_family": "parser_documental",
+          "ambiguity_bucket": "A2_medium",
+          "metric": "hallucination_reduction",
+          "value": 32,
+          "reason": "z_score_outlier"
+        },
+        {
+          "case_id": "SEED-101-STOCH-0224-PARSER_DOCUMENTAL",
+          "case_family": "parser_documental",
+          "ambiguity_bucket": "A0_very_low",
+          "metric": "hallucination_reduction",
+          "value": 31,
+          "reason": "z_score_outlier"
+        },
+        {
+          "case_id": "SEED-101-STOCH-0227-AUDIT_DOCUMENTAL",
+          "case_family": "audit_documental",
+          "ambiguity_bucket": "A0_very_low",
+          "metric": "hallucination_reduction",
+          "value": 32,
+          "reason": "z_score_outlier"
+        },
+        {
+          "case_id": "SEED-101-STOCH-0273-PARSER_DOCUMENTAL",
+          "case_family": "parser_documental",
+          "ambiguity_bucket": "A0_very_low",
+          "metric": "hallucination_reduction",
+          "value": 25,
+          "reason": "z_score_outlier"
+        },
+        {
+          "case_id": "SEED-101-STOCH-0273-PARSER_DOCUMENTAL",
+          "case_family": "parser_documental",
+          "ambiguity_bucket": "A0_very_low",
+          "metric": "hallucination_reduction",
+          "value": 25,
+          "reason": "iqr_outlier"
+        },
+        {
+          "case_id": "SEED-101-STOCH-0273-PARSER_DOCUMENTAL",
+          "case_family": "parser_documental",
+          "ambiguity_bucket": "A0_very_low",
+          "metric": "residual_delta_index",
+          "value": 10,
+          "reason": "z_score_outlier"
+        },
+        {
+          "case_id": "SEED-101-STOCH-0293-RULE_EXTRACTION",
+          "case_family": "rule_extraction",
+          "ambiguity_bucket": "A0_very_low",
+          "metric": "residual_delta_index",
+          "value": 5,
+          "reason": "z_score_outlier"
+        },
+        {
+          "case_id": "SEED-101-STOCH-0014-AUDIT_DOCUMENTAL",
+          "case_family": "audit_documental",
+          "ambiguity_bucket": "A4_extreme",
+          "metric": "delta_control_score",
+          "value": 79,
+          "reason": "z_score_outlier"
+        },
+        {
+          "case_id": "SEED-101-STOCH-0131-RULE_EXTRACTION",
+          "case_family": "rule_extraction",
+          "ambiguity_bucket": "A0_very_low",
+          "metric": "delta_control_score",
+          "value": 93,
+          "reason": "z_score_outlier"
+        },
+        {
+          "case_id": "SEED-101-STOCH-0157-SOFTWARE_REVIEW",
+          "case_family": "software_review",
+          "ambiguity_bucket": "A0_very_low",
+          "metric": "delta_control_score",
+          "value": 93,
+          "reason": "z_score_outlier"
+        },
+        {
+          "case_id": "SEED-101-STOCH-0169-RULE_EXTRACTION",
+          "case_family": "rule_extraction",
+          "ambiguity_bucket": "A4_extreme",
+          "metric": "delta_control_score",
+          "value": 79,
+          "reason": "z_score_outlier"
+        },
+        {
+          "case_id": "SEED-101-STOCH-0181-PARSER_DOCUMENTAL",
+          "case_family": "parser_documental",
+          "ambiguity_bucket": "A4_extreme",
+          "metric": "delta_control_score",
+          "value": 79,
+          "reason": "z_score_outlier"
+        },
+        {
+          "case_id": "SEED-101-STOCH-0227-AUDIT_DOCUMENTAL",
+          "case_family": "audit_documental",
+          "ambiguity_bucket": "A0_very_low",
+          "metric": "delta_control_score",
+          "value": 93,
+          "reason": "z_score_outlier"
+        },
+        {
+          "case_id": "SEED-101-STOCH-0014-AUDIT_DOCUMENTAL",
+          "case_family": "audit_documental",
+          "ambiguity_bucket": "A4_extreme",
+          "metric": "evidence_coverage",
+          "value": 6,
+          "reason": "z_score_outlier"
+        },
+        {
+          "case_id": "SEED-101-STOCH-0120-PARSER_DOCUMENTAL",
+          "case_family": "parser_documental",
+          "ambiguity_bucket": "A0_very_low",
+          "metric": "evidence_coverage",
+          "value": 90,
+          "reason": "z_score_outlier"
+        },
+        {
+          "case_id": "SEED-101-STOCH-0154-RULE_EXTRACTION",
+          "case_family": "rule_extraction",
+          "ambiguity_bucket": "A4_extreme",
+          "metric": "evidence_coverage",
+          "value": 6,
+          "reason": "z_score_outlier"
+        },
+        {
+          "case_id": "SEED-101-STOCH-0169-RULE_EXTRACTION",
+          "case_family": "rule_extraction",
+          "ambiguity_bucket": "A4_extreme",
+          "metric": "evidence_coverage",
+          "value": 4,
+          "reason": "z_score_outlier"
+        },
+        {
+          "case_id": "SEED-101-STOCH-0181-PARSER_DOCUMENTAL",
+          "case_family": "parser_documental",
+          "ambiguity_bucket": "A4_extreme",
+          "metric": "evidence_coverage",
+          "value": 2,
+          "reason": "z_score_outlier"
+        },
+        {
+          "case_id": "SEED-101-STOCH-0227-AUDIT_DOCUMENTAL",
+          "case_family": "audit_documental",
+          "ambiguity_bucket": "A0_very_low",
+          "metric": "evidence_coverage",
+          "value": 86,
+          "reason": "z_score_outlier"
+        },
+        {
+          "case_id": "SEED-101-STOCH-0273-PARSER_DOCUMENTAL",
+          "case_family": "parser_documental",
+          "ambiguity_bucket": "A0_very_low",
+          "metric": "evidence_coverage",
+          "value": 90,
+          "reason": "z_score_outlier"
+        },
+        {
+          "case_id": "SEED-101-STOCH-0293-RULE_EXTRACTION",
+          "case_family": "rule_extraction",
+          "ambiguity_bucket": "A0_very_low",
+          "metric": "evidence_coverage",
+          "value": 88,
+          "reason": "z_score_outlier"
+        },
+        {
+          "case_id": "SEED-101-STOCH-0014-AUDIT_DOCUMENTAL",
+          "case_family": "audit_documental",
+          "ambiguity_bucket": "A4_extreme",
+          "metric": "ambiguity_delta_control_interaction",
+          "value": 79,
+          "reason": "extreme_ambiguity_control_drop"
+        },
+        {
+          "case_id": "SEED-101-STOCH-0046-SOFTWARE_REVIEW",
+          "case_family": "software_review",
+          "ambiguity_bucket": "A0_very_low",
+          "metric": "low_ambiguity_high_hallucination",
+          "value": 34,
+          "reason": "unexpected_low_ambiguity_risk"
+        },
+        {
+          "case_id": "SEED-101-STOCH-0062-SOFTWARE_REVIEW",
+          "case_family": "software_review",
+          "ambiguity_bucket": "A0_very_low",
+          "metric": "low_ambiguity_high_hallucination",
+          "value": 31,
+          "reason": "unexpected_low_ambiguity_risk"
+        },
+        {
+          "case_id": "SEED-101-STOCH-0076-AUDIT_DOCUMENTAL",
+          "case_family": "audit_documental",
+          "ambiguity_bucket": "A0_very_low",
+          "metric": "low_ambiguity_high_hallucination",
+          "value": 26,
+          "reason": "unexpected_low_ambiguity_risk"
+        },
+        {
+          "case_id": "SEED-101-STOCH-0078-SOFTWARE_REVIEW",
+          "case_family": "software_review",
+          "ambiguity_bucket": "A0_very_low",
+          "metric": "low_ambiguity_high_hallucination",
+          "value": 26,
+          "reason": "unexpected_low_ambiguity_risk"
+        },
+        {
+          "case_id": "SEED-101-STOCH-0088-SOFTWARE_REVIEW",
+          "case_family": "software_review",
+          "ambiguity_bucket": "A0_very_low",
+          "metric": "low_ambiguity_high_hallucination",
+          "value": 30,
+          "reason": "unexpected_low_ambiguity_risk"
+        },
+        {
+          "case_id": "SEED-101-STOCH-0108-SOFTWARE_REVIEW",
+          "case_family": "software_review",
+          "ambiguity_bucket": "A0_very_low",
+          "metric": "low_ambiguity_high_hallucination",
+          "value": 32,
+          "reason": "unexpected_low_ambiguity_risk"
+        },
+        {
+          "case_id": "SEED-101-STOCH-0125-AUDIT_DOCUMENTAL",
+          "case_family": "audit_documental",
+          "ambiguity_bucket": "A0_very_low",
+          "metric": "low_ambiguity_high_hallucination",
+          "value": 26,
+          "reason": "unexpected_low_ambiguity_risk"
+        },
+        {
+          "case_id": "SEED-101-STOCH-0131-RULE_EXTRACTION",
+          "case_family": "rule_extraction",
+          "ambiguity_bucket": "A0_very_low",
+          "metric": "low_ambiguity_high_hallucination",
+          "value": 26,
+          "reason": "unexpected_low_ambiguity_risk"
+        },
+        {
+          "case_id": "SEED-101-STOCH-0169-RULE_EXTRACTION",
+          "case_family": "rule_extraction",
+          "ambiguity_bucket": "A4_extreme",
+          "metric": "ambiguity_delta_control_interaction",
+          "value": 79,
+          "reason": "extreme_ambiguity_control_drop"
+        },
+        {
+          "case_id": "SEED-101-STOCH-0181-PARSER_DOCUMENTAL",
+          "case_family": "parser_documental",
+          "ambiguity_bucket": "A4_extreme",
+          "metric": "ambiguity_delta_control_interaction",
+          "value": 79,
+          "reason": "extreme_ambiguity_control_drop"
+        },
+        {
+          "case_id": "SEED-101-STOCH-0184-SOFTWARE_REVIEW",
+          "case_family": "software_review",
+          "ambiguity_bucket": "A0_very_low",
+          "metric": "low_ambiguity_high_hallucination",
+          "value": 27,
+          "reason": "unexpected_low_ambiguity_risk"
+        },
+        {
+          "case_id": "SEED-101-STOCH-0211-SOFTWARE_REVIEW",
+          "case_family": "software_review",
+          "ambiguity_bucket": "A0_very_low",
+          "metric": "low_ambiguity_high_hallucination",
+          "value": 35,
+          "reason": "unexpected_low_ambiguity_risk"
+        },
+        {
+          "case_id": "SEED-101-STOCH-0242-RULE_EXTRACTION",
+          "case_family": "rule_extraction",
+          "ambiguity_bucket": "A0_very_low",
+          "metric": "low_ambiguity_high_hallucination",
+          "value": 26,
+          "reason": "unexpected_low_ambiguity_risk"
+        },
+        {
+          "case_id": "SEED-101-STOCH-0268-SOFTWARE_REVIEW",
+          "case_family": "software_review",
+          "ambiguity_bucket": "A0_very_low",
+          "metric": "low_ambiguity_high_hallucination",
+          "value": 27,
+          "reason": "unexpected_low_ambiguity_risk"
+        },
+        {
+          "case_id": "SEED-101-STOCH-0276-SOFTWARE_REVIEW",
+          "case_family": "software_review",
+          "ambiguity_bucket": "A0_very_low",
+          "metric": "low_ambiguity_high_hallucination",
+          "value": 28,
+          "reason": "unexpected_low_ambiguity_risk"
+        },
+        {
+          "case_id": "SEED-101-STOCH-0280-RULE_EXTRACTION",
+          "case_family": "rule_extraction",
+          "ambiguity_bucket": "A0_very_low",
+          "metric": "low_ambiguity_high_hallucination",
+          "value": 31,
+          "reason": "unexpected_low_ambiguity_risk"
+        },
+        {
+          "case_id": "SEED-101-STOCH-0281-AUDIT_DOCUMENTAL",
+          "case_family": "audit_documental",
+          "ambiguity_bucket": "A0_very_low",
+          "metric": "low_ambiguity_high_hallucination",
+          "value": 26,
+          "reason": "unexpected_low_ambiguity_risk"
+        },
+        {
+          "case_id": "SEED-101-STOCH-0294-SOFTWARE_REVIEW",
+          "case_family": "software_review",
+          "ambiguity_bucket": "A0_very_low",
+          "metric": "low_ambiguity_high_hallucination",
+          "value": 30,
+          "reason": "unexpected_low_ambiguity_risk"
+        }
+      ]
+    },
+    {
+      "seed": 202,
+      "summary": {
+        "seed": 202,
+        "cases_count": 300,
+        "avg_direct_hallucination": 84.49,
+        "avg_casulo_hallucination": 27.4,
+        "avg_hallucination_reduction": 57.08,
+        "avg_delta_control": 86.14,
+        "avg_residual_delta": 52.42,
+        "avg_evidence_coverage": 47.0,
+        "anomaly_count": 51,
+        "anomaly_rate": 0.17,
+        "invented_fields_total": 51,
+        "unsupported_fields_total": 525,
+        "production_blocked_all_cases": true
+      },
+      "family_behavior": [
+        {
+          "case_family": "audit_documental",
+          "count": 68,
+          "avg_direct_hallucination": 87.44,
+          "avg_casulo_hallucination": 28.19,
+          "avg_hallucination_reduction": 59.25,
+          "avg_residual_delta": 53.53,
+          "avg_delta_control": 86.07,
+          "avg_evidence_coverage": 46.13,
+          "std_casulo_hallucination": 6.1291,
+          "std_delta_control": 2.697
+        },
+        {
+          "case_family": "parser_documental",
+          "count": 69,
+          "avg_direct_hallucination": 64.91,
+          "avg_casulo_hallucination": 20.22,
+          "avg_hallucination_reduction": 44.7,
+          "avg_residual_delta": 53.17,
+          "avg_delta_control": 85.64,
+          "avg_evidence_coverage": 45.8,
+          "std_casulo_hallucination": 3.3443,
+          "std_delta_control": 2.2456
+        },
+        {
+          "case_family": "rule_extraction",
+          "count": 86,
+          "avg_direct_hallucination": 92.58,
+          "avg_casulo_hallucination": 30.36,
+          "avg_hallucination_reduction": 62.22,
+          "avg_residual_delta": 52.05,
+          "avg_delta_control": 86.3,
+          "avg_evidence_coverage": 47.53,
+          "std_casulo_hallucination": 5.7017,
+          "std_delta_control": 2.4403
+        },
+        {
+          "case_family": "software_review",
+          "count": 77,
+          "avg_direct_hallucination": 90.38,
+          "avg_casulo_hallucination": 29.84,
+          "avg_hallucination_reduction": 60.53,
+          "avg_residual_delta": 51.19,
+          "avg_delta_control": 86.45,
+          "avg_evidence_coverage": 48.25,
+          "std_casulo_hallucination": 6.1286,
+          "std_delta_control": 2.5561
+        }
+      ],
+      "ambiguity_behavior": [
+        {
+          "ambiguity_bucket": "A0_very_low",
+          "count": 52,
+          "avg_direct_hallucination": 76.12,
+          "avg_casulo_hallucination": 24.12,
+          "avg_hallucination_reduction": 52.0,
+          "avg_residual_delta": 42.54,
+          "avg_delta_control": 88.62,
+          "avg_evidence_coverage": 57.37,
+          "std_casulo_hallucination": 6.0436,
+          "std_delta_control": 1.7558
+        },
+        {
+          "ambiguity_bucket": "A1_low",
+          "count": 69,
+          "avg_direct_hallucination": 80.58,
+          "avg_casulo_hallucination": 25.22,
+          "avg_hallucination_reduction": 55.36,
+          "avg_residual_delta": 47.42,
+          "avg_delta_control": 87.16,
+          "avg_evidence_coverage": 53.22,
+          "std_casulo_hallucination": 5.2664,
+          "std_delta_control": 1.7662
+        },
+        {
+          "ambiguity_bucket": "A2_medium",
+          "count": 83,
+          "avg_direct_hallucination": 86.41,
+          "avg_casulo_hallucination": 27.8,
+          "avg_hallucination_reduction": 58.61,
+          "avg_residual_delta": 53.96,
+          "avg_delta_control": 85.86,
+          "avg_evidence_coverage": 45.04,
+          "std_casulo_hallucination": 6.4822,
+          "std_delta_control": 1.9083
+        },
+        {
+          "ambiguity_bucket": "A3_high",
+          "count": 49,
+          "avg_direct_hallucination": 88.18,
+          "avg_casulo_hallucination": 28.65,
+          "avg_hallucination_reduction": 59.53,
+          "avg_residual_delta": 56.78,
+          "avg_delta_control": 85.08,
+          "avg_evidence_coverage": 41.92,
+          "std_casulo_hallucination": 6.056,
+          "std_delta_control": 2.1838
+        },
+        {
+          "ambiguity_bucket": "A4_extreme",
+          "count": 47,
+          "avg_direct_hallucination": 92.23,
+          "avg_casulo_hallucination": 32.26,
+          "avg_hallucination_reduction": 59.98,
+          "avg_residual_delta": 63.45,
+          "avg_delta_control": 83.49,
+          "avg_evidence_coverage": 35.17,
+          "std_casulo_hallucination": 7.5017,
+          "std_delta_control": 2.0198
+        }
+      ],
+      "risk_behavior": [
+        {
+          "domain_risk": "high",
+          "count": 102,
+          "avg_direct_hallucination": 94.06,
+          "avg_casulo_hallucination": 31.58,
+          "avg_hallucination_reduction": 62.48,
+          "avg_residual_delta": 50.79,
+          "avg_delta_control": 86.32,
+          "avg_evidence_coverage": 48.11,
+          "std_casulo_hallucination": 6.3654,
+          "std_delta_control": 2.7122
+        },
+        {
+          "domain_risk": "low",
+          "count": 37,
+          "avg_direct_hallucination": 60.59,
+          "avg_casulo_hallucination": 18.78,
+          "avg_hallucination_reduction": 41.81,
+          "avg_residual_delta": 53.57,
+          "avg_delta_control": 85.03,
+          "avg_evidence_coverage": 44.3,
+          "std_casulo_hallucination": 2.7816,
+          "std_delta_control": 2.3879
+        },
+        {
+          "domain_risk": "medium",
+          "count": 161,
+          "avg_direct_hallucination": 83.91,
+          "avg_casulo_hallucination": 26.74,
+          "avg_hallucination_reduction": 57.17,
+          "avg_residual_delta": 53.19,
+          "avg_delta_control": 86.27,
+          "avg_evidence_coverage": 46.92,
+          "std_casulo_hallucination": 5.4676,
+          "std_delta_control": 2.3272
+        }
+      ],
+      "anomalies": [
+        {
+          "case_id": "SEED-202-STOCH-0098-RULE_EXTRACTION",
+          "case_family": "rule_extraction",
+          "ambiguity_bucket": "A4_extreme",
+          "metric": "casulo_hallucination",
+          "value": 45,
+          "reason": "z_score_outlier"
+        },
+        {
+          "case_id": "SEED-202-STOCH-0119-SOFTWARE_REVIEW",
+          "case_family": "software_review",
+          "ambiguity_bucket": "A4_extreme",
+          "metric": "casulo_hallucination",
+          "value": 49,
+          "reason": "z_score_outlier"
+        },
+        {
+          "case_id": "SEED-202-STOCH-0119-SOFTWARE_REVIEW",
+          "case_family": "software_review",
+          "ambiguity_bucket": "A4_extreme",
+          "metric": "casulo_hallucination",
+          "value": 49,
+          "reason": "iqr_outlier"
+        },
+        {
+          "case_id": "SEED-202-STOCH-0285-AUDIT_DOCUMENTAL",
+          "case_family": "audit_documental",
+          "ambiguity_bucket": "A4_extreme",
+          "metric": "casulo_hallucination",
+          "value": 47,
+          "reason": "z_score_outlier"
+        },
+        {
+          "case_id": "SEED-202-STOCH-0287-RULE_EXTRACTION",
+          "case_family": "rule_extraction",
+          "ambiguity_bucket": "A4_extreme",
+          "metric": "casulo_hallucination",
+          "value": 47,
+          "reason": "z_score_outlier"
+        },
+        {
+          "case_id": "SEED-202-STOCH-0052-PARSER_DOCUMENTAL",
+          "case_family": "parser_documental",
+          "ambiguity_bucket": "A0_very_low",
+          "metric": "hallucination_reduction",
+          "value": 35,
+          "reason": "z_score_outlier"
+        },
+        {
+          "case_id": "SEED-202-STOCH-0060-PARSER_DOCUMENTAL",
+          "case_family": "parser_documental",
+          "ambiguity_bucket": "A0_very_low",
+          "metric": "hallucination_reduction",
+          "value": 31,
+          "reason": "z_score_outlier"
+        },
+        {
+          "case_id": "SEED-202-STOCH-0128-PARSER_DOCUMENTAL",
+          "case_family": "parser_documental",
+          "ambiguity_bucket": "A1_low",
+          "metric": "hallucination_reduction",
+          "value": 33,
+          "reason": "z_score_outlier"
+        },
+        {
+          "case_id": "SEED-202-STOCH-0160-PARSER_DOCUMENTAL",
+          "case_family": "parser_documental",
+          "ambiguity_bucket": "A1_low",
+          "metric": "hallucination_reduction",
+          "value": 35,
+          "reason": "z_score_outlier"
+        },
+        {
+          "case_id": "SEED-202-STOCH-0174-PARSER_DOCUMENTAL",
+          "case_family": "parser_documental",
+          "ambiguity_bucket": "A0_very_low",
+          "metric": "hallucination_reduction",
+          "value": 33,
+          "reason": "z_score_outlier"
+        },
+        {
+          "case_id": "SEED-202-STOCH-0242-PARSER_DOCUMENTAL",
+          "case_family": "parser_documental",
+          "ambiguity_bucket": "A0_very_low",
+          "metric": "hallucination_reduction",
+          "value": 35,
+          "reason": "z_score_outlier"
+        },
+        {
+          "case_id": "SEED-202-STOCH-0251-PARSER_DOCUMENTAL",
+          "case_family": "parser_documental",
+          "ambiguity_bucket": "A2_medium",
+          "metric": "hallucination_reduction",
+          "value": 34,
+          "reason": "z_score_outlier"
+        },
+        {
+          "case_id": "SEED-202-STOCH-0256-PARSER_DOCUMENTAL",
+          "case_family": "parser_documental",
+          "ambiguity_bucket": "A1_low",
+          "metric": "hallucination_reduction",
+          "value": 34,
+          "reason": "z_score_outlier"
+        },
+        {
+          "case_id": "SEED-202-STOCH-0121-SOFTWARE_REVIEW",
+          "case_family": "software_review",
+          "ambiguity_bucket": "A0_very_low",
+          "metric": "residual_delta_index",
+          "value": 9,
+          "reason": "z_score_outlier"
+        },
+        {
+          "case_id": "SEED-202-STOCH-0143-SOFTWARE_REVIEW",
+          "case_family": "software_review",
+          "ambiguity_bucket": "A0_very_low",
+          "metric": "residual_delta_index",
+          "value": 7,
+          "reason": "z_score_outlier"
+        },
+        {
+          "case_id": "SEED-202-STOCH-0144-RULE_EXTRACTION",
+          "case_family": "rule_extraction",
+          "ambiguity_bucket": "A0_very_low",
+          "metric": "residual_delta_index",
+          "value": 13,
+          "reason": "z_score_outlier"
+        },
+        {
+          "case_id": "SEED-202-STOCH-0145-RULE_EXTRACTION",
+          "case_family": "rule_extraction",
+          "ambiguity_bucket": "A1_low",
+          "metric": "residual_delta_index",
+          "value": 13,
+          "reason": "z_score_outlier"
+        },
+        {
+          "case_id": "SEED-202-STOCH-0154-SOFTWARE_REVIEW",
+          "case_family": "software_review",
+          "ambiguity_bucket": "A0_very_low",
+          "metric": "residual_delta_index",
+          "value": 13,
+          "reason": "z_score_outlier"
+        },
+        {
+          "case_id": "SEED-202-STOCH-0291-SOFTWARE_REVIEW",
+          "case_family": "software_review",
+          "ambiguity_bucket": "A1_low",
+          "metric": "residual_delta_index",
+          "value": 11,
+          "reason": "z_score_outlier"
+        },
+        {
+          "case_id": "SEED-202-STOCH-0007-RULE_EXTRACTION",
+          "case_family": "rule_extraction",
+          "ambiguity_bucket": "A0_very_low",
+          "metric": "delta_control_score",
+          "value": 92,
+          "reason": "z_score_outlier"
+        },
+        {
+          "case_id": "SEED-202-STOCH-0016-SOFTWARE_REVIEW",
+          "case_family": "software_review",
+          "ambiguity_bucket": "A0_very_low",
+          "metric": "delta_control_score",
+          "value": 93,
+          "reason": "z_score_outlier"
+        },
+        {
+          "case_id": "SEED-202-STOCH-0106-AUDIT_DOCUMENTAL",
+          "case_family": "audit_documental",
+          "ambiguity_bucket": "A4_extreme",
+          "metric": "delta_control_score",
+          "value": 80,
+          "reason": "z_score_outlier"
+        },
+        {
+          "case_id": "SEED-202-STOCH-0115-SOFTWARE_REVIEW",
+          "case_family": "software_review",
+          "ambiguity_bucket": "A3_high",
+          "metric": "delta_control_score",
+          "value": 80,
+          "reason": "z_score_outlier"
+        },
+        {
+          "case_id": "SEED-202-STOCH-0143-SOFTWARE_REVIEW",
+          "case_family": "software_review",
+          "ambiguity_bucket": "A0_very_low",
+          "metric": "delta_control_score",
+          "value": 92,
+          "reason": "z_score_outlier"
+        },
+        {
+          "case_id": "SEED-202-STOCH-0144-RULE_EXTRACTION",
+          "case_family": "rule_extraction",
+          "ambiguity_bucket": "A0_very_low",
+          "metric": "delta_control_score",
+          "value": 93,
+          "reason": "z_score_outlier"
+        },
+        {
+          "case_id": "SEED-202-STOCH-0287-RULE_EXTRACTION",
+          "case_family": "rule_extraction",
+          "ambiguity_bucket": "A4_extreme",
+          "metric": "delta_control_score",
+          "value": 80,
+          "reason": "z_score_outlier"
+        },
+        {
+          "case_id": "SEED-202-STOCH-0115-SOFTWARE_REVIEW",
+          "case_family": "software_review",
+          "ambiguity_bucket": "A3_high",
+          "metric": "evidence_coverage",
+          "value": 10,
+          "reason": "z_score_outlier"
+        },
+        {
+          "case_id": "SEED-202-STOCH-0143-SOFTWARE_REVIEW",
+          "case_family": "software_review",
+          "ambiguity_bucket": "A0_very_low",
+          "metric": "evidence_coverage",
+          "value": 90,
+          "reason": "z_score_outlier"
+        },
+        {
+          "case_id": "SEED-202-STOCH-0144-RULE_EXTRACTION",
+          "case_family": "rule_extraction",
+          "ambiguity_bucket": "A0_very_low",
+          "metric": "evidence_coverage",
+          "value": 89,
+          "reason": "z_score_outlier"
+        },
+        {
+          "case_id": "SEED-202-STOCH-0145-RULE_EXTRACTION",
+          "case_family": "rule_extraction",
+          "ambiguity_bucket": "A1_low",
+          "metric": "evidence_coverage",
+          "value": 87,
+          "reason": "z_score_outlier"
+        },
+        {
+          "case_id": "SEED-202-STOCH-0154-SOFTWARE_REVIEW",
+          "case_family": "software_review",
+          "ambiguity_bucket": "A0_very_low",
+          "metric": "evidence_coverage",
+          "value": 86,
+          "reason": "z_score_outlier"
+        },
+        {
+          "case_id": "SEED-202-STOCH-0287-RULE_EXTRACTION",
+          "case_family": "rule_extraction",
+          "ambiguity_bucket": "A4_extreme",
+          "metric": "evidence_coverage",
+          "value": 9,
+          "reason": "z_score_outlier"
+        },
+        {
+          "case_id": "SEED-202-STOCH-0291-SOFTWARE_REVIEW",
+          "case_family": "software_review",
+          "ambiguity_bucket": "A1_low",
+          "metric": "evidence_coverage",
+          "value": 84,
+          "reason": "z_score_outlier"
+        },
+        {
+          "case_id": "SEED-202-STOCH-0049-SOFTWARE_REVIEW",
+          "case_family": "software_review",
+          "ambiguity_bucket": "A0_very_low",
+          "metric": "low_ambiguity_high_hallucination",
+          "value": 30,
+          "reason": "unexpected_low_ambiguity_risk"
+        },
+        {
+          "case_id": "SEED-202-STOCH-0068-SOFTWARE_REVIEW",
+          "case_family": "software_review",
+          "ambiguity_bucket": "A0_very_low",
+          "metric": "low_ambiguity_high_hallucination",
+          "value": 29,
+          "reason": "unexpected_low_ambiguity_risk"
+        },
+        {
+          "case_id": "SEED-202-STOCH-0070-RULE_EXTRACTION",
+          "case_family": "rule_extraction",
+          "ambiguity_bucket": "A0_very_low",
+          "metric": "low_ambiguity_high_hallucination",
+          "value": 27,
+          "reason": "unexpected_low_ambiguity_risk"
+        },
+        {
+          "case_id": "SEED-202-STOCH-0071-AUDIT_DOCUMENTAL",
+          "case_family": "audit_documental",
+          "ambiguity_bucket": "A0_very_low",
+          "metric": "low_ambiguity_high_hallucination",
+          "value": 35,
+          "reason": "unexpected_low_ambiguity_risk"
+        },
+        {
+          "case_id": "SEED-202-STOCH-0080-SOFTWARE_REVIEW",
+          "case_family": "software_review",
+          "ambiguity_bucket": "A0_very_low",
+          "metric": "low_ambiguity_high_hallucination",
+          "value": 39,
+          "reason": "unexpected_low_ambiguity_risk"
+        },
+        {
+          "case_id": "SEED-202-STOCH-0090-SOFTWARE_REVIEW",
+          "case_family": "software_review",
+          "ambiguity_bucket": "A0_very_low",
+          "metric": "low_ambiguity_high_hallucination",
+          "value": 35,
+          "reason": "unexpected_low_ambiguity_risk"
+        },
+        {
+          "case_id": "SEED-202-STOCH-0094-AUDIT_DOCUMENTAL",
+          "case_family": "audit_documental",
+          "ambiguity_bucket": "A0_very_low",
+          "metric": "low_ambiguity_high_hallucination",
+          "value": 27,
+          "reason": "unexpected_low_ambiguity_risk"
+        },
+        {
+          "case_id": "SEED-202-STOCH-0101-RULE_EXTRACTION",
+          "case_family": "rule_extraction",
+          "ambiguity_bucket": "A0_very_low",
+          "metric": "low_ambiguity_high_hallucination",
+          "value": 29,
+          "reason": "unexpected_low_ambiguity_risk"
+        },
+        {
+          "case_id": "SEED-202-STOCH-0134-RULE_EXTRACTION",
+          "case_family": "rule_extraction",
+          "ambiguity_bucket": "A0_very_low",
+          "metric": "low_ambiguity_high_hallucination",
+          "value": 32,
+          "reason": "unexpected_low_ambiguity_risk"
+        },
+        {
+          "case_id": "SEED-202-STOCH-0167-SOFTWARE_REVIEW",
+          "case_family": "software_review",
+          "ambiguity_bucket": "A0_very_low",
+          "metric": "low_ambiguity_high_hallucination",
+          "value": 36,
+          "reason": "unexpected_low_ambiguity_risk"
+        },
+        {
+          "case_id": "SEED-202-STOCH-0184-SOFTWARE_REVIEW",
+          "case_family": "software_review",
+          "ambiguity_bucket": "A0_very_low",
+          "metric": "low_ambiguity_high_hallucination",
+          "value": 30,
+          "reason": "unexpected_low_ambiguity_risk"
+        },
+        {
+          "case_id": "SEED-202-STOCH-0195-RULE_EXTRACTION",
+          "case_family": "rule_extraction",
+          "ambiguity_bucket": "A0_very_low",
+          "metric": "low_ambiguity_high_hallucination",
+          "value": 31,
+          "reason": "unexpected_low_ambiguity_risk"
+        },
+        {
+          "case_id": "SEED-202-STOCH-0198-RULE_EXTRACTION",
+          "case_family": "rule_extraction",
+          "ambiguity_bucket": "A0_very_low",
+          "metric": "low_ambiguity_high_hallucination",
+          "value": 31,
+          "reason": "unexpected_low_ambiguity_risk"
+        },
+        {
+          "case_id": "SEED-202-STOCH-0200-RULE_EXTRACTION",
+          "case_family": "rule_extraction",
+          "ambiguity_bucket": "A0_very_low",
+          "metric": "low_ambiguity_high_hallucination",
+          "value": 33,
+          "reason": "unexpected_low_ambiguity_risk"
+        },
+        {
+          "case_id": "SEED-202-STOCH-0209-RULE_EXTRACTION",
+          "case_family": "rule_extraction",
+          "ambiguity_bucket": "A0_very_low",
+          "metric": "low_ambiguity_high_hallucination",
+          "value": 31,
+          "reason": "unexpected_low_ambiguity_risk"
+        },
+        {
+          "case_id": "SEED-202-STOCH-0216-SOFTWARE_REVIEW",
+          "case_family": "software_review",
+          "ambiguity_bucket": "A0_very_low",
+          "metric": "low_ambiguity_high_hallucination",
+          "value": 29,
+          "reason": "unexpected_low_ambiguity_risk"
+        },
+        {
+          "case_id": "SEED-202-STOCH-0235-RULE_EXTRACTION",
+          "case_family": "rule_extraction",
+          "ambiguity_bucket": "A0_very_low",
+          "metric": "low_ambiguity_high_hallucination",
+          "value": 27,
+          "reason": "unexpected_low_ambiguity_risk"
+        },
+        {
+          "case_id": "SEED-202-STOCH-0280-RULE_EXTRACTION",
+          "case_family": "rule_extraction",
+          "ambiguity_bucket": "A0_very_low",
+          "metric": "low_ambiguity_high_hallucination",
+          "value": 29,
+          "reason": "unexpected_low_ambiguity_risk"
+        }
+      ]
+    },
+    {
+      "seed": 303,
+      "summary": {
+        "seed": 303,
+        "cases_count": 300,
+        "avg_direct_hallucination": 81.77,
+        "avg_casulo_hallucination": 26.58,
+        "avg_hallucination_reduction": 55.19,
+        "avg_delta_control": 86.22,
+        "avg_residual_delta": 50.62,
+        "avg_evidence_coverage": 48.25,
+        "anomaly_count": 47,
+        "anomaly_rate": 0.1567,
+        "invented_fields_total": 48,
+        "unsupported_fields_total": 508,
+        "production_blocked_all_cases": true
+      },
+      "family_behavior": [
+        {
+          "case_family": "audit_documental",
+          "count": 72,
+          "avg_direct_hallucination": 86.6,
+          "avg_casulo_hallucination": 27.62,
+          "avg_hallucination_reduction": 58.97,
+          "avg_residual_delta": 50.19,
+          "avg_delta_control": 86.58,
+          "avg_evidence_coverage": 49.36,
+          "std_casulo_hallucination": 5.9007,
+          "std_delta_control": 2.4253
+        },
+        {
+          "case_family": "parser_documental",
+          "count": 91,
+          "avg_direct_hallucination": 62.64,
+          "avg_casulo_hallucination": 19.41,
+          "avg_hallucination_reduction": 43.23,
+          "avg_residual_delta": 50.0,
+          "avg_delta_control": 86.29,
+          "avg_evidence_coverage": 48.67,
+          "std_casulo_hallucination": 4.1878,
+          "std_delta_control": 2.7227
+        },
+        {
+          "case_family": "rule_extraction",
+          "count": 78,
+          "avg_direct_hallucination": 93.94,
+          "avg_casulo_hallucination": 31.85,
+          "avg_hallucination_reduction": 62.09,
+          "avg_residual_delta": 51.88,
+          "avg_delta_control": 85.71,
+          "avg_evidence_coverage": 47.1,
+          "std_casulo_hallucination": 6.349,
+          "std_delta_control": 2.5324
+        },
+        {
+          "case_family": "software_review",
+          "count": 59,
+          "avg_direct_hallucination": 89.32,
+          "avg_casulo_hallucination": 29.41,
+          "avg_hallucination_reduction": 59.92,
+          "avg_residual_delta": 50.42,
+          "avg_delta_control": 86.34,
+          "avg_evidence_coverage": 47.76,
+          "std_casulo_hallucination": 7.321,
+          "std_delta_control": 2.6656
+        }
+      ],
+      "ambiguity_behavior": [
+        {
+          "ambiguity_bucket": "A0_very_low",
+          "count": 71,
+          "avg_direct_hallucination": 72.49,
+          "avg_casulo_hallucination": 22.58,
+          "avg_hallucination_reduction": 49.92,
+          "avg_residual_delta": 40.49,
+          "avg_delta_control": 88.37,
+          "avg_evidence_coverage": 58.8,
+          "std_casulo_hallucination": 6.5728,
+          "std_delta_control": 2.0087
+        },
+        {
+          "ambiguity_bucket": "A1_low",
+          "count": 51,
+          "avg_direct_hallucination": 78.75,
+          "avg_casulo_hallucination": 24.55,
+          "avg_hallucination_reduction": 54.2,
+          "avg_residual_delta": 47.37,
+          "avg_delta_control": 87.25,
+          "avg_evidence_coverage": 52.78,
+          "std_casulo_hallucination": 5.2704,
+          "std_delta_control": 1.9985
+        },
+        {
+          "ambiguity_bucket": "A2_medium",
+          "count": 58,
+          "avg_direct_hallucination": 82.36,
+          "avg_casulo_hallucination": 26.88,
+          "avg_hallucination_reduction": 55.48,
+          "avg_residual_delta": 50.93,
+          "avg_delta_control": 86.17,
+          "avg_evidence_coverage": 49.09,
+          "std_casulo_hallucination": 7.6092,
+          "std_delta_control": 2.2139
+        },
+        {
+          "ambiguity_bucket": "A3_high",
+          "count": 61,
+          "avg_direct_hallucination": 87.66,
+          "avg_casulo_hallucination": 29.36,
+          "avg_hallucination_reduction": 58.3,
+          "avg_residual_delta": 55.9,
+          "avg_delta_control": 85.26,
+          "avg_evidence_coverage": 42.28,
+          "std_casulo_hallucination": 8.0836,
+          "std_delta_control": 2.0717
+        },
+        {
+          "ambiguity_bucket": "A4_extreme",
+          "count": 59,
+          "avg_direct_hallucination": 88.9,
+          "avg_casulo_hallucination": 29.98,
+          "avg_hallucination_reduction": 58.92,
+          "avg_residual_delta": 59.85,
+          "avg_delta_control": 83.76,
+          "avg_evidence_coverage": 36.98,
+          "std_casulo_hallucination": 7.6679,
+          "std_delta_control": 1.9252
+        }
+      ],
+      "risk_behavior": [
+        {
+          "domain_risk": "high",
+          "count": 110,
+          "avg_direct_hallucination": 93.38,
+          "avg_casulo_hallucination": 31.74,
+          "avg_hallucination_reduction": 61.65,
+          "avg_residual_delta": 50.35,
+          "avg_delta_control": 86.39,
+          "avg_evidence_coverage": 48.8,
+          "std_casulo_hallucination": 7.0925,
+          "std_delta_control": 2.5516
+        },
+        {
+          "domain_risk": "low",
+          "count": 48,
+          "avg_direct_hallucination": 58.58,
+          "avg_casulo_hallucination": 18.19,
+          "avg_hallucination_reduction": 40.4,
+          "avg_residual_delta": 50.56,
+          "avg_delta_control": 86.29,
+          "avg_evidence_coverage": 47.58,
+          "std_casulo_hallucination": 3.2574,
+          "std_delta_control": 2.4661
+        },
+        {
+          "domain_risk": "medium",
+          "count": 142,
+          "avg_direct_hallucination": 80.62,
+          "avg_casulo_hallucination": 25.42,
+          "avg_hallucination_reduction": 55.2,
+          "avg_residual_delta": 50.85,
+          "avg_delta_control": 86.06,
+          "avg_evidence_coverage": 48.05,
+          "std_casulo_hallucination": 6.0901,
+          "std_delta_control": 2.6979
+        }
+      ],
+      "anomalies": [
+        {
+          "case_id": "SEED-303-STOCH-0019-RULE_EXTRACTION",
+          "case_family": "rule_extraction",
+          "ambiguity_bucket": "A3_high",
+          "metric": "casulo_hallucination",
+          "value": 44,
+          "reason": "z_score_outlier"
+        },
+        {
+          "case_id": "SEED-303-STOCH-0055-RULE_EXTRACTION",
+          "case_family": "rule_extraction",
+          "ambiguity_bucket": "A2_medium",
+          "metric": "casulo_hallucination",
+          "value": 45,
+          "reason": "z_score_outlier"
+        },
+        {
+          "case_id": "SEED-303-STOCH-0061-SOFTWARE_REVIEW",
+          "case_family": "software_review",
+          "ambiguity_bucket": "A3_high",
+          "metric": "casulo_hallucination",
+          "value": 44,
+          "reason": "z_score_outlier"
+        },
+        {
+          "case_id": "SEED-303-STOCH-0090-SOFTWARE_REVIEW",
+          "case_family": "software_review",
+          "ambiguity_bucket": "A3_high",
+          "metric": "casulo_hallucination",
+          "value": 44,
+          "reason": "z_score_outlier"
+        },
+        {
+          "case_id": "SEED-303-STOCH-0123-SOFTWARE_REVIEW",
+          "case_family": "software_review",
+          "ambiguity_bucket": "A3_high",
+          "metric": "casulo_hallucination",
+          "value": 46,
+          "reason": "z_score_outlier"
+        },
+        {
+          "case_id": "SEED-303-STOCH-0139-RULE_EXTRACTION",
+          "case_family": "rule_extraction",
+          "ambiguity_bucket": "A4_extreme",
+          "metric": "casulo_hallucination",
+          "value": 46,
+          "reason": "z_score_outlier"
+        },
+        {
+          "case_id": "SEED-303-STOCH-0231-RULE_EXTRACTION",
+          "case_family": "rule_extraction",
+          "ambiguity_bucket": "A2_medium",
+          "metric": "casulo_hallucination",
+          "value": 49,
+          "reason": "z_score_outlier"
+        },
+        {
+          "case_id": "SEED-303-STOCH-0231-RULE_EXTRACTION",
+          "case_family": "rule_extraction",
+          "ambiguity_bucket": "A2_medium",
+          "metric": "casulo_hallucination",
+          "value": 49,
+          "reason": "iqr_outlier"
+        },
+        {
+          "case_id": "SEED-303-STOCH-0251-SOFTWARE_REVIEW",
+          "case_family": "software_review",
+          "ambiguity_bucket": "A4_extreme",
+          "metric": "casulo_hallucination",
+          "value": 45,
+          "reason": "z_score_outlier"
+        },
+        {
+          "case_id": "SEED-303-STOCH-0286-AUDIT_DOCUMENTAL",
+          "case_family": "audit_documental",
+          "ambiguity_bucket": "A3_high",
+          "metric": "casulo_hallucination",
+          "value": 46,
+          "reason": "z_score_outlier"
+        },
+        {
+          "case_id": "SEED-303-STOCH-0105-PARSER_DOCUMENTAL",
+          "case_family": "parser_documental",
+          "ambiguity_bucket": "A1_low",
+          "metric": "hallucination_reduction",
+          "value": 30,
+          "reason": "z_score_outlier"
+        },
+        {
+          "case_id": "SEED-303-STOCH-0151-PARSER_DOCUMENTAL",
+          "case_family": "parser_documental",
+          "ambiguity_bucket": "A0_very_low",
+          "metric": "hallucination_reduction",
+          "value": 26,
+          "reason": "z_score_outlier"
+        },
+        {
+          "case_id": "SEED-303-STOCH-0169-PARSER_DOCUMENTAL",
+          "case_family": "parser_documental",
+          "ambiguity_bucket": "A0_very_low",
+          "metric": "hallucination_reduction",
+          "value": 30,
+          "reason": "z_score_outlier"
+        },
+        {
+          "case_id": "SEED-303-STOCH-0181-PARSER_DOCUMENTAL",
+          "case_family": "parser_documental",
+          "ambiguity_bucket": "A0_very_low",
+          "metric": "hallucination_reduction",
+          "value": 27,
+          "reason": "z_score_outlier"
+        },
+        {
+          "case_id": "SEED-303-STOCH-0188-PARSER_DOCUMENTAL",
+          "case_family": "parser_documental",
+          "ambiguity_bucket": "A0_very_low",
+          "metric": "hallucination_reduction",
+          "value": 30,
+          "reason": "z_score_outlier"
+        },
+        {
+          "case_id": "SEED-303-STOCH-0244-PARSER_DOCUMENTAL",
+          "case_family": "parser_documental",
+          "ambiguity_bucket": "A0_very_low",
+          "metric": "hallucination_reduction",
+          "value": 31,
+          "reason": "z_score_outlier"
+        },
+        {
+          "case_id": "SEED-303-STOCH-0090-SOFTWARE_REVIEW",
+          "case_family": "software_review",
+          "ambiguity_bucket": "A3_high",
+          "metric": "residual_delta_index",
+          "value": 91,
+          "reason": "z_score_outlier"
+        },
+        {
+          "case_id": "SEED-303-STOCH-0095-SOFTWARE_REVIEW",
+          "case_family": "software_review",
+          "ambiguity_bucket": "A4_extreme",
+          "metric": "residual_delta_index",
+          "value": 94,
+          "reason": "z_score_outlier"
+        },
+        {
+          "case_id": "SEED-303-STOCH-0120-AUDIT_DOCUMENTAL",
+          "case_family": "audit_documental",
+          "ambiguity_bucket": "A0_very_low",
+          "metric": "residual_delta_index",
+          "value": 10,
+          "reason": "z_score_outlier"
+        },
+        {
+          "case_id": "SEED-303-STOCH-0286-AUDIT_DOCUMENTAL",
+          "case_family": "audit_documental",
+          "ambiguity_bucket": "A3_high",
+          "metric": "residual_delta_index",
+          "value": 91,
+          "reason": "z_score_outlier"
+        },
+        {
+          "case_id": "SEED-303-STOCH-0087-RULE_EXTRACTION",
+          "case_family": "rule_extraction",
+          "ambiguity_bucket": "A4_extreme",
+          "metric": "delta_control_score",
+          "value": 80,
+          "reason": "z_score_outlier"
+        },
+        {
+          "case_id": "SEED-303-STOCH-0205-PARSER_DOCUMENTAL",
+          "case_family": "parser_documental",
+          "ambiguity_bucket": "A4_extreme",
+          "metric": "delta_control_score",
+          "value": 80,
+          "reason": "z_score_outlier"
+        },
+        {
+          "case_id": "SEED-303-STOCH-0207-PARSER_DOCUMENTAL",
+          "case_family": "parser_documental",
+          "ambiguity_bucket": "A4_extreme",
+          "metric": "delta_control_score",
+          "value": 80,
+          "reason": "z_score_outlier"
+        },
+        {
+          "case_id": "SEED-303-STOCH-0029-SOFTWARE_REVIEW",
+          "case_family": "software_review",
+          "ambiguity_bucket": "A4_extreme",
+          "metric": "evidence_coverage",
+          "value": 10,
+          "reason": "z_score_outlier"
+        },
+        {
+          "case_id": "SEED-303-STOCH-0207-PARSER_DOCUMENTAL",
+          "case_family": "parser_documental",
+          "ambiguity_bucket": "A4_extreme",
+          "metric": "evidence_coverage",
+          "value": 8,
+          "reason": "z_score_outlier"
+        },
+        {
+          "case_id": "SEED-303-STOCH-0004-SOFTWARE_REVIEW",
+          "case_family": "software_review",
+          "ambiguity_bucket": "A0_very_low",
+          "metric": "low_ambiguity_high_hallucination",
+          "value": 30,
+          "reason": "unexpected_low_ambiguity_risk"
+        },
+        {
+          "case_id": "SEED-303-STOCH-0030-AUDIT_DOCUMENTAL",
+          "case_family": "audit_documental",
+          "ambiguity_bucket": "A0_very_low",
+          "metric": "low_ambiguity_high_hallucination",
+          "value": 26,
+          "reason": "unexpected_low_ambiguity_risk"
+        },
+        {
+          "case_id": "SEED-303-STOCH-0033-RULE_EXTRACTION",
+          "case_family": "rule_extraction",
+          "ambiguity_bucket": "A0_very_low",
+          "metric": "low_ambiguity_high_hallucination",
+          "value": 27,
+          "reason": "unexpected_low_ambiguity_risk"
+        },
+        {
+          "case_id": "SEED-303-STOCH-0039-SOFTWARE_REVIEW",
+          "case_family": "software_review",
+          "ambiguity_bucket": "A0_very_low",
+          "metric": "low_ambiguity_high_hallucination",
+          "value": 29,
+          "reason": "unexpected_low_ambiguity_risk"
+        },
+        {
+          "case_id": "SEED-303-STOCH-0040-RULE_EXTRACTION",
+          "case_family": "rule_extraction",
+          "ambiguity_bucket": "A0_very_low",
+          "metric": "low_ambiguity_high_hallucination",
+          "value": 34,
+          "reason": "unexpected_low_ambiguity_risk"
+        },
+        {
+          "case_id": "SEED-303-STOCH-0041-SOFTWARE_REVIEW",
+          "case_family": "software_review",
+          "ambiguity_bucket": "A0_very_low",
+          "metric": "low_ambiguity_high_hallucination",
+          "value": 27,
+          "reason": "unexpected_low_ambiguity_risk"
+        },
+        {
+          "case_id": "SEED-303-STOCH-0074-AUDIT_DOCUMENTAL",
+          "case_family": "audit_documental",
+          "ambiguity_bucket": "A0_very_low",
+          "metric": "low_ambiguity_high_hallucination",
+          "value": 28,
+          "reason": "unexpected_low_ambiguity_risk"
+        },
+        {
+          "case_id": "SEED-303-STOCH-0084-AUDIT_DOCUMENTAL",
+          "case_family": "audit_documental",
+          "ambiguity_bucket": "A0_very_low",
+          "metric": "low_ambiguity_high_hallucination",
+          "value": 27,
+          "reason": "unexpected_low_ambiguity_risk"
+        },
+        {
+          "case_id": "SEED-303-STOCH-0098-SOFTWARE_REVIEW",
+          "case_family": "software_review",
+          "ambiguity_bucket": "A0_very_low",
+          "metric": "low_ambiguity_high_hallucination",
+          "value": 38,
+          "reason": "unexpected_low_ambiguity_risk"
+        },
+        {
+          "case_id": "SEED-303-STOCH-0117-SOFTWARE_REVIEW",
+          "case_family": "software_review",
+          "ambiguity_bucket": "A0_very_low",
+          "metric": "low_ambiguity_high_hallucination",
+          "value": 30,
+          "reason": "unexpected_low_ambiguity_risk"
+        },
+        {
+          "case_id": "SEED-303-STOCH-0118-RULE_EXTRACTION",
+          "case_family": "rule_extraction",
+          "ambiguity_bucket": "A0_very_low",
+          "metric": "low_ambiguity_high_hallucination",
+          "value": 36,
+          "reason": "unexpected_low_ambiguity_risk"
+        },
+        {
+          "case_id": "SEED-303-STOCH-0135-RULE_EXTRACTION",
+          "case_family": "rule_extraction",
+          "ambiguity_bucket": "A0_very_low",
+          "metric": "low_ambiguity_high_hallucination",
+          "value": 28,
+          "reason": "unexpected_low_ambiguity_risk"
+        },
+        {
+          "case_id": "SEED-303-STOCH-0144-RULE_EXTRACTION",
+          "case_family": "rule_extraction",
+          "ambiguity_bucket": "A0_very_low",
+          "metric": "low_ambiguity_high_hallucination",
+          "value": 27,
+          "reason": "unexpected_low_ambiguity_risk"
+        },
+        {
+          "case_id": "SEED-303-STOCH-0202-AUDIT_DOCUMENTAL",
+          "case_family": "audit_documental",
+          "ambiguity_bucket": "A0_very_low",
+          "metric": "low_ambiguity_high_hallucination",
+          "value": 32,
+          "reason": "unexpected_low_ambiguity_risk"
+        },
+        {
+          "case_id": "SEED-303-STOCH-0232-AUDIT_DOCUMENTAL",
+          "case_family": "audit_documental",
+          "ambiguity_bucket": "A0_very_low",
+          "metric": "low_ambiguity_high_hallucination",
+          "value": 28,
+          "reason": "unexpected_low_ambiguity_risk"
+        },
+        {
+          "case_id": "SEED-303-STOCH-0254-AUDIT_DOCUMENTAL",
+          "case_family": "audit_documental",
+          "ambiguity_bucket": "A0_very_low",
+          "metric": "low_ambiguity_high_hallucination",
+          "value": 28,
+          "reason": "unexpected_low_ambiguity_risk"
+        },
+        {
+          "case_id": "SEED-303-STOCH-0278-RULE_EXTRACTION",
+          "case_family": "rule_extraction",
+          "ambiguity_bucket": "A0_very_low",
+          "metric": "low_ambiguity_high_hallucination",
+          "value": 29,
+          "reason": "unexpected_low_ambiguity_risk"
+        },
+        {
+          "case_id": "SEED-303-STOCH-0279-RULE_EXTRACTION",
+          "case_family": "rule_extraction",
+          "ambiguity_bucket": "A0_very_low",
+          "metric": "low_ambiguity_high_hallucination",
+          "value": 28,
+          "reason": "unexpected_low_ambiguity_risk"
+        },
+        {
+          "case_id": "SEED-303-STOCH-0282-AUDIT_DOCUMENTAL",
+          "case_family": "audit_documental",
+          "ambiguity_bucket": "A0_very_low",
+          "metric": "low_ambiguity_high_hallucination",
+          "value": 30,
+          "reason": "unexpected_low_ambiguity_risk"
+        },
+        {
+          "case_id": "SEED-303-STOCH-0291-RULE_EXTRACTION",
+          "case_family": "rule_extraction",
+          "ambiguity_bucket": "A0_very_low",
+          "metric": "low_ambiguity_high_hallucination",
+          "value": 35,
+          "reason": "unexpected_low_ambiguity_risk"
+        },
+        {
+          "case_id": "SEED-303-STOCH-0296-RULE_EXTRACTION",
+          "case_family": "rule_extraction",
+          "ambiguity_bucket": "A0_very_low",
+          "metric": "low_ambiguity_high_hallucination",
+          "value": 35,
+          "reason": "unexpected_low_ambiguity_risk"
+        },
+        {
+          "case_id": "SEED-303-STOCH-0300-SOFTWARE_REVIEW",
+          "case_family": "software_review",
+          "ambiguity_bucket": "A0_very_low",
+          "metric": "low_ambiguity_high_hallucination",
+          "value": 31,
+          "reason": "unexpected_low_ambiguity_risk"
+        }
+      ]
+    },
+    {
+      "seed": 404,
+      "summary": {
+        "seed": 404,
+        "cases_count": 300,
+        "avg_direct_hallucination": 85.58,
+        "avg_casulo_hallucination": 28.43,
+        "avg_hallucination_reduction": 57.15,
+        "avg_delta_control": 85.96,
+        "avg_residual_delta": 52.57,
+        "avg_evidence_coverage": 46.25,
+        "anomaly_count": 56,
+        "anomaly_rate": 0.1867,
+        "invented_fields_total": 76,
+        "unsupported_fields_total": 515,
+        "production_blocked_all_cases": true
+      },
+      "family_behavior": [
+        {
+          "case_family": "audit_documental",
+          "count": 82,
+          "avg_direct_hallucination": 88.73,
+          "avg_casulo_hallucination": 29.37,
+          "avg_hallucination_reduction": 59.37,
+          "avg_residual_delta": 55.32,
+          "avg_delta_control": 85.68,
+          "avg_evidence_coverage": 44.8,
+          "std_casulo_hallucination": 7.2018,
+          "std_delta_control": 2.8408
+        },
+        {
+          "case_family": "parser_documental",
+          "count": 61,
+          "avg_direct_hallucination": 64.05,
+          "avg_casulo_hallucination": 19.64,
+          "avg_hallucination_reduction": 44.41,
+          "avg_residual_delta": 51.8,
+          "avg_delta_control": 85.89,
+          "avg_evidence_coverage": 45.98,
+          "std_casulo_hallucination": 4.8554,
+          "std_delta_control": 2.7106
+        },
+        {
+          "case_family": "rule_extraction",
+          "count": 83,
+          "avg_direct_hallucination": 92.57,
+          "avg_casulo_hallucination": 31.52,
+          "avg_hallucination_reduction": 61.05,
+          "avg_residual_delta": 50.63,
+          "avg_delta_control": 86.28,
+          "avg_evidence_coverage": 48.13,
+          "std_casulo_hallucination": 6.6466,
+          "std_delta_control": 2.8084
+        },
+        {
+          "case_family": "software_review",
+          "count": 74,
+          "avg_direct_hallucination": 92.0,
+          "avg_casulo_hallucination": 31.18,
+          "avg_hallucination_reduction": 60.82,
+          "avg_residual_delta": 52.32,
+          "avg_delta_control": 85.97,
+          "avg_evidence_coverage": 45.95,
+          "std_casulo_hallucination": 7.0908,
+          "std_delta_control": 2.8283
+        }
+      ],
+      "ambiguity_behavior": [
+        {
+          "ambiguity_bucket": "A0_very_low",
+          "count": 63,
+          "avg_direct_hallucination": 73.43,
+          "avg_casulo_hallucination": 23.21,
+          "avg_hallucination_reduction": 50.22,
+          "avg_residual_delta": 40.73,
+          "avg_delta_control": 88.76,
+          "avg_evidence_coverage": 59.05,
+          "std_casulo_hallucination": 7.1629,
+          "std_delta_control": 2.2588
+        },
+        {
+          "ambiguity_bucket": "A1_low",
+          "count": 48,
+          "avg_direct_hallucination": 83.94,
+          "avg_casulo_hallucination": 27.31,
+          "avg_hallucination_reduction": 56.62,
+          "avg_residual_delta": 49.92,
+          "avg_delta_control": 87.02,
+          "avg_evidence_coverage": 50.92,
+          "std_casulo_hallucination": 7.1185,
+          "std_delta_control": 2.2313
+        },
+        {
+          "ambiguity_bucket": "A2_medium",
+          "count": 57,
+          "avg_direct_hallucination": 87.35,
+          "avg_casulo_hallucination": 29.04,
+          "avg_hallucination_reduction": 58.32,
+          "avg_residual_delta": 56.35,
+          "avg_delta_control": 85.77,
+          "avg_evidence_coverage": 44.28,
+          "std_casulo_hallucination": 7.4926,
+          "std_delta_control": 2.1685
+        },
+        {
+          "ambiguity_bucket": "A3_high",
+          "count": 74,
+          "avg_direct_hallucination": 90.14,
+          "avg_casulo_hallucination": 29.72,
+          "avg_hallucination_reduction": 60.42,
+          "avg_residual_delta": 53.5,
+          "avg_delta_control": 85.24,
+          "avg_evidence_coverage": 43.97,
+          "std_casulo_hallucination": 7.1329,
+          "std_delta_control": 2.1169
+        },
+        {
+          "ambiguity_bucket": "A4_extreme",
+          "count": 58,
+          "avg_direct_hallucination": 92.59,
+          "avg_casulo_hallucination": 32.79,
+          "avg_hallucination_reduction": 59.79,
+          "avg_residual_delta": 62.71,
+          "avg_delta_control": 83.14,
+          "avg_evidence_coverage": 33.31,
+          "std_casulo_hallucination": 7.8318,
+          "std_delta_control": 1.6656
+        }
+      ],
+      "risk_behavior": [
+        {
+          "domain_risk": "high",
+          "count": 115,
+          "avg_direct_hallucination": 94.9,
+          "avg_casulo_hallucination": 33.21,
+          "avg_hallucination_reduction": 61.69,
+          "avg_residual_delta": 54.57,
+          "avg_delta_control": 86.03,
+          "avg_evidence_coverage": 45.18,
+          "std_casulo_hallucination": 7.1268,
+          "std_delta_control": 2.8527
+        },
+        {
+          "domain_risk": "low",
+          "count": 29,
+          "avg_direct_hallucination": 56.79,
+          "avg_casulo_hallucination": 17.41,
+          "avg_hallucination_reduction": 39.38,
+          "avg_residual_delta": 49.52,
+          "avg_delta_control": 86.31,
+          "avg_evidence_coverage": 48.97,
+          "std_casulo_hallucination": 3.7556,
+          "std_delta_control": 2.5203
+        },
+        {
+          "domain_risk": "medium",
+          "count": 156,
+          "avg_direct_hallucination": 84.06,
+          "avg_casulo_hallucination": 26.96,
+          "avg_hallucination_reduction": 57.11,
+          "avg_residual_delta": 51.66,
+          "avg_delta_control": 85.84,
+          "avg_evidence_coverage": 46.53,
+          "std_casulo_hallucination": 6.4444,
+          "std_delta_control": 2.825
+        }
+      ],
+      "anomalies": [
+        {
+          "case_id": "SEED-404-STOCH-0062-AUDIT_DOCUMENTAL",
+          "case_family": "audit_documental",
+          "ambiguity_bucket": "A3_high",
+          "metric": "casulo_hallucination",
+          "value": 47,
+          "reason": "z_score_outlier"
+        },
+        {
+          "case_id": "SEED-404-STOCH-0161-RULE_EXTRACTION",
+          "case_family": "rule_extraction",
+          "ambiguity_bucket": "A1_low",
+          "metric": "casulo_hallucination",
+          "value": 47,
+          "reason": "z_score_outlier"
+        },
+        {
+          "case_id": "SEED-404-STOCH-0243-RULE_EXTRACTION",
+          "case_family": "rule_extraction",
+          "ambiguity_bucket": "A4_extreme",
+          "metric": "casulo_hallucination",
+          "value": 52,
+          "reason": "z_score_outlier"
+        },
+        {
+          "case_id": "SEED-404-STOCH-0001-PARSER_DOCUMENTAL",
+          "case_family": "parser_documental",
+          "ambiguity_bucket": "A0_very_low",
+          "metric": "hallucination_reduction",
+          "value": 29,
+          "reason": "z_score_outlier"
+        },
+        {
+          "case_id": "SEED-404-STOCH-0001-PARSER_DOCUMENTAL",
+          "case_family": "parser_documental",
+          "ambiguity_bucket": "A0_very_low",
+          "metric": "hallucination_reduction",
+          "value": 29,
+          "reason": "iqr_outlier"
+        },
+        {
+          "case_id": "SEED-404-STOCH-0023-PARSER_DOCUMENTAL",
+          "case_family": "parser_documental",
+          "ambiguity_bucket": "A0_very_low",
+          "metric": "hallucination_reduction",
+          "value": 27,
+          "reason": "z_score_outlier"
+        },
+        {
+          "case_id": "SEED-404-STOCH-0023-PARSER_DOCUMENTAL",
+          "case_family": "parser_documental",
+          "ambiguity_bucket": "A0_very_low",
+          "metric": "hallucination_reduction",
+          "value": 27,
+          "reason": "iqr_outlier"
+        },
+        {
+          "case_id": "SEED-404-STOCH-0085-PARSER_DOCUMENTAL",
+          "case_family": "parser_documental",
+          "ambiguity_bucket": "A0_very_low",
+          "metric": "hallucination_reduction",
+          "value": 29,
+          "reason": "z_score_outlier"
+        },
+        {
+          "case_id": "SEED-404-STOCH-0085-PARSER_DOCUMENTAL",
+          "case_family": "parser_documental",
+          "ambiguity_bucket": "A0_very_low",
+          "metric": "hallucination_reduction",
+          "value": 29,
+          "reason": "iqr_outlier"
+        },
+        {
+          "case_id": "SEED-404-STOCH-0149-PARSER_DOCUMENTAL",
+          "case_family": "parser_documental",
+          "ambiguity_bucket": "A3_high",
+          "metric": "hallucination_reduction",
+          "value": 29,
+          "reason": "z_score_outlier"
+        },
+        {
+          "case_id": "SEED-404-STOCH-0149-PARSER_DOCUMENTAL",
+          "case_family": "parser_documental",
+          "ambiguity_bucket": "A3_high",
+          "metric": "hallucination_reduction",
+          "value": 29,
+          "reason": "iqr_outlier"
+        },
+        {
+          "case_id": "SEED-404-STOCH-0165-PARSER_DOCUMENTAL",
+          "case_family": "parser_documental",
+          "ambiguity_bucket": "A0_very_low",
+          "metric": "hallucination_reduction",
+          "value": 34,
+          "reason": "z_score_outlier"
+        },
+        {
+          "case_id": "SEED-404-STOCH-0198-PARSER_DOCUMENTAL",
+          "case_family": "parser_documental",
+          "ambiguity_bucket": "A0_very_low",
+          "metric": "hallucination_reduction",
+          "value": 28,
+          "reason": "z_score_outlier"
+        },
+        {
+          "case_id": "SEED-404-STOCH-0198-PARSER_DOCUMENTAL",
+          "case_family": "parser_documental",
+          "ambiguity_bucket": "A0_very_low",
+          "metric": "hallucination_reduction",
+          "value": 28,
+          "reason": "iqr_outlier"
+        },
+        {
+          "case_id": "SEED-404-STOCH-0235-PARSER_DOCUMENTAL",
+          "case_family": "parser_documental",
+          "ambiguity_bucket": "A0_very_low",
+          "metric": "hallucination_reduction",
+          "value": 31,
+          "reason": "z_score_outlier"
+        },
+        {
+          "case_id": "SEED-404-STOCH-0235-PARSER_DOCUMENTAL",
+          "case_family": "parser_documental",
+          "ambiguity_bucket": "A0_very_low",
+          "metric": "hallucination_reduction",
+          "value": 31,
+          "reason": "iqr_outlier"
+        },
+        {
+          "case_id": "SEED-404-STOCH-0237-PARSER_DOCUMENTAL",
+          "case_family": "parser_documental",
+          "ambiguity_bucket": "A0_very_low",
+          "metric": "hallucination_reduction",
+          "value": 33,
+          "reason": "z_score_outlier"
+        },
+        {
+          "case_id": "SEED-404-STOCH-0253-PARSER_DOCUMENTAL",
+          "case_family": "parser_documental",
+          "ambiguity_bucket": "A1_low",
+          "metric": "hallucination_reduction",
+          "value": 34,
+          "reason": "z_score_outlier"
+        },
+        {
+          "case_id": "SEED-404-STOCH-0269-PARSER_DOCUMENTAL",
+          "case_family": "parser_documental",
+          "ambiguity_bucket": "A0_very_low",
+          "metric": "hallucination_reduction",
+          "value": 30,
+          "reason": "z_score_outlier"
+        },
+        {
+          "case_id": "SEED-404-STOCH-0269-PARSER_DOCUMENTAL",
+          "case_family": "parser_documental",
+          "ambiguity_bucket": "A0_very_low",
+          "metric": "hallucination_reduction",
+          "value": 30,
+          "reason": "iqr_outlier"
+        },
+        {
+          "case_id": "SEED-404-STOCH-0291-PARSER_DOCUMENTAL",
+          "case_family": "parser_documental",
+          "ambiguity_bucket": "A0_very_low",
+          "metric": "hallucination_reduction",
+          "value": 32,
+          "reason": "z_score_outlier"
+        },
+        {
+          "case_id": "SEED-404-STOCH-0291-PARSER_DOCUMENTAL",
+          "case_family": "parser_documental",
+          "ambiguity_bucket": "A0_very_low",
+          "metric": "hallucination_reduction",
+          "value": 32,
+          "reason": "iqr_outlier"
+        },
+        {
+          "case_id": "SEED-404-STOCH-0295-PARSER_DOCUMENTAL",
+          "case_family": "parser_documental",
+          "ambiguity_bucket": "A0_very_low",
+          "metric": "hallucination_reduction",
+          "value": 34,
+          "reason": "z_score_outlier"
+        },
+        {
+          "case_id": "SEED-404-STOCH-0023-PARSER_DOCUMENTAL",
+          "case_family": "parser_documental",
+          "ambiguity_bucket": "A0_very_low",
+          "metric": "residual_delta_index",
+          "value": 9,
+          "reason": "z_score_outlier"
+        },
+        {
+          "case_id": "SEED-404-STOCH-0089-RULE_EXTRACTION",
+          "case_family": "rule_extraction",
+          "ambiguity_bucket": "A0_very_low",
+          "metric": "residual_delta_index",
+          "value": 7,
+          "reason": "z_score_outlier"
+        },
+        {
+          "case_id": "SEED-404-STOCH-0159-SOFTWARE_REVIEW",
+          "case_family": "software_review",
+          "ambiguity_bucket": "A0_very_low",
+          "metric": "residual_delta_index",
+          "value": 9,
+          "reason": "z_score_outlier"
+        },
+        {
+          "case_id": "SEED-404-STOCH-0222-SOFTWARE_REVIEW",
+          "case_family": "software_review",
+          "ambiguity_bucket": "A0_very_low",
+          "metric": "residual_delta_index",
+          "value": 9,
+          "reason": "z_score_outlier"
+        },
+        {
+          "case_id": "SEED-404-STOCH-0122-SOFTWARE_REVIEW",
+          "case_family": "software_review",
+          "ambiguity_bucket": "A0_very_low",
+          "metric": "delta_control_score",
+          "value": 93,
+          "reason": "z_score_outlier"
+        },
+        {
+          "case_id": "SEED-404-STOCH-0023-PARSER_DOCUMENTAL",
+          "case_family": "parser_documental",
+          "ambiguity_bucket": "A0_very_low",
+          "metric": "evidence_coverage",
+          "value": 87,
+          "reason": "z_score_outlier"
+        },
+        {
+          "case_id": "SEED-404-STOCH-0089-RULE_EXTRACTION",
+          "case_family": "rule_extraction",
+          "ambiguity_bucket": "A0_very_low",
+          "metric": "evidence_coverage",
+          "value": 90,
+          "reason": "z_score_outlier"
+        },
+        {
+          "case_id": "SEED-404-STOCH-0122-SOFTWARE_REVIEW",
+          "case_family": "software_review",
+          "ambiguity_bucket": "A0_very_low",
+          "metric": "evidence_coverage",
+          "value": 89,
+          "reason": "z_score_outlier"
+        },
+        {
+          "case_id": "SEED-404-STOCH-0007-RULE_EXTRACTION",
+          "case_family": "rule_extraction",
+          "ambiguity_bucket": "A0_very_low",
+          "metric": "low_ambiguity_high_hallucination",
+          "value": 27,
+          "reason": "unexpected_low_ambiguity_risk"
+        },
+        {
+          "case_id": "SEED-404-STOCH-0029-SOFTWARE_REVIEW",
+          "case_family": "software_review",
+          "ambiguity_bucket": "A0_very_low",
+          "metric": "low_ambiguity_high_hallucination",
+          "value": 32,
+          "reason": "unexpected_low_ambiguity_risk"
+        },
+        {
+          "case_id": "SEED-404-STOCH-0030-RULE_EXTRACTION",
+          "case_family": "rule_extraction",
+          "ambiguity_bucket": "A0_very_low",
+          "metric": "low_ambiguity_high_hallucination",
+          "value": 42,
+          "reason": "unexpected_low_ambiguity_risk"
+        },
+        {
+          "case_id": "SEED-404-STOCH-0031-SOFTWARE_REVIEW",
+          "case_family": "software_review",
+          "ambiguity_bucket": "A0_very_low",
+          "metric": "low_ambiguity_high_hallucination",
+          "value": 26,
+          "reason": "unexpected_low_ambiguity_risk"
+        },
+        {
+          "case_id": "SEED-404-STOCH-0074-SOFTWARE_REVIEW",
+          "case_family": "software_review",
+          "ambiguity_bucket": "A0_very_low",
+          "metric": "low_ambiguity_high_hallucination",
+          "value": 28,
+          "reason": "unexpected_low_ambiguity_risk"
+        },
+        {
+          "case_id": "SEED-404-STOCH-0075-SOFTWARE_REVIEW",
+          "case_family": "software_review",
+          "ambiguity_bucket": "A0_very_low",
+          "metric": "low_ambiguity_high_hallucination",
+          "value": 28,
+          "reason": "unexpected_low_ambiguity_risk"
+        },
+        {
+          "case_id": "SEED-404-STOCH-0083-RULE_EXTRACTION",
+          "case_family": "rule_extraction",
+          "ambiguity_bucket": "A0_very_low",
+          "metric": "low_ambiguity_high_hallucination",
+          "value": 35,
+          "reason": "unexpected_low_ambiguity_risk"
+        },
+        {
+          "case_id": "SEED-404-STOCH-0084-SOFTWARE_REVIEW",
+          "case_family": "software_review",
+          "ambiguity_bucket": "A0_very_low",
+          "metric": "low_ambiguity_high_hallucination",
+          "value": 26,
+          "reason": "unexpected_low_ambiguity_risk"
+        },
+        {
+          "case_id": "SEED-404-STOCH-0097-RULE_EXTRACTION",
+          "case_family": "rule_extraction",
+          "ambiguity_bucket": "A0_very_low",
+          "metric": "low_ambiguity_high_hallucination",
+          "value": 27,
+          "reason": "unexpected_low_ambiguity_risk"
+        },
+        {
+          "case_id": "SEED-404-STOCH-0103-SOFTWARE_REVIEW",
+          "case_family": "software_review",
+          "ambiguity_bucket": "A0_very_low",
+          "metric": "low_ambiguity_high_hallucination",
+          "value": 28,
+          "reason": "unexpected_low_ambiguity_risk"
+        },
+        {
+          "case_id": "SEED-404-STOCH-0116-SOFTWARE_REVIEW",
+          "case_family": "software_review",
+          "ambiguity_bucket": "A0_very_low",
+          "metric": "low_ambiguity_high_hallucination",
+          "value": 38,
+          "reason": "unexpected_low_ambiguity_risk"
+        },
+        {
+          "case_id": "SEED-404-STOCH-0119-AUDIT_DOCUMENTAL",
+          "case_family": "audit_documental",
+          "ambiguity_bucket": "A0_very_low",
+          "metric": "low_ambiguity_high_hallucination",
+          "value": 28,
+          "reason": "unexpected_low_ambiguity_risk"
+        },
+        {
+          "case_id": "SEED-404-STOCH-0123-RULE_EXTRACTION",
+          "case_family": "rule_extraction",
+          "ambiguity_bucket": "A0_very_low",
+          "metric": "low_ambiguity_high_hallucination",
+          "value": 28,
+          "reason": "unexpected_low_ambiguity_risk"
+        },
+        {
+          "case_id": "SEED-404-STOCH-0132-RULE_EXTRACTION",
+          "case_family": "rule_extraction",
+          "ambiguity_bucket": "A0_very_low",
+          "metric": "low_ambiguity_high_hallucination",
+          "value": 30,
+          "reason": "unexpected_low_ambiguity_risk"
+        },
+        {
+          "case_id": "SEED-404-STOCH-0146-RULE_EXTRACTION",
+          "case_family": "rule_extraction",
+          "ambiguity_bucket": "A0_very_low",
+          "metric": "low_ambiguity_high_hallucination",
+          "value": 28,
+          "reason": "unexpected_low_ambiguity_risk"
+        },
+        {
+          "case_id": "SEED-404-STOCH-0160-SOFTWARE_REVIEW",
+          "case_family": "software_review",
+          "ambiguity_bucket": "A0_very_low",
+          "metric": "low_ambiguity_high_hallucination",
+          "value": 27,
+          "reason": "unexpected_low_ambiguity_risk"
+        },
+        {
+          "case_id": "SEED-404-STOCH-0180-AUDIT_DOCUMENTAL",
+          "case_family": "audit_documental",
+          "ambiguity_bucket": "A0_very_low",
+          "metric": "low_ambiguity_high_hallucination",
+          "value": 30,
+          "reason": "unexpected_low_ambiguity_risk"
+        },
+        {
+          "case_id": "SEED-404-STOCH-0184-AUDIT_DOCUMENTAL",
+          "case_family": "audit_documental",
+          "ambiguity_bucket": "A0_very_low",
+          "metric": "low_ambiguity_high_hallucination",
+          "value": 26,
+          "reason": "unexpected_low_ambiguity_risk"
+        },
+        {
+          "case_id": "SEED-404-STOCH-0193-RULE_EXTRACTION",
+          "case_family": "rule_extraction",
+          "ambiguity_bucket": "A0_very_low",
+          "metric": "low_ambiguity_high_hallucination",
+          "value": 39,
+          "reason": "unexpected_low_ambiguity_risk"
+        },
+        {
+          "case_id": "SEED-404-STOCH-0210-RULE_EXTRACTION",
+          "case_family": "rule_extraction",
+          "ambiguity_bucket": "A0_very_low",
+          "metric": "low_ambiguity_high_hallucination",
+          "value": 32,
+          "reason": "unexpected_low_ambiguity_risk"
+        },
+        {
+          "case_id": "SEED-404-STOCH-0213-SOFTWARE_REVIEW",
+          "case_family": "software_review",
+          "ambiguity_bucket": "A0_very_low",
+          "metric": "low_ambiguity_high_hallucination",
+          "value": 28,
+          "reason": "unexpected_low_ambiguity_risk"
+        },
+        {
+          "case_id": "SEED-404-STOCH-0214-RULE_EXTRACTION",
+          "case_family": "rule_extraction",
+          "ambiguity_bucket": "A0_very_low",
+          "metric": "low_ambiguity_high_hallucination",
+          "value": 33,
+          "reason": "unexpected_low_ambiguity_risk"
+        },
+        {
+          "case_id": "SEED-404-STOCH-0262-RULE_EXTRACTION",
+          "case_family": "rule_extraction",
+          "ambiguity_bucket": "A0_very_low",
+          "metric": "low_ambiguity_high_hallucination",
+          "value": 28,
+          "reason": "unexpected_low_ambiguity_risk"
+        },
+        {
+          "case_id": "SEED-404-STOCH-0277-SOFTWARE_REVIEW",
+          "case_family": "software_review",
+          "ambiguity_bucket": "A0_very_low",
+          "metric": "low_ambiguity_high_hallucination",
+          "value": 29,
+          "reason": "unexpected_low_ambiguity_risk"
+        },
+        {
+          "case_id": "SEED-404-STOCH-0279-RULE_EXTRACTION",
+          "case_family": "rule_extraction",
+          "ambiguity_bucket": "A0_very_low",
+          "metric": "low_ambiguity_high_hallucination",
+          "value": 34,
+          "reason": "unexpected_low_ambiguity_risk"
+        }
+      ]
+    },
+    {
+      "seed": 505,
+      "summary": {
+        "seed": 505,
+        "cases_count": 300,
+        "avg_direct_hallucination": 84.2,
+        "avg_casulo_hallucination": 27.63,
+        "avg_hallucination_reduction": 56.57,
+        "avg_delta_control": 86.04,
+        "avg_residual_delta": 51.72,
+        "avg_evidence_coverage": 46.7,
+        "anomaly_count": 55,
+        "anomaly_rate": 0.1833,
+        "invented_fields_total": 57,
+        "unsupported_fields_total": 526,
+        "production_blocked_all_cases": true
+      },
+      "family_behavior": [
+        {
+          "case_family": "audit_documental",
+          "count": 81,
+          "avg_direct_hallucination": 87.06,
+          "avg_casulo_hallucination": 28.02,
+          "avg_hallucination_reduction": 59.04,
+          "avg_residual_delta": 48.47,
+          "avg_delta_control": 86.25,
+          "avg_evidence_coverage": 48.48,
+          "std_casulo_hallucination": 5.9711,
+          "std_delta_control": 2.365
+        },
+        {
+          "case_family": "parser_documental",
+          "count": 73,
+          "avg_direct_hallucination": 63.66,
+          "avg_casulo_hallucination": 19.85,
+          "avg_hallucination_reduction": 43.81,
+          "avg_residual_delta": 51.11,
+          "avg_delta_control": 86.48,
+          "avg_evidence_coverage": 48.27,
+          "std_casulo_hallucination": 4.1336,
+          "std_delta_control": 2.6798
+        },
+        {
+          "case_family": "rule_extraction",
+          "count": 75,
+          "avg_direct_hallucination": 93.57,
+          "avg_casulo_hallucination": 31.64,
+          "avg_hallucination_reduction": 61.93,
+          "avg_residual_delta": 53.39,
+          "avg_delta_control": 86.09,
+          "avg_evidence_coverage": 46.39,
+          "std_casulo_hallucination": 6.5046,
+          "std_delta_control": 2.7382
+        },
+        {
+          "case_family": "software_review",
+          "count": 71,
+          "avg_direct_hallucination": 92.14,
+          "avg_casulo_hallucination": 30.94,
+          "avg_hallucination_reduction": 61.2,
+          "avg_residual_delta": 54.31,
+          "avg_delta_control": 85.31,
+          "avg_evidence_coverage": 43.37,
+          "std_casulo_hallucination": 6.6669,
+          "std_delta_control": 2.6462
+        }
+      ],
+      "ambiguity_behavior": [
+        {
+          "ambiguity_bucket": "A0_very_low",
+          "count": 59,
+          "avg_direct_hallucination": 71.14,
+          "avg_casulo_hallucination": 22.36,
+          "avg_hallucination_reduction": 48.78,
+          "avg_residual_delta": 43.34,
+          "avg_delta_control": 88.46,
+          "avg_evidence_coverage": 57.98,
+          "std_casulo_hallucination": 6.6199,
+          "std_delta_control": 2.0938
+        },
+        {
+          "ambiguity_bucket": "A1_low",
+          "count": 55,
+          "avg_direct_hallucination": 80.05,
+          "avg_casulo_hallucination": 25.6,
+          "avg_hallucination_reduction": 54.45,
+          "avg_residual_delta": 46.15,
+          "avg_delta_control": 87.13,
+          "avg_evidence_coverage": 52.87,
+          "std_casulo_hallucination": 6.175,
+          "std_delta_control": 2.0454
+        },
+        {
+          "ambiguity_bucket": "A2_medium",
+          "count": 61,
+          "avg_direct_hallucination": 83.07,
+          "avg_casulo_hallucination": 26.79,
+          "avg_hallucination_reduction": 56.28,
+          "avg_residual_delta": 51.2,
+          "avg_delta_control": 86.43,
+          "avg_evidence_coverage": 47.16,
+          "std_casulo_hallucination": 7.0411,
+          "std_delta_control": 1.8857
+        },
+        {
+          "ambiguity_bucket": "A3_high",
+          "count": 66,
+          "avg_direct_hallucination": 91.05,
+          "avg_casulo_hallucination": 30.8,
+          "avg_hallucination_reduction": 60.24,
+          "avg_residual_delta": 58.27,
+          "avg_delta_control": 84.79,
+          "avg_evidence_coverage": 39.29,
+          "std_casulo_hallucination": 6.9309,
+          "std_delta_control": 2.0854
+        },
+        {
+          "ambiguity_bucket": "A4_extreme",
+          "count": 59,
+          "avg_direct_hallucination": 94.63,
+          "avg_casulo_hallucination": 32.12,
+          "avg_hallucination_reduction": 62.51,
+          "avg_residual_delta": 58.53,
+          "avg_delta_control": 83.63,
+          "avg_evidence_coverage": 37.46,
+          "std_casulo_hallucination": 6.1619,
+          "std_delta_control": 1.9906
+        }
+      ],
+      "risk_behavior": [
+        {
+          "domain_risk": "high",
+          "count": 110,
+          "avg_direct_hallucination": 94.03,
+          "avg_casulo_hallucination": 32.68,
+          "avg_hallucination_reduction": 61.35,
+          "avg_residual_delta": 52.84,
+          "avg_delta_control": 85.85,
+          "avg_evidence_coverage": 45.62,
+          "std_casulo_hallucination": 7.0774,
+          "std_delta_control": 2.7364
+        },
+        {
+          "domain_risk": "low",
+          "count": 33,
+          "avg_direct_hallucination": 57.24,
+          "avg_casulo_hallucination": 17.94,
+          "avg_hallucination_reduction": 39.3,
+          "avg_residual_delta": 49.0,
+          "avg_delta_control": 86.85,
+          "avg_evidence_coverage": 49.88,
+          "std_casulo_hallucination": 3.1134,
+          "std_delta_control": 2.2036
+        },
+        {
+          "domain_risk": "medium",
+          "count": 157,
+          "avg_direct_hallucination": 82.97,
+          "avg_casulo_hallucination": 26.13,
+          "avg_hallucination_reduction": 56.85,
+          "avg_residual_delta": 51.52,
+          "avg_delta_control": 86.01,
+          "avg_evidence_coverage": 46.78,
+          "std_casulo_hallucination": 5.5244,
+          "std_delta_control": 2.6264
+        }
+      ],
+      "anomalies": [
+        {
+          "case_id": "SEED-505-STOCH-0042-RULE_EXTRACTION",
+          "case_family": "rule_extraction",
+          "ambiguity_bucket": "A3_high",
+          "metric": "casulo_hallucination",
+          "value": 46,
+          "reason": "z_score_outlier"
+        },
+        {
+          "case_id": "SEED-505-STOCH-0095-SOFTWARE_REVIEW",
+          "case_family": "software_review",
+          "ambiguity_bucket": "A3_high",
+          "metric": "casulo_hallucination",
+          "value": 45,
+          "reason": "z_score_outlier"
+        },
+        {
+          "case_id": "SEED-505-STOCH-0119-AUDIT_DOCUMENTAL",
+          "case_family": "audit_documental",
+          "ambiguity_bucket": "A4_extreme",
+          "metric": "casulo_hallucination",
+          "value": 45,
+          "reason": "z_score_outlier"
+        },
+        {
+          "case_id": "SEED-505-STOCH-0189-RULE_EXTRACTION",
+          "case_family": "rule_extraction",
+          "ambiguity_bucket": "A2_medium",
+          "metric": "casulo_hallucination",
+          "value": 45,
+          "reason": "z_score_outlier"
+        },
+        {
+          "case_id": "SEED-505-STOCH-0200-RULE_EXTRACTION",
+          "case_family": "rule_extraction",
+          "ambiguity_bucket": "A4_extreme",
+          "metric": "casulo_hallucination",
+          "value": 47,
+          "reason": "z_score_outlier"
+        },
+        {
+          "case_id": "SEED-505-STOCH-0051-PARSER_DOCUMENTAL",
+          "case_family": "parser_documental",
+          "ambiguity_bucket": "A0_very_low",
+          "metric": "hallucination_reduction",
+          "value": 31,
+          "reason": "z_score_outlier"
+        },
+        {
+          "case_id": "SEED-505-STOCH-0069-PARSER_DOCUMENTAL",
+          "case_family": "parser_documental",
+          "ambiguity_bucket": "A2_medium",
+          "metric": "hallucination_reduction",
+          "value": 31,
+          "reason": "z_score_outlier"
+        },
+        {
+          "case_id": "SEED-505-STOCH-0090-PARSER_DOCUMENTAL",
+          "case_family": "parser_documental",
+          "ambiguity_bucket": "A1_low",
+          "metric": "hallucination_reduction",
+          "value": 32,
+          "reason": "z_score_outlier"
+        },
+        {
+          "case_id": "SEED-505-STOCH-0106-PARSER_DOCUMENTAL",
+          "case_family": "parser_documental",
+          "ambiguity_bucket": "A0_very_low",
+          "metric": "hallucination_reduction",
+          "value": 33,
+          "reason": "z_score_outlier"
+        },
+        {
+          "case_id": "SEED-505-STOCH-0109-PARSER_DOCUMENTAL",
+          "case_family": "parser_documental",
+          "ambiguity_bucket": "A2_medium",
+          "metric": "hallucination_reduction",
+          "value": 29,
+          "reason": "z_score_outlier"
+        },
+        {
+          "case_id": "SEED-505-STOCH-0109-PARSER_DOCUMENTAL",
+          "case_family": "parser_documental",
+          "ambiguity_bucket": "A2_medium",
+          "metric": "hallucination_reduction",
+          "value": 29,
+          "reason": "iqr_outlier"
+        },
+        {
+          "case_id": "SEED-505-STOCH-0130-PARSER_DOCUMENTAL",
+          "case_family": "parser_documental",
+          "ambiguity_bucket": "A0_very_low",
+          "metric": "hallucination_reduction",
+          "value": 26,
+          "reason": "z_score_outlier"
+        },
+        {
+          "case_id": "SEED-505-STOCH-0130-PARSER_DOCUMENTAL",
+          "case_family": "parser_documental",
+          "ambiguity_bucket": "A0_very_low",
+          "metric": "hallucination_reduction",
+          "value": 26,
+          "reason": "iqr_outlier"
+        },
+        {
+          "case_id": "SEED-505-STOCH-0191-PARSER_DOCUMENTAL",
+          "case_family": "parser_documental",
+          "ambiguity_bucket": "A0_very_low",
+          "metric": "hallucination_reduction",
+          "value": 33,
+          "reason": "z_score_outlier"
+        },
+        {
+          "case_id": "SEED-505-STOCH-0267-PARSER_DOCUMENTAL",
+          "case_family": "parser_documental",
+          "ambiguity_bucket": "A0_very_low",
+          "metric": "hallucination_reduction",
+          "value": 31,
+          "reason": "z_score_outlier"
+        },
+        {
+          "case_id": "SEED-505-STOCH-0292-PARSER_DOCUMENTAL",
+          "case_family": "parser_documental",
+          "ambiguity_bucket": "A0_very_low",
+          "metric": "hallucination_reduction",
+          "value": 30,
+          "reason": "z_score_outlier"
+        },
+        {
+          "case_id": "SEED-505-STOCH-0085-PARSER_DOCUMENTAL",
+          "case_family": "parser_documental",
+          "ambiguity_bucket": "A4_extreme",
+          "metric": "residual_delta_index",
+          "value": 94,
+          "reason": "z_score_outlier"
+        },
+        {
+          "case_id": "SEED-505-STOCH-0090-PARSER_DOCUMENTAL",
+          "case_family": "parser_documental",
+          "ambiguity_bucket": "A1_low",
+          "metric": "residual_delta_index",
+          "value": 7,
+          "reason": "z_score_outlier"
+        },
+        {
+          "case_id": "SEED-505-STOCH-0130-PARSER_DOCUMENTAL",
+          "case_family": "parser_documental",
+          "ambiguity_bucket": "A0_very_low",
+          "metric": "residual_delta_index",
+          "value": 6,
+          "reason": "z_score_outlier"
+        },
+        {
+          "case_id": "SEED-505-STOCH-0290-RULE_EXTRACTION",
+          "case_family": "rule_extraction",
+          "ambiguity_bucket": "A4_extreme",
+          "metric": "residual_delta_index",
+          "value": 96,
+          "reason": "z_score_outlier"
+        },
+        {
+          "case_id": "SEED-505-STOCH-0085-PARSER_DOCUMENTAL",
+          "case_family": "parser_documental",
+          "ambiguity_bucket": "A4_extreme",
+          "metric": "delta_control_score",
+          "value": 79,
+          "reason": "z_score_outlier"
+        },
+        {
+          "case_id": "SEED-505-STOCH-0106-PARSER_DOCUMENTAL",
+          "case_family": "parser_documental",
+          "ambiguity_bucket": "A0_very_low",
+          "metric": "delta_control_score",
+          "value": 93,
+          "reason": "z_score_outlier"
+        },
+        {
+          "case_id": "SEED-505-STOCH-0108-AUDIT_DOCUMENTAL",
+          "case_family": "audit_documental",
+          "ambiguity_bucket": "A1_low",
+          "metric": "delta_control_score",
+          "value": 92,
+          "reason": "z_score_outlier"
+        },
+        {
+          "case_id": "SEED-505-STOCH-0130-PARSER_DOCUMENTAL",
+          "case_family": "parser_documental",
+          "ambiguity_bucket": "A0_very_low",
+          "metric": "delta_control_score",
+          "value": 92,
+          "reason": "z_score_outlier"
+        },
+        {
+          "case_id": "SEED-505-STOCH-0195-SOFTWARE_REVIEW",
+          "case_family": "software_review",
+          "ambiguity_bucket": "A0_very_low",
+          "metric": "delta_control_score",
+          "value": 93,
+          "reason": "z_score_outlier"
+        },
+        {
+          "case_id": "SEED-505-STOCH-0200-RULE_EXTRACTION",
+          "case_family": "rule_extraction",
+          "ambiguity_bucket": "A4_extreme",
+          "metric": "delta_control_score",
+          "value": 80,
+          "reason": "z_score_outlier"
+        },
+        {
+          "case_id": "SEED-505-STOCH-0278-RULE_EXTRACTION",
+          "case_family": "rule_extraction",
+          "ambiguity_bucket": "A4_extreme",
+          "metric": "delta_control_score",
+          "value": 80,
+          "reason": "z_score_outlier"
+        },
+        {
+          "case_id": "SEED-505-STOCH-0290-RULE_EXTRACTION",
+          "case_family": "rule_extraction",
+          "ambiguity_bucket": "A4_extreme",
+          "metric": "delta_control_score",
+          "value": 79,
+          "reason": "z_score_outlier"
+        },
+        {
+          "case_id": "SEED-505-STOCH-0082-RULE_EXTRACTION",
+          "case_family": "rule_extraction",
+          "ambiguity_bucket": "A0_very_low",
+          "metric": "evidence_coverage",
+          "value": 89,
+          "reason": "z_score_outlier"
+        },
+        {
+          "case_id": "SEED-505-STOCH-0085-PARSER_DOCUMENTAL",
+          "case_family": "parser_documental",
+          "ambiguity_bucket": "A4_extreme",
+          "metric": "evidence_coverage",
+          "value": 4,
+          "reason": "z_score_outlier"
+        },
+        {
+          "case_id": "SEED-505-STOCH-0090-PARSER_DOCUMENTAL",
+          "case_family": "parser_documental",
+          "ambiguity_bucket": "A1_low",
+          "metric": "evidence_coverage",
+          "value": 88,
+          "reason": "z_score_outlier"
+        },
+        {
+          "case_id": "SEED-505-STOCH-0130-PARSER_DOCUMENTAL",
+          "case_family": "parser_documental",
+          "ambiguity_bucket": "A0_very_low",
+          "metric": "evidence_coverage",
+          "value": 89,
+          "reason": "z_score_outlier"
+        },
+        {
+          "case_id": "SEED-505-STOCH-0195-SOFTWARE_REVIEW",
+          "case_family": "software_review",
+          "ambiguity_bucket": "A0_very_low",
+          "metric": "evidence_coverage",
+          "value": 89,
+          "reason": "z_score_outlier"
+        },
+        {
+          "case_id": "SEED-505-STOCH-0290-RULE_EXTRACTION",
+          "case_family": "rule_extraction",
+          "ambiguity_bucket": "A4_extreme",
+          "metric": "evidence_coverage",
+          "value": 4,
+          "reason": "z_score_outlier"
+        },
+        {
+          "case_id": "SEED-505-STOCH-0005-PARSER_DOCUMENTAL",
+          "case_family": "parser_documental",
+          "ambiguity_bucket": "A0_very_low",
+          "metric": "low_ambiguity_high_hallucination",
+          "value": 27,
+          "reason": "unexpected_low_ambiguity_risk"
+        },
+        {
+          "case_id": "SEED-505-STOCH-0011-RULE_EXTRACTION",
+          "case_family": "rule_extraction",
+          "ambiguity_bucket": "A0_very_low",
+          "metric": "low_ambiguity_high_hallucination",
+          "value": 34,
+          "reason": "unexpected_low_ambiguity_risk"
+        },
+        {
+          "case_id": "SEED-505-STOCH-0018-AUDIT_DOCUMENTAL",
+          "case_family": "audit_documental",
+          "ambiguity_bucket": "A0_very_low",
+          "metric": "low_ambiguity_high_hallucination",
+          "value": 30,
+          "reason": "unexpected_low_ambiguity_risk"
+        },
+        {
+          "case_id": "SEED-505-STOCH-0041-RULE_EXTRACTION",
+          "case_family": "rule_extraction",
+          "ambiguity_bucket": "A0_very_low",
+          "metric": "low_ambiguity_high_hallucination",
+          "value": 27,
+          "reason": "unexpected_low_ambiguity_risk"
+        },
+        {
+          "case_id": "SEED-505-STOCH-0048-AUDIT_DOCUMENTAL",
+          "case_family": "audit_documental",
+          "ambiguity_bucket": "A0_very_low",
+          "metric": "low_ambiguity_high_hallucination",
+          "value": 27,
+          "reason": "unexpected_low_ambiguity_risk"
+        },
+        {
+          "case_id": "SEED-505-STOCH-0066-AUDIT_DOCUMENTAL",
+          "case_family": "audit_documental",
+          "ambiguity_bucket": "A0_very_low",
+          "metric": "low_ambiguity_high_hallucination",
+          "value": 28,
+          "reason": "unexpected_low_ambiguity_risk"
+        },
+        {
+          "case_id": "SEED-505-STOCH-0076-RULE_EXTRACTION",
+          "case_family": "rule_extraction",
+          "ambiguity_bucket": "A0_very_low",
+          "metric": "low_ambiguity_high_hallucination",
+          "value": 30,
+          "reason": "unexpected_low_ambiguity_risk"
+        },
+        {
+          "case_id": "SEED-505-STOCH-0083-RULE_EXTRACTION",
+          "case_family": "rule_extraction",
+          "ambiguity_bucket": "A0_very_low",
+          "metric": "low_ambiguity_high_hallucination",
+          "value": 35,
+          "reason": "unexpected_low_ambiguity_risk"
+        },
+        {
+          "case_id": "SEED-505-STOCH-0085-PARSER_DOCUMENTAL",
+          "case_family": "parser_documental",
+          "ambiguity_bucket": "A4_extreme",
+          "metric": "ambiguity_delta_control_interaction",
+          "value": 79,
+          "reason": "extreme_ambiguity_control_drop"
+        },
+        {
+          "case_id": "SEED-505-STOCH-0100-RULE_EXTRACTION",
+          "case_family": "rule_extraction",
+          "ambiguity_bucket": "A0_very_low",
+          "metric": "low_ambiguity_high_hallucination",
+          "value": 31,
+          "reason": "unexpected_low_ambiguity_risk"
+        },
+        {
+          "case_id": "SEED-505-STOCH-0129-RULE_EXTRACTION",
+          "case_family": "rule_extraction",
+          "ambiguity_bucket": "A0_very_low",
+          "metric": "low_ambiguity_high_hallucination",
+          "value": 38,
+          "reason": "unexpected_low_ambiguity_risk"
+        },
+        {
+          "case_id": "SEED-505-STOCH-0153-AUDIT_DOCUMENTAL",
+          "case_family": "audit_documental",
+          "ambiguity_bucket": "A0_very_low",
+          "metric": "low_ambiguity_high_hallucination",
+          "value": 32,
+          "reason": "unexpected_low_ambiguity_risk"
+        },
+        {
+          "case_id": "SEED-505-STOCH-0154-RULE_EXTRACTION",
+          "case_family": "rule_extraction",
+          "ambiguity_bucket": "A0_very_low",
+          "metric": "low_ambiguity_high_hallucination",
+          "value": 26,
+          "reason": "unexpected_low_ambiguity_risk"
+        },
+        {
+          "case_id": "SEED-505-STOCH-0163-RULE_EXTRACTION",
+          "case_family": "rule_extraction",
+          "ambiguity_bucket": "A0_very_low",
+          "metric": "low_ambiguity_high_hallucination",
+          "value": 28,
+          "reason": "unexpected_low_ambiguity_risk"
+        },
+        {
+          "case_id": "SEED-505-STOCH-0179-AUDIT_DOCUMENTAL",
+          "case_family": "audit_documental",
+          "ambiguity_bucket": "A0_very_low",
+          "metric": "low_ambiguity_high_hallucination",
+          "value": 28,
+          "reason": "unexpected_low_ambiguity_risk"
+        },
+        {
+          "case_id": "SEED-505-STOCH-0180-RULE_EXTRACTION",
+          "case_family": "rule_extraction",
+          "ambiguity_bucket": "A0_very_low",
+          "metric": "low_ambiguity_high_hallucination",
+          "value": 29,
+          "reason": "unexpected_low_ambiguity_risk"
+        },
+        {
+          "case_id": "SEED-505-STOCH-0183-SOFTWARE_REVIEW",
+          "case_family": "software_review",
+          "ambiguity_bucket": "A0_very_low",
+          "metric": "low_ambiguity_high_hallucination",
+          "value": 37,
+          "reason": "unexpected_low_ambiguity_risk"
+        },
+        {
+          "case_id": "SEED-505-STOCH-0227-SOFTWARE_REVIEW",
+          "case_family": "software_review",
+          "ambiguity_bucket": "A0_very_low",
+          "metric": "low_ambiguity_high_hallucination",
+          "value": 26,
+          "reason": "unexpected_low_ambiguity_risk"
+        },
+        {
+          "case_id": "SEED-505-STOCH-0272-SOFTWARE_REVIEW",
+          "case_family": "software_review",
+          "ambiguity_bucket": "A0_very_low",
+          "metric": "low_ambiguity_high_hallucination",
+          "value": 30,
+          "reason": "unexpected_low_ambiguity_risk"
+        },
+        {
+          "case_id": "SEED-505-STOCH-0274-AUDIT_DOCUMENTAL",
+          "case_family": "audit_documental",
+          "ambiguity_bucket": "A0_very_low",
+          "metric": "low_ambiguity_high_hallucination",
+          "value": 35,
+          "reason": "unexpected_low_ambiguity_risk"
+        },
+        {
+          "case_id": "SEED-505-STOCH-0290-RULE_EXTRACTION",
+          "case_family": "rule_extraction",
+          "ambiguity_bucket": "A4_extreme",
+          "metric": "ambiguity_delta_control_interaction",
+          "value": 79,
+          "reason": "extreme_ambiguity_control_drop"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,6 @@
+seed,cases_count,avg_direct_hallucination,avg_casulo_hallucination,avg_hallucination_reduction,avg_delta_control,avg_residual_delta,avg_evidence_coverage,anomaly_count,anomaly_rate,invented_fields_total,unsupported_fields_total,production_blocked_all_cases
+101,300,83.72,27.5,56.22,85.97,52.97,45.95,51,0.17,56,521,True
+202,300,84.49,27.4,57.08,86.14,52.42,47.0,51,0.17,51,525,True
+303,300,81.77,26.58,55.19,86.22,50.62,48.25,47,0.1567,48,508,True
+404,300,85.58,28.43,57.15,85.96,52.57,46.25,56,0.1867,76,515,True
+505,300,84.2,27.63,56.57,86.04,51.72,46.7,55,0.1833,57,526,True

@@ -63,16 +63,13 @@ class ProductRuntimeHandler(BaseHTTPRequestHandler):
             route_map = {
                 "api/health": self.service.health,
                 "api/product/status": self.service.product_status,
-                "api/casulo/stochastic/random-cases": self.service.random_cases,
-                "api/casulo/stochastic/scored-cases": self.service.scored_cases,
-                "api/casulo/stochastic/anomaly-report": self.service.anomaly_report,
-                "api/casulo/stochastic/family-behavior": self.service.family_behavior,
-                "api/casulo/stochastic/ambiguity-behavior": self.service.ambiguity_behavior,
-                "api/casulo/stochastic/risk-behavior": self.service.risk_behavior,
-                "api/casulo/stochastic/study-plan": self.service.stochastic_study_plan,
-                "api/casulo/stochastic/calibration-policy": self.service.calibration_policy,
-                "api/casulo/stochastic/readiness": self.service.stochastic_readiness,
-                "api/casulo/stochastic/audit": self.service.stochastic_audit,
+                "api/casulo/multiseed/runs": self.service.multi_seed_runs,
+                "api/casulo/multiseed/stability-report": self.service.stability_report,
+                "api/casulo/multiseed/drift-report": self.service.drift_report,
+                "api/casulo/multiseed/anomaly-clusters": self.service.anomaly_cluster_report,
+                "api/casulo/multiseed/threshold-recommendations": self.service.threshold_recommendations,
+                "api/casulo/multiseed/readiness": self.service.multi_seed_readiness,
+                "api/casulo/multiseed/audit": self.service.multi_seed_audit,
                 "api/reports": self.service.reports,
             }
             if clean in route_map:
@@ -90,7 +87,7 @@ def main() -> int:
     server = HTTPServer((args.host, args.port), ProductRuntimeHandler)
     print(f"Operational Cube product runtime API/UI running at http://{args.host}:{args.port}")
     print("Open: /ui")
-    print("Try: /api/health, /api/casulo/stochastic/anomaly-report")
+    print("Try: /api/health, /api/casulo/multiseed/stability-report")
     try:
         server.serve_forever()
     except KeyboardInterrupt:

@@ -46,17 +46,16 @@ class ProductRuntimeService:
 
     def product_status(self) -> Dict:
         checks = {
-            "case_runner_results": exists(self.outputs_root / "prod181_200_case_runner_results.json"),
-            "random_cases": exists(self.outputs_root / "prod201_220_random_cases.json"),
-            "scored_cases": exists(self.outputs_root / "prod201_220_scored_cases.json"),
-            "anomaly_report": exists(self.outputs_root / "prod201_220_anomaly_report.json"),
-            "family_behavior": exists(self.outputs_root / "prod201_220_family_behavior.json"),
-            "ambiguity_behavior": exists(self.outputs_root / "prod201_220_ambiguity_behavior.json"),
-            "risk_behavior": exists(self.outputs_root / "prod201_220_risk_behavior.json"),
-            "stochastic_study_plan": exists(self.outputs_root / "prod201_220_stochastic_study_plan.json"),
-            "calibration_policy": exists(self.outputs_root / "prod201_220_calibration_policy.json"),
-            "stochastic_readiness": exists(self.outputs_root / "prod201_220_stochastic_readiness.json"),
-            "stochastic_audit": exists(self.outputs_root / "prod201_220_audit_report.json"),
+            "stochastic_anomaly_report": exists(self.outputs_root / "prod201_220_anomaly_report.json"),
+            "multi_seed_runs": exists(self.outputs_root / "prod221_240_multi_seed_runs.json"),
+            "stability_report": exists(self.outputs_root / "prod221_240_stability_report.json"),
+            "drift_report": exists(self.outputs_root / "prod221_240_drift_report.json"),
+            "anomaly_cluster_report": exists(self.outputs_root / "prod221_240_anomaly_cluster_report.json"),
+            "threshold_recommendations": exists(self.outputs_root / "prod221_240_calibrated_threshold_recommendations.json"),
+            "seed_summary": exists(self.outputs_root / "prod221_240_seed_summary.csv"),
+            "all_seed_cases": exists(self.outputs_root / "prod221_240_scored_cases_all_seeds.json"),
+            "multi_seed_readiness": exists(self.outputs_root / "prod221_240_readiness.json"),
+            "multi_seed_audit": exists(self.outputs_root / "prod221_240_audit_report.json"),
         }
         return {
             "status": "PASS" if all(checks.values()) else "INCOMPLETE",
@@ -64,7 +63,7 @@ class ProductRuntimeService:
             "runtime_mode": RUNTIME_MODE,
             "checks": checks,
             "blocked_actions": BLOCKED_ACTIONS,
-            "next_recommended_step": "Run multiple seeds and larger batches; then create real-document anonymized batch runner.",
+            "next_recommended_step": "Run anonymized real-document batch after synthetic multi-seed stability review.",
         }
 
     def _payload(self, stem: str, key: str) -> Dict:
@@ -72,16 +71,13 @@ class ProductRuntimeService:
 
     def __getattr__(self, name):
         mapping = {
-            "random_cases": ("prod201_220_random_cases.json", "random_cases"),
-            "scored_cases": ("prod201_220_scored_cases.json", "scored_cases"),
-            "anomaly_report": ("prod201_220_anomaly_report.json", "anomaly_report"),
-            "family_behavior": ("prod201_220_family_behavior.json", "family_behavior"),
-            "ambiguity_behavior": ("prod201_220_ambiguity_behavior.json", "ambiguity_behavior"),
-            "risk_behavior": ("prod201_220_risk_behavior.json", "risk_behavior"),
-            "stochastic_study_plan": ("prod201_220_stochastic_study_plan.json", "stochastic_study_plan"),
-            "calibration_policy": ("prod201_220_calibration_policy.json", "calibration_policy"),
-            "stochastic_readiness": ("prod201_220_stochastic_readiness.json", "stochastic_readiness"),
-            "stochastic_audit": ("prod201_220_audit_report.json", "stochastic_audit"),
+            "multi_seed_runs": ("prod221_240_multi_seed_runs.json", "multi_seed_runs"),
+            "stability_report": ("prod221_240_stability_report.json", "stability_report"),
+            "drift_report": ("prod221_240_drift_report.json", "drift_report"),
+            "anomaly_cluster_report": ("prod221_240_anomaly_cluster_report.json", "anomaly_cluster_report"),
+            "threshold_recommendations": ("prod221_240_calibrated_threshold_recommendations.json", "threshold_recommendations"),
+            "multi_seed_readiness": ("prod221_240_readiness.json", "multi_seed_readiness"),
+            "multi_seed_audit": ("prod221_240_audit_report.json", "multi_seed_audit"),
         }
         if name in mapping:
             stem, key = mapping[name]
@@ -90,11 +86,10 @@ class ProductRuntimeService:
 
     def reports(self) -> Dict:
         patterns = [
-            "prod201_220_anomaly_report.md",
-            "prod201_220_stochastic_study_plan.md",
-            "prod201_220_calibration_policy.md",
-            "prod201_220_stochastic_readiness.md",
-            "prod201_220_audit_report.md",
+            "prod221_240_stability_report.md",
+            "prod221_240_readiness.md",
+            "prod221_240_audit_report.md",
+            "prod221_240_report.md",
         ]
         reports = []
         for name in patterns:

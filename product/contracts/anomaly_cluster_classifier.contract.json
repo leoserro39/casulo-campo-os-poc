@@ -1,0 +1,4 @@
+{
+  "contract": "casulo.anomaly_cluster_classifier.v0.1",
+  "purpose": "Cluster anomalies by metric, case family, ambiguity bucket and risk profile."
+}

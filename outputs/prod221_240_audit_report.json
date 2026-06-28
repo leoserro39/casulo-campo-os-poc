@@ -1,0 +1,17 @@
+{
+  "status": "PASS",
+  "audit": "Multi-Seed Stability and Drift audit",
+  "total_cases": 1500,
+  "seeds": [
+    101,
+    202,
+    303,
+    404,
+    505
+  ],
+  "decision": "STABLE_ENOUGH_FOR_PROVISIONAL_SYNTHETIC_THRESHOLDS",
+  "drift_status": "PASS",
+  "drift_flags": [],
+  "anomaly_total": 260,
+  "finding": "PASS: multi-seed stability/drift outputs generated and ready for review."
+}

@@ -1,0 +1,15 @@
+{
+  "task": "PROD-221..240",
+  "status": "PASS",
+  "phase": "Multi-Seed Stability and Drift Calibration Runner",
+  "endpoints": [
+    "/api/casulo/multiseed/runs",
+    "/api/casulo/multiseed/stability-report",
+    "/api/casulo/multiseed/drift-report",
+    "/api/casulo/multiseed/anomaly-clusters",
+    "/api/casulo/multiseed/threshold-recommendations",
+    "/api/casulo/multiseed/readiness",
+    "/api/casulo/multiseed/audit"
+  ],
+  "next_recommended_bundle": "PROD-241..260 Real Anonymized Document Batch Runner"
+}

@@ -1,0 +1,66 @@
+{
+  "status": "PASS",
+  "drift": {
+    "status": "PASS",
+    "flags": [],
+    "decision": "STABLE_ENOUGH_FOR_PROVISIONAL_SYNTHETIC_THRESHOLDS"
+  },
+  "stability": {
+    "avg_direct_hallucination": {
+      "mean": 83.95,
+      "std": 1.2503,
+      "cv": 0.0149,
+      "min": 81.77,
+      "max": 85.58,
+      "range": 3.81
+    },
+    "avg_casulo_hallucination": {
+      "mean": 27.51,
+      "std": 0.5896,
+      "cv": 0.0214,
+      "min": 26.58,
+      "max": 28.43,
+      "range": 1.85
+    },
+    "avg_hallucination_reduction": {
+      "mean": 56.44,
+      "std": 0.7129,
+      "cv": 0.0126,
+      "min": 55.19,
+      "max": 57.15,
+      "range": 1.96
+    },
+    "avg_delta_control": {
+      "mean": 86.07,
+      "std": 0.1003,
+      "cv": 0.0012,
+      "min": 85.96,
+      "max": 86.22,
+      "range": 0.26
+    },
+    "avg_residual_delta": {
+      "mean": 52.06,
+      "std": 0.8255,
+      "cv": 0.0159,
+      "min": 50.62,
+      "max": 52.97,
+      "range": 2.35
+    },
+    "avg_evidence_coverage": {
+      "mean": 46.83,
+      "std": 0.7966,
+      "cv": 0.017,
+      "min": 45.95,
+      "max": 48.25,
+      "range": 2.3
+    },
+    "anomaly_rate": {
+      "mean": 0.17,
+      "std": 0.0107,
+      "cv": 0.062,
+      "min": 0.16,
+      "max": 0.19,
+      "range": 0.03
+    }
+  }
+}

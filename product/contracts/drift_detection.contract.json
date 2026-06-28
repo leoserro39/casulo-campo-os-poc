@@ -1,0 +1,11 @@
+{
+  "contract": "casulo.drift_detection.v0.1",
+  "purpose": "Detect instability between random seeds before trusting calibration thresholds.",
+  "metrics": [
+    "avg_casulo_hallucination",
+    "avg_hallucination_reduction",
+    "avg_delta_control",
+    "avg_residual_delta",
+    "anomaly_rate"
+  ]
+}

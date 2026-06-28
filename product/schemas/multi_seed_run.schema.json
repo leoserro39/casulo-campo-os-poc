@@ -1,0 +1,13 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "CASULO Multi Seed Run",
+  "type": "object",
+  "required": [
+    "seed",
+    "cases_count",
+    "summary",
+    "ambiguity_behavior",
+    "family_behavior",
+    "anomaly_count"
+  ]
+}

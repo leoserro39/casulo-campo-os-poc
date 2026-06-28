@@ -1,0 +1,5 @@
+{
+  "contract": "casulo.calibrated_threshold_recommendation.v0.1",
+  "purpose": "Recommend provisional thresholds only when behavior is stable across seeds.",
+  "rule": "Recommendations remain provisional until real anonymized documents confirm the synthetic pattern."
+}
