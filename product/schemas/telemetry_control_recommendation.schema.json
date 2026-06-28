@@ -1,0 +1,11 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Telemetry Control Recommendation",
+  "type": "object",
+  "required": [
+    "control_id",
+    "delta_family",
+    "reason",
+    "recommended_gate"
+  ]
+}

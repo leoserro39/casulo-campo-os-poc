@@ -1,0 +1,13 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Graph Sync Test Case",
+  "type": "object",
+  "required": [
+    "sync_id",
+    "source_domain",
+    "target_domain",
+    "primary_delta",
+    "recommended_control",
+    "recommended_gate"
+  ]
+}

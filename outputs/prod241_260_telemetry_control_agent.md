@@ -1,0 +1,30 @@
+# Telemetry Control Agent
+
+- contract_version: `casulo.telemetry_control_agent.v0.1`
+- status: `PASS`
+- role: `advisor_not_autonomous_executor`
+
+## Flow
+- `inspect candidate graph`
+- `detect active deltas`
+- `query delta library`
+- `match anomaly patterns`
+- `recommend controls`
+- `recommend gates`
+- `suggest missing artifacts/domains/documents`
+- `stop when practical closure rule triggers`
+
+## Allowed Actions
+- `recommend_control`
+- `recommend_gate`
+- `create_task_candidate`
+- `mark_edge_candidate`
+- `request_evidence`
+
+## Blocked Actions
+- `client_facing_claim`
+- `automatic_nomination`
+- `implementation_execution`
+- `production_activation`
+- `automatic_merge`
+- `credential_handling`

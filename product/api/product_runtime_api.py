@@ -1,99 +1,31 @@
 #!/usr/bin/env python3
 from __future__ import annotations
-
-import argparse
-import json
-import mimetypes
-import sys
-from http.server import BaseHTTPRequestHandler, HTTPServer
+import argparse,json,mimetypes,sys
+from http.server import BaseHTTPRequestHandler,HTTPServer
 from pathlib import Path
 from urllib.parse import urlparse
-
-THIS_FILE = Path(__file__).resolve()
-PRODUCT_ROOT = THIS_FILE.parents[1]
-REPO_ROOT = PRODUCT_ROOT.parent
-UI_ROOT = PRODUCT_ROOT / "ui"
-sys.path.insert(0, str(PRODUCT_ROOT))
-
+THIS_FILE=Path(__file__).resolve(); PRODUCT_ROOT=THIS_FILE.parents[1]; REPO_ROOT=PRODUCT_ROOT.parent; UI_ROOT=PRODUCT_ROOT/"ui"; sys.path.insert(0,str(PRODUCT_ROOT))
 from api.services.product_runtime_service import ProductRuntimeService
-
-
-def json_bytes(data):
-    return json.dumps(data, indent=2, ensure_ascii=False).encode("utf-8")
-
-
+def json_bytes(data): return json.dumps(data,indent=2,ensure_ascii=False).encode("utf-8")
 class ProductRuntimeHandler(BaseHTTPRequestHandler):
-    service: ProductRuntimeService = ProductRuntimeService(REPO_ROOT)
-
-    def send_json(self, data, status=200):
-        body = json_bytes(data)
-        self.send_response(status)
-        self.send_header("Content-Type", "application/json; charset=utf-8")
-        self.send_header("Access-Control-Allow-Origin", "*")
-        self.send_header("Content-Length", str(len(body)))
-        self.end_headers()
-        self.wfile.write(body)
-
-    def send_static(self, path: Path):
-        if not path.exists() or not path.is_file():
-            return self.send_json({"status": "NOT_FOUND", "path": str(path)}, status=404)
-        body = path.read_bytes()
-        content_type = mimetypes.guess_type(str(path))[0] or "application/octet-stream"
-        if content_type.startswith("text/") or content_type in ["application/javascript", "text/css"]:
-            content_type += "; charset=utf-8"
-        self.send_response(200)
-        self.send_header("Content-Type", content_type)
-        self.send_header("Content-Length", str(len(body)))
-        self.end_headers()
-        self.wfile.write(body)
-
-    def log_message(self, fmt, *args):
-        return
-
+    service=ProductRuntimeService(REPO_ROOT)
+    def send_json(self,data,status=200):
+        body=json_bytes(data); self.send_response(status); self.send_header("Content-Type","application/json; charset=utf-8"); self.send_header("Access-Control-Allow-Origin","*"); self.send_header("Content-Length",str(len(body))); self.end_headers(); self.wfile.write(body)
+    def send_static(self,path:Path):
+        if not path.exists() or not path.is_file(): return self.send_json({"status":"NOT_FOUND","path":str(path)},404)
+        body=path.read_bytes(); ct=mimetypes.guess_type(str(path))[0] or "application/octet-stream"; self.send_response(200); self.send_header("Content-Type",ct); self.send_header("Content-Length",str(len(body))); self.end_headers(); self.wfile.write(body)
+    def log_message(self,fmt,*args): return
     def do_GET(self):
-        path = urlparse(self.path).path
-        clean = path.strip("/")
+        path=urlparse(self.path).path; clean=path.strip("/")
         try:
-            if path in ["/", "/ui", "/ui/"]: return self.send_static(UI_ROOT / "index.html")
-            if clean.startswith("ui/"):
-                requested = (UI_ROOT / clean.replace("ui/", "", 1)).resolve()
-                if UI_ROOT.resolve() not in requested.parents and requested != UI_ROOT.resolve():
-                    return self.send_json({"status": "FORBIDDEN"}, status=403)
-                return self.send_static(requested)
-            route_map = {
-                "api/health": self.service.health,
-                "api/product/status": self.service.product_status,
-                "api/casulo/multiseed/runs": self.service.multi_seed_runs,
-                "api/casulo/multiseed/stability-report": self.service.stability_report,
-                "api/casulo/multiseed/drift-report": self.service.drift_report,
-                "api/casulo/multiseed/anomaly-clusters": self.service.anomaly_cluster_report,
-                "api/casulo/multiseed/threshold-recommendations": self.service.threshold_recommendations,
-                "api/casulo/multiseed/readiness": self.service.multi_seed_readiness,
-                "api/casulo/multiseed/audit": self.service.multi_seed_audit,
-                "api/reports": self.service.reports,
-            }
-            if clean in route_map:
-                return self.send_json(route_map[clean]())
-            return self.send_json({"status": "NOT_FOUND", "path": path}, status=404)
-        except Exception as exc:
-            return self.send_json({"status": "ERROR", "error": str(exc)}, status=500)
-
-
-def main() -> int:
-    parser = argparse.ArgumentParser()
-    parser.add_argument("--host", default="127.0.0.1")
-    parser.add_argument("--port", type=int, default=8097)
-    args = parser.parse_args()
-    server = HTTPServer((args.host, args.port), ProductRuntimeHandler)
-    print(f"Operational Cube product runtime API/UI running at http://{args.host}:{args.port}")
-    print("Open: /ui")
-    print("Try: /api/health, /api/casulo/multiseed/stability-report")
-    try:
-        server.serve_forever()
-    except KeyboardInterrupt:
-        print("Stopping product runtime API/UI.")
-    return 0
-
-
-if __name__ == "__main__":
-    raise SystemExit(main())
+            if path in ["/","/ui","/ui/"]: return self.send_static(UI_ROOT/"index.html")
+            routes={"api/health":self.service.health,"api/product/status":self.service.product_status,"api/casulo/graph-sync/delta-library":self.service.delta_library_v2,"api/casulo/graph-sync/control-catalog":self.service.control_catalog,"api/casulo/graph-sync/lab-report":self.service.graph_sync_lab_report,"api/casulo/graph-sync/attempts":self.service.graph_sync_attempts,"api/casulo/graph-sync/summary":self.service.graph_sync_summary,"api/casulo/graph-sync/telemetry-agent":self.service.telemetry_control_agent,"api/casulo/graph-sync/practical-closure":self.service.practical_closure_policy,"api/casulo/graph-sync/readiness":self.service.graph_sync_readiness,"api/casulo/graph-sync/audit":self.service.graph_sync_audit,"api/reports":self.service.reports}
+            if clean in routes: return self.send_json(routes[clean]())
+            return self.send_json({"status":"NOT_FOUND","path":path},404)
+        except Exception as exc: return self.send_json({"status":"ERROR","error":str(exc)},500)
+def main():
+    ap=argparse.ArgumentParser(); ap.add_argument("--host",default="127.0.0.1"); ap.add_argument("--port",type=int,default=8097); args=ap.parse_args()
+    server=HTTPServer((args.host,args.port),ProductRuntimeHandler); print(f"Operational Cube product runtime API/UI running at http://{args.host}:{args.port}"); print("Open: /ui"); print("Try: /api/health, /api/casulo/graph-sync/lab-report")
+    try: server.serve_forever()
+    except KeyboardInterrupt: print("Stopping product runtime API/UI.")
+if __name__=="__main__": main()

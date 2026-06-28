@@ -1,0 +1,12 @@
+{
+  "contract": "casulo.graph_sync_telemetry_lab.v0.1",
+  "purpose": "Test cross-domain candidate graph synchronization with delta telemetry, recommendations and practical stop rules.",
+  "blocked_actions": [
+    "client_facing_claim",
+    "automatic_nomination",
+    "implementation_execution",
+    "production_activation",
+    "automatic_merge",
+    "credential_handling"
+  ]
+}

@@ -1,0 +1,51 @@
+{
+  "status": "PASS",
+  "sync_summary": {
+    "gate_counts": {
+      "BLOCKED_UNSUPPORTED": 3,
+      "STRUCTURE_ONLY": 15,
+      "HUMAN_REVIEW_REQUIRED": 12,
+      "TASK_ONLY": 12,
+      "ASK_FOR_EVIDENCE": 6
+    },
+    "control_counts": {
+      "production_block": 3,
+      "split_interpretations": 4,
+      "human_arbitration": 3,
+      "calibration_review": 4,
+      "generate_missing_artifact_task": 1,
+      "mark_candidate_only": 2,
+      "create_data_request": 3,
+      "create_review_task": 2,
+      "raise_review_level": 2,
+      "deployment_readiness_check": 1,
+      "conflict_resolution_task": 4,
+      "require_domain_owner": 2,
+      "graph_repair_suggestion": 1,
+      "structure_only": 6,
+      "repeat_seed_test": 3,
+      "require_runtime_context": 3,
+      "exception_map": 1,
+      "bridge_candidate_generation": 1,
+      "require_test_plan": 1,
+      "route_to_owner": 1
+    },
+    "delta_counts": {
+      "delta_production": 4,
+      "delta_ambiguity": 10,
+      "delta_conflict": 7,
+      "delta_model_behavior": 7,
+      "delta_missingness": 4,
+      "delta_evidence": 2,
+      "delta_human_review": 3,
+      "delta_domain": 4,
+      "delta_graph_structure": 2,
+      "delta_execution": 4,
+      "delta_rule": 1
+    },
+    "avg_sync_risk": 39.38,
+    "avg_material_delta_change": 9.92,
+    "stop_reason": "production_blocked",
+    "self_sustaining_status": "PRACTICAL_LOOP_READY"
+  }
+}

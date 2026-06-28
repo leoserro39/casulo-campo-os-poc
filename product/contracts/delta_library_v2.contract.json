@@ -1,0 +1,4 @@
+{
+  "contract": "casulo.delta_library_v2.v0.1",
+  "purpose": "Canonical delta taxonomy for graph creation, graph sync, gate selection and recommendations."
+}

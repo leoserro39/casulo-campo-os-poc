@@ -1,98 +1,28 @@
 from __future__ import annotations
-
 import json
 from pathlib import Path
-from typing import Dict
-
-
-PRODUCT_DIRECTION = "Cubo Operacional / Operational Cube"
-RUNTIME_MODE = "local_demo"
-BLOCKED_ACTIONS = [
-    "client_facing_claim",
-    "automatic_nomination",
-    "implementation_execution",
-    "production_activation",
-    "automatic_merge",
-    "credential_handling",
-]
-
-
-def read_json(path: Path) -> Dict:
-    return json.loads(path.read_text(encoding="utf-8"))
-
-
-def read_text(path: Path) -> str:
-    return path.read_text(encoding="utf-8")
-
-
-def exists(path: Path) -> bool:
-    return path.exists()
-
-
-def payload(path: Path, key: str):
-    if not path.exists():
-        return {"status": "MISSING", "error": f"{key} has not been generated yet."}
-    md = path.with_suffix(".md")
-    return {"status": "PASS", key: read_json(path), "markdown_path": str(md), "markdown_preview": read_text(md)[:4000] if md.exists() else ""}
-
-
+PRODUCT_DIRECTION="Cubo Operacional / Operational Cube"; RUNTIME_MODE="local_demo"
+BLOCKED_ACTIONS=["client_facing_claim","automatic_nomination","implementation_execution","production_activation","automatic_merge","credential_handling"]
+def read_json(p): return json.loads(p.read_text(encoding="utf-8"))
+def read_text(p): return p.read_text(encoding="utf-8")
+def payload(path,key):
+    if not path.exists(): return {"status":"MISSING","error":f"{key} has not been generated yet."}
+    md=path.with_suffix(".md")
+    return {"status":"PASS",key:read_json(path),"markdown_path":str(md),"markdown_preview":read_text(md)[:4000] if md.exists() else ""}
 class ProductRuntimeService:
-    def __init__(self, repo_root: Path):
-        self.repo_root = repo_root
-        self.outputs_root = repo_root / "outputs"
-
-    def health(self) -> Dict:
-        return {"status": "PASS", "product_direction": PRODUCT_DIRECTION, "runtime_mode": RUNTIME_MODE, "blocked_actions": BLOCKED_ACTIONS}
-
-    def product_status(self) -> Dict:
-        checks = {
-            "stochastic_anomaly_report": exists(self.outputs_root / "prod201_220_anomaly_report.json"),
-            "multi_seed_runs": exists(self.outputs_root / "prod221_240_multi_seed_runs.json"),
-            "stability_report": exists(self.outputs_root / "prod221_240_stability_report.json"),
-            "drift_report": exists(self.outputs_root / "prod221_240_drift_report.json"),
-            "anomaly_cluster_report": exists(self.outputs_root / "prod221_240_anomaly_cluster_report.json"),
-            "threshold_recommendations": exists(self.outputs_root / "prod221_240_calibrated_threshold_recommendations.json"),
-            "seed_summary": exists(self.outputs_root / "prod221_240_seed_summary.csv"),
-            "all_seed_cases": exists(self.outputs_root / "prod221_240_scored_cases_all_seeds.json"),
-            "multi_seed_readiness": exists(self.outputs_root / "prod221_240_readiness.json"),
-            "multi_seed_audit": exists(self.outputs_root / "prod221_240_audit_report.json"),
-        }
-        return {
-            "status": "PASS" if all(checks.values()) else "INCOMPLETE",
-            "product_direction": PRODUCT_DIRECTION,
-            "runtime_mode": RUNTIME_MODE,
-            "checks": checks,
-            "blocked_actions": BLOCKED_ACTIONS,
-            "next_recommended_step": "Run anonymized real-document batch after synthetic multi-seed stability review.",
-        }
-
-    def _payload(self, stem: str, key: str) -> Dict:
-        return payload(self.outputs_root / stem, key)
-
-    def __getattr__(self, name):
-        mapping = {
-            "multi_seed_runs": ("prod221_240_multi_seed_runs.json", "multi_seed_runs"),
-            "stability_report": ("prod221_240_stability_report.json", "stability_report"),
-            "drift_report": ("prod221_240_drift_report.json", "drift_report"),
-            "anomaly_cluster_report": ("prod221_240_anomaly_cluster_report.json", "anomaly_cluster_report"),
-            "threshold_recommendations": ("prod221_240_calibrated_threshold_recommendations.json", "threshold_recommendations"),
-            "multi_seed_readiness": ("prod221_240_readiness.json", "multi_seed_readiness"),
-            "multi_seed_audit": ("prod221_240_audit_report.json", "multi_seed_audit"),
-        }
+    def __init__(self,repo_root:Path): self.repo_root=repo_root; self.outputs_root=repo_root/"outputs"
+    def health(self): return {"status":"PASS","product_direction":PRODUCT_DIRECTION,"runtime_mode":RUNTIME_MODE,"blocked_actions":BLOCKED_ACTIONS}
+    def product_status(self):
+        names=["delta_library_v2","control_catalog","graph_sync_lab_report","graph_sync_attempts","graph_sync_summary","telemetry_control_agent","practical_closure_policy","graph_sync_readiness","audit_report"]
+        stems=["prod241_260_delta_library_v2.json","prod241_260_control_catalog.json","prod241_260_graph_sync_lab_report.json","prod241_260_graph_sync_attempts.json","prod241_260_graph_sync_summary.json","prod241_260_telemetry_control_agent.json","prod241_260_practical_closure_policy.json","prod241_260_graph_sync_readiness.json","prod241_260_audit_report.json"]
+        checks={n:(self.outputs_root/s).exists() for n,s in zip(names,stems)}
+        return {"status":"PASS" if all(checks.values()) else "INCOMPLETE","product_direction":PRODUCT_DIRECTION,"runtime_mode":RUNTIME_MODE,"checks":checks,"blocked_actions":BLOCKED_ACTIONS,"next_recommended_step":"Integrate graph sync telemetry into graph builder."}
+    def __getattr__(self,name):
+        mapping={"delta_library_v2":("prod241_260_delta_library_v2.json","delta_library_v2"),"control_catalog":("prod241_260_control_catalog.json","control_catalog"),"graph_sync_lab_report":("prod241_260_graph_sync_lab_report.json","graph_sync_lab_report"),"graph_sync_attempts":("prod241_260_graph_sync_attempts.json","graph_sync_attempts"),"graph_sync_summary":("prod241_260_graph_sync_summary.json","graph_sync_summary"),"telemetry_control_agent":("prod241_260_telemetry_control_agent.json","telemetry_control_agent"),"practical_closure_policy":("prod241_260_practical_closure_policy.json","practical_closure_policy"),"graph_sync_readiness":("prod241_260_graph_sync_readiness.json","graph_sync_readiness"),"graph_sync_audit":("prod241_260_audit_report.json","graph_sync_audit")}
         if name in mapping:
-            stem, key = mapping[name]
-            return lambda: self._payload(stem, key)
+            stem,key=mapping[name]
+            return lambda: payload(self.outputs_root/stem,key)
         raise AttributeError(name)
-
-    def reports(self) -> Dict:
-        patterns = [
-            "prod221_240_stability_report.md",
-            "prod221_240_readiness.md",
-            "prod221_240_audit_report.md",
-            "prod221_240_report.md",
-        ]
-        reports = []
-        for name in patterns:
-            path = self.outputs_root / name
-            reports.append({"name": name, "exists": path.exists(), "path": str(path), "preview": read_text(path)[:1200] if path.exists() else ""})
-        return {"status": "PASS", "reports": reports}
+    def reports(self):
+        pats=["prod241_260_delta_library_v2.md","prod241_260_control_catalog.md","prod241_260_graph_sync_lab_report.md","prod241_260_telemetry_control_agent.md","prod241_260_practical_closure_policy.md","prod241_260_graph_sync_readiness.md","prod241_260_audit_report.md"]
+        return {"status":"PASS","reports":[{"name":p,"exists":(self.outputs_root/p).exists(),"path":str(self.outputs_root/p),"preview":read_text(self.outputs_root/p)[:1200] if (self.outputs_root/p).exists() else ""} for p in pats]}

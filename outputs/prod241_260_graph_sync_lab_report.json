@@ -1,0 +1,2076 @@
+{
+  "status": "PASS",
+  "lab": "casulo.graph_sync_telemetry_lab.v0.1",
+  "seed": 241260,
+  "domains": [
+    "parser_documental",
+    "audit_documental",
+    "rule_extraction",
+    "software_review",
+    "process_operations",
+    "enterprise_knowledge"
+  ],
+  "graphs": [
+    {
+      "domain": "parser_documental",
+      "nodes": [
+        {
+          "node_id": "PARSER_DOCUMENTAL-N01",
+          "domain": "parser_documental",
+          "node_type": "entity",
+          "confidence": 64,
+          "evidence_strength": 45,
+          "delta_profile": [
+            "delta_production",
+            "delta_conflict"
+          ]
+        },
+        {
+          "node_id": "PARSER_DOCUMENTAL-N02",
+          "domain": "parser_documental",
+          "node_type": "rule",
+          "confidence": 89,
+          "evidence_strength": 27,
+          "delta_profile": [
+            "delta_ambiguity"
+          ]
+        },
+        {
+          "node_id": "PARSER_DOCUMENTAL-N03",
+          "domain": "parser_documental",
+          "node_type": "evidence",
+          "confidence": 43,
+          "evidence_strength": 70,
+          "delta_profile": [
+            "delta_execution",
+            "delta_human_review",
+            "delta_rule"
+          ]
+        },
+        {
+          "node_id": "PARSER_DOCUMENTAL-N04",
+          "domain": "parser_documental",
+          "node_type": "evidence",
+          "confidence": 79,
+          "evidence_strength": 26,
+          "delta_profile": [
+            "delta_graph_structure",
+            "delta_execution",
+            "delta_rule"
+          ]
+        },
+        {
+          "node_id": "PARSER_DOCUMENTAL-N05",
+          "domain": "parser_documental",
+          "node_type": "state",
+          "confidence": 45,
+          "evidence_strength": 84,
+          "delta_profile": [
+            "delta_model_behavior",
+            "delta_graph_structure",
+            "delta_production"
+          ]
+        },
+        {
+          "node_id": "PARSER_DOCUMENTAL-N06",
+          "domain": "parser_documental",
+          "node_type": "entity",
+          "confidence": 52,
+          "evidence_strength": 33,
+          "delta_profile": [
+            "delta_execution",
+            "delta_ambiguity"
+          ]
+        },
+        {
+          "node_id": "PARSER_DOCUMENTAL-N07",
+          "domain": "parser_documental",
+          "node_type": "rule",
+          "confidence": 80,
+          "evidence_strength": 91,
+          "delta_profile": [
+            "delta_evidence"
+          ]
+        },
+        {
+          "node_id": "PARSER_DOCUMENTAL-N08",
+          "domain": "parser_documental",
+          "node_type": "task",
+          "confidence": 91,
+          "evidence_strength": 90,
+          "delta_profile": [
+            "delta_evidence",
+            "delta_human_review",
+            "delta_model_behavior"
+          ]
+        }
+      ]
+    },
+    {
+      "domain": "audit_documental",
+      "nodes": [
+        {
+          "node_id": "AUDIT_DOCUMENTAL-N01",
+          "domain": "audit_documental",
+          "node_type": "state",
+          "confidence": 45,
+          "evidence_strength": 40,
+          "delta_profile": [
+            "delta_conflict"
+          ]
+        },
+        {
+          "node_id": "AUDIT_DOCUMENTAL-N02",
+          "domain": "audit_documental",
+          "node_type": "state",
+          "confidence": 74,
+          "evidence_strength": 77,
+          "delta_profile": [
+            "delta_production",
+            "delta_domain",
+            "delta_missingness"
+          ]
+        },
+        {
+          "node_id": "AUDIT_DOCUMENTAL-N03",
+          "domain": "audit_documental",
+          "node_type": "rule",
+          "confidence": 55,
+          "evidence_strength": 31,
+          "delta_profile": [
+            "delta_conflict"
+          ]
+        },
+        {
+          "node_id": "AUDIT_DOCUMENTAL-N04",
+          "domain": "audit_documental",
+          "node_type": "entity",
+          "confidence": 73,
+          "evidence_strength": 53,
+          "delta_profile": [
+            "delta_model_behavior"
+          ]
+        },
+        {
+          "node_id": "AUDIT_DOCUMENTAL-N05",
+          "domain": "audit_documental",
+          "node_type": "task",
+          "confidence": 72,
+          "evidence_strength": 65,
+          "delta_profile": [
+            "delta_ambiguity",
+            "delta_production",
+            "delta_conflict"
+          ]
+        },
+        {
+          "node_id": "AUDIT_DOCUMENTAL-N06",
+          "domain": "audit_documental",
+          "node_type": "entity",
+          "confidence": 84,
+          "evidence_strength": 54,
+          "delta_profile": [
+            "delta_domain",
+            "delta_graph_structure"
+          ]
+        },
+        {
+          "node_id": "AUDIT_DOCUMENTAL-N07",
+          "domain": "audit_documental",
+          "node_type": "task",
+          "confidence": 83,
+          "evidence_strength": 34,
+          "delta_profile": [
+            "delta_execution",
+            "delta_evidence",
+            "delta_rule"
+          ]
+        },
+        {
+          "node_id": "AUDIT_DOCUMENTAL-N08",
+          "domain": "audit_documental",
+          "node_type": "state",
+          "confidence": 46,
+          "evidence_strength": 45,
+          "delta_profile": [
+            "delta_rule"
+          ]
+        }
+      ]
+    },
+    {
+      "domain": "rule_extraction",
+      "nodes": [
+        {
+          "node_id": "RULE_EXTRACTION-N01",
+          "domain": "rule_extraction",
+          "node_type": "entity",
+          "confidence": 78,
+          "evidence_strength": 70,
+          "delta_profile": [
+            "delta_rule",
+            "delta_graph_structure",
+            "delta_production"
+          ]
+        },
+        {
+          "node_id": "RULE_EXTRACTION-N02",
+          "domain": "rule_extraction",
+          "node_type": "rule",
+          "confidence": 88,
+          "evidence_strength": 55,
+          "delta_profile": [
+            "delta_human_review",
+            "delta_rule"
+          ]
+        },
+        {
+          "node_id": "RULE_EXTRACTION-N03",
+          "domain": "rule_extraction",
+          "node_type": "state",
+          "confidence": 82,
+          "evidence_strength": 21,
+          "delta_profile": [
+            "delta_human_review",
+            "delta_ambiguity"
+          ]
+        },
+        {
+          "node_id": "RULE_EXTRACTION-N04",
+          "domain": "rule_extraction",
+          "node_type": "rule",
+          "confidence": 76,
+          "evidence_strength": 32,
+          "delta_profile": [
+            "delta_evidence",
+            "delta_conflict"
+          ]
+        },
+        {
+          "node_id": "RULE_EXTRACTION-N05",
+          "domain": "rule_extraction",
+          "node_type": "task",
+          "confidence": 52,
+          "evidence_strength": 37,
+          "delta_profile": [
+            "delta_production",
+            "delta_ambiguity"
+          ]
+        },
+        {
+          "node_id": "RULE_EXTRACTION-N06",
+          "domain": "rule_extraction",
+          "node_type": "rule",
+          "confidence": 70,
+          "evidence_strength": 79,
+          "delta_profile": [
+            "delta_model_behavior"
+          ]
+        },
+        {
+          "node_id": "RULE_EXTRACTION-N07",
+          "domain": "rule_extraction",
+          "node_type": "task",
+          "confidence": 52,
+          "evidence_strength": 73,
+          "delta_profile": [
+            "delta_evidence",
+            "delta_production",
+            "delta_model_behavior"
+          ]
+        },
+        {
+          "node_id": "RULE_EXTRACTION-N08",
+          "domain": "rule_extraction",
+          "node_type": "state",
+          "confidence": 93,
+          "evidence_strength": 73,
+          "delta_profile": [
+            "delta_missingness",
+            "delta_human_review"
+          ]
+        }
+      ]
+    },
+    {
+      "domain": "software_review",
+      "nodes": [
+        {
+          "node_id": "SOFTWARE_REVIEW-N01",
+          "domain": "software_review",
+          "node_type": "state",
+          "confidence": 52,
+          "evidence_strength": 50,
+          "delta_profile": [
+            "delta_domain",
+            "delta_ambiguity",
+            "delta_missingness"
+          ]
+        },
+        {
+          "node_id": "SOFTWARE_REVIEW-N02",
+          "domain": "software_review",
+          "node_type": "evidence",
+          "confidence": 83,
+          "evidence_strength": 74,
+          "delta_profile": [
+            "delta_graph_structure"
+          ]
+        },
+        {
+          "node_id": "SOFTWARE_REVIEW-N03",
+          "domain": "software_review",
+          "node_type": "entity",
+          "confidence": 56,
+          "evidence_strength": 38,
+          "delta_profile": [
+            "delta_evidence",
+            "delta_execution",
+            "delta_ambiguity"
+          ]
+        },
+        {
+          "node_id": "SOFTWARE_REVIEW-N04",
+          "domain": "software_review",
+          "node_type": "artifact",
+          "confidence": 68,
+          "evidence_strength": 22,
+          "delta_profile": [
+            "delta_human_review",
+            "delta_evidence"
+          ]
+        },
+        {
+          "node_id": "SOFTWARE_REVIEW-N05",
+          "domain": "software_review",
+          "node_type": "entity",
+          "confidence": 83,
+          "evidence_strength": 72,
+          "delta_profile": [
+            "delta_missingness"
+          ]
+        },
+        {
+          "node_id": "SOFTWARE_REVIEW-N06",
+          "domain": "software_review",
+          "node_type": "task",
+          "confidence": 62,
+          "evidence_strength": 79,
+          "delta_profile": [
+            "delta_ambiguity"
+          ]
+        },
+        {
+          "node_id": "SOFTWARE_REVIEW-N07",
+          "domain": "software_review",
+          "node_type": "artifact",
+          "confidence": 46,
+          "evidence_strength": 22,
+          "delta_profile": [
+            "delta_conflict"
+          ]
+        },
+        {
+          "node_id": "SOFTWARE_REVIEW-N08",
+          "domain": "software_review",
+          "node_type": "artifact",
+          "confidence": 57,
+          "evidence_strength": 41,
+          "delta_profile": [
+            "delta_human_review",
+            "delta_execution",
+            "delta_domain"
+          ]
+        }
+      ]
+    },
+    {
+      "domain": "process_operations",
+      "nodes": [
+        {
+          "node_id": "PROCESS_OPERATIONS-N01",
+          "domain": "process_operations",
+          "node_type": "artifact",
+          "confidence": 40,
+          "evidence_strength": 94,
+          "delta_profile": [
+            "delta_ambiguity",
+            "delta_production",
+            "delta_conflict"
+          ]
+        },
+        {
+          "node_id": "PROCESS_OPERATIONS-N02",
+          "domain": "process_operations",
+          "node_type": "evidence",
+          "confidence": 75,
+          "evidence_strength": 43,
+          "delta_profile": [
+            "delta_model_behavior",
+            "delta_missingness"
+          ]
+        },
+        {
+          "node_id": "PROCESS_OPERATIONS-N03",
+          "domain": "process_operations",
+          "node_type": "rule",
+          "confidence": 57,
+          "evidence_strength": 75,
+          "delta_profile": [
+            "delta_human_review",
+            "delta_missingness",
+            "delta_rule"
+          ]
+        },
+        {
+          "node_id": "PROCESS_OPERATIONS-N04",
+          "domain": "process_operations",
+          "node_type": "evidence",
+          "confidence": 79,
+          "evidence_strength": 27,
+          "delta_profile": [
+            "delta_ambiguity"
+          ]
+        },
+        {
+          "node_id": "PROCESS_OPERATIONS-N05",
+          "domain": "process_operations",
+          "node_type": "artifact",
+          "confidence": 87,
+          "evidence_strength": 57,
+          "delta_profile": [
+            "delta_production",
+            "delta_missingness",
+            "delta_model_behavior"
+          ]
+        },
+        {
+          "node_id": "PROCESS_OPERATIONS-N06",
+          "domain": "process_operations",
+          "node_type": "state",
+          "confidence": 61,
+          "evidence_strength": 52,
+          "delta_profile": [
+            "delta_model_behavior"
+          ]
+        },
+        {
+          "node_id": "PROCESS_OPERATIONS-N07",
+          "domain": "process_operations",
+          "node_type": "evidence",
+          "confidence": 71,
+          "evidence_strength": 31,
+          "delta_profile": [
+            "delta_human_review"
+          ]
+        },
+        {
+          "node_id": "PROCESS_OPERATIONS-N08",
+          "domain": "process_operations",
+          "node_type": "entity",
+          "confidence": 44,
+          "evidence_strength": 51,
+          "delta_profile": [
+            "delta_domain"
+          ]
+        }
+      ]
+    },
+    {
+      "domain": "enterprise_knowledge",
+      "nodes": [
+        {
+          "node_id": "ENTERPRISE_KNOWLEDGE-N01",
+          "domain": "enterprise_knowledge",
+          "node_type": "state",
+          "confidence": 74,
+          "evidence_strength": 87,
+          "delta_profile": [
+            "delta_domain",
+            "delta_production",
+            "delta_rule"
+          ]
+        },
+        {
+          "node_id": "ENTERPRISE_KNOWLEDGE-N02",
+          "domain": "enterprise_knowledge",
+          "node_type": "evidence",
+          "confidence": 43,
+          "evidence_strength": 53,
+          "delta_profile": [
+            "delta_graph_structure"
+          ]
+        },
+        {
+          "node_id": "ENTERPRISE_KNOWLEDGE-N03",
+          "domain": "enterprise_knowledge",
+          "node_type": "rule",
+          "confidence": 83,
+          "evidence_strength": 75,
+          "delta_profile": [
+            "delta_production"
+          ]
+        },
+        {
+          "node_id": "ENTERPRISE_KNOWLEDGE-N04",
+          "domain": "enterprise_knowledge",
+          "node_type": "artifact",
+          "confidence": 68,
+          "evidence_strength": 42,
+          "delta_profile": [
+            "delta_domain",
+            "delta_ambiguity"
+          ]
+        },
+        {
+          "node_id": "ENTERPRISE_KNOWLEDGE-N05",
+          "domain": "enterprise_knowledge",
+          "node_type": "evidence",
+          "confidence": 84,
+          "evidence_strength": 35,
+          "delta_profile": [
+            "delta_model_behavior"
+          ]
+        },
+        {
+          "node_id": "ENTERPRISE_KNOWLEDGE-N06",
+          "domain": "enterprise_knowledge",
+          "node_type": "evidence",
+          "confidence": 61,
+          "evidence_strength": 61,
+          "delta_profile": [
+            "delta_evidence"
+          ]
+        },
+        {
+          "node_id": "ENTERPRISE_KNOWLEDGE-N07",
+          "domain": "enterprise_knowledge",
+          "node_type": "artifact",
+          "confidence": 51,
+          "evidence_strength": 71,
+          "delta_profile": [
+            "delta_ambiguity",
+            "delta_conflict"
+          ]
+        },
+        {
+          "node_id": "ENTERPRISE_KNOWLEDGE-N08",
+          "domain": "enterprise_knowledge",
+          "node_type": "task",
+          "confidence": 50,
+          "evidence_strength": 24,
+          "delta_profile": [
+            "delta_conflict",
+            "delta_missingness",
+            "delta_evidence"
+          ]
+        }
+      ]
+    }
+  ],
+  "sync_attempts": [
+    {
+      "sync_id": "SYNC-0001",
+      "source_domain": "audit_documental",
+      "target_domain": "rule_extraction",
+      "source_node": "AUDIT_DOCUMENTAL-N01",
+      "target_node": "RULE_EXTRACTION-N05",
+      "sync_mode": "control_suggestion",
+      "primary_delta": "delta_production",
+      "shared_delta_profile": [
+        "delta_production"
+      ],
+      "recommended_control": "production_block",
+      "recommended_gate": "BLOCKED_UNSUPPORTED",
+      "sync_risk": 57,
+      "material_delta_change": 19,
+      "allowed_actions": [
+        "candidate_link",
+        "evidence_request",
+        "graph_repair_task",
+        "human_review_task"
+      ],
+      "blocked_actions": [
+        "client_facing_claim",
+        "automatic_nomination",
+        "implementation_execution",
+        "production_activation",
+        "automatic_merge",
+        "credential_handling"
+      ]
+    },
+    {
+      "sync_id": "SYNC-0002",
+      "source_domain": "software_review",
+      "target_domain": "parser_documental",
+      "source_node": "SOFTWARE_REVIEW-N01",
+      "target_node": "PARSER_DOCUMENTAL-N02",
+      "sync_mode": "human_review_handoff",
+      "primary_delta": "delta_ambiguity",
+      "shared_delta_profile": [
+        "delta_ambiguity"
+      ],
+      "recommended_control": "split_interpretations",
+      "recommended_gate": "STRUCTURE_ONLY",
+      "sync_risk": 46,
+      "material_delta_change": 19,
+      "allowed_actions": [
+        "candidate_link",
+        "evidence_request",
+        "graph_repair_task",
+        "human_review_task"
+      ],
+      "blocked_actions": [
+        "client_facing_claim",
+        "automatic_nomination",
+        "implementation_execution",
+        "production_activation",
+        "automatic_merge",
+        "credential_handling"
+      ]
+    },
+    {
+      "sync_id": "SYNC-0003",
+      "source_domain": "software_review",
+      "target_domain": "process_operations",
+      "source_node": "SOFTWARE_REVIEW-N07",
+      "target_node": "PROCESS_OPERATIONS-N08",
+      "sync_mode": "control_suggestion",
+      "primary_delta": "delta_conflict",
+      "shared_delta_profile": [
+        "delta_conflict"
+      ],
+      "recommended_control": "human_arbitration",
+      "recommended_gate": "HUMAN_REVIEW_REQUIRED",
+      "sync_risk": 60,
+      "material_delta_change": 4,
+      "allowed_actions": [
+        "candidate_link",
+        "evidence_request",
+        "graph_repair_task",
+        "human_review_task"
+      ],
+      "blocked_actions": [
+        "client_facing_claim",
+        "automatic_nomination",
+        "implementation_execution",
+        "production_activation",
+        "automatic_merge",
+        "credential_handling"
+      ]
+    },
+    {
+      "sync_id": "SYNC-0004",
+      "source_domain": "parser_documental",
+      "target_domain": "enterprise_knowledge",
+      "source_node": "PARSER_DOCUMENTAL-N07",
+      "target_node": "ENTERPRISE_KNOWLEDGE-N05",
+      "sync_mode": "candidate_link",
+      "primary_delta": "delta_model_behavior",
+      "shared_delta_profile": [
+        "delta_model_behavior"
+      ],
+      "recommended_control": "calibration_review",
+      "recommended_gate": "HUMAN_REVIEW_REQUIRED",
+      "sync_risk": 28,
+      "material_delta_change": 3,
+      "allowed_actions": [
+        "candidate_link",
+        "evidence_request",
+        "graph_repair_task",
+        "human_review_task"
+      ],
+      "blocked_actions": [
+        "client_facing_claim",
+        "automatic_nomination",
+        "implementation_execution",
+        "production_activation",
+        "automatic_merge",
+        "credential_handling"
+      ]
+    },
+    {
+      "sync_id": "SYNC-0005",
+      "source_domain": "software_review",
+      "target_domain": "enterprise_knowledge",
+      "source_node": "SOFTWARE_REVIEW-N05",
+      "target_node": "ENTERPRISE_KNOWLEDGE-N03",
+      "sync_mode": "control_suggestion",
+      "primary_delta": "delta_missingness",
+      "shared_delta_profile": [
+        "delta_missingness"
+      ],
+      "recommended_control": "generate_missing_artifact_task",
+      "recommended_gate": "TASK_ONLY",
+      "sync_risk": 22,
+      "material_delta_change": 20,
+      "allowed_actions": [
+        "candidate_link",
+        "evidence_request",
+        "graph_repair_task",
+        "human_review_task"
+      ],
+      "blocked_actions": [
+        "client_facing_claim",
+        "automatic_nomination",
+        "implementation_execution",
+        "production_activation",
+        "automatic_merge",
+        "credential_handling"
+      ]
+    },
+    {
+      "sync_id": "SYNC-0006",
+      "source_domain": "parser_documental",
+      "target_domain": "rule_extraction",
+      "source_node": "PARSER_DOCUMENTAL-N07",
+      "target_node": "RULE_EXTRACTION-N03",
+      "sync_mode": "candidate_link",
+      "primary_delta": "delta_evidence",
+      "shared_delta_profile": [
+        "delta_evidence"
+      ],
+      "recommended_control": "mark_candidate_only",
+      "recommended_gate": "STRUCTURE_ONLY",
+      "sync_risk": 32,
+      "material_delta_change": 0,
+      "allowed_actions": [
+        "candidate_link",
+        "evidence_request",
+        "graph_repair_task",
+        "human_review_task"
+      ],
+      "blocked_actions": [
+        "client_facing_claim",
+        "automatic_nomination",
+        "implementation_execution",
+        "production_activation",
+        "automatic_merge",
+        "credential_handling"
+      ]
+    },
+    {
+      "sync_id": "SYNC-0007",
+      "source_domain": "enterprise_knowledge",
+      "target_domain": "process_operations",
+      "source_node": "ENTERPRISE_KNOWLEDGE-N08",
+      "target_node": "PROCESS_OPERATIONS-N05",
+      "sync_mode": "delta_challenge",
+      "primary_delta": "delta_missingness",
+      "shared_delta_profile": [
+        "delta_missingness"
+      ],
+      "recommended_control": "create_data_request",
+      "recommended_gate": "ASK_FOR_EVIDENCE",
+      "sync_risk": 46,
+      "material_delta_change": 5,
+      "allowed_actions": [
+        "candidate_link",
+        "evidence_request",
+        "graph_repair_task",
+        "human_review_task"
+      ],
+      "blocked_actions": [
+        "client_facing_claim",
+        "automatic_nomination",
+        "implementation_execution",
+        "production_activation",
+        "automatic_merge",
+        "credential_handling"
+      ]
+    },
+    {
+      "sync_id": "SYNC-0008",
+      "source_domain": "audit_documental",
+      "target_domain": "rule_extraction",
+      "source_node": "AUDIT_DOCUMENTAL-N02",
+      "target_node": "RULE_EXTRACTION-N04",
+      "sync_mode": "human_review_handoff",
+      "primary_delta": "delta_conflict",
+      "shared_delta_profile": [
+        "delta_conflict"
+      ],
+      "recommended_control": "human_arbitration",
+      "recommended_gate": "HUMAN_REVIEW_REQUIRED",
+      "sync_risk": 36,
+      "material_delta_change": 1,
+      "allowed_actions": [
+        "candidate_link",
+        "evidence_request",
+        "graph_repair_task",
+        "human_review_task"
+      ],
+      "blocked_actions": [
+        "client_facing_claim",
+        "automatic_nomination",
+        "implementation_execution",
+        "production_activation",
+        "automatic_merge",
+        "credential_handling"
+      ]
+    },
+    {
+      "sync_id": "SYNC-0009",
+      "source_domain": "enterprise_knowledge",
+      "target_domain": "rule_extraction",
+      "source_node": "ENTERPRISE_KNOWLEDGE-N05",
+      "target_node": "RULE_EXTRACTION-N06",
+      "sync_mode": "human_review_handoff",
+      "primary_delta": "delta_model_behavior",
+      "shared_delta_profile": [
+        "delta_model_behavior"
+      ],
+      "recommended_control": "calibration_review",
+      "recommended_gate": "HUMAN_REVIEW_REQUIRED",
+      "sync_risk": 33,
+      "material_delta_change": 13,
+      "allowed_actions": [
+        "candidate_link",
+        "evidence_request",
+        "graph_repair_task",
+        "human_review_task"
+      ],
+      "blocked_actions": [
+        "client_facing_claim",
+        "automatic_nomination",
+        "implementation_execution",
+        "production_activation",
+        "automatic_merge",
+        "credential_handling"
+      ]
+    },
+    {
+      "sync_id": "SYNC-0010",
+      "source_domain": "audit_documental",
+      "target_domain": "rule_extraction",
+      "source_node": "AUDIT_DOCUMENTAL-N03",
+      "target_node": "RULE_EXTRACTION-N02",
+      "sync_mode": "candidate_link",
+      "primary_delta": "delta_human_review",
+      "shared_delta_profile": [
+        "delta_human_review"
+      ],
+      "recommended_control": "create_review_task",
+      "recommended_gate": "TASK_ONLY",
+      "sync_risk": 43,
+      "material_delta_change": 7,
+      "allowed_actions": [
+        "candidate_link",
+        "evidence_request",
+        "graph_repair_task",
+        "human_review_task"
+      ],
+      "blocked_actions": [
+        "client_facing_claim",
+        "automatic_nomination",
+        "implementation_execution",
+        "production_activation",
+        "automatic_merge",
+        "credential_handling"
+      ]
+    },
+    {
+      "sync_id": "SYNC-0011",
+      "source_domain": "software_review",
+      "target_domain": "process_operations",
+      "source_node": "SOFTWARE_REVIEW-N06",
+      "target_node": "PROCESS_OPERATIONS-N07",
+      "sync_mode": "control_suggestion",
+      "primary_delta": "delta_ambiguity",
+      "shared_delta_profile": [
+        "delta_ambiguity"
+      ],
+      "recommended_control": "split_interpretations",
+      "recommended_gate": "STRUCTURE_ONLY",
+      "sync_risk": 40,
+      "material_delta_change": 8,
+      "allowed_actions": [
+        "candidate_link",
+        "evidence_request",
+        "graph_repair_task",
+        "human_review_task"
+      ],
+      "blocked_actions": [
+        "client_facing_claim",
+        "automatic_nomination",
+        "implementation_execution",
+        "production_activation",
+        "automatic_merge",
+        "credential_handling"
+      ]
+    },
+    {
+      "sync_id": "SYNC-0012",
+      "source_domain": "enterprise_knowledge",
+      "target_domain": "rule_extraction",
+      "source_node": "ENTERPRISE_KNOWLEDGE-N01",
+      "target_node": "RULE_EXTRACTION-N04",
+      "sync_mode": "delta_challenge",
+      "primary_delta": "delta_domain",
+      "shared_delta_profile": [
+        "delta_domain"
+      ],
+      "recommended_control": "raise_review_level",
+      "recommended_gate": "HUMAN_REVIEW_REQUIRED",
+      "sync_risk": 33,
+      "material_delta_change": 0,
+      "allowed_actions": [
+        "candidate_link",
+        "evidence_request",
+        "graph_repair_task",
+        "human_review_task"
+      ],
+      "blocked_actions": [
+        "client_facing_claim",
+        "automatic_nomination",
+        "implementation_execution",
+        "production_activation",
+        "automatic_merge",
+        "credential_handling"
+      ]
+    },
+    {
+      "sync_id": "SYNC-0013",
+      "source_domain": "parser_documental",
+      "target_domain": "enterprise_knowledge",
+      "source_node": "PARSER_DOCUMENTAL-N01",
+      "target_node": "ENTERPRISE_KNOWLEDGE-N06",
+      "sync_mode": "control_suggestion",
+      "primary_delta": "delta_production",
+      "shared_delta_profile": [
+        "delta_production"
+      ],
+      "recommended_control": "deployment_readiness_check",
+      "recommended_gate": "TASK_ONLY",
+      "sync_risk": 43,
+      "material_delta_change": 19,
+      "allowed_actions": [
+        "candidate_link",
+        "evidence_request",
+        "graph_repair_task",
+        "human_review_task"
+      ],
+      "blocked_actions": [
+        "client_facing_claim",
+        "automatic_nomination",
+        "implementation_execution",
+        "production_activation",
+        "automatic_merge",
+        "credential_handling"
+      ]
+    },
+    {
+      "sync_id": "SYNC-0014",
+      "source_domain": "rule_extraction",
+      "target_domain": "software_review",
+      "source_node": "RULE_EXTRACTION-N08",
+      "target_node": "SOFTWARE_REVIEW-N07",
+      "sync_mode": "evidence_bridge",
+      "primary_delta": "delta_conflict",
+      "shared_delta_profile": [
+        "delta_conflict"
+      ],
+      "recommended_control": "conflict_resolution_task",
+      "recommended_gate": "TASK_ONLY",
+      "sync_risk": 42,
+      "material_delta_change": 20,
+      "allowed_actions": [
+        "candidate_link",
+        "evidence_request",
+        "graph_repair_task",
+        "human_review_task"
+      ],
+      "blocked_actions": [
+        "client_facing_claim",
+        "automatic_nomination",
+        "implementation_execution",
+        "production_activation",
+        "automatic_merge",
+        "credential_handling"
+      ]
+    },
+    {
+      "sync_id": "SYNC-0015",
+      "source_domain": "parser_documental",
+      "target_domain": "rule_extraction",
+      "source_node": "PARSER_DOCUMENTAL-N05",
+      "target_node": "RULE_EXTRACTION-N03",
+      "sync_mode": "control_suggestion",
+      "primary_delta": "delta_production",
+      "shared_delta_profile": [
+        "delta_production"
+      ],
+      "recommended_control": "production_block",
+      "recommended_gate": "BLOCKED_UNSUPPORTED",
+      "sync_risk": 42,
+      "material_delta_change": 15,
+      "allowed_actions": [
+        "candidate_link",
+        "evidence_request",
+        "graph_repair_task",
+        "human_review_task"
+      ],
+      "blocked_actions": [
+        "client_facing_claim",
+        "automatic_nomination",
+        "implementation_execution",
+        "production_activation",
+        "automatic_merge",
+        "credential_handling"
+      ]
+    },
+    {
+      "sync_id": "SYNC-0016",
+      "source_domain": "process_operations",
+      "target_domain": "software_review",
+      "source_node": "PROCESS_OPERATIONS-N08",
+      "target_node": "SOFTWARE_REVIEW-N07",
+      "sync_mode": "human_review_handoff",
+      "primary_delta": "delta_domain",
+      "shared_delta_profile": [
+        "delta_domain"
+      ],
+      "recommended_control": "raise_review_level",
+      "recommended_gate": "HUMAN_REVIEW_REQUIRED",
+      "sync_risk": 60,
+      "material_delta_change": 2,
+      "allowed_actions": [
+        "candidate_link",
+        "evidence_request",
+        "graph_repair_task",
+        "human_review_task"
+      ],
+      "blocked_actions": [
+        "client_facing_claim",
+        "automatic_nomination",
+        "implementation_execution",
+        "production_activation",
+        "automatic_merge",
+        "credential_handling"
+      ]
+    },
+    {
+      "sync_id": "SYNC-0017",
+      "source_domain": "software_review",
+      "target_domain": "enterprise_knowledge",
+      "source_node": "SOFTWARE_REVIEW-N08",
+      "target_node": "ENTERPRISE_KNOWLEDGE-N04",
+      "sync_mode": "delta_challenge",
+      "primary_delta": "delta_domain",
+      "shared_delta_profile": [
+        "delta_domain"
+      ],
+      "recommended_control": "require_domain_owner",
+      "recommended_gate": "HUMAN_REVIEW_REQUIRED",
+      "sync_risk": 48,
+      "material_delta_change": 14,
+      "allowed_actions": [
+        "candidate_link",
+        "evidence_request",
+        "graph_repair_task",
+        "human_review_task"
+      ],
+      "blocked_actions": [
+        "client_facing_claim",
+        "automatic_nomination",
+        "implementation_execution",
+        "production_activation",
+        "automatic_merge",
+        "credential_handling"
+      ]
+    },
+    {
+      "sync_id": "SYNC-0018",
+      "source_domain": "process_operations",
+      "target_domain": "audit_documental",
+      "source_node": "PROCESS_OPERATIONS-N03",
+      "target_node": "AUDIT_DOCUMENTAL-N06",
+      "sync_mode": "candidate_link",
+      "primary_delta": "delta_graph_structure",
+      "shared_delta_profile": [
+        "delta_graph_structure"
+      ],
+      "recommended_control": "graph_repair_suggestion",
+      "recommended_gate": "STRUCTURE_ONLY",
+      "sync_risk": 33,
+      "material_delta_change": 12,
+      "allowed_actions": [
+        "candidate_link",
+        "evidence_request",
+        "graph_repair_task",
+        "human_review_task"
+      ],
+      "blocked_actions": [
+        "client_facing_claim",
+        "automatic_nomination",
+        "implementation_execution",
+        "production_activation",
+        "automatic_merge",
+        "credential_handling"
+      ]
+    },
+    {
+      "sync_id": "SYNC-0019",
+      "source_domain": "rule_extraction",
+      "target_domain": "enterprise_knowledge",
+      "source_node": "RULE_EXTRACTION-N04",
+      "target_node": "ENTERPRISE_KNOWLEDGE-N04",
+      "sync_mode": "delta_challenge",
+      "primary_delta": "delta_ambiguity",
+      "shared_delta_profile": [
+        "delta_ambiguity"
+      ],
+      "recommended_control": "structure_only",
+      "recommended_gate": "STRUCTURE_ONLY",
+      "sync_risk": 46,
+      "material_delta_change": 15,
+      "allowed_actions": [
+        "candidate_link",
+        "evidence_request",
+        "graph_repair_task",
+        "human_review_task"
+      ],
+      "blocked_actions": [
+        "client_facing_claim",
+        "automatic_nomination",
+        "implementation_execution",
+        "production_activation",
+        "automatic_merge",
+        "credential_handling"
+      ]
+    },
+    {
+      "sync_id": "SYNC-0020",
+      "source_domain": "audit_documental",
+      "target_domain": "rule_extraction",
+      "source_node": "AUDIT_DOCUMENTAL-N03",
+      "target_node": "RULE_EXTRACTION-N06",
+      "sync_mode": "delta_challenge",
+      "primary_delta": "delta_model_behavior",
+      "shared_delta_profile": [
+        "delta_model_behavior"
+      ],
+      "recommended_control": "repeat_seed_test",
+      "recommended_gate": "TASK_ONLY",
+      "sync_risk": 42,
+      "material_delta_change": 20,
+      "allowed_actions": [
+        "candidate_link",
+        "evidence_request",
+        "graph_repair_task",
+        "human_review_task"
+      ],
+      "blocked_actions": [
+        "client_facing_claim",
+        "automatic_nomination",
+        "implementation_execution",
+        "production_activation",
+        "automatic_merge",
+        "credential_handling"
+      ]
+    },
+    {
+      "sync_id": "SYNC-0021",
+      "source_domain": "rule_extraction",
+      "target_domain": "audit_documental",
+      "source_node": "RULE_EXTRACTION-N06",
+      "target_node": "AUDIT_DOCUMENTAL-N07",
+      "sync_mode": "control_suggestion",
+      "primary_delta": "delta_execution",
+      "shared_delta_profile": [
+        "delta_execution"
+      ],
+      "recommended_control": "require_runtime_context",
+      "recommended_gate": "ASK_FOR_EVIDENCE",
+      "sync_risk": 34,
+      "material_delta_change": 2,
+      "allowed_actions": [
+        "candidate_link",
+        "evidence_request",
+        "graph_repair_task",
+        "human_review_task"
+      ],
+      "blocked_actions": [
+        "client_facing_claim",
+        "automatic_nomination",
+        "implementation_execution",
+        "production_activation",
+        "automatic_merge",
+        "credential_handling"
+      ]
+    },
+    {
+      "sync_id": "SYNC-0022",
+      "source_domain": "enterprise_knowledge",
+      "target_domain": "parser_documental",
+      "source_node": "ENTERPRISE_KNOWLEDGE-N03",
+      "target_node": "PARSER_DOCUMENTAL-N02",
+      "sync_mode": "control_suggestion",
+      "primary_delta": "delta_ambiguity",
+      "shared_delta_profile": [
+        "delta_ambiguity"
+      ],
+      "recommended_control": "split_interpretations",
+      "recommended_gate": "STRUCTURE_ONLY",
+      "sync_risk": 32,
+      "material_delta_change": 11,
+      "allowed_actions": [
+        "candidate_link",
+        "evidence_request",
+        "graph_repair_task",
+        "human_review_task"
+      ],
+      "blocked_actions": [
+        "client_facing_claim",
+        "automatic_nomination",
+        "implementation_execution",
+        "production_activation",
+        "automatic_merge",
+        "credential_handling"
+      ]
+    },
+    {
+      "sync_id": "SYNC-0023",
+      "source_domain": "audit_documental",
+      "target_domain": "rule_extraction",
+      "source_node": "AUDIT_DOCUMENTAL-N08",
+      "target_node": "RULE_EXTRACTION-N08",
+      "sync_mode": "delta_challenge",
+      "primary_delta": "delta_rule",
+      "shared_delta_profile": [
+        "delta_rule"
+      ],
+      "recommended_control": "exception_map",
+      "recommended_gate": "STRUCTURE_ONLY",
+      "sync_risk": 36,
+      "material_delta_change": 17,
+      "allowed_actions": [
+        "candidate_link",
+        "evidence_request",
+        "graph_repair_task",
+        "human_review_task"
+      ],
+      "blocked_actions": [
+        "client_facing_claim",
+        "automatic_nomination",
+        "implementation_execution",
+        "production_activation",
+        "automatic_merge",
+        "credential_handling"
+      ]
+    },
+    {
+      "sync_id": "SYNC-0024",
+      "source_domain": "rule_extraction",
+      "target_domain": "software_review",
+      "source_node": "RULE_EXTRACTION-N08",
+      "target_node": "SOFTWARE_REVIEW-N05",
+      "sync_mode": "evidence_bridge",
+      "primary_delta": "delta_missingness",
+      "shared_delta_profile": [
+        "delta_missingness"
+      ],
+      "recommended_control": "create_data_request",
+      "recommended_gate": "ASK_FOR_EVIDENCE",
+      "sync_risk": 20,
+      "material_delta_change": 0,
+      "allowed_actions": [
+        "candidate_link",
+        "evidence_request",
+        "graph_repair_task",
+        "human_review_task"
+      ],
+      "blocked_actions": [
+        "client_facing_claim",
+        "automatic_nomination",
+        "implementation_execution",
+        "production_activation",
+        "automatic_merge",
+        "credential_handling"
+      ]
+    },
+    {
+      "sync_id": "SYNC-0025",
+      "source_domain": "enterprise_knowledge",
+      "target_domain": "process_operations",
+      "source_node": "ENTERPRISE_KNOWLEDGE-N08",
+      "target_node": "PROCESS_OPERATIONS-N01",
+      "sync_mode": "candidate_link",
+      "primary_delta": "delta_conflict",
+      "shared_delta_profile": [
+        "delta_conflict"
+      ],
+      "recommended_control": "human_arbitration",
+      "recommended_gate": "HUMAN_REVIEW_REQUIRED",
+      "sync_risk": 48,
+      "material_delta_change": 13,
+      "allowed_actions": [
+        "candidate_link",
+        "evidence_request",
+        "graph_repair_task",
+        "human_review_task"
+      ],
+      "blocked_actions": [
+        "client_facing_claim",
+        "automatic_nomination",
+        "implementation_execution",
+        "production_activation",
+        "automatic_merge",
+        "credential_handling"
+      ]
+    },
+    {
+      "sync_id": "SYNC-0026",
+      "source_domain": "software_review",
+      "target_domain": "rule_extraction",
+      "source_node": "SOFTWARE_REVIEW-N07",
+      "target_node": "RULE_EXTRACTION-N03",
+      "sync_mode": "human_review_handoff",
+      "primary_delta": "delta_ambiguity",
+      "shared_delta_profile": [
+        "delta_ambiguity"
+      ],
+      "recommended_control": "structure_only",
+      "recommended_gate": "STRUCTURE_ONLY",
+      "sync_risk": 58,
+      "material_delta_change": 12,
+      "allowed_actions": [
+        "candidate_link",
+        "evidence_request",
+        "graph_repair_task",
+        "human_review_task"
+      ],
+      "blocked_actions": [
+        "client_facing_claim",
+        "automatic_nomination",
+        "implementation_execution",
+        "production_activation",
+        "automatic_merge",
+        "credential_handling"
+      ]
+    },
+    {
+      "sync_id": "SYNC-0027",
+      "source_domain": "enterprise_knowledge",
+      "target_domain": "process_operations",
+      "source_node": "ENTERPRISE_KNOWLEDGE-N05",
+      "target_node": "PROCESS_OPERATIONS-N08",
+      "sync_mode": "candidate_link",
+      "primary_delta": "delta_domain",
+      "shared_delta_profile": [
+        "delta_domain"
+      ],
+      "recommended_control": "require_domain_owner",
+      "recommended_gate": "HUMAN_REVIEW_REQUIRED",
+      "sync_risk": 47,
+      "material_delta_change": 11,
+      "allowed_actions": [
+        "candidate_link",
+        "evidence_request",
+        "graph_repair_task",
+        "human_review_task"
+      ],
+      "blocked_actions": [
+        "client_facing_claim",
+        "automatic_nomination",
+        "implementation_execution",
+        "production_activation",
+        "automatic_merge",
+        "credential_handling"
+      ]
+    },
+    {
+      "sync_id": "SYNC-0028",
+      "source_domain": "parser_documental",
+      "target_domain": "rule_extraction",
+      "source_node": "PARSER_DOCUMENTAL-N08",
+      "target_node": "RULE_EXTRACTION-N08",
+      "sync_mode": "evidence_bridge",
+      "primary_delta": "delta_human_review",
+      "shared_delta_profile": [
+        "delta_human_review"
+      ],
+      "recommended_control": "create_review_task",
+      "recommended_gate": "TASK_ONLY",
+      "sync_risk": 14,
+      "material_delta_change": 9,
+      "allowed_actions": [
+        "candidate_link",
+        "evidence_request",
+        "graph_repair_task",
+        "human_review_task"
+      ],
+      "blocked_actions": [
+        "client_facing_claim",
+        "automatic_nomination",
+        "implementation_execution",
+        "production_activation",
+        "automatic_merge",
+        "credential_handling"
+      ]
+    },
+    {
+      "sync_id": "SYNC-0029",
+      "source_domain": "parser_documental",
+      "target_domain": "enterprise_knowledge",
+      "source_node": "PARSER_DOCUMENTAL-N08",
+      "target_node": "ENTERPRISE_KNOWLEDGE-N05",
+      "sync_mode": "control_suggestion",
+      "primary_delta": "delta_model_behavior",
+      "shared_delta_profile": [
+        "delta_model_behavior"
+      ],
+      "recommended_control": "calibration_review",
+      "recommended_gate": "HUMAN_REVIEW_REQUIRED",
+      "sync_risk": 25,
+      "material_delta_change": 18,
+      "allowed_actions": [
+        "candidate_link",
+        "evidence_request",
+        "graph_repair_task",
+        "human_review_task"
+      ],
+      "blocked_actions": [
+        "client_facing_claim",
+        "automatic_nomination",
+        "implementation_execution",
+        "production_activation",
+        "automatic_merge",
+        "credential_handling"
+      ]
+    },
+    {
+      "sync_id": "SYNC-0030",
+      "source_domain": "rule_extraction",
+      "target_domain": "parser_documental",
+      "source_node": "RULE_EXTRACTION-N08",
+      "target_node": "PARSER_DOCUMENTAL-N05",
+      "sync_mode": "delta_challenge",
+      "primary_delta": "delta_graph_structure",
+      "shared_delta_profile": [
+        "delta_graph_structure"
+      ],
+      "recommended_control": "bridge_candidate_generation",
+      "recommended_gate": "STRUCTURE_ONLY",
+      "sync_risk": 27,
+      "material_delta_change": 10,
+      "allowed_actions": [
+        "candidate_link",
+        "evidence_request",
+        "graph_repair_task",
+        "human_review_task"
+      ],
+      "blocked_actions": [
+        "client_facing_claim",
+        "automatic_nomination",
+        "implementation_execution",
+        "production_activation",
+        "automatic_merge",
+        "credential_handling"
+      ]
+    },
+    {
+      "sync_id": "SYNC-0031",
+      "source_domain": "parser_documental",
+      "target_domain": "audit_documental",
+      "source_node": "PARSER_DOCUMENTAL-N02",
+      "target_node": "AUDIT_DOCUMENTAL-N05",
+      "sync_mode": "candidate_link",
+      "primary_delta": "delta_ambiguity",
+      "shared_delta_profile": [
+        "delta_ambiguity"
+      ],
+      "recommended_control": "structure_only",
+      "recommended_gate": "STRUCTURE_ONLY",
+      "sync_risk": 37,
+      "material_delta_change": 0,
+      "allowed_actions": [
+        "candidate_link",
+        "evidence_request",
+        "graph_repair_task",
+        "human_review_task"
+      ],
+      "blocked_actions": [
+        "client_facing_claim",
+        "automatic_nomination",
+        "implementation_execution",
+        "production_activation",
+        "automatic_merge",
+        "credential_handling"
+      ]
+    },
+    {
+      "sync_id": "SYNC-0032",
+      "source_domain": "process_operations",
+      "target_domain": "parser_documental",
+      "source_node": "PROCESS_OPERATIONS-N06",
+      "target_node": "PARSER_DOCUMENTAL-N06",
+      "sync_mode": "delta_challenge",
+      "primary_delta": "delta_execution",
+      "shared_delta_profile": [
+        "delta_execution"
+      ],
+      "recommended_control": "require_runtime_context",
+      "recommended_gate": "ASK_FOR_EVIDENCE",
+      "sync_risk": 51,
+      "material_delta_change": 4,
+      "allowed_actions": [
+        "candidate_link",
+        "evidence_request",
+        "graph_repair_task",
+        "human_review_task"
+      ],
+      "blocked_actions": [
+        "client_facing_claim",
+        "automatic_nomination",
+        "implementation_execution",
+        "production_activation",
+        "automatic_merge",
+        "credential_handling"
+      ]
+    },
+    {
+      "sync_id": "SYNC-0033",
+      "source_domain": "parser_documental",
+      "target_domain": "audit_documental",
+      "source_node": "PARSER_DOCUMENTAL-N03",
+      "target_node": "AUDIT_DOCUMENTAL-N02",
+      "sync_mode": "human_review_handoff",
+      "primary_delta": "delta_execution",
+      "shared_delta_profile": [
+        "delta_execution"
+      ],
+      "recommended_control": "require_test_plan",
+      "recommended_gate": "TASK_ONLY",
+      "sync_risk": 34,
+      "material_delta_change": 13,
+      "allowed_actions": [
+        "candidate_link",
+        "evidence_request",
+        "graph_repair_task",
+        "human_review_task"
+      ],
+      "blocked_actions": [
+        "client_facing_claim",
+        "automatic_nomination",
+        "implementation_execution",
+        "production_activation",
+        "automatic_merge",
+        "credential_handling"
+      ]
+    },
+    {
+      "sync_id": "SYNC-0034",
+      "source_domain": "rule_extraction",
+      "target_domain": "enterprise_knowledge",
+      "source_node": "RULE_EXTRACTION-N06",
+      "target_node": "ENTERPRISE_KNOWLEDGE-N02",
+      "sync_mode": "control_suggestion",
+      "primary_delta": "delta_model_behavior",
+      "shared_delta_profile": [
+        "delta_model_behavior"
+      ],
+      "recommended_control": "repeat_seed_test",
+      "recommended_gate": "TASK_ONLY",
+      "sync_risk": 39,
+      "material_delta_change": 1,
+      "allowed_actions": [
+        "candidate_link",
+        "evidence_request",
+        "graph_repair_task",
+        "human_review_task"
+      ],
+      "blocked_actions": [
+        "client_facing_claim",
+        "automatic_nomination",
+        "implementation_execution",
+        "production_activation",
+        "automatic_merge",
+        "credential_handling"
+      ]
+    },
+    {
+      "sync_id": "SYNC-0035",
+      "source_domain": "parser_documental",
+      "target_domain": "rule_extraction",
+      "source_node": "PARSER_DOCUMENTAL-N04",
+      "target_node": "RULE_EXTRACTION-N03",
+      "sync_mode": "delta_challenge",
+      "primary_delta": "delta_ambiguity",
+      "shared_delta_profile": [
+        "delta_ambiguity"
+      ],
+      "recommended_control": "split_interpretations",
+      "recommended_gate": "STRUCTURE_ONLY",
+      "sync_risk": 48,
+      "material_delta_change": 8,
+      "allowed_actions": [
+        "candidate_link",
+        "evidence_request",
+        "graph_repair_task",
+        "human_review_task"
+      ],
+      "blocked_actions": [
+        "client_facing_claim",
+        "automatic_nomination",
+        "implementation_execution",
+        "production_activation",
+        "automatic_merge",
+        "credential_handling"
+      ]
+    },
+    {
+      "sync_id": "SYNC-0036",
+      "source_domain": "enterprise_knowledge",
+      "target_domain": "rule_extraction",
+      "source_node": "ENTERPRISE_KNOWLEDGE-N07",
+      "target_node": "RULE_EXTRACTION-N04",
+      "sync_mode": "control_suggestion",
+      "primary_delta": "delta_conflict",
+      "shared_delta_profile": [
+        "delta_conflict"
+      ],
+      "recommended_control": "conflict_resolution_task",
+      "recommended_gate": "TASK_ONLY",
+      "sync_risk": 43,
+      "material_delta_change": 6,
+      "allowed_actions": [
+        "candidate_link",
+        "evidence_request",
+        "graph_repair_task",
+        "human_review_task"
+      ],
+      "blocked_actions": [
+        "client_facing_claim",
+        "automatic_nomination",
+        "implementation_execution",
+        "production_activation",
+        "automatic_merge",
+        "credential_handling"
+      ]
+    },
+    {
+      "sync_id": "SYNC-0037",
+      "source_domain": "process_operations",
+      "target_domain": "audit_documental",
+      "source_node": "PROCESS_OPERATIONS-N01",
+      "target_node": "AUDIT_DOCUMENTAL-N01",
+      "sync_mode": "human_review_handoff",
+      "primary_delta": "delta_conflict",
+      "shared_delta_profile": [
+        "delta_conflict"
+      ],
+      "recommended_control": "conflict_resolution_task",
+      "recommended_gate": "TASK_ONLY",
+      "sync_risk": 46,
+      "material_delta_change": 8,
+      "allowed_actions": [
+        "candidate_link",
+        "evidence_request",
+        "graph_repair_task",
+        "human_review_task"
+      ],
+      "blocked_actions": [
+        "client_facing_claim",
+        "automatic_nomination",
+        "implementation_execution",
+        "production_activation",
+        "automatic_merge",
+        "credential_handling"
+      ]
+    },
+    {
+      "sync_id": "SYNC-0038",
+      "source_domain": "enterprise_knowledge",
+      "target_domain": "audit_documental",
+      "source_node": "ENTERPRISE_KNOWLEDGE-N02",
+      "target_node": "AUDIT_DOCUMENTAL-N03",
+      "sync_mode": "delta_challenge",
+      "primary_delta": "delta_conflict",
+      "shared_delta_profile": [
+        "delta_conflict"
+      ],
+      "recommended_control": "conflict_resolution_task",
+      "recommended_gate": "TASK_ONLY",
+      "sync_risk": 55,
+      "material_delta_change": 13,
+      "allowed_actions": [
+        "candidate_link",
+        "evidence_request",
+        "graph_repair_task",
+        "human_review_task"
+      ],
+      "blocked_actions": [
+        "client_facing_claim",
+        "automatic_nomination",
+        "implementation_execution",
+        "production_activation",
+        "automatic_merge",
+        "credential_handling"
+      ]
+    },
+    {
+      "sync_id": "SYNC-0039",
+      "source_domain": "process_operations",
+      "target_domain": "audit_documental",
+      "source_node": "PROCESS_OPERATIONS-N06",
+      "target_node": "AUDIT_DOCUMENTAL-N05",
+      "sync_mode": "delta_challenge",
+      "primary_delta": "delta_production",
+      "shared_delta_profile": [
+        "delta_production"
+      ],
+      "recommended_control": "production_block",
+      "recommended_gate": "BLOCKED_UNSUPPORTED",
+      "sync_risk": 38,
+      "material_delta_change": 18,
+      "allowed_actions": [
+        "candidate_link",
+        "evidence_request",
+        "graph_repair_task",
+        "human_review_task"
+      ],
+      "blocked_actions": [
+        "client_facing_claim",
+        "automatic_nomination",
+        "implementation_execution",
+        "production_activation",
+        "automatic_merge",
+        "credential_handling"
+      ]
+    },
+    {
+      "sync_id": "SYNC-0040",
+      "source_domain": "audit_documental",
+      "target_domain": "parser_documental",
+      "source_node": "AUDIT_DOCUMENTAL-N02",
+      "target_node": "PARSER_DOCUMENTAL-N08",
+      "sync_mode": "candidate_link",
+      "primary_delta": "delta_missingness",
+      "shared_delta_profile": [
+        "delta_missingness"
+      ],
+      "recommended_control": "create_data_request",
+      "recommended_gate": "ASK_FOR_EVIDENCE",
+      "sync_risk": 17,
+      "material_delta_change": 1,
+      "allowed_actions": [
+        "candidate_link",
+        "evidence_request",
+        "graph_repair_task",
+        "human_review_task"
+      ],
+      "blocked_actions": [
+        "client_facing_claim",
+        "automatic_nomination",
+        "implementation_execution",
+        "production_activation",
+        "automatic_merge",
+        "credential_handling"
+      ]
+    },
+    {
+      "sync_id": "SYNC-0041",
+      "source_domain": "software_review",
+      "target_domain": "process_operations",
+      "source_node": "SOFTWARE_REVIEW-N06",
+      "target_node": "PROCESS_OPERATIONS-N07",
+      "sync_mode": "delta_challenge",
+      "primary_delta": "delta_human_review",
+      "shared_delta_profile": [
+        "delta_human_review"
+      ],
+      "recommended_control": "route_to_owner",
+      "recommended_gate": "HUMAN_REVIEW_REQUIRED",
+      "sync_risk": 40,
+      "material_delta_change": 19,
+      "allowed_actions": [
+        "candidate_link",
+        "evidence_request",
+        "graph_repair_task",
+        "human_review_task"
+      ],
+      "blocked_actions": [
+        "client_facing_claim",
+        "automatic_nomination",
+        "implementation_execution",
+        "production_activation",
+        "automatic_merge",
+        "credential_handling"
+      ]
+    },
+    {
+      "sync_id": "SYNC-0042",
+      "source_domain": "software_review",
+      "target_domain": "parser_documental",
+      "source_node": "SOFTWARE_REVIEW-N08",
+      "target_node": "PARSER_DOCUMENTAL-N01",
+      "sync_mode": "evidence_bridge",
+      "primary_delta": "delta_execution",
+      "shared_delta_profile": [
+        "delta_execution"
+      ],
+      "recommended_control": "require_runtime_context",
+      "recommended_gate": "ASK_FOR_EVIDENCE",
+      "sync_risk": 49,
+      "material_delta_change": 19,
+      "allowed_actions": [
+        "candidate_link",
+        "evidence_request",
+        "graph_repair_task",
+        "human_review_task"
+      ],
+      "blocked_actions": [
+        "client_facing_claim",
+        "automatic_nomination",
+        "implementation_execution",
+        "production_activation",
+        "automatic_merge",
+        "credential_handling"
+      ]
+    },
+    {
+      "sync_id": "SYNC-0043",
+      "source_domain": "parser_documental",
+      "target_domain": "rule_extraction",
+      "source_node": "PARSER_DOCUMENTAL-N02",
+      "target_node": "RULE_EXTRACTION-N07",
+      "sync_mode": "delta_challenge",
+      "primary_delta": "delta_evidence",
+      "shared_delta_profile": [
+        "delta_evidence"
+      ],
+      "recommended_control": "mark_candidate_only",
+      "recommended_gate": "STRUCTURE_ONLY",
+      "sync_risk": 40,
+      "material_delta_change": 13,
+      "allowed_actions": [
+        "candidate_link",
+        "evidence_request",
+        "graph_repair_task",
+        "human_review_task"
+      ],
+      "blocked_actions": [
+        "client_facing_claim",
+        "automatic_nomination",
+        "implementation_execution",
+        "production_activation",
+        "automatic_merge",
+        "credential_handling"
+      ]
+    },
+    {
+      "sync_id": "SYNC-0044",
+      "source_domain": "process_operations",
+      "target_domain": "parser_documental",
+      "source_node": "PROCESS_OPERATIONS-N04",
+      "target_node": "PARSER_DOCUMENTAL-N08",
+      "sync_mode": "control_suggestion",
+      "primary_delta": "delta_ambiguity",
+      "shared_delta_profile": [
+        "delta_ambiguity"
+      ],
+      "recommended_control": "structure_only",
+      "recommended_gate": "STRUCTURE_ONLY",
+      "sync_risk": 29,
+      "material_delta_change": 2,
+      "allowed_actions": [
+        "candidate_link",
+        "evidence_request",
+        "graph_repair_task",
+        "human_review_task"
+      ],
+      "blocked_actions": [
+        "client_facing_claim",
+        "automatic_nomination",
+        "implementation_execution",
+        "production_activation",
+        "automatic_merge",
+        "credential_handling"
+      ]
+    },
+    {
+      "sync_id": "SYNC-0045",
+      "source_domain": "rule_extraction",
+      "target_domain": "audit_documental",
+      "source_node": "RULE_EXTRACTION-N06",
+      "target_node": "AUDIT_DOCUMENTAL-N05",
+      "sync_mode": "candidate_link",
+      "primary_delta": "delta_ambiguity",
+      "shared_delta_profile": [
+        "delta_ambiguity"
+      ],
+      "recommended_control": "structure_only",
+      "recommended_gate": "STRUCTURE_ONLY",
+      "sync_risk": 29,
+      "material_delta_change": 17,
+      "allowed_actions": [
+        "candidate_link",
+        "evidence_request",
+        "graph_repair_task",
+        "human_review_task"
+      ],
+      "blocked_actions": [
+        "client_facing_claim",
+        "automatic_nomination",
+        "implementation_execution",
+        "production_activation",
+        "automatic_merge",
+        "credential_handling"
+      ]
+    },
+    {
+      "sync_id": "SYNC-0046",
+      "source_domain": "enterprise_knowledge",
+      "target_domain": "process_operations",
+      "source_node": "ENTERPRISE_KNOWLEDGE-N05",
+      "target_node": "PROCESS_OPERATIONS-N06",
+      "sync_mode": "delta_challenge",
+      "primary_delta": "delta_model_behavior",
+      "shared_delta_profile": [
+        "delta_model_behavior"
+      ],
+      "recommended_control": "calibration_review",
+      "recommended_gate": "HUMAN_REVIEW_REQUIRED",
+      "sync_risk": 42,
+      "material_delta_change": 1,
+      "allowed_actions": [
+        "candidate_link",
+        "evidence_request",
+        "graph_repair_task",
+        "human_review_task"
+      ],
+      "blocked_actions": [
+        "client_facing_claim",
+        "automatic_nomination",
+        "implementation_execution",
+        "production_activation",
+        "automatic_merge",
+        "credential_handling"
+      ]
+    },
+    {
+      "sync_id": "SYNC-0047",
+      "source_domain": "rule_extraction",
+      "target_domain": "enterprise_knowledge",
+      "source_node": "RULE_EXTRACTION-N07",
+      "target_node": "ENTERPRISE_KNOWLEDGE-N05",
+      "sync_mode": "evidence_bridge",
+      "primary_delta": "delta_model_behavior",
+      "shared_delta_profile": [
+        "delta_model_behavior"
+      ],
+      "recommended_control": "repeat_seed_test",
+      "recommended_gate": "TASK_ONLY",
+      "sync_risk": 39,
+      "material_delta_change": 7,
+      "allowed_actions": [
+        "candidate_link",
+        "evidence_request",
+        "graph_repair_task",
+        "human_review_task"
+      ],
+      "blocked_actions": [
+        "client_facing_claim",
+        "automatic_nomination",
+        "implementation_execution",
+        "production_activation",
+        "automatic_merge",
+        "credential_handling"
+      ]
+    },
+    {
+      "sync_id": "SYNC-0048",
+      "source_domain": "enterprise_knowledge",
+      "target_domain": "software_review",
+      "source_node": "ENTERPRISE_KNOWLEDGE-N02",
+      "target_node": "SOFTWARE_REVIEW-N06",
+      "sync_mode": "control_suggestion",
+      "primary_delta": "delta_ambiguity",
+      "shared_delta_profile": [
+        "delta_ambiguity"
+      ],
+      "recommended_control": "structure_only",
+      "recommended_gate": "STRUCTURE_ONLY",
+      "sync_risk": 41,
+      "material_delta_change": 7,
+      "allowed_actions": [
+        "candidate_link",
+        "evidence_request",
+        "graph_repair_task",
+        "human_review_task"
+      ],
+      "blocked_actions": [
+        "client_facing_claim",
+        "automatic_nomination",
+        "implementation_execution",
+        "production_activation",
+        "automatic_merge",
+        "credential_handling"
+      ]
+    }
+  ],
+  "sync_summary": {
+    "gate_counts": {
+      "BLOCKED_UNSUPPORTED": 3,
+      "STRUCTURE_ONLY": 15,
+      "HUMAN_REVIEW_REQUIRED": 12,
+      "TASK_ONLY": 12,
+      "ASK_FOR_EVIDENCE": 6
+    },
+    "control_counts": {
+      "production_block": 3,
+      "split_interpretations": 4,
+      "human_arbitration": 3,
+      "calibration_review": 4,
+      "generate_missing_artifact_task": 1,
+      "mark_candidate_only": 2,
+      "create_data_request": 3,
+      "create_review_task": 2,
+      "raise_review_level": 2,
+      "deployment_readiness_check": 1,
+      "conflict_resolution_task": 4,
+      "require_domain_owner": 2,
+      "graph_repair_suggestion": 1,
+      "structure_only": 6,
+      "repeat_seed_test": 3,
+      "require_runtime_context": 3,
+      "exception_map": 1,
+      "bridge_candidate_generation": 1,
+      "require_test_plan": 1,
+      "route_to_owner": 1
+    },
+    "delta_counts": {
+      "delta_production": 4,
+      "delta_ambiguity": 10,
+      "delta_conflict": 7,
+      "delta_model_behavior": 7,
+      "delta_missingness": 4,
+      "delta_evidence": 2,
+      "delta_human_review": 3,
+      "delta_domain": 4,
+      "delta_graph_structure": 2,
+      "delta_execution": 4,
+      "delta_rule": 1
+    },
+    "avg_sync_risk": 39.38,
+    "avg_material_delta_change": 9.92,
+    "stop_reason": "production_blocked",
+    "self_sustaining_status": "PRACTICAL_LOOP_READY"
+  },
+  "recommendations": [
+    "Use delta library during graph creation, not only after scoring.",
+    "Allow cross-domain candidate links but keep committed links evidence-gated.",
+    "Use graph sync to discover missing documents/domains/artifacts.",
+    "Stop loops when material delta change is low or human review/production block is reached.",
+    "Convert recurring sync controls into backlog tasks, not endless analysis."
+  ],
+  "blocked_actions": [
+    "client_facing_claim",
+    "automatic_nomination",
+    "implementation_execution",
+    "production_activation",
+    "automatic_merge",
+    "credential_handling"
+  ]
+}

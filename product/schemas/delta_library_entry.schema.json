@@ -1,0 +1,12 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Delta Library Entry",
+  "type": "object",
+  "required": [
+    "delta_id",
+    "definition",
+    "controls",
+    "gates",
+    "graph_effect"
+  ]
+}

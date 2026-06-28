@@ -1,0 +1,9 @@
+{
+  "contract": "casulo.self_sustaining_loop_policy.v0.1",
+  "stop_rules": [
+    "max_iterations",
+    "no_material_delta_change",
+    "human_review_required",
+    "production_blocked"
+  ]
+}

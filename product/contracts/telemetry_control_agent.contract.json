@@ -1,0 +1,13 @@
+{
+  "contract": "casulo.telemetry_control_agent.v0.1",
+  "purpose": "Advisor that suggests controls/gates during graph creation and sync based on delta telemetry.",
+  "role": "advisor_not_executor",
+  "blocked_actions": [
+    "client_facing_claim",
+    "automatic_nomination",
+    "implementation_execution",
+    "production_activation",
+    "automatic_merge",
+    "credential_handling"
+  ]
+}

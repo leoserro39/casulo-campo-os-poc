@@ -1,0 +1,10 @@
+{
+  "contract": "casulo.graph_sync_protocol.v0.1",
+  "sync_modes": [
+    "candidate_link",
+    "evidence_bridge",
+    "delta_challenge",
+    "control_suggestion",
+    "human_review_handoff"
+  ]
+}
