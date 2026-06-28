@@ -1,0 +1,11 @@
+# Delta Control Report
+
+- contract_version: `casulo.delta_control_report.v0.1`
+- status: `PASS`
+
+## Summary
+- avg_residual_delta: `80.75`
+- avg_direct_delta_control: `27.25`
+- avg_casulo_delta_control: `90.5`
+- avg_delta_control_gain: `63.25`
+- finding: `CASULO should not be judged only by lowering delta. It should be judged by whether it correctly controls and routes the delta.`

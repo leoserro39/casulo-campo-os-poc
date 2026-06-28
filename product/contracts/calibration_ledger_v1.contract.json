@@ -1,0 +1,11 @@
+{
+  "contract": "casulo.calibration_ledger.v1.0",
+  "purpose": "Record calibrated metric weights, threshold notes and operational findings from POC-style cases.",
+  "calibrates": [
+    "hallucination_risk_index",
+    "delta_index",
+    "delta_control_score",
+    "response_gate",
+    "recommendation_governance"
+  ]
+}

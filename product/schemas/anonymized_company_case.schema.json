@@ -1,0 +1,13 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Anonymized Company POC Case",
+  "type": "object",
+  "required": [
+    "case_id",
+    "company_profile",
+    "process_briefing",
+    "documents_inventory",
+    "desired_outputs",
+    "redactions"
+  ]
+}

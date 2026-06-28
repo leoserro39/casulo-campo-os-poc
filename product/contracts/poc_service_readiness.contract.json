@@ -1,0 +1,11 @@
+{
+  "contract": "casulo.poc_service_readiness.v0.1",
+  "purpose": "Define the gate for using the system in controlled service POCs, incubator discussions and investor technical validation.",
+  "target_gate": "READY_FOR_CONTROLLED_POC_SERVICE_CALIBRATION",
+  "not_for": [
+    "SaaS",
+    "production automation",
+    "unreviewed client-facing claim",
+    "autonomous merge/deploy"
+  ]
+}

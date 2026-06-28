@@ -1,0 +1,33 @@
+# POC Calibration Results
+
+- contract_version: `casulo.poc_calibration_results.v0.1`
+- status: `PASS`
+
+## Summary
+- cases_count: `4`
+- avg_direct_hallucination: `100.0`
+- avg_casulo_hallucination: `35.5`
+- avg_hallucination_reduction: `64.5`
+- avg_direct_delta_control: `27.25`
+- avg_casulo_delta_control: `90.5`
+- avg_delta_control_gain: `63.25`
+- avg_residual_delta: `80.75`
+
+## Cases
+- `POC-ACC-001` — {"case_id": "POC-ACC-001", "segment": "accounting_office", "data_mode": "anonymous", "desired_outputs": ["operational map", "delta report", "next-cycle backlog"], "redactions": ["client names removed", "tax IDs removed", "financial values bucketed"], "direct_gpt": {"hallucination_risk_index": {"score": 100, "band": "BLOCKED"}, "delta_control_score": {"score": 27, "band": "UNCONTROLLED"}}, "with_casulo": {"hallucination_risk_index": {"score": 40, "band": "HIGH"}, "residual_delta_index": 74, "delta_control_score": {"score": 88, "band": "STRONG_CONTROL"}}, "improvement": {"hallucination_risk_reduction": 60, "delta_control_gain": 61}, "decision": "CONTROLLED_POC_OUTPUT_ALLOWED_WITH_REVIEW"}
+- `POC-CLINIC-001` — {"case_id": "POC-CLINIC-001", "segment": "clinic", "data_mode": "anonymous", "desired_outputs": ["state map", "risk report", "assistant workflow"], "redactions": ["patient names removed", "medical details removed", "insurance IDs removed"], "direct_gpt": {"hallucination_risk_index": {"score": 100, "band": "BLOCKED"}, "delta_control_score": {"score": 23, "band": "UNCONTROLLED"}}, "with_casulo": {"hallucination_risk_index": {"score": 40, "band": "HIGH"}, "residual_delta_index": 82, "delta_control_score": {"score": 90, "band": "STRONG_CONTROL"}}, "improvement": {"hallucination_risk_reduction": 60, "delta_control_gain": 67}, "decision": "CONTROLLED_POC_OUTPUT_ALLOWED_WITH_REVIEW"}
+- `POC-LEGACY-001` — {"case_id": "POC-LEGACY-001", "segment": "internal_software", "data_mode": "anonymous", "desired_outputs": ["software review gate", "development tasks", "Codex scope"], "redactions": ["repository URL replaced", "usernames removed", "logs sanitized"], "direct_gpt": {"hallucination_risk_index": {"score": 100, "band": "BLOCKED"}, "delta_control_score": {"score": 28, "band": "UNCONTROLLED"}}, "with_casulo": {"hallucination_risk_index": {"score": 22, "band": "ATTENTION"}, "residual_delta_index": 88, "delta_control_score": {"score": 94, "band": "STRONG_CONTROL"}}, "improvement": {"hallucination_risk_reduction": 78, "delta_control_gain": 66}, "decision": "CONTROLLED_POC_OUTPUT_ALLOWED_WITH_REVIEW"}
+- `POC-PARSER-001` — {"case_id": "POC-PARSER-001", "segment": "document_processing", "data_mode": "anonymous", "desired_outputs": ["parser contract", "test plan", "code skeleton", "blocked production decision"], "redactions": ["sample identifiers replaced", "company names removed"], "direct_gpt": {"hallucination_risk_index": {"score": 100, "band": "BLOCKED"}, "delta_control_score": {"score": 31, "band": "UNCONTROLLED"}}, "with_casulo": {"hallucination_risk_index": {"score": 40, "band": "HIGH"}, "residual_delta_index": 79, "delta_control_score": {"score": 90, "band": "STRONG_CONTROL"}}, "improvement": {"hallucination_risk_reduction": 60, "delta_control_gain": 59}, "decision": "CONTROLLED_POC_OUTPUT_ALLOWED_WITH_REVIEW"}
+
+## Interpretation
+- `Hallucination risk should decrease when the model is governed by evidence, gates and response constraints.`
+- `Residual delta may remain high because real missing evidence remains missing.`
+- `The key calibration insight is delta control: the system must expose and route gaps instead of pretending they are solved.`
+
+## Blocked Actions
+- `client_facing_claim`
+- `automatic_nomination`
+- `implementation_execution`
+- `production_activation`
+- `automatic_merge`
+- `credential_handling`

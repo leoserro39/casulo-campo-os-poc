@@ -7,7 +7,6 @@ from typing import Dict
 
 PRODUCT_DIRECTION = "Cubo Operacional / Operational Cube"
 RUNTIME_MODE = "local_demo"
-VERTICALS = ["small_service", "legal_office", "vesselflow", "tic_si"]
 BLOCKED_ACTIONS = [
     "client_facing_claim",
     "automatic_nomination",
@@ -40,11 +39,10 @@ def payload(path: Path, key: str):
 class ProductRuntimeService:
     def __init__(self, repo_root: Path):
         self.repo_root = repo_root
-        self.product_root = repo_root / "product"
         self.outputs_root = repo_root / "outputs"
 
     def health(self) -> Dict:
-        return {"status": "PASS", "product_direction": PRODUCT_DIRECTION, "runtime_mode": RUNTIME_MODE, "verticals": VERTICALS, "blocked_actions": BLOCKED_ACTIONS}
+        return {"status": "PASS", "product_direction": PRODUCT_DIRECTION, "runtime_mode": RUNTIME_MODE, "blocked_actions": BLOCKED_ACTIONS}
 
     def product_status(self) -> Dict:
         checks = {
@@ -58,7 +56,13 @@ class ProductRuntimeService:
             "recommendation_governance": exists(self.outputs_root / "prod121_130_recommendation_governance.json"),
             "poc_factory_pack": exists(self.outputs_root / "prod121_130_poc_factory_pack.json"),
             "poc_readiness_report": exists(self.outputs_root / "prod121_130_poc_readiness_report.json"),
-            "graph_builder_audit": exists(self.outputs_root / "prod121_130_audit_report.json"),
+            "poc_intake_template": exists(self.outputs_root / "prod131_140_poc_intake_template.json"),
+            "calibration_cases": exists(self.outputs_root / "prod131_140_calibration_cases.json"),
+            "calibration_results": exists(self.outputs_root / "prod131_140_calibration_results.json"),
+            "calibration_ledger_v1": exists(self.outputs_root / "prod131_140_calibration_ledger_v1.json"),
+            "delta_control_report": exists(self.outputs_root / "prod131_140_delta_control_report.json"),
+            "poc_calibration_readiness": exists(self.outputs_root / "prod131_140_poc_calibration_readiness.json"),
+            "poc_calibration_audit": exists(self.outputs_root / "prod131_140_audit_report.json"),
         }
         return {
             "status": "PASS" if all(checks.values()) else "INCOMPLETE",
@@ -66,31 +70,31 @@ class ProductRuntimeService:
             "runtime_mode": RUNTIME_MODE,
             "checks": checks,
             "blocked_actions": BLOCKED_ACTIONS,
-            "next_recommended_step": "Run real/anonymous POC calibration, then harden Graph Builder v0 and persistence.",
+            "next_recommended_step": "Run first real/anonymized case and then build Technical Readiness Memo / Incubator Pack.",
         }
 
     def _payload(self, stem: str, key: str) -> Dict:
         return payload(self.outputs_root / stem, key)
-
-    def graph_builder_v0(self) -> Dict: return self._payload("prod121_130_graph_builder_v0.json", "graph_builder_v0")
-    def state_store_index(self) -> Dict: return self._payload("prod121_130_state_store_index.json", "state_store_index")
-    def recommendation_governance(self) -> Dict: return self._payload("prod121_130_recommendation_governance.json", "recommendation_governance")
-    def poc_factory_pack(self) -> Dict: return self._payload("prod121_130_poc_factory_pack.json", "poc_factory_pack")
-    def poc_readiness_report(self) -> Dict: return self._payload("prod121_130_poc_readiness_report.json", "poc_readiness_report")
-    def graph_builder_audit(self) -> Dict: return self._payload("prod121_130_audit_report.json", "graph_builder_audit")
 
     def __getattr__(self, name):
         mapping = {
             "casulo_method": ("prod081_120_casulo_method.json", "casulo_method"),
             "company_chat_intake": ("prod081_120_company_chat_intake.json", "company_chat_intake"),
             "gpt_operating_layer": ("prod081_120_gpt_operating_layer.json", "gpt_operating_layer"),
-            "evaluation_cases": ("prod081_120_evaluation_cases.json", "evaluation_cases"),
-            "hallucination_index": ("prod081_120_hallucination_index.json", "hallucination_index"),
-            "delta_index": ("prod081_120_delta_index.json", "delta_index"),
             "evaluation_report": ("prod081_120_evaluation_report.json", "evaluation_report"),
             "technical_readiness_gate": ("prod081_120_technical_readiness_gate.json", "technical_readiness_gate"),
-            "calibration_ledger": ("prod081_120_calibration_ledger.json", "calibration_ledger"),
-            "audit_report": ("prod081_120_audit_report.json", "audit_report"),
+            "graph_builder_v0": ("prod121_130_graph_builder_v0.json", "graph_builder_v0"),
+            "state_store_index": ("prod121_130_state_store_index.json", "state_store_index"),
+            "recommendation_governance": ("prod121_130_recommendation_governance.json", "recommendation_governance"),
+            "poc_factory_pack": ("prod121_130_poc_factory_pack.json", "poc_factory_pack"),
+            "poc_readiness_report": ("prod121_130_poc_readiness_report.json", "poc_readiness_report"),
+            "poc_intake_template": ("prod131_140_poc_intake_template.json", "poc_intake_template"),
+            "calibration_cases": ("prod131_140_calibration_cases.json", "calibration_cases"),
+            "calibration_results": ("prod131_140_calibration_results.json", "calibration_results"),
+            "calibration_ledger_v1": ("prod131_140_calibration_ledger_v1.json", "calibration_ledger_v1"),
+            "delta_control_report": ("prod131_140_delta_control_report.json", "delta_control_report"),
+            "poc_calibration_readiness": ("prod131_140_poc_calibration_readiness.json", "poc_calibration_readiness"),
+            "poc_calibration_audit": ("prod131_140_audit_report.json", "poc_calibration_audit"),
         }
         if name in mapping:
             stem, key = mapping[name]
@@ -99,12 +103,12 @@ class ProductRuntimeService:
 
     def reports(self) -> Dict:
         patterns = [
-            "prod121_130_graph_builder_v0.md",
-            "prod121_130_state_store_index.md",
-            "prod121_130_recommendation_governance.md",
-            "prod121_130_poc_factory_pack.md",
-            "prod121_130_poc_readiness_report.md",
-            "prod121_130_audit_report.md",
+            "prod131_140_poc_intake_template.md",
+            "prod131_140_calibration_results.md",
+            "prod131_140_calibration_ledger_v1.md",
+            "prod131_140_delta_control_report.md",
+            "prod131_140_poc_calibration_readiness.md",
+            "prod131_140_audit_report.md",
         ]
         reports = []
         for name in patterns:

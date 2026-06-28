@@ -1,0 +1,10 @@
+{
+  "status": "PASS",
+  "audit": "Real/Anonymous POC Calibration audit",
+  "cases_count": 4,
+  "avg_hallucination_reduction": 64.5,
+  "avg_delta_control_gain": 63.25,
+  "avg_residual_delta": 80.75,
+  "readiness": "READY_TO_RUN_REAL_OR_ANONYMOUS_COMPANY_CASES",
+  "finding": "PASS: calibration runner distinguishes residual delta from delta control and is ready for real/anonymized company case testing."
+}

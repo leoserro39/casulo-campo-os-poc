@@ -1,0 +1,15 @@
+{
+  "contract": "casulo.real_anonymous_poc_calibration.v0.1",
+  "purpose": "Run controlled calibration using real or anonymized company-style cases.",
+  "mode": "redacted_or_anonymized_poc_calibration",
+  "primary_script": "product/scripts/build_real_anonymous_poc_calibration.py",
+  "blocked_actions": [
+    "client_facing_claim",
+    "automatic_nomination",
+    "implementation_execution",
+    "production_activation",
+    "automatic_merge",
+    "credential_handling"
+  ],
+  "important_rule": "Real data can be used only if redacted/anonymized and authorized for POC evaluation."
+}

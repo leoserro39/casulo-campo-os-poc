@@ -60,25 +60,28 @@ class ProductRuntimeHandler(BaseHTTPRequestHandler):
                 if UI_ROOT.resolve() not in requested.parents and requested != UI_ROOT.resolve():
                     return self.send_json({"status": "FORBIDDEN"}, status=403)
                 return self.send_static(requested)
+
             route_map = {
                 "api/health": self.service.health,
                 "api/product/status": self.service.product_status,
                 "api/casulo/method": self.service.casulo_method,
                 "api/casulo/company-chat-intake": self.service.company_chat_intake,
                 "api/casulo/gpt-operating-layer": self.service.gpt_operating_layer,
-                "api/casulo/evaluation/test-cases": self.service.evaluation_cases,
-                "api/casulo/evaluation/hallucination-index": self.service.hallucination_index,
-                "api/casulo/evaluation/delta-index": self.service.delta_index,
                 "api/casulo/evaluation/report": self.service.evaluation_report,
                 "api/casulo/technical-readiness-gate": self.service.technical_readiness_gate,
-                "api/casulo/calibration-ledger": self.service.calibration_ledger,
-                "api/casulo/audit-report": self.service.audit_report,
                 "api/casulo/graph-builder/map": self.service.graph_builder_v0,
                 "api/casulo/state-store/index": self.service.state_store_index,
                 "api/casulo/recommendation-governance": self.service.recommendation_governance,
                 "api/casulo/poc-factory/package": self.service.poc_factory_pack,
                 "api/casulo/poc-readiness-report": self.service.poc_readiness_report,
-                "api/casulo/graph-builder/audit": self.service.graph_builder_audit,
+                "api/casulo/poc-calibration/status": self.service.product_status,
+                "api/casulo/poc-calibration/intake-template": self.service.poc_intake_template,
+                "api/casulo/poc-calibration/cases": self.service.calibration_cases,
+                "api/casulo/poc-calibration/results": self.service.calibration_results,
+                "api/casulo/poc-calibration/calibration-ledger-v1": self.service.calibration_ledger_v1,
+                "api/casulo/poc-calibration/delta-control": self.service.delta_control_report,
+                "api/casulo/poc-calibration/readiness": self.service.poc_calibration_readiness,
+                "api/casulo/poc-calibration/audit": self.service.poc_calibration_audit,
                 "api/reports": self.service.reports,
             }
             if clean in route_map:
@@ -96,7 +99,7 @@ def main() -> int:
     server = HTTPServer((args.host, args.port), ProductRuntimeHandler)
     print(f"Operational Cube product runtime API/UI running at http://{args.host}:{args.port}")
     print("Open: /ui")
-    print("Try: /api/health, /api/casulo/graph-builder/map")
+    print("Try: /api/health, /api/casulo/poc-calibration/results")
     try:
         server.serve_forever()
     except KeyboardInterrupt:

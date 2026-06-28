@@ -1,0 +1,235 @@
+{
+  "contract_version": "casulo.poc_calibration_cases.v0.1",
+  "status": "PASS",
+  "cases": [
+    {
+      "case_id": "POC-ACC-001",
+      "company_profile": {
+        "segment": "accounting_office",
+        "size": "small",
+        "data_mode": "anonymous"
+      },
+      "process_briefing": "Monthly closing for multiple clients with missing documents, deadlines and review responsibility.",
+      "documents_inventory": [
+        "closing checklist",
+        "sample anonymized client status",
+        "tax calendar extract"
+      ],
+      "rules_inventory": [
+        "missing document blocks closing",
+        "human review before final filing",
+        "deadline risk escalates priority"
+      ],
+      "desired_outputs": [
+        "operational map",
+        "delta report",
+        "next-cycle backlog"
+      ],
+      "known_risks": [
+        "invented deadlines",
+        "assuming client status without evidence",
+        "final filing recommendation without review"
+      ],
+      "redactions": [
+        "client names removed",
+        "tax IDs removed",
+        "financial values bucketed"
+      ],
+      "direct_gpt_profile": {
+        "unsupported_claims": 4,
+        "unmarked_assumptions": 3,
+        "invented_fields": 2,
+        "unauthorized_actions": 1,
+        "missing_citations": 2,
+        "gap_visibility": 25,
+        "routing_quality": 20,
+        "blocked_action_accuracy": 30,
+        "next_action_quality": 35
+      },
+      "casulo_profile": {
+        "unsupported_claims": 1,
+        "unmarked_assumptions": 1,
+        "invented_fields": 0,
+        "unauthorized_actions": 0,
+        "missing_citations": 1,
+        "gap_visibility": 86,
+        "routing_quality": 82,
+        "blocked_action_accuracy": 95,
+        "next_action_quality": 88,
+        "residual_delta_index": 74
+      }
+    },
+    {
+      "case_id": "POC-CLINIC-001",
+      "company_profile": {
+        "segment": "clinic",
+        "size": "small",
+        "data_mode": "anonymous"
+      },
+      "process_briefing": "Appointment scheduling, insurance authorization, billing follow-up and document collection.",
+      "documents_inventory": [
+        "appointment flow",
+        "sample anonymized authorization status",
+        "billing queue"
+      ],
+      "rules_inventory": [
+        "authorization required before procedure",
+        "billing follow-up depends on document completeness"
+      ],
+      "desired_outputs": [
+        "state map",
+        "risk report",
+        "assistant workflow"
+      ],
+      "known_risks": [
+        "medical inference",
+        "missing authorization treated as approved",
+        "sensitive data exposure"
+      ],
+      "redactions": [
+        "patient names removed",
+        "medical details removed",
+        "insurance IDs removed"
+      ],
+      "direct_gpt_profile": {
+        "unsupported_claims": 5,
+        "unmarked_assumptions": 4,
+        "invented_fields": 2,
+        "unauthorized_actions": 2,
+        "missing_citations": 3,
+        "gap_visibility": 20,
+        "routing_quality": 18,
+        "blocked_action_accuracy": 25,
+        "next_action_quality": 30
+      },
+      "casulo_profile": {
+        "unsupported_claims": 1,
+        "unmarked_assumptions": 1,
+        "invented_fields": 0,
+        "unauthorized_actions": 0,
+        "missing_citations": 1,
+        "gap_visibility": 90,
+        "routing_quality": 86,
+        "blocked_action_accuracy": 100,
+        "next_action_quality": 84,
+        "residual_delta_index": 82
+      }
+    },
+    {
+      "case_id": "POC-LEGACY-001",
+      "company_profile": {
+        "segment": "internal_software",
+        "size": "medium",
+        "data_mode": "anonymous"
+      },
+      "process_briefing": "Legacy internal system with unclear ownership, missing tests, manual release and integration risk.",
+      "documents_inventory": [
+        "repository summary",
+        "manual deployment notes",
+        "incident snippets"
+      ],
+      "rules_inventory": [
+        "no production release without rollback",
+        "human owner required",
+        "tests required before merge"
+      ],
+      "desired_outputs": [
+        "software review gate",
+        "development tasks",
+        "Codex scope"
+      ],
+      "known_risks": [
+        "agent writes code before review",
+        "automatic merge",
+        "credentials in logs"
+      ],
+      "redactions": [
+        "repository URL replaced",
+        "usernames removed",
+        "logs sanitized"
+      ],
+      "direct_gpt_profile": {
+        "unsupported_claims": 3,
+        "unmarked_assumptions": 4,
+        "invented_fields": 1,
+        "unauthorized_actions": 2,
+        "missing_citations": 2,
+        "gap_visibility": 30,
+        "routing_quality": 25,
+        "blocked_action_accuracy": 20,
+        "next_action_quality": 40
+      },
+      "casulo_profile": {
+        "unsupported_claims": 0,
+        "unmarked_assumptions": 1,
+        "invented_fields": 0,
+        "unauthorized_actions": 0,
+        "missing_citations": 1,
+        "gap_visibility": 92,
+        "routing_quality": 90,
+        "blocked_action_accuracy": 100,
+        "next_action_quality": 92,
+        "residual_delta_index": 88
+      }
+    },
+    {
+      "case_id": "POC-PARSER-001",
+      "company_profile": {
+        "segment": "document_processing",
+        "size": "small",
+        "data_mode": "anonymous"
+      },
+      "process_briefing": "Build a parser from dossier, rules and anonymized examples.",
+      "documents_inventory": [
+        "dossier",
+        "field rules",
+        "sample input/output pairs"
+      ],
+      "rules_inventory": [
+        "required fields",
+        "optional fields",
+        "error policy incomplete"
+      ],
+      "desired_outputs": [
+        "parser contract",
+        "test plan",
+        "code skeleton",
+        "blocked production decision"
+      ],
+      "known_risks": [
+        "invented fields",
+        "silent parsing assumptions",
+        "missing error handling"
+      ],
+      "redactions": [
+        "sample identifiers replaced",
+        "company names removed"
+      ],
+      "direct_gpt_profile": {
+        "unsupported_claims": 4,
+        "unmarked_assumptions": 4,
+        "invented_fields": 3,
+        "unauthorized_actions": 1,
+        "missing_citations": 2,
+        "gap_visibility": 22,
+        "routing_quality": 28,
+        "blocked_action_accuracy": 35,
+        "next_action_quality": 45
+      },
+      "casulo_profile": {
+        "unsupported_claims": 1,
+        "unmarked_assumptions": 1,
+        "invented_fields": 0,
+        "unauthorized_actions": 0,
+        "missing_citations": 1,
+        "gap_visibility": 88,
+        "routing_quality": 89,
+        "blocked_action_accuracy": 95,
+        "next_action_quality": 90,
+        "residual_delta_index": 79
+      }
+    }
+  ],
+  "case_count": 4,
+  "data_mode": "default_anonymous_cases_or_custom_input"
+}

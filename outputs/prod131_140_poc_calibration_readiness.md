@@ -1,0 +1,22 @@
+# POC Calibration Readiness
+
+- contract_version: `casulo.poc_service_readiness.v0.1`
+- status: `PASS`
+- gate: `READY_FOR_CONTROLLED_POC_SERVICE_CALIBRATION`
+- decision: `READY_TO_RUN_REAL_OR_ANONYMOUS_COMPANY_CASES`
+- reason: `POC calibration runner can process anonymous company-style cases, produce hallucination risk, delta control, calibration ledger and audit report.`
+
+## Still Not Ready For
+- `production automation`
+- `SaaS`
+- `client-facing final claim without human review`
+- `autonomous code merge/deploy`
+- next: `Run at least one real/anonymous case supplied by the user, then build Technical Readiness Memo and incubator/investor package.`
+
+## Blocked Actions
+- `client_facing_claim`
+- `automatic_nomination`
+- `implementation_execution`
+- `production_activation`
+- `automatic_merge`
+- `credential_handling`

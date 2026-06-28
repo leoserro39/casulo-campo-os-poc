@@ -1,0 +1,16 @@
+{
+  "task": "PROD-131..140",
+  "status": "PASS",
+  "phase": "Real/Anonymous POC Calibration Runner",
+  "endpoints": [
+    "/api/casulo/poc-calibration/status",
+    "/api/casulo/poc-calibration/intake-template",
+    "/api/casulo/poc-calibration/cases",
+    "/api/casulo/poc-calibration/results",
+    "/api/casulo/poc-calibration/calibration-ledger-v1",
+    "/api/casulo/poc-calibration/delta-control",
+    "/api/casulo/poc-calibration/readiness",
+    "/api/casulo/poc-calibration/audit"
+  ],
+  "next_recommended_bundle": "PROD-141..150 Technical Readiness Memo and Incubator Pack"
+}

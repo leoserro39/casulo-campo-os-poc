@@ -1,0 +1,22 @@
+{
+  "contract": "casulo.anonymized_company_case.v0.1",
+  "purpose": "Define a safe structure for company POC cases entered through chat or upload.",
+  "required_sections": [
+    "company_profile",
+    "process_briefing",
+    "documents_inventory",
+    "rules_inventory",
+    "sample_records",
+    "known_risks",
+    "desired_outputs",
+    "redactions"
+  ],
+  "forbidden": [
+    "passwords",
+    "tokens",
+    "API keys",
+    "production credentials",
+    "unredacted personal data",
+    "third-party confidential data without permission"
+  ]
+}

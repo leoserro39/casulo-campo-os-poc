@@ -1,0 +1,13 @@
+{
+  "contract": "casulo.delta_control_score.v0.1",
+  "purpose": "Separate residual operational delta from the quality of how the system controls that delta.",
+  "reason": "A correct system may keep delta high if evidence is genuinely missing, but it should route the gap into gate/task/review instead of pretending it is solved.",
+  "metrics": [
+    "residual_delta_index",
+    "delta_control_score",
+    "gap_visibility",
+    "routing_quality",
+    "blocked_action_accuracy",
+    "next_action_quality"
+  ]
+}
