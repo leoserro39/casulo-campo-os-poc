@@ -1,0 +1,203 @@
+{
+  "contract_version": "workbench.runtime_evidence_audit.v0.9",
+  "case_id": "real_controlled_template_001",
+  "runtime_root": "workbench/runtime_outputs",
+  "status": "PASS",
+  "files_checked": 17,
+  "files": [
+    {
+      "group": "controlled_diagnostics",
+      "name": "evidence_manifest.json",
+      "path": "workbench/runtime_outputs/controlled_diagnostics/real_controlled_template_001/evidence_manifest.json",
+      "exists": true,
+      "size_bytes": 1376
+    },
+    {
+      "group": "controlled_diagnostics",
+      "name": "controlled_case.json",
+      "path": "workbench/runtime_outputs/controlled_diagnostics/real_controlled_template_001/controlled_case.json",
+      "exists": true,
+      "size_bytes": 3760
+    },
+    {
+      "group": "controlled_diagnostics",
+      "name": "state_snapshot.json",
+      "path": "workbench/runtime_outputs/controlled_diagnostics/real_controlled_template_001/state_snapshot.json",
+      "exists": true,
+      "size_bytes": 4092
+    },
+    {
+      "group": "controlled_diagnostics",
+      "name": "graph.json",
+      "path": "workbench/runtime_outputs/controlled_diagnostics/real_controlled_template_001/graph.json",
+      "exists": true,
+      "size_bytes": 9719
+    },
+    {
+      "group": "controlled_diagnostics",
+      "name": "diagnostic_report.md",
+      "path": "workbench/runtime_outputs/controlled_diagnostics/real_controlled_template_001/diagnostic_report.md",
+      "exists": true,
+      "size_bytes": 979
+    },
+    {
+      "group": "controlled_diagnostics",
+      "name": "cockpit_state.json",
+      "path": "workbench/runtime_outputs/controlled_diagnostics/real_controlled_template_001/cockpit_state.json",
+      "exists": true,
+      "size_bytes": 15317
+    },
+    {
+      "group": "controlled_diagnostics",
+      "name": "codex_task.md",
+      "path": "workbench/runtime_outputs/controlled_diagnostics/real_controlled_template_001/codex_task.md",
+      "exists": true,
+      "size_bytes": 661
+    },
+    {
+      "group": "controlled_diagnostics",
+      "name": "ledger.jsonl",
+      "path": "workbench/runtime_outputs/controlled_diagnostics/real_controlled_template_001/ledger.jsonl",
+      "exists": true,
+      "size_bytes": 515
+    },
+    {
+      "group": "controlled_diagnostics",
+      "name": "controlled_diagnostic_result.json",
+      "path": "workbench/runtime_outputs/controlled_diagnostics/real_controlled_template_001/controlled_diagnostic_result.json",
+      "exists": true,
+      "size_bytes": 1938
+    },
+    {
+      "group": "human_review",
+      "name": "human_review_gate.json",
+      "path": "workbench/runtime_outputs/human_review/real_controlled_template_001/human_review_gate.json",
+      "exists": true,
+      "size_bytes": 2082
+    },
+    {
+      "group": "human_review",
+      "name": "human_review_gate.md",
+      "path": "workbench/runtime_outputs/human_review/real_controlled_template_001/human_review_gate.md",
+      "exists": true,
+      "size_bytes": 1080
+    },
+    {
+      "group": "controlled_test_reports",
+      "name": "controlled_test_result.json",
+      "path": "workbench/runtime_outputs/controlled_test_reports/real_controlled_template_001/controlled_test_result.json",
+      "exists": true,
+      "size_bytes": 2002
+    },
+    {
+      "group": "controlled_test_reports",
+      "name": "controlled_test_report.md",
+      "path": "workbench/runtime_outputs/controlled_test_reports/real_controlled_template_001/controlled_test_report.md",
+      "exists": true,
+      "size_bytes": 1189
+    },
+    {
+      "group": "controlled_test_reports",
+      "name": "executive_summary.md",
+      "path": "workbench/runtime_outputs/controlled_test_reports/real_controlled_template_001/executive_summary.md",
+      "exists": true,
+      "size_bytes": 286
+    },
+    {
+      "group": "controlled_test_reports",
+      "name": "next_actions.md",
+      "path": "workbench/runtime_outputs/controlled_test_reports/real_controlled_template_001/next_actions.md",
+      "exists": true,
+      "size_bytes": 153
+    },
+    {
+      "group": "controlled_test_runs",
+      "name": "controlled_test_execution_result.json",
+      "path": "workbench/runtime_outputs/controlled_test_runs/real_controlled_template_001/controlled_test_execution_result.json",
+      "exists": true,
+      "size_bytes": 3605
+    },
+    {
+      "group": "controlled_test_runs",
+      "name": "README.md",
+      "path": "workbench/runtime_outputs/controlled_test_runs/real_controlled_template_001/README.md",
+      "exists": true,
+      "size_bytes": 936
+    }
+  ],
+  "summaries": {
+    "diagnostic": {
+      "status": "PASS",
+      "manifest_decision": "ALLOW_CONTROLLED_DIAGNOSTIC",
+      "data_quality": 0.627,
+      "h_pre": 0.406,
+      "h_post": 0.286,
+      "delta_l": 0.12,
+      "decision": "RECOMMEND_SMALLER_DELTA",
+      "human_review_required": true
+    },
+    "human_review": {
+      "review_status": "PENDING_HUMAN_REVIEW",
+      "decision": "PENDING_HUMAN_REVIEW",
+      "review_required": true,
+      "blocked_next_actions": [
+        "client_facing_claim",
+        "implementation_execution",
+        "production_activation"
+      ]
+    },
+    "controlled_report": {
+      "status": "PASS",
+      "human_review_decision": "PENDING_HUMAN_REVIEW",
+      "ready_for_internal_review": true,
+      "ready_for_client_review": false,
+      "implementation_authorized": false
+    },
+    "execution": {
+      "status": "PASS",
+      "mode": "write",
+      "next_gate": "Manual review of runtime report pack before any external use.",
+      "steps": {
+        "controlled_diagnostic": {
+          "status": "PASS",
+          "decision": "RECOMMEND_SMALLER_DELTA",
+          "generated_outputs": [
+            "/workspaces/casulo-campo-os-poc/workbench/runtime_outputs/controlled_diagnostics/real_controlled_template_001/evidence_manifest.json",
+            "/workspaces/casulo-campo-os-poc/workbench/runtime_outputs/controlled_diagnostics/real_controlled_template_001/controlled_case.json",
+            "/workspaces/casulo-campo-os-poc/workbench/runtime_outputs/controlled_diagnostics/real_controlled_template_001/state_snapshot.json",
+            "/workspaces/casulo-campo-os-poc/workbench/runtime_outputs/controlled_diagnostics/real_controlled_template_001/graph.json",
+            "/workspaces/casulo-campo-os-poc/workbench/runtime_outputs/controlled_diagnostics/real_controlled_template_001/cockpit_state.json",
+            "/workspaces/casulo-campo-os-poc/workbench/runtime_outputs/controlled_diagnostics/real_controlled_template_001/controlled_diagnostic_result.json",
+            "/workspaces/casulo-campo-os-poc/workbench/runtime_outputs/controlled_diagnostics/real_controlled_template_001/diagnostic_report.md",
+            "/workspaces/casulo-campo-os-poc/workbench/runtime_outputs/controlled_diagnostics/real_controlled_template_001/codex_task.md",
+            "/workspaces/casulo-campo-os-poc/workbench/runtime_outputs/controlled_diagnostics/real_controlled_template_001/ledger.jsonl"
+          ]
+        },
+        "human_review_gate": {
+          "status": "PASS",
+          "decision": "PENDING_HUMAN_REVIEW",
+          "review_status": "PENDING_HUMAN_REVIEW",
+          "generated_outputs": [
+            "/workspaces/casulo-campo-os-poc/workbench/runtime_outputs/human_review/real_controlled_template_001/human_review_gate.json",
+            "/workspaces/casulo-campo-os-poc/workbench/runtime_outputs/human_review/real_controlled_template_001/human_review_gate.md"
+          ]
+        },
+        "controlled_test_report": {
+          "status": "PASS",
+          "human_review_decision": "PENDING_HUMAN_REVIEW",
+          "ready_for_internal_review": true,
+          "ready_for_client_review": false,
+          "implementation_authorized": false,
+          "generated_outputs": [
+            "/workspaces/casulo-campo-os-poc/workbench/runtime_outputs/controlled_test_reports/real_controlled_template_001/controlled_test_result.json",
+            "/workspaces/casulo-campo-os-poc/workbench/runtime_outputs/controlled_test_reports/real_controlled_template_001/controlled_test_report.md",
+            "/workspaces/casulo-campo-os-poc/workbench/runtime_outputs/controlled_test_reports/real_controlled_template_001/executive_summary.md",
+            "/workspaces/casulo-campo-os-poc/workbench/runtime_outputs/controlled_test_reports/real_controlled_template_001/next_actions.md"
+          ]
+        }
+      }
+    }
+  },
+  "errors": [],
+  "commit_policy": "Do not commit workbench/runtime_outputs. Commit only this audit report/result."
+}

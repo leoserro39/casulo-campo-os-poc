@@ -1,0 +1,8 @@
+{
+  "task": "TASK-WB-014",
+  "status": "PASS",
+  "stage": "complete",
+  "runtime_audit_result": "outputs/wb014_runtime_evidence_audit_result.json",
+  "runtime_audit_report": "outputs/wb014_runtime_evidence_audit_report.md",
+  "commit_policy": "Do not commit workbench/runtime_outputs."
+}

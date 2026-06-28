@@ -1,0 +1,11 @@
+{
+  "contract": "workbench.runtime_evidence_audit.v0.9",
+  "purpose": "Audit runtime artifacts produced by controlled test execution without committing runtime_outputs.",
+  "required_runtime_groups": [
+    "controlled_diagnostics",
+    "human_review",
+    "controlled_test_reports",
+    "controlled_test_runs"
+  ],
+  "rule": "Runtime artifacts stay ignored. Commit only audit report/result."
+}
