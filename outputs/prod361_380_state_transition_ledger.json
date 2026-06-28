@@ -1,0 +1,233 @@
+{
+  "status": "PASS",
+  "ledger": "casulo.issue_traceability_ledger.v0.1",
+  "state_transitions": [
+    {
+      "issue_id": "REAL-GRAPH-001-ONBOARDING-ISSUE-CANDIDATE-002",
+      "from_state": "REVIEW_SELECTED",
+      "to_state": "REVIEW_SELECTED",
+      "allowed": true,
+      "reason": "no_state_change",
+      "approval_complete": false,
+      "manual_issue_url_present": false,
+      "auto_execution_allowed": false,
+      "blocked_actions": [
+        "client_facing_claim",
+        "automatic_nomination",
+        "implementation_execution",
+        "production_activation",
+        "automatic_merge",
+        "credential_handling"
+      ]
+    },
+    {
+      "issue_id": "REAL-GRAPH-002-DOCUMENT-AUDIT-ISSUE-CANDIDATE-002",
+      "from_state": "REVIEW_SELECTED",
+      "to_state": "REVIEW_SELECTED",
+      "allowed": true,
+      "reason": "no_state_change",
+      "approval_complete": false,
+      "manual_issue_url_present": false,
+      "auto_execution_allowed": false,
+      "blocked_actions": [
+        "client_facing_claim",
+        "automatic_nomination",
+        "implementation_execution",
+        "production_activation",
+        "automatic_merge",
+        "credential_handling"
+      ]
+    },
+    {
+      "issue_id": "REAL-GRAPH-003-SOFTWARE-REVIEW-ISSUE-CANDIDATE-001",
+      "from_state": "REVIEW_SELECTED",
+      "to_state": "REVIEW_SELECTED",
+      "allowed": true,
+      "reason": "no_state_change",
+      "approval_complete": false,
+      "manual_issue_url_present": false,
+      "auto_execution_allowed": false,
+      "blocked_actions": [
+        "client_facing_claim",
+        "automatic_nomination",
+        "implementation_execution",
+        "production_activation",
+        "automatic_merge",
+        "credential_handling"
+      ]
+    },
+    {
+      "issue_id": "REAL-GRAPH-004-RULE-POLICY-ISSUE-CANDIDATE-003",
+      "from_state": "REVIEW_SELECTED",
+      "to_state": "REVIEW_SELECTED",
+      "allowed": true,
+      "reason": "no_state_change",
+      "approval_complete": false,
+      "manual_issue_url_present": false,
+      "auto_execution_allowed": false,
+      "blocked_actions": [
+        "client_facing_claim",
+        "automatic_nomination",
+        "implementation_execution",
+        "production_activation",
+        "automatic_merge",
+        "credential_handling"
+      ]
+    },
+    {
+      "issue_id": "REAL-GRAPH-001-ONBOARDING-ISSUE-CANDIDATE-001",
+      "from_state": "REVIEW_SELECTED",
+      "to_state": "REVIEW_SELECTED",
+      "allowed": true,
+      "reason": "no_state_change",
+      "approval_complete": false,
+      "manual_issue_url_present": false,
+      "auto_execution_allowed": false,
+      "blocked_actions": [
+        "client_facing_claim",
+        "automatic_nomination",
+        "implementation_execution",
+        "production_activation",
+        "automatic_merge",
+        "credential_handling"
+      ]
+    },
+    {
+      "issue_id": "REAL-GRAPH-002-DOCUMENT-AUDIT-ISSUE-CANDIDATE-001",
+      "from_state": "REVIEW_SELECTED",
+      "to_state": "REVIEW_SELECTED",
+      "allowed": true,
+      "reason": "no_state_change",
+      "approval_complete": false,
+      "manual_issue_url_present": false,
+      "auto_execution_allowed": false,
+      "blocked_actions": [
+        "client_facing_claim",
+        "automatic_nomination",
+        "implementation_execution",
+        "production_activation",
+        "automatic_merge",
+        "credential_handling"
+      ]
+    },
+    {
+      "issue_id": "REAL-GRAPH-004-RULE-POLICY-ISSUE-CANDIDATE-001",
+      "from_state": "REVIEW_SELECTED",
+      "to_state": "REVIEW_SELECTED",
+      "allowed": true,
+      "reason": "no_state_change",
+      "approval_complete": false,
+      "manual_issue_url_present": false,
+      "auto_execution_allowed": false,
+      "blocked_actions": [
+        "client_facing_claim",
+        "automatic_nomination",
+        "implementation_execution",
+        "production_activation",
+        "automatic_merge",
+        "credential_handling"
+      ]
+    },
+    {
+      "issue_id": "REAL-GRAPH-004-RULE-POLICY-ISSUE-CANDIDATE-002",
+      "from_state": "REVIEW_SELECTED",
+      "to_state": "REVIEW_SELECTED",
+      "allowed": true,
+      "reason": "no_state_change",
+      "approval_complete": false,
+      "manual_issue_url_present": false,
+      "auto_execution_allowed": false,
+      "blocked_actions": [
+        "client_facing_claim",
+        "automatic_nomination",
+        "implementation_execution",
+        "production_activation",
+        "automatic_merge",
+        "credential_handling"
+      ]
+    },
+    {
+      "issue_id": "REAL-GRAPH-003-SOFTWARE-REVIEW-ISSUE-CANDIDATE-002",
+      "from_state": "REVIEW_SELECTED",
+      "to_state": "REVIEW_SELECTED",
+      "allowed": true,
+      "reason": "no_state_change",
+      "approval_complete": false,
+      "manual_issue_url_present": false,
+      "auto_execution_allowed": false,
+      "blocked_actions": [
+        "client_facing_claim",
+        "automatic_nomination",
+        "implementation_execution",
+        "production_activation",
+        "automatic_merge",
+        "credential_handling"
+      ]
+    },
+    {
+      "issue_id": "REAL-GRAPH-002-DOCUMENT-AUDIT-ISSUE-CANDIDATE-003",
+      "from_state": "REVIEW_SELECTED",
+      "to_state": "REVIEW_SELECTED",
+      "allowed": true,
+      "reason": "no_state_change",
+      "approval_complete": false,
+      "manual_issue_url_present": false,
+      "auto_execution_allowed": false,
+      "blocked_actions": [
+        "client_facing_claim",
+        "automatic_nomination",
+        "implementation_execution",
+        "production_activation",
+        "automatic_merge",
+        "credential_handling"
+      ]
+    },
+    {
+      "issue_id": "REAL-GRAPH-003-SOFTWARE-REVIEW-ISSUE-CANDIDATE-003",
+      "from_state": "REVIEW_SELECTED",
+      "to_state": "REVIEW_SELECTED",
+      "allowed": true,
+      "reason": "no_state_change",
+      "approval_complete": false,
+      "manual_issue_url_present": false,
+      "auto_execution_allowed": false,
+      "blocked_actions": [
+        "client_facing_claim",
+        "automatic_nomination",
+        "implementation_execution",
+        "production_activation",
+        "automatic_merge",
+        "credential_handling"
+      ]
+    },
+    {
+      "issue_id": "REAL-GRAPH-003-SOFTWARE-REVIEW-ISSUE-CANDIDATE-004",
+      "from_state": "REVIEW_SELECTED",
+      "to_state": "REVIEW_SELECTED",
+      "allowed": true,
+      "reason": "no_state_change",
+      "approval_complete": false,
+      "manual_issue_url_present": false,
+      "auto_execution_allowed": false,
+      "blocked_actions": [
+        "client_facing_claim",
+        "automatic_nomination",
+        "implementation_execution",
+        "production_activation",
+        "automatic_merge",
+        "credential_handling"
+      ]
+    }
+  ],
+  "approved_queue": [],
+  "blocked_queue": [],
+  "created_manual": [],
+  "blocked_actions": [
+    "client_facing_claim",
+    "automatic_nomination",
+    "implementation_execution",
+    "production_activation",
+    "automatic_merge",
+    "credential_handling"
+  ]
+}

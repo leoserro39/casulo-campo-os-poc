@@ -1,0 +1,27 @@
+{
+  "contract_version": "casulo.formal_approval_workflow_readiness.v0.1",
+  "status": "PASS",
+  "decision": "READY_FOR_FORMAL_APPROVAL_REVIEW_NO_AUTO_EXECUTION",
+  "approved_count": 0,
+  "auto_execution_allowed": false,
+  "ready_for": [
+    "approval manifest editing",
+    "guarded manual command review",
+    "manual issue creation after approval"
+  ],
+  "not_ready_for": [
+    "automatic issue creation",
+    "production activation",
+    "automatic merge",
+    "external client claims"
+  ],
+  "next": "Edit the formal approval manifest for a small approved subset, then re-run the guard.",
+  "blocked_actions": [
+    "client_facing_claim",
+    "automatic_nomination",
+    "implementation_execution",
+    "production_activation",
+    "automatic_merge",
+    "credential_handling"
+  ]
+}

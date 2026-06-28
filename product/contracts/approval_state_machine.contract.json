@@ -1,0 +1,14 @@
+{
+  "contract": "casulo.approval_state_machine.v0.1",
+  "states": [
+    "CANDIDATE",
+    "REVIEW_SELECTED",
+    "APPROVED_FOR_MANUAL_CREATE",
+    "REJECTED",
+    "DEFERRED",
+    "CREATED_MANUALLY",
+    "LINKED_TO_TASK",
+    "BLOCKED",
+    "CLOSED"
+  ]
+}

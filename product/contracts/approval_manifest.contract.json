@@ -1,0 +1,5 @@
+{
+  "contract": "casulo.formal_approval_manifest.v0.1",
+  "purpose": "Human-editable manifest for approvals and state transitions.",
+  "default_policy": "all_candidates_review_selected_but_not_approved"
+}

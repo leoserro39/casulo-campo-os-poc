@@ -1,0 +1,12 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "CASULO Issue Execution Guard",
+  "type": "object",
+  "required": [
+    "status",
+    "manual_only",
+    "auto_execution_allowed",
+    "approved_count",
+    "blocked_actions"
+  ]
+}

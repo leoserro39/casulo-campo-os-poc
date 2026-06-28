@@ -1,0 +1,40 @@
+{
+  "status": "PASS",
+  "phase": "Formal Approval Workflow and Issue Execution Guard",
+  "decision": "READY_FOR_FORMAL_APPROVAL_REVIEW_NO_AUTO_EXECUTION",
+  "execution_guard": {
+    "status": "PASS",
+    "manual_only": true,
+    "auto_execution_allowed": false,
+    "selected_count": 12,
+    "approved_count": 0,
+    "created_manually_count": 0,
+    "blocked_count": 0,
+    "invalid_transition_count": 0,
+    "approved_commands_available": 0,
+    "guardrails": [
+      "No command is executed by the workflow.",
+      "Approved state requires approver and approval note.",
+      "Created manually state requires manual issue URL.",
+      "Production activation remains blocked.",
+      "Automatic merge remains blocked."
+    ],
+    "blocked_actions": [
+      "client_facing_claim",
+      "automatic_nomination",
+      "implementation_execution",
+      "production_activation",
+      "automatic_merge",
+      "credential_handling"
+    ]
+  },
+  "next_recommended_step": "Approve a minimal subset in the manifest, re-run guard, then manually create only approved issues.",
+  "blocked_actions": [
+    "client_facing_claim",
+    "automatic_nomination",
+    "implementation_execution",
+    "production_activation",
+    "automatic_merge",
+    "credential_handling"
+  ]
+}

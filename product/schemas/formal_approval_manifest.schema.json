@@ -1,0 +1,10 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "CASULO Formal Approval Manifest",
+  "type": "object",
+  "required": [
+    "status",
+    "approval_policy",
+    "candidate_decisions"
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "contract": "casulo.issue_execution_guard.v0.1",
+  "purpose": "Prevent automatic issue creation and require approval manifest before manual command execution.",
+  "guardrails": [
+    "manual_only",
+    "approved_manifest_required",
+    "no_auto_execution",
+    "audit_required"
+  ]
+}

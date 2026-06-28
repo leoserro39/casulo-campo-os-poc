@@ -1,0 +1,15 @@
+{
+  "task": "PROD-361..380",
+  "status": "PASS",
+  "phase": "Formal Approval Workflow and Issue Execution Guard",
+  "endpoints": [
+    "/api/casulo/formal-approval/report",
+    "/api/casulo/formal-approval/manifest",
+    "/api/casulo/formal-approval/ledger",
+    "/api/casulo/formal-approval/execution-guard",
+    "/api/casulo/formal-approval/runbook",
+    "/api/casulo/formal-approval/readiness",
+    "/api/casulo/formal-approval/audit"
+  ],
+  "next_recommended_bundle": "PROD-381..400 Minimal Approved Issue Dry Run"
+}

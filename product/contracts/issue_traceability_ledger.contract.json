@@ -1,0 +1,4 @@
+{
+  "contract": "casulo.issue_traceability_ledger.v0.1",
+  "purpose": "Trace issue candidates from graph case, delta, review route and command template to manual execution state."
+}

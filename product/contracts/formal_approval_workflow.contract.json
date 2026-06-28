@@ -1,0 +1,16 @@
+{
+  "contract": "casulo.formal_approval_workflow.v0.1",
+  "purpose": "Add a formal approval state machine between review-selected candidates and manual issue execution.",
+  "input": [
+    "outputs/prod341_360_manual_issue_promotion.json",
+    "outputs/prod341_360_gh_issue_command_templates.md"
+  ],
+  "blocked_actions": [
+    "client_facing_claim",
+    "automatic_nomination",
+    "implementation_execution",
+    "production_activation",
+    "automatic_merge",
+    "credential_handling"
+  ]
+}
