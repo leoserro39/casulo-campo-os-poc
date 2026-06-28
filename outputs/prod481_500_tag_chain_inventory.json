@@ -1,11 +1,12 @@
 {
   "status": "PASS",
-  "head": "4583ff9",
+  "head": "3639654",
   "branch": "main",
   "tags_at_head": [
-    "product-real-manual-evidence-handoff-pack-v0.1"
+    "product-milestone-snapshot-operational-readiness-v0.1"
   ],
   "recent_commits": [
+    "3639654 Add milestone snapshot operational readiness",
     "4583ff9 Add real manual evidence handoff pack",
     "95af9ca Add closure replay synthetic manual url",
     "d68aaf8 Add issue to state linkage closure ledger",
@@ -24,10 +25,9 @@
     "e2d8a95 Add state evidence graph store baseline",
     "9ff6c42 Add public HTTPS runtime FastAPI adapter",
     "02fa1f4 Add Custom GPT Actions agent connector prototype",
-    "df31ef0 Add technical readiness incubator pack",
-    "6f40a0f Add real anonymous POC calibration runner"
+    "df31ef0 Add technical readiness incubator pack"
   ],
-  "status_short": "M product/api/product_runtime_api.py\n M product/api/services/product_runtime_service.py\n?? docs/product/321_MILESTONE_SNAPSHOT_OPERATIONAL_READINESS.md\n?? docs/product/322_TAG_CHAIN_INVENTORY.md\n?? docs/product/323_OPERATIONAL_READINESS_DOSSIER.md\n?? docs/product/324_PENDING_EVIDENCE_REGISTER.md\n?? docs/product/325_NO_AUTO_EXECUTION_MILESTONE.md\n?? docs/product/326_MILESTONE_REVIEW_POLICY.md\n?? docs/product/327_NEXT_CYCLE_OPTIONS.md\n?? docs/product/328_MILESTONE_ENDPOINTS.md\n?? docs/product/329_MILESTONE_AUDIT.md\n?? docs/product/330_SNAPSHOT_OVERVIEW.md\n?? outputs/prod481_500_milestone_snapshot_backups/\n?? product/contracts/milestone_snapshot_operational_readiness.contract.json\n?? product/contracts/milestone_snapshot_readiness.contract.json\n?? product/contracts/operational_readiness_dossier.contract.json\n?? product/contracts/pending_evidence_register.contract.json\n?? product/contracts/tag_chain_inventory.contract.json\n?? product/schemas/milestone_snapshot.schema.json\n?? product/schemas/operational_readiness_dossier.schema.json\n?? product/schemas/tag_chain_inventory.schema.json\n?? product/scripts/audit_milestone_snapshot_operational_readiness.py\n?? product/scripts/build_milestone_snapshot_operational_readiness.py\n?? product/scripts/run_milestone_snapshot_operational_readiness.py\n?? product/scripts/validate_milestone_snapshot_operational_readiness.py",
+  "status_short": "M outputs/prod481_500_audit_report.json\n M outputs/prod481_500_audit_report.md\n M outputs/prod481_500_milestone_snapshot.json\n M outputs/prod481_500_operational_readiness_dossier.md\n M outputs/prod481_500_tag_chain_inventory.json\n M product/scripts/validate_milestone_snapshot_operational_readiness.py",
   "phase_tags": [
     {
       "phase_id": "PROD-181..200",

@@ -40,7 +40,10 @@ def main():
         if not (repo/rel).exists(): errors.append(f"missing output {rel}")
     if not errors:
         snap=json.loads((repo/"outputs/prod481_500_milestone_snapshot.json").read_text(encoding="utf-8"))
-        if "automatic_issue_creation" not in "".join(json.loads((repo/"outputs/prod481_500_operational_readiness_dossier.json").read_text(encoding="utf-8")).get("not_ready_for", [])):
+        not_ready_for_text = " ".join(
+            json.loads((repo/"outputs/prod481_500_operational_readiness_dossier.json").read_text(encoding="utf-8")).get("not_ready_for", [])
+        ).replace("_", " ")
+        if "automatic issue creation" not in not_ready_for_text:
             errors.append("dossier must keep automatic issue creation blocked")
     print(json.dumps({"status":"FAIL" if errors else "PASS","checks":len(REQUIRED)+len(outputs)+1,"errors":errors,"warnings":[]},indent=2,ensure_ascii=False))
     return 1 if errors else 0

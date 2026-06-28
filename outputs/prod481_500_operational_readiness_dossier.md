@@ -3,8 +3,8 @@
 - Status: `PASS`
 - Decision: `MILESTONE_SNAPSHOT_GENERATED_REQUIRES_COMMIT`
 - Milestone: `PROD-181..480 Operational Cube Evidence-Gated Issue Workflow`
-- Generated at: `2026-06-28T23:31:39+00:00`
-- Latest commit: `4583ff9`
+- Generated at: `2026-06-28T23:35:01+00:00`
+- Latest commit: `3639654`
 - Branch: `main`
 - Phase count: `15`
 - Phase tags found: `15`

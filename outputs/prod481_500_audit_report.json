@@ -1,9 +1,9 @@
 {
   "status": "PASS",
   "audit": "Milestone Snapshot Operational Readiness audit",
-  "head": "4583ff9",
+  "head": "3639654",
   "tags_at_head": [
-    "product-real-manual-evidence-handoff-pack-v0.1"
+    "product-milestone-snapshot-operational-readiness-v0.1"
   ],
   "phase_count": 15,
   "phase_tags_found": 15,
