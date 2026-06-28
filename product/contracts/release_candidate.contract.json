@@ -1,0 +1,23 @@
+{
+  "contract": "operational_cube.release_candidate.v1.2",
+  "release_candidate": "Cubo Operacional Internal RC v1.2",
+  "scope": [
+    "product foundation",
+    "vertical case pack",
+    "runtime API",
+    "UI shell",
+    "VesselFlow controlled state definition",
+    "state report export",
+    "real/anonymized data intake preview",
+    "before/after delta review",
+    "data-backed rerun comparator",
+    "human review decision gate"
+  ],
+  "decision": "INTERNAL_RELEASE_CANDIDATE_ONLY",
+  "not_authorized_for": [
+    "external client claim",
+    "production activation",
+    "automatic nomination",
+    "implementation execution"
+  ]
+}

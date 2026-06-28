@@ -1,0 +1,18 @@
+{
+  "contract": "operational_cube.internal_review_freeze.v1.2",
+  "purpose": "Freeze the current controlled internal product state after VesselFlow human review gate.",
+  "mode": "internal_release_candidate",
+  "primary_script": "product/scripts/build_internal_review_freeze_rc.py",
+  "outputs": [
+    "outputs/prod046_050_internal_review_freeze.json",
+    "outputs/prod046_050_internal_review_freeze.md",
+    "outputs/prod046_050_release_candidate.json",
+    "outputs/prod046_050_release_candidate.md"
+  ],
+  "blocked_actions": [
+    "automatic_nomination",
+    "client_facing_claim",
+    "implementation_execution",
+    "production_activation"
+  ]
+}

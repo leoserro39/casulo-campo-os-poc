@@ -69,6 +69,7 @@ class ProductRuntimeHandler(BaseHTTPRequestHandler):
             if clean == "api/verticals": return self.send_json(self.service.verticals())
             if len(parts) == 3 and parts[0] == "api" and parts[1] == "verticals": return self.send_json(self.service.vertical(parts[2]))
             if len(parts) == 4 and parts[0] == "api" and parts[1] == "verticals" and parts[3] == "state-request": return self.send_json(self.service.state_request(parts[2]))
+
             if clean == "api/vesselflow/import-manifest": return self.send_json(self.service.vesselflow_import_manifest())
             if clean == "api/vesselflow/state-definition": return self.send_json(self.service.vesselflow_state_definition())
             if clean == "api/vesselflow/state-definition/report": return self.send_json(self.service.vesselflow_state_report_export())
@@ -78,6 +79,8 @@ class ProductRuntimeHandler(BaseHTTPRequestHandler):
             if clean == "api/vesselflow/evidence-comparator": return self.send_json(self.service.vesselflow_evidence_comparator())
             if clean == "api/vesselflow/human-review-package": return self.send_json(self.service.vesselflow_human_review_package())
             if clean == "api/vesselflow/decision-gate": return self.send_json(self.service.vesselflow_decision_gate())
+            if clean == "api/product/internal-review-freeze": return self.send_json(self.service.internal_review_freeze())
+            if clean == "api/product/release-candidate": return self.send_json(self.service.release_candidate())
             if clean == "api/reports": return self.send_json(self.service.reports())
 
             return self.send_json({"status": "NOT_FOUND", "path": path}, status=404)
@@ -94,7 +97,7 @@ def main() -> int:
     server = HTTPServer((args.host, args.port), ProductRuntimeHandler)
     print(f"Operational Cube product runtime API/UI running at http://{args.host}:{args.port}")
     print("Open: /ui")
-    print("Try: /api/health, /api/vesselflow/decision-gate")
+    print("Try: /api/health, /api/product/release-candidate")
     try:
         server.serve_forever()
     except KeyboardInterrupt:

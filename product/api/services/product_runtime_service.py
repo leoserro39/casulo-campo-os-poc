@@ -2,7 +2,7 @@ from __future__ import annotations
 
 import json
 from pathlib import Path
-from typing import Dict, List
+from typing import Dict
 
 
 PRODUCT_DIRECTION = "Cubo Operacional / Operational Cube"
@@ -56,6 +56,8 @@ class ProductRuntimeService:
             "vesselflow_evidence_comparator": exists(self.outputs_root / "prod036_040_vesselflow_evidence_comparator.json"),
             "vesselflow_human_review_package": exists(self.outputs_root / "prod041_045_vesselflow_human_review_package.json"),
             "vesselflow_decision_gate": exists(self.outputs_root / "prod041_045_vesselflow_decision_gate.json"),
+            "internal_review_freeze": exists(self.outputs_root / "prod046_050_internal_review_freeze.json"),
+            "release_candidate": exists(self.outputs_root / "prod046_050_release_candidate.json"),
         }
         return {
             "status": "PASS" if all(checks.values()) else "INCOMPLETE",
@@ -63,7 +65,7 @@ class ProductRuntimeService:
             "runtime_mode": RUNTIME_MODE,
             "checks": checks,
             "blocked_actions": BLOCKED_ACTIONS,
-            "next_recommended_step": "Review decision gate and only proceed after reviewed real/anonymized data is available.",
+            "next_recommended_step": "Build Product Positioning and Development Layer, including TIC/SI mesh and software review gates.",
         }
 
     def verticals(self) -> Dict:
@@ -126,6 +128,12 @@ class ProductRuntimeService:
     def vesselflow_decision_gate(self) -> Dict:
         return payload(self.outputs_root / "prod041_045_vesselflow_decision_gate.json", "decision_gate")
 
+    def internal_review_freeze(self) -> Dict:
+        return payload(self.outputs_root / "prod046_050_internal_review_freeze.json", "internal_review_freeze")
+
+    def release_candidate(self) -> Dict:
+        return payload(self.outputs_root / "prod046_050_release_candidate.json", "release_candidate")
+
     def reports(self) -> Dict:
         patterns = [
             "prod001_005_product_foundation_report.md",
@@ -141,6 +149,8 @@ class ProductRuntimeService:
             "prod036_040_vesselflow_evidence_comparator.md",
             "prod041_045_vesselflow_human_review_package.md",
             "prod041_045_vesselflow_decision_gate.md",
+            "prod046_050_internal_review_freeze.md",
+            "prod046_050_release_candidate.md",
             "wb020_poc_completion_report.md",
         ]
         reports = []

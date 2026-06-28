@@ -1,0 +1,135 @@
+{
+  "contract_version": "operational_cube.internal_review_freeze.v1.2",
+  "status": "PASS",
+  "product_direction": "Cubo Operacional / Operational Cube",
+  "release_candidate": "Cubo Operacional Internal RC v1.2",
+  "freeze_scope": "controlled_internal_review",
+  "frozen_verticals": [
+    "vesselflow"
+  ],
+  "frozen_capabilities": [
+    "state definition",
+    "evidence manifest",
+    "gate matrix",
+    "state report export",
+    "real/anonymized intake preview",
+    "before/after delta review",
+    "data-backed rerun check-only",
+    "evidence comparator",
+    "human review package",
+    "decision gate"
+  ],
+  "milestones": [
+    {
+      "name": "Product foundation",
+      "path": "outputs/prod001_005_product_foundation_report.md",
+      "exists": true,
+      "kind": "markdown"
+    },
+    {
+      "name": "Vertical case pack",
+      "path": "outputs/prod_vert001_003_vertical_case_pack_report.md",
+      "exists": true,
+      "kind": "markdown"
+    },
+    {
+      "name": "Vertical runtime adapter",
+      "path": "outputs/prod_vert004_006_vertical_runtime_adapter_report.md",
+      "exists": true,
+      "kind": "markdown"
+    },
+    {
+      "name": "Product runtime API",
+      "path": "outputs/prod006_010_product_runtime_api_report.md",
+      "exists": true,
+      "kind": "markdown"
+    },
+    {
+      "name": "Product UI shell",
+      "path": "outputs/prod011_015_product_ui_shell_report.md",
+      "exists": true,
+      "kind": "markdown"
+    },
+    {
+      "name": "VesselFlow state definition",
+      "path": "outputs/prod016_020_vesselflow_state_definition.json",
+      "exists": true,
+      "kind": "json"
+    },
+    {
+      "name": "VesselFlow state report export",
+      "path": "outputs/prod021_025_vesselflow_state_report_export.json",
+      "exists": true,
+      "kind": "json"
+    },
+    {
+      "name": "VesselFlow real data intake preview",
+      "path": "outputs/prod026_030_vesselflow_real_data_intake_preview.json",
+      "exists": true,
+      "kind": "json"
+    },
+    {
+      "name": "VesselFlow real data delta review",
+      "path": "outputs/prod031_035_vesselflow_real_data_delta_review.json",
+      "exists": true,
+      "kind": "json"
+    },
+    {
+      "name": "VesselFlow data-backed rerun",
+      "path": "outputs/prod036_040_vesselflow_data_backed_rerun.json",
+      "exists": true,
+      "kind": "json"
+    },
+    {
+      "name": "VesselFlow evidence comparator",
+      "path": "outputs/prod036_040_vesselflow_evidence_comparator.json",
+      "exists": true,
+      "kind": "json"
+    },
+    {
+      "name": "VesselFlow human review package",
+      "path": "outputs/prod041_045_vesselflow_human_review_package.json",
+      "exists": true,
+      "kind": "json"
+    },
+    {
+      "name": "VesselFlow decision gate",
+      "path": "outputs/prod041_045_vesselflow_decision_gate.json",
+      "exists": true,
+      "kind": "json"
+    }
+  ],
+  "missing_milestones": [],
+  "current_decision": "BLOCKED_WAITING_FOR_REAL_OR_ANONYMIZED_DATA",
+  "current_decision_reason": "Real/anonymized evidence is not yet ready for write/rerun.",
+  "state_summary": {
+    "data_mode": "sample_placeholder",
+    "state_decision": "WAITING_FOR_REAL_DATA_OR_HUMAN_REVIEW",
+    "risk_level": "HIGH"
+  },
+  "evidence_status_counts": {
+    "SAMPLE_PLACEHOLDER": 1,
+    "AVAILABLE": 3,
+    "NOT_PROVIDED": 6
+  },
+  "gate_status_counts": {
+    "BLOCKED_SAMPLE_DATA": 6,
+    "REQUIRED": 1
+  },
+  "rerun": {
+    "mode": "check_only",
+    "ready_for_write_rerun": false,
+    "warnings": [
+      "Current intake is not ready for data-backed write/rerun. This is expected while dataset reference remains placeholder.",
+      "No intake JSON was supplied. Running in check-only comparator mode."
+    ],
+    "errors": []
+  },
+  "blocked_actions": [
+    "automatic_nomination",
+    "client_facing_claim",
+    "implementation_execution",
+    "production_activation"
+  ],
+  "internal_use_only": true
+}

@@ -1,0 +1,28 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Cubo Operacional Internal Release Candidate",
+  "type": "object",
+  "required": [
+    "status",
+    "release_candidate",
+    "decision",
+    "blocked_actions"
+  ],
+  "properties": {
+    "status": {
+      "type": "string"
+    },
+    "release_candidate": {
+      "type": "string"
+    },
+    "decision": {
+      "type": "string"
+    },
+    "blocked_actions": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  }
+}
