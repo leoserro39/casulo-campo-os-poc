@@ -1,0 +1,27 @@
+{
+  "contract": "operational_cube.product_ui_shell.v0.5",
+  "purpose": "Provide the first local navigable UI shell for the Operational Cube product.",
+  "screens": [
+    "Home",
+    "Verticals",
+    "VesselFlow Workspace",
+    "State Request",
+    "Import Manifest",
+    "Reports"
+  ],
+  "api_dependencies": [
+    "/api/health",
+    "/api/product/status",
+    "/api/verticals",
+    "/api/verticals/vesselflow/state-request",
+    "/api/vesselflow/import-manifest",
+    "/api/reports"
+  ],
+  "safety": [
+    "No client-facing claim",
+    "No automatic nomination",
+    "No implementation execution",
+    "No production activation"
+  ],
+  "mode": "local_demo"
+}

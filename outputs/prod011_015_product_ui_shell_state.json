@@ -1,0 +1,19 @@
+{
+  "status": "PASS",
+  "active_vertical": "vesselflow",
+  "screens": [
+    "home",
+    "verticals",
+    "vesselflow",
+    "state",
+    "manifest",
+    "reports"
+  ],
+  "blocked_actions": [
+    "client_facing_claim",
+    "automatic_nomination",
+    "implementation_execution",
+    "production_activation"
+  ],
+  "next_recommended_bundle": "PROD-016..020 VesselFlow Data Import and State Definition Runner"
+}

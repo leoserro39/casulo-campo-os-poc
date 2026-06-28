@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Cubo Operacional — Product UI Shell</title>
+  <link rel="stylesheet" href="/ui/styles.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div>
+      <p class="eyebrow">Cubo Operacional</p>
+      <h1>Product UI Shell</h1>
+      <p class="subtitle">Estado operacional, verticais, gates e workspace VesselFlow.</p>
+    </div>
+    <div class="status-pill" id="runtimeStatus">Carregando...</div>
+  </header>
+
+  <main class="layout">
+    <aside class="sidebar">
+      <button class="nav active" data-screen="home">Home</button>
+      <button class="nav" data-screen="verticals">Verticais</button>
+      <button class="nav" data-screen="vesselflow">VesselFlow</button>
+      <button class="nav" data-screen="state">State Request</button>
+      <button class="nav" data-screen="manifest">Import Manifest</button>
+      <button class="nav" data-screen="reports">Reports</button>
+    </aside>
+
+    <section class="content">
+      <section class="screen active" id="screen-home">
+        <div class="hero">
+          <p class="eyebrow">Local demo</p>
+          <h2>Primeira superfície navegável do produto</h2>
+          <p>
+            A UI consome a API local e apresenta o Cubo Operacional em cards:
+            objetivo, evidências, risco, tarefas, deltas e gates.
+          </p>
+        </div>
+        <div class="grid three">
+          <article class="card">
+            <h3>Status do Produto</h3>
+            <pre id="productStatus">Carregando...</pre>
+          </article>
+          <article class="card">
+            <h3>Ações bloqueadas</h3>
+            <ul id="blockedActions"></ul>
+          </article>
+          <article class="card">
+            <h3>Próximo passo</h3>
+            <p id="nextStep">Carregando...</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="screen" id="screen-verticals">
+        <h2>Verticais</h2>
+        <div id="verticalCards" class="grid three"></div>
+      </section>
+
+      <section class="screen" id="screen-vesselflow">
+        <h2>Workspace VesselFlow</h2>
+        <div class="grid two">
+          <article class="card">
+            <h3>Resumo</h3>
+            <pre id="vesselflowSummary">Carregando...</pre>
+          </article>
+          <article class="card">
+            <h3>Gates</h3>
+            <ul id="vesselflowGates"></ul>
+          </article>
+        </div>
+        <h3>Cubo Operacional</h3>
+        <div id="cubeFaces" class="cube-grid"></div>
+      </section>
+
+      <section class="screen" id="screen-state">
+        <h2>VesselFlow State Request</h2>
+        <pre id="stateRequest">Carregando...</pre>
+      </section>
+
+      <section class="screen" id="screen-manifest">
+        <h2>VesselFlow Import Manifest</h2>
+        <pre id="importManifest">Carregando...</pre>
+      </section>
+
+      <section class="screen" id="screen-reports">
+        <h2>Reports</h2>
+        <div id="reportCards" class="grid two"></div>
+      </section>
+    </section>
+  </main>
+
+  <footer>
+    <span>Modo: local demo</span>
+    <span>Sem claim externo, nomeação automática, implementação ou produção.</span>
+  </footer>
+
+  <script src="/ui/app.js"></script>
+</body>
+</html>

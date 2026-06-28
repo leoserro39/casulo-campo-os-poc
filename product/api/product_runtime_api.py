@@ -3,6 +3,7 @@ from __future__ import annotations
 
 import argparse
 import json
+import mimetypes
 import sys
 from http.server import BaseHTTPRequestHandler, HTTPServer
 from pathlib import Path
@@ -11,43 +12,64 @@ from urllib.parse import urlparse
 THIS_FILE = Path(__file__).resolve()
 PRODUCT_ROOT = THIS_FILE.parents[1]
 REPO_ROOT = PRODUCT_ROOT.parent
+UI_ROOT = PRODUCT_ROOT / "ui"
 sys.path.insert(0, str(PRODUCT_ROOT))
 
 from api.services.product_runtime_service import ProductRuntimeService
 
 
-def json_bytes(data, status=200):
-    body = json.dumps(data, indent=2, ensure_ascii=False).encode("utf-8")
-    return status, body
+def json_bytes(data):
+    return json.dumps(data, indent=2, ensure_ascii=False).encode("utf-8")
 
 
 class ProductRuntimeHandler(BaseHTTPRequestHandler):
     service: ProductRuntimeService = ProductRuntimeService(REPO_ROOT)
 
     def send_json(self, data, status=200):
-        code, body = json_bytes(data, status=status)
-        self.send_response(code)
+        body = json_bytes(data)
+        self.send_response(status)
         self.send_header("Content-Type", "application/json; charset=utf-8")
+        self.send_header("Access-Control-Allow-Origin", "*")
+        self.send_header("Content-Length", str(len(body)))
+        self.end_headers()
+        self.wfile.write(body)
+
+    def send_static(self, path: Path):
+        if not path.exists() or not path.is_file():
+            return self.send_json({"status": "NOT_FOUND", "path": str(path)}, status=404)
+        body = path.read_bytes()
+        content_type = mimetypes.guess_type(str(path))[0] or "application/octet-stream"
+        self.send_response(200)
+        self.send_header("Content-Type", content_type + ("; charset=utf-8" if content_type.startswith("text/") or content_type == "application/javascript" else ""))
         self.send_header("Content-Length", str(len(body)))
         self.end_headers()
         self.wfile.write(body)
 
     def log_message(self, fmt, *args):
-        # Keep demo logs small.
         return
 
     def do_GET(self):
-        path = urlparse(self.path).path.strip("/")
-        parts = path.split("/") if path else []
+        path = urlparse(self.path).path
+        clean = path.strip("/")
+        parts = clean.split("/") if clean else []
 
         try:
-            if path == "api/health":
+            if path in ["/", "/ui", "/ui/"]:
+                return self.send_static(UI_ROOT / "index.html")
+
+            if clean.startswith("ui/"):
+                requested = (UI_ROOT / clean.replace("ui/", "", 1)).resolve()
+                if UI_ROOT.resolve() not in requested.parents and requested != UI_ROOT.resolve():
+                    return self.send_json({"status": "FORBIDDEN"}, status=403)
+                return self.send_static(requested)
+
+            if clean == "api/health":
                 return self.send_json(self.service.health())
 
-            if path == "api/product/status":
+            if clean == "api/product/status":
                 return self.send_json(self.service.product_status())
 
-            if path == "api/verticals":
+            if clean == "api/verticals":
                 return self.send_json(self.service.verticals())
 
             if len(parts) == 3 and parts[0] == "api" and parts[1] == "verticals":
@@ -56,16 +78,18 @@ class ProductRuntimeHandler(BaseHTTPRequestHandler):
             if len(parts) == 4 and parts[0] == "api" and parts[1] == "verticals" and parts[3] == "state-request":
                 return self.send_json(self.service.state_request(parts[2]))
 
-            if path == "api/vesselflow/import-manifest":
+            if clean == "api/vesselflow/import-manifest":
                 return self.send_json(self.service.vesselflow_import_manifest())
 
-            if path == "api/reports":
+            if clean == "api/reports":
                 return self.send_json(self.service.reports())
 
             return self.send_json({
                 "status": "NOT_FOUND",
-                "path": "/" + path,
+                "path": path,
                 "available_endpoints": [
+                    "/",
+                    "/ui",
                     "/api/health",
                     "/api/product/status",
                     "/api/verticals",
@@ -86,12 +110,13 @@ def main() -> int:
     args = parser.parse_args()
 
     server = HTTPServer((args.host, args.port), ProductRuntimeHandler)
-    print(f"Operational Cube product runtime API running at http://{args.host}:{args.port}")
+    print(f"Operational Cube product runtime API/UI running at http://{args.host}:{args.port}")
+    print("Open: /ui")
     print("Try: /api/health, /api/verticals, /api/vesselflow/import-manifest")
     try:
         server.serve_forever()
     except KeyboardInterrupt:
-        print("Stopping product runtime API.")
+        print("Stopping product runtime API/UI.")
     return 0
 
 

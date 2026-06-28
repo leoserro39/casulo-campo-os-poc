@@ -1,0 +1,13 @@
+{
+  "contract": "operational_cube.cube_workspace_ui.v0.5",
+  "purpose": "Render cube faces as operational state cards before any 3D visualization.",
+  "cube_faces": [
+    "objetivo",
+    "evidencias",
+    "risco",
+    "tarefas",
+    "deltas",
+    "gates"
+  ],
+  "principle": "Every visual cube move must map to evidence, gate, delta, or state change."
+}

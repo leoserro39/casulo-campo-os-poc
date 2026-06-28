@@ -1,0 +1,15 @@
+{
+  "task": "PROD-011..015",
+  "status": "PASS",
+  "phase": "Product UI Shell and Case Workspace",
+  "ui_path": "/ui",
+  "screens": [
+    "home",
+    "verticals",
+    "vesselflow",
+    "state",
+    "manifest",
+    "reports"
+  ],
+  "next_recommended_bundle": "PROD-016..020 VesselFlow Data Import and State Definition Runner"
+}
