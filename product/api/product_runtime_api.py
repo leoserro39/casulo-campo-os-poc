@@ -29,11 +29,12 @@ class ProductRuntimeHandler(BaseHTTPRequestHandler):
             routes={
                 "api/health":self.service.health,
                 "api/product/status":self.service.product_status,
-                "api/casulo/closure-replay/synthetic-url-manifest":self.service.synthetic_url_manifest,
-                "api/casulo/closure-replay/ledger":self.service.closure_replay_ledger,
-                "api/casulo/closure-replay/result":self.service.closure_replay_result,
-                "api/casulo/closure-replay/readiness":self.service.closure_replay_readiness,
-                "api/casulo/closure-replay/audit":self.service.closure_replay_audit,
+                "api/casulo/real-manual-evidence/manifest":self.service.real_evidence_manifest,
+                "api/casulo/real-manual-evidence/handoff":self.service.real_evidence_handoff,
+                "api/casulo/real-manual-evidence/validation":self.service.real_evidence_validation,
+                "api/casulo/real-manual-evidence/checklist":self.service.real_evidence_checklist,
+                "api/casulo/real-manual-evidence/readiness":self.service.real_evidence_readiness,
+                "api/casulo/real-manual-evidence/audit":self.service.real_evidence_audit,
                 "api/reports":self.service.reports,
             }
             if clean in routes: return self.send_json(routes[clean]())
@@ -46,7 +47,7 @@ def main():
     server=HTTPServer((args.host,args.port),ProductRuntimeHandler)
     print(f"Operational Cube product runtime API/UI running at http://{args.host}:{args.port}")
     print("Open: /ui")
-    print("Try: /api/health, /api/casulo/closure-replay/result")
+    print("Try: /api/health, /api/casulo/real-manual-evidence/handoff")
     try: server.serve_forever()
     except KeyboardInterrupt: print("Stopping product runtime API/UI.")
 if __name__=="__main__": main()

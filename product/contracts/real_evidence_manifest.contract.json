@@ -1,0 +1,5 @@
+{
+  "contract": "casulo.real_evidence_manifest.v0.1",
+  "purpose": "Human-editable manifest for real manual issue URLs, explicitly rejecting synthetic URLs as real evidence.",
+  "default_policy": "no_real_issue_url_by_default"
+}

@@ -1,0 +1,11 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "CASULO Real Manual Evidence Manifest",
+  "type": "object",
+  "required": [
+    "status",
+    "evidence_policy",
+    "real_manual_issue_evidence",
+    "blocked_actions"
+  ]
+}

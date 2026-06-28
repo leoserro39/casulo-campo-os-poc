@@ -1,0 +1,4 @@
+{
+  "contract": "casulo.real_manual_evidence_handoff_readiness.v0.1",
+  "purpose": "Assess whether the system is ready for human-provided real issue evidence capture."
+}

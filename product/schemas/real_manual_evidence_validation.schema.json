@@ -1,0 +1,12 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "CASULO Real Manual Evidence Validation",
+  "type": "object",
+  "required": [
+    "status",
+    "ready_for_real_capture",
+    "valid_real_evidence_count",
+    "synthetic_rejected_count",
+    "auto_execution_allowed"
+  ]
+}

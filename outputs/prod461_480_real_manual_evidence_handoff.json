@@ -1,0 +1,42 @@
+{
+  "status": "PASS",
+  "phase": "Real Manual Evidence Handoff Pack",
+  "ready_for_real_capture": true,
+  "candidate_count": 2,
+  "valid_real_evidence_count": 0,
+  "pending_real_manual_url_count": 2,
+  "incomplete_real_evidence_count": 0,
+  "synthetic_rejected_count": 0,
+  "auto_execution_allowed": false,
+  "network_validation_performed": false,
+  "real_evidence_claim_count": 0,
+  "synthetic_url_count_available": 1,
+  "validations": [
+    {
+      "issue_id": "REAL-GRAPH-001-ONBOARDING-ISSUE-CANDIDATE-002",
+      "status": "PENDING_REAL_MANUAL_URL",
+      "valid_real_evidence": false,
+      "reason": "no_real_manual_issue_url_yet",
+      "url_shape_valid": false,
+      "synthetic_rejected": false,
+      "auto_execution_allowed": false
+    },
+    {
+      "issue_id": "REAL-GRAPH-002-DOCUMENT-AUDIT-ISSUE-CANDIDATE-002",
+      "status": "PENDING_REAL_MANUAL_URL",
+      "valid_real_evidence": false,
+      "reason": "no_real_manual_issue_url_yet",
+      "url_shape_valid": false,
+      "synthetic_rejected": false,
+      "auto_execution_allowed": false
+    }
+  ],
+  "blocked_actions": [
+    "client_facing_claim",
+    "automatic_nomination",
+    "implementation_execution",
+    "production_activation",
+    "automatic_merge",
+    "credential_handling"
+  ]
+}

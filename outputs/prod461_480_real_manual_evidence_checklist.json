@@ -1,0 +1,20 @@
+{
+  "status": "PASS",
+  "checklist": [
+    "Confirm a human manually created the issue in GitHub.",
+    "Copy the real GitHub issue URL.",
+    "Paste it into product/poc/real_manual_evidence_handoff/real_manual_evidence_manifest.json.",
+    "Fill created_by, created_at and evidence_note.",
+    "Confirm synthetic is false.",
+    "Re-run product/scripts/run_real_manual_evidence_handoff.py --repo .",
+    "Proceed only if status becomes VALID_REAL_MANUAL_EVIDENCE_READY_TO_LINK for that issue."
+  ],
+  "blocked_actions": [
+    "client_facing_claim",
+    "automatic_nomination",
+    "implementation_execution",
+    "production_activation",
+    "automatic_merge",
+    "credential_handling"
+  ]
+}

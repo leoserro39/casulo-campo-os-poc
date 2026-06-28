@@ -1,0 +1,17 @@
+{
+  "contract": "casulo.real_manual_evidence_handoff.v0.1",
+  "purpose": "Prepare the handoff from synthetic replay to real human-provided issue URL evidence without creating or validating remote issues automatically.",
+  "input": [
+    "outputs/prod441_460_closure_replay_result.json",
+    "outputs/prod441_460_synthetic_manual_url_manifest.json",
+    "outputs/prod401_420_manual_issue_evidence_capture.json"
+  ],
+  "blocked_actions": [
+    "client_facing_claim",
+    "automatic_nomination",
+    "implementation_execution",
+    "production_activation",
+    "automatic_merge",
+    "credential_handling"
+  ]
+}

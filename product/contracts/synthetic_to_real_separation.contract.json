@@ -1,0 +1,4 @@
+{
+  "contract": "casulo.synthetic_to_real_separation.v0.1",
+  "purpose": "Guarantee synthetic replay artifacts are never promoted as real operational evidence."
+}
