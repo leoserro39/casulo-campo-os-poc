@@ -1,0 +1,17 @@
+{
+  "contract": "operational_cube.real_data_delta_review.v0.9",
+  "purpose": "Compare current VesselFlow controlled state with real/anonymized intake readiness and surface before/after delta in UI.",
+  "mode": "local_demo_internal_review",
+  "primary_script": "product/scripts/build_vesselflow_real_data_delta_review.py",
+  "endpoint": "/api/vesselflow/real-data-delta-review",
+  "outputs": [
+    "outputs/prod031_035_vesselflow_real_data_delta_review.json",
+    "outputs/prod031_035_vesselflow_real_data_delta_review.md"
+  ],
+  "blocked_actions": [
+    "automatic_nomination",
+    "client_facing_claim",
+    "implementation_execution",
+    "production_activation"
+  ]
+}

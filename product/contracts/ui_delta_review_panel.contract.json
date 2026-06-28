@@ -1,0 +1,13 @@
+{
+  "contract": "operational_cube.ui_delta_review_panel.v0.9",
+  "purpose": "Expose a UI panel for sample-placeholder vs data-intake delta review.",
+  "panels": [
+    "Real Data Intake Preview",
+    "Before/After Delta",
+    "Evidence Delta",
+    "Gate Delta",
+    "Risk Delta",
+    "Next Controlled Actions"
+  ],
+  "safety": "internal review only"
+}

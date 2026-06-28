@@ -1,0 +1,53 @@
+{
+  "contract_version": "operational_cube.real_data_delta_review.v0.9",
+  "status": "PASS",
+  "case_id": "vesselflow_demo_controlled_001",
+  "before": {
+    "case_id": "vesselflow_demo_controlled_001",
+    "data_mode": "sample_placeholder",
+    "decision": "WAITING_FOR_REAL_DATA_OR_HUMAN_REVIEW",
+    "risk_level": "HIGH",
+    "evidence": {
+      "available": 4,
+      "missing_or_not_provided": 6,
+      "placeholder": 1
+    },
+    "gates": {
+      "BLOCKED_SAMPLE_DATA": 6,
+      "REQUIRED": 1
+    }
+  },
+  "after_candidate": {
+    "case_id": "vesselflow_real_or_anonymized_intake_001",
+    "intake_status": "WAITING_FOR_USER_DATA",
+    "data_classification": "synthetic",
+    "validation_status": "PASS",
+    "warnings": [
+      "dataset_reference.path_or_reference still looks like a placeholder"
+    ],
+    "errors": [],
+    "dataset_status": "WAITING_FOR_USER_DATA",
+    "dataset_reference": "REPLACE_WITH_REAL_OR_ANONYMIZED_WORKBOOK_OR_DATASET"
+  },
+  "delta": {
+    "data_mode_change": "sample_placeholder -> WAITING_FOR_USER_DATA",
+    "risk_change_expected": "NO_REDUCTION_YET_WAITING_FOR_DATA",
+    "gate_change_expected": "NO_GATE_CHANGE_YET",
+    "evidence_change_expected": "DATASET_REFERENCE_NOT_READY",
+    "ready_for_write_rerun": false
+  },
+  "next_controlled_actions": [
+    "Fill a reviewed real/anonymized VesselFlow intake JSON.",
+    "Run prepare_vesselflow_real_data_intake.py --check.",
+    "If PASS and reviewed, run --write --rerun-state.",
+    "Regenerate report export.",
+    "Review gates before any external use."
+  ],
+  "blocked_actions": [
+    "automatic_nomination",
+    "client_facing_claim",
+    "implementation_execution",
+    "production_activation"
+  ],
+  "internal_use_only": true
+}

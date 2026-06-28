@@ -1,0 +1,36 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "VesselFlow Real Data Delta Review",
+  "type": "object",
+  "required": [
+    "status",
+    "case_id",
+    "before",
+    "after_candidate",
+    "delta",
+    "blocked_actions"
+  ],
+  "properties": {
+    "status": {
+      "type": "string"
+    },
+    "case_id": {
+      "type": "string"
+    },
+    "before": {
+      "type": "object"
+    },
+    "after_candidate": {
+      "type": "object"
+    },
+    "delta": {
+      "type": "object"
+    },
+    "blocked_actions": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  }
+}

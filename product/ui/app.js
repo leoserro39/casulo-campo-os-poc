@@ -6,6 +6,8 @@ const api = {
   vfManifest: "/api/vesselflow/import-manifest",
   vfStateDefinition: "/api/vesselflow/state-definition",
   vfReport: "/api/vesselflow/state-definition/report",
+  vfRealDataPreview: "/api/vesselflow/real-data-intake/preview",
+  vfDeltaReview: "/api/vesselflow/real-data-delta-review",
   reports: "/api/reports",
 };
 
@@ -83,17 +85,32 @@ function renderReports(data) {
   });
 }
 
-function ensureStateDefinitionPanel() {
+function ensureStatePanels() {
   const screen = document.getElementById("screen-state");
-  if (!screen || document.getElementById("stateDefinitionPanel")) return;
-  const panel = document.createElement("div");
-  panel.id = "stateDefinitionPanel";
-  panel.className = "grid two";
-  panel.innerHTML = `
-    <article class="card"><h3>Definição de Estado Controlada</h3><pre id="stateDefinition">Carregando...</pre></article>
-    <article class="card"><h3>Export do Relatório</h3><pre id="stateReportExport">Carregando...</pre></article>
-  `;
-  screen.appendChild(panel);
+  if (!screen) return;
+
+  if (!document.getElementById("stateDefinitionPanel")) {
+    const panel = document.createElement("div");
+    panel.id = "stateDefinitionPanel";
+    panel.className = "grid two";
+    panel.innerHTML = `
+      <article class="card"><h3>Definição de Estado Controlada</h3><pre id="stateDefinition">Carregando...</pre></article>
+      <article class="card"><h3>Export do Relatório</h3><pre id="stateReportExport">Carregando...</pre></article>
+    `;
+    screen.appendChild(panel);
+  }
+
+  if (!document.getElementById("realDataDeltaPanel")) {
+    const panel = document.createElement("div");
+    panel.id = "realDataDeltaPanel";
+    panel.className = "grid two";
+    panel.style.marginTop = "18px";
+    panel.innerHTML = `
+      <article class="card"><h3>Real Data Intake Preview</h3><pre id="realDataPreview">Carregando...</pre></article>
+      <article class="card"><h3>Before/After Delta Review</h3><pre id="deltaReview">Carregando...</pre></article>
+    `;
+    screen.appendChild(panel);
+  }
 }
 
 async function load() {
@@ -105,6 +122,8 @@ async function load() {
     state.vfManifest = await fetchJson(api.vfManifest);
     state.vfDefinition = await fetchJson(api.vfStateDefinition);
     state.vfReport = await fetchJson(api.vfReport);
+    state.vfRealDataPreview = await fetchJson(api.vfRealDataPreview);
+    state.vfDeltaReview = await fetchJson(api.vfDeltaReview);
     state.reports = await fetchJson(api.reports);
 
     setText("runtimeStatus", `API ${state.health.status}`);
@@ -122,9 +141,11 @@ async function load() {
     setText("stateRequest", pretty(state.vfState.state_request));
     setText("importManifest", pretty(state.vfManifest.manifest));
 
-    ensureStateDefinitionPanel();
+    ensureStatePanels();
     setText("stateDefinition", pretty(state.vfDefinition.state_definition));
     setText("stateReportExport", pretty(state.vfReport.report_export));
+    setText("realDataPreview", pretty(state.vfRealDataPreview.preview));
+    setText("deltaReview", pretty(state.vfDeltaReview.delta_review));
 
     renderReports(state.reports);
   } catch (err) {
