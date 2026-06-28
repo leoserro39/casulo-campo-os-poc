@@ -1,0 +1,53 @@
+{
+  "status": "PASS",
+  "family_behavior": [
+    {
+      "case_family": "audit_documental",
+      "count": 122,
+      "avg_direct_hallucination": 89.25,
+      "avg_casulo_hallucination": 28.89,
+      "avg_hallucination_reduction": 60.36,
+      "avg_residual_delta": 55.15,
+      "avg_delta_control": 85.72,
+      "std_casulo_hallucination": 6.62,
+      "std_delta_control": 2.59,
+      "avg_evidence_coverage": 43.93
+    },
+    {
+      "case_family": "parser_documental",
+      "count": 123,
+      "avg_direct_hallucination": 63.2,
+      "avg_casulo_hallucination": 19.58,
+      "avg_hallucination_reduction": 43.62,
+      "avg_residual_delta": 52.45,
+      "avg_delta_control": 86.14,
+      "std_casulo_hallucination": 4.66,
+      "std_delta_control": 2.73,
+      "avg_evidence_coverage": 46.66
+    },
+    {
+      "case_family": "rule_extraction",
+      "count": 130,
+      "avg_direct_hallucination": 92.69,
+      "avg_casulo_hallucination": 32.19,
+      "avg_hallucination_reduction": 60.5,
+      "avg_residual_delta": 54.25,
+      "avg_delta_control": 85.8,
+      "std_casulo_hallucination": 7.49,
+      "std_delta_control": 2.73,
+      "avg_evidence_coverage": 44.67
+    },
+    {
+      "case_family": "software_review",
+      "count": 125,
+      "avg_direct_hallucination": 90.66,
+      "avg_casulo_hallucination": 29.99,
+      "avg_hallucination_reduction": 60.66,
+      "avg_residual_delta": 51.89,
+      "avg_delta_control": 86.24,
+      "std_casulo_hallucination": 6.47,
+      "std_delta_control": 2.59,
+      "avg_evidence_coverage": 46.67
+    }
+  ]
+}

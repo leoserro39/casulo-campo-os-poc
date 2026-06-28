@@ -1,0 +1,13 @@
+{
+  "contract": "casulo.stochastic_calibration_lab.v0.1",
+  "purpose": "Generate randomized case batches and study hallucination fluctuation, ambiguity behavior, anomaly patterns and calibration drift.",
+  "phase": "synthetic_randomized_before_real_company_processes",
+  "blocked_actions": [
+    "client_facing_claim",
+    "automatic_nomination",
+    "implementation_execution",
+    "production_activation",
+    "automatic_merge",
+    "credential_handling"
+  ]
+}

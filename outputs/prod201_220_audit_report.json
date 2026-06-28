@@ -1,0 +1,11 @@
+{
+  "status": "PASS",
+  "audit": "Stochastic Calibration and Anomaly Lab audit",
+  "cases_count": 500,
+  "anomaly_count": 95,
+  "avg_hallucination_reduction": 56.35,
+  "std_casulo_hallucination": 8.02,
+  "avg_delta_control": 85.97,
+  "readiness": "READY_FOR_RANDOMIZED_BATCH_CALIBRATION_AND_ANOMALY_STUDY",
+  "finding": "PASS: stochastic lab can now study fluctuation/anomaly/ambiguity patterns across randomized synthetic cases."
+}

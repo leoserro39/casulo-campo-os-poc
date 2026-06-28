@@ -1,0 +1,30 @@
+# PROD-201..220 Stochastic Calibration and Anomaly Lab Report
+
+- task: `PROD-201..220`
+- status: `PASS`
+- phase: `Stochastic Calibration and Anomaly Lab`
+- decision: `READY_FOR_RANDOMIZED_BATCH_CALIBRATION_AND_ANOMALY_STUDY`
+
+## Outputs
+- `outputs/prod201_220_stochastic_study_plan.json`
+- `outputs/prod201_220_calibration_policy.json`
+- `outputs/prod201_220_stochastic_readiness.json`
+- `outputs/prod201_220_audit_report.json`
+- `outputs/prod201_220_random_cases.json`
+- `outputs/prod201_220_random_cases.csv`
+- `outputs/prod201_220_scored_cases.json`
+- `outputs/prod201_220_scored_cases.csv`
+- `outputs/prod201_220_anomaly_report.json`
+- `outputs/prod201_220_anomaly_report.md`
+- `outputs/prod201_220_family_behavior.json`
+- `outputs/prod201_220_ambiguity_behavior.json`
+- `outputs/prod201_220_risk_behavior.json`
+- next_recommended_bundle: `PROD-221..240 Multi-Seed Stability and Drift Calibration Runner`
+
+## Blocked Actions
+- `client_facing_claim`
+- `automatic_nomination`
+- `implementation_execution`
+- `production_activation`
+- `automatic_merge`
+- `credential_handling`

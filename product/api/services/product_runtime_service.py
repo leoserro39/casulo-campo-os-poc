@@ -2,7 +2,7 @@ from __future__ import annotations
 
 import json
 from pathlib import Path
-from typing import Dict, List
+from typing import Dict
 
 
 PRODUCT_DIRECTION = "Cubo Operacional / Operational Cube"
@@ -25,12 +25,6 @@ def read_text(path: Path) -> str:
     return path.read_text(encoding="utf-8")
 
 
-def read_jsonl(path: Path) -> List[Dict]:
-    if not path.exists():
-        return []
-    return [json.loads(line) for line in path.read_text(encoding="utf-8").splitlines() if line.strip()]
-
-
 def exists(path: Path) -> bool:
     return path.exists()
 
@@ -46,22 +40,23 @@ class ProductRuntimeService:
     def __init__(self, repo_root: Path):
         self.repo_root = repo_root
         self.outputs_root = repo_root / "outputs"
-        self.store_root = repo_root / "product" / "store"
 
     def health(self) -> Dict:
         return {"status": "PASS", "product_direction": PRODUCT_DIRECTION, "runtime_mode": RUNTIME_MODE, "blocked_actions": BLOCKED_ACTIONS}
 
     def product_status(self) -> Dict:
         checks = {
-            "store_readiness": exists(self.outputs_root / "prod171_180_store_readiness.json"),
-            "case_catalog": exists(self.outputs_root / "prod181_200_case_catalog.json"),
-            "first_three_case_plan": exists(self.outputs_root / "prod181_200_first_three_case_plan.json"),
-            "batch_calibration_plan": exists(self.outputs_root / "prod181_200_batch_calibration_plan.json"),
             "case_runner_results": exists(self.outputs_root / "prod181_200_case_runner_results.json"),
-            "enterprise_import_kit": exists(self.outputs_root / "prod181_200_enterprise_import_kit.json"),
-            "case_runner_readiness": exists(self.outputs_root / "prod181_200_case_runner_readiness.json"),
-            "case_runner_audit": exists(self.outputs_root / "prod181_200_audit_report.json"),
-            "case_runs_jsonl": exists(self.outputs_root / "prod181_200_case_runs.jsonl"),
+            "random_cases": exists(self.outputs_root / "prod201_220_random_cases.json"),
+            "scored_cases": exists(self.outputs_root / "prod201_220_scored_cases.json"),
+            "anomaly_report": exists(self.outputs_root / "prod201_220_anomaly_report.json"),
+            "family_behavior": exists(self.outputs_root / "prod201_220_family_behavior.json"),
+            "ambiguity_behavior": exists(self.outputs_root / "prod201_220_ambiguity_behavior.json"),
+            "risk_behavior": exists(self.outputs_root / "prod201_220_risk_behavior.json"),
+            "stochastic_study_plan": exists(self.outputs_root / "prod201_220_stochastic_study_plan.json"),
+            "calibration_policy": exists(self.outputs_root / "prod201_220_calibration_policy.json"),
+            "stochastic_readiness": exists(self.outputs_root / "prod201_220_stochastic_readiness.json"),
+            "stochastic_audit": exists(self.outputs_root / "prod201_220_audit_report.json"),
         }
         return {
             "status": "PASS" if all(checks.values()) else "INCOMPLETE",
@@ -69,24 +64,24 @@ class ProductRuntimeService:
             "runtime_mode": RUNTIME_MODE,
             "checks": checks,
             "blocked_actions": BLOCKED_ACTIONS,
-            "next_recommended_step": "Run first three parser cases one by one; then expand batch calibration by type.",
+            "next_recommended_step": "Run multiple seeds and larger batches; then create real-document anonymized batch runner.",
         }
 
     def _payload(self, stem: str, key: str) -> Dict:
         return payload(self.outputs_root / stem, key)
 
-    def case_runs(self) -> Dict:
-        return {"status": "PASS", "case_runs": read_jsonl(self.outputs_root / "prod181_200_case_runs.jsonl")}
-
     def __getattr__(self, name):
         mapping = {
-            "case_catalog": ("prod181_200_case_catalog.json", "case_catalog"),
-            "first_three_case_plan": ("prod181_200_first_three_case_plan.json", "first_three_case_plan"),
-            "batch_calibration_plan": ("prod181_200_batch_calibration_plan.json", "batch_calibration_plan"),
-            "case_runner_results": ("prod181_200_case_runner_results.json", "case_runner_results"),
-            "enterprise_import_kit": ("prod181_200_enterprise_import_kit.json", "enterprise_import_kit"),
-            "case_runner_readiness": ("prod181_200_case_runner_readiness.json", "case_runner_readiness"),
-            "case_runner_audit": ("prod181_200_audit_report.json", "case_runner_audit"),
+            "random_cases": ("prod201_220_random_cases.json", "random_cases"),
+            "scored_cases": ("prod201_220_scored_cases.json", "scored_cases"),
+            "anomaly_report": ("prod201_220_anomaly_report.json", "anomaly_report"),
+            "family_behavior": ("prod201_220_family_behavior.json", "family_behavior"),
+            "ambiguity_behavior": ("prod201_220_ambiguity_behavior.json", "ambiguity_behavior"),
+            "risk_behavior": ("prod201_220_risk_behavior.json", "risk_behavior"),
+            "stochastic_study_plan": ("prod201_220_stochastic_study_plan.json", "stochastic_study_plan"),
+            "calibration_policy": ("prod201_220_calibration_policy.json", "calibration_policy"),
+            "stochastic_readiness": ("prod201_220_stochastic_readiness.json", "stochastic_readiness"),
+            "stochastic_audit": ("prod201_220_audit_report.json", "stochastic_audit"),
         }
         if name in mapping:
             stem, key = mapping[name]
@@ -95,13 +90,11 @@ class ProductRuntimeService:
 
     def reports(self) -> Dict:
         patterns = [
-            "prod181_200_case_catalog.md",
-            "prod181_200_first_three_case_plan.md",
-            "prod181_200_batch_calibration_plan.md",
-            "prod181_200_case_runner_results.md",
-            "prod181_200_enterprise_import_kit.md",
-            "prod181_200_case_runner_readiness.md",
-            "prod181_200_audit_report.md",
+            "prod201_220_anomaly_report.md",
+            "prod201_220_stochastic_study_plan.md",
+            "prod201_220_calibration_policy.md",
+            "prod201_220_stochastic_readiness.md",
+            "prod201_220_audit_report.md",
         ]
         reports = []
         for name in patterns:

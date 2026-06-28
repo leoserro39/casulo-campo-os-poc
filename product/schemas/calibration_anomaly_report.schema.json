@@ -1,0 +1,12 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "CASULO Calibration Anomaly Report",
+  "type": "object",
+  "required": [
+    "status",
+    "summary",
+    "anomalies",
+    "ambiguity_behavior",
+    "calibration_decision"
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "contract": "casulo.random_case_generator.v0.1",
+  "purpose": "Generate randomized parser/document/audit/rule/software-review cases across controlled dimensions.",
+  "dimensions": [
+    "ambiguity_level",
+    "missingness_level",
+    "noise_level",
+    "conflict_level",
+    "document_complexity",
+    "domain_risk",
+    "evidence_strength"
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "contract": "casulo.calibration_decision_policy.v0.1",
+  "purpose": "Prevent premature metric tuning; require batch-level evidence before changing weights.",
+  "rules": [
+    "no weight tuning from isolated case",
+    "flag anomalies before tuning",
+    "separate residual delta from delta control",
+    "calibrate per case family",
+    "promote thresholds only after repeated pattern"
+  ]
+}

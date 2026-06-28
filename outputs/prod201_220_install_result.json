@@ -1,0 +1,18 @@
+{
+  "task": "PROD-201..220",
+  "status": "PASS",
+  "phase": "Stochastic Calibration and Anomaly Lab",
+  "endpoints": [
+    "/api/casulo/stochastic/random-cases",
+    "/api/casulo/stochastic/scored-cases",
+    "/api/casulo/stochastic/anomaly-report",
+    "/api/casulo/stochastic/family-behavior",
+    "/api/casulo/stochastic/ambiguity-behavior",
+    "/api/casulo/stochastic/risk-behavior",
+    "/api/casulo/stochastic/study-plan",
+    "/api/casulo/stochastic/calibration-policy",
+    "/api/casulo/stochastic/readiness",
+    "/api/casulo/stochastic/audit"
+  ],
+  "next_recommended_bundle": "PROD-221..240 Multi-Seed Stability and Drift Calibration Runner"
+}

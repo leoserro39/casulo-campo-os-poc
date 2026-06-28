@@ -63,14 +63,16 @@ class ProductRuntimeHandler(BaseHTTPRequestHandler):
             route_map = {
                 "api/health": self.service.health,
                 "api/product/status": self.service.product_status,
-                "api/casulo/case-runner/catalog": self.service.case_catalog,
-                "api/casulo/case-runner/first-three-plan": self.service.first_three_case_plan,
-                "api/casulo/case-runner/batch-plan": self.service.batch_calibration_plan,
-                "api/casulo/case-runner/results": self.service.case_runner_results,
-                "api/casulo/case-runner/runs": self.service.case_runs,
-                "api/casulo/case-runner/enterprise-import-kit": self.service.enterprise_import_kit,
-                "api/casulo/case-runner/readiness": self.service.case_runner_readiness,
-                "api/casulo/case-runner/audit": self.service.case_runner_audit,
+                "api/casulo/stochastic/random-cases": self.service.random_cases,
+                "api/casulo/stochastic/scored-cases": self.service.scored_cases,
+                "api/casulo/stochastic/anomaly-report": self.service.anomaly_report,
+                "api/casulo/stochastic/family-behavior": self.service.family_behavior,
+                "api/casulo/stochastic/ambiguity-behavior": self.service.ambiguity_behavior,
+                "api/casulo/stochastic/risk-behavior": self.service.risk_behavior,
+                "api/casulo/stochastic/study-plan": self.service.stochastic_study_plan,
+                "api/casulo/stochastic/calibration-policy": self.service.calibration_policy,
+                "api/casulo/stochastic/readiness": self.service.stochastic_readiness,
+                "api/casulo/stochastic/audit": self.service.stochastic_audit,
                 "api/reports": self.service.reports,
             }
             if clean in route_map:
@@ -88,7 +90,7 @@ def main() -> int:
     server = HTTPServer((args.host, args.port), ProductRuntimeHandler)
     print(f"Operational Cube product runtime API/UI running at http://{args.host}:{args.port}")
     print("Open: /ui")
-    print("Try: /api/health, /api/casulo/case-runner/catalog")
+    print("Try: /api/health, /api/casulo/stochastic/anomaly-report")
     try:
         server.serve_forever()
     except KeyboardInterrupt:

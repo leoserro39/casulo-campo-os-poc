@@ -1,0 +1,65 @@
+{
+  "status": "PASS",
+  "ambiguity_behavior": [
+    {
+      "ambiguity_bucket": "A0_very_low",
+      "count": 107,
+      "avg_direct_hallucination": 72.53,
+      "avg_casulo_hallucination": 22.5,
+      "avg_hallucination_reduction": 50.04,
+      "avg_residual_delta": 43.09,
+      "avg_delta_control": 88.33,
+      "std_casulo_hallucination": 6.04,
+      "std_delta_control": 2.13,
+      "avg_evidence_coverage": 56.99
+    },
+    {
+      "ambiguity_bucket": "A1_low",
+      "count": 92,
+      "avg_direct_hallucination": 78.5,
+      "avg_casulo_hallucination": 24.78,
+      "avg_hallucination_reduction": 53.72,
+      "avg_residual_delta": 49.07,
+      "avg_delta_control": 86.97,
+      "std_casulo_hallucination": 6.61,
+      "std_delta_control": 2.02,
+      "avg_evidence_coverage": 51.39
+    },
+    {
+      "ambiguity_bucket": "A2_medium",
+      "count": 104,
+      "avg_direct_hallucination": 84.98,
+      "avg_casulo_hallucination": 27.5,
+      "avg_hallucination_reduction": 57.48,
+      "avg_residual_delta": 53.83,
+      "avg_delta_control": 86.06,
+      "std_casulo_hallucination": 7.06,
+      "std_delta_control": 2.21,
+      "avg_evidence_coverage": 45.76
+    },
+    {
+      "ambiguity_bucket": "A3_high",
+      "count": 89,
+      "avg_direct_hallucination": 91.46,
+      "avg_casulo_hallucination": 31.55,
+      "avg_hallucination_reduction": 59.91,
+      "avg_residual_delta": 59.15,
+      "avg_delta_control": 84.71,
+      "std_casulo_hallucination": 7.75,
+      "std_delta_control": 2.1,
+      "avg_evidence_coverage": 37.9
+    },
+    {
+      "ambiguity_bucket": "A4_extreme",
+      "count": 108,
+      "avg_direct_hallucination": 93.35,
+      "avg_casulo_hallucination": 32.51,
+      "avg_hallucination_reduction": 60.84,
+      "avg_residual_delta": 62.32,
+      "avg_delta_control": 83.76,
+      "std_casulo_hallucination": 7.56,
+      "std_delta_control": 2.03,
+      "avg_evidence_coverage": 35.02
+    }
+  ]
+}

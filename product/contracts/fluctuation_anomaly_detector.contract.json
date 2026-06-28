@@ -1,0 +1,11 @@
+{
+  "contract": "casulo.fluctuation_anomaly_detector.v0.1",
+  "purpose": "Detect outliers, high volatility groups, regression zones and anomalous hallucination/delta-control behavior.",
+  "methods": [
+    "z_score",
+    "iqr",
+    "group_variance",
+    "threshold_gates",
+    "scenario_comparison"
+  ]
+}

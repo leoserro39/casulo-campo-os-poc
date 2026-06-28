@@ -1,0 +1,5 @@
+{
+  "contract": "casulo.ambiguity_behavior_model.v0.1",
+  "purpose": "Study how ambiguity changes hallucination risk, residual delta, evidence coverage and blocked-action behavior case by case.",
+  "output": "ambiguity response curve and calibration notes"
+}

@@ -1,0 +1,41 @@
+{
+  "status": "PASS",
+  "risk_behavior": [
+    {
+      "domain_risk": "high",
+      "count": 179,
+      "avg_direct_hallucination": 96.01,
+      "avg_casulo_hallucination": 33.79,
+      "avg_hallucination_reduction": 62.22,
+      "avg_residual_delta": 55.63,
+      "avg_delta_control": 85.53,
+      "std_casulo_hallucination": 6.84,
+      "std_delta_control": 2.62,
+      "avg_evidence_coverage": 43.13
+    },
+    {
+      "domain_risk": "low",
+      "count": 65,
+      "avg_direct_hallucination": 57.75,
+      "avg_casulo_hallucination": 17.92,
+      "avg_hallucination_reduction": 39.83,
+      "avg_residual_delta": 51.83,
+      "avg_delta_control": 86.25,
+      "std_casulo_hallucination": 3.81,
+      "std_delta_control": 2.67,
+      "avg_evidence_coverage": 47.62
+    },
+    {
+      "domain_risk": "medium",
+      "count": 256,
+      "avg_direct_hallucination": 82.43,
+      "avg_casulo_hallucination": 25.98,
+      "avg_hallucination_reduction": 56.45,
+      "avg_residual_delta": 52.31,
+      "avg_delta_control": 86.21,
+      "std_casulo_hallucination": 6.0,
+      "std_delta_control": 2.67,
+      "avg_evidence_coverage": 46.58
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "CASULO Stochastic Calibration Case",
+  "type": "object",
+  "required": [
+    "case_id",
+    "case_family",
+    "ambiguity_level",
+    "missingness_level",
+    "noise_level",
+    "conflict_level",
+    "document_complexity",
+    "domain_risk"
+  ]
+}

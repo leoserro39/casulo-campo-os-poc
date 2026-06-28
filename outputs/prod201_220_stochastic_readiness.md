@@ -1,0 +1,26 @@
+# Stochastic Lab Readiness
+
+- contract_version: `casulo.stochastic_lab_readiness.v0.1`
+- status: `PASS`
+- decision: `READY_FOR_RANDOMIZED_BATCH_CALIBRATION_AND_ANOMALY_STUDY`
+
+## Ready For
+- `randomized multi-case simulation`
+- `ambiguity behavior analysis`
+- `fluctuation detection`
+- `anomaly clustering`
+- `batch-level calibration preparation`
+
+## Not Ready For
+- `real company process automation`
+- `production calibration claim`
+- `weight changes without repeated batch evidence`
+- next: `Run multiple seeds and larger batches; then create real-document anonymized batch runner.`
+
+## Blocked Actions
+- `client_facing_claim`
+- `automatic_nomination`
+- `implementation_execution`
+- `production_activation`
+- `automatic_merge`
+- `credential_handling`
