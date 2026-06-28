@@ -1,0 +1,11 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "CASULO Technical Readiness Memo",
+  "type": "object",
+  "required": [
+    "status",
+    "readiness_decision",
+    "technical_assets",
+    "not_ready_for"
+  ]
+}

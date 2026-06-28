@@ -1,0 +1,12 @@
+{
+  "contract": "casulo.chat_agent_operating_model.v0.1",
+  "purpose": "Define how CASULO/Cubo runs in chat as a governed operating layer, first manually, then through connected agent/actions/API.",
+  "modes": [
+    "manual_chat_protocol",
+    "custom_gpt_with_actions",
+    "api_connected_agent",
+    "multi_agent_runtime",
+    "enterprise_stack"
+  ],
+  "rule": "Agent is not autonomous authority; agent calls CASULO runtime and obeys gates."
+}

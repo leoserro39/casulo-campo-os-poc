@@ -1,0 +1,17 @@
+{
+  "contract": "casulo.technical_readiness_memo.v0.1",
+  "purpose": "Summarize technical readiness for company formation, incubator submission, investor technical validation and controlled POC service.",
+  "source_gates": [
+    "READY_FOR_COMPANY_INCUBATOR_AND_POC_SERVICES",
+    "READY_FOR_GRAPH_BUILDER_AND_POC_FACTORY_TESTS",
+    "READY_TO_RUN_REAL_OR_ANONYMOUS_COMPANY_CASES"
+  ],
+  "blocked_actions": [
+    "client_facing_claim",
+    "automatic_nomination",
+    "implementation_execution",
+    "production_activation",
+    "automatic_merge",
+    "credential_handling"
+  ]
+}

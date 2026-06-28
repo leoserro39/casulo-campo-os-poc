@@ -46,23 +46,17 @@ class ProductRuntimeService:
 
     def product_status(self) -> Dict:
         checks = {
-            "casulo_method": exists(self.outputs_root / "prod081_120_casulo_method.json"),
-            "company_chat_intake": exists(self.outputs_root / "prod081_120_company_chat_intake.json"),
-            "gpt_operating_layer": exists(self.outputs_root / "prod081_120_gpt_operating_layer.json"),
-            "evaluation_report": exists(self.outputs_root / "prod081_120_evaluation_report.json"),
-            "technical_readiness_gate": exists(self.outputs_root / "prod081_120_technical_readiness_gate.json"),
-            "graph_builder_v0": exists(self.outputs_root / "prod121_130_graph_builder_v0.json"),
-            "state_store_index": exists(self.outputs_root / "prod121_130_state_store_index.json"),
-            "recommendation_governance": exists(self.outputs_root / "prod121_130_recommendation_governance.json"),
-            "poc_factory_pack": exists(self.outputs_root / "prod121_130_poc_factory_pack.json"),
-            "poc_readiness_report": exists(self.outputs_root / "prod121_130_poc_readiness_report.json"),
-            "poc_intake_template": exists(self.outputs_root / "prod131_140_poc_intake_template.json"),
-            "calibration_cases": exists(self.outputs_root / "prod131_140_calibration_cases.json"),
-            "calibration_results": exists(self.outputs_root / "prod131_140_calibration_results.json"),
-            "calibration_ledger_v1": exists(self.outputs_root / "prod131_140_calibration_ledger_v1.json"),
-            "delta_control_report": exists(self.outputs_root / "prod131_140_delta_control_report.json"),
             "poc_calibration_readiness": exists(self.outputs_root / "prod131_140_poc_calibration_readiness.json"),
-            "poc_calibration_audit": exists(self.outputs_root / "prod131_140_audit_report.json"),
+            "calibration_results": exists(self.outputs_root / "prod131_140_calibration_results.json"),
+            "technical_readiness_memo": exists(self.outputs_root / "prod141_150_technical_readiness_memo.json"),
+            "chat_agent_operating_model": exists(self.outputs_root / "prod141_150_chat_agent_operating_model.json"),
+            "target_stack": exists(self.outputs_root / "prod141_150_target_stack.json"),
+            "codex_github_bridge": exists(self.outputs_root / "prod141_150_codex_github_bridge.json"),
+            "poc_service_blueprint": exists(self.outputs_root / "prod141_150_poc_service_blueprint.json"),
+            "risk_control_matrix": exists(self.outputs_root / "prod141_150_risk_control_matrix.json"),
+            "technical_roadmap_90d": exists(self.outputs_root / "prod141_150_technical_roadmap_90d.json"),
+            "incubator_technical_pack": exists(self.outputs_root / "prod141_150_incubator_technical_pack.json"),
+            "technical_readiness_audit": exists(self.outputs_root / "prod141_150_audit_report.json"),
         }
         return {
             "status": "PASS" if all(checks.values()) else "INCOMPLETE",
@@ -70,7 +64,7 @@ class ProductRuntimeService:
             "runtime_mode": RUNTIME_MODE,
             "checks": checks,
             "blocked_actions": BLOCKED_ACTIONS,
-            "next_recommended_step": "Run first real/anonymized case and then build Technical Readiness Memo / Incubator Pack.",
+            "next_recommended_step": "Build Custom GPT Actions / Agent Connector Prototype.",
         }
 
     def _payload(self, stem: str, key: str) -> Dict:
@@ -78,23 +72,16 @@ class ProductRuntimeService:
 
     def __getattr__(self, name):
         mapping = {
-            "casulo_method": ("prod081_120_casulo_method.json", "casulo_method"),
-            "company_chat_intake": ("prod081_120_company_chat_intake.json", "company_chat_intake"),
-            "gpt_operating_layer": ("prod081_120_gpt_operating_layer.json", "gpt_operating_layer"),
-            "evaluation_report": ("prod081_120_evaluation_report.json", "evaluation_report"),
-            "technical_readiness_gate": ("prod081_120_technical_readiness_gate.json", "technical_readiness_gate"),
-            "graph_builder_v0": ("prod121_130_graph_builder_v0.json", "graph_builder_v0"),
-            "state_store_index": ("prod121_130_state_store_index.json", "state_store_index"),
-            "recommendation_governance": ("prod121_130_recommendation_governance.json", "recommendation_governance"),
-            "poc_factory_pack": ("prod121_130_poc_factory_pack.json", "poc_factory_pack"),
-            "poc_readiness_report": ("prod121_130_poc_readiness_report.json", "poc_readiness_report"),
-            "poc_intake_template": ("prod131_140_poc_intake_template.json", "poc_intake_template"),
-            "calibration_cases": ("prod131_140_calibration_cases.json", "calibration_cases"),
-            "calibration_results": ("prod131_140_calibration_results.json", "calibration_results"),
-            "calibration_ledger_v1": ("prod131_140_calibration_ledger_v1.json", "calibration_ledger_v1"),
-            "delta_control_report": ("prod131_140_delta_control_report.json", "delta_control_report"),
-            "poc_calibration_readiness": ("prod131_140_poc_calibration_readiness.json", "poc_calibration_readiness"),
-            "poc_calibration_audit": ("prod131_140_audit_report.json", "poc_calibration_audit"),
+            "poc_calibration_results": ("prod131_140_calibration_results.json", "calibration_results"),
+            "technical_readiness_memo": ("prod141_150_technical_readiness_memo.json", "technical_readiness_memo"),
+            "chat_agent_operating_model": ("prod141_150_chat_agent_operating_model.json", "chat_agent_operating_model"),
+            "target_stack": ("prod141_150_target_stack.json", "target_stack"),
+            "codex_github_bridge": ("prod141_150_codex_github_bridge.json", "codex_github_bridge"),
+            "poc_service_blueprint": ("prod141_150_poc_service_blueprint.json", "poc_service_blueprint"),
+            "risk_control_matrix": ("prod141_150_risk_control_matrix.json", "risk_control_matrix"),
+            "technical_roadmap_90d": ("prod141_150_technical_roadmap_90d.json", "technical_roadmap_90d"),
+            "incubator_technical_pack": ("prod141_150_incubator_technical_pack.json", "incubator_technical_pack"),
+            "technical_readiness_audit": ("prod141_150_audit_report.json", "technical_readiness_audit"),
         }
         if name in mapping:
             stem, key = mapping[name]
@@ -103,12 +90,15 @@ class ProductRuntimeService:
 
     def reports(self) -> Dict:
         patterns = [
-            "prod131_140_poc_intake_template.md",
-            "prod131_140_calibration_results.md",
-            "prod131_140_calibration_ledger_v1.md",
-            "prod131_140_delta_control_report.md",
-            "prod131_140_poc_calibration_readiness.md",
-            "prod131_140_audit_report.md",
+            "prod141_150_technical_readiness_memo.md",
+            "prod141_150_chat_agent_operating_model.md",
+            "prod141_150_target_stack.md",
+            "prod141_150_codex_github_bridge.md",
+            "prod141_150_poc_service_blueprint.md",
+            "prod141_150_risk_control_matrix.md",
+            "prod141_150_technical_roadmap_90d.md",
+            "prod141_150_incubator_technical_pack.md",
+            "prod141_150_audit_report.md",
         ]
         reports = []
         for name in patterns:

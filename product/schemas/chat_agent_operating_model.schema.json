@@ -1,0 +1,11 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "CASULO Chat Agent Operating Model",
+  "type": "object",
+  "required": [
+    "status",
+    "modes",
+    "operating_flow",
+    "blocked_actions"
+  ]
+}

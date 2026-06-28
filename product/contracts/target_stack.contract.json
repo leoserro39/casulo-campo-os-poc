@@ -1,0 +1,16 @@
+{
+  "contract": "casulo.target_stack.v0.1",
+  "purpose": "Define the post-proof technical stack for productization.",
+  "layers": [
+    "chat_surface",
+    "agent_runtime",
+    "casulo_runtime_api",
+    "state_store",
+    "evidence_store",
+    "graph_store",
+    "rag_index",
+    "audit_log",
+    "codex_github_bridge",
+    "ui_console"
+  ]
+}

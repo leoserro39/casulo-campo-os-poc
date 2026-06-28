@@ -1,0 +1,22 @@
+{
+  "contract_version": "casulo.technical_roadmap_90d.v0.1",
+  "status": "PASS",
+  "days_0_15": [
+    "run first real/anonymous company case",
+    "calibrate metric weights",
+    "record first before/after POC report",
+    "prepare incubator technical memo"
+  ],
+  "days_16_45": [
+    "build Custom GPT / Actions prototype",
+    "formalize OpenAPI schema for runtime endpoints",
+    "harden state store and graph builder v0",
+    "prepare first controlled service offer"
+  ],
+  "days_46_90": [
+    "add persistent database",
+    "add evidence store and audit ledger",
+    "add Codex/GitHub bridge",
+    "run 2-3 POC pilots across different domains"
+  ]
+}

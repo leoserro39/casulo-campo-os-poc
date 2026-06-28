@@ -1,0 +1,12 @@
+{
+  "contract": "casulo.incubator_technical_pack.v0.1",
+  "purpose": "Create a concise technical package for incubator/investor/partner validation.",
+  "deliverables": [
+    "technical readiness memo",
+    "chat agent operating model",
+    "target stack",
+    "POC service blueprint",
+    "risk and control matrix",
+    "90-day technical roadmap"
+  ]
+}
