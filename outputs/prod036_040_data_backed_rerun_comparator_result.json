@@ -1,0 +1,10 @@
+{
+  "task": "PROD-036..040",
+  "status": "PASS",
+  "phase": "Data-Backed VesselFlow Rerun and Evidence Comparator",
+  "endpoints": [
+    "/api/vesselflow/data-backed-rerun",
+    "/api/vesselflow/evidence-comparator"
+  ],
+  "next_recommended_bundle": "PROD-041..045 Human Review Package and Decision Gate"
+}

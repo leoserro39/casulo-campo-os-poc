@@ -1,0 +1,31 @@
+{
+  "contract_version": "operational_cube.data_backed_rerun.v1.0",
+  "status": "PASS",
+  "mode": "check_only",
+  "case_id": "vesselflow_real_or_anonymized_intake_001",
+  "ready_for_write_rerun": false,
+  "intake_status": "WAITING_FOR_USER_DATA",
+  "data_classification": "synthetic",
+  "dataset_reference": "REPLACE_WITH_REAL_OR_ANONYMIZED_WORKBOOK_OR_DATASET",
+  "state_decision": "WAITING_FOR_REAL_DATA_OR_HUMAN_REVIEW",
+  "risk_level": "HIGH",
+  "actions": [
+    {
+      "command": "check_only",
+      "returncode": 0,
+      "output_preview": "No files were changed by the rerun orchestrator."
+    }
+  ],
+  "warnings": [
+    "Current intake is not ready for data-backed write/rerun. This is expected while dataset reference remains placeholder.",
+    "No intake JSON was supplied. Running in check-only comparator mode."
+  ],
+  "errors": [],
+  "blocked_actions": [
+    "automatic_nomination",
+    "client_facing_claim",
+    "implementation_execution",
+    "production_activation"
+  ],
+  "internal_use_only": true
+}

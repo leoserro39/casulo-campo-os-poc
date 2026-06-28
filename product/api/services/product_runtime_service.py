@@ -28,6 +28,13 @@ def exists(path: Path) -> bool:
     return path.exists()
 
 
+def payload(path: Path, key: str):
+    if not path.exists():
+        return {"status": "MISSING", "error": f"{key} has not been generated yet."}
+    md = path.with_suffix(".md")
+    return {"status": "PASS", key: read_json(path), "markdown_path": str(md), "markdown_preview": read_text(md)[:4000] if md.exists() else ""}
+
+
 class ProductRuntimeService:
     def __init__(self, repo_root: Path):
         self.repo_root = repo_root
@@ -35,25 +42,18 @@ class ProductRuntimeService:
         self.outputs_root = repo_root / "outputs"
 
     def health(self) -> Dict[str, Any]:
-        return {
-            "status": "PASS",
-            "product_direction": PRODUCT_DIRECTION,
-            "runtime_mode": RUNTIME_MODE,
-            "verticals": VERTICALS,
-            "blocked_actions": BLOCKED_ACTIONS,
-        }
+        return {"status": "PASS", "product_direction": PRODUCT_DIRECTION, "runtime_mode": RUNTIME_MODE, "verticals": VERTICALS, "blocked_actions": BLOCKED_ACTIONS}
 
     def product_status(self) -> Dict[str, Any]:
         checks = {
             "verticals_dir": exists(self.product_root / "verticals"),
-            "vertical_runtime_adapter": exists(self.product_root / "scripts" / "build_vertical_state_request.py"),
-            "vesselflow_state_request": exists(self.outputs_root / "prod_vert004_006_vesselflow_state_request.json"),
-            "vesselflow_import_manifest": exists(self.outputs_root / "prod_vert004_006_vesselflow_import_manifest.json"),
             "product_ui": exists(self.product_root / "ui" / "index.html"),
             "vesselflow_state_definition": exists(self.outputs_root / "prod016_020_vesselflow_state_definition.json"),
             "vesselflow_state_report_export": exists(self.outputs_root / "prod021_025_vesselflow_state_report_export.json"),
             "vesselflow_real_data_intake": exists(self.product_root / "scripts" / "prepare_vesselflow_real_data_intake.py"),
             "vesselflow_real_data_delta_review": exists(self.outputs_root / "prod031_035_vesselflow_real_data_delta_review.json"),
+            "vesselflow_data_backed_rerun": exists(self.outputs_root / "prod036_040_vesselflow_data_backed_rerun.json"),
+            "vesselflow_evidence_comparator": exists(self.outputs_root / "prod036_040_vesselflow_evidence_comparator.json"),
         }
         return {
             "status": "PASS" if all(checks.values()) else "INCOMPLETE",
@@ -61,11 +61,11 @@ class ProductRuntimeService:
             "runtime_mode": RUNTIME_MODE,
             "checks": checks,
             "blocked_actions": BLOCKED_ACTIONS,
-            "next_recommended_step": "Fill a reviewed real/anonymized VesselFlow intake JSON, then run --write --rerun-state.",
+            "next_recommended_step": "Use a reviewed real/anonymized intake JSON to run data-backed state rerun.",
         }
 
     def verticals(self) -> Dict[str, Any]:
-        items: List[Dict[str, Any]] = []
+        items = []
         for vertical_id in VERTICALS:
             try:
                 items.append(self.vertical(vertical_id)["vertical"])
@@ -95,49 +95,28 @@ class ProductRuntimeService:
         }}
 
     def state_request(self, vertical_id: str) -> Dict[str, Any]:
-        if vertical_id not in VERTICALS:
-            return {"status": "NOT_FOUND", "error": f"Unknown vertical: {vertical_id}"}
-        json_path = self.outputs_root / f"prod_vert004_006_{vertical_id}_state_request.json"
-        md_path = self.outputs_root / f"prod_vert004_006_{vertical_id}_state_request.md"
-        if not json_path.exists():
-            return {"status": "MISSING", "error": f"State request not generated: {json_path}"}
-        return {"status": "PASS", "vertical_id": vertical_id, "state_request": read_json(json_path), "markdown_path": str(md_path), "markdown_preview": read_text(md_path)[:4000] if md_path.exists() else ""}
+        return payload(self.outputs_root / f"prod_vert004_006_{vertical_id}_state_request.json", "state_request")
 
     def vesselflow_import_manifest(self) -> Dict[str, Any]:
-        json_path = self.outputs_root / "prod_vert004_006_vesselflow_import_manifest.json"
-        md_path = self.outputs_root / "prod_vert004_006_vesselflow_import_manifest.md"
-        if not json_path.exists():
-            return {"status": "MISSING", "error": "VesselFlow import manifest is missing."}
-        return {"status": "PASS", "manifest": read_json(json_path), "markdown_path": str(md_path), "markdown_preview": read_text(md_path)[:4000] if md_path.exists() else ""}
+        return payload(self.outputs_root / "prod_vert004_006_vesselflow_import_manifest.json", "manifest")
 
     def vesselflow_state_definition(self) -> Dict[str, Any]:
-        json_path = self.outputs_root / "prod016_020_vesselflow_state_definition.json"
-        md_path = self.outputs_root / "prod016_020_vesselflow_state_definition.md"
-        readiness_path = self.outputs_root / "prod016_020_vesselflow_import_readiness.json"
-        if not json_path.exists():
-            return {"status": "MISSING", "error": "VesselFlow state definition has not been generated yet."}
-        return {"status": "PASS", "state_definition": read_json(json_path), "readiness": read_json(readiness_path) if readiness_path.exists() else {}, "markdown_path": str(md_path), "markdown_preview": read_text(md_path)[:4000] if md_path.exists() else ""}
+        return payload(self.outputs_root / "prod016_020_vesselflow_state_definition.json", "state_definition")
 
     def vesselflow_state_report_export(self) -> Dict[str, Any]:
-        json_path = self.outputs_root / "prod021_025_vesselflow_state_report_export.json"
-        md_path = self.outputs_root / "prod021_025_vesselflow_state_report_export.md"
-        if not json_path.exists():
-            return {"status": "MISSING", "error": "VesselFlow report export has not been generated yet."}
-        return {"status": "PASS", "report_export": read_json(json_path), "markdown_path": str(md_path), "markdown_preview": read_text(md_path)[:4000] if md_path.exists() else ""}
+        return payload(self.outputs_root / "prod021_025_vesselflow_state_report_export.json", "report_export")
 
     def vesselflow_real_data_intake_preview(self) -> Dict[str, Any]:
-        json_path = self.outputs_root / "prod026_030_vesselflow_real_data_intake_preview.json"
-        md_path = self.outputs_root / "prod026_030_vesselflow_real_data_intake_preview.md"
-        if not json_path.exists():
-            return {"status": "MISSING", "error": "VesselFlow real data intake preview has not been generated yet."}
-        return {"status": "PASS", "preview": read_json(json_path), "markdown_path": str(md_path), "markdown_preview": read_text(md_path)[:4000] if md_path.exists() else ""}
+        return payload(self.outputs_root / "prod026_030_vesselflow_real_data_intake_preview.json", "preview")
 
     def vesselflow_real_data_delta_review(self) -> Dict[str, Any]:
-        json_path = self.outputs_root / "prod031_035_vesselflow_real_data_delta_review.json"
-        md_path = self.outputs_root / "prod031_035_vesselflow_real_data_delta_review.md"
-        if not json_path.exists():
-            return {"status": "MISSING", "error": "VesselFlow real data delta review has not been generated yet."}
-        return {"status": "PASS", "delta_review": read_json(json_path), "markdown_path": str(md_path), "markdown_preview": read_text(md_path)[:4000] if md_path.exists() else ""}
+        return payload(self.outputs_root / "prod031_035_vesselflow_real_data_delta_review.json", "delta_review")
+
+    def vesselflow_data_backed_rerun(self) -> Dict[str, Any]:
+        return payload(self.outputs_root / "prod036_040_vesselflow_data_backed_rerun.json", "data_backed_rerun")
+
+    def vesselflow_evidence_comparator(self) -> Dict[str, Any]:
+        return payload(self.outputs_root / "prod036_040_vesselflow_evidence_comparator.json", "evidence_comparator")
 
     def reports(self) -> Dict[str, Any]:
         patterns = [
@@ -150,6 +129,8 @@ class ProductRuntimeService:
             "prod021_025_vesselflow_state_report_export.md",
             "prod026_030_vesselflow_real_data_intake_preview.md",
             "prod031_035_vesselflow_real_data_delta_review.md",
+            "prod036_040_vesselflow_data_backed_rerun.md",
+            "prod036_040_vesselflow_evidence_comparator.md",
             "wb020_poc_completion_report.md",
         ]
         reports = []

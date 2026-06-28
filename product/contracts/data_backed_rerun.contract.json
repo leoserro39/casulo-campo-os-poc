@@ -1,0 +1,14 @@
+{
+  "contract": "operational_cube.data_backed_rerun.v1.0",
+  "purpose": "Orchestrate a controlled VesselFlow data-backed rerun after a reviewed intake JSON is ready.",
+  "mode": "local_demo_internal_review",
+  "primary_script": "product/scripts/run_vesselflow_data_backed_rerun.py",
+  "default_mode": "check_only",
+  "write_requires_explicit_flag": true,
+  "blocked_actions": [
+    "automatic_nomination",
+    "client_facing_claim",
+    "implementation_execution",
+    "production_activation"
+  ]
+}

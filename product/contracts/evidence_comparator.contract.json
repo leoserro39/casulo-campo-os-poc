@@ -1,0 +1,10 @@
+{
+  "contract": "operational_cube.evidence_comparator.v1.0",
+  "purpose": "Compare sample-placeholder state with current VesselFlow controlled state and evidence after rerun.",
+  "outputs": [
+    "outputs/prod036_040_vesselflow_data_backed_rerun.json",
+    "outputs/prod036_040_vesselflow_evidence_comparator.json",
+    "outputs/prod036_040_vesselflow_evidence_comparator.md"
+  ],
+  "endpoint": "/api/vesselflow/data-backed-rerun"
+}

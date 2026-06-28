@@ -1,0 +1,32 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "VesselFlow Data Backed Rerun",
+  "type": "object",
+  "required": [
+    "status",
+    "mode",
+    "case_id",
+    "ready_for_write_rerun",
+    "blocked_actions"
+  ],
+  "properties": {
+    "status": {
+      "type": "string"
+    },
+    "mode": {
+      "type": "string"
+    },
+    "case_id": {
+      "type": "string"
+    },
+    "ready_for_write_rerun": {
+      "type": "boolean"
+    },
+    "blocked_actions": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  }
+}

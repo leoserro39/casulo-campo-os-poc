@@ -1,0 +1,42 @@
+{
+  "contract_version": "operational_cube.evidence_comparator.v1.0",
+  "status": "PASS",
+  "case_id": "vesselflow_demo_controlled_001",
+  "state": {
+    "data_mode": "sample_placeholder",
+    "decision": "WAITING_FOR_REAL_DATA_OR_HUMAN_REVIEW",
+    "risk_level": "HIGH"
+  },
+  "evidence_status_counts": {
+    "SAMPLE_PLACEHOLDER": 1,
+    "AVAILABLE": 3,
+    "NOT_PROVIDED": 6
+  },
+  "gate_status_counts": {
+    "BLOCKED_SAMPLE_DATA": 6,
+    "REQUIRED": 1
+  },
+  "delta": {
+    "data_mode_change": "sample_placeholder -> WAITING_FOR_USER_DATA",
+    "risk_change_expected": "NO_REDUCTION_YET_WAITING_FOR_DATA",
+    "gate_change_expected": "NO_GATE_CHANGE_YET",
+    "evidence_change_expected": "DATASET_REFERENCE_NOT_READY",
+    "ready_for_write_rerun": false
+  },
+  "rerun": {
+    "mode": "check_only",
+    "ready_for_write_rerun": false,
+    "errors": [],
+    "warnings": [
+      "Current intake is not ready for data-backed write/rerun. This is expected while dataset reference remains placeholder.",
+      "No intake JSON was supplied. Running in check-only comparator mode."
+    ]
+  },
+  "internal_review_result": "WAITING_FOR_REAL_OR_ANONYMIZED_DATA",
+  "blocked_actions": [
+    "automatic_nomination",
+    "client_facing_claim",
+    "implementation_execution",
+    "production_activation"
+  ]
+}
