@@ -1,0 +1,13 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "CASULO Real Graph Case Result",
+  "type": "object",
+  "required": [
+    "case_id",
+    "status",
+    "decision",
+    "graph",
+    "task_clusters",
+    "issue_candidates"
+  ]
+}

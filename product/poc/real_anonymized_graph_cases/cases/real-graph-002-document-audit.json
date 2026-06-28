@@ -1,0 +1,25 @@
+{
+  "case_id": "REAL-GRAPH-002-DOCUMENT-AUDIT",
+  "title": "Redacted document audit and checklist mapping",
+  "domain_family": [
+    "audit_documental",
+    "rule_extraction"
+  ],
+  "input_profile": {
+    "description": "Anonymized document checklist with rule exceptions, partial evidence and review responsibility gaps.",
+    "source_type": "redacted_checklist",
+    "redaction_level": "high"
+  },
+  "evidence_profile": {
+    "evidence_strength": 47,
+    "missing_artifacts": 4,
+    "conflict_level": 38,
+    "ambiguity_level": 58
+  },
+  "expected_risks": [
+    "delta_rule",
+    "delta_conflict",
+    "delta_evidence",
+    "delta_human_review"
+  ]
+}

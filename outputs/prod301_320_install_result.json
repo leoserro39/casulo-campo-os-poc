@@ -1,0 +1,13 @@
+{
+  "task": "PROD-301..320",
+  "status": "PASS",
+  "phase": "Real Anonymized Graph Case Runner",
+  "endpoints": [
+    "/api/casulo/real-graph-cases/catalog",
+    "/api/casulo/real-graph-cases/results",
+    "/api/casulo/real-graph-cases/aggregate",
+    "/api/casulo/real-graph-cases/readiness",
+    "/api/casulo/real-graph-cases/audit"
+  ],
+  "next_recommended_bundle": "PROD-321..340 Graph Case Review Console and Issue Selection"
+}

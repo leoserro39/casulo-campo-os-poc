@@ -14,33 +14,35 @@ def payload(path,key):
     return {"status":"PASS",key:read_json(path),"markdown_path":str(md),"markdown_preview":read_text(md)[:4000] if md.exists() else ""}
 
 class ProductRuntimeService:
-    def __init__(self,repo_root:Path): self.repo_root=repo_root; self.outputs_root=repo_root/"outputs"
+    def __init__(self,repo_root:Path): self.repo_root=repo_root; self.outputs_root=repo_root/"outputs"; self.cases_root=repo_root/"product/poc/real_anonymized_graph_cases/cases"
     def health(self): return {"status":"PASS","product_direction":PRODUCT_DIRECTION,"runtime_mode":RUNTIME_MODE,"blocked_actions":BLOCKED_ACTIONS}
     def product_status(self):
         stems={
-            "graph_builder_result":"prod261_280_graph_builder_telemetry_result.json",
-            "task_clusters":"prod281_300_task_clusters.json",
-            "issue_candidates":"prod281_300_issue_candidates.json",
-            "practical_backlog":"prod281_300_practical_backlog_report.json",
-            "task_closure_policy":"prod281_300_task_closure_policy.json",
-            "graph_task_bridge_readiness":"prod281_300_graph_task_bridge_readiness.json",
-            "graph_task_bridge_audit":"prod281_300_audit_report.json",
+            "graph_task_bridge":"prod281_300_practical_backlog_report.json",
+            "real_graph_case_results":"prod301_320_real_graph_case_results.json",
+            "real_graph_case_aggregate":"prod301_320_real_graph_case_aggregate.json",
+            "real_graph_case_readiness":"prod301_320_real_graph_case_readiness.json",
+            "real_graph_case_audit":"prod301_320_audit_report.json",
         }
         checks={k:(self.outputs_root/v).exists() for k,v in stems.items()}
-        return {"status":"PASS" if all(checks.values()) else "INCOMPLETE","product_direction":PRODUCT_DIRECTION,"runtime_mode":RUNTIME_MODE,"checks":checks,"blocked_actions":BLOCKED_ACTIONS,"next_recommended_step":"Select issue candidates, then run real anonymized graph cases."}
+        return {"status":"PASS" if all(checks.values()) else "INCOMPLETE","product_direction":PRODUCT_DIRECTION,"runtime_mode":RUNTIME_MODE,"checks":checks,"blocked_actions":BLOCKED_ACTIONS,"next_recommended_step":"Review P0 blockers, then expand with user-provided anonymized cases."}
+    def case_catalog(self):
+        cases=[]
+        for p in sorted(self.cases_root.glob("*.json")):
+            data=read_json(p)
+            cases.append({"case_id":data.get("case_id"),"title":data.get("title"),"domain_family":data.get("domain_family"),"path":str(p)})
+        return {"status":"PASS","cases":cases}
     def __getattr__(self,name):
         mapping={
-            "task_clusters":("prod281_300_task_clusters.json","task_clusters"),
-            "issue_candidates":("prod281_300_issue_candidates.json","issue_candidates"),
-            "practical_backlog":("prod281_300_practical_backlog_report.json","practical_backlog"),
-            "task_closure_policy":("prod281_300_task_closure_policy.json","task_closure_policy"),
-            "graph_task_bridge_readiness":("prod281_300_graph_task_bridge_readiness.json","graph_task_bridge_readiness"),
-            "graph_task_bridge_audit":("prod281_300_audit_report.json","graph_task_bridge_audit"),
+            "real_graph_case_results":("prod301_320_real_graph_case_results.json","real_graph_case_results"),
+            "real_graph_case_aggregate":("prod301_320_real_graph_case_aggregate.json","real_graph_case_aggregate"),
+            "real_graph_case_readiness":("prod301_320_real_graph_case_readiness.json","real_graph_case_readiness"),
+            "real_graph_case_audit":("prod301_320_audit_report.json","real_graph_case_audit"),
         }
         if name in mapping:
             stem,key=mapping[name]
             return lambda: payload(self.outputs_root/stem,key)
         raise AttributeError(name)
     def reports(self):
-        pats=["prod281_300_task_clusters.md","prod281_300_issue_candidates.md","prod281_300_practical_backlog_report.md","prod281_300_graph_task_bridge_readiness.md","prod281_300_audit_report.md","prod281_300_report.md"]
+        pats=["prod301_320_real_graph_case_aggregate.md","prod301_320_real_graph_case_readiness.md","prod301_320_audit_report.md","prod301_320_report.md"]
         return {"status":"PASS","reports":[{"name":p,"exists":(self.outputs_root/p).exists(),"path":str(self.outputs_root/p),"preview":read_text(self.outputs_root/p)[:1200] if (self.outputs_root/p).exists() else ""} for p in pats]}

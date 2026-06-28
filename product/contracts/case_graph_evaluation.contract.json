@@ -1,0 +1,4 @@
+{
+  "contract": "casulo.case_graph_evaluation.v0.1",
+  "purpose": "Evaluate generated graph telemetry, clusters, issue candidates and practical closure by case."
+}

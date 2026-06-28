@@ -1,0 +1,27 @@
+{
+  "contract_version": "casulo.real_anonymized_graph_case_readiness.v0.1",
+  "status": "PASS",
+  "decision": "READY_FOR_REAL_ANONYMIZED_GRAPH_CASE_REVIEW",
+  "run_decision": "PRODUCTION_BLOCKERS_REQUIRE_REVIEW_BEFORE_NEXT_REAL_CASE_BATCH",
+  "ready_for": [
+    "case-by-case graph telemetry review",
+    "case-level issue candidate review",
+    "real/anonymized batch comparison",
+    "next controlled real-case batch"
+  ],
+  "not_ready_for": [
+    "production graph automation",
+    "external client claims",
+    "automatic issue creation",
+    "unredacted sensitive data ingestion"
+  ],
+  "next": "Review P0 blockers, then expand with user-provided anonymized cases.",
+  "blocked_actions": [
+    "client_facing_claim",
+    "automatic_nomination",
+    "implementation_execution",
+    "production_activation",
+    "automatic_merge",
+    "credential_handling"
+  ]
+}

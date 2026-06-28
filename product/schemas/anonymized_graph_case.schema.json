@@ -1,0 +1,13 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "CASULO Anonymized Graph Case",
+  "type": "object",
+  "required": [
+    "case_id",
+    "title",
+    "domain_family",
+    "input_profile",
+    "evidence_profile",
+    "expected_risks"
+  ]
+}

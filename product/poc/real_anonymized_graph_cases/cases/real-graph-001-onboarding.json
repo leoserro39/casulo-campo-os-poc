@@ -1,0 +1,25 @@
+{
+  "case_id": "REAL-GRAPH-001-ONBOARDING",
+  "title": "Redacted onboarding process mapping",
+  "domain_family": [
+    "process_operations",
+    "enterprise_knowledge"
+  ],
+  "input_profile": {
+    "description": "Anonymized onboarding workflow with unclear owner, missing evidence and several process handoffs.",
+    "source_type": "redacted_process_brief",
+    "redaction_level": "high"
+  },
+  "evidence_profile": {
+    "evidence_strength": 54,
+    "missing_artifacts": 3,
+    "conflict_level": 22,
+    "ambiguity_level": 63
+  },
+  "expected_risks": [
+    "delta_domain",
+    "delta_evidence",
+    "delta_missingness",
+    "delta_graph_structure"
+  ]
+}

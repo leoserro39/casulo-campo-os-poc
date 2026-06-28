@@ -1,0 +1,12 @@
+{
+  "contract": "casulo.real_case_gate_policy.v0.1",
+  "purpose": "Keep all real/anonymized cases controlled, evidence-gated and non-production.",
+  "blocked_actions": [
+    "client_facing_claim",
+    "automatic_nomination",
+    "implementation_execution",
+    "production_activation",
+    "automatic_merge",
+    "credential_handling"
+  ]
+}

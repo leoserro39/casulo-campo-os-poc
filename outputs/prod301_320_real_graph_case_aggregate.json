@@ -1,0 +1,48 @@
+{
+  "status": "PASS",
+  "case_count": 4,
+  "decision": "PRODUCTION_BLOCKERS_REQUIRE_REVIEW_BEFORE_NEXT_REAL_CASE_BATCH",
+  "aggregate_metrics": {
+    "total_nodes": 54,
+    "total_edges": 86,
+    "total_tasks": 140,
+    "total_clusters": 23,
+    "total_issue_candidates": 23,
+    "total_p0_blockers": 11,
+    "gate_counts": {
+      "HUMAN_REVIEW_REQUIRED": 31,
+      "ASK_FOR_EVIDENCE": 59,
+      "TASK_ONLY": 25,
+      "STRUCTURE_ONLY": 21,
+      "BLOCKED_UNSUPPORTED": 4
+    },
+    "delta_counts": {
+      "delta_domain": 17,
+      "delta_evidence": 59,
+      "delta_missingness": 3,
+      "delta_graph_structure": 12,
+      "delta_model_behavior": 16,
+      "delta_rule": 3,
+      "delta_conflict": 8,
+      "delta_human_review": 6,
+      "delta_execution": 6,
+      "delta_production": 4,
+      "delta_ambiguity": 6
+    },
+    "priority_counts": {
+      "P0_BLOCKER": 11,
+      "P1_REVIEW": 2,
+      "P2_EVIDENCE_OR_TASK": 6,
+      "P3_STRUCTURE": 4
+    }
+  },
+  "interpretation": "Real-like anonymized cases produced candidate graphs, telemetry, task clusters and issue candidates without production automation.",
+  "blocked_actions": [
+    "client_facing_claim",
+    "automatic_nomination",
+    "implementation_execution",
+    "production_activation",
+    "automatic_merge",
+    "credential_handling"
+  ]
+}

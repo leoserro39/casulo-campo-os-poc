@@ -1,0 +1,740 @@
+{
+  "case_id": "REAL-GRAPH-001-ONBOARDING",
+  "title": "Redacted onboarding process mapping",
+  "status": "PASS",
+  "decision": "P0_BLOCKERS_REQUIRE_REVIEW",
+  "graph": {
+    "graph_id": "RAGC-REAL-GRAPH-001-ONBOARDING",
+    "case_id": "REAL-GRAPH-001-ONBOARDING",
+    "mode": "real_like_anonymized_candidate_graph",
+    "nodes": [
+      {
+        "node_id": "RAGC-REAL-GRAPH-001-ONBOARDING-N01",
+        "node_type": "artifact",
+        "domain": "process_operations",
+        "confidence": 71,
+        "evidence_strength": 36,
+        "primary_delta": "delta_domain",
+        "active_deltas": [
+          "delta_domain",
+          "delta_evidence"
+        ],
+        "recommended_control": "require_domain_owner",
+        "recommended_gate": "HUMAN_REVIEW_REQUIRED",
+        "candidate": true
+      },
+      {
+        "node_id": "RAGC-REAL-GRAPH-001-ONBOARDING-N02",
+        "node_type": "entity",
+        "domain": "enterprise_knowledge",
+        "confidence": 65,
+        "evidence_strength": 39,
+        "primary_delta": "delta_evidence",
+        "active_deltas": [
+          "delta_evidence",
+          "delta_graph_structure"
+        ],
+        "recommended_control": "require_evidence",
+        "recommended_gate": "ASK_FOR_EVIDENCE",
+        "candidate": true
+      },
+      {
+        "node_id": "RAGC-REAL-GRAPH-001-ONBOARDING-N03",
+        "node_type": "entity",
+        "domain": "process_operations",
+        "confidence": 54,
+        "evidence_strength": 63,
+        "primary_delta": "delta_missingness",
+        "active_deltas": [
+          "delta_graph_structure",
+          "delta_missingness"
+        ],
+        "recommended_control": "generate_missing_artifact_task",
+        "recommended_gate": "TASK_ONLY",
+        "candidate": true
+      },
+      {
+        "node_id": "RAGC-REAL-GRAPH-001-ONBOARDING-N04",
+        "node_type": "artifact",
+        "domain": "process_operations",
+        "confidence": 37,
+        "evidence_strength": 36,
+        "primary_delta": "delta_graph_structure",
+        "active_deltas": [
+          "delta_evidence",
+          "delta_graph_structure",
+          "delta_model_behavior"
+        ],
+        "recommended_control": "graph_repair_suggestion",
+        "recommended_gate": "STRUCTURE_ONLY",
+        "candidate": true
+      },
+      {
+        "node_id": "RAGC-REAL-GRAPH-001-ONBOARDING-N05",
+        "node_type": "decision",
+        "domain": "process_operations",
+        "confidence": 42,
+        "evidence_strength": 57,
+        "primary_delta": "delta_evidence",
+        "active_deltas": [
+          "delta_evidence",
+          "delta_missingness"
+        ],
+        "recommended_control": "require_evidence",
+        "recommended_gate": "ASK_FOR_EVIDENCE",
+        "candidate": true
+      },
+      {
+        "node_id": "RAGC-REAL-GRAPH-001-ONBOARDING-N06",
+        "node_type": "control",
+        "domain": "process_operations",
+        "confidence": 60,
+        "evidence_strength": 58,
+        "primary_delta": "delta_evidence",
+        "active_deltas": [
+          "delta_evidence",
+          "delta_model_behavior"
+        ],
+        "recommended_control": "require_evidence",
+        "recommended_gate": "ASK_FOR_EVIDENCE",
+        "candidate": true
+      },
+      {
+        "node_id": "RAGC-REAL-GRAPH-001-ONBOARDING-N07",
+        "node_type": "evidence",
+        "domain": "enterprise_knowledge",
+        "confidence": 52,
+        "evidence_strength": 72,
+        "primary_delta": "delta_graph_structure",
+        "active_deltas": [
+          "delta_evidence",
+          "delta_graph_structure",
+          "delta_missingness"
+        ],
+        "recommended_control": "graph_repair_suggestion",
+        "recommended_gate": "STRUCTURE_ONLY",
+        "candidate": true
+      },
+      {
+        "node_id": "RAGC-REAL-GRAPH-001-ONBOARDING-N08",
+        "node_type": "entity",
+        "domain": "process_operations",
+        "confidence": 39,
+        "evidence_strength": 46,
+        "primary_delta": "delta_domain",
+        "active_deltas": [
+          "delta_domain",
+          "delta_evidence",
+          "delta_missingness"
+        ],
+        "recommended_control": "require_domain_owner",
+        "recommended_gate": "HUMAN_REVIEW_REQUIRED",
+        "candidate": true
+      },
+      {
+        "node_id": "RAGC-REAL-GRAPH-001-ONBOARDING-N09",
+        "node_type": "state",
+        "domain": "enterprise_knowledge",
+        "confidence": 69,
+        "evidence_strength": 32,
+        "primary_delta": "delta_model_behavior",
+        "active_deltas": [
+          "delta_graph_structure",
+          "delta_missingness",
+          "delta_model_behavior"
+        ],
+        "recommended_control": "calibration_review",
+        "recommended_gate": "TASK_ONLY",
+        "candidate": true
+      },
+      {
+        "node_id": "RAGC-REAL-GRAPH-001-ONBOARDING-N10",
+        "node_type": "state",
+        "domain": "enterprise_knowledge",
+        "confidence": 63,
+        "evidence_strength": 55,
+        "primary_delta": "delta_graph_structure",
+        "active_deltas": [
+          "delta_evidence",
+          "delta_graph_structure"
+        ],
+        "recommended_control": "graph_repair_suggestion",
+        "recommended_gate": "STRUCTURE_ONLY",
+        "candidate": true
+      },
+      {
+        "node_id": "RAGC-REAL-GRAPH-001-ONBOARDING-N11",
+        "node_type": "entity",
+        "domain": "process_operations",
+        "confidence": 68,
+        "evidence_strength": 58,
+        "primary_delta": "delta_evidence",
+        "active_deltas": [
+          "delta_evidence",
+          "delta_missingness",
+          "delta_model_behavior"
+        ],
+        "recommended_control": "require_evidence",
+        "recommended_gate": "ASK_FOR_EVIDENCE",
+        "candidate": true
+      },
+      {
+        "node_id": "RAGC-REAL-GRAPH-001-ONBOARDING-N12",
+        "node_type": "state",
+        "domain": "enterprise_knowledge",
+        "confidence": 71,
+        "evidence_strength": 45,
+        "primary_delta": "delta_evidence",
+        "active_deltas": [
+          "delta_domain",
+          "delta_evidence",
+          "delta_missingness"
+        ],
+        "recommended_control": "require_evidence",
+        "recommended_gate": "ASK_FOR_EVIDENCE",
+        "candidate": true
+      },
+      {
+        "node_id": "RAGC-REAL-GRAPH-001-ONBOARDING-N13",
+        "node_type": "control",
+        "domain": "process_operations",
+        "confidence": 69,
+        "evidence_strength": 38,
+        "primary_delta": "delta_graph_structure",
+        "active_deltas": [
+          "delta_domain",
+          "delta_evidence",
+          "delta_graph_structure"
+        ],
+        "recommended_control": "graph_repair_suggestion",
+        "recommended_gate": "STRUCTURE_ONLY",
+        "candidate": true
+      }
+    ],
+    "edges": [
+      {
+        "edge_id": "RAGC-REAL-GRAPH-001-ONBOARDING-E01",
+        "from": "RAGC-REAL-GRAPH-001-ONBOARDING-N13",
+        "to": "RAGC-REAL-GRAPH-001-ONBOARDING-N10",
+        "relation": "requires",
+        "primary_delta": "delta_evidence",
+        "recommended_control": "require_evidence",
+        "recommended_gate": "ASK_FOR_EVIDENCE",
+        "candidate": true,
+        "material_delta_change": 4
+      },
+      {
+        "edge_id": "RAGC-REAL-GRAPH-001-ONBOARDING-E02",
+        "from": "RAGC-REAL-GRAPH-001-ONBOARDING-N03",
+        "to": "RAGC-REAL-GRAPH-001-ONBOARDING-N01",
+        "relation": "challenges",
+        "primary_delta": "delta_graph_structure",
+        "recommended_control": "graph_repair_suggestion",
+        "recommended_gate": "STRUCTURE_ONLY",
+        "candidate": true,
+        "material_delta_change": 1
+      },
+      {
+        "edge_id": "RAGC-REAL-GRAPH-001-ONBOARDING-E03",
+        "from": "RAGC-REAL-GRAPH-001-ONBOARDING-N05",
+        "to": "RAGC-REAL-GRAPH-001-ONBOARDING-N01",
+        "relation": "blocks",
+        "primary_delta": "delta_evidence",
+        "recommended_control": "require_evidence",
+        "recommended_gate": "ASK_FOR_EVIDENCE",
+        "candidate": true,
+        "material_delta_change": 19
+      },
+      {
+        "edge_id": "RAGC-REAL-GRAPH-001-ONBOARDING-E04",
+        "from": "RAGC-REAL-GRAPH-001-ONBOARDING-N10",
+        "to": "RAGC-REAL-GRAPH-001-ONBOARDING-N03",
+        "relation": "constrains",
+        "primary_delta": "delta_graph_structure",
+        "recommended_control": "graph_repair_suggestion",
+        "recommended_gate": "STRUCTURE_ONLY",
+        "candidate": true,
+        "material_delta_change": 17
+      },
+      {
+        "edge_id": "RAGC-REAL-GRAPH-001-ONBOARDING-E05",
+        "from": "RAGC-REAL-GRAPH-001-ONBOARDING-N09",
+        "to": "RAGC-REAL-GRAPH-001-ONBOARDING-N10",
+        "relation": "challenges",
+        "primary_delta": "delta_graph_structure",
+        "recommended_control": "graph_repair_suggestion",
+        "recommended_gate": "STRUCTURE_ONLY",
+        "candidate": true,
+        "material_delta_change": 4
+      },
+      {
+        "edge_id": "RAGC-REAL-GRAPH-001-ONBOARDING-E06",
+        "from": "RAGC-REAL-GRAPH-001-ONBOARDING-N02",
+        "to": "RAGC-REAL-GRAPH-001-ONBOARDING-N06",
+        "relation": "depends_on",
+        "primary_delta": "delta_evidence",
+        "recommended_control": "require_evidence",
+        "recommended_gate": "ASK_FOR_EVIDENCE",
+        "candidate": true,
+        "material_delta_change": 0
+      },
+      {
+        "edge_id": "RAGC-REAL-GRAPH-001-ONBOARDING-E07",
+        "from": "RAGC-REAL-GRAPH-001-ONBOARDING-N13",
+        "to": "RAGC-REAL-GRAPH-001-ONBOARDING-N12",
+        "relation": "routes_to",
+        "primary_delta": "delta_domain",
+        "recommended_control": "require_domain_owner",
+        "recommended_gate": "HUMAN_REVIEW_REQUIRED",
+        "candidate": true,
+        "material_delta_change": 2
+      },
+      {
+        "edge_id": "RAGC-REAL-GRAPH-001-ONBOARDING-E08",
+        "from": "RAGC-REAL-GRAPH-001-ONBOARDING-N09",
+        "to": "RAGC-REAL-GRAPH-001-ONBOARDING-N01",
+        "relation": "requires",
+        "primary_delta": "delta_domain",
+        "recommended_control": "require_domain_owner",
+        "recommended_gate": "HUMAN_REVIEW_REQUIRED",
+        "candidate": true,
+        "material_delta_change": 6
+      },
+      {
+        "edge_id": "RAGC-REAL-GRAPH-001-ONBOARDING-E09",
+        "from": "RAGC-REAL-GRAPH-001-ONBOARDING-N08",
+        "to": "RAGC-REAL-GRAPH-001-ONBOARDING-N06",
+        "relation": "challenges",
+        "primary_delta": "delta_evidence",
+        "recommended_control": "require_evidence",
+        "recommended_gate": "ASK_FOR_EVIDENCE",
+        "candidate": true,
+        "material_delta_change": 4
+      },
+      {
+        "edge_id": "RAGC-REAL-GRAPH-001-ONBOARDING-E10",
+        "from": "RAGC-REAL-GRAPH-001-ONBOARDING-N02",
+        "to": "RAGC-REAL-GRAPH-001-ONBOARDING-N12",
+        "relation": "requires",
+        "primary_delta": "delta_evidence",
+        "recommended_control": "require_evidence",
+        "recommended_gate": "ASK_FOR_EVIDENCE",
+        "candidate": true,
+        "material_delta_change": 5
+      },
+      {
+        "edge_id": "RAGC-REAL-GRAPH-001-ONBOARDING-E11",
+        "from": "RAGC-REAL-GRAPH-001-ONBOARDING-N09",
+        "to": "RAGC-REAL-GRAPH-001-ONBOARDING-N05",
+        "relation": "requires",
+        "primary_delta": "delta_missingness",
+        "recommended_control": "generate_missing_artifact_task",
+        "recommended_gate": "TASK_ONLY",
+        "candidate": true,
+        "material_delta_change": 9
+      },
+      {
+        "edge_id": "RAGC-REAL-GRAPH-001-ONBOARDING-E12",
+        "from": "RAGC-REAL-GRAPH-001-ONBOARDING-N03",
+        "to": "RAGC-REAL-GRAPH-001-ONBOARDING-N06",
+        "relation": "supports",
+        "primary_delta": "delta_model_behavior",
+        "recommended_control": "calibration_review",
+        "recommended_gate": "TASK_ONLY",
+        "candidate": true,
+        "material_delta_change": 8
+      },
+      {
+        "edge_id": "RAGC-REAL-GRAPH-001-ONBOARDING-E13",
+        "from": "RAGC-REAL-GRAPH-001-ONBOARDING-N11",
+        "to": "RAGC-REAL-GRAPH-001-ONBOARDING-N03",
+        "relation": "routes_to",
+        "primary_delta": "delta_missingness",
+        "recommended_control": "generate_missing_artifact_task",
+        "recommended_gate": "TASK_ONLY",
+        "candidate": true,
+        "material_delta_change": 3
+      },
+      {
+        "edge_id": "RAGC-REAL-GRAPH-001-ONBOARDING-E14",
+        "from": "RAGC-REAL-GRAPH-001-ONBOARDING-N06",
+        "to": "RAGC-REAL-GRAPH-001-ONBOARDING-N02",
+        "relation": "requires",
+        "primary_delta": "delta_evidence",
+        "recommended_control": "require_evidence",
+        "recommended_gate": "ASK_FOR_EVIDENCE",
+        "candidate": true,
+        "material_delta_change": 13
+      },
+      {
+        "edge_id": "RAGC-REAL-GRAPH-001-ONBOARDING-E15",
+        "from": "RAGC-REAL-GRAPH-001-ONBOARDING-N11",
+        "to": "RAGC-REAL-GRAPH-001-ONBOARDING-N07",
+        "relation": "constrains",
+        "primary_delta": "delta_evidence",
+        "recommended_control": "require_evidence",
+        "recommended_gate": "ASK_FOR_EVIDENCE",
+        "candidate": true,
+        "material_delta_change": 4
+      },
+      {
+        "edge_id": "RAGC-REAL-GRAPH-001-ONBOARDING-E16",
+        "from": "RAGC-REAL-GRAPH-001-ONBOARDING-N11",
+        "to": "RAGC-REAL-GRAPH-001-ONBOARDING-N02",
+        "relation": "supports",
+        "primary_delta": "delta_evidence",
+        "recommended_control": "require_evidence",
+        "recommended_gate": "ASK_FOR_EVIDENCE",
+        "candidate": true,
+        "material_delta_change": 13
+      },
+      {
+        "edge_id": "RAGC-REAL-GRAPH-001-ONBOARDING-E17",
+        "from": "RAGC-REAL-GRAPH-001-ONBOARDING-N09",
+        "to": "RAGC-REAL-GRAPH-001-ONBOARDING-N06",
+        "relation": "produces",
+        "primary_delta": "delta_model_behavior",
+        "recommended_control": "calibration_review",
+        "recommended_gate": "TASK_ONLY",
+        "candidate": true,
+        "material_delta_change": 13
+      },
+      {
+        "edge_id": "RAGC-REAL-GRAPH-001-ONBOARDING-E18",
+        "from": "RAGC-REAL-GRAPH-001-ONBOARDING-N12",
+        "to": "RAGC-REAL-GRAPH-001-ONBOARDING-N11",
+        "relation": "depends_on",
+        "primary_delta": "delta_evidence",
+        "recommended_control": "require_evidence",
+        "recommended_gate": "ASK_FOR_EVIDENCE",
+        "candidate": true,
+        "material_delta_change": 3
+      },
+      {
+        "edge_id": "RAGC-REAL-GRAPH-001-ONBOARDING-E19",
+        "from": "RAGC-REAL-GRAPH-001-ONBOARDING-N12",
+        "to": "RAGC-REAL-GRAPH-001-ONBOARDING-N08",
+        "relation": "routes_to",
+        "primary_delta": "delta_domain",
+        "recommended_control": "require_domain_owner",
+        "recommended_gate": "HUMAN_REVIEW_REQUIRED",
+        "candidate": true,
+        "material_delta_change": 12
+      },
+      {
+        "edge_id": "RAGC-REAL-GRAPH-001-ONBOARDING-E20",
+        "from": "RAGC-REAL-GRAPH-001-ONBOARDING-N12",
+        "to": "RAGC-REAL-GRAPH-001-ONBOARDING-N04",
+        "relation": "supports",
+        "primary_delta": "delta_evidence",
+        "recommended_control": "require_evidence",
+        "recommended_gate": "ASK_FOR_EVIDENCE",
+        "candidate": true,
+        "material_delta_change": 7
+      },
+      {
+        "edge_id": "RAGC-REAL-GRAPH-001-ONBOARDING-E21",
+        "from": "RAGC-REAL-GRAPH-001-ONBOARDING-N10",
+        "to": "RAGC-REAL-GRAPH-001-ONBOARDING-N08",
+        "relation": "depends_on",
+        "primary_delta": "delta_evidence",
+        "recommended_control": "require_evidence",
+        "recommended_gate": "ASK_FOR_EVIDENCE",
+        "candidate": true,
+        "material_delta_change": 17
+      },
+      {
+        "edge_id": "RAGC-REAL-GRAPH-001-ONBOARDING-E22",
+        "from": "RAGC-REAL-GRAPH-001-ONBOARDING-N06",
+        "to": "RAGC-REAL-GRAPH-001-ONBOARDING-N08",
+        "relation": "challenges",
+        "primary_delta": "delta_evidence",
+        "recommended_control": "require_evidence",
+        "recommended_gate": "ASK_FOR_EVIDENCE",
+        "candidate": true,
+        "material_delta_change": 1
+      }
+    ],
+    "telemetry_summary": {
+      "gate_counts": {
+        "HUMAN_REVIEW_REQUIRED": 5,
+        "ASK_FOR_EVIDENCE": 17,
+        "TASK_ONLY": 6,
+        "STRUCTURE_ONLY": 7
+      },
+      "delta_counts": {
+        "delta_domain": 5,
+        "delta_evidence": 17,
+        "delta_missingness": 3,
+        "delta_graph_structure": 7,
+        "delta_model_behavior": 3
+      },
+      "control_counts": {
+        "require_domain_owner": 5,
+        "require_evidence": 17,
+        "generate_missing_artifact_task": 3,
+        "graph_repair_suggestion": 7,
+        "calibration_review": 3
+      },
+      "avg_material_delta_change": 7.5,
+      "task_count": 35
+    },
+    "readiness": "HUMAN_REVIEW_REQUIRED",
+    "allowed_actions": [
+      "inspect_graph",
+      "request_evidence",
+      "create_task_candidate",
+      "mark_candidate_edge",
+      "route_human_review"
+    ],
+    "blocked_actions": [
+      "client_facing_claim",
+      "automatic_nomination",
+      "implementation_execution",
+      "production_activation",
+      "automatic_merge",
+      "credential_handling"
+    ]
+  },
+  "task_count": 35,
+  "cluster_count": 5,
+  "issue_candidate_count": 5,
+  "p0_count": 2,
+  "task_clusters": [
+    {
+      "cluster_id": "CLUSTER-001",
+      "source_delta": "delta_domain",
+      "artifact_type": "domain_owner",
+      "recommended_gate": "HUMAN_REVIEW_REQUIRED",
+      "priority": "P0_BLOCKER",
+      "priority_score": 100,
+      "task_count": 5,
+      "task_ids": [
+        "TASK-001",
+        "TASK-008",
+        "TASK-020",
+        "TASK-021",
+        "TASK-032"
+      ],
+      "origins": [
+        "RAGC-REAL-GRAPH-001-ONBOARDING-N01",
+        "RAGC-REAL-GRAPH-001-ONBOARDING-N08",
+        "RAGC-REAL-GRAPH-001-ONBOARDING-E07",
+        "RAGC-REAL-GRAPH-001-ONBOARDING-E08",
+        "RAGC-REAL-GRAPH-001-ONBOARDING-E19"
+      ],
+      "reason": "Assign domain owner for sensitive decision.",
+      "closure_state": "READY_FOR_ISSUE"
+    },
+    {
+      "cluster_id": "CLUSTER-002",
+      "source_delta": "delta_evidence",
+      "artifact_type": "evidence",
+      "recommended_gate": "ASK_FOR_EVIDENCE",
+      "priority": "P0_BLOCKER",
+      "priority_score": 100,
+      "task_count": 17,
+      "task_ids": [
+        "TASK-002",
+        "TASK-005",
+        "TASK-006",
+        "TASK-011",
+        "TASK-012",
+        "TASK-014",
+        "TASK-016",
+        "TASK-019",
+        "TASK-022",
+        "TASK-023",
+        "TASK-027",
+        "TASK-028",
+        "TASK-029",
+        "TASK-031",
+        "TASK-033",
+        "TASK-034",
+        "TASK-035"
+      ],
+      "origins": [
+        "RAGC-REAL-GRAPH-001-ONBOARDING-N02",
+        "RAGC-REAL-GRAPH-001-ONBOARDING-N05",
+        "RAGC-REAL-GRAPH-001-ONBOARDING-N06",
+        "RAGC-REAL-GRAPH-001-ONBOARDING-N11",
+        "RAGC-REAL-GRAPH-001-ONBOARDING-N12",
+        "RAGC-REAL-GRAPH-001-ONBOARDING-E01",
+        "RAGC-REAL-GRAPH-001-ONBOARDING-E03",
+        "RAGC-REAL-GRAPH-001-ONBOARDING-E06",
+        "RAGC-REAL-GRAPH-001-ONBOARDING-E09",
+        "RAGC-REAL-GRAPH-001-ONBOARDING-E10",
+        "RAGC-REAL-GRAPH-001-ONBOARDING-E14",
+        "RAGC-REAL-GRAPH-001-ONBOARDING-E15",
+        "RAGC-REAL-GRAPH-001-ONBOARDING-E16",
+        "RAGC-REAL-GRAPH-001-ONBOARDING-E18",
+        "RAGC-REAL-GRAPH-001-ONBOARDING-E20",
+        "RAGC-REAL-GRAPH-001-ONBOARDING-E21",
+        "RAGC-REAL-GRAPH-001-ONBOARDING-E22"
+      ],
+      "reason": "Attach source/evidence before committing graph relation.",
+      "closure_state": "READY_FOR_ISSUE"
+    },
+    {
+      "cluster_id": "CLUSTER-004",
+      "source_delta": "delta_missingness",
+      "artifact_type": "document",
+      "recommended_gate": "TASK_ONLY",
+      "priority": "P1_REVIEW",
+      "priority_score": 85,
+      "task_count": 3,
+      "task_ids": [
+        "TASK-003",
+        "TASK-024",
+        "TASK-026"
+      ],
+      "origins": [
+        "RAGC-REAL-GRAPH-001-ONBOARDING-N03",
+        "RAGC-REAL-GRAPH-001-ONBOARDING-E11",
+        "RAGC-REAL-GRAPH-001-ONBOARDING-E13"
+      ],
+      "reason": "Provide missing required document, field, test or domain artifact.",
+      "closure_state": "READY_FOR_ISSUE"
+    },
+    {
+      "cluster_id": "CLUSTER-005",
+      "source_delta": "delta_model_behavior",
+      "artifact_type": "calibration_review",
+      "recommended_gate": "TASK_ONLY",
+      "priority": "P2_EVIDENCE_OR_TASK",
+      "priority_score": 77,
+      "task_count": 3,
+      "task_ids": [
+        "TASK-009",
+        "TASK-025",
+        "TASK-030"
+      ],
+      "origins": [
+        "RAGC-REAL-GRAPH-001-ONBOARDING-N09",
+        "RAGC-REAL-GRAPH-001-ONBOARDING-E12",
+        "RAGC-REAL-GRAPH-001-ONBOARDING-E17"
+      ],
+      "reason": "Review anomaly pattern against calibration history.",
+      "closure_state": "READY_FOR_ISSUE"
+    },
+    {
+      "cluster_id": "CLUSTER-003",
+      "source_delta": "delta_graph_structure",
+      "artifact_type": "graph_repair",
+      "recommended_gate": "STRUCTURE_ONLY",
+      "priority": "P2_EVIDENCE_OR_TASK",
+      "priority_score": 71,
+      "task_count": 7,
+      "task_ids": [
+        "TASK-004",
+        "TASK-007",
+        "TASK-010",
+        "TASK-013",
+        "TASK-015",
+        "TASK-017",
+        "TASK-018"
+      ],
+      "origins": [
+        "RAGC-REAL-GRAPH-001-ONBOARDING-N04",
+        "RAGC-REAL-GRAPH-001-ONBOARDING-N07",
+        "RAGC-REAL-GRAPH-001-ONBOARDING-N10",
+        "RAGC-REAL-GRAPH-001-ONBOARDING-N13",
+        "RAGC-REAL-GRAPH-001-ONBOARDING-E02",
+        "RAGC-REAL-GRAPH-001-ONBOARDING-E04",
+        "RAGC-REAL-GRAPH-001-ONBOARDING-E05"
+      ],
+      "reason": "Repair bridge, relation type or orphan node.",
+      "closure_state": "READY_FOR_ISSUE"
+    }
+  ],
+  "issue_candidates": [
+    {
+      "issue_id": "REAL-GRAPH-001-ONBOARDING-ISSUE-CANDIDATE-001",
+      "case_id": "REAL-GRAPH-001-ONBOARDING",
+      "cluster_id": "CLUSTER-001",
+      "title": "[P0_BLOCKER] REAL-GRAPH-001-ONBOARDING: domain_owner required for delta_domain",
+      "priority": "P0_BLOCKER",
+      "labels": [
+        "casulo",
+        "delta-domain",
+        "graph-telemetry",
+        "p0_blocker",
+        "real-graph-case"
+      ],
+      "body": "## Context\nGenerated by CASULO real/anonymized graph case runner.\n\n## Case\n- Case: `REAL-GRAPH-001-ONBOARDING`\n- Cluster: `CLUSTER-001`\n- Source delta: `delta_domain`\n- Artifact type: `domain_owner`\n- Recommended gate: `HUMAN_REVIEW_REQUIRED`\n- Task count: `5`\n\n## Required action\nAssign domain owner for sensitive decision.\n\n## Acceptance criteria\n- Evidence, owner, rule, test or repair artifact is provided.\n- Graph relation remains candidate until supported.\n- No production automation is enabled.\n",
+      "status": "READY_FOR_REVIEW_NOT_CREATED"
+    },
+    {
+      "issue_id": "REAL-GRAPH-001-ONBOARDING-ISSUE-CANDIDATE-002",
+      "case_id": "REAL-GRAPH-001-ONBOARDING",
+      "cluster_id": "CLUSTER-002",
+      "title": "[P0_BLOCKER] REAL-GRAPH-001-ONBOARDING: evidence required for delta_evidence",
+      "priority": "P0_BLOCKER",
+      "labels": [
+        "casulo",
+        "delta-evidence",
+        "graph-telemetry",
+        "p0_blocker",
+        "real-graph-case"
+      ],
+      "body": "## Context\nGenerated by CASULO real/anonymized graph case runner.\n\n## Case\n- Case: `REAL-GRAPH-001-ONBOARDING`\n- Cluster: `CLUSTER-002`\n- Source delta: `delta_evidence`\n- Artifact type: `evidence`\n- Recommended gate: `ASK_FOR_EVIDENCE`\n- Task count: `17`\n\n## Required action\nAttach source/evidence before committing graph relation.\n\n## Acceptance criteria\n- Evidence, owner, rule, test or repair artifact is provided.\n- Graph relation remains candidate until supported.\n- No production automation is enabled.\n",
+      "status": "READY_FOR_REVIEW_NOT_CREATED"
+    },
+    {
+      "issue_id": "REAL-GRAPH-001-ONBOARDING-ISSUE-CANDIDATE-003",
+      "case_id": "REAL-GRAPH-001-ONBOARDING",
+      "cluster_id": "CLUSTER-004",
+      "title": "[P1_REVIEW] REAL-GRAPH-001-ONBOARDING: document required for delta_missingness",
+      "priority": "P1_REVIEW",
+      "labels": [
+        "casulo",
+        "delta-missingness",
+        "graph-telemetry",
+        "p1_review",
+        "real-graph-case"
+      ],
+      "body": "## Context\nGenerated by CASULO real/anonymized graph case runner.\n\n## Case\n- Case: `REAL-GRAPH-001-ONBOARDING`\n- Cluster: `CLUSTER-004`\n- Source delta: `delta_missingness`\n- Artifact type: `document`\n- Recommended gate: `TASK_ONLY`\n- Task count: `3`\n\n## Required action\nProvide missing required document, field, test or domain artifact.\n\n## Acceptance criteria\n- Evidence, owner, rule, test or repair artifact is provided.\n- Graph relation remains candidate until supported.\n- No production automation is enabled.\n",
+      "status": "READY_FOR_REVIEW_NOT_CREATED"
+    },
+    {
+      "issue_id": "REAL-GRAPH-001-ONBOARDING-ISSUE-CANDIDATE-004",
+      "case_id": "REAL-GRAPH-001-ONBOARDING",
+      "cluster_id": "CLUSTER-005",
+      "title": "[P2_EVIDENCE_OR_TASK] REAL-GRAPH-001-ONBOARDING: calibration_review required for delta_model_behavior",
+      "priority": "P2_EVIDENCE_OR_TASK",
+      "labels": [
+        "casulo",
+        "delta-model_behavior",
+        "graph-telemetry",
+        "p2_evidence_or_task",
+        "real-graph-case"
+      ],
+      "body": "## Context\nGenerated by CASULO real/anonymized graph case runner.\n\n## Case\n- Case: `REAL-GRAPH-001-ONBOARDING`\n- Cluster: `CLUSTER-005`\n- Source delta: `delta_model_behavior`\n- Artifact type: `calibration_review`\n- Recommended gate: `TASK_ONLY`\n- Task count: `3`\n\n## Required action\nReview anomaly pattern against calibration history.\n\n## Acceptance criteria\n- Evidence, owner, rule, test or repair artifact is provided.\n- Graph relation remains candidate until supported.\n- No production automation is enabled.\n",
+      "status": "READY_FOR_REVIEW_NOT_CREATED"
+    },
+    {
+      "issue_id": "REAL-GRAPH-001-ONBOARDING-ISSUE-CANDIDATE-005",
+      "case_id": "REAL-GRAPH-001-ONBOARDING",
+      "cluster_id": "CLUSTER-003",
+      "title": "[P2_EVIDENCE_OR_TASK] REAL-GRAPH-001-ONBOARDING: graph_repair required for delta_graph_structure",
+      "priority": "P2_EVIDENCE_OR_TASK",
+      "labels": [
+        "casulo",
+        "delta-graph_structure",
+        "graph-telemetry",
+        "p2_evidence_or_task",
+        "real-graph-case"
+      ],
+      "body": "## Context\nGenerated by CASULO real/anonymized graph case runner.\n\n## Case\n- Case: `REAL-GRAPH-001-ONBOARDING`\n- Cluster: `CLUSTER-003`\n- Source delta: `delta_graph_structure`\n- Artifact type: `graph_repair`\n- Recommended gate: `STRUCTURE_ONLY`\n- Task count: `7`\n\n## Required action\nRepair bridge, relation type or orphan node.\n\n## Acceptance criteria\n- Evidence, owner, rule, test or repair artifact is provided.\n- Graph relation remains candidate until supported.\n- No production automation is enabled.\n",
+      "status": "READY_FOR_REVIEW_NOT_CREATED"
+    }
+  ],
+  "blocked_actions": [
+    "client_facing_claim",
+    "automatic_nomination",
+    "implementation_execution",
+    "production_activation",
+    "automatic_merge",
+    "credential_handling"
+  ]
+}

@@ -1,0 +1,4 @@
+{
+  "contract": "casulo.case_to_backlog_bridge.v0.1",
+  "purpose": "Convert case-level findings into practical backlog candidates without creating issues automatically."
+}

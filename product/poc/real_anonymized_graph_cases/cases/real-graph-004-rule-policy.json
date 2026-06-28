@@ -1,0 +1,25 @@
+{
+  "case_id": "REAL-GRAPH-004-RULE-POLICY",
+  "title": "Redacted policy rule extraction",
+  "domain_family": [
+    "rule_extraction",
+    "enterprise_knowledge"
+  ],
+  "input_profile": {
+    "description": "Anonymized policy excerpt with unclear applicability, rule precedence and exception handling.",
+    "source_type": "redacted_policy_excerpt",
+    "redaction_level": "high"
+  },
+  "evidence_profile": {
+    "evidence_strength": 43,
+    "missing_artifacts": 2,
+    "conflict_level": 45,
+    "ambiguity_level": 77
+  },
+  "expected_risks": [
+    "delta_rule",
+    "delta_ambiguity",
+    "delta_conflict",
+    "delta_domain"
+  ]
+}

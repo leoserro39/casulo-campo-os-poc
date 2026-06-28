@@ -1,0 +1,23 @@
+{
+  "task": "PROD-301..320",
+  "status": "PASS",
+  "phase": "Real Anonymized Graph Case Runner",
+  "decision": "READY_FOR_REAL_ANONYMIZED_GRAPH_CASE_REVIEW",
+  "outputs": [
+    "outputs/prod301_320_real_graph_case_results.json",
+    "outputs/prod301_320_real_graph_case_aggregate.json",
+    "outputs/prod301_320_real_graph_case_aggregate.md",
+    "outputs/prod301_320_real_graph_case_summary.csv",
+    "outputs/prod301_320_real_graph_case_readiness.json",
+    "outputs/prod301_320_audit_report.json"
+  ],
+  "next_recommended_bundle": "PROD-321..340 Graph Case Review Console and Issue Selection",
+  "blocked_actions": [
+    "client_facing_claim",
+    "automatic_nomination",
+    "implementation_execution",
+    "production_activation",
+    "automatic_merge",
+    "credential_handling"
+  ]
+}

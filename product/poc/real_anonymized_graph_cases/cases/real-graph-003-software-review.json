@@ -1,0 +1,25 @@
+{
+  "case_id": "REAL-GRAPH-003-SOFTWARE-REVIEW",
+  "title": "Redacted software release review",
+  "domain_family": [
+    "software_review",
+    "process_operations"
+  ],
+  "input_profile": {
+    "description": "Anonymized release/change summary with test gaps, environment unknowns and production readiness risk.",
+    "source_type": "redacted_release_summary",
+    "redaction_level": "high"
+  },
+  "evidence_profile": {
+    "evidence_strength": 51,
+    "missing_artifacts": 5,
+    "conflict_level": 25,
+    "ambiguity_level": 44
+  },
+  "expected_risks": [
+    "delta_execution",
+    "delta_production",
+    "delta_model_behavior",
+    "delta_evidence"
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "contract": "casulo.anonymized_graph_case.v0.1",
+  "purpose": "Represent a redacted/anonymized process, document, software or rule case without sensitive data.",
+  "required_fields": [
+    "case_id",
+    "domain_family",
+    "input_profile",
+    "evidence_profile",
+    "expected_risks"
+  ]
+}

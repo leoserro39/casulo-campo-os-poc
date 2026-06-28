@@ -1,0 +1,750 @@
+{
+  "case_id": "REAL-GRAPH-003-SOFTWARE-REVIEW",
+  "title": "Redacted software release review",
+  "status": "PASS",
+  "decision": "PRODUCTION_BLOCKED_REVIEW_REQUIRED",
+  "graph": {
+    "graph_id": "RAGC-REAL-GRAPH-003-SOFTWARE-REVIEW",
+    "case_id": "REAL-GRAPH-003-SOFTWARE-REVIEW",
+    "mode": "real_like_anonymized_candidate_graph",
+    "nodes": [
+      {
+        "node_id": "RAGC-REAL-GRAPH-003-SOFTWARE-REVIEW-N01",
+        "node_type": "decision",
+        "domain": "software_review",
+        "confidence": 37,
+        "evidence_strength": 57,
+        "primary_delta": "delta_execution",
+        "active_deltas": [
+          "delta_evidence",
+          "delta_execution",
+          "delta_model_behavior"
+        ],
+        "recommended_control": "require_test_plan",
+        "recommended_gate": "TASK_ONLY",
+        "candidate": true
+      },
+      {
+        "node_id": "RAGC-REAL-GRAPH-003-SOFTWARE-REVIEW-N02",
+        "node_type": "state",
+        "domain": "software_review",
+        "confidence": 64,
+        "evidence_strength": 31,
+        "primary_delta": "delta_production",
+        "active_deltas": [
+          "delta_evidence",
+          "delta_execution",
+          "delta_production"
+        ],
+        "recommended_control": "production_block",
+        "recommended_gate": "BLOCKED_UNSUPPORTED",
+        "candidate": true
+      },
+      {
+        "node_id": "RAGC-REAL-GRAPH-003-SOFTWARE-REVIEW-N03",
+        "node_type": "state",
+        "domain": "software_review",
+        "confidence": 41,
+        "evidence_strength": 37,
+        "primary_delta": "delta_model_behavior",
+        "active_deltas": [
+          "delta_evidence",
+          "delta_model_behavior",
+          "delta_production"
+        ],
+        "recommended_control": "calibration_review",
+        "recommended_gate": "TASK_ONLY",
+        "candidate": true
+      },
+      {
+        "node_id": "RAGC-REAL-GRAPH-003-SOFTWARE-REVIEW-N04",
+        "node_type": "evidence",
+        "domain": "process_operations",
+        "confidence": 35,
+        "evidence_strength": 27,
+        "primary_delta": "delta_evidence",
+        "active_deltas": [
+          "delta_evidence",
+          "delta_execution",
+          "delta_model_behavior"
+        ],
+        "recommended_control": "require_evidence",
+        "recommended_gate": "ASK_FOR_EVIDENCE",
+        "candidate": true
+      },
+      {
+        "node_id": "RAGC-REAL-GRAPH-003-SOFTWARE-REVIEW-N05",
+        "node_type": "decision",
+        "domain": "process_operations",
+        "confidence": 42,
+        "evidence_strength": 59,
+        "primary_delta": "delta_model_behavior",
+        "active_deltas": [
+          "delta_evidence",
+          "delta_graph_structure",
+          "delta_model_behavior"
+        ],
+        "recommended_control": "calibration_review",
+        "recommended_gate": "TASK_ONLY",
+        "candidate": true
+      },
+      {
+        "node_id": "RAGC-REAL-GRAPH-003-SOFTWARE-REVIEW-N06",
+        "node_type": "artifact",
+        "domain": "software_review",
+        "confidence": 66,
+        "evidence_strength": 51,
+        "primary_delta": "delta_evidence",
+        "active_deltas": [
+          "delta_evidence",
+          "delta_execution"
+        ],
+        "recommended_control": "require_evidence",
+        "recommended_gate": "ASK_FOR_EVIDENCE",
+        "candidate": true
+      },
+      {
+        "node_id": "RAGC-REAL-GRAPH-003-SOFTWARE-REVIEW-N07",
+        "node_type": "rule",
+        "domain": "software_review",
+        "confidence": 66,
+        "evidence_strength": 29,
+        "primary_delta": "delta_execution",
+        "active_deltas": [
+          "delta_execution",
+          "delta_model_behavior"
+        ],
+        "recommended_control": "require_test_plan",
+        "recommended_gate": "TASK_ONLY",
+        "candidate": true
+      },
+      {
+        "node_id": "RAGC-REAL-GRAPH-003-SOFTWARE-REVIEW-N08",
+        "node_type": "task",
+        "domain": "software_review",
+        "confidence": 54,
+        "evidence_strength": 30,
+        "primary_delta": "delta_production",
+        "active_deltas": [
+          "delta_execution",
+          "delta_model_behavior",
+          "delta_production"
+        ],
+        "recommended_control": "production_block",
+        "recommended_gate": "BLOCKED_UNSUPPORTED",
+        "candidate": true
+      },
+      {
+        "node_id": "RAGC-REAL-GRAPH-003-SOFTWARE-REVIEW-N09",
+        "node_type": "task",
+        "domain": "process_operations",
+        "confidence": 65,
+        "evidence_strength": 61,
+        "primary_delta": "delta_model_behavior",
+        "active_deltas": [
+          "delta_evidence",
+          "delta_model_behavior"
+        ],
+        "recommended_control": "calibration_review",
+        "recommended_gate": "TASK_ONLY",
+        "candidate": true
+      },
+      {
+        "node_id": "RAGC-REAL-GRAPH-003-SOFTWARE-REVIEW-N10",
+        "node_type": "state",
+        "domain": "software_review",
+        "confidence": 37,
+        "evidence_strength": 45,
+        "primary_delta": "delta_evidence",
+        "active_deltas": [
+          "delta_evidence"
+        ],
+        "recommended_control": "require_evidence",
+        "recommended_gate": "ASK_FOR_EVIDENCE",
+        "candidate": true
+      },
+      {
+        "node_id": "RAGC-REAL-GRAPH-003-SOFTWARE-REVIEW-N11",
+        "node_type": "state",
+        "domain": "software_review",
+        "confidence": 67,
+        "evidence_strength": 32,
+        "primary_delta": "delta_model_behavior",
+        "active_deltas": [
+          "delta_graph_structure",
+          "delta_model_behavior",
+          "delta_production"
+        ],
+        "recommended_control": "calibration_review",
+        "recommended_gate": "TASK_ONLY",
+        "candidate": true
+      },
+      {
+        "node_id": "RAGC-REAL-GRAPH-003-SOFTWARE-REVIEW-N12",
+        "node_type": "control",
+        "domain": "process_operations",
+        "confidence": 45,
+        "evidence_strength": 61,
+        "primary_delta": "delta_production",
+        "active_deltas": [
+          "delta_graph_structure",
+          "delta_model_behavior",
+          "delta_production"
+        ],
+        "recommended_control": "production_block",
+        "recommended_gate": "BLOCKED_UNSUPPORTED",
+        "candidate": true
+      },
+      {
+        "node_id": "RAGC-REAL-GRAPH-003-SOFTWARE-REVIEW-N13",
+        "node_type": "control",
+        "domain": "process_operations",
+        "confidence": 34,
+        "evidence_strength": 27,
+        "primary_delta": "delta_model_behavior",
+        "active_deltas": [
+          "delta_evidence",
+          "delta_model_behavior"
+        ],
+        "recommended_control": "calibration_review",
+        "recommended_gate": "TASK_ONLY",
+        "candidate": true
+      },
+      {
+        "node_id": "RAGC-REAL-GRAPH-003-SOFTWARE-REVIEW-N14",
+        "node_type": "artifact",
+        "domain": "software_review",
+        "confidence": 55,
+        "evidence_strength": 27,
+        "primary_delta": "delta_evidence",
+        "active_deltas": [
+          "delta_evidence",
+          "delta_execution",
+          "delta_production"
+        ],
+        "recommended_control": "require_evidence",
+        "recommended_gate": "ASK_FOR_EVIDENCE",
+        "candidate": true
+      },
+      {
+        "node_id": "RAGC-REAL-GRAPH-003-SOFTWARE-REVIEW-N15",
+        "node_type": "state",
+        "domain": "software_review",
+        "confidence": 60,
+        "evidence_strength": 62,
+        "primary_delta": "delta_evidence",
+        "active_deltas": [
+          "delta_evidence",
+          "delta_execution",
+          "delta_production"
+        ],
+        "recommended_control": "require_evidence",
+        "recommended_gate": "ASK_FOR_EVIDENCE",
+        "candidate": true
+      }
+    ],
+    "edges": [
+      {
+        "edge_id": "RAGC-REAL-GRAPH-003-SOFTWARE-REVIEW-E01",
+        "from": "RAGC-REAL-GRAPH-003-SOFTWARE-REVIEW-N03",
+        "to": "RAGC-REAL-GRAPH-003-SOFTWARE-REVIEW-N08",
+        "relation": "constrains",
+        "primary_delta": "delta_model_behavior",
+        "recommended_control": "calibration_review",
+        "recommended_gate": "TASK_ONLY",
+        "candidate": true,
+        "material_delta_change": 4
+      },
+      {
+        "edge_id": "RAGC-REAL-GRAPH-003-SOFTWARE-REVIEW-E02",
+        "from": "RAGC-REAL-GRAPH-003-SOFTWARE-REVIEW-N13",
+        "to": "RAGC-REAL-GRAPH-003-SOFTWARE-REVIEW-N03",
+        "relation": "requires",
+        "primary_delta": "delta_evidence",
+        "recommended_control": "require_evidence",
+        "recommended_gate": "ASK_FOR_EVIDENCE",
+        "candidate": true,
+        "material_delta_change": 2
+      },
+      {
+        "edge_id": "RAGC-REAL-GRAPH-003-SOFTWARE-REVIEW-E03",
+        "from": "RAGC-REAL-GRAPH-003-SOFTWARE-REVIEW-N13",
+        "to": "RAGC-REAL-GRAPH-003-SOFTWARE-REVIEW-N04",
+        "relation": "depends_on",
+        "primary_delta": "delta_evidence",
+        "recommended_control": "require_evidence",
+        "recommended_gate": "ASK_FOR_EVIDENCE",
+        "candidate": true,
+        "material_delta_change": 4
+      },
+      {
+        "edge_id": "RAGC-REAL-GRAPH-003-SOFTWARE-REVIEW-E04",
+        "from": "RAGC-REAL-GRAPH-003-SOFTWARE-REVIEW-N01",
+        "to": "RAGC-REAL-GRAPH-003-SOFTWARE-REVIEW-N07",
+        "relation": "supports",
+        "primary_delta": "delta_execution",
+        "recommended_control": "require_test_plan",
+        "recommended_gate": "TASK_ONLY",
+        "candidate": true,
+        "material_delta_change": 8
+      },
+      {
+        "edge_id": "RAGC-REAL-GRAPH-003-SOFTWARE-REVIEW-E05",
+        "from": "RAGC-REAL-GRAPH-003-SOFTWARE-REVIEW-N04",
+        "to": "RAGC-REAL-GRAPH-003-SOFTWARE-REVIEW-N10",
+        "relation": "constrains",
+        "primary_delta": "delta_evidence",
+        "recommended_control": "require_evidence",
+        "recommended_gate": "ASK_FOR_EVIDENCE",
+        "candidate": true,
+        "material_delta_change": 9
+      },
+      {
+        "edge_id": "RAGC-REAL-GRAPH-003-SOFTWARE-REVIEW-E06",
+        "from": "RAGC-REAL-GRAPH-003-SOFTWARE-REVIEW-N05",
+        "to": "RAGC-REAL-GRAPH-003-SOFTWARE-REVIEW-N07",
+        "relation": "produces",
+        "primary_delta": "delta_model_behavior",
+        "recommended_control": "calibration_review",
+        "recommended_gate": "TASK_ONLY",
+        "candidate": true,
+        "material_delta_change": 18
+      },
+      {
+        "edge_id": "RAGC-REAL-GRAPH-003-SOFTWARE-REVIEW-E07",
+        "from": "RAGC-REAL-GRAPH-003-SOFTWARE-REVIEW-N15",
+        "to": "RAGC-REAL-GRAPH-003-SOFTWARE-REVIEW-N09",
+        "relation": "produces",
+        "primary_delta": "delta_evidence",
+        "recommended_control": "require_evidence",
+        "recommended_gate": "ASK_FOR_EVIDENCE",
+        "candidate": true,
+        "material_delta_change": 17
+      },
+      {
+        "edge_id": "RAGC-REAL-GRAPH-003-SOFTWARE-REVIEW-E08",
+        "from": "RAGC-REAL-GRAPH-003-SOFTWARE-REVIEW-N15",
+        "to": "RAGC-REAL-GRAPH-003-SOFTWARE-REVIEW-N05",
+        "relation": "constrains",
+        "primary_delta": "delta_evidence",
+        "recommended_control": "require_evidence",
+        "recommended_gate": "ASK_FOR_EVIDENCE",
+        "candidate": true,
+        "material_delta_change": 1
+      },
+      {
+        "edge_id": "RAGC-REAL-GRAPH-003-SOFTWARE-REVIEW-E09",
+        "from": "RAGC-REAL-GRAPH-003-SOFTWARE-REVIEW-N02",
+        "to": "RAGC-REAL-GRAPH-003-SOFTWARE-REVIEW-N04",
+        "relation": "depends_on",
+        "primary_delta": "delta_evidence",
+        "recommended_control": "require_evidence",
+        "recommended_gate": "ASK_FOR_EVIDENCE",
+        "candidate": true,
+        "material_delta_change": 1
+      },
+      {
+        "edge_id": "RAGC-REAL-GRAPH-003-SOFTWARE-REVIEW-E10",
+        "from": "RAGC-REAL-GRAPH-003-SOFTWARE-REVIEW-N06",
+        "to": "RAGC-REAL-GRAPH-003-SOFTWARE-REVIEW-N01",
+        "relation": "routes_to",
+        "primary_delta": "delta_evidence",
+        "recommended_control": "require_evidence",
+        "recommended_gate": "ASK_FOR_EVIDENCE",
+        "candidate": true,
+        "material_delta_change": 3
+      },
+      {
+        "edge_id": "RAGC-REAL-GRAPH-003-SOFTWARE-REVIEW-E11",
+        "from": "RAGC-REAL-GRAPH-003-SOFTWARE-REVIEW-N12",
+        "to": "RAGC-REAL-GRAPH-003-SOFTWARE-REVIEW-N11",
+        "relation": "produces",
+        "primary_delta": "delta_graph_structure",
+        "recommended_control": "graph_repair_suggestion",
+        "recommended_gate": "STRUCTURE_ONLY",
+        "candidate": true,
+        "material_delta_change": 18
+      },
+      {
+        "edge_id": "RAGC-REAL-GRAPH-003-SOFTWARE-REVIEW-E12",
+        "from": "RAGC-REAL-GRAPH-003-SOFTWARE-REVIEW-N03",
+        "to": "RAGC-REAL-GRAPH-003-SOFTWARE-REVIEW-N02",
+        "relation": "blocks",
+        "primary_delta": "delta_evidence",
+        "recommended_control": "require_evidence",
+        "recommended_gate": "ASK_FOR_EVIDENCE",
+        "candidate": true,
+        "material_delta_change": 0
+      },
+      {
+        "edge_id": "RAGC-REAL-GRAPH-003-SOFTWARE-REVIEW-E13",
+        "from": "RAGC-REAL-GRAPH-003-SOFTWARE-REVIEW-N08",
+        "to": "RAGC-REAL-GRAPH-003-SOFTWARE-REVIEW-N04",
+        "relation": "requires",
+        "primary_delta": "delta_execution",
+        "recommended_control": "require_test_plan",
+        "recommended_gate": "TASK_ONLY",
+        "candidate": true,
+        "material_delta_change": 5
+      },
+      {
+        "edge_id": "RAGC-REAL-GRAPH-003-SOFTWARE-REVIEW-E14",
+        "from": "RAGC-REAL-GRAPH-003-SOFTWARE-REVIEW-N09",
+        "to": "RAGC-REAL-GRAPH-003-SOFTWARE-REVIEW-N01",
+        "relation": "depends_on",
+        "primary_delta": "delta_evidence",
+        "recommended_control": "require_evidence",
+        "recommended_gate": "ASK_FOR_EVIDENCE",
+        "candidate": true,
+        "material_delta_change": 19
+      },
+      {
+        "edge_id": "RAGC-REAL-GRAPH-003-SOFTWARE-REVIEW-E15",
+        "from": "RAGC-REAL-GRAPH-003-SOFTWARE-REVIEW-N01",
+        "to": "RAGC-REAL-GRAPH-003-SOFTWARE-REVIEW-N04",
+        "relation": "blocks",
+        "primary_delta": "delta_evidence",
+        "recommended_control": "require_evidence",
+        "recommended_gate": "ASK_FOR_EVIDENCE",
+        "candidate": true,
+        "material_delta_change": 19
+      },
+      {
+        "edge_id": "RAGC-REAL-GRAPH-003-SOFTWARE-REVIEW-E16",
+        "from": "RAGC-REAL-GRAPH-003-SOFTWARE-REVIEW-N02",
+        "to": "RAGC-REAL-GRAPH-003-SOFTWARE-REVIEW-N12",
+        "relation": "produces",
+        "primary_delta": "delta_production",
+        "recommended_control": "production_block",
+        "recommended_gate": "BLOCKED_UNSUPPORTED",
+        "candidate": true,
+        "material_delta_change": 14
+      },
+      {
+        "edge_id": "RAGC-REAL-GRAPH-003-SOFTWARE-REVIEW-E17",
+        "from": "RAGC-REAL-GRAPH-003-SOFTWARE-REVIEW-N08",
+        "to": "RAGC-REAL-GRAPH-003-SOFTWARE-REVIEW-N14",
+        "relation": "depends_on",
+        "primary_delta": "delta_execution",
+        "recommended_control": "require_test_plan",
+        "recommended_gate": "TASK_ONLY",
+        "candidate": true,
+        "material_delta_change": 12
+      },
+      {
+        "edge_id": "RAGC-REAL-GRAPH-003-SOFTWARE-REVIEW-E18",
+        "from": "RAGC-REAL-GRAPH-003-SOFTWARE-REVIEW-N15",
+        "to": "RAGC-REAL-GRAPH-003-SOFTWARE-REVIEW-N02",
+        "relation": "produces",
+        "primary_delta": "delta_evidence",
+        "recommended_control": "require_evidence",
+        "recommended_gate": "ASK_FOR_EVIDENCE",
+        "candidate": true,
+        "material_delta_change": 3
+      },
+      {
+        "edge_id": "RAGC-REAL-GRAPH-003-SOFTWARE-REVIEW-E19",
+        "from": "RAGC-REAL-GRAPH-003-SOFTWARE-REVIEW-N04",
+        "to": "RAGC-REAL-GRAPH-003-SOFTWARE-REVIEW-N13",
+        "relation": "blocks",
+        "primary_delta": "delta_evidence",
+        "recommended_control": "require_evidence",
+        "recommended_gate": "ASK_FOR_EVIDENCE",
+        "candidate": true,
+        "material_delta_change": 9
+      },
+      {
+        "edge_id": "RAGC-REAL-GRAPH-003-SOFTWARE-REVIEW-E20",
+        "from": "RAGC-REAL-GRAPH-003-SOFTWARE-REVIEW-N07",
+        "to": "RAGC-REAL-GRAPH-003-SOFTWARE-REVIEW-N06",
+        "relation": "constrains",
+        "primary_delta": "delta_execution",
+        "recommended_control": "require_test_plan",
+        "recommended_gate": "TASK_ONLY",
+        "candidate": true,
+        "material_delta_change": 10
+      }
+    ],
+    "telemetry_summary": {
+      "gate_counts": {
+        "TASK_ONLY": 13,
+        "BLOCKED_UNSUPPORTED": 4,
+        "ASK_FOR_EVIDENCE": 17,
+        "STRUCTURE_ONLY": 1
+      },
+      "delta_counts": {
+        "delta_execution": 6,
+        "delta_production": 4,
+        "delta_model_behavior": 7,
+        "delta_evidence": 17,
+        "delta_graph_structure": 1
+      },
+      "control_counts": {
+        "require_test_plan": 6,
+        "production_block": 4,
+        "calibration_review": 7,
+        "require_evidence": 17,
+        "graph_repair_suggestion": 1
+      },
+      "avg_material_delta_change": 8.8,
+      "task_count": 35
+    },
+    "readiness": "PRODUCTION_BLOCKED",
+    "allowed_actions": [
+      "inspect_graph",
+      "request_evidence",
+      "create_task_candidate",
+      "mark_candidate_edge",
+      "route_human_review"
+    ],
+    "blocked_actions": [
+      "client_facing_claim",
+      "automatic_nomination",
+      "implementation_execution",
+      "production_activation",
+      "automatic_merge",
+      "credential_handling"
+    ]
+  },
+  "task_count": 35,
+  "cluster_count": 5,
+  "issue_candidate_count": 5,
+  "p0_count": 3,
+  "task_clusters": [
+    {
+      "cluster_id": "CLUSTER-001",
+      "source_delta": "delta_evidence",
+      "artifact_type": "evidence",
+      "recommended_gate": "ASK_FOR_EVIDENCE",
+      "priority": "P0_BLOCKER",
+      "priority_score": 100,
+      "task_count": 17,
+      "task_ids": [
+        "TASK-004",
+        "TASK-006",
+        "TASK-010",
+        "TASK-014",
+        "TASK-015",
+        "TASK-017",
+        "TASK-018",
+        "TASK-020",
+        "TASK-022",
+        "TASK-023",
+        "TASK-024",
+        "TASK-025",
+        "TASK-027",
+        "TASK-029",
+        "TASK-030",
+        "TASK-033",
+        "TASK-034"
+      ],
+      "origins": [
+        "RAGC-REAL-GRAPH-003-SOFTWARE-REVIEW-N04",
+        "RAGC-REAL-GRAPH-003-SOFTWARE-REVIEW-N06",
+        "RAGC-REAL-GRAPH-003-SOFTWARE-REVIEW-N10",
+        "RAGC-REAL-GRAPH-003-SOFTWARE-REVIEW-N14",
+        "RAGC-REAL-GRAPH-003-SOFTWARE-REVIEW-N15",
+        "RAGC-REAL-GRAPH-003-SOFTWARE-REVIEW-E02",
+        "RAGC-REAL-GRAPH-003-SOFTWARE-REVIEW-E03",
+        "RAGC-REAL-GRAPH-003-SOFTWARE-REVIEW-E05",
+        "RAGC-REAL-GRAPH-003-SOFTWARE-REVIEW-E07",
+        "RAGC-REAL-GRAPH-003-SOFTWARE-REVIEW-E08",
+        "RAGC-REAL-GRAPH-003-SOFTWARE-REVIEW-E09",
+        "RAGC-REAL-GRAPH-003-SOFTWARE-REVIEW-E10",
+        "RAGC-REAL-GRAPH-003-SOFTWARE-REVIEW-E12",
+        "RAGC-REAL-GRAPH-003-SOFTWARE-REVIEW-E14",
+        "RAGC-REAL-GRAPH-003-SOFTWARE-REVIEW-E15",
+        "RAGC-REAL-GRAPH-003-SOFTWARE-REVIEW-E18",
+        "RAGC-REAL-GRAPH-003-SOFTWARE-REVIEW-E19"
+      ],
+      "reason": "Attach source/evidence before committing graph relation.",
+      "closure_state": "READY_FOR_ISSUE"
+    },
+    {
+      "cluster_id": "CLUSTER-005",
+      "source_delta": "delta_production",
+      "artifact_type": "production_readiness",
+      "recommended_gate": "BLOCKED_UNSUPPORTED",
+      "priority": "P0_BLOCKER",
+      "priority_score": 100,
+      "task_count": 4,
+      "task_ids": [
+        "TASK-002",
+        "TASK-008",
+        "TASK-012",
+        "TASK-031"
+      ],
+      "origins": [
+        "RAGC-REAL-GRAPH-003-SOFTWARE-REVIEW-N02",
+        "RAGC-REAL-GRAPH-003-SOFTWARE-REVIEW-N08",
+        "RAGC-REAL-GRAPH-003-SOFTWARE-REVIEW-N12",
+        "RAGC-REAL-GRAPH-003-SOFTWARE-REVIEW-E16"
+      ],
+      "reason": "Provide auth, audit, rollback, monitoring and support plan.",
+      "closure_state": "READY_FOR_ISSUE"
+    },
+    {
+      "cluster_id": "CLUSTER-002",
+      "source_delta": "delta_execution",
+      "artifact_type": "test_plan",
+      "recommended_gate": "TASK_ONLY",
+      "priority": "P0_BLOCKER",
+      "priority_score": 96,
+      "task_count": 6,
+      "task_ids": [
+        "TASK-001",
+        "TASK-007",
+        "TASK-019",
+        "TASK-028",
+        "TASK-032",
+        "TASK-035"
+      ],
+      "origins": [
+        "RAGC-REAL-GRAPH-003-SOFTWARE-REVIEW-N01",
+        "RAGC-REAL-GRAPH-003-SOFTWARE-REVIEW-N07",
+        "RAGC-REAL-GRAPH-003-SOFTWARE-REVIEW-E04",
+        "RAGC-REAL-GRAPH-003-SOFTWARE-REVIEW-E13",
+        "RAGC-REAL-GRAPH-003-SOFTWARE-REVIEW-E17",
+        "RAGC-REAL-GRAPH-003-SOFTWARE-REVIEW-E20"
+      ],
+      "reason": "Provide runtime, dependency and test context before execution.",
+      "closure_state": "READY_FOR_ISSUE"
+    },
+    {
+      "cluster_id": "CLUSTER-004",
+      "source_delta": "delta_model_behavior",
+      "artifact_type": "calibration_review",
+      "recommended_gate": "TASK_ONLY",
+      "priority": "P1_REVIEW",
+      "priority_score": 89,
+      "task_count": 7,
+      "task_ids": [
+        "TASK-003",
+        "TASK-005",
+        "TASK-009",
+        "TASK-011",
+        "TASK-013",
+        "TASK-016",
+        "TASK-021"
+      ],
+      "origins": [
+        "RAGC-REAL-GRAPH-003-SOFTWARE-REVIEW-N03",
+        "RAGC-REAL-GRAPH-003-SOFTWARE-REVIEW-N05",
+        "RAGC-REAL-GRAPH-003-SOFTWARE-REVIEW-N09",
+        "RAGC-REAL-GRAPH-003-SOFTWARE-REVIEW-N11",
+        "RAGC-REAL-GRAPH-003-SOFTWARE-REVIEW-N13",
+        "RAGC-REAL-GRAPH-003-SOFTWARE-REVIEW-E01",
+        "RAGC-REAL-GRAPH-003-SOFTWARE-REVIEW-E06"
+      ],
+      "reason": "Review anomaly pattern against calibration history.",
+      "closure_state": "READY_FOR_ISSUE"
+    },
+    {
+      "cluster_id": "CLUSTER-003",
+      "source_delta": "delta_graph_structure",
+      "artifact_type": "graph_repair",
+      "recommended_gate": "STRUCTURE_ONLY",
+      "priority": "P3_STRUCTURE",
+      "priority_score": 53,
+      "task_count": 1,
+      "task_ids": [
+        "TASK-026"
+      ],
+      "origins": [
+        "RAGC-REAL-GRAPH-003-SOFTWARE-REVIEW-E11"
+      ],
+      "reason": "Repair bridge, relation type or orphan node.",
+      "closure_state": "OPEN_CANDIDATE"
+    }
+  ],
+  "issue_candidates": [
+    {
+      "issue_id": "REAL-GRAPH-003-SOFTWARE-REVIEW-ISSUE-CANDIDATE-001",
+      "case_id": "REAL-GRAPH-003-SOFTWARE-REVIEW",
+      "cluster_id": "CLUSTER-001",
+      "title": "[P0_BLOCKER] REAL-GRAPH-003-SOFTWARE-REVIEW: evidence required for delta_evidence",
+      "priority": "P0_BLOCKER",
+      "labels": [
+        "casulo",
+        "delta-evidence",
+        "graph-telemetry",
+        "p0_blocker",
+        "real-graph-case"
+      ],
+      "body": "## Context\nGenerated by CASULO real/anonymized graph case runner.\n\n## Case\n- Case: `REAL-GRAPH-003-SOFTWARE-REVIEW`\n- Cluster: `CLUSTER-001`\n- Source delta: `delta_evidence`\n- Artifact type: `evidence`\n- Recommended gate: `ASK_FOR_EVIDENCE`\n- Task count: `17`\n\n## Required action\nAttach source/evidence before committing graph relation.\n\n## Acceptance criteria\n- Evidence, owner, rule, test or repair artifact is provided.\n- Graph relation remains candidate until supported.\n- No production automation is enabled.\n",
+      "status": "READY_FOR_REVIEW_NOT_CREATED"
+    },
+    {
+      "issue_id": "REAL-GRAPH-003-SOFTWARE-REVIEW-ISSUE-CANDIDATE-002",
+      "case_id": "REAL-GRAPH-003-SOFTWARE-REVIEW",
+      "cluster_id": "CLUSTER-005",
+      "title": "[P0_BLOCKER] REAL-GRAPH-003-SOFTWARE-REVIEW: production_readiness required for delta_production",
+      "priority": "P0_BLOCKER",
+      "labels": [
+        "casulo",
+        "delta-production",
+        "graph-telemetry",
+        "p0_blocker",
+        "real-graph-case"
+      ],
+      "body": "## Context\nGenerated by CASULO real/anonymized graph case runner.\n\n## Case\n- Case: `REAL-GRAPH-003-SOFTWARE-REVIEW`\n- Cluster: `CLUSTER-005`\n- Source delta: `delta_production`\n- Artifact type: `production_readiness`\n- Recommended gate: `BLOCKED_UNSUPPORTED`\n- Task count: `4`\n\n## Required action\nProvide auth, audit, rollback, monitoring and support plan.\n\n## Acceptance criteria\n- Evidence, owner, rule, test or repair artifact is provided.\n- Graph relation remains candidate until supported.\n- No production automation is enabled.\n",
+      "status": "READY_FOR_REVIEW_NOT_CREATED"
+    },
+    {
+      "issue_id": "REAL-GRAPH-003-SOFTWARE-REVIEW-ISSUE-CANDIDATE-003",
+      "case_id": "REAL-GRAPH-003-SOFTWARE-REVIEW",
+      "cluster_id": "CLUSTER-002",
+      "title": "[P0_BLOCKER] REAL-GRAPH-003-SOFTWARE-REVIEW: test_plan required for delta_execution",
+      "priority": "P0_BLOCKER",
+      "labels": [
+        "casulo",
+        "delta-execution",
+        "graph-telemetry",
+        "p0_blocker",
+        "real-graph-case"
+      ],
+      "body": "## Context\nGenerated by CASULO real/anonymized graph case runner.\n\n## Case\n- Case: `REAL-GRAPH-003-SOFTWARE-REVIEW`\n- Cluster: `CLUSTER-002`\n- Source delta: `delta_execution`\n- Artifact type: `test_plan`\n- Recommended gate: `TASK_ONLY`\n- Task count: `6`\n\n## Required action\nProvide runtime, dependency and test context before execution.\n\n## Acceptance criteria\n- Evidence, owner, rule, test or repair artifact is provided.\n- Graph relation remains candidate until supported.\n- No production automation is enabled.\n",
+      "status": "READY_FOR_REVIEW_NOT_CREATED"
+    },
+    {
+      "issue_id": "REAL-GRAPH-003-SOFTWARE-REVIEW-ISSUE-CANDIDATE-004",
+      "case_id": "REAL-GRAPH-003-SOFTWARE-REVIEW",
+      "cluster_id": "CLUSTER-004",
+      "title": "[P1_REVIEW] REAL-GRAPH-003-SOFTWARE-REVIEW: calibration_review required for delta_model_behavior",
+      "priority": "P1_REVIEW",
+      "labels": [
+        "casulo",
+        "delta-model_behavior",
+        "graph-telemetry",
+        "p1_review",
+        "real-graph-case"
+      ],
+      "body": "## Context\nGenerated by CASULO real/anonymized graph case runner.\n\n## Case\n- Case: `REAL-GRAPH-003-SOFTWARE-REVIEW`\n- Cluster: `CLUSTER-004`\n- Source delta: `delta_model_behavior`\n- Artifact type: `calibration_review`\n- Recommended gate: `TASK_ONLY`\n- Task count: `7`\n\n## Required action\nReview anomaly pattern against calibration history.\n\n## Acceptance criteria\n- Evidence, owner, rule, test or repair artifact is provided.\n- Graph relation remains candidate until supported.\n- No production automation is enabled.\n",
+      "status": "READY_FOR_REVIEW_NOT_CREATED"
+    },
+    {
+      "issue_id": "REAL-GRAPH-003-SOFTWARE-REVIEW-ISSUE-CANDIDATE-005",
+      "case_id": "REAL-GRAPH-003-SOFTWARE-REVIEW",
+      "cluster_id": "CLUSTER-003",
+      "title": "[P3_STRUCTURE] REAL-GRAPH-003-SOFTWARE-REVIEW: graph_repair required for delta_graph_structure",
+      "priority": "P3_STRUCTURE",
+      "labels": [
+        "casulo",
+        "delta-graph_structure",
+        "graph-telemetry",
+        "p3_structure",
+        "real-graph-case"
+      ],
+      "body": "## Context\nGenerated by CASULO real/anonymized graph case runner.\n\n## Case\n- Case: `REAL-GRAPH-003-SOFTWARE-REVIEW`\n- Cluster: `CLUSTER-003`\n- Source delta: `delta_graph_structure`\n- Artifact type: `graph_repair`\n- Recommended gate: `STRUCTURE_ONLY`\n- Task count: `1`\n\n## Required action\nRepair bridge, relation type or orphan node.\n\n## Acceptance criteria\n- Evidence, owner, rule, test or repair artifact is provided.\n- Graph relation remains candidate until supported.\n- No production automation is enabled.\n",
+      "status": "READY_FOR_REVIEW_NOT_CREATED"
+    }
+  ],
+  "blocked_actions": [
+    "client_facing_claim",
+    "automatic_nomination",
+    "implementation_execution",
+    "production_activation",
+    "automatic_merge",
+    "credential_handling"
+  ]
+}

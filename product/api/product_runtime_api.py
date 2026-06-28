@@ -29,12 +29,11 @@ class ProductRuntimeHandler(BaseHTTPRequestHandler):
             routes={
                 "api/health":self.service.health,
                 "api/product/status":self.service.product_status,
-                "api/casulo/graph-task-bridge/clusters":self.service.task_clusters,
-                "api/casulo/graph-task-bridge/issue-candidates":self.service.issue_candidates,
-                "api/casulo/graph-task-bridge/practical-backlog":self.service.practical_backlog,
-                "api/casulo/graph-task-bridge/closure-policy":self.service.task_closure_policy,
-                "api/casulo/graph-task-bridge/readiness":self.service.graph_task_bridge_readiness,
-                "api/casulo/graph-task-bridge/audit":self.service.graph_task_bridge_audit,
+                "api/casulo/real-graph-cases/catalog":self.service.case_catalog,
+                "api/casulo/real-graph-cases/results":self.service.real_graph_case_results,
+                "api/casulo/real-graph-cases/aggregate":self.service.real_graph_case_aggregate,
+                "api/casulo/real-graph-cases/readiness":self.service.real_graph_case_readiness,
+                "api/casulo/real-graph-cases/audit":self.service.real_graph_case_audit,
                 "api/reports":self.service.reports,
             }
             if clean in routes: return self.send_json(routes[clean]())
@@ -47,7 +46,7 @@ def main():
     server=HTTPServer((args.host,args.port),ProductRuntimeHandler)
     print(f"Operational Cube product runtime API/UI running at http://{args.host}:{args.port}")
     print("Open: /ui")
-    print("Try: /api/health, /api/casulo/graph-task-bridge/practical-backlog")
+    print("Try: /api/health, /api/casulo/real-graph-cases/aggregate")
     try: server.serve_forever()
     except KeyboardInterrupt: print("Stopping product runtime API/UI.")
 if __name__=="__main__": main()

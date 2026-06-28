@@ -1,0 +1,11 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "CASULO Real Graph Case Aggregate",
+  "type": "object",
+  "required": [
+    "status",
+    "case_count",
+    "decision",
+    "aggregate_metrics"
+  ]
+}
