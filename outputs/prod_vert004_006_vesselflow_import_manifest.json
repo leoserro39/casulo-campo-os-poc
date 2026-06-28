@@ -1,0 +1,47 @@
+{
+  "contract_version": "operational_cube.vesselflow_import_manifest.v0.3",
+  "vertical_id": "vesselflow",
+  "status": "WAITING_FOR_USER_DATA",
+  "required_inputs": [
+    "dataset_or_workbook",
+    "expected_nomination_flow",
+    "qualification_rules",
+    "known_blocking_rules"
+  ],
+  "optional_inputs": [
+    "contract_records",
+    "pvq_q88_extract",
+    "certificate_list",
+    "cargo_platform_matrix",
+    "decision_logs",
+    "audit_reports"
+  ],
+  "received_inputs": [],
+  "missing_required_inputs": [
+    "dataset_or_workbook",
+    "expected_nomination_flow",
+    "qualification_rules",
+    "known_blocking_rules"
+  ],
+  "default_policy": "Do not execute nomination automatically. Define controlled operational state only.",
+  "expected_outputs": [
+    "State Snapshot",
+    "Operational Graph",
+    "Domain Map",
+    "Contract Map",
+    "Nomination Flow",
+    "Gate Matrix",
+    "Evidence Manifest",
+    "Risk/Fragility Index",
+    "Delta Recommendations",
+    "Cube/Cupula State",
+    "Cockpit Replay",
+    "Report"
+  ],
+  "blocked_actions": [
+    "automatic_nomination",
+    "client_facing_claim",
+    "implementation_execution",
+    "production_activation"
+  ]
+}

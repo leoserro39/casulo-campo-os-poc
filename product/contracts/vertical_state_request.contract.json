@@ -1,0 +1,16 @@
+{
+  "contract": "operational_cube.vertical_state_request.v0.3",
+  "purpose": "Define the structured request format used to ask the product to define operational state.",
+  "required_sections": [
+    "vertical",
+    "objective",
+    "domains",
+    "entities",
+    "evidence_types",
+    "gates",
+    "cube_faces",
+    "sample_input",
+    "expected_outputs",
+    "blocked_actions"
+  ]
+}

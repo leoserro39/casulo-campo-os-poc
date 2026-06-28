@@ -1,0 +1,251 @@
+{
+  "contract_version": "operational_cube.vertical_state_request.v0.3",
+  "vertical_id": "vesselflow",
+  "vertical_name": "VesselFlow / Nomeacao Operacional Maritima",
+  "complexity": "complex",
+  "objective": "Demonstrar capacidade de definir estado operacional de navio, PVQ/Q88, contratos, qualificacao, sincronizacao e nomeacao.",
+  "target_user": "Operador, consultor tecnico, analista UN, gestor de operacao maritima ou equipe de qualificacao.",
+  "domains": [
+    "navio",
+    "master",
+    "pvq_q88",
+    "documentos",
+    "certificados",
+    "contratos",
+    "carga",
+    "plataforma",
+    "lifter",
+    "analista_un",
+    "qualificacao",
+    "sincronizacao",
+    "nomeacao",
+    "pendencias",
+    "gates"
+  ],
+  "domain_map": {
+    "domains": {
+      "navio": [
+        "identificacao",
+        "dimensoes",
+        "capacidade",
+        "status_operacional"
+      ],
+      "master": [
+        "responsavel",
+        "perfil",
+        "acao_pendente"
+      ],
+      "pvq_q88": [
+        "campos",
+        "completude",
+        "validacao"
+      ],
+      "documentos": [
+        "certificados",
+        "validade",
+        "pendencias"
+      ],
+      "contratos": [
+        "partes",
+        "escopo",
+        "restricoes"
+      ],
+      "carga": [
+        "tipo",
+        "volume",
+        "janela"
+      ],
+      "plataforma": [
+        "compatibilidade",
+        "restricao",
+        "sync"
+      ],
+      "lifter": [
+        "solicitacao",
+        "preferencia",
+        "sincronizacao"
+      ],
+      "analista_un": [
+        "validacao",
+        "decisao",
+        "observacao"
+      ],
+      "qualificacao": [
+        "criterios",
+        "status",
+        "bloqueios"
+      ],
+      "nomeacao": [
+        "candidato",
+        "gate",
+        "decisao_final"
+      ],
+      "gates": [
+        "validade",
+        "completude",
+        "contrato",
+        "sincronizacao",
+        "humano"
+      ]
+    }
+  },
+  "entities": [
+    "vessel",
+    "master",
+    "pvq",
+    "q88",
+    "certificate",
+    "contract",
+    "cargo",
+    "platform",
+    "lifter",
+    "nomination",
+    "validation_rule",
+    "decision_gate"
+  ],
+  "entity_map": {
+    "vertical_id": "vesselflow",
+    "entities": [
+      {
+        "name": "vessel",
+        "role": "operational_entity"
+      },
+      {
+        "name": "master",
+        "role": "operational_entity"
+      },
+      {
+        "name": "pvq",
+        "role": "operational_entity"
+      },
+      {
+        "name": "q88",
+        "role": "operational_entity"
+      },
+      {
+        "name": "certificate",
+        "role": "operational_entity"
+      },
+      {
+        "name": "contract",
+        "role": "operational_entity"
+      },
+      {
+        "name": "cargo",
+        "role": "operational_entity"
+      },
+      {
+        "name": "platform",
+        "role": "operational_entity"
+      },
+      {
+        "name": "lifter",
+        "role": "operational_entity"
+      },
+      {
+        "name": "nomination",
+        "role": "operational_entity"
+      },
+      {
+        "name": "validation_rule",
+        "role": "operational_entity"
+      },
+      {
+        "name": "decision_gate",
+        "role": "operational_entity"
+      }
+    ]
+  },
+  "evidence_types": [
+    "master_workbook",
+    "pvq_q88",
+    "contract_record",
+    "certificate",
+    "nomination_matrix",
+    "decision_log",
+    "audit_report"
+  ],
+  "gates": [
+    "pvq_completeness",
+    "document_validity",
+    "contract_alignment",
+    "qualification_gate",
+    "sync_gate",
+    "nomination_gate",
+    "human_review"
+  ],
+  "gate_map": {
+    "vertical_id": "vesselflow",
+    "default_gate_policy": "block external/implementation use until human approval",
+    "gates": [
+      {
+        "gate": "pvq_completeness",
+        "default": "CHECK_REQUIRED"
+      },
+      {
+        "gate": "document_validity",
+        "default": "CHECK_REQUIRED"
+      },
+      {
+        "gate": "contract_alignment",
+        "default": "CHECK_REQUIRED"
+      },
+      {
+        "gate": "qualification_gate",
+        "default": "CHECK_REQUIRED"
+      },
+      {
+        "gate": "sync_gate",
+        "default": "CHECK_REQUIRED"
+      },
+      {
+        "gate": "nomination_gate",
+        "default": "CHECK_REQUIRED"
+      },
+      {
+        "gate": "human_review",
+        "default": "CHECK_REQUIRED"
+      }
+    ],
+    "blocked_by_default": [
+      "client_facing_claim",
+      "nomination_execution",
+      "implementation_execution",
+      "production_activation"
+    ]
+  },
+  "cube": {
+    "vertical_id": "vesselflow",
+    "cube_metaphor": "operational_cube_solver",
+    "principle": "Every cube move must map to evidence, gate, delta or state change.",
+    "faces": {
+      "objetivo": "Define objective and desired state.",
+      "evidencias": "Evidence manifest, source quality and missing evidence.",
+      "risco": "H_pre, H_post, fragility, contradictions.",
+      "tarefas": "Actionable deltas and review tasks.",
+      "deltas": "Delta_L and expected reduction of fragility.",
+      "gates": "Allowed/blocked actions and human review status."
+    }
+  },
+  "sample_input": "# VesselFlow State Definition Prompt\n\nUsando os dados do VesselFlow, defina o estado operacional atual do sistema, dos contratos existentes e do processo de nomeacao.\n\nIdentifique:\n\n1. dominios operacionais;\n2. entidades;\n3. evidencias disponiveis;\n4. lacunas;\n5. contratos e restricoes;\n6. gates de qualificacao, sincronizacao e nomeacao;\n7. riscos e fragilidade;\n8. deltas necessarios;\n9. fluxo computavel de nomeacao;\n10. Cube/Cupula state;\n11. relatorio final.\n\nO retorno deve incluir State Snapshot, Operational Graph, Domain Map, Contract Map, Nomination Flow, Gate Matrix, Evidence Manifest, Risk/Fragility Index, Delta Recommendations, Cube State, Replay e Report.",
+  "expected_outputs": [
+    "State Snapshot",
+    "Operational Graph",
+    "Domain Map",
+    "Evidence Manifest",
+    "Gate Matrix",
+    "Risk/Fragility Summary",
+    "Delta Recommendations",
+    "Cube/Cupula State",
+    "Cockpit Replay",
+    "Micrograph Timeline",
+    "Internal Review Report"
+  ],
+  "blocked_actions": [
+    "client_facing_claim",
+    "nomination_execution",
+    "implementation_execution",
+    "production_activation"
+  ],
+  "instruction": "Define the operational state for this vertical. Produce state, evidence, gates, deltas, Cube/Cupula state, replay, timeline and internal report. Do not authorize external use or implementation."
+}

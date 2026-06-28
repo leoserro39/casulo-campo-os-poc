@@ -1,0 +1,17 @@
+{
+  "contract": "operational_cube.vertical_runtime_adapter.v0.3",
+  "purpose": "Read vertical case packs and produce state definition requests without requiring real client data.",
+  "inputs": [
+    "product/verticals/{vertical}/vertical_manifest.json",
+    "product/verticals/{vertical}/domain_map.json",
+    "product/verticals/{vertical}/entity_map.json",
+    "product/verticals/{vertical}/gate_map.json",
+    "product/verticals/{vertical}/operational_cube_seed.json",
+    "sample_intake.md or sample_state_prompt.md"
+  ],
+  "outputs": [
+    "outputs/prod_vert004_006_{vertical}_state_request.json",
+    "outputs/prod_vert004_006_{vertical}_state_request.md"
+  ],
+  "rule": "Adapter prepares controlled state requests only. It must not authorize implementation, nomination, production activation, or client-facing claims."
+}

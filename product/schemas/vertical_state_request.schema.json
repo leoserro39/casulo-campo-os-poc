@@ -1,0 +1,57 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Operational Cube Vertical State Request",
+  "type": "object",
+  "required": [
+    "contract_version",
+    "vertical_id",
+    "vertical_name",
+    "complexity",
+    "objective",
+    "domains",
+    "entities",
+    "evidence_types",
+    "gates",
+    "cube",
+    "expected_outputs",
+    "blocked_actions"
+  ],
+  "properties": {
+    "contract_version": {
+      "type": "string"
+    },
+    "vertical_id": {
+      "type": "string"
+    },
+    "vertical_name": {
+      "type": "string"
+    },
+    "complexity": {
+      "type": "string"
+    },
+    "objective": {
+      "type": "string"
+    },
+    "domains": {
+      "type": "array"
+    },
+    "entities": {
+      "type": "array"
+    },
+    "evidence_types": {
+      "type": "array"
+    },
+    "gates": {
+      "type": "array"
+    },
+    "cube": {
+      "type": "object"
+    },
+    "expected_outputs": {
+      "type": "array"
+    },
+    "blocked_actions": {
+      "type": "array"
+    }
+  }
+}

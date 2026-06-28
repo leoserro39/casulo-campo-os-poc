@@ -1,0 +1,23 @@
+{
+  "task": "PROD-VERT-004..006",
+  "status": "PASS",
+  "phase": "Vertical Runtime Adapter and VesselFlow Import Protocol",
+  "verticals": [
+    "small_service",
+    "legal_office",
+    "vesselflow"
+  ],
+  "generated_state_requests": [
+    "outputs/prod_vert004_006_small_service_state_request.json",
+    "outputs/prod_vert004_006_legal_office_state_request.json",
+    "outputs/prod_vert004_006_vesselflow_state_request.json"
+  ],
+  "vesselflow_import_manifest": "outputs/prod_vert004_006_vesselflow_import_manifest.json",
+  "next_recommended_bundle": "PROD-006..010 Product Runtime API and Case Adapter",
+  "needs_user_for_vesselflow": [
+    "dataset/workbook",
+    "expected nomination flow",
+    "qualification rules",
+    "known blocking rules"
+  ]
+}

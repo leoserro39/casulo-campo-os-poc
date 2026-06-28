@@ -1,0 +1,191 @@
+{
+  "contract_version": "operational_cube.vertical_state_request.v0.3",
+  "vertical_id": "legal_office",
+  "vertical_name": "Escritorio Juridico / Operacao Documental",
+  "complexity": "medium",
+  "objective": "Demonstrar organizacao de casos, documentos, prazos, atendimento e honorarios sem substituir o trabalho tecnico juridico.",
+  "target_user": "Advogado, socio, gestor administrativo ou consultor operacional.",
+  "domains": [
+    "captacao",
+    "triagem",
+    "cliente",
+    "caso",
+    "documentos",
+    "prazos",
+    "atendimento",
+    "honorarios",
+    "risco"
+  ],
+  "domain_map": {
+    "domains": {
+      "captacao": [
+        "origem",
+        "interesse",
+        "tipo_de_caso"
+      ],
+      "triagem": [
+        "elegibilidade",
+        "documentos_minimos",
+        "risco"
+      ],
+      "cliente": [
+        "dados",
+        "contato",
+        "consentimento"
+      ],
+      "caso": [
+        "tipo",
+        "status",
+        "responsavel"
+      ],
+      "documentos": [
+        "recebidos",
+        "faltantes",
+        "validade"
+      ],
+      "prazos": [
+        "data",
+        "criticidade",
+        "responsavel"
+      ],
+      "atendimento": [
+        "canal",
+        "retorno",
+        "historico"
+      ],
+      "honorarios": [
+        "contrato",
+        "pagamento",
+        "pendencia"
+      ],
+      "risco": [
+        "prazo",
+        "documento",
+        "comunicacao"
+      ]
+    }
+  },
+  "entities": [
+    "cliente",
+    "caso",
+    "documento",
+    "prazo",
+    "responsavel",
+    "tarefa",
+    "honorario",
+    "pendencia"
+  ],
+  "entity_map": {
+    "vertical_id": "legal_office",
+    "entities": [
+      {
+        "name": "cliente",
+        "role": "operational_entity"
+      },
+      {
+        "name": "caso",
+        "role": "operational_entity"
+      },
+      {
+        "name": "documento",
+        "role": "operational_entity"
+      },
+      {
+        "name": "prazo",
+        "role": "operational_entity"
+      },
+      {
+        "name": "responsavel",
+        "role": "operational_entity"
+      },
+      {
+        "name": "tarefa",
+        "role": "operational_entity"
+      },
+      {
+        "name": "honorario",
+        "role": "operational_entity"
+      },
+      {
+        "name": "pendencia",
+        "role": "operational_entity"
+      }
+    ]
+  },
+  "evidence_types": [
+    "planilha",
+    "contrato",
+    "documento",
+    "agenda",
+    "historico_atendimento",
+    "observacao_humana"
+  ],
+  "gates": [
+    "legal_advice_block",
+    "document_completeness",
+    "deadline_risk",
+    "human_review"
+  ],
+  "gate_map": {
+    "vertical_id": "legal_office",
+    "default_gate_policy": "block external/implementation use until human approval",
+    "gates": [
+      {
+        "gate": "legal_advice_block",
+        "default": "CHECK_REQUIRED"
+      },
+      {
+        "gate": "document_completeness",
+        "default": "CHECK_REQUIRED"
+      },
+      {
+        "gate": "deadline_risk",
+        "default": "CHECK_REQUIRED"
+      },
+      {
+        "gate": "human_review",
+        "default": "CHECK_REQUIRED"
+      }
+    ],
+    "blocked_by_default": [
+      "legal_opinion",
+      "client_facing_claim",
+      "implementation_execution",
+      "production_activation"
+    ]
+  },
+  "cube": {
+    "vertical_id": "legal_office",
+    "cube_metaphor": "operational_cube_solver",
+    "principle": "Every cube move must map to evidence, gate, delta or state change.",
+    "faces": {
+      "objetivo": "Define objective and desired state.",
+      "evidencias": "Evidence manifest, source quality and missing evidence.",
+      "risco": "H_pre, H_post, fragility, contradictions.",
+      "tarefas": "Actionable deltas and review tasks.",
+      "deltas": "Delta_L and expected reduction of fragility.",
+      "gates": "Allowed/blocked actions and human review status."
+    }
+  },
+  "sample_input": "# Sample Intake — Escritorio Juridico\n\nO escritorio atende clientes por WhatsApp, e-mail e indicacao. Documentos chegam em canais diferentes. Prazos sao controlados em agenda e planilha. O objetivo e organizar a operacao sem substituir analise juridica.\n\n## Pedido ao sistema\n\nDefina o estado operacional do escritorio, separando gestao operacional de parecer juridico, e gere deltas seguros para documentos, prazos e atendimento.",
+  "expected_outputs": [
+    "State Snapshot",
+    "Operational Graph",
+    "Domain Map",
+    "Evidence Manifest",
+    "Gate Matrix",
+    "Risk/Fragility Summary",
+    "Delta Recommendations",
+    "Cube/Cupula State",
+    "Cockpit Replay",
+    "Micrograph Timeline",
+    "Internal Review Report"
+  ],
+  "blocked_actions": [
+    "legal_opinion",
+    "client_facing_claim",
+    "implementation_execution",
+    "production_activation"
+  ],
+  "instruction": "Define the operational state for this vertical. Produce state, evidence, gates, deltas, Cube/Cupula state, replay, timeline and internal report. Do not authorize external use or implementation."
+}
