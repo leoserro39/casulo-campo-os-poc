@@ -1,0 +1,12 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "CASULO Dry Run Transition",
+  "type": "object",
+  "required": [
+    "issue_id",
+    "from_state",
+    "to_state",
+    "allowed",
+    "auto_execution_allowed"
+  ]
+}

@@ -1,0 +1,9 @@
+{
+  "contract": "casulo.dry_run_execution_guard.v0.1",
+  "purpose": "Verify approved_count > 0 while auto_execution_allowed remains false.",
+  "required_assertions": [
+    "approved_count_matches_requested",
+    "auto_execution_allowed_false",
+    "manual_only_true"
+  ]
+}

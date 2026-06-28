@@ -1,0 +1,5 @@
+{
+  "contract": "casulo.approved_command_preview.v0.1",
+  "purpose": "Preview manual commands for dry-run approved candidates without executing commands.",
+  "execution_policy": "preview_only"
+}

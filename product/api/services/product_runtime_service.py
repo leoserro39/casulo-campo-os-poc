@@ -18,31 +18,31 @@ class ProductRuntimeService:
     def health(self): return {"status":"PASS","product_direction":PRODUCT_DIRECTION,"runtime_mode":RUNTIME_MODE,"blocked_actions":BLOCKED_ACTIONS}
     def product_status(self):
         stems={
-            "manual_issue_promotion":"prod341_360_manual_issue_promotion.json",
-            "formal_approval_report":"prod361_380_formal_approval_report.json",
-            "execution_guard":"prod361_380_issue_execution_guard.json",
-            "transition_ledger":"prod361_380_state_transition_ledger.json",
-            "formal_approval_readiness":"prod361_380_formal_approval_readiness.json",
-            "formal_approval_audit":"prod361_380_audit_report.json",
+            "formal_approval_guard":"prod361_380_issue_execution_guard.json",
+            "minimal_approval_plan":"prod381_400_minimal_approval_plan.json",
+            "dry_run_manifest":"prod381_400_dry_run_approval_manifest.json",
+            "dry_run_guard":"prod381_400_execution_guard.json",
+            "dry_run_readiness":"prod381_400_readiness.json",
+            "dry_run_audit":"prod381_400_audit_report.json",
         }
         checks={k:(self.outputs_root/v).exists() for k,v in stems.items()}
-        return {"status":"PASS" if all(checks.values()) else "INCOMPLETE","product_direction":PRODUCT_DIRECTION,"runtime_mode":RUNTIME_MODE,"checks":checks,"blocked_actions":BLOCKED_ACTIONS,"next_recommended_step":"Edit approval manifest and re-run guard for a minimal approved subset."}
+        return {"status":"PASS" if all(checks.values()) else "INCOMPLETE","product_direction":PRODUCT_DIRECTION,"runtime_mode":RUNTIME_MODE,"checks":checks,"blocked_actions":BLOCKED_ACTIONS,"next_recommended_step":"Human may review command preview and decide whether to manually create one issue."}
     def __getattr__(self,name):
         mapping={
-            "formal_approval_report":("prod361_380_formal_approval_report.json","formal_approval_report"),
-            "approval_manifest":("prod361_380_formal_approval_manifest_snapshot.json","approval_manifest"),
-            "transition_ledger":("prod361_380_state_transition_ledger.json","transition_ledger"),
-            "execution_guard":("prod361_380_issue_execution_guard.json","execution_guard"),
-            "formal_approval_readiness":("prod361_380_formal_approval_readiness.json","formal_approval_readiness"),
-            "formal_approval_audit":("prod361_380_audit_report.json","formal_approval_audit"),
+            "minimal_approval_plan":("prod381_400_minimal_approval_plan.json","minimal_approval_plan"),
+            "dry_run_manifest":("prod381_400_dry_run_approval_manifest.json","dry_run_manifest"),
+            "dry_run_ledger":("prod381_400_dry_run_transition_ledger.json","dry_run_ledger"),
+            "dry_run_guard":("prod381_400_execution_guard.json","dry_run_guard"),
+            "dry_run_readiness":("prod381_400_readiness.json","dry_run_readiness"),
+            "dry_run_audit":("prod381_400_audit_report.json","dry_run_audit"),
         }
         if name in mapping:
             stem,key=mapping[name]
             return lambda: payload(self.outputs_root/stem,key)
         raise AttributeError(name)
-    def runbook(self):
-        p=self.outputs_root/"prod361_380_formal_approval_runbook.md"
+    def command_preview(self):
+        p=self.outputs_root/"prod381_400_approved_command_preview.md"
         return {"status":"PASS" if p.exists() else "MISSING","path":str(p),"markdown":read_text(p) if p.exists() else ""}
     def reports(self):
-        pats=["prod361_380_formal_approval_runbook.md","prod361_380_formal_approval_report.md","prod361_380_formal_approval_readiness.md","prod361_380_audit_report.md","prod361_380_report.md"]
+        pats=["prod381_400_minimal_dry_run_report.md","prod381_400_approved_command_preview.md","prod381_400_readiness.md","prod381_400_audit_report.md","prod381_400_report.md"]
         return {"status":"PASS","reports":[{"name":p,"exists":(self.outputs_root/p).exists(),"path":str(self.outputs_root/p),"preview":read_text(self.outputs_root/p)[:1200] if (self.outputs_root/p).exists() else ""} for p in pats]}

@@ -1,0 +1,20 @@
+{
+  "status": "PASS",
+  "manual_only": true,
+  "auto_execution_allowed": false,
+  "requested_approval_count": 2,
+  "approved_count": 2,
+  "approved_commands_available": 2,
+  "created_manually_count": 0,
+  "invalid_transition_count": 0,
+  "source_manifest_modified": false,
+  "finding": "PASS: minimal dry-run approvals generate manual command previews while auto execution remains disabled.",
+  "blocked_actions": [
+    "client_facing_claim",
+    "automatic_nomination",
+    "implementation_execution",
+    "production_activation",
+    "automatic_merge",
+    "credential_handling"
+  ]
+}

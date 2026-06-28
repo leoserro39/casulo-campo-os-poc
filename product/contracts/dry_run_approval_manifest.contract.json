@@ -1,0 +1,5 @@
+{
+  "contract": "casulo.dry_run_approval_manifest.v0.1",
+  "purpose": "Create a dry-run manifest with synthetic approval metadata for transition testing only.",
+  "policy": "does_not_modify_source_formal_approval_manifest"
+}

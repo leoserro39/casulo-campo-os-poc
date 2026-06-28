@@ -1,0 +1,19 @@
+{
+  "status": "PASS",
+  "requested_approval_count": 2,
+  "selected_issue_ids": [
+    "REAL-GRAPH-001-ONBOARDING-ISSUE-CANDIDATE-002",
+    "REAL-GRAPH-002-DOCUMENT-AUDIT-ISSUE-CANDIDATE-002"
+  ],
+  "approver": "CASULO_DRY_RUN_REVIEWER",
+  "note": "Synthetic dry-run approval for transition guard validation only; no issue is created automatically.",
+  "selection_policy": "top-scored selected candidates from formal approval manifest",
+  "blocked_actions": [
+    "client_facing_claim",
+    "automatic_nomination",
+    "implementation_execution",
+    "production_activation",
+    "automatic_merge",
+    "credential_handling"
+  ]
+}

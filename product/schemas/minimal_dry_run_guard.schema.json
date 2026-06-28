@@ -1,0 +1,12 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "CASULO Minimal Dry Run Guard",
+  "type": "object",
+  "required": [
+    "status",
+    "approved_count",
+    "auto_execution_allowed",
+    "manual_only",
+    "finding"
+  ]
+}

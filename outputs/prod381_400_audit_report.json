@@ -1,0 +1,11 @@
+{
+  "status": "PASS",
+  "audit": "Minimal Approved Issue Dry Run audit",
+  "approved_count": 2,
+  "approved_commands_available": 2,
+  "invalid_transition_count": 0,
+  "auto_execution_allowed": false,
+  "source_manifest_modified": false,
+  "readiness": "READY_FOR_OPTIONAL_MANUAL_ISSUE_CREATION_REVIEW",
+  "finding": "PASS: dry-run approval transition is valid and command preview remains manual-only."
+}

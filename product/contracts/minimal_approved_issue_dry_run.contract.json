@@ -1,0 +1,17 @@
+{
+  "contract": "casulo.minimal_approved_issue_dry_run.v0.1",
+  "purpose": "Simulate approval of a minimal subset of selected issue candidates without creating GitHub issues.",
+  "input": [
+    "outputs/prod341_360_manual_issue_promotion.json",
+    "outputs/prod361_380_formal_approval_manifest_snapshot.json",
+    "outputs/prod361_380_issue_execution_guard.json"
+  ],
+  "blocked_actions": [
+    "client_facing_claim",
+    "automatic_nomination",
+    "implementation_execution",
+    "production_activation",
+    "automatic_merge",
+    "credential_handling"
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "CASULO Minimal Approval Plan",
+  "type": "object",
+  "required": [
+    "status",
+    "requested_approval_count",
+    "selected_issue_ids",
+    "blocked_actions"
+  ]
+}

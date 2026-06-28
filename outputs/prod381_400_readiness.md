@@ -1,0 +1,29 @@
+# Minimal Approved Issue Dry Run Readiness
+
+- contract_version: `casulo.minimal_approved_issue_dry_run_readiness.v0.1`
+- status: `PASS`
+- decision: `READY_FOR_OPTIONAL_MANUAL_ISSUE_CREATION_REVIEW`
+- approved_count: `2`
+- approved_commands_available: `2`
+- auto_execution_allowed: `False`
+- source_manifest_modified: `False`
+
+## Ready For
+- `manual command review`
+- `human decision on whether to create one issue manually`
+- `state transition test review`
+
+## Not Ready For
+- `automatic issue creation`
+- `production activation`
+- `automatic merge`
+- `external client claims`
+- next: `Human decides whether to manually create one approved issue, then record URL in formal approval manifest.`
+
+## Blocked Actions
+- `client_facing_claim`
+- `automatic_nomination`
+- `implementation_execution`
+- `production_activation`
+- `automatic_merge`
+- `credential_handling`

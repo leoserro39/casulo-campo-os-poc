@@ -1,0 +1,15 @@
+{
+  "task": "PROD-381..400",
+  "status": "PASS",
+  "phase": "Minimal Approved Issue Dry Run",
+  "endpoints": [
+    "/api/casulo/minimal-approved-dry-run/plan",
+    "/api/casulo/minimal-approved-dry-run/manifest",
+    "/api/casulo/minimal-approved-dry-run/ledger",
+    "/api/casulo/minimal-approved-dry-run/execution-guard",
+    "/api/casulo/minimal-approved-dry-run/commands",
+    "/api/casulo/minimal-approved-dry-run/readiness",
+    "/api/casulo/minimal-approved-dry-run/audit"
+  ],
+  "next_recommended_bundle": "PROD-401..420 Manual Issue Creation Evidence Capture"
+}
