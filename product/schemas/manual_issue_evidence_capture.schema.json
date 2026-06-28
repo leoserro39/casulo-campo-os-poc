@@ -1,0 +1,12 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "CASULO Manual Issue Evidence Capture",
+  "type": "object",
+  "required": [
+    "status",
+    "approved_count",
+    "captured_count",
+    "pending_count",
+    "auto_execution_allowed"
+  ]
+}

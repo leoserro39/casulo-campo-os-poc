@@ -1,0 +1,4 @@
+{
+  "contract": "casulo.evidence_to_state_transition.v0.1",
+  "purpose": "Move approved dry-run candidates to CREATED_MANUALLY only when issue URL evidence exists."
+}

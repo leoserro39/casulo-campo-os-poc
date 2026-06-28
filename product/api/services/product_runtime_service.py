@@ -18,31 +18,28 @@ class ProductRuntimeService:
     def health(self): return {"status":"PASS","product_direction":PRODUCT_DIRECTION,"runtime_mode":RUNTIME_MODE,"blocked_actions":BLOCKED_ACTIONS}
     def product_status(self):
         stems={
-            "formal_approval_guard":"prod361_380_issue_execution_guard.json",
-            "minimal_approval_plan":"prod381_400_minimal_approval_plan.json",
-            "dry_run_manifest":"prod381_400_dry_run_approval_manifest.json",
-            "dry_run_guard":"prod381_400_execution_guard.json",
-            "dry_run_readiness":"prod381_400_readiness.json",
-            "dry_run_audit":"prod381_400_audit_report.json",
+            "minimal_dry_run_guard":"prod381_400_execution_guard.json",
+            "manual_issue_evidence_capture":"prod401_420_manual_issue_evidence_capture.json",
+            "issue_url_validation":"prod401_420_issue_url_validation.json",
+            "state_update_preview":"prod401_420_state_update_preview.json",
+            "evidence_readiness":"prod401_420_readiness.json",
+            "evidence_audit":"prod401_420_audit_report.json",
         }
         checks={k:(self.outputs_root/v).exists() for k,v in stems.items()}
-        return {"status":"PASS" if all(checks.values()) else "INCOMPLETE","product_direction":PRODUCT_DIRECTION,"runtime_mode":RUNTIME_MODE,"checks":checks,"blocked_actions":BLOCKED_ACTIONS,"next_recommended_step":"Human may review command preview and decide whether to manually create one issue."}
+        return {"status":"PASS" if all(checks.values()) else "INCOMPLETE","product_direction":PRODUCT_DIRECTION,"runtime_mode":RUNTIME_MODE,"checks":checks,"blocked_actions":BLOCKED_ACTIONS,"next_recommended_step":"Fill manual issue evidence manifest after a human manually creates an issue."}
     def __getattr__(self,name):
         mapping={
-            "minimal_approval_plan":("prod381_400_minimal_approval_plan.json","minimal_approval_plan"),
-            "dry_run_manifest":("prod381_400_dry_run_approval_manifest.json","dry_run_manifest"),
-            "dry_run_ledger":("prod381_400_dry_run_transition_ledger.json","dry_run_ledger"),
-            "dry_run_guard":("prod381_400_execution_guard.json","dry_run_guard"),
-            "dry_run_readiness":("prod381_400_readiness.json","dry_run_readiness"),
-            "dry_run_audit":("prod381_400_audit_report.json","dry_run_audit"),
+            "evidence_manifest":("prod401_420_manual_issue_evidence_manifest_snapshot.json","evidence_manifest"),
+            "evidence_capture":("prod401_420_manual_issue_evidence_capture.json","evidence_capture"),
+            "url_validation":("prod401_420_issue_url_validation.json","url_validation"),
+            "state_update_preview":("prod401_420_state_update_preview.json","state_update_preview"),
+            "evidence_readiness":("prod401_420_readiness.json","evidence_readiness"),
+            "evidence_audit":("prod401_420_audit_report.json","evidence_audit"),
         }
         if name in mapping:
             stem,key=mapping[name]
             return lambda: payload(self.outputs_root/stem,key)
         raise AttributeError(name)
-    def command_preview(self):
-        p=self.outputs_root/"prod381_400_approved_command_preview.md"
-        return {"status":"PASS" if p.exists() else "MISSING","path":str(p),"markdown":read_text(p) if p.exists() else ""}
     def reports(self):
-        pats=["prod381_400_minimal_dry_run_report.md","prod381_400_approved_command_preview.md","prod381_400_readiness.md","prod381_400_audit_report.md","prod381_400_report.md"]
+        pats=["prod401_420_manual_issue_evidence_capture.md","prod401_420_readiness.md","prod401_420_audit_report.md","prod401_420_report.md"]
         return {"status":"PASS","reports":[{"name":p,"exists":(self.outputs_root/p).exists(),"path":str(self.outputs_root/p),"preview":read_text(self.outputs_root/p)[:1200] if (self.outputs_root/p).exists() else ""} for p in pats]}

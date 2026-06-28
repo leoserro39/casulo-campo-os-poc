@@ -1,0 +1,5 @@
+{
+  "contract": "casulo.issue_url_validation.v0.1",
+  "purpose": "Validate shape and traceability of manually provided issue URLs.",
+  "validation_scope": "syntax_and_traceability_only_no_network_call"
+}

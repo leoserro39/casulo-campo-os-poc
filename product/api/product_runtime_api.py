@@ -29,13 +29,12 @@ class ProductRuntimeHandler(BaseHTTPRequestHandler):
             routes={
                 "api/health":self.service.health,
                 "api/product/status":self.service.product_status,
-                "api/casulo/minimal-approved-dry-run/plan":self.service.minimal_approval_plan,
-                "api/casulo/minimal-approved-dry-run/manifest":self.service.dry_run_manifest,
-                "api/casulo/minimal-approved-dry-run/ledger":self.service.dry_run_ledger,
-                "api/casulo/minimal-approved-dry-run/execution-guard":self.service.dry_run_guard,
-                "api/casulo/minimal-approved-dry-run/commands":self.service.command_preview,
-                "api/casulo/minimal-approved-dry-run/readiness":self.service.dry_run_readiness,
-                "api/casulo/minimal-approved-dry-run/audit":self.service.dry_run_audit,
+                "api/casulo/manual-issue-evidence/manifest":self.service.evidence_manifest,
+                "api/casulo/manual-issue-evidence/capture":self.service.evidence_capture,
+                "api/casulo/manual-issue-evidence/url-validation":self.service.url_validation,
+                "api/casulo/manual-issue-evidence/state-update-preview":self.service.state_update_preview,
+                "api/casulo/manual-issue-evidence/readiness":self.service.evidence_readiness,
+                "api/casulo/manual-issue-evidence/audit":self.service.evidence_audit,
                 "api/reports":self.service.reports,
             }
             if clean in routes: return self.send_json(routes[clean]())
@@ -48,7 +47,7 @@ def main():
     server=HTTPServer((args.host,args.port),ProductRuntimeHandler)
     print(f"Operational Cube product runtime API/UI running at http://{args.host}:{args.port}")
     print("Open: /ui")
-    print("Try: /api/health, /api/casulo/minimal-approved-dry-run/execution-guard")
+    print("Try: /api/health, /api/casulo/manual-issue-evidence/capture")
     try: server.serve_forever()
     except KeyboardInterrupt: print("Stopping product runtime API/UI.")
 if __name__=="__main__": main()

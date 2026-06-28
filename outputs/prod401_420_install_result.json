@@ -1,0 +1,14 @@
+{
+  "task": "PROD-401..420",
+  "status": "PASS",
+  "phase": "Manual Issue Creation Evidence Capture",
+  "endpoints": [
+    "/api/casulo/manual-issue-evidence/manifest",
+    "/api/casulo/manual-issue-evidence/capture",
+    "/api/casulo/manual-issue-evidence/url-validation",
+    "/api/casulo/manual-issue-evidence/state-update-preview",
+    "/api/casulo/manual-issue-evidence/readiness",
+    "/api/casulo/manual-issue-evidence/audit"
+  ],
+  "next_recommended_bundle": "PROD-421..440 Issue-to-State Linkage and Closure Ledger"
+}

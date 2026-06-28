@@ -1,0 +1,5 @@
+{
+  "contract": "casulo.manual_issue_evidence_manifest.v0.1",
+  "purpose": "Human-editable manifest containing issue URLs created manually outside the workflow.",
+  "default_policy": "no_manual_issue_url_by_default"
+}

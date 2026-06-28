@@ -1,0 +1,53 @@
+{
+  "status": "PASS",
+  "approved_count": 2,
+  "captured_count": 0,
+  "pending_count": 2,
+  "incomplete_count": 0,
+  "auto_execution_allowed": false,
+  "manual_only": true,
+  "source_manifest": "product/poc/manual_issue_creation_evidence/manual_issue_evidence_manifest.json",
+  "validations": [
+    {
+      "issue_id": "REAL-GRAPH-001-ONBOARDING-ISSUE-CANDIDATE-002",
+      "state": "APPROVED_PENDING_MANUAL_CREATION",
+      "valid": true,
+      "manual_issue_url_present": false,
+      "reason": "no_url_yet_pending_manual_creation"
+    },
+    {
+      "issue_id": "REAL-GRAPH-002-DOCUMENT-AUDIT-ISSUE-CANDIDATE-002",
+      "state": "APPROVED_PENDING_MANUAL_CREATION",
+      "valid": true,
+      "manual_issue_url_present": false,
+      "reason": "no_url_yet_pending_manual_creation"
+    }
+  ],
+  "state_update_preview": [
+    {
+      "issue_id": "REAL-GRAPH-001-ONBOARDING-ISSUE-CANDIDATE-002",
+      "target_state": "APPROVED_FOR_MANUAL_CREATE",
+      "manual_issue_url": "",
+      "valid": true,
+      "reason": "no_url_yet_pending_manual_creation",
+      "auto_execution_allowed": false
+    },
+    {
+      "issue_id": "REAL-GRAPH-002-DOCUMENT-AUDIT-ISSUE-CANDIDATE-002",
+      "target_state": "APPROVED_FOR_MANUAL_CREATE",
+      "manual_issue_url": "",
+      "valid": true,
+      "reason": "no_url_yet_pending_manual_creation",
+      "auto_execution_allowed": false
+    }
+  ],
+  "finding": "Manual issue evidence capture is ready; no issue URLs have to exist until a human creates them manually.",
+  "blocked_actions": [
+    "client_facing_claim",
+    "automatic_nomination",
+    "implementation_execution",
+    "production_activation",
+    "automatic_merge",
+    "credential_handling"
+  ]
+}

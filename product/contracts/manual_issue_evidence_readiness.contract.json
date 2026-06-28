@@ -1,0 +1,4 @@
+{
+  "contract": "casulo.manual_issue_evidence_readiness.v0.1",
+  "purpose": "Gate whether manually created issue evidence is complete enough to link back to task/state."
+}

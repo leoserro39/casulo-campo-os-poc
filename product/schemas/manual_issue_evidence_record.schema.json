@@ -1,0 +1,12 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "CASULO Manual Issue Evidence Record",
+  "type": "object",
+  "required": [
+    "issue_id",
+    "manual_issue_url",
+    "created_by",
+    "created_at",
+    "evidence_note"
+  ]
+}

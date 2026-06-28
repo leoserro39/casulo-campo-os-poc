@@ -1,0 +1,42 @@
+{
+  "status": "DRAFT_EVIDENCE_REQUIRED",
+  "evidence_policy": "no_manual_issue_url_by_default",
+  "instructions": [
+    "Fill manual_issue_url only after a human manually creates the GitHub issue.",
+    "Fill created_by, created_at and evidence_note for every created issue.",
+    "Do not invent URLs.",
+    "Do not use this manifest to create issues automatically."
+  ],
+  "manual_issue_evidence": [
+    {
+      "issue_id": "REAL-GRAPH-001-ONBOARDING-ISSUE-CANDIDATE-002",
+      "manual_issue_url": "",
+      "created_by": "",
+      "created_at": "",
+      "evidence_note": "",
+      "source_delta": "delta_evidence",
+      "priority": "P0_BLOCKER",
+      "review_route": "evidence_owner",
+      "command_previewed": true
+    },
+    {
+      "issue_id": "REAL-GRAPH-002-DOCUMENT-AUDIT-ISSUE-CANDIDATE-002",
+      "manual_issue_url": "",
+      "created_by": "",
+      "created_at": "",
+      "evidence_note": "",
+      "source_delta": "delta_evidence",
+      "priority": "P0_BLOCKER",
+      "review_route": "evidence_owner",
+      "command_previewed": true
+    }
+  ],
+  "blocked_actions": [
+    "client_facing_claim",
+    "automatic_nomination",
+    "implementation_execution",
+    "production_activation",
+    "automatic_merge",
+    "credential_handling"
+  ]
+}
