@@ -63,17 +63,19 @@ class ProductRuntimeHandler(BaseHTTPRequestHandler):
             route_map = {
                 "api/health": self.service.health,
                 "api/product/status": self.service.product_status,
-                "api/casulo/agent/openapi-spec": self.service.custom_gpt_openapi_spec,
-                "api/casulo/agent/custom-gpt-instructions": self.service.custom_gpt_instructions,
-                "api/casulo/agent/readiness": self.service.connector_readiness,
-                "api/casulo/public-runtime/openapi-spec": self.service.public_openapi_spec,
-                "api/casulo/public-runtime/deployment-plan": self.service.deployment_plan,
-                "api/casulo/public-runtime/fastapi-adapter": self.service.fastapi_adapter,
-                "api/casulo/public-runtime/action-import-guide": self.service.action_import_guide,
-                "api/casulo/public-runtime/security-gate": self.service.security_gate,
-                "api/casulo/public-runtime/parser-task-mode": self.service.parser_task_mode,
-                "api/casulo/public-runtime/readiness": self.service.public_runtime_readiness,
-                "api/casulo/public-runtime/audit": self.service.public_runtime_audit,
+                "api/casulo/store/status": self.service.store_status,
+                "api/casulo/store/state-index": self.service.state_store_index,
+                "api/casulo/store/evidence-index": self.service.evidence_store_index,
+                "api/casulo/store/graph-index": self.service.graph_store_index,
+                "api/casulo/store/state-records": self.service.state_records,
+                "api/casulo/store/evidence-records": self.service.evidence_records,
+                "api/casulo/store/graph-records": self.service.graph_records,
+                "api/casulo/store/write-policy": self.service.store_write_policy,
+                "api/casulo/store/enterprise-integration": self.service.enterprise_workspace_integration,
+                "api/casulo/store/migration-path": self.service.store_migration_path,
+                "api/casulo/store/readiness": self.service.store_readiness,
+                "api/casulo/store/audit": self.service.store_audit,
+                "api/casulo/store/audit-records": self.service.store_audit_records,
                 "api/reports": self.service.reports,
             }
             if clean in route_map:
@@ -91,7 +93,7 @@ def main() -> int:
     server = HTTPServer((args.host, args.port), ProductRuntimeHandler)
     print(f"Operational Cube product runtime API/UI running at http://{args.host}:{args.port}")
     print("Open: /ui")
-    print("Try: /api/health, /api/casulo/public-runtime/readiness")
+    print("Try: /api/health, /api/casulo/store/status")
     try:
         server.serve_forever()
     except KeyboardInterrupt:

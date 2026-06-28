@@ -1,0 +1,13 @@
+{
+  "contract": "casulo.graph_store_baseline.v0.1",
+  "purpose": "Create a baseline graph store for candidate domains, entities, relations and human review status.",
+  "mode": "candidate_graph_jsonl_now_graph_db_later",
+  "blocked_actions": [
+    "client_facing_claim",
+    "automatic_nomination",
+    "implementation_execution",
+    "production_activation",
+    "automatic_merge",
+    "credential_handling"
+  ]
+}

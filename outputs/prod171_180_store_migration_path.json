@@ -1,0 +1,31 @@
+{
+  "contract_version": "casulo.store_migration_path.v0.1",
+  "status": "PASS",
+  "stages": [
+    {
+      "stage": "repo_jsonl_baseline",
+      "status": "CURRENT"
+    },
+    {
+      "stage": "sqlite_dev",
+      "status": "NEXT_OPTIONAL"
+    },
+    {
+      "stage": "postgres_state_store",
+      "status": "PLANNED"
+    },
+    {
+      "stage": "object_evidence_store",
+      "status": "PLANNED"
+    },
+    {
+      "stage": "graph_db_or_postgres_graph",
+      "status": "PLANNED"
+    },
+    {
+      "stage": "append_only_audit_ledger",
+      "status": "PLANNED"
+    }
+  ],
+  "decision": "KEEP_REPO_NATIVE_UNTIL_FIRST_ENTERPRISE_CHAT_POC"
+}

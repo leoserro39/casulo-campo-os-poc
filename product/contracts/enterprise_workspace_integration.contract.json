@@ -1,0 +1,20 @@
+{
+  "contract": "casulo.enterprise_workspace_integration.v0.1",
+  "purpose": "Define how a ChatGPT Enterprise workspace uses CASULO through Custom GPT Actions without storing sensitive data in the action prototype.",
+  "role": "Enterprise workspace is chat surface and permission boundary; CASULO runtime is external governed API.",
+  "requires": [
+    "admin permission for GPT creation/actions",
+    "allowed action domain",
+    "public HTTPS endpoint",
+    "OpenAPI schema",
+    "redacted/anonymized input policy"
+  ],
+  "blocked_actions": [
+    "client_facing_claim",
+    "automatic_nomination",
+    "implementation_execution",
+    "production_activation",
+    "automatic_merge",
+    "credential_handling"
+  ]
+}

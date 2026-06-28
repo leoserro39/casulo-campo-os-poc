@@ -1,0 +1,13 @@
+{
+  "contract": "casulo.state_store_baseline.v0.1",
+  "purpose": "Create a repo-native baseline state store for computed operational states before production database.",
+  "mode": "file_index_now_postgres_later",
+  "blocked_actions": [
+    "client_facing_claim",
+    "automatic_nomination",
+    "implementation_execution",
+    "production_activation",
+    "automatic_merge",
+    "credential_handling"
+  ]
+}

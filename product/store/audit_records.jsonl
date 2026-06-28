@@ -1,0 +1,1 @@
+{"audit_id": "AUDIT-STORE-BASELINE-001", "status": "PASS", "finding": "State/evidence/graph baseline store created as repo-native JSONL, not production database.", "created_at": "2026-06-28T20:04:54+00:00"}

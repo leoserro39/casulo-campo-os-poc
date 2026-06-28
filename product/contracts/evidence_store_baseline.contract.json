@@ -1,0 +1,13 @@
+{
+  "contract": "casulo.evidence_store_baseline.v0.1",
+  "purpose": "Create a baseline evidence store for source inventories, redaction status, support status and traceability.",
+  "mode": "metadata_only_no_raw_sensitive_data",
+  "blocked_actions": [
+    "client_facing_claim",
+    "automatic_nomination",
+    "implementation_execution",
+    "production_activation",
+    "automatic_merge",
+    "credential_handling"
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "contract": "casulo.store_write_policy.v0.1",
+  "purpose": "Define safe write rules for state/evidence/graph baseline stores.",
+  "allowed_writes": [
+    "append local JSONL records",
+    "write derived metadata",
+    "write audit records"
+  ],
+  "blocked_writes": [
+    "client_facing_claim",
+    "automatic_nomination",
+    "implementation_execution",
+    "production_activation",
+    "automatic_merge",
+    "credential_handling",
+    "raw_secret_storage",
+    "unredacted_sensitive_storage",
+    "production_db_mutation"
+  ]
+}

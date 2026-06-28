@@ -2,7 +2,7 @@ from __future__ import annotations
 
 import json
 from pathlib import Path
-from typing import Dict
+from typing import Dict, List
 
 
 PRODUCT_DIRECTION = "Cubo Operacional / Operational Cube"
@@ -25,6 +25,12 @@ def read_text(path: Path) -> str:
     return path.read_text(encoding="utf-8")
 
 
+def read_jsonl(path: Path) -> List[Dict]:
+    if not path.exists():
+        return []
+    return [json.loads(line) for line in path.read_text(encoding="utf-8").splitlines() if line.strip()]
+
+
 def exists(path: Path) -> bool:
     return path.exists()
 
@@ -40,48 +46,70 @@ class ProductRuntimeService:
     def __init__(self, repo_root: Path):
         self.repo_root = repo_root
         self.outputs_root = repo_root / "outputs"
+        self.store_root = repo_root / "product" / "store"
 
     def health(self) -> Dict:
         return {"status": "PASS", "product_direction": PRODUCT_DIRECTION, "runtime_mode": RUNTIME_MODE, "blocked_actions": BLOCKED_ACTIONS}
 
     def product_status(self) -> Dict:
         checks = {
-            "custom_gpt_openapi_spec": exists(self.outputs_root / "prod151_160_openapi_spec.json"),
-            "connector_readiness": exists(self.outputs_root / "prod151_160_connector_readiness.json"),
-            "public_openapi_spec": exists(self.outputs_root / "prod161_170_public_openapi_spec.json"),
-            "deployment_plan": exists(self.outputs_root / "prod161_170_deployment_plan.json"),
-            "fastapi_adapter": exists(self.outputs_root / "prod161_170_fastapi_adapter.json"),
-            "action_import_guide": exists(self.outputs_root / "prod161_170_action_import_guide.json"),
-            "security_gate": exists(self.outputs_root / "prod161_170_security_gate.json"),
-            "parser_task_mode": exists(self.outputs_root / "prod161_170_parser_task_mode.json"),
             "public_runtime_readiness": exists(self.outputs_root / "prod161_170_public_runtime_readiness.json"),
-            "public_runtime_audit": exists(self.outputs_root / "prod161_170_audit_report.json"),
+            "parser_task_mode": exists(self.outputs_root / "prod161_170_parser_task_mode.json"),
+            "store_status": exists(self.outputs_root / "prod171_180_store_status.json"),
+            "state_store_index": exists(self.outputs_root / "prod171_180_state_store_index.json"),
+            "evidence_store_index": exists(self.outputs_root / "prod171_180_evidence_store_index.json"),
+            "graph_store_index": exists(self.outputs_root / "prod171_180_graph_store_index.json"),
+            "store_write_policy": exists(self.outputs_root / "prod171_180_store_write_policy.json"),
+            "enterprise_workspace_integration": exists(self.outputs_root / "prod171_180_enterprise_workspace_integration.json"),
+            "store_migration_path": exists(self.outputs_root / "prod171_180_store_migration_path.json"),
+            "store_readiness": exists(self.outputs_root / "prod171_180_store_readiness.json"),
+            "store_audit": exists(self.outputs_root / "prod171_180_audit_report.json"),
+            "state_records": exists(self.store_root / "state_records.jsonl"),
+            "evidence_records": exists(self.store_root / "evidence_records.jsonl"),
+            "graph_records": exists(self.store_root / "graph_records.jsonl"),
+            "audit_records": exists(self.store_root / "audit_records.jsonl"),
         }
         return {
             "status": "PASS" if all(checks.values()) else "INCOMPLETE",
             "product_direction": PRODUCT_DIRECTION,
             "runtime_mode": RUNTIME_MODE,
             "checks": checks,
+            "store_counts": {
+                "state_records": len(read_jsonl(self.store_root / "state_records.jsonl")),
+                "evidence_records": len(read_jsonl(self.store_root / "evidence_records.jsonl")),
+                "graph_records": len(read_jsonl(self.store_root / "graph_records.jsonl")),
+                "audit_records": len(read_jsonl(self.store_root / "audit_records.jsonl")),
+            },
             "blocked_actions": BLOCKED_ACTIONS,
-            "next_recommended_step": "Build State Store / Evidence Store / Graph Store baseline.",
+            "next_recommended_step": "Build Enterprise Custom GPT Import Kit / Parser POC Runbook.",
         }
 
     def _payload(self, stem: str, key: str) -> Dict:
         return payload(self.outputs_root / stem, key)
 
+    def state_records(self) -> Dict:
+        return {"status": "PASS", "state_records": read_jsonl(self.store_root / "state_records.jsonl")}
+
+    def evidence_records(self) -> Dict:
+        return {"status": "PASS", "evidence_records": read_jsonl(self.store_root / "evidence_records.jsonl")}
+
+    def graph_records(self) -> Dict:
+        return {"status": "PASS", "graph_records": read_jsonl(self.store_root / "graph_records.jsonl")}
+
+    def store_audit_records(self) -> Dict:
+        return {"status": "PASS", "audit_records": read_jsonl(self.store_root / "audit_records.jsonl")}
+
     def __getattr__(self, name):
         mapping = {
-            "custom_gpt_openapi_spec": ("prod151_160_openapi_spec.json", "openapi_spec"),
-            "custom_gpt_instructions": ("prod151_160_custom_gpt_instructions.json", "custom_gpt_instructions"),
-            "connector_readiness": ("prod151_160_connector_readiness.json", "connector_readiness"),
-            "public_openapi_spec": ("prod161_170_public_openapi_spec.json", "public_openapi_spec"),
-            "deployment_plan": ("prod161_170_deployment_plan.json", "deployment_plan"),
-            "fastapi_adapter": ("prod161_170_fastapi_adapter.json", "fastapi_adapter"),
-            "action_import_guide": ("prod161_170_action_import_guide.json", "action_import_guide"),
-            "security_gate": ("prod161_170_security_gate.json", "security_gate"),
-            "parser_task_mode": ("prod161_170_parser_task_mode.json", "parser_task_mode"),
-            "public_runtime_readiness": ("prod161_170_public_runtime_readiness.json", "public_runtime_readiness"),
-            "public_runtime_audit": ("prod161_170_audit_report.json", "public_runtime_audit"),
+            "store_status": ("prod171_180_store_status.json", "store_status"),
+            "state_store_index": ("prod171_180_state_store_index.json", "state_store_index"),
+            "evidence_store_index": ("prod171_180_evidence_store_index.json", "evidence_store_index"),
+            "graph_store_index": ("prod171_180_graph_store_index.json", "graph_store_index"),
+            "store_write_policy": ("prod171_180_store_write_policy.json", "store_write_policy"),
+            "enterprise_workspace_integration": ("prod171_180_enterprise_workspace_integration.json", "enterprise_workspace_integration"),
+            "store_migration_path": ("prod171_180_store_migration_path.json", "store_migration_path"),
+            "store_readiness": ("prod171_180_store_readiness.json", "store_readiness"),
+            "store_audit": ("prod171_180_audit_report.json", "store_audit"),
         }
         if name in mapping:
             stem, key = mapping[name]
@@ -90,14 +118,14 @@ class ProductRuntimeService:
 
     def reports(self) -> Dict:
         patterns = [
-            "prod161_170_public_openapi_spec.md",
-            "prod161_170_deployment_plan.md",
-            "prod161_170_fastapi_adapter.md",
-            "prod161_170_action_import_guide.md",
-            "prod161_170_security_gate.md",
-            "prod161_170_parser_task_mode.md",
-            "prod161_170_public_runtime_readiness.md",
-            "prod161_170_audit_report.md",
+            "prod171_180_store_status.md",
+            "prod171_180_state_store_index.md",
+            "prod171_180_evidence_store_index.md",
+            "prod171_180_graph_store_index.md",
+            "prod171_180_store_write_policy.md",
+            "prod171_180_enterprise_workspace_integration.md",
+            "prod171_180_store_readiness.md",
+            "prod171_180_audit_report.md",
         ]
         reports = []
         for name in patterns:

@@ -1,0 +1,14 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "CASULO State Record",
+  "type": "object",
+  "required": [
+    "state_id",
+    "state_type",
+    "status",
+    "source_ref",
+    "evidence_refs",
+    "gate_status",
+    "version"
+  ]
+}

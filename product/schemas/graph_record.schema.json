@@ -1,0 +1,12 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "CASULO Graph Record",
+  "type": "object",
+  "required": [
+    "graph_id",
+    "domain_candidates",
+    "entity_candidates",
+    "relation_candidates",
+    "review_status"
+  ]
+}

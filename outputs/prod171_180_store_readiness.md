@@ -1,0 +1,28 @@
+# Store Baseline Readiness
+
+- contract_version: `casulo.store_baseline_readiness.v0.1`
+- status: `PASS`
+- decision: `READY_FOR_ENTERPRISE_CHAT_POC_WITH_REPO_NATIVE_STORE`
+
+## Ready For
+- `Enterprise Custom GPT planning`
+- `read-only Actions prototype`
+- `parser documental POC`
+- `state/evidence/graph reuse across sessions`
+- `manual audit and calibration`
+
+## Not Ready For
+- `multi-tenant SaaS`
+- `production database`
+- `unredacted evidence ingestion`
+- `external write actions`
+- `production automation`
+- next: `Build Enterprise Custom GPT Import Kit and run first parser/document POC.`
+
+## Blocked Actions
+- `client_facing_claim`
+- `automatic_nomination`
+- `implementation_execution`
+- `production_activation`
+- `automatic_merge`
+- `credential_handling`
