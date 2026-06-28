@@ -1,0 +1,13 @@
+{
+  "contract": "casulo.product_runtime.v0.1",
+  "purpose": "Define the transition from controlled internal POC to product runtime.",
+  "product_name": "CASULO Workbench",
+  "experience_name": "Operational Cube Solver",
+  "rule": "Product runtime must preserve evidence, gates, deltas, human review, and blocked implementation by default.",
+  "non_goals": [
+    "Production multi-tenant SaaS in this phase",
+    "Client-facing automated claims",
+    "Implementation authorization",
+    "3D polished UI"
+  ]
+}

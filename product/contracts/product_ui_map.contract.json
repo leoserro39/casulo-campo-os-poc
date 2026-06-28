@@ -1,0 +1,18 @@
+{
+  "contract": "casulo.product_ui_map.v0.1",
+  "purpose": "Define first product navigation map.",
+  "screens": [
+    "Home",
+    "Cases",
+    "Case Workspace",
+    "Intake",
+    "Evidence",
+    "Diagnostic",
+    "Cube/Cupula",
+    "Replay",
+    "Timeline",
+    "Reports",
+    "Human Review",
+    "Settings"
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "task": "PROD-001..005",
+  "status": "PASS",
+  "phase": "Product Foundation",
+  "product": "CASULO Workbench",
+  "experience": "Operational Cube Solver",
+  "next_recommended_bundle": "PROD-006..010 Product Runtime API and Case Adapter",
+  "needs_user": [
+    "confirm product name",
+    "choose first demo vertical",
+    "choose local vs cloud demo",
+    "choose visual direction",
+    "choose preferred stack",
+    "define external visibility rules"
+  ]
+}

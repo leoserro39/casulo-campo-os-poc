@@ -1,0 +1,20 @@
+{
+  "contract": "casulo.product_mvp_scope.v0.1",
+  "purpose": "Freeze MVP product scope.",
+  "must_have": [
+    "case workspace",
+    "controlled intake",
+    "evidence audit",
+    "diagnostic summary",
+    "cube/cupula state view",
+    "cockpit replay",
+    "micrograph timeline",
+    "review gates",
+    "report viewer"
+  ],
+  "must_not_have_yet": [
+    "client production mode",
+    "automated external claims",
+    "unreviewed implementation execution"
+  ]
+}

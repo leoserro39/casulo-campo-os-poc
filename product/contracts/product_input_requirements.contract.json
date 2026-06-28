@@ -1,0 +1,13 @@
+{
+  "contract": "casulo.product_input_requirements.v0.1",
+  "purpose": "List decisions and materials required from the founder/operator before building product runtime.",
+  "required_from_user": [
+    "product name confirmation",
+    "target first persona",
+    "first real demo vertical",
+    "preferred stack/deploy constraint",
+    "visual direction for Cube/Cupula",
+    "what may be shown to external people",
+    "whether to prioritize local demo or cloud prototype"
+  ]
+}
