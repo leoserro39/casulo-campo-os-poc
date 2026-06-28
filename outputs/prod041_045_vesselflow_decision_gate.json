@@ -1,0 +1,20 @@
+{
+  "contract_version": "operational_cube.decision_gate.v1.1",
+  "status": "PASS",
+  "vertical_id": "vesselflow",
+  "decision": "BLOCKED_WAITING_FOR_REAL_OR_ANONYMIZED_DATA",
+  "decision_reason": "Real/anonymized evidence is not yet ready for write/rerun.",
+  "allowed_next_actions": [
+    "Prepare reviewed real/anonymized intake JSON.",
+    "Run intake --check.",
+    "If approved, run explicit --write --rerun-state.",
+    "Regenerate report export and evidence comparator."
+  ],
+  "blocked_actions": [
+    "automatic_nomination",
+    "client_facing_claim",
+    "implementation_execution",
+    "production_activation"
+  ],
+  "internal_use_only": true
+}

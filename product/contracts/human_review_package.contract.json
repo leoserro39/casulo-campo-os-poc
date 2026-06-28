@@ -1,0 +1,16 @@
+{
+  "contract": "operational_cube.human_review_package.v1.1",
+  "purpose": "Freeze an internal human review package for VesselFlow before any data-backed or external use.",
+  "mode": "internal_review_only",
+  "primary_script": "product/scripts/build_vesselflow_human_review_package.py",
+  "outputs": [
+    "outputs/prod041_045_vesselflow_human_review_package.json",
+    "outputs/prod041_045_vesselflow_human_review_package.md"
+  ],
+  "blocked_actions": [
+    "automatic_nomination",
+    "client_facing_claim",
+    "implementation_execution",
+    "production_activation"
+  ]
+}

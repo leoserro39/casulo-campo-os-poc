@@ -1,0 +1,16 @@
+{
+  "contract": "operational_cube.decision_gate.v1.1",
+  "purpose": "Compute a conservative internal decision gate for VesselFlow based on evidence, rerun readiness and human review status.",
+  "possible_decisions": [
+    "BLOCKED_WAITING_FOR_REAL_OR_ANONYMIZED_DATA",
+    "BLOCKED_WAITING_FOR_HUMAN_REVIEW",
+    "READY_FOR_INTERNAL_REVIEW_ONLY",
+    "APPROVED_FOR_CONTROLLED_INTERNAL_DEMO_ONLY"
+  ],
+  "never_authorizes": [
+    "automatic_nomination",
+    "client_facing_claim",
+    "implementation_execution",
+    "production_activation"
+  ]
+}

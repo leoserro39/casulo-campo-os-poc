@@ -1,0 +1,28 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "VesselFlow Human Review Package",
+  "type": "object",
+  "required": [
+    "status",
+    "decision",
+    "review_items",
+    "blocked_actions"
+  ],
+  "properties": {
+    "status": {
+      "type": "string"
+    },
+    "decision": {
+      "type": "string"
+    },
+    "review_items": {
+      "type": "array"
+    },
+    "blocked_actions": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  }
+}

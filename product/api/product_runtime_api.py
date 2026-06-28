@@ -76,6 +76,8 @@ class ProductRuntimeHandler(BaseHTTPRequestHandler):
             if clean == "api/vesselflow/real-data-delta-review": return self.send_json(self.service.vesselflow_real_data_delta_review())
             if clean == "api/vesselflow/data-backed-rerun": return self.send_json(self.service.vesselflow_data_backed_rerun())
             if clean == "api/vesselflow/evidence-comparator": return self.send_json(self.service.vesselflow_evidence_comparator())
+            if clean == "api/vesselflow/human-review-package": return self.send_json(self.service.vesselflow_human_review_package())
+            if clean == "api/vesselflow/decision-gate": return self.send_json(self.service.vesselflow_decision_gate())
             if clean == "api/reports": return self.send_json(self.service.reports())
 
             return self.send_json({"status": "NOT_FOUND", "path": path}, status=404)
@@ -92,7 +94,7 @@ def main() -> int:
     server = HTTPServer((args.host, args.port), ProductRuntimeHandler)
     print(f"Operational Cube product runtime API/UI running at http://{args.host}:{args.port}")
     print("Open: /ui")
-    print("Try: /api/health, /api/vesselflow/data-backed-rerun")
+    print("Try: /api/health, /api/vesselflow/decision-gate")
     try:
         server.serve_forever()
     except KeyboardInterrupt:

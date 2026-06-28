@@ -1,0 +1,84 @@
+{
+  "contract_version": "operational_cube.human_review_package.v1.1",
+  "status": "PASS",
+  "vertical_id": "vesselflow",
+  "case_id": "vesselflow_demo_controlled_001",
+  "decision": "BLOCKED_WAITING_FOR_REAL_OR_ANONYMIZED_DATA",
+  "decision_reason": "Real/anonymized evidence is not yet ready for write/rerun.",
+  "state_summary": {
+    "data_mode": "sample_placeholder",
+    "state_decision": "WAITING_FOR_REAL_DATA_OR_HUMAN_REVIEW",
+    "risk_level": "HIGH"
+  },
+  "evidence_status_counts": {
+    "SAMPLE_PLACEHOLDER": 1,
+    "AVAILABLE": 3,
+    "NOT_PROVIDED": 6
+  },
+  "gate_status_counts": {
+    "BLOCKED_SAMPLE_DATA": 6,
+    "REQUIRED": 1
+  },
+  "delta": {
+    "data_mode_change": "sample_placeholder -> WAITING_FOR_USER_DATA",
+    "risk_change_expected": "NO_REDUCTION_YET_WAITING_FOR_DATA",
+    "gate_change_expected": "NO_GATE_CHANGE_YET",
+    "evidence_change_expected": "DATASET_REFERENCE_NOT_READY",
+    "ready_for_write_rerun": false
+  },
+  "rerun": {
+    "mode": "check_only",
+    "ready_for_write_rerun": false,
+    "warnings": [
+      "Current intake is not ready for data-backed write/rerun. This is expected while dataset reference remains placeholder.",
+      "No intake JSON was supplied. Running in check-only comparator mode."
+    ],
+    "errors": []
+  },
+  "review_items": [
+    {
+      "item": "data_source",
+      "status": "BLOCKED",
+      "note": "Current state is still sample placeholder until reviewed real/anonymized data is written and rerun."
+    },
+    {
+      "item": "evidence_manifest",
+      "status": "CHECK_REQUIRED",
+      "note": "Review evidence status counts and missing/not provided records."
+    },
+    {
+      "item": "gate_matrix",
+      "status": "BLOCKED",
+      "note": "Gate movement cannot authorize execution without human approval."
+    },
+    {
+      "item": "risk_fragility",
+      "status": "HIGH_ATTENTION",
+      "note": "Risk remains high while evidence is placeholder/missing."
+    },
+    {
+      "item": "external_use",
+      "status": "BLOCKED",
+      "note": "No client-facing claim or production activation is allowed."
+    }
+  ],
+  "required_human_decisions": [
+    "Confirm whether real/anonymized VesselFlow data can be used internally.",
+    "Confirm whether evidence is sufficient for a controlled demo.",
+    "Confirm whether gates may move from BLOCKED_SAMPLE_DATA to CHECK_REQUIRED.",
+    "Confirm no automatic nomination or external use will be executed."
+  ],
+  "allowed_next_actions": [
+    "Prepare reviewed real/anonymized intake JSON.",
+    "Run intake --check.",
+    "If approved, run explicit --write --rerun-state.",
+    "Regenerate report export and evidence comparator."
+  ],
+  "blocked_actions": [
+    "automatic_nomination",
+    "client_facing_claim",
+    "implementation_execution",
+    "production_activation"
+  ],
+  "internal_use_only": true
+}
