@@ -1,0 +1,38 @@
+{
+  "contract_version": "operational_cube.software_review_intake.v1.5",
+  "status": "PASS",
+  "source_bundle": "PROD-061..070 TIC/SI Operational State Mesh",
+  "decision": "SOFTWARE_REVIEW_INTAKE_READY",
+  "candidate_systems": [
+    {
+      "system": "Customer Portal",
+      "handoff": "software_review_gate",
+      "reasons": [
+        "no rollback plan",
+        "missing access review",
+        "tests and docs required"
+      ]
+    },
+    {
+      "system": "Internal Finance Tool",
+      "handoff": "software_review_gate",
+      "reasons": [
+        "owner review required",
+        "data classification and access review required"
+      ]
+    }
+  ],
+  "intake_rules": [
+    "Review does not authorize implementation.",
+    "Review does not authorize production activation.",
+    "Repository actions must run in controlled branch/scope.",
+    "Human review is required before any code merge or deployment."
+  ],
+  "blocked_actions": [
+    "client_facing_claim",
+    "automatic_nomination",
+    "implementation_execution",
+    "production_activation"
+  ],
+  "internal_use_only": true
+}

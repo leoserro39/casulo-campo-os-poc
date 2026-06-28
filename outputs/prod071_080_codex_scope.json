@@ -1,0 +1,38 @@
+{
+  "contract_version": "operational_cube.codex_scope.v1.5",
+  "status": "PASS",
+  "decision": "CODEX_ALLOWED_ONLY_AS_CONTROLLED_DRAFT_EXECUTOR",
+  "role": "Codex or equivalent coding agent may draft tests, documentation, small patches and review summaries only inside an explicit branch/task scope.",
+  "allowed_actions": [
+    "read supplied repository context",
+    "draft tests",
+    "draft documentation",
+    "draft architecture notes",
+    "draft small non-production patches",
+    "summarize evidence gaps",
+    "prepare pull request text"
+  ],
+  "blocked_actions": [
+    "production deployment",
+    "automatic merge",
+    "handling real credentials",
+    "client-facing claim",
+    "modifying security-sensitive logic without explicit human review",
+    "changing infrastructure or deployment target without approval"
+  ],
+  "required_controls": [
+    "explicit task id",
+    "branch or patch scope",
+    "test command",
+    "evidence output path",
+    "human reviewer",
+    "gate decision"
+  ],
+  "blocked_product_actions": [
+    "client_facing_claim",
+    "automatic_nomination",
+    "implementation_execution",
+    "production_activation"
+  ],
+  "internal_use_only": true
+}

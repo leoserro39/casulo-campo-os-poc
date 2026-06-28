@@ -1,0 +1,91 @@
+{
+  "contract_version": "operational_cube.development_tasks.v1.5",
+  "status": "PASS",
+  "decision": "DEVELOPMENT_TASKS_CREATED_FOR_INTERNAL_REVIEW",
+  "tasks": [
+    {
+      "task_id": "DEV-GATE-001",
+      "title": "Confirm system and repository ownership",
+      "source_delta": "owner review required",
+      "codex_eligible": false,
+      "human_required": true,
+      "required_evidence": [
+        "owner record",
+        "support owner",
+        "repository maintainer"
+      ],
+      "gate": "software_review_gate"
+    },
+    {
+      "task_id": "DEV-GATE-002",
+      "title": "Create rollback plan template for Customer Portal",
+      "source_delta": "no rollback plan",
+      "codex_eligible": true,
+      "human_required": true,
+      "required_evidence": [
+        "rollback plan",
+        "review approval"
+      ],
+      "gate": "rollback_gate"
+    },
+    {
+      "task_id": "DEV-GATE-003",
+      "title": "Draft repository test plan",
+      "source_delta": "tests and docs required",
+      "codex_eligible": true,
+      "human_required": true,
+      "required_evidence": [
+        "test plan",
+        "test execution output",
+        "review notes"
+      ],
+      "gate": "production_gate"
+    },
+    {
+      "task_id": "DEV-GATE-004",
+      "title": "Draft architecture and dependency review",
+      "source_delta": "system boundaries and dependencies need confirmation",
+      "codex_eligible": true,
+      "human_required": true,
+      "required_evidence": [
+        "architecture summary",
+        "dependency map",
+        "review decision"
+      ],
+      "gate": "software_review_gate"
+    },
+    {
+      "task_id": "DEV-GATE-005",
+      "title": "Prepare access review request",
+      "source_delta": "missing access review",
+      "codex_eligible": false,
+      "human_required": true,
+      "required_evidence": [
+        "access matrix",
+        "risk classification",
+        "approval"
+      ],
+      "gate": "security_gate"
+    },
+    {
+      "task_id": "DEV-GATE-006",
+      "title": "Document ERP integration failure mode",
+      "source_delta": "ERP failure mode and credential handling are not documented",
+      "codex_eligible": true,
+      "human_required": true,
+      "required_evidence": [
+        "integration map",
+        "failure mode notes",
+        "credential handling policy reference"
+      ],
+      "gate": "integration_gate"
+    }
+  ],
+  "blocked_actions": [
+    "client_facing_claim",
+    "automatic_nomination",
+    "implementation_execution",
+    "production_activation"
+  ],
+  "internal_use_only": true
+}

@@ -1,0 +1,62 @@
+{
+  "contract_version": "operational_cube.software_review_gate.v1.5",
+  "status": "PASS",
+  "decision": "CONTROLLED_DEVELOPMENT_REVIEW_REQUIRED",
+  "decision_reason": "TIC/SI mesh found missing rollback, access review, tests, documentation and ownership evidence.",
+  "review_dimensions": [
+    {
+      "dimension": "architecture",
+      "status": "CHECK_REQUIRED",
+      "reason": "system boundaries and dependencies must be confirmed"
+    },
+    {
+      "dimension": "security",
+      "status": "BLOCKED_MISSING_EVIDENCE",
+      "reason": "access review and risk classification are missing"
+    },
+    {
+      "dimension": "documentation",
+      "status": "CHECK_REQUIRED",
+      "reason": "repository and runbook documentation must be reviewed"
+    },
+    {
+      "dimension": "tests",
+      "status": "BLOCKED_MISSING_EVIDENCE",
+      "reason": "test evidence is required before controlled development approval"
+    },
+    {
+      "dimension": "deployment",
+      "status": "BLOCKED_NO_ROLLBACK",
+      "reason": "rollback plan is missing"
+    },
+    {
+      "dimension": "observability",
+      "status": "CHECK_REQUIRED",
+      "reason": "logs and operational signals must be confirmed"
+    },
+    {
+      "dimension": "data_model",
+      "status": "CHECK_REQUIRED",
+      "reason": "data classification and access model need review"
+    },
+    {
+      "dimension": "operational_ownership",
+      "status": "CHECK_REQUIRED",
+      "reason": "owners must be confirmed for application, support and repository"
+    }
+  ],
+  "allowed_next_actions": [
+    "create controlled development tasks",
+    "prepare repository review checklist",
+    "allow Codex or equivalent agent to draft tests/docs only within scope",
+    "run validators and record evidence",
+    "return to human review gate"
+  ],
+  "blocked_actions": [
+    "client_facing_claim",
+    "automatic_nomination",
+    "implementation_execution",
+    "production_activation"
+  ],
+  "internal_use_only": true
+}

@@ -90,6 +90,12 @@ class ProductRuntimeHandler(BaseHTTPRequestHandler):
             if clean == "api/tic-si/state-mesh": return self.send_json(self.service.tic_si_state_mesh())
             if clean == "api/tic-si/gate-matrix": return self.send_json(self.service.tic_si_gate_matrix())
             if clean == "api/tic-si/review-package": return self.send_json(self.service.tic_si_review_package())
+
+            if clean == "api/software-review/intake": return self.send_json(self.service.software_review_intake())
+            if clean == "api/software-review/gate": return self.send_json(self.service.software_review_runtime_gate())
+            if clean == "api/software-review/development-tasks": return self.send_json(self.service.development_tasks())
+            if clean == "api/software-review/codex-scope": return self.send_json(self.service.codex_scope())
+
             if clean == "api/reports": return self.send_json(self.service.reports())
 
             return self.send_json({"status": "NOT_FOUND", "path": path}, status=404)
@@ -106,7 +112,7 @@ def main() -> int:
     server = HTTPServer((args.host, args.port), ProductRuntimeHandler)
     print(f"Operational Cube product runtime API/UI running at http://{args.host}:{args.port}")
     print("Open: /ui")
-    print("Try: /api/health, /api/tic-si/state-mesh")
+    print("Try: /api/health, /api/software-review/codex-scope")
     try:
         server.serve_forever()
     except KeyboardInterrupt:

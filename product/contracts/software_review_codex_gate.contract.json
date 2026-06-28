@@ -1,0 +1,18 @@
+{
+  "contract": "operational_cube.software_review_codex_gate.v1.5",
+  "purpose": "Convert TIC/SI review blockers into controlled software review, development tasks, Codex scope and human decision gates.",
+  "primary_script": "product/scripts/build_software_review_codex_gate.py",
+  "endpoints": [
+    "/api/software-review/intake",
+    "/api/software-review/gate",
+    "/api/software-review/development-tasks",
+    "/api/software-review/codex-scope"
+  ],
+  "blocked_actions": [
+    "client_facing_claim",
+    "automatic_nomination",
+    "implementation_execution",
+    "production_activation"
+  ],
+  "codex_role": "controlled_execution_assistant_only"
+}

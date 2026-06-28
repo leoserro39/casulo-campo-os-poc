@@ -1,0 +1,11 @@
+{
+  "contract": "operational_cube.development_task_gate.v1.5",
+  "purpose": "Represent a technical delta as a governed development task with evidence, validation and approval requirements.",
+  "decision_states": [
+    "BLOCKED_NO_EVIDENCE",
+    "READY_FOR_CODEX_DRAFT",
+    "READY_FOR_ENGINEER_REVIEW",
+    "READY_FOR_INTERNAL_REVIEW",
+    "APPROVED_FOR_CONTROLLED_DEVELOPMENT"
+  ]
+}

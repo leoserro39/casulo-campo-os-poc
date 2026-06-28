@@ -1,0 +1,21 @@
+{
+  "contract": "operational_cube.codex_execution_scope.v1.5",
+  "purpose": "Define what a coding agent can and cannot do inside a governed development flow.",
+  "allowed": [
+    "read repository context supplied for review",
+    "propose documentation improvements",
+    "generate tests in a controlled branch",
+    "propose small refactors",
+    "create patch suggestions",
+    "summarize risk and evidence gaps"
+  ],
+  "blocked": [
+    "production activation",
+    "credential handling",
+    "external client claim",
+    "automatic merge",
+    "deployment without human approval",
+    "security-sensitive change without review"
+  ],
+  "requires_human_gate": true
+}

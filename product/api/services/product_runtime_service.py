@@ -67,6 +67,10 @@ class ProductRuntimeService:
             "tic_si_state_mesh": exists(self.outputs_root / "prod061_070_tic_si_state_mesh.json"),
             "tic_si_gate_matrix": exists(self.outputs_root / "prod061_070_tic_si_gate_matrix.json"),
             "tic_si_review_package": exists(self.outputs_root / "prod061_070_tic_si_review_package.json"),
+            "software_review_intake": exists(self.outputs_root / "prod071_080_software_review_intake.json"),
+            "software_review_gate_runtime": exists(self.outputs_root / "prod071_080_software_review_gate.json"),
+            "development_tasks": exists(self.outputs_root / "prod071_080_development_tasks.json"),
+            "codex_scope": exists(self.outputs_root / "prod071_080_codex_scope.json"),
         }
         return {
             "status": "PASS" if all(checks.values()) else "INCOMPLETE",
@@ -74,7 +78,7 @@ class ProductRuntimeService:
             "runtime_mode": RUNTIME_MODE,
             "checks": checks,
             "blocked_actions": BLOCKED_ACTIONS,
-            "next_recommended_step": "Build Software Review and Codex Development Gate.",
+            "next_recommended_step": "Build PME AI Program / Client Demo Pack.",
         }
 
     def verticals(self) -> Dict:
@@ -129,16 +133,20 @@ class ProductRuntimeService:
     def tic_si_state_mesh(self) -> Dict: return payload(self.outputs_root / "prod061_070_tic_si_state_mesh.json", "tic_si_state_mesh")
     def tic_si_gate_matrix(self) -> Dict: return payload(self.outputs_root / "prod061_070_tic_si_gate_matrix.json", "tic_si_gate_matrix")
     def tic_si_review_package(self) -> Dict: return payload(self.outputs_root / "prod061_070_tic_si_review_package.json", "tic_si_review_package")
+    def software_review_intake(self) -> Dict: return payload(self.outputs_root / "prod071_080_software_review_intake.json", "software_review_intake")
+    def software_review_runtime_gate(self) -> Dict: return payload(self.outputs_root / "prod071_080_software_review_gate.json", "software_review_gate")
+    def development_tasks(self) -> Dict: return payload(self.outputs_root / "prod071_080_development_tasks.json", "development_tasks")
+    def codex_scope(self) -> Dict: return payload(self.outputs_root / "prod071_080_codex_scope.json", "codex_scope")
 
     def reports(self) -> Dict:
         patterns = [
-            "prod051_060_product_positioning.md",
-            "prod051_060_development_layer.md",
-            "prod051_060_tic_state_mesh.md",
-            "prod051_060_software_review_gate.md",
             "prod061_070_tic_si_state_mesh.md",
             "prod061_070_tic_si_gate_matrix.md",
             "prod061_070_tic_si_review_package.md",
+            "prod071_080_software_review_intake.md",
+            "prod071_080_software_review_gate.md",
+            "prod071_080_development_tasks.md",
+            "prod071_080_codex_scope.md",
         ]
         reports = []
         for name in patterns:
