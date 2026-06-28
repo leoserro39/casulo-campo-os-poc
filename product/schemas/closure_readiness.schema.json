@@ -1,0 +1,11 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "CASULO Closure Readiness",
+  "type": "object",
+  "required": [
+    "status",
+    "decision",
+    "ready_for",
+    "not_ready_for"
+  ]
+}

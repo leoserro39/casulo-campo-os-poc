@@ -1,0 +1,57 @@
+{
+  "status": "PASS",
+  "records": [
+    {
+      "issue_id": "REAL-GRAPH-001-ONBOARDING-ISSUE-CANDIDATE-002",
+      "manual_issue_url": "",
+      "manual_issue_url_present": false,
+      "source_delta": "delta_evidence",
+      "priority": "P0_BLOCKER",
+      "review_route": "evidence_owner",
+      "target_state": "APPROVED_FOR_MANUAL_CREATE",
+      "closure_status": "PENDING_MANUAL_ISSUE_CREATION",
+      "next_action": "wait_for_manual_issue_url_evidence",
+      "valid": true,
+      "reason": "no_url_yet_pending_manual_creation",
+      "auto_execution_allowed": false,
+      "blocked_actions": [
+        "client_facing_claim",
+        "automatic_nomination",
+        "implementation_execution",
+        "production_activation",
+        "automatic_merge",
+        "credential_handling"
+      ]
+    },
+    {
+      "issue_id": "REAL-GRAPH-002-DOCUMENT-AUDIT-ISSUE-CANDIDATE-002",
+      "manual_issue_url": "",
+      "manual_issue_url_present": false,
+      "source_delta": "delta_evidence",
+      "priority": "P0_BLOCKER",
+      "review_route": "evidence_owner",
+      "target_state": "APPROVED_FOR_MANUAL_CREATE",
+      "closure_status": "PENDING_MANUAL_ISSUE_CREATION",
+      "next_action": "wait_for_manual_issue_url_evidence",
+      "valid": true,
+      "reason": "no_url_yet_pending_manual_creation",
+      "auto_execution_allowed": false,
+      "blocked_actions": [
+        "client_facing_claim",
+        "automatic_nomination",
+        "implementation_execution",
+        "production_activation",
+        "automatic_merge",
+        "credential_handling"
+      ]
+    }
+  ],
+  "blocked_actions": [
+    "client_facing_claim",
+    "automatic_nomination",
+    "implementation_execution",
+    "production_activation",
+    "automatic_merge",
+    "credential_handling"
+  ]
+}

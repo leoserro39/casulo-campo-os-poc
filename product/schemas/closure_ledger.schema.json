@@ -1,0 +1,11 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "CASULO Closure Ledger",
+  "type": "object",
+  "required": [
+    "status",
+    "records",
+    "summary",
+    "blocked_actions"
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "task": "PROD-421..440",
+  "status": "PASS",
+  "phase": "Issue-to-State Linkage and Closure Ledger",
+  "endpoints": [
+    "/api/casulo/issue-state-linkage/records",
+    "/api/casulo/issue-state-linkage/closure-ledger",
+    "/api/casulo/issue-state-linkage/report",
+    "/api/casulo/issue-state-linkage/readiness",
+    "/api/casulo/issue-state-linkage/audit"
+  ],
+  "next_recommended_bundle": "PROD-441..460 Closure Replay with Synthetic Manual URL"
+}

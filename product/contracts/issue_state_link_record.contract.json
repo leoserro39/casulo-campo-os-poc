@@ -1,0 +1,4 @@
+{
+  "contract": "casulo.issue_state_link_record.v0.1",
+  "purpose": "Record issue candidate, manual issue URL, source delta, route, target state and closure status."
+}

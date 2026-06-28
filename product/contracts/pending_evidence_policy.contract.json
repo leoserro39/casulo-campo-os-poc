@@ -1,0 +1,4 @@
+{
+  "contract": "casulo.pending_evidence_policy.v0.1",
+  "purpose": "Keep candidates pending when no manual issue URL exists; do not invent URLs or mark closed prematurely."
+}

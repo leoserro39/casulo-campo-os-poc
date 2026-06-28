@@ -1,0 +1,11 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "CASULO Issue State Link Record",
+  "type": "object",
+  "required": [
+    "issue_id",
+    "closure_status",
+    "target_state",
+    "auto_execution_allowed"
+  ]
+}

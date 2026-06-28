@@ -1,0 +1,4 @@
+{
+  "contract": "casulo.closure_ledger.v0.1",
+  "purpose": "Record closure status for approved issue candidates: pending manual creation, created manually, linked to task, blocked or closed."
+}

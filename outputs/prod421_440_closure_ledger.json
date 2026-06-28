@@ -1,0 +1,79 @@
+{
+  "status": "PASS",
+  "ledger": "casulo.closure_ledger.v0.1",
+  "records": [
+    {
+      "issue_id": "REAL-GRAPH-001-ONBOARDING-ISSUE-CANDIDATE-002",
+      "manual_issue_url": "",
+      "manual_issue_url_present": false,
+      "source_delta": "delta_evidence",
+      "priority": "P0_BLOCKER",
+      "review_route": "evidence_owner",
+      "target_state": "APPROVED_FOR_MANUAL_CREATE",
+      "closure_status": "PENDING_MANUAL_ISSUE_CREATION",
+      "next_action": "wait_for_manual_issue_url_evidence",
+      "valid": true,
+      "reason": "no_url_yet_pending_manual_creation",
+      "auto_execution_allowed": false,
+      "blocked_actions": [
+        "client_facing_claim",
+        "automatic_nomination",
+        "implementation_execution",
+        "production_activation",
+        "automatic_merge",
+        "credential_handling"
+      ]
+    },
+    {
+      "issue_id": "REAL-GRAPH-002-DOCUMENT-AUDIT-ISSUE-CANDIDATE-002",
+      "manual_issue_url": "",
+      "manual_issue_url_present": false,
+      "source_delta": "delta_evidence",
+      "priority": "P0_BLOCKER",
+      "review_route": "evidence_owner",
+      "target_state": "APPROVED_FOR_MANUAL_CREATE",
+      "closure_status": "PENDING_MANUAL_ISSUE_CREATION",
+      "next_action": "wait_for_manual_issue_url_evidence",
+      "valid": true,
+      "reason": "no_url_yet_pending_manual_creation",
+      "auto_execution_allowed": false,
+      "blocked_actions": [
+        "client_facing_claim",
+        "automatic_nomination",
+        "implementation_execution",
+        "production_activation",
+        "automatic_merge",
+        "credential_handling"
+      ]
+    }
+  ],
+  "summary": {
+    "record_count": 2,
+    "manual_issue_url_present_count": 0,
+    "pending_manual_creation_count": 2,
+    "created_manually_ready_to_link_count": 0,
+    "evidence_incomplete_count": 0,
+    "closure_status_counts": {
+      "PENDING_MANUAL_ISSUE_CREATION": 2
+    },
+    "target_state_counts": {
+      "APPROVED_FOR_MANUAL_CREATE": 2
+    },
+    "auto_execution_allowed": false
+  },
+  "policy": [
+    "No issue URL is invented.",
+    "No state is closed without evidence.",
+    "Pending manual creation is a valid closure interim state.",
+    "Manual issue URL evidence is required before CREATED_MANUALLY linkage.",
+    "Automatic execution remains disabled."
+  ],
+  "blocked_actions": [
+    "client_facing_claim",
+    "automatic_nomination",
+    "implementation_execution",
+    "production_activation",
+    "automatic_merge",
+    "credential_handling"
+  ]
+}

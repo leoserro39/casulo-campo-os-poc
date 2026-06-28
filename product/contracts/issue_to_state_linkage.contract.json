@@ -1,0 +1,17 @@
+{
+  "contract": "casulo.issue_to_state_linkage.v0.1",
+  "purpose": "Link manually created issue evidence, when present, back to candidate state, task lineage and closure ledger.",
+  "input": [
+    "outputs/prod401_420_manual_issue_evidence_capture.json",
+    "outputs/prod401_420_state_update_preview.json",
+    "outputs/prod381_400_dry_run_transition_ledger.json"
+  ],
+  "blocked_actions": [
+    "client_facing_claim",
+    "automatic_nomination",
+    "implementation_execution",
+    "production_activation",
+    "automatic_merge",
+    "credential_handling"
+  ]
+}
