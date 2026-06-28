@@ -1,0 +1,29 @@
+{
+  "contract": "casulo.company_chat_intake.v2.0",
+  "purpose": "Allow companies to be tested through chat by submitting initial documentation, data, rules and evidence while preserving governance.",
+  "accepted_inputs": [
+    "briefing",
+    "process documents",
+    "PDF/DOCX/TXT",
+    "spreadsheets/CSV",
+    "screenshots",
+    "tickets",
+    "logs with secrets removed",
+    "repository summaries",
+    "policies",
+    "SOPs",
+    "dossiers",
+    "system rules",
+    "sample records anonymized"
+  ],
+  "forbidden_or_redacted_inputs": [
+    "passwords",
+    "API keys",
+    "private tokens",
+    "production credentials",
+    "unredacted sensitive personal data",
+    "bank data not needed for the POC",
+    "confidential third-party data without permission"
+  ],
+  "rule": "Everything received is an evidence candidate, not automatically true."
+}

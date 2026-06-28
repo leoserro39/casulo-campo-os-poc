@@ -1,0 +1,27 @@
+# Technical Readiness Gate
+
+- contract_version: `casulo.technical_readiness_gate.v2.0`
+- status: `PASS`
+- gate: `READY_FOR_COMPANY_INCUBATOR_AND_POC_SERVICES`
+- decision: `READY_FOR_TECHNICAL_POC_SERVICES_NOT_SAAS`
+- reason: `CASULO/Cubo now has method, GPT operating layer, company chat intake, evaluation metrics, hallucination and delta reports, audit record and blocked actions.`
+## Not Ready For
+- `SaaS`
+- `production automation`
+- `client production deployment`
+- `autonomous code merge`
+
+## Requires Next
+- `calibrate metric weights with real cases`
+- `run at least one real/anonymous client-style POC`
+- `build Graph Builder v0 for assisted domain extraction`
+- `prepare incubator/investor technical readiness memo`
+
+## Blocked Actions
+- `client_facing_claim`
+- `automatic_nomination`
+- `implementation_execution`
+- `production_activation`
+- `automatic_merge`
+- `credential_handling`
+

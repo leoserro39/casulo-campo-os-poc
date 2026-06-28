@@ -1,0 +1,56 @@
+{
+  "contract": "casulo.method.operating_system.v2.0",
+  "purpose": "Define the complete CASULO method as a computable operating cycle for GPT, POCs and technical validation.",
+  "phases": [
+    {
+      "id": "C",
+      "name": "Colheita de Contexto",
+      "purpose": "capture briefing, sources, rules, evidence candidates and intent"
+    },
+    {
+      "id": "A",
+      "name": "Arquitetura do Estado",
+      "purpose": "convert context into domain, entity, relation, state and risk"
+    },
+    {
+      "id": "S",
+      "name": "Sinalização de Evidências",
+      "purpose": "map what is supported, missing, contradicted or assumed"
+    },
+    {
+      "id": "U",
+      "name": "Unificação de Gates",
+      "purpose": "apply decision gates, blocked actions and required human review"
+    },
+    {
+      "id": "L",
+      "name": "Leitura de Deltas",
+      "purpose": "measure gaps between current and target state"
+    },
+    {
+      "id": "O",
+      "name": "Operação, Output e Observação",
+      "purpose": "produce controlled response, task, document, code, report or block"
+    }
+  ],
+  "production_phases": [
+    "colheita",
+    "mapa",
+    "estado",
+    "evidencia",
+    "gate",
+    "delta",
+    "execucao_controlada",
+    "validacao",
+    "auditoria",
+    "calibracao"
+  ],
+  "blocked_actions": [
+    "client_facing_claim",
+    "automatic_nomination",
+    "implementation_execution",
+    "production_activation",
+    "automatic_merge",
+    "credential_handling"
+  ]
+}

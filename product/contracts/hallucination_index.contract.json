@@ -1,0 +1,10 @@
+{
+  "contract": "casulo.hallucination_index.v2.0",
+  "formula": "unsupported_claims*18 + unmarked_assumptions*12 + invented_fields*15 + contradiction_count*20 + unauthorized_actions*25 + missing_citations*10",
+  "bands": {
+    "0-10": "LOW",
+    "11-30": "ATTENTION",
+    "31-60": "HIGH",
+    "61-100": "BLOCKED"
+  }
+}

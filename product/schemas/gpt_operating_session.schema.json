@@ -1,0 +1,13 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "CASULO GPT Operating Session",
+  "type": "object",
+  "required": [
+    "request",
+    "context_state",
+    "response_gate",
+    "evidence_map",
+    "delta_index",
+    "hallucination_risk_index"
+  ]
+}

@@ -1,0 +1,67 @@
+{
+  "contract_version": "casulo.method.operating_system.v2.0",
+  "status": "PASS",
+  "method": "CASULO",
+  "phases": [
+    {
+      "id": "C",
+      "name": "Colheita de Contexto",
+      "output": "context_intake"
+    },
+    {
+      "id": "A",
+      "name": "Arquitetura do Estado",
+      "output": "state_architecture"
+    },
+    {
+      "id": "S",
+      "name": "Sinalização de Evidências",
+      "output": "evidence_signal"
+    },
+    {
+      "id": "U",
+      "name": "Unificação de Gates",
+      "output": "gate_matrix"
+    },
+    {
+      "id": "L",
+      "name": "Leitura de Deltas",
+      "output": "delta_map"
+    },
+    {
+      "id": "O",
+      "name": "Operação, Output e Observação",
+      "output": "controlled_output"
+    }
+  ],
+  "production_phases": [
+    "colheita",
+    "mapa",
+    "estado",
+    "evidencia",
+    "gate",
+    "delta",
+    "execucao_controlada",
+    "validacao",
+    "auditoria",
+    "calibracao"
+  ],
+  "core": [
+    "computable_state",
+    "evidence",
+    "gate",
+    "delta",
+    "decision",
+    "task",
+    "controlled_execution",
+    "human_review"
+  ],
+  "blocked_actions": [
+    "client_facing_claim",
+    "automatic_nomination",
+    "implementation_execution",
+    "production_activation",
+    "automatic_merge",
+    "credential_handling"
+  ]
+}

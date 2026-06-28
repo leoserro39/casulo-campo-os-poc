@@ -1,0 +1,11 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "CASULO Evaluation Report",
+  "type": "object",
+  "required": [
+    "status",
+    "cases",
+    "summary",
+    "readiness_gate"
+  ]
+}

@@ -1,0 +1,36 @@
+{
+  "contract_version": "casulo.gpt_operating_layer.v2.0",
+  "status": "PASS",
+  "purpose": "Run CASULO as an operating layer for GPT tasks, documents, research, parsers, software review and daily decisions.",
+  "flow": [
+    "user_request",
+    "company_chat_intake",
+    "context_intake",
+    "evidence_harvest",
+    "state_architecture",
+    "gate_matrix",
+    "delta_index",
+    "hallucination_index",
+    "response_gate",
+    "controlled_output",
+    "audit_record",
+    "calibration"
+  ],
+  "response_gate_decisions": [
+    "ANSWER_ALLOWED",
+    "PARTIAL_ANSWER_ALLOWED",
+    "STRUCTURE_ONLY",
+    "TASK_ONLY",
+    "ASK_FOR_EVIDENCE",
+    "BLOCKED_UNSUPPORTED",
+    "HUMAN_REVIEW_REQUIRED"
+  ],
+  "blocked_actions": [
+    "client_facing_claim",
+    "automatic_nomination",
+    "implementation_execution",
+    "production_activation",
+    "automatic_merge",
+    "credential_handling"
+  ]
+}

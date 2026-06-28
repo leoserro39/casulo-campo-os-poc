@@ -1,0 +1,5 @@
+{
+  "contract": "casulo.operational_map.v2.0",
+  "purpose": "Build a candidate operational map: domains, entities, relations, gates, deltas and decisions.",
+  "domain_mode": "manual_controlled_now__assisted_graph_builder_next"
+}

@@ -1,0 +1,10 @@
+{
+  "contract": "casulo.delta_index.v2.0",
+  "formula": "missing_evidence*15 + missing_rules*15 + blocked_gates*20 + unresolved_dependencies*15 + missing_tests*15 + human_decisions_pending*20",
+  "bands": {
+    "0-20": "CONTROLLED",
+    "21-50": "ADVANCE_WITH_REVIEW",
+    "51-80": "REVIEW_REQUIRED",
+    "81-100": "BLOCKED"
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "contract": "casulo.technical_readiness_gate.v2.0",
+  "target_gate": "READY_FOR_COMPANY_INCUBATOR_AND_POC_SERVICES",
+  "requires": [
+    "runtime PASS",
+    "evaluation cases PASS",
+    "hallucination index generated",
+    "delta index generated",
+    "before/after report generated",
+    "gpt operating layer defined",
+    "company chat intake policy generated",
+    "technical readiness report generated",
+    "blocked actions preserved"
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "contract": "casulo.gpt_operating_layer.v2.0",
+  "purpose": "Operate inside GPT as a context/runtime layer that decides when to answer, block, ask, create task, generate code, or produce report.",
+  "input": [
+    "user_request",
+    "briefing",
+    "documents",
+    "rules",
+    "repo_context",
+    "prior_outputs"
+  ],
+  "output": [
+    "response_gate",
+    "answer_scope",
+    "evidence_map",
+    "delta_map",
+    "hallucination_risk",
+    "task_plan",
+    "audit_record"
+  ],
+  "blocked_actions": [
+    "client_facing_claim",
+    "automatic_nomination",
+    "implementation_execution",
+    "production_activation",
+    "automatic_merge",
+    "credential_handling"
+  ]
+}

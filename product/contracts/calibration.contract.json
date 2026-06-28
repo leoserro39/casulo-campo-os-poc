@@ -1,0 +1,11 @@
+{
+  "contract": "casulo.calibration.v2.0",
+  "purpose": "Record calibration decisions after test runs and adjust weights, gates and response policy.",
+  "calibration_items": [
+    "metric_weights",
+    "gate_thresholds",
+    "evidence_classification",
+    "task_templates",
+    "blocked_actions"
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "contract": "casulo.evaluation_layer.v2.0",
+  "purpose": "Evaluate without Cubo vs with CASULO/Cubo: hallucination risk, evidence coverage, delta, gate compliance and traceability.",
+  "metrics": [
+    "hallucination_risk_index",
+    "delta_index",
+    "evidence_coverage",
+    "gate_compliance",
+    "unsupported_claims",
+    "blocked_action_accuracy",
+    "traceability_score"
+  ]
+}

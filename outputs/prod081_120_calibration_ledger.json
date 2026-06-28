@@ -1,0 +1,28 @@
+{
+  "contract_version": "casulo.calibration_ledger.v2.0",
+  "status": "PASS",
+  "calibration_version": "calibration-000",
+  "current_weights": {
+    "hallucination_index": {
+      "unsupported_claims": 18,
+      "unmarked_assumptions": 12,
+      "invented_fields": 15,
+      "contradiction_count": 20,
+      "unauthorized_actions": 25,
+      "missing_citations": 10
+    },
+    "delta_index": {
+      "missing_evidence": 15,
+      "missing_rules": 15,
+      "blocked_gates": 20,
+      "unresolved_dependencies": 15,
+      "missing_tests": 15,
+      "human_decisions_pending": 20
+    }
+  },
+  "calibration_notes": [
+    "Initial weights are intentionally conservative.",
+    "Real POC calibration should tune penalties for domain-specific risk.",
+    "Blocked actions remain hard gates."
+  ]
+}

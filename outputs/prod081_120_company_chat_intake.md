@@ -1,0 +1,37 @@
+# Company Chat Intake
+
+- contract_version: `casulo.company_chat_intake.v2.0`
+- status: `PASS`
+- purpose: `Test companies through chat by accepting initial documentation, rules, data samples and process context as evidence candidates.`
+## Accepted Inputs
+- `briefing`
+- `process documents`
+- `PDF/DOCX/TXT`
+- `spreadsheets/CSV`
+- `screenshots`
+- `tickets`
+- `logs with secrets removed`
+- `repository summaries`
+- `policies`
+- `SOPs`
+- `dossiers`
+- `system rules`
+- `sample records anonymized`
+
+## Forbidden Or Redacted Inputs
+- `passwords`
+- `API keys`
+- `private tokens`
+- `production credentials`
+- `unredacted sensitive personal data`
+- `confidential third-party data without permission`
+
+- rule: `Everything received is an evidence candidate, not automatically true.`
+## Blocked Actions
+- `client_facing_claim`
+- `automatic_nomination`
+- `implementation_execution`
+- `production_activation`
+- `automatic_merge`
+- `credential_handling`
+

@@ -1,0 +1,12 @@
+{
+  "contract": "casulo.evidence_harvest.v2.0",
+  "purpose": "Harvest and classify evidence from minimal documentation, dossiês, rules, logs, repositories and chat context.",
+  "evidence_status": [
+    "SUPPORTED",
+    "MISSING",
+    "CONTRADICTED",
+    "ASSUMED",
+    "OUT_OF_SCOPE",
+    "NEEDS_HUMAN_REVIEW"
+  ]
+}

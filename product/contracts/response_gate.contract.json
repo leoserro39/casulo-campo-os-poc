@@ -1,0 +1,12 @@
+{
+  "contract": "casulo.response_gate.v2.0",
+  "decision_states": [
+    "ANSWER_ALLOWED",
+    "PARTIAL_ANSWER_ALLOWED",
+    "STRUCTURE_ONLY",
+    "TASK_ONLY",
+    "ASK_FOR_EVIDENCE",
+    "BLOCKED_UNSUPPORTED",
+    "HUMAN_REVIEW_REQUIRED"
+  ]
+}

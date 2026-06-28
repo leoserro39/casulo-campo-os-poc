@@ -54,7 +54,6 @@ class ProductRuntimeHandler(BaseHTTPRequestHandler):
         path = urlparse(self.path).path
         clean = path.strip("/")
         parts = clean.split("/") if clean else []
-
         try:
             if path in ["/", "/ui", "/ui/"]: return self.send_static(UI_ROOT / "index.html")
             if clean.startswith("ui/"):
@@ -62,42 +61,50 @@ class ProductRuntimeHandler(BaseHTTPRequestHandler):
                 if UI_ROOT.resolve() not in requested.parents and requested != UI_ROOT.resolve():
                     return self.send_json({"status": "FORBIDDEN"}, status=403)
                 return self.send_static(requested)
-
             if clean == "api/health": return self.send_json(self.service.health())
             if clean == "api/product/status": return self.send_json(self.service.product_status())
             if clean == "api/verticals": return self.send_json(self.service.verticals())
             if len(parts) == 3 and parts[0] == "api" and parts[1] == "verticals": return self.send_json(self.service.vertical(parts[2]))
             if len(parts) == 4 and parts[0] == "api" and parts[1] == "verticals" and parts[3] == "state-request": return self.send_json(self.service.state_request(parts[2]))
 
-            if clean == "api/vesselflow/import-manifest": return self.send_json(self.service.vesselflow_import_manifest())
-            if clean == "api/vesselflow/state-definition": return self.send_json(self.service.vesselflow_state_definition())
-            if clean == "api/vesselflow/state-definition/report": return self.send_json(self.service.vesselflow_state_report_export())
-            if clean == "api/vesselflow/real-data-intake/preview": return self.send_json(self.service.vesselflow_real_data_intake_preview())
-            if clean == "api/vesselflow/real-data-delta-review": return self.send_json(self.service.vesselflow_real_data_delta_review())
-            if clean == "api/vesselflow/data-backed-rerun": return self.send_json(self.service.vesselflow_data_backed_rerun())
-            if clean == "api/vesselflow/evidence-comparator": return self.send_json(self.service.vesselflow_evidence_comparator())
-            if clean == "api/vesselflow/human-review-package": return self.send_json(self.service.vesselflow_human_review_package())
-            if clean == "api/vesselflow/decision-gate": return self.send_json(self.service.vesselflow_decision_gate())
-
-            if clean == "api/product/internal-review-freeze": return self.send_json(self.service.internal_review_freeze())
-            if clean == "api/product/release-candidate": return self.send_json(self.service.release_candidate())
-            if clean == "api/product/positioning": return self.send_json(self.service.product_positioning())
-            if clean == "api/product/development-layer": return self.send_json(self.service.development_layer())
-            if clean == "api/product/tic-state-mesh": return self.send_json(self.service.tic_state_mesh())
-            if clean == "api/product/software-review-gate": return self.send_json(self.service.software_review_gate())
-            if clean == "api/product/commercial-packages": return self.send_json(self.service.commercial_packages())
-
-            if clean == "api/tic-si/state-mesh": return self.send_json(self.service.tic_si_state_mesh())
-            if clean == "api/tic-si/gate-matrix": return self.send_json(self.service.tic_si_gate_matrix())
-            if clean == "api/tic-si/review-package": return self.send_json(self.service.tic_si_review_package())
-
-            if clean == "api/software-review/intake": return self.send_json(self.service.software_review_intake())
-            if clean == "api/software-review/gate": return self.send_json(self.service.software_review_runtime_gate())
-            if clean == "api/software-review/development-tasks": return self.send_json(self.service.development_tasks())
-            if clean == "api/software-review/codex-scope": return self.send_json(self.service.codex_scope())
-
-            if clean == "api/reports": return self.send_json(self.service.reports())
-
+            route_map = {
+                "api/vesselflow/import-manifest": self.service.vesselflow_import_manifest,
+                "api/vesselflow/state-definition": self.service.vesselflow_state_definition,
+                "api/vesselflow/state-definition/report": self.service.vesselflow_state_report_export,
+                "api/vesselflow/real-data-intake/preview": self.service.vesselflow_real_data_intake_preview,
+                "api/vesselflow/real-data-delta-review": self.service.vesselflow_real_data_delta_review,
+                "api/vesselflow/data-backed-rerun": self.service.vesselflow_data_backed_rerun,
+                "api/vesselflow/evidence-comparator": self.service.vesselflow_evidence_comparator,
+                "api/vesselflow/human-review-package": self.service.vesselflow_human_review_package,
+                "api/vesselflow/decision-gate": self.service.vesselflow_decision_gate,
+                "api/product/internal-review-freeze": self.service.internal_review_freeze,
+                "api/product/release-candidate": self.service.release_candidate,
+                "api/product/positioning": self.service.product_positioning,
+                "api/product/development-layer": self.service.development_layer,
+                "api/product/tic-state-mesh": self.service.tic_state_mesh,
+                "api/product/software-review-gate": self.service.software_review_gate,
+                "api/product/commercial-packages": self.service.commercial_packages,
+                "api/tic-si/state-mesh": self.service.tic_si_state_mesh,
+                "api/tic-si/gate-matrix": self.service.tic_si_gate_matrix,
+                "api/tic-si/review-package": self.service.tic_si_review_package,
+                "api/software-review/intake": self.service.software_review_intake,
+                "api/software-review/gate": self.service.software_review_runtime_gate,
+                "api/software-review/development-tasks": self.service.development_tasks,
+                "api/software-review/codex-scope": self.service.codex_scope,
+                "api/casulo/method": self.service.casulo_method,
+                "api/casulo/company-chat-intake": self.service.company_chat_intake,
+                "api/casulo/gpt-operating-layer": self.service.gpt_operating_layer,
+                "api/casulo/evaluation/test-cases": self.service.evaluation_cases,
+                "api/casulo/evaluation/hallucination-index": self.service.hallucination_index,
+                "api/casulo/evaluation/delta-index": self.service.delta_index,
+                "api/casulo/evaluation/report": self.service.evaluation_report,
+                "api/casulo/technical-readiness-gate": self.service.technical_readiness_gate,
+                "api/casulo/calibration-ledger": self.service.calibration_ledger,
+                "api/casulo/audit-report": self.service.audit_report,
+                "api/reports": self.service.reports,
+            }
+            if clean in route_map:
+                return self.send_json(route_map[clean]())
             return self.send_json({"status": "NOT_FOUND", "path": path}, status=404)
         except Exception as exc:
             return self.send_json({"status": "ERROR", "error": str(exc)}, status=500)
@@ -108,11 +115,10 @@ def main() -> int:
     parser.add_argument("--host", default="127.0.0.1")
     parser.add_argument("--port", type=int, default=8097)
     args = parser.parse_args()
-
     server = HTTPServer((args.host, args.port), ProductRuntimeHandler)
     print(f"Operational Cube product runtime API/UI running at http://{args.host}:{args.port}")
     print("Open: /ui")
-    print("Try: /api/health, /api/software-review/codex-scope")
+    print("Try: /api/health, /api/casulo/evaluation/report")
     try:
         server.serve_forever()
     except KeyboardInterrupt:
