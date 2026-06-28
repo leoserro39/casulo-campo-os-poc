@@ -1,0 +1,45 @@
+{
+  "contract_version": "operational_cube.tic_state_mesh.v1.3",
+  "status": "PASS",
+  "summary": "The TIC/SI mesh connects applications, services, integrations, access, incidents, changes, data, suppliers and deployments into a computable operational state.",
+  "entities": [
+    "application",
+    "service",
+    "integration",
+    "database",
+    "access profile",
+    "incident",
+    "change request",
+    "supplier",
+    "certificate",
+    "deployment",
+    "repository"
+  ],
+  "gates": [
+    "security_gate",
+    "production_gate",
+    "support_gate",
+    "continuity_gate",
+    "data_gate",
+    "integration_gate",
+    "change_gate",
+    "rollback_gate"
+  ],
+  "example": {
+    "system": "customer portal",
+    "state": "not ready for production",
+    "blocking_factors": [
+      "no rollback plan",
+      "missing tests",
+      "insufficient access review"
+    ],
+    "next_action": "open software review gate and development delta package"
+  },
+  "blocked_actions": [
+    "automatic_nomination",
+    "client_facing_claim",
+    "implementation_execution",
+    "production_activation"
+  ],
+  "internal_use_only": true
+}

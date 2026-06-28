@@ -1,0 +1,12 @@
+{
+  "contract": "operational_cube.product_positioning.v1.3",
+  "purpose": "Position Cubo Operacional as an AI program operating layer for SMEs, TIC/SI teams and software-governed solution delivery.",
+  "method": "CASULO",
+  "product": "Cubo Operacional / Operational Cube",
+  "not_a": [
+    "generic checklist",
+    "standalone chatbot",
+    "simple dashboard",
+    "uncontrolled automation"
+  ]
+}

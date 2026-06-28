@@ -56,8 +56,7 @@ class ProductRuntimeHandler(BaseHTTPRequestHandler):
         parts = clean.split("/") if clean else []
 
         try:
-            if path in ["/", "/ui", "/ui/"]:
-                return self.send_static(UI_ROOT / "index.html")
+            if path in ["/", "/ui", "/ui/"]: return self.send_static(UI_ROOT / "index.html")
             if clean.startswith("ui/"):
                 requested = (UI_ROOT / clean.replace("ui/", "", 1)).resolve()
                 if UI_ROOT.resolve() not in requested.parents and requested != UI_ROOT.resolve():
@@ -79,8 +78,14 @@ class ProductRuntimeHandler(BaseHTTPRequestHandler):
             if clean == "api/vesselflow/evidence-comparator": return self.send_json(self.service.vesselflow_evidence_comparator())
             if clean == "api/vesselflow/human-review-package": return self.send_json(self.service.vesselflow_human_review_package())
             if clean == "api/vesselflow/decision-gate": return self.send_json(self.service.vesselflow_decision_gate())
+
             if clean == "api/product/internal-review-freeze": return self.send_json(self.service.internal_review_freeze())
             if clean == "api/product/release-candidate": return self.send_json(self.service.release_candidate())
+            if clean == "api/product/positioning": return self.send_json(self.service.product_positioning())
+            if clean == "api/product/development-layer": return self.send_json(self.service.development_layer())
+            if clean == "api/product/tic-state-mesh": return self.send_json(self.service.tic_state_mesh())
+            if clean == "api/product/software-review-gate": return self.send_json(self.service.software_review_gate())
+            if clean == "api/product/commercial-packages": return self.send_json(self.service.commercial_packages())
             if clean == "api/reports": return self.send_json(self.service.reports())
 
             return self.send_json({"status": "NOT_FOUND", "path": path}, status=404)
@@ -97,7 +102,7 @@ def main() -> int:
     server = HTTPServer((args.host, args.port), ProductRuntimeHandler)
     print(f"Operational Cube product runtime API/UI running at http://{args.host}:{args.port}")
     print("Open: /ui")
-    print("Try: /api/health, /api/product/release-candidate")
+    print("Try: /api/health, /api/product/development-layer")
     try:
         server.serve_forever()
     except KeyboardInterrupt:

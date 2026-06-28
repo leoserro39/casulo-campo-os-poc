@@ -58,6 +58,11 @@ class ProductRuntimeService:
             "vesselflow_decision_gate": exists(self.outputs_root / "prod041_045_vesselflow_decision_gate.json"),
             "internal_review_freeze": exists(self.outputs_root / "prod046_050_internal_review_freeze.json"),
             "release_candidate": exists(self.outputs_root / "prod046_050_release_candidate.json"),
+            "product_positioning": exists(self.outputs_root / "prod051_060_product_positioning.json"),
+            "development_layer": exists(self.outputs_root / "prod051_060_development_layer.json"),
+            "tic_state_mesh": exists(self.outputs_root / "prod051_060_tic_state_mesh.json"),
+            "software_review_gate": exists(self.outputs_root / "prod051_060_software_review_gate.json"),
+            "commercial_packages": exists(self.outputs_root / "prod051_060_commercial_packages.json"),
         }
         return {
             "status": "PASS" if all(checks.values()) else "INCOMPLETE",
@@ -65,7 +70,7 @@ class ProductRuntimeService:
             "runtime_mode": RUNTIME_MODE,
             "checks": checks,
             "blocked_actions": BLOCKED_ACTIONS,
-            "next_recommended_step": "Build Product Positioning and Development Layer, including TIC/SI mesh and software review gates.",
+            "next_recommended_step": "Build the TIC/SI Operational State Mesh vertical and software review gates.",
         }
 
     def verticals(self) -> Dict:
@@ -101,57 +106,32 @@ class ProductRuntimeService:
     def state_request(self, vertical_id: str) -> Dict:
         return payload(self.outputs_root / f"prod_vert004_006_{vertical_id}_state_request.json", "state_request")
 
-    def vesselflow_import_manifest(self) -> Dict:
-        return payload(self.outputs_root / "prod_vert004_006_vesselflow_import_manifest.json", "manifest")
-
-    def vesselflow_state_definition(self) -> Dict:
-        return payload(self.outputs_root / "prod016_020_vesselflow_state_definition.json", "state_definition")
-
-    def vesselflow_state_report_export(self) -> Dict:
-        return payload(self.outputs_root / "prod021_025_vesselflow_state_report_export.json", "report_export")
-
-    def vesselflow_real_data_intake_preview(self) -> Dict:
-        return payload(self.outputs_root / "prod026_030_vesselflow_real_data_intake_preview.json", "preview")
-
-    def vesselflow_real_data_delta_review(self) -> Dict:
-        return payload(self.outputs_root / "prod031_035_vesselflow_real_data_delta_review.json", "delta_review")
-
-    def vesselflow_data_backed_rerun(self) -> Dict:
-        return payload(self.outputs_root / "prod036_040_vesselflow_data_backed_rerun.json", "data_backed_rerun")
-
-    def vesselflow_evidence_comparator(self) -> Dict:
-        return payload(self.outputs_root / "prod036_040_vesselflow_evidence_comparator.json", "evidence_comparator")
-
-    def vesselflow_human_review_package(self) -> Dict:
-        return payload(self.outputs_root / "prod041_045_vesselflow_human_review_package.json", "human_review_package")
-
-    def vesselflow_decision_gate(self) -> Dict:
-        return payload(self.outputs_root / "prod041_045_vesselflow_decision_gate.json", "decision_gate")
-
-    def internal_review_freeze(self) -> Dict:
-        return payload(self.outputs_root / "prod046_050_internal_review_freeze.json", "internal_review_freeze")
-
-    def release_candidate(self) -> Dict:
-        return payload(self.outputs_root / "prod046_050_release_candidate.json", "release_candidate")
+    def vesselflow_import_manifest(self) -> Dict: return payload(self.outputs_root / "prod_vert004_006_vesselflow_import_manifest.json", "manifest")
+    def vesselflow_state_definition(self) -> Dict: return payload(self.outputs_root / "prod016_020_vesselflow_state_definition.json", "state_definition")
+    def vesselflow_state_report_export(self) -> Dict: return payload(self.outputs_root / "prod021_025_vesselflow_state_report_export.json", "report_export")
+    def vesselflow_real_data_intake_preview(self) -> Dict: return payload(self.outputs_root / "prod026_030_vesselflow_real_data_intake_preview.json", "preview")
+    def vesselflow_real_data_delta_review(self) -> Dict: return payload(self.outputs_root / "prod031_035_vesselflow_real_data_delta_review.json", "delta_review")
+    def vesselflow_data_backed_rerun(self) -> Dict: return payload(self.outputs_root / "prod036_040_vesselflow_data_backed_rerun.json", "data_backed_rerun")
+    def vesselflow_evidence_comparator(self) -> Dict: return payload(self.outputs_root / "prod036_040_vesselflow_evidence_comparator.json", "evidence_comparator")
+    def vesselflow_human_review_package(self) -> Dict: return payload(self.outputs_root / "prod041_045_vesselflow_human_review_package.json", "human_review_package")
+    def vesselflow_decision_gate(self) -> Dict: return payload(self.outputs_root / "prod041_045_vesselflow_decision_gate.json", "decision_gate")
+    def internal_review_freeze(self) -> Dict: return payload(self.outputs_root / "prod046_050_internal_review_freeze.json", "internal_review_freeze")
+    def release_candidate(self) -> Dict: return payload(self.outputs_root / "prod046_050_release_candidate.json", "release_candidate")
+    def product_positioning(self) -> Dict: return payload(self.outputs_root / "prod051_060_product_positioning.json", "product_positioning")
+    def development_layer(self) -> Dict: return payload(self.outputs_root / "prod051_060_development_layer.json", "development_layer")
+    def tic_state_mesh(self) -> Dict: return payload(self.outputs_root / "prod051_060_tic_state_mesh.json", "tic_state_mesh")
+    def software_review_gate(self) -> Dict: return payload(self.outputs_root / "prod051_060_software_review_gate.json", "software_review_gate")
+    def commercial_packages(self) -> Dict: return payload(self.outputs_root / "prod051_060_commercial_packages.json", "commercial_packages")
 
     def reports(self) -> Dict:
         patterns = [
-            "prod001_005_product_foundation_report.md",
-            "prod_vert001_003_vertical_case_pack_report.md",
-            "prod_vert004_006_vertical_runtime_adapter_report.md",
-            "prod006_010_product_runtime_api_report.md",
-            "prod011_015_product_ui_shell_report.md",
-            "prod016_020_vesselflow_state_definition.md",
-            "prod021_025_vesselflow_state_report_export.md",
-            "prod026_030_vesselflow_real_data_intake_preview.md",
-            "prod031_035_vesselflow_real_data_delta_review.md",
-            "prod036_040_vesselflow_data_backed_rerun.md",
-            "prod036_040_vesselflow_evidence_comparator.md",
-            "prod041_045_vesselflow_human_review_package.md",
-            "prod041_045_vesselflow_decision_gate.md",
             "prod046_050_internal_review_freeze.md",
             "prod046_050_release_candidate.md",
-            "wb020_poc_completion_report.md",
+            "prod051_060_product_positioning.md",
+            "prod051_060_development_layer.md",
+            "prod051_060_tic_state_mesh.md",
+            "prod051_060_software_review_gate.md",
+            "prod051_060_commercial_packages.md",
         ]
         reports = []
         for name in patterns:

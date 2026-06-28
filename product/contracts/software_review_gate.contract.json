@@ -1,0 +1,14 @@
+{
+  "contract": "operational_cube.software_review_gate.v1.3",
+  "purpose": "Review an existing or proposed software solution using evidence, risk, delta, tests and human approval.",
+  "review_dimensions": [
+    "architecture",
+    "security",
+    "documentation",
+    "tests",
+    "deployment",
+    "observability",
+    "data_model",
+    "operational_ownership"
+  ]
+}

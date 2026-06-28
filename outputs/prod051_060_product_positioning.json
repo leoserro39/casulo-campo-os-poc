@@ -1,0 +1,106 @@
+{
+  "contract_version": "operational_cube.product_positioning.v1.3",
+  "status": "PASS",
+  "product": "Cubo Operacional / Operational Cube",
+  "method": "CASULO",
+  "positioning": "An operational intelligence and AI-program layer that turns processes, systems, data and software into computable state, measurable deltas, gates and governed actions.",
+  "not_a": [
+    "not a simple checklist",
+    "not a generic chatbot",
+    "not only a dashboard",
+    "not uncontrolled automation"
+  ],
+  "layers": [
+    {
+      "layer": "Operational State Layer",
+      "purpose": "Transform business, technical and process reality into computable state.",
+      "keywords": [
+        "state",
+        "domain",
+        "entity",
+        "status",
+        "risk"
+      ]
+    },
+    {
+      "layer": "Evidence Layer",
+      "purpose": "Attach facts, documents, signals and checks to state transitions.",
+      "keywords": [
+        "evidence",
+        "manifest",
+        "source",
+        "traceability"
+      ]
+    },
+    {
+      "layer": "Gate Layer",
+      "purpose": "Block or release actions based on rules, risk and human decisions.",
+      "keywords": [
+        "gate",
+        "decision",
+        "approval",
+        "blocked action"
+      ]
+    },
+    {
+      "layer": "Delta Layer",
+      "purpose": "Measure the gap between current state and target operating state.",
+      "keywords": [
+        "delta",
+        "before/after",
+        "gap",
+        "next action"
+      ]
+    },
+    {
+      "layer": "TIC/SI State Mesh",
+      "purpose": "Connect systems, services, applications, incidents, changes, access and suppliers as a technical-operational mesh.",
+      "keywords": [
+        "application",
+        "integration",
+        "incident",
+        "change",
+        "access",
+        "supplier"
+      ]
+    },
+    {
+      "layer": "Development Layer",
+      "purpose": "Transform operational deltas into governed software tasks, review gates, tests, PRs and delivery evidence.",
+      "keywords": [
+        "software review",
+        "Codex",
+        "task",
+        "PR",
+        "tests",
+        "release gate"
+      ]
+    },
+    {
+      "layer": "AI Program Layer",
+      "purpose": "Package AI adoption as an operating program that requires state, evidence, gates and measured deltas.",
+      "keywords": [
+        "AI program",
+        "SME",
+        "governance",
+        "adoption",
+        "value"
+      ]
+    }
+  ],
+  "target_markets": [
+    "small and medium businesses with recurring operations",
+    "accounting and backoffice firms",
+    "technical services and field operations",
+    "TIC/SI teams",
+    "companies with legacy software or undocumented internal systems",
+    "AI adoption programs that need governance and measurable value"
+  ],
+  "blocked_actions": [
+    "automatic_nomination",
+    "client_facing_claim",
+    "implementation_execution",
+    "production_activation"
+  ],
+  "internal_use_only": true
+}

@@ -1,0 +1,32 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Product Positioning and Development Layer",
+  "type": "object",
+  "required": [
+    "status",
+    "product",
+    "method",
+    "layers",
+    "blocked_actions"
+  ],
+  "properties": {
+    "status": {
+      "type": "string"
+    },
+    "product": {
+      "type": "string"
+    },
+    "method": {
+      "type": "string"
+    },
+    "layers": {
+      "type": "array"
+    },
+    "blocked_actions": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  }
+}

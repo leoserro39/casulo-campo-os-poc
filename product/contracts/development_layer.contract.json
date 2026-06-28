@@ -1,0 +1,16 @@
+{
+  "contract": "operational_cube.development_layer.v1.3",
+  "purpose": "Transform operational deltas into governed development tasks, software review gates, evidence and controlled delivery.",
+  "execution_assistants": [
+    "Codex or equivalent coding agent",
+    "human engineer",
+    "validation scripts",
+    "CI/test runners"
+  ],
+  "governance": [
+    "no code execution without explicit task",
+    "no production activation without gate",
+    "no client-facing claim without human review",
+    "all deltas must produce evidence"
+  ]
+}

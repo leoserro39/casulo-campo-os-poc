@@ -1,0 +1,43 @@
+{
+  "contract_version": "operational_cube.commercial_packages.v1.3",
+  "status": "PASS",
+  "summary": "Suggested service packages for SMEs and technical teams.",
+  "offers": [
+    {
+      "name": "CASULO Operational Diagnosis",
+      "purpose": "Map current state, evidence gaps, risks and first gates."
+    },
+    {
+      "name": "Cubo PME Starter",
+      "purpose": "Install a first operational cube for one recurring process."
+    },
+    {
+      "name": "TIC/SI State Mesh",
+      "purpose": "Map applications, integrations, incidents, access, changes and gates."
+    },
+    {
+      "name": "Software Review Gate",
+      "purpose": "Review existing software and produce a controlled improvement plan."
+    },
+    {
+      "name": "Solution Factory Sprint",
+      "purpose": "Transform approved deltas into governed software tasks, tests and delivery evidence."
+    },
+    {
+      "name": "AI Program Operating Layer",
+      "purpose": "Structure AI adoption around state, evidence, governance, value deltas and safe execution."
+    }
+  ],
+  "roadmap": [
+    "PROD-061..070 TIC/SI Operational State Mesh",
+    "PROD-071..080 Software Review and Codex Development Gate",
+    "PROD-081..090 PME AI Program / Client Demo Pack"
+  ],
+  "blocked_actions": [
+    "automatic_nomination",
+    "client_facing_claim",
+    "implementation_execution",
+    "production_activation"
+  ],
+  "internal_use_only": true
+}

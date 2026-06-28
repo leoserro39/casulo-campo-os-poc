@@ -1,0 +1,26 @@
+{
+  "contract": "operational_cube.tic_state_mesh.v1.3",
+  "purpose": "Model applications, integrations, incidents, changes, access, data and suppliers as a TIC/SI operational state mesh.",
+  "entities": [
+    "application",
+    "service",
+    "integration",
+    "database",
+    "access_profile",
+    "incident",
+    "change",
+    "supplier",
+    "certificate",
+    "deployment"
+  ],
+  "gates": [
+    "security_gate",
+    "production_gate",
+    "support_gate",
+    "continuity_gate",
+    "data_gate",
+    "integration_gate",
+    "change_gate",
+    "rollback_gate"
+  ]
+}
