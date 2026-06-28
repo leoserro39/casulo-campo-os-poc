@@ -1,0 +1,5 @@
+{
+  "contract": "workbench.client_review_readiness.v1.1",
+  "purpose": "Gate that decides if the controlled pack can be prepared for client review.",
+  "rule": "Client review remains blocked while human review decision is PENDING_HUMAN_REVIEW."
+}

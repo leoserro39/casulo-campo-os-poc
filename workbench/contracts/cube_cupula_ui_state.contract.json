@@ -1,0 +1,5 @@
+{
+  "contract": "workbench.cube_cupula_ui_state.v1.4",
+  "purpose": "State contract for the first Cube/Cupula UI prototype.",
+  "rule": "Cube/Cupula is operational state, not decorative animation."
+}

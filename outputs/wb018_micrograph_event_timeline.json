@@ -1,0 +1,80 @@
+{
+  "contract_version": "workbench.micrograph_event_timeline.v1.3",
+  "case_id": "real_controlled_template_001",
+  "status": "PASS",
+  "timeline": [
+    {
+      "micrograph_event_id": "mg_evt_01",
+      "phase": "intake_loaded",
+      "trigger": "controlled_poc_lane",
+      "authorized_region": "controlled_runtime_summary",
+      "gate": "PASS",
+      "return_delta": "Controlled intake accepted for diagnostic lane."
+    },
+    {
+      "micrograph_event_id": "mg_evt_02",
+      "phase": "evidence_manifest_allowed",
+      "trigger": "controlled_poc_lane",
+      "authorized_region": "controlled_runtime_summary",
+      "gate": "PASS",
+      "return_delta": "Manifest decision: ALLOW_CONTROLLED_DIAGNOSTIC."
+    },
+    {
+      "micrograph_event_id": "mg_evt_03",
+      "phase": "state_snapshot_created",
+      "trigger": "controlled_poc_lane",
+      "authorized_region": "controlled_runtime_summary",
+      "gate": "PASS",
+      "return_delta": "State snapshot generated from controlled case."
+    },
+    {
+      "micrograph_event_id": "mg_evt_04",
+      "phase": "graph_projected",
+      "trigger": "controlled_poc_lane",
+      "authorized_region": "controlled_runtime_summary",
+      "gate": "PASS",
+      "return_delta": "Operational graph generated for domain intersections."
+    },
+    {
+      "micrograph_event_id": "mg_evt_05",
+      "phase": "diagnostic_computed",
+      "trigger": "controlled_poc_lane",
+      "authorized_region": "controlled_runtime_summary",
+      "gate": "PASS",
+      "return_delta": "Decision: RECOMMEND_SMALLER_DELTA / DQ 0.627 / H_pre 0.406."
+    },
+    {
+      "micrograph_event_id": "mg_evt_06",
+      "phase": "human_review_gate",
+      "trigger": "controlled_poc_lane",
+      "authorized_region": "controlled_runtime_summary",
+      "gate": "PENDING_HUMAN_REVIEW",
+      "return_delta": "Human review decision: PENDING_HUMAN_REVIEW."
+    },
+    {
+      "micrograph_event_id": "mg_evt_07",
+      "phase": "controlled_report_generated",
+      "trigger": "controlled_poc_lane",
+      "authorized_region": "controlled_runtime_summary",
+      "gate": "PASS",
+      "return_delta": "Internal controlled report assembled."
+    },
+    {
+      "micrograph_event_id": "mg_evt_08",
+      "phase": "runtime_evidence_audited",
+      "trigger": "controlled_poc_lane",
+      "authorized_region": "controlled_runtime_summary",
+      "gate": "PASS",
+      "return_delta": "17 runtime files checked."
+    },
+    {
+      "micrograph_event_id": "mg_evt_09",
+      "phase": "internal_handoff_created",
+      "trigger": "controlled_poc_lane",
+      "authorized_region": "controlled_runtime_summary",
+      "gate": "PASS",
+      "return_delta": "Sanitized internal handoff pack generated."
+    }
+  ],
+  "event_count": 9
+}

@@ -1,0 +1,5 @@
+{
+  "contract": "workbench.cockpit_story_replay.v1.2",
+  "purpose": "Narrative replay of the controlled diagnostic lane.",
+  "rule": "Replay explains events, gates and deltas without exposing raw runtime contents."
+}

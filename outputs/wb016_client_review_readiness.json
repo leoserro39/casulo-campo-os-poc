@@ -1,0 +1,24 @@
+{
+  "contract_version": "workbench.client_review_readiness.v1.1",
+  "case_id": "real_controlled_template_001",
+  "status": "PASS",
+  "ready_for_internal_review": true,
+  "ready_for_client_review": false,
+  "implementation_authorized": false,
+  "gate": "BLOCK_CLIENT_REVIEW",
+  "reasons": [
+    "Human review decision is not ALLOW_CLIENT_REVIEW.",
+    "Client-facing claim remains blocked.",
+    "Implementation remains blocked."
+  ],
+  "allowed_actions": [
+    "internal_review",
+    "request_more_evidence",
+    "prepare_non_binding_internal_demo"
+  ],
+  "blocked_actions": [
+    "client_facing_claim",
+    "implementation_execution",
+    "production_activation"
+  ]
+}

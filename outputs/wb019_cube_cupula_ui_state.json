@@ -1,0 +1,50 @@
+{
+  "contract_version": "workbench.cube_cupula_ui_state.v1.4",
+  "case_id": "real_controlled_template_001",
+  "status": "PASS",
+  "metaphor": "operational_cube_solver",
+  "principle": "Each cube move must correspond to evidence, gate, delta or state change.",
+  "cupula": {
+    "role": "selects and reorganizes the operational state field",
+    "events": [
+      "domain_activation",
+      "evidence_manifest",
+      "risk_propagation",
+      "gate_block",
+      "return_delta",
+      "state_update"
+    ]
+  },
+  "cube": {
+    "role": "structures active execution and shows the operational cube being solved",
+    "faces": {
+      "objective": "controlled diagnostic from sanitized intake",
+      "evidence": "17 runtime evidence files audited",
+      "risk": "H_pre 0.406 -> H_post 0.286",
+      "tasks": "internal review / more evidence / no implementation",
+      "deltas": "Delta_L 0.12",
+      "gates": [
+        "client_facing_claim",
+        "implementation_execution",
+        "production_activation"
+      ]
+    },
+    "state": {
+      "data_quality": 0.627,
+      "decision": "RECOMMEND_SMALLER_DELTA",
+      "ready_for_internal_review": true,
+      "ready_for_client_review": false,
+      "implementation_authorized": false
+    }
+  },
+  "chat_axial": {
+    "role": "intention input and human decision point",
+    "allowed_commands": [
+      "explain current state",
+      "show blocked gates",
+      "show next delta",
+      "request more evidence",
+      "prepare internal review"
+    ]
+  }
+}

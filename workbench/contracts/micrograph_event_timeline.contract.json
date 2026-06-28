@@ -1,0 +1,5 @@
+{
+  "contract": "workbench.micrograph_event_timeline.v1.3",
+  "purpose": "Timeline of micrograph-like operational events for the POC lane.",
+  "rule": "Each event must map to intake, evidence, diagnostic, review, report, audit or handoff."
+}

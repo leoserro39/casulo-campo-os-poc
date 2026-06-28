@@ -1,0 +1,62 @@
+{
+  "contract_version": "workbench.cockpit_story_replay.v1.2",
+  "case_id": "real_controlled_template_001",
+  "status": "PASS",
+  "events": [
+    {
+      "step": 1,
+      "event": "intake_loaded",
+      "meaning": "Controlled intake accepted for diagnostic lane."
+    },
+    {
+      "step": 2,
+      "event": "evidence_manifest_allowed",
+      "meaning": "Manifest decision: ALLOW_CONTROLLED_DIAGNOSTIC."
+    },
+    {
+      "step": 3,
+      "event": "state_snapshot_created",
+      "meaning": "State snapshot generated from controlled case."
+    },
+    {
+      "step": 4,
+      "event": "graph_projected",
+      "meaning": "Operational graph generated for domain intersections."
+    },
+    {
+      "step": 5,
+      "event": "diagnostic_computed",
+      "meaning": "Decision: RECOMMEND_SMALLER_DELTA / DQ 0.627 / H_pre 0.406."
+    },
+    {
+      "step": 6,
+      "event": "human_review_gate",
+      "meaning": "Human review decision: PENDING_HUMAN_REVIEW."
+    },
+    {
+      "step": 7,
+      "event": "controlled_report_generated",
+      "meaning": "Internal controlled report assembled."
+    },
+    {
+      "step": 8,
+      "event": "runtime_evidence_audited",
+      "meaning": "17 runtime files checked."
+    },
+    {
+      "step": 9,
+      "event": "internal_handoff_created",
+      "meaning": "Sanitized internal handoff pack generated."
+    }
+  ],
+  "summary": {
+    "data_quality": 0.627,
+    "h_pre": 0.406,
+    "h_post": 0.286,
+    "delta_l": 0.12,
+    "decision": "RECOMMEND_SMALLER_DELTA",
+    "ready_for_internal_review": true,
+    "ready_for_client_review": false,
+    "implementation_authorized": false
+  }
+}
