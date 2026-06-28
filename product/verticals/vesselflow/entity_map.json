@@ -1,0 +1,53 @@
+{
+  "vertical_id": "vesselflow",
+  "entities": [
+    {
+      "name": "vessel",
+      "role": "operational_entity"
+    },
+    {
+      "name": "master",
+      "role": "operational_entity"
+    },
+    {
+      "name": "pvq",
+      "role": "operational_entity"
+    },
+    {
+      "name": "q88",
+      "role": "operational_entity"
+    },
+    {
+      "name": "certificate",
+      "role": "operational_entity"
+    },
+    {
+      "name": "contract",
+      "role": "operational_entity"
+    },
+    {
+      "name": "cargo",
+      "role": "operational_entity"
+    },
+    {
+      "name": "platform",
+      "role": "operational_entity"
+    },
+    {
+      "name": "lifter",
+      "role": "operational_entity"
+    },
+    {
+      "name": "nomination",
+      "role": "operational_entity"
+    },
+    {
+      "name": "validation_rule",
+      "role": "operational_entity"
+    },
+    {
+      "name": "decision_gate",
+      "role": "operational_entity"
+    }
+  ]
+}

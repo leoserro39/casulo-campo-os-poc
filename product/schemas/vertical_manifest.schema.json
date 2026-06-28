@@ -1,0 +1,75 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Operational Cube Vertical Manifest",
+  "type": "object",
+  "required": [
+    "vertical_id",
+    "vertical_name",
+    "complexity",
+    "purpose",
+    "target_user",
+    "domains",
+    "entities",
+    "evidence_types",
+    "gates",
+    "expected_cube_faces",
+    "blocked_by_default"
+  ],
+  "properties": {
+    "vertical_id": {
+      "type": "string"
+    },
+    "vertical_name": {
+      "type": "string"
+    },
+    "complexity": {
+      "enum": [
+        "small",
+        "medium",
+        "complex"
+      ]
+    },
+    "purpose": {
+      "type": "string"
+    },
+    "target_user": {
+      "type": "string"
+    },
+    "domains": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "entities": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "evidence_types": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "gates": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "expected_cube_faces": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "blocked_by_default": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  }
+}

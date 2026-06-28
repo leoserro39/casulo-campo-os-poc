@@ -1,0 +1,70 @@
+{
+  "vertical_id": "vesselflow",
+  "vertical_name": "VesselFlow / Nomeacao Operacional Maritima",
+  "complexity": "complex",
+  "purpose": "Demonstrar capacidade de definir estado operacional de navio, PVQ/Q88, contratos, qualificacao, sincronizacao e nomeacao.",
+  "target_user": "Operador, consultor tecnico, analista UN, gestor de operacao maritima ou equipe de qualificacao.",
+  "domains": [
+    "navio",
+    "master",
+    "pvq_q88",
+    "documentos",
+    "certificados",
+    "contratos",
+    "carga",
+    "plataforma",
+    "lifter",
+    "analista_un",
+    "qualificacao",
+    "sincronizacao",
+    "nomeacao",
+    "pendencias",
+    "gates"
+  ],
+  "entities": [
+    "vessel",
+    "master",
+    "pvq",
+    "q88",
+    "certificate",
+    "contract",
+    "cargo",
+    "platform",
+    "lifter",
+    "nomination",
+    "validation_rule",
+    "decision_gate"
+  ],
+  "evidence_types": [
+    "master_workbook",
+    "pvq_q88",
+    "contract_record",
+    "certificate",
+    "nomination_matrix",
+    "decision_log",
+    "audit_report"
+  ],
+  "gates": [
+    "pvq_completeness",
+    "document_validity",
+    "contract_alignment",
+    "qualification_gate",
+    "sync_gate",
+    "nomination_gate",
+    "human_review"
+  ],
+  "expected_cube_faces": [
+    "objetivo",
+    "evidencias",
+    "risco",
+    "tarefas",
+    "deltas",
+    "gates"
+  ],
+  "blocked_by_default": [
+    "client_facing_claim",
+    "nomination_execution",
+    "implementation_execution",
+    "production_activation"
+  ]
+}

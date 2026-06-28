@@ -1,0 +1,17 @@
+{
+  "flow": "vesselflow_nomination_state_definition",
+  "steps": [
+    "load_master_workbook",
+    "extract_vessel_state",
+    "validate_pvq_q88",
+    "validate_documents_certificates",
+    "map_contract_constraints",
+    "map_cargo_platform_requirements",
+    "evaluate_vessel_platform_sync",
+    "run_qualification_gate",
+    "run_nomination_gate",
+    "require_human_review",
+    "produce_nomination_state_report"
+  ],
+  "default_decision_policy": "do not nominate automatically; produce controlled operational state and gates"
+}

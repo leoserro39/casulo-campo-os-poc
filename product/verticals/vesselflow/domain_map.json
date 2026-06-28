@@ -1,0 +1,67 @@
+{
+  "domains": {
+    "navio": [
+      "identificacao",
+      "dimensoes",
+      "capacidade",
+      "status_operacional"
+    ],
+    "master": [
+      "responsavel",
+      "perfil",
+      "acao_pendente"
+    ],
+    "pvq_q88": [
+      "campos",
+      "completude",
+      "validacao"
+    ],
+    "documentos": [
+      "certificados",
+      "validade",
+      "pendencias"
+    ],
+    "contratos": [
+      "partes",
+      "escopo",
+      "restricoes"
+    ],
+    "carga": [
+      "tipo",
+      "volume",
+      "janela"
+    ],
+    "plataforma": [
+      "compatibilidade",
+      "restricao",
+      "sync"
+    ],
+    "lifter": [
+      "solicitacao",
+      "preferencia",
+      "sincronizacao"
+    ],
+    "analista_un": [
+      "validacao",
+      "decisao",
+      "observacao"
+    ],
+    "qualificacao": [
+      "criterios",
+      "status",
+      "bloqueios"
+    ],
+    "nomeacao": [
+      "candidato",
+      "gate",
+      "decisao_final"
+    ],
+    "gates": [
+      "validade",
+      "completude",
+      "contrato",
+      "sincronizacao",
+      "humano"
+    ]
+  }
+}

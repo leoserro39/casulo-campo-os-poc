@@ -1,0 +1,37 @@
+{
+  "vertical_id": "legal_office",
+  "entities": [
+    {
+      "name": "cliente",
+      "role": "operational_entity"
+    },
+    {
+      "name": "caso",
+      "role": "operational_entity"
+    },
+    {
+      "name": "documento",
+      "role": "operational_entity"
+    },
+    {
+      "name": "prazo",
+      "role": "operational_entity"
+    },
+    {
+      "name": "responsavel",
+      "role": "operational_entity"
+    },
+    {
+      "name": "tarefa",
+      "role": "operational_entity"
+    },
+    {
+      "name": "honorario",
+      "role": "operational_entity"
+    },
+    {
+      "name": "pendencia",
+      "role": "operational_entity"
+    }
+  ]
+}

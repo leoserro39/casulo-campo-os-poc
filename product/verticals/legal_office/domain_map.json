@@ -1,0 +1,49 @@
+{
+  "domains": {
+    "captacao": [
+      "origem",
+      "interesse",
+      "tipo_de_caso"
+    ],
+    "triagem": [
+      "elegibilidade",
+      "documentos_minimos",
+      "risco"
+    ],
+    "cliente": [
+      "dados",
+      "contato",
+      "consentimento"
+    ],
+    "caso": [
+      "tipo",
+      "status",
+      "responsavel"
+    ],
+    "documentos": [
+      "recebidos",
+      "faltantes",
+      "validade"
+    ],
+    "prazos": [
+      "data",
+      "criticidade",
+      "responsavel"
+    ],
+    "atendimento": [
+      "canal",
+      "retorno",
+      "historico"
+    ],
+    "honorarios": [
+      "contrato",
+      "pagamento",
+      "pendencia"
+    ],
+    "risco": [
+      "prazo",
+      "documento",
+      "comunicacao"
+    ]
+  }
+}

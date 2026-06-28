@@ -1,0 +1,18 @@
+{
+  "task": "PROD-VERT-001..003",
+  "status": "PASS",
+  "phase": "Vertical Case Pack Foundation",
+  "product_name_candidate": "Cubo Operacional",
+  "verticals": [
+    "small_service",
+    "legal_office",
+    "vesselflow"
+  ],
+  "next_recommended_bundle": "PROD-VERT-004..006 Vertical Runtime Adapter and VesselFlow Import Protocol",
+  "needs_user_for_vesselflow": [
+    "dataset/workbook",
+    "expected nomination flow",
+    "qualification rules",
+    "known blocking rules"
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "vertical_id": "small_service",
+  "default_gate_policy": "block external/implementation use until human approval",
+  "gates": [
+    {
+      "gate": "evidence_completeness",
+      "default": "CHECK_REQUIRED"
+    },
+    {
+      "gate": "schedule_conflict",
+      "default": "CHECK_REQUIRED"
+    },
+    {
+      "gate": "financial_visibility",
+      "default": "CHECK_REQUIRED"
+    },
+    {
+      "gate": "human_review",
+      "default": "CHECK_REQUIRED"
+    }
+  ],
+  "blocked_by_default": [
+    "client_facing_claim",
+    "implementation_execution",
+    "production_activation"
+  ]
+}

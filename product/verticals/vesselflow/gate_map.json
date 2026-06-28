@@ -1,0 +1,40 @@
+{
+  "vertical_id": "vesselflow",
+  "default_gate_policy": "block external/implementation use until human approval",
+  "gates": [
+    {
+      "gate": "pvq_completeness",
+      "default": "CHECK_REQUIRED"
+    },
+    {
+      "gate": "document_validity",
+      "default": "CHECK_REQUIRED"
+    },
+    {
+      "gate": "contract_alignment",
+      "default": "CHECK_REQUIRED"
+    },
+    {
+      "gate": "qualification_gate",
+      "default": "CHECK_REQUIRED"
+    },
+    {
+      "gate": "sync_gate",
+      "default": "CHECK_REQUIRED"
+    },
+    {
+      "gate": "nomination_gate",
+      "default": "CHECK_REQUIRED"
+    },
+    {
+      "gate": "human_review",
+      "default": "CHECK_REQUIRED"
+    }
+  ],
+  "blocked_by_default": [
+    "client_facing_claim",
+    "nomination_execution",
+    "implementation_execution",
+    "production_activation"
+  ]
+}

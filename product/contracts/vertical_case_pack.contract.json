@@ -1,0 +1,19 @@
+{
+  "contract": "operational_cube.vertical_case_pack.v0.1",
+  "purpose": "Define vertical case packs for small, medium, and complex operational state demonstrations.",
+  "product_name_status": "temporary",
+  "product_name_candidates": [
+    "Cubo Operacional",
+    "Cubo de Estado",
+    "Cubo OS",
+    "Estado OS",
+    "Nexo Operacional"
+  ],
+  "method_origin": "CASULO remains internal method/origin; final product name will be defined later.",
+  "verticals": [
+    "small_service",
+    "legal_office",
+    "vesselflow"
+  ],
+  "rule": "Every vertical must produce state, evidence, gates, deltas, replay, timeline and cube state without authorizing implementation by default."
+}

@@ -1,0 +1,49 @@
+{
+  "domains": {
+    "entrada": [
+      "origem_do_pedido",
+      "canal",
+      "data",
+      "responsavel"
+    ],
+    "cliente": [
+      "nome",
+      "contato",
+      "historico",
+      "status"
+    ],
+    "orcamento": [
+      "valor",
+      "itens",
+      "aprovacao",
+      "validade"
+    ],
+    "execucao": [
+      "servico",
+      "responsavel",
+      "status",
+      "bloqueios"
+    ],
+    "agenda": [
+      "data_prevista",
+      "conflito",
+      "janela",
+      "prioridade"
+    ],
+    "pendencias": [
+      "tipo",
+      "criticidade",
+      "acao"
+    ],
+    "financeiro": [
+      "pagamento",
+      "custo",
+      "margem"
+    ],
+    "retrabalho": [
+      "causa",
+      "impacto",
+      "recorrencia"
+    ]
+  }
+}

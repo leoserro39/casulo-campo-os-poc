@@ -1,0 +1,13 @@
+{
+  "vertical_id": "legal_office",
+  "cube_metaphor": "operational_cube_solver",
+  "principle": "Every cube move must map to evidence, gate, delta or state change.",
+  "faces": {
+    "objetivo": "Define objective and desired state.",
+    "evidencias": "Evidence manifest, source quality and missing evidence.",
+    "risco": "H_pre, H_post, fragility, contradictions.",
+    "tarefas": "Actionable deltas and review tasks.",
+    "deltas": "Delta_L and expected reduction of fragility.",
+    "gates": "Allowed/blocked actions and human review status."
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "vertical_id": "small_service",
+  "entities": [
+    {
+      "name": "cliente",
+      "role": "operational_entity"
+    },
+    {
+      "name": "pedido",
+      "role": "operational_entity"
+    },
+    {
+      "name": "servico",
+      "role": "operational_entity"
+    },
+    {
+      "name": "orcamento",
+      "role": "operational_entity"
+    },
+    {
+      "name": "tecnico",
+      "role": "operational_entity"
+    },
+    {
+      "name": "agenda",
+      "role": "operational_entity"
+    },
+    {
+      "name": "pagamento",
+      "role": "operational_entity"
+    },
+    {
+      "name": "pendencia",
+      "role": "operational_entity"
+    }
+  ]
+}

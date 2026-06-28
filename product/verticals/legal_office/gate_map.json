@@ -1,0 +1,28 @@
+{
+  "vertical_id": "legal_office",
+  "default_gate_policy": "block external/implementation use until human approval",
+  "gates": [
+    {
+      "gate": "legal_advice_block",
+      "default": "CHECK_REQUIRED"
+    },
+    {
+      "gate": "document_completeness",
+      "default": "CHECK_REQUIRED"
+    },
+    {
+      "gate": "deadline_risk",
+      "default": "CHECK_REQUIRED"
+    },
+    {
+      "gate": "human_review",
+      "default": "CHECK_REQUIRED"
+    }
+  ],
+  "blocked_by_default": [
+    "legal_opinion",
+    "client_facing_claim",
+    "implementation_execution",
+    "production_activation"
+  ]
+}
