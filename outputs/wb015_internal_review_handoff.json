@@ -1,0 +1,55 @@
+{
+  "contract_version": "workbench.internal_review_handoff.v1.0",
+  "case_id": "real_controlled_template_001",
+  "source_audit_status": "PASS",
+  "files_checked": 17,
+  "sanitization": {
+    "raw_runtime_contents_included": false,
+    "runtime_paths_included": true,
+    "summary_only": true
+  },
+  "diagnostic": {
+    "status": "PASS",
+    "manifest_decision": "ALLOW_CONTROLLED_DIAGNOSTIC",
+    "data_quality": 0.627,
+    "h_pre": 0.406,
+    "h_post": 0.286,
+    "delta_l": 0.12,
+    "decision": "RECOMMEND_SMALLER_DELTA",
+    "human_review_required": true
+  },
+  "human_review": {
+    "review_status": "PENDING_HUMAN_REVIEW",
+    "decision": "PENDING_HUMAN_REVIEW",
+    "review_required": true,
+    "blocked_next_actions": [
+      "client_facing_claim",
+      "implementation_execution",
+      "production_activation"
+    ]
+  },
+  "controlled_report": {
+    "status": "PASS",
+    "human_review_decision": "PENDING_HUMAN_REVIEW",
+    "ready_for_internal_review": true,
+    "ready_for_client_review": false,
+    "implementation_authorized": false
+  },
+  "execution": {
+    "status": "PASS",
+    "mode": "write",
+    "next_gate": "Manual review of runtime report pack before any external use."
+  },
+  "limits": [
+    "Internal review only.",
+    "Not client-facing truth.",
+    "No implementation authorized.",
+    "Runtime outputs remain ignored and must not be committed."
+  ],
+  "next_actions": [
+    "Review controlled test evidence summary internally.",
+    "Confirm whether more evidence is required before any client-facing review.",
+    "Keep implementation blocked until a later solution gate explicitly approves execution.",
+    "Prepare a small-delta discussion using diagnostic decision and H_pre/H_post values."
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "contract": "workbench.internal_review_handoff.v1.0",
+  "purpose": "Create a sanitized internal review handoff pack from controlled runtime evidence audit.",
+  "required_inputs": [
+    "outputs/wb014_runtime_evidence_audit_result.json"
+  ],
+  "required_outputs": [
+    "outputs/wb015_internal_review_handoff.json",
+    "outputs/wb015_internal_review_handoff.md",
+    "outputs/wb015_internal_review_brief.md",
+    "outputs/wb015_internal_review_next_actions.md"
+  ],
+  "rules": [
+    "Do not include raw runtime_outputs file contents.",
+    "Do not authorize implementation.",
+    "Do not mark ready_for_client_review without explicit later approval.",
+    "Use only summaries, paths, counts, gates, decisions and limits."
+  ]
+}
