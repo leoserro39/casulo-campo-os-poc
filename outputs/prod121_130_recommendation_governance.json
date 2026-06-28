@@ -1,0 +1,30 @@
+{
+  "contract_version": "casulo.recommendation_governance.v0.1",
+  "status": "PASS",
+  "decision": "RECOMMENDATION_ALLOWED_WITH_CAVEATS",
+  "uses": [
+    "operational_states",
+    "candidate_graph",
+    "artifact_map",
+    "evidence_status",
+    "gates",
+    "deltas",
+    "state_store_index"
+  ],
+  "allowed": [
+    "structured recommendation with caveats",
+    "risk analysis",
+    "parser contract",
+    "document outline",
+    "development task plan",
+    "POC report"
+  ],
+  "blocked": [
+    "client_facing_claim",
+    "automatic_nomination",
+    "implementation_execution",
+    "production_activation",
+    "automatic_merge",
+    "credential_handling"
+  ]
+}

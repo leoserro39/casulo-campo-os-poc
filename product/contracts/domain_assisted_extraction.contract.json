@@ -1,0 +1,5 @@
+{
+  "contract": "casulo.domain_assisted_extraction.v0.1",
+  "purpose": "Move from fully manual domains to assisted domain/entity/relation suggestions.",
+  "rule": "Suggested domains are candidates until human review approves."
+}

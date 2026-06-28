@@ -1,0 +1,12 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "CASULO Graph Builder Session",
+  "type": "object",
+  "required": [
+    "status",
+    "source_inventory",
+    "candidate_graph",
+    "operational_states",
+    "human_review_required"
+  ]
+}

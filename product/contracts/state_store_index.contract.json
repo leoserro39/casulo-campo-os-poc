@@ -1,0 +1,6 @@
+{
+  "contract": "casulo.state_store_index.v0.1",
+  "purpose": "Persist and reuse computed states, evidence, gates, deltas and decisions across GPT sessions, POCs and development tasks.",
+  "state_reuse_rule": "A state can be reused only with version, source, evidence status and gate decision.",
+  "not_a_final_database": true
+}

@@ -1,0 +1,14 @@
+{
+  "contract": "casulo.poc_factory.v0.1",
+  "purpose": "Package a repeatable company POC flow using chat intake, graph builder, state computation, evaluation report and readiness gate.",
+  "poc_steps": [
+    "redacted_intake",
+    "documentation_inventory",
+    "graph_builder_v0",
+    "state_computation",
+    "evaluation_layer",
+    "recommendation_governance",
+    "technical_report",
+    "next_cycle_plan"
+  ]
+}

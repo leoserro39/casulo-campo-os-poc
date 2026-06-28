@@ -1,0 +1,26 @@
+# State Store Index
+
+- contract_version: `casulo.state_store_index.v0.1`
+- status: `PASS`
+- purpose: `Reuse computed states across GPT sessions, recommendations, POCs and development tasks.`
+- storage_mode: `file_index_now__database_later`
+
+## State Records
+- `STATE-CONTEXT-001` — {"state_id": "STATE-CONTEXT-001", "status": "CHECK_REQUIRED", "reusable": true, "requires": "version + evidence status + gate decision"}
+- `STATE-GRAPH-001` — {"state_id": "STATE-GRAPH-001", "status": "CANDIDATE_GRAPH_BUILT", "reusable": true, "requires": "version + evidence status + gate decision"}
+- `STATE-RECOMMENDATION-001` — {"state_id": "STATE-RECOMMENDATION-001", "status": "PARTIAL_RECOMMENDATION_ALLOWED", "reusable": true, "requires": "version + evidence status + gate decision"}
+- `STATE-DEVELOPMENT-001` — {"state_id": "STATE-DEVELOPMENT-001", "status": "TASK_ONLY_UNTIL_EVIDENCE", "reusable": true, "requires": "version + evidence status + gate decision"}
+
+## Reuse Policy
+- `Never reuse a state without state_id.`
+- `Never reuse a state without evidence status.`
+- `Never reuse a state for production execution without human gate.`
+- `Use state as context for recommendations, tasks, parsers and documents.`
+
+## Blocked Actions
+- `client_facing_claim`
+- `automatic_nomination`
+- `implementation_execution`
+- `production_activation`
+- `automatic_merge`
+- `credential_handling`

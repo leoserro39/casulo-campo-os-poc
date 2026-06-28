@@ -1,0 +1,26 @@
+{
+  "contract": "casulo.graph_builder.v0.1",
+  "purpose": "Build an assisted operational graph from briefing, documents, rules, dossiês, logs, repo summaries and chat inputs.",
+  "mode": "assisted_candidate_graph_not_autonomous_truth",
+  "stages": [
+    "intake",
+    "source_inventory",
+    "candidate_domain_extraction",
+    "candidate_entity_extraction",
+    "candidate_relation_extraction",
+    "artifact_mapping",
+    "evidence_classification",
+    "state_assembly",
+    "gate_assignment",
+    "delta_calculation",
+    "human_review"
+  ],
+  "blocked_actions": [
+    "client_facing_claim",
+    "automatic_nomination",
+    "implementation_execution",
+    "production_activation",
+    "automatic_merge",
+    "credential_handling"
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "status": "PASS",
+  "audit": "CASULO Graph Builder v0 / POC Factory audit",
+  "graph_mode": "assisted_candidate_graph",
+  "candidate_domains": 5,
+  "candidate_entities": 6,
+  "candidate_relations": 5,
+  "state_records": 4,
+  "poc_deliverables": 10,
+  "readiness": "READY_FOR_GRAPH_BUILDER_AND_POC_FACTORY_TESTS",
+  "finding": "PASS: graph builder v0 supports the intended explanation: docs/chat -> candidate graph -> states -> governed recommendations/development -> POC factory."
+}

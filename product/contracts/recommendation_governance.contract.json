@@ -1,0 +1,12 @@
+{
+  "contract": "casulo.recommendation_governance.v0.1",
+  "purpose": "Use computed state to govern recommendations, development tasks, parser creation and decision support.",
+  "recommendation_states": [
+    "RECOMMENDATION_ALLOWED",
+    "RECOMMENDATION_ALLOWED_WITH_CAVEATS",
+    "STRUCTURE_ONLY",
+    "TASK_ONLY",
+    "BLOCKED_INSUFFICIENT_EVIDENCE",
+    "HUMAN_REVIEW_REQUIRED"
+  ]
+}
