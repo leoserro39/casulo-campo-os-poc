@@ -1,0 +1,12 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "CASULO Review Decision",
+  "type": "object",
+  "required": [
+    "decision_id",
+    "issue_id",
+    "case_id",
+    "recommended_decision",
+    "requires_human_approval"
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "status": "PASS",
+  "policy": "CASULO issue selection policy",
+  "max_selected": 12,
+  "rules": [
+    "Prioritize P0 blockers.",
+    "Prefer production/domain/evidence/conflict deltas.",
+    "Boost deltas repeated across case outputs.",
+    "Do not create GitHub issues automatically.",
+    "Require human approval before promoting any candidate."
+  ],
+  "blocked_actions": [
+    "client_facing_claim",
+    "automatic_nomination",
+    "implementation_execution",
+    "production_activation",
+    "automatic_merge",
+    "credential_handling"
+  ]
+}

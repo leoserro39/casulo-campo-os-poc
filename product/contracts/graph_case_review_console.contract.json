@@ -1,0 +1,16 @@
+{
+  "contract": "casulo.graph_case_review_console.v0.1",
+  "purpose": "Create a review console from real/anonymized graph case outputs and select issue candidates for human approval.",
+  "input": [
+    "outputs/prod301_320_real_graph_case_results.json",
+    "outputs/prod301_320_real_graph_case_aggregate.json"
+  ],
+  "blocked_actions": [
+    "client_facing_claim",
+    "automatic_nomination",
+    "implementation_execution",
+    "production_activation",
+    "automatic_merge",
+    "credential_handling"
+  ]
+}

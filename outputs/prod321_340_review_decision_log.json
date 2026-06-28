@@ -1,0 +1,233 @@
+{
+  "status": "PASS",
+  "review_decisions": [
+    {
+      "decision_id": "REVIEW-DECISION-001",
+      "issue_id": "REAL-GRAPH-001-ONBOARDING-ISSUE-CANDIDATE-002",
+      "case_id": "REAL-GRAPH-001-ONBOARDING",
+      "priority": "P0_BLOCKER",
+      "source_delta": "delta_evidence",
+      "review_route": "evidence_owner",
+      "recommended_decision": "APPROVE_FOR_HUMAN_REVIEW_ISSUE",
+      "requires_human_approval": true,
+      "auto_created_issue": false,
+      "blocked_actions": [
+        "client_facing_claim",
+        "automatic_nomination",
+        "implementation_execution",
+        "production_activation",
+        "automatic_merge",
+        "credential_handling"
+      ]
+    },
+    {
+      "decision_id": "REVIEW-DECISION-002",
+      "issue_id": "REAL-GRAPH-002-DOCUMENT-AUDIT-ISSUE-CANDIDATE-002",
+      "case_id": "REAL-GRAPH-002-DOCUMENT-AUDIT",
+      "priority": "P0_BLOCKER",
+      "source_delta": "delta_evidence",
+      "review_route": "evidence_owner",
+      "recommended_decision": "APPROVE_FOR_HUMAN_REVIEW_ISSUE",
+      "requires_human_approval": true,
+      "auto_created_issue": false,
+      "blocked_actions": [
+        "client_facing_claim",
+        "automatic_nomination",
+        "implementation_execution",
+        "production_activation",
+        "automatic_merge",
+        "credential_handling"
+      ]
+    },
+    {
+      "decision_id": "REVIEW-DECISION-003",
+      "issue_id": "REAL-GRAPH-003-SOFTWARE-REVIEW-ISSUE-CANDIDATE-001",
+      "case_id": "REAL-GRAPH-003-SOFTWARE-REVIEW",
+      "priority": "P0_BLOCKER",
+      "source_delta": "delta_evidence",
+      "review_route": "evidence_owner",
+      "recommended_decision": "APPROVE_FOR_HUMAN_REVIEW_ISSUE",
+      "requires_human_approval": true,
+      "auto_created_issue": false,
+      "blocked_actions": [
+        "client_facing_claim",
+        "automatic_nomination",
+        "implementation_execution",
+        "production_activation",
+        "automatic_merge",
+        "credential_handling"
+      ]
+    },
+    {
+      "decision_id": "REVIEW-DECISION-004",
+      "issue_id": "REAL-GRAPH-004-RULE-POLICY-ISSUE-CANDIDATE-003",
+      "case_id": "REAL-GRAPH-004-RULE-POLICY",
+      "priority": "P0_BLOCKER",
+      "source_delta": "delta_evidence",
+      "review_route": "evidence_owner",
+      "recommended_decision": "APPROVE_FOR_HUMAN_REVIEW_ISSUE",
+      "requires_human_approval": true,
+      "auto_created_issue": false,
+      "blocked_actions": [
+        "client_facing_claim",
+        "automatic_nomination",
+        "implementation_execution",
+        "production_activation",
+        "automatic_merge",
+        "credential_handling"
+      ]
+    },
+    {
+      "decision_id": "REVIEW-DECISION-005",
+      "issue_id": "REAL-GRAPH-001-ONBOARDING-ISSUE-CANDIDATE-001",
+      "case_id": "REAL-GRAPH-001-ONBOARDING",
+      "priority": "P0_BLOCKER",
+      "source_delta": "delta_domain",
+      "review_route": "domain_owner",
+      "recommended_decision": "APPROVE_FOR_HUMAN_REVIEW_ISSUE",
+      "requires_human_approval": true,
+      "auto_created_issue": false,
+      "blocked_actions": [
+        "client_facing_claim",
+        "automatic_nomination",
+        "implementation_execution",
+        "production_activation",
+        "automatic_merge",
+        "credential_handling"
+      ]
+    },
+    {
+      "decision_id": "REVIEW-DECISION-006",
+      "issue_id": "REAL-GRAPH-002-DOCUMENT-AUDIT-ISSUE-CANDIDATE-001",
+      "case_id": "REAL-GRAPH-002-DOCUMENT-AUDIT",
+      "priority": "P0_BLOCKER",
+      "source_delta": "delta_conflict",
+      "review_route": "human_arbitrator",
+      "recommended_decision": "APPROVE_FOR_HUMAN_REVIEW_ISSUE",
+      "requires_human_approval": true,
+      "auto_created_issue": false,
+      "blocked_actions": [
+        "client_facing_claim",
+        "automatic_nomination",
+        "implementation_execution",
+        "production_activation",
+        "automatic_merge",
+        "credential_handling"
+      ]
+    },
+    {
+      "decision_id": "REVIEW-DECISION-007",
+      "issue_id": "REAL-GRAPH-004-RULE-POLICY-ISSUE-CANDIDATE-001",
+      "case_id": "REAL-GRAPH-004-RULE-POLICY",
+      "priority": "P0_BLOCKER",
+      "source_delta": "delta_conflict",
+      "review_route": "human_arbitrator",
+      "recommended_decision": "APPROVE_FOR_HUMAN_REVIEW_ISSUE",
+      "requires_human_approval": true,
+      "auto_created_issue": false,
+      "blocked_actions": [
+        "client_facing_claim",
+        "automatic_nomination",
+        "implementation_execution",
+        "production_activation",
+        "automatic_merge",
+        "credential_handling"
+      ]
+    },
+    {
+      "decision_id": "REVIEW-DECISION-008",
+      "issue_id": "REAL-GRAPH-004-RULE-POLICY-ISSUE-CANDIDATE-002",
+      "case_id": "REAL-GRAPH-004-RULE-POLICY",
+      "priority": "P0_BLOCKER",
+      "source_delta": "delta_domain",
+      "review_route": "domain_owner",
+      "recommended_decision": "APPROVE_FOR_HUMAN_REVIEW_ISSUE",
+      "requires_human_approval": true,
+      "auto_created_issue": false,
+      "blocked_actions": [
+        "client_facing_claim",
+        "automatic_nomination",
+        "implementation_execution",
+        "production_activation",
+        "automatic_merge",
+        "credential_handling"
+      ]
+    },
+    {
+      "decision_id": "REVIEW-DECISION-009",
+      "issue_id": "REAL-GRAPH-003-SOFTWARE-REVIEW-ISSUE-CANDIDATE-002",
+      "case_id": "REAL-GRAPH-003-SOFTWARE-REVIEW",
+      "priority": "P0_BLOCKER",
+      "source_delta": "delta_production",
+      "review_route": "production_readiness_owner",
+      "recommended_decision": "APPROVE_FOR_HUMAN_REVIEW_ISSUE",
+      "requires_human_approval": true,
+      "auto_created_issue": false,
+      "blocked_actions": [
+        "client_facing_claim",
+        "automatic_nomination",
+        "implementation_execution",
+        "production_activation",
+        "automatic_merge",
+        "credential_handling"
+      ]
+    },
+    {
+      "decision_id": "REVIEW-DECISION-010",
+      "issue_id": "REAL-GRAPH-002-DOCUMENT-AUDIT-ISSUE-CANDIDATE-003",
+      "case_id": "REAL-GRAPH-002-DOCUMENT-AUDIT",
+      "priority": "P0_BLOCKER",
+      "source_delta": "delta_human_review",
+      "review_route": "human_reviewer",
+      "recommended_decision": "APPROVE_FOR_HUMAN_REVIEW_ISSUE",
+      "requires_human_approval": true,
+      "auto_created_issue": false,
+      "blocked_actions": [
+        "client_facing_claim",
+        "automatic_nomination",
+        "implementation_execution",
+        "production_activation",
+        "automatic_merge",
+        "credential_handling"
+      ]
+    },
+    {
+      "decision_id": "REVIEW-DECISION-011",
+      "issue_id": "REAL-GRAPH-003-SOFTWARE-REVIEW-ISSUE-CANDIDATE-003",
+      "case_id": "REAL-GRAPH-003-SOFTWARE-REVIEW",
+      "priority": "P0_BLOCKER",
+      "source_delta": "delta_execution",
+      "review_route": "technical_reviewer",
+      "recommended_decision": "APPROVE_FOR_HUMAN_REVIEW_ISSUE",
+      "requires_human_approval": true,
+      "auto_created_issue": false,
+      "blocked_actions": [
+        "client_facing_claim",
+        "automatic_nomination",
+        "implementation_execution",
+        "production_activation",
+        "automatic_merge",
+        "credential_handling"
+      ]
+    },
+    {
+      "decision_id": "REVIEW-DECISION-012",
+      "issue_id": "REAL-GRAPH-003-SOFTWARE-REVIEW-ISSUE-CANDIDATE-004",
+      "case_id": "REAL-GRAPH-003-SOFTWARE-REVIEW",
+      "priority": "P1_REVIEW",
+      "source_delta": "delta_model_behavior",
+      "review_route": "calibration_owner",
+      "recommended_decision": "APPROVE_FOR_REVIEW_QUEUE",
+      "requires_human_approval": true,
+      "auto_created_issue": false,
+      "blocked_actions": [
+        "client_facing_claim",
+        "automatic_nomination",
+        "implementation_execution",
+        "production_activation",
+        "automatic_merge",
+        "credential_handling"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,4 @@
+{
+  "contract": "casulo.case_review_console_readiness.v0.1",
+  "purpose": "Gate whether the system can proceed from case generation to reviewed practical backlog."
+}

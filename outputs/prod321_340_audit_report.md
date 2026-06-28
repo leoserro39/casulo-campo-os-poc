@@ -1,0 +1,10 @@
+# PROD-321..340 Audit Report
+
+- status: `PASS`
+- audit: `Graph Case Review Console audit`
+- case_count: `4`
+- total_issue_candidates: `23`
+- selected_issue_count: `12`
+- decision: `P0_REVIEW_QUEUE_READY_HUMAN_APPROVAL_REQUIRED`
+- readiness: `READY_FOR_HUMAN_REVIEW_AND_OPTIONAL_ISSUE_PROMOTION`
+- finding: `PASS: review console generated selected issue queue and human review pack without automatic issue creation.`

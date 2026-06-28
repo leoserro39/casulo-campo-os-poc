@@ -1,0 +1,12 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "CASULO Graph Case Review Console",
+  "type": "object",
+  "required": [
+    "status",
+    "case_count",
+    "selected_issue_count",
+    "review_groups",
+    "decision"
+  ]
+}

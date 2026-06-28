@@ -14,35 +14,33 @@ def payload(path,key):
     return {"status":"PASS",key:read_json(path),"markdown_path":str(md),"markdown_preview":read_text(md)[:4000] if md.exists() else ""}
 
 class ProductRuntimeService:
-    def __init__(self,repo_root:Path): self.repo_root=repo_root; self.outputs_root=repo_root/"outputs"; self.cases_root=repo_root/"product/poc/real_anonymized_graph_cases/cases"
+    def __init__(self,repo_root:Path): self.repo_root=repo_root; self.outputs_root=repo_root/"outputs"
     def health(self): return {"status":"PASS","product_direction":PRODUCT_DIRECTION,"runtime_mode":RUNTIME_MODE,"blocked_actions":BLOCKED_ACTIONS}
     def product_status(self):
         stems={
-            "graph_task_bridge":"prod281_300_practical_backlog_report.json",
-            "real_graph_case_results":"prod301_320_real_graph_case_results.json",
             "real_graph_case_aggregate":"prod301_320_real_graph_case_aggregate.json",
-            "real_graph_case_readiness":"prod301_320_real_graph_case_readiness.json",
-            "real_graph_case_audit":"prod301_320_audit_report.json",
+            "review_console":"prod321_340_review_console.json",
+            "issue_selection":"prod321_340_issue_selection.json",
+            "decision_log":"prod321_340_review_decision_log.json",
+            "human_review_pack":"prod321_340_human_review_pack.json",
+            "review_readiness":"prod321_340_review_console_readiness.json",
+            "review_audit":"prod321_340_audit_report.json",
         }
         checks={k:(self.outputs_root/v).exists() for k,v in stems.items()}
-        return {"status":"PASS" if all(checks.values()) else "INCOMPLETE","product_direction":PRODUCT_DIRECTION,"runtime_mode":RUNTIME_MODE,"checks":checks,"blocked_actions":BLOCKED_ACTIONS,"next_recommended_step":"Review P0 blockers, then expand with user-provided anonymized cases."}
-    def case_catalog(self):
-        cases=[]
-        for p in sorted(self.cases_root.glob("*.json")):
-            data=read_json(p)
-            cases.append({"case_id":data.get("case_id"),"title":data.get("title"),"domain_family":data.get("domain_family"),"path":str(p)})
-        return {"status":"PASS","cases":cases}
+        return {"status":"PASS" if all(checks.values()) else "INCOMPLETE","product_direction":PRODUCT_DIRECTION,"runtime_mode":RUNTIME_MODE,"checks":checks,"blocked_actions":BLOCKED_ACTIONS,"next_recommended_step":"Human review selected candidates; optionally generate manual issue promotion pack."}
     def __getattr__(self,name):
         mapping={
-            "real_graph_case_results":("prod301_320_real_graph_case_results.json","real_graph_case_results"),
-            "real_graph_case_aggregate":("prod301_320_real_graph_case_aggregate.json","real_graph_case_aggregate"),
-            "real_graph_case_readiness":("prod301_320_real_graph_case_readiness.json","real_graph_case_readiness"),
-            "real_graph_case_audit":("prod301_320_audit_report.json","real_graph_case_audit"),
+            "review_console":("prod321_340_review_console.json","review_console"),
+            "issue_selection":("prod321_340_issue_selection.json","issue_selection"),
+            "decision_log":("prod321_340_review_decision_log.json","decision_log"),
+            "human_review_pack":("prod321_340_human_review_pack.json","human_review_pack"),
+            "review_readiness":("prod321_340_review_console_readiness.json","review_readiness"),
+            "review_audit":("prod321_340_audit_report.json","review_audit"),
         }
         if name in mapping:
             stem,key=mapping[name]
             return lambda: payload(self.outputs_root/stem,key)
         raise AttributeError(name)
     def reports(self):
-        pats=["prod301_320_real_graph_case_aggregate.md","prod301_320_real_graph_case_readiness.md","prod301_320_audit_report.md","prod301_320_report.md"]
+        pats=["prod321_340_review_console.md","prod321_340_human_review_pack.md","prod321_340_review_console_readiness.md","prod321_340_audit_report.md","prod321_340_report.md"]
         return {"status":"PASS","reports":[{"name":p,"exists":(self.outputs_root/p).exists(),"path":str(self.outputs_root/p),"preview":read_text(self.outputs_root/p)[:1200] if (self.outputs_root/p).exists() else ""} for p in pats]}

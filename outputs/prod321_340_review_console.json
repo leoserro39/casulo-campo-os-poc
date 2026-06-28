@@ -1,0 +1,116 @@
+{
+  "status": "PASS",
+  "console": "casulo.graph_case_review_console.v0.1",
+  "case_count": 4,
+  "aggregate_decision": "PRODUCTION_BLOCKERS_REQUIRE_REVIEW_BEFORE_NEXT_REAL_CASE_BATCH",
+  "total_issue_candidates": 23,
+  "selected_issue_count": 12,
+  "review_groups": {
+    "by_priority": {
+      "P0_BLOCKER": [
+        "REAL-GRAPH-001-ONBOARDING-ISSUE-CANDIDATE-002",
+        "REAL-GRAPH-002-DOCUMENT-AUDIT-ISSUE-CANDIDATE-002",
+        "REAL-GRAPH-003-SOFTWARE-REVIEW-ISSUE-CANDIDATE-001",
+        "REAL-GRAPH-004-RULE-POLICY-ISSUE-CANDIDATE-003",
+        "REAL-GRAPH-001-ONBOARDING-ISSUE-CANDIDATE-001",
+        "REAL-GRAPH-002-DOCUMENT-AUDIT-ISSUE-CANDIDATE-001",
+        "REAL-GRAPH-004-RULE-POLICY-ISSUE-CANDIDATE-001",
+        "REAL-GRAPH-004-RULE-POLICY-ISSUE-CANDIDATE-002",
+        "REAL-GRAPH-003-SOFTWARE-REVIEW-ISSUE-CANDIDATE-002",
+        "REAL-GRAPH-002-DOCUMENT-AUDIT-ISSUE-CANDIDATE-003",
+        "REAL-GRAPH-003-SOFTWARE-REVIEW-ISSUE-CANDIDATE-003"
+      ],
+      "P1_REVIEW": [
+        "REAL-GRAPH-003-SOFTWARE-REVIEW-ISSUE-CANDIDATE-004"
+      ]
+    },
+    "by_delta": {
+      "delta_evidence": [
+        "REAL-GRAPH-001-ONBOARDING-ISSUE-CANDIDATE-002",
+        "REAL-GRAPH-002-DOCUMENT-AUDIT-ISSUE-CANDIDATE-002",
+        "REAL-GRAPH-003-SOFTWARE-REVIEW-ISSUE-CANDIDATE-001",
+        "REAL-GRAPH-004-RULE-POLICY-ISSUE-CANDIDATE-003"
+      ],
+      "delta_domain": [
+        "REAL-GRAPH-001-ONBOARDING-ISSUE-CANDIDATE-001",
+        "REAL-GRAPH-004-RULE-POLICY-ISSUE-CANDIDATE-002"
+      ],
+      "delta_conflict": [
+        "REAL-GRAPH-002-DOCUMENT-AUDIT-ISSUE-CANDIDATE-001",
+        "REAL-GRAPH-004-RULE-POLICY-ISSUE-CANDIDATE-001"
+      ],
+      "delta_production": [
+        "REAL-GRAPH-003-SOFTWARE-REVIEW-ISSUE-CANDIDATE-002"
+      ],
+      "delta_human_review": [
+        "REAL-GRAPH-002-DOCUMENT-AUDIT-ISSUE-CANDIDATE-003"
+      ],
+      "delta_execution": [
+        "REAL-GRAPH-003-SOFTWARE-REVIEW-ISSUE-CANDIDATE-003"
+      ],
+      "delta_model_behavior": [
+        "REAL-GRAPH-003-SOFTWARE-REVIEW-ISSUE-CANDIDATE-004"
+      ]
+    },
+    "by_case": {
+      "REAL-GRAPH-001-ONBOARDING": [
+        "REAL-GRAPH-001-ONBOARDING-ISSUE-CANDIDATE-002",
+        "REAL-GRAPH-001-ONBOARDING-ISSUE-CANDIDATE-001"
+      ],
+      "REAL-GRAPH-002-DOCUMENT-AUDIT": [
+        "REAL-GRAPH-002-DOCUMENT-AUDIT-ISSUE-CANDIDATE-002",
+        "REAL-GRAPH-002-DOCUMENT-AUDIT-ISSUE-CANDIDATE-001",
+        "REAL-GRAPH-002-DOCUMENT-AUDIT-ISSUE-CANDIDATE-003"
+      ],
+      "REAL-GRAPH-003-SOFTWARE-REVIEW": [
+        "REAL-GRAPH-003-SOFTWARE-REVIEW-ISSUE-CANDIDATE-001",
+        "REAL-GRAPH-003-SOFTWARE-REVIEW-ISSUE-CANDIDATE-002",
+        "REAL-GRAPH-003-SOFTWARE-REVIEW-ISSUE-CANDIDATE-003",
+        "REAL-GRAPH-003-SOFTWARE-REVIEW-ISSUE-CANDIDATE-004"
+      ],
+      "REAL-GRAPH-004-RULE-POLICY": [
+        "REAL-GRAPH-004-RULE-POLICY-ISSUE-CANDIDATE-003",
+        "REAL-GRAPH-004-RULE-POLICY-ISSUE-CANDIDATE-001",
+        "REAL-GRAPH-004-RULE-POLICY-ISSUE-CANDIDATE-002"
+      ]
+    },
+    "by_route": {
+      "evidence_owner": [
+        "REAL-GRAPH-001-ONBOARDING-ISSUE-CANDIDATE-002",
+        "REAL-GRAPH-002-DOCUMENT-AUDIT-ISSUE-CANDIDATE-002",
+        "REAL-GRAPH-003-SOFTWARE-REVIEW-ISSUE-CANDIDATE-001",
+        "REAL-GRAPH-004-RULE-POLICY-ISSUE-CANDIDATE-003"
+      ],
+      "domain_owner": [
+        "REAL-GRAPH-001-ONBOARDING-ISSUE-CANDIDATE-001",
+        "REAL-GRAPH-004-RULE-POLICY-ISSUE-CANDIDATE-002"
+      ],
+      "human_arbitrator": [
+        "REAL-GRAPH-002-DOCUMENT-AUDIT-ISSUE-CANDIDATE-001",
+        "REAL-GRAPH-004-RULE-POLICY-ISSUE-CANDIDATE-001"
+      ],
+      "production_readiness_owner": [
+        "REAL-GRAPH-003-SOFTWARE-REVIEW-ISSUE-CANDIDATE-002"
+      ],
+      "human_reviewer": [
+        "REAL-GRAPH-002-DOCUMENT-AUDIT-ISSUE-CANDIDATE-003"
+      ],
+      "technical_reviewer": [
+        "REAL-GRAPH-003-SOFTWARE-REVIEW-ISSUE-CANDIDATE-003"
+      ],
+      "calibration_owner": [
+        "REAL-GRAPH-003-SOFTWARE-REVIEW-ISSUE-CANDIDATE-004"
+      ]
+    }
+  },
+  "decision": "P0_REVIEW_QUEUE_READY_HUMAN_APPROVAL_REQUIRED",
+  "interpretation": "The review console selected high-priority issue candidates from real/anonymized graph cases and prepared a human approval pack without creating issues automatically.",
+  "blocked_actions": [
+    "client_facing_claim",
+    "automatic_nomination",
+    "implementation_execution",
+    "production_activation",
+    "automatic_merge",
+    "credential_handling"
+  ]
+}

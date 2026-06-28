@@ -1,0 +1,11 @@
+{
+  "contract": "casulo.issue_selection_policy.v0.1",
+  "purpose": "Select P0 and high-value P1/P2 issue candidates for review without creating GitHub issues automatically.",
+  "selection_rules": [
+    "P0 first",
+    "group by repeated delta",
+    "prefer production/domain/evidence blockers",
+    "limit selected count",
+    "human approval required"
+  ]
+}

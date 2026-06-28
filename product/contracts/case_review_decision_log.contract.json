@@ -1,0 +1,4 @@
+{
+  "contract": "casulo.case_review_decision_log.v0.1",
+  "purpose": "Record review decisions as candidates only: approve for issue, defer, request evidence, route to owner, keep blocked."
+}

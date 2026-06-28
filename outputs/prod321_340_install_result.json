@@ -1,0 +1,14 @@
+{
+  "task": "PROD-321..340",
+  "status": "PASS",
+  "phase": "Graph Case Review Console and Issue Selection",
+  "endpoints": [
+    "/api/casulo/graph-case-review/console",
+    "/api/casulo/graph-case-review/issue-selection",
+    "/api/casulo/graph-case-review/decision-log",
+    "/api/casulo/graph-case-review/human-review-pack",
+    "/api/casulo/graph-case-review/readiness",
+    "/api/casulo/graph-case-review/audit"
+  ],
+  "next_recommended_bundle": "PROD-341..360 Manual Issue Promotion Pack"
+}
