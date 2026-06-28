@@ -1,0 +1,12 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Graph Builder Telemetry Result",
+  "type": "object",
+  "required": [
+    "status",
+    "graph",
+    "tasks",
+    "decision",
+    "blocked_actions"
+  ]
+}

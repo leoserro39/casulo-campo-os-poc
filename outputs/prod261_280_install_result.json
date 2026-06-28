@@ -1,0 +1,14 @@
+{
+  "task": "PROD-261..280",
+  "status": "PASS",
+  "phase": "Graph Builder Telemetry Integration",
+  "endpoints": [
+    "/api/casulo/graph-builder-telemetry/candidate-graph",
+    "/api/casulo/graph-builder-telemetry/missing-artifact-tasks",
+    "/api/casulo/graph-builder-telemetry/result",
+    "/api/casulo/graph-builder-telemetry/native-policy",
+    "/api/casulo/graph-builder-telemetry/readiness",
+    "/api/casulo/graph-builder-telemetry/audit"
+  ],
+  "next_recommended_bundle": "PROD-281..300 Real Anonymized Graph Case Runner"
+}

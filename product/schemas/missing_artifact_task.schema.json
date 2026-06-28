@@ -1,0 +1,12 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Missing Artifact Task",
+  "type": "object",
+  "required": [
+    "task_id",
+    "artifact_type",
+    "reason",
+    "source_delta",
+    "recommended_gate"
+  ]
+}

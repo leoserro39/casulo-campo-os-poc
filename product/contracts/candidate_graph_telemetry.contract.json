@@ -1,0 +1,4 @@
+{
+  "contract": "casulo.candidate_graph_telemetry.v0.1",
+  "purpose": "Candidate graph nodes/edges carry delta telemetry, evidence status, gate status and next action."
+}

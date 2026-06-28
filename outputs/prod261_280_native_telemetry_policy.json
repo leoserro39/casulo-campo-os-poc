@@ -1,0 +1,19 @@
+{
+  "contract_version": "casulo.graph_builder_native_telemetry_policy.v0.1",
+  "status": "PASS",
+  "policy": [
+    "Every candidate node/edge must carry delta telemetry.",
+    "Committed graph relations require evidence and safe gate.",
+    "Missing document/domain/artifact becomes task candidate.",
+    "Production blocks are valid closure, not failure.",
+    "Loop stops at practical closure state."
+  ],
+  "blocked_actions": [
+    "client_facing_claim",
+    "automatic_nomination",
+    "implementation_execution",
+    "production_activation",
+    "automatic_merge",
+    "credential_handling"
+  ]
+}

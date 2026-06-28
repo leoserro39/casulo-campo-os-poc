@@ -13,16 +13,15 @@ class ProductRuntimeService:
     def __init__(self,repo_root:Path): self.repo_root=repo_root; self.outputs_root=repo_root/"outputs"
     def health(self): return {"status":"PASS","product_direction":PRODUCT_DIRECTION,"runtime_mode":RUNTIME_MODE,"blocked_actions":BLOCKED_ACTIONS}
     def product_status(self):
-        names=["delta_library_v2","control_catalog","graph_sync_lab_report","graph_sync_attempts","graph_sync_summary","telemetry_control_agent","practical_closure_policy","graph_sync_readiness","audit_report"]
-        stems=["prod241_260_delta_library_v2.json","prod241_260_control_catalog.json","prod241_260_graph_sync_lab_report.json","prod241_260_graph_sync_attempts.json","prod241_260_graph_sync_summary.json","prod241_260_telemetry_control_agent.json","prod241_260_practical_closure_policy.json","prod241_260_graph_sync_readiness.json","prod241_260_audit_report.json"]
-        checks={n:(self.outputs_root/s).exists() for n,s in zip(names,stems)}
-        return {"status":"PASS" if all(checks.values()) else "INCOMPLETE","product_direction":PRODUCT_DIRECTION,"runtime_mode":RUNTIME_MODE,"checks":checks,"blocked_actions":BLOCKED_ACTIONS,"next_recommended_step":"Integrate graph sync telemetry into graph builder."}
+        stems={"graph_sync_readiness":"prod241_260_graph_sync_readiness.json","candidate_graph_telemetry":"prod261_280_candidate_graph_telemetry.json","missing_artifact_tasks":"prod261_280_missing_artifact_tasks.json","graph_builder_result":"prod261_280_graph_builder_telemetry_result.json","native_telemetry_policy":"prod261_280_native_telemetry_policy.json","graph_builder_readiness":"prod261_280_graph_builder_readiness.json","graph_builder_audit":"prod261_280_audit_report.json"}
+        checks={k:(self.outputs_root/v).exists() for k,v in stems.items()}
+        return {"status":"PASS" if all(checks.values()) else "INCOMPLETE","product_direction":PRODUCT_DIRECTION,"runtime_mode":RUNTIME_MODE,"checks":checks,"blocked_actions":BLOCKED_ACTIONS,"next_recommended_step":"Run real anonymized graph-building cases and create issue/task bridge."}
     def __getattr__(self,name):
-        mapping={"delta_library_v2":("prod241_260_delta_library_v2.json","delta_library_v2"),"control_catalog":("prod241_260_control_catalog.json","control_catalog"),"graph_sync_lab_report":("prod241_260_graph_sync_lab_report.json","graph_sync_lab_report"),"graph_sync_attempts":("prod241_260_graph_sync_attempts.json","graph_sync_attempts"),"graph_sync_summary":("prod241_260_graph_sync_summary.json","graph_sync_summary"),"telemetry_control_agent":("prod241_260_telemetry_control_agent.json","telemetry_control_agent"),"practical_closure_policy":("prod241_260_practical_closure_policy.json","practical_closure_policy"),"graph_sync_readiness":("prod241_260_graph_sync_readiness.json","graph_sync_readiness"),"graph_sync_audit":("prod241_260_audit_report.json","graph_sync_audit")}
+        mapping={"candidate_graph":("prod261_280_candidate_graph_telemetry.json","candidate_graph"),"missing_artifact_tasks":("prod261_280_missing_artifact_tasks.json","missing_artifact_tasks"),"graph_builder_result":("prod261_280_graph_builder_telemetry_result.json","graph_builder_result"),"native_telemetry_policy":("prod261_280_native_telemetry_policy.json","native_telemetry_policy"),"graph_builder_readiness":("prod261_280_graph_builder_readiness.json","graph_builder_readiness"),"graph_builder_audit":("prod261_280_audit_report.json","graph_builder_audit")}
         if name in mapping:
             stem,key=mapping[name]
             return lambda: payload(self.outputs_root/stem,key)
         raise AttributeError(name)
     def reports(self):
-        pats=["prod241_260_delta_library_v2.md","prod241_260_control_catalog.md","prod241_260_graph_sync_lab_report.md","prod241_260_telemetry_control_agent.md","prod241_260_practical_closure_policy.md","prod241_260_graph_sync_readiness.md","prod241_260_audit_report.md"]
+        pats=["prod261_280_graph_builder_telemetry_result.md","prod261_280_native_telemetry_policy.md","prod261_280_graph_builder_readiness.md","prod261_280_audit_report.md","prod261_280_report.md"]
         return {"status":"PASS","reports":[{"name":p,"exists":(self.outputs_root/p).exists(),"path":str(self.outputs_root/p),"preview":read_text(self.outputs_root/p)[:1200] if (self.outputs_root/p).exists() else ""} for p in pats]}

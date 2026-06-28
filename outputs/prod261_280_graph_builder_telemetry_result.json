@@ -1,0 +1,1155 @@
+{
+  "status": "PASS",
+  "graph": {
+    "graph_id": "GBTI-261280",
+    "mode": "candidate_graph_with_native_delta_telemetry",
+    "nodes": [
+      {
+        "node_id": "GBTI-261280-N01",
+        "node_type": "decision",
+        "domain": "parser_documental",
+        "confidence": 58,
+        "evidence_strength": 75,
+        "active_deltas": [
+          "delta_graph_structure",
+          "delta_human_review",
+          "delta_model_behavior"
+        ],
+        "primary_delta": "delta_graph_structure",
+        "recommended_control": "graph_repair_suggestion",
+        "recommended_gate": "STRUCTURE_ONLY",
+        "committed": false
+      },
+      {
+        "node_id": "GBTI-261280-N02",
+        "node_type": "state",
+        "domain": "enterprise_knowledge",
+        "confidence": 91,
+        "evidence_strength": 40,
+        "active_deltas": [
+          "delta_human_review",
+          "delta_evidence",
+          "delta_missingness"
+        ],
+        "primary_delta": "delta_human_review",
+        "recommended_control": "create_review_task",
+        "recommended_gate": "HUMAN_REVIEW_REQUIRED",
+        "committed": false
+      },
+      {
+        "node_id": "GBTI-261280-N03",
+        "node_type": "evidence",
+        "domain": "rule_extraction",
+        "confidence": 78,
+        "evidence_strength": 84,
+        "active_deltas": [
+          "delta_conflict",
+          "delta_execution"
+        ],
+        "primary_delta": "delta_conflict",
+        "recommended_control": "conflict_resolution_task",
+        "recommended_gate": "HUMAN_REVIEW_REQUIRED",
+        "committed": false
+      },
+      {
+        "node_id": "GBTI-261280-N04",
+        "node_type": "decision",
+        "domain": "process_operations",
+        "confidence": 69,
+        "evidence_strength": 40,
+        "active_deltas": [
+          "delta_rule"
+        ],
+        "primary_delta": "delta_rule",
+        "recommended_control": "exception_map",
+        "recommended_gate": "STRUCTURE_ONLY",
+        "committed": false
+      },
+      {
+        "node_id": "GBTI-261280-N05",
+        "node_type": "task",
+        "domain": "audit_documental",
+        "confidence": 35,
+        "evidence_strength": 66,
+        "active_deltas": [
+          "delta_execution",
+          "delta_domain",
+          "delta_human_review"
+        ],
+        "primary_delta": "delta_execution",
+        "recommended_control": "require_test_plan",
+        "recommended_gate": "TASK_ONLY",
+        "committed": false
+      },
+      {
+        "node_id": "GBTI-261280-N06",
+        "node_type": "state",
+        "domain": "enterprise_knowledge",
+        "confidence": 59,
+        "evidence_strength": 30,
+        "active_deltas": [
+          "delta_domain",
+          "delta_model_behavior"
+        ],
+        "primary_delta": "delta_domain",
+        "recommended_control": "require_domain_owner",
+        "recommended_gate": "HUMAN_REVIEW_REQUIRED",
+        "committed": false
+      },
+      {
+        "node_id": "GBTI-261280-N07",
+        "node_type": "entity",
+        "domain": "process_operations",
+        "confidence": 70,
+        "evidence_strength": 36,
+        "active_deltas": [
+          "delta_graph_structure"
+        ],
+        "primary_delta": "delta_graph_structure",
+        "recommended_control": "graph_repair_suggestion",
+        "recommended_gate": "STRUCTURE_ONLY",
+        "committed": false
+      },
+      {
+        "node_id": "GBTI-261280-N08",
+        "node_type": "control",
+        "domain": "parser_documental",
+        "confidence": 83,
+        "evidence_strength": 32,
+        "active_deltas": [
+          "delta_evidence",
+          "delta_execution"
+        ],
+        "primary_delta": "delta_evidence",
+        "recommended_control": "require_evidence",
+        "recommended_gate": "ASK_FOR_EVIDENCE",
+        "committed": false
+      },
+      {
+        "node_id": "GBTI-261280-N09",
+        "node_type": "control",
+        "domain": "parser_documental",
+        "confidence": 46,
+        "evidence_strength": 80,
+        "active_deltas": [
+          "delta_model_behavior",
+          "delta_graph_structure"
+        ],
+        "primary_delta": "delta_model_behavior",
+        "recommended_control": "calibration_review",
+        "recommended_gate": "TASK_ONLY",
+        "committed": false
+      },
+      {
+        "node_id": "GBTI-261280-N10",
+        "node_type": "state",
+        "domain": "audit_documental",
+        "confidence": 75,
+        "evidence_strength": 94,
+        "active_deltas": [
+          "delta_execution",
+          "delta_rule",
+          "delta_model_behavior"
+        ],
+        "primary_delta": "delta_execution",
+        "recommended_control": "require_test_plan",
+        "recommended_gate": "TASK_ONLY",
+        "committed": false
+      },
+      {
+        "node_id": "GBTI-261280-N11",
+        "node_type": "control",
+        "domain": "process_operations",
+        "confidence": 31,
+        "evidence_strength": 86,
+        "active_deltas": [
+          "delta_domain",
+          "delta_human_review",
+          "delta_graph_structure"
+        ],
+        "primary_delta": "delta_domain",
+        "recommended_control": "require_domain_owner",
+        "recommended_gate": "HUMAN_REVIEW_REQUIRED",
+        "committed": false
+      },
+      {
+        "node_id": "GBTI-261280-N12",
+        "node_type": "decision",
+        "domain": "rule_extraction",
+        "confidence": 63,
+        "evidence_strength": 34,
+        "active_deltas": [
+          "delta_ambiguity",
+          "delta_domain",
+          "delta_model_behavior"
+        ],
+        "primary_delta": "delta_ambiguity",
+        "recommended_control": "split_interpretations",
+        "recommended_gate": "STRUCTURE_ONLY",
+        "committed": false
+      },
+      {
+        "node_id": "GBTI-261280-N13",
+        "node_type": "decision",
+        "domain": "audit_documental",
+        "confidence": 49,
+        "evidence_strength": 50,
+        "active_deltas": [
+          "delta_rule"
+        ],
+        "primary_delta": "delta_rule",
+        "recommended_control": "exception_map",
+        "recommended_gate": "STRUCTURE_ONLY",
+        "committed": false
+      },
+      {
+        "node_id": "GBTI-261280-N14",
+        "node_type": "state",
+        "domain": "audit_documental",
+        "confidence": 68,
+        "evidence_strength": 25,
+        "active_deltas": [
+          "delta_graph_structure"
+        ],
+        "primary_delta": "delta_graph_structure",
+        "recommended_control": "graph_repair_suggestion",
+        "recommended_gate": "STRUCTURE_ONLY",
+        "committed": false
+      },
+      {
+        "node_id": "GBTI-261280-N15",
+        "node_type": "decision",
+        "domain": "software_review",
+        "confidence": 85,
+        "evidence_strength": 76,
+        "active_deltas": [
+          "delta_ambiguity",
+          "delta_conflict"
+        ],
+        "primary_delta": "delta_ambiguity",
+        "recommended_control": "split_interpretations",
+        "recommended_gate": "STRUCTURE_ONLY",
+        "committed": true
+      },
+      {
+        "node_id": "GBTI-261280-N16",
+        "node_type": "entity",
+        "domain": "enterprise_knowledge",
+        "confidence": 67,
+        "evidence_strength": 49,
+        "active_deltas": [
+          "delta_domain",
+          "delta_model_behavior"
+        ],
+        "primary_delta": "delta_domain",
+        "recommended_control": "require_domain_owner",
+        "recommended_gate": "HUMAN_REVIEW_REQUIRED",
+        "committed": false
+      },
+      {
+        "node_id": "GBTI-261280-N17",
+        "node_type": "state",
+        "domain": "rule_extraction",
+        "confidence": 72,
+        "evidence_strength": 72,
+        "active_deltas": [
+          "delta_production",
+          "delta_ambiguity"
+        ],
+        "primary_delta": "delta_production",
+        "recommended_control": "production_block",
+        "recommended_gate": "BLOCKED_UNSUPPORTED",
+        "committed": false
+      },
+      {
+        "node_id": "GBTI-261280-N18",
+        "node_type": "artifact",
+        "domain": "rule_extraction",
+        "confidence": 34,
+        "evidence_strength": 52,
+        "active_deltas": [
+          "delta_evidence",
+          "delta_graph_structure",
+          "delta_domain"
+        ],
+        "primary_delta": "delta_evidence",
+        "recommended_control": "require_evidence",
+        "recommended_gate": "ASK_FOR_EVIDENCE",
+        "committed": false
+      }
+    ],
+    "edges": [
+      {
+        "edge_id": "GBTI-261280-E01",
+        "from": "GBTI-261280-N11",
+        "to": "GBTI-261280-N16",
+        "relation": "constrains",
+        "primary_delta": "delta_domain",
+        "recommended_control": "require_domain_owner",
+        "recommended_gate": "HUMAN_REVIEW_REQUIRED",
+        "candidate": true,
+        "material_delta_change": 3
+      },
+      {
+        "edge_id": "GBTI-261280-E02",
+        "from": "GBTI-261280-N12",
+        "to": "GBTI-261280-N18",
+        "relation": "blocks",
+        "primary_delta": "delta_domain",
+        "recommended_control": "require_domain_owner",
+        "recommended_gate": "HUMAN_REVIEW_REQUIRED",
+        "candidate": true,
+        "material_delta_change": 5
+      },
+      {
+        "edge_id": "GBTI-261280-E03",
+        "from": "GBTI-261280-N15",
+        "to": "GBTI-261280-N13",
+        "relation": "requires",
+        "primary_delta": "delta_conflict",
+        "recommended_control": "conflict_resolution_task",
+        "recommended_gate": "HUMAN_REVIEW_REQUIRED",
+        "candidate": true,
+        "material_delta_change": 19
+      },
+      {
+        "edge_id": "GBTI-261280-E04",
+        "from": "GBTI-261280-N07",
+        "to": "GBTI-261280-N05",
+        "relation": "blocks",
+        "primary_delta": "delta_domain",
+        "recommended_control": "require_domain_owner",
+        "recommended_gate": "HUMAN_REVIEW_REQUIRED",
+        "candidate": true,
+        "material_delta_change": 12
+      },
+      {
+        "edge_id": "GBTI-261280-E05",
+        "from": "GBTI-261280-N13",
+        "to": "GBTI-261280-N02",
+        "relation": "produces",
+        "primary_delta": "delta_evidence",
+        "recommended_control": "require_evidence",
+        "recommended_gate": "ASK_FOR_EVIDENCE",
+        "candidate": true,
+        "material_delta_change": 1
+      },
+      {
+        "edge_id": "GBTI-261280-E06",
+        "from": "GBTI-261280-N11",
+        "to": "GBTI-261280-N06",
+        "relation": "depends_on",
+        "primary_delta": "delta_domain",
+        "recommended_control": "require_domain_owner",
+        "recommended_gate": "HUMAN_REVIEW_REQUIRED",
+        "candidate": true,
+        "material_delta_change": 15
+      },
+      {
+        "edge_id": "GBTI-261280-E07",
+        "from": "GBTI-261280-N08",
+        "to": "GBTI-261280-N01",
+        "relation": "supports",
+        "primary_delta": "delta_graph_structure",
+        "recommended_control": "graph_repair_suggestion",
+        "recommended_gate": "STRUCTURE_ONLY",
+        "candidate": true,
+        "material_delta_change": 3
+      },
+      {
+        "edge_id": "GBTI-261280-E08",
+        "from": "GBTI-261280-N17",
+        "to": "GBTI-261280-N12",
+        "relation": "depends_on",
+        "primary_delta": "delta_ambiguity",
+        "recommended_control": "split_interpretations",
+        "recommended_gate": "STRUCTURE_ONLY",
+        "candidate": true,
+        "material_delta_change": 18
+      },
+      {
+        "edge_id": "GBTI-261280-E09",
+        "from": "GBTI-261280-N06",
+        "to": "GBTI-261280-N13",
+        "relation": "requires",
+        "primary_delta": "delta_model_behavior",
+        "recommended_control": "calibration_review",
+        "recommended_gate": "TASK_ONLY",
+        "candidate": true,
+        "material_delta_change": 15
+      },
+      {
+        "edge_id": "GBTI-261280-E10",
+        "from": "GBTI-261280-N01",
+        "to": "GBTI-261280-N11",
+        "relation": "requires",
+        "primary_delta": "delta_graph_structure",
+        "recommended_control": "graph_repair_suggestion",
+        "recommended_gate": "STRUCTURE_ONLY",
+        "candidate": true,
+        "material_delta_change": 19
+      },
+      {
+        "edge_id": "GBTI-261280-E11",
+        "from": "GBTI-261280-N11",
+        "to": "GBTI-261280-N09",
+        "relation": "depends_on",
+        "primary_delta": "delta_graph_structure",
+        "recommended_control": "graph_repair_suggestion",
+        "recommended_gate": "STRUCTURE_ONLY",
+        "candidate": true,
+        "material_delta_change": 11
+      },
+      {
+        "edge_id": "GBTI-261280-E12",
+        "from": "GBTI-261280-N12",
+        "to": "GBTI-261280-N02",
+        "relation": "depends_on",
+        "primary_delta": "delta_missingness",
+        "recommended_control": "generate_missing_artifact_task",
+        "recommended_gate": "TASK_ONLY",
+        "candidate": true,
+        "material_delta_change": 13
+      },
+      {
+        "edge_id": "GBTI-261280-E13",
+        "from": "GBTI-261280-N05",
+        "to": "GBTI-261280-N11",
+        "relation": "routes_to",
+        "primary_delta": "delta_domain",
+        "recommended_control": "require_domain_owner",
+        "recommended_gate": "HUMAN_REVIEW_REQUIRED",
+        "candidate": true,
+        "material_delta_change": 17
+      },
+      {
+        "edge_id": "GBTI-261280-E14",
+        "from": "GBTI-261280-N10",
+        "to": "GBTI-261280-N01",
+        "relation": "blocks",
+        "primary_delta": "delta_model_behavior",
+        "recommended_control": "calibration_review",
+        "recommended_gate": "TASK_ONLY",
+        "candidate": true,
+        "material_delta_change": 12
+      },
+      {
+        "edge_id": "GBTI-261280-E15",
+        "from": "GBTI-261280-N15",
+        "to": "GBTI-261280-N14",
+        "relation": "challenges",
+        "primary_delta": "delta_ambiguity",
+        "recommended_control": "split_interpretations",
+        "recommended_gate": "STRUCTURE_ONLY",
+        "candidate": true,
+        "material_delta_change": 0
+      },
+      {
+        "edge_id": "GBTI-261280-E16",
+        "from": "GBTI-261280-N09",
+        "to": "GBTI-261280-N14",
+        "relation": "challenges",
+        "primary_delta": "delta_graph_structure",
+        "recommended_control": "graph_repair_suggestion",
+        "recommended_gate": "STRUCTURE_ONLY",
+        "candidate": true,
+        "material_delta_change": 20
+      },
+      {
+        "edge_id": "GBTI-261280-E17",
+        "from": "GBTI-261280-N08",
+        "to": "GBTI-261280-N02",
+        "relation": "blocks",
+        "primary_delta": "delta_evidence",
+        "recommended_control": "require_evidence",
+        "recommended_gate": "ASK_FOR_EVIDENCE",
+        "candidate": true,
+        "material_delta_change": 14
+      },
+      {
+        "edge_id": "GBTI-261280-E18",
+        "from": "GBTI-261280-N02",
+        "to": "GBTI-261280-N17",
+        "relation": "challenges",
+        "primary_delta": "delta_human_review",
+        "recommended_control": "create_review_task",
+        "recommended_gate": "HUMAN_REVIEW_REQUIRED",
+        "candidate": true,
+        "material_delta_change": 13
+      },
+      {
+        "edge_id": "GBTI-261280-E19",
+        "from": "GBTI-261280-N12",
+        "to": "GBTI-261280-N09",
+        "relation": "constrains",
+        "primary_delta": "delta_model_behavior",
+        "recommended_control": "calibration_review",
+        "recommended_gate": "TASK_ONLY",
+        "candidate": true,
+        "material_delta_change": 1
+      },
+      {
+        "edge_id": "GBTI-261280-E20",
+        "from": "GBTI-261280-N10",
+        "to": "GBTI-261280-N18",
+        "relation": "blocks",
+        "primary_delta": "delta_graph_structure",
+        "recommended_control": "graph_repair_suggestion",
+        "recommended_gate": "STRUCTURE_ONLY",
+        "candidate": true,
+        "material_delta_change": 1
+      },
+      {
+        "edge_id": "GBTI-261280-E21",
+        "from": "GBTI-261280-N17",
+        "to": "GBTI-261280-N09",
+        "relation": "requires",
+        "primary_delta": "delta_model_behavior",
+        "recommended_control": "calibration_review",
+        "recommended_gate": "TASK_ONLY",
+        "candidate": true,
+        "material_delta_change": 6
+      },
+      {
+        "edge_id": "GBTI-261280-E22",
+        "from": "GBTI-261280-N03",
+        "to": "GBTI-261280-N06",
+        "relation": "produces",
+        "primary_delta": "delta_execution",
+        "recommended_control": "require_test_plan",
+        "recommended_gate": "TASK_ONLY",
+        "candidate": true,
+        "material_delta_change": 10
+      },
+      {
+        "edge_id": "GBTI-261280-E23",
+        "from": "GBTI-261280-N05",
+        "to": "GBTI-261280-N17",
+        "relation": "routes_to",
+        "primary_delta": "delta_ambiguity",
+        "recommended_control": "split_interpretations",
+        "recommended_gate": "STRUCTURE_ONLY",
+        "candidate": true,
+        "material_delta_change": 20
+      },
+      {
+        "edge_id": "GBTI-261280-E24",
+        "from": "GBTI-261280-N12",
+        "to": "GBTI-261280-N15",
+        "relation": "constrains",
+        "primary_delta": "delta_ambiguity",
+        "recommended_control": "split_interpretations",
+        "recommended_gate": "STRUCTURE_ONLY",
+        "candidate": true,
+        "material_delta_change": 19
+      },
+      {
+        "edge_id": "GBTI-261280-E25",
+        "from": "GBTI-261280-N11",
+        "to": "GBTI-261280-N02",
+        "relation": "challenges",
+        "primary_delta": "delta_human_review",
+        "recommended_control": "create_review_task",
+        "recommended_gate": "HUMAN_REVIEW_REQUIRED",
+        "candidate": true,
+        "material_delta_change": 19
+      },
+      {
+        "edge_id": "GBTI-261280-E26",
+        "from": "GBTI-261280-N18",
+        "to": "GBTI-261280-N09",
+        "relation": "produces",
+        "primary_delta": "delta_graph_structure",
+        "recommended_control": "graph_repair_suggestion",
+        "recommended_gate": "STRUCTURE_ONLY",
+        "candidate": true,
+        "material_delta_change": 16
+      },
+      {
+        "edge_id": "GBTI-261280-E27",
+        "from": "GBTI-261280-N07",
+        "to": "GBTI-261280-N17",
+        "relation": "blocks",
+        "primary_delta": "delta_graph_structure",
+        "recommended_control": "graph_repair_suggestion",
+        "recommended_gate": "STRUCTURE_ONLY",
+        "candidate": true,
+        "material_delta_change": 7
+      },
+      {
+        "edge_id": "GBTI-261280-E28",
+        "from": "GBTI-261280-N15",
+        "to": "GBTI-261280-N03",
+        "relation": "challenges",
+        "primary_delta": "delta_conflict",
+        "recommended_control": "conflict_resolution_task",
+        "recommended_gate": "HUMAN_REVIEW_REQUIRED",
+        "candidate": true,
+        "material_delta_change": 11
+      },
+      {
+        "edge_id": "GBTI-261280-E29",
+        "from": "GBTI-261280-N05",
+        "to": "GBTI-261280-N14",
+        "relation": "constrains",
+        "primary_delta": "delta_domain",
+        "recommended_control": "require_domain_owner",
+        "recommended_gate": "HUMAN_REVIEW_REQUIRED",
+        "candidate": true,
+        "material_delta_change": 14
+      },
+      {
+        "edge_id": "GBTI-261280-E30",
+        "from": "GBTI-261280-N04",
+        "to": "GBTI-261280-N16",
+        "relation": "produces",
+        "primary_delta": "delta_model_behavior",
+        "recommended_control": "calibration_review",
+        "recommended_gate": "TASK_ONLY",
+        "candidate": true,
+        "material_delta_change": 0
+      },
+      {
+        "edge_id": "GBTI-261280-E31",
+        "from": "GBTI-261280-N15",
+        "to": "GBTI-261280-N16",
+        "relation": "produces",
+        "primary_delta": "delta_model_behavior",
+        "recommended_control": "calibration_review",
+        "recommended_gate": "TASK_ONLY",
+        "candidate": true,
+        "material_delta_change": 10
+      },
+      {
+        "edge_id": "GBTI-261280-E32",
+        "from": "GBTI-261280-N01",
+        "to": "GBTI-261280-N11",
+        "relation": "blocks",
+        "primary_delta": "delta_graph_structure",
+        "recommended_control": "graph_repair_suggestion",
+        "recommended_gate": "STRUCTURE_ONLY",
+        "candidate": true,
+        "material_delta_change": 5
+      }
+    ],
+    "telemetry_summary": {
+      "gate_counts": {
+        "STRUCTURE_ONLY": 19,
+        "HUMAN_REVIEW_REQUIRED": 15,
+        "TASK_ONLY": 11,
+        "ASK_FOR_EVIDENCE": 4,
+        "BLOCKED_UNSUPPORTED": 1
+      },
+      "control_counts": {
+        "graph_repair_suggestion": 11,
+        "create_review_task": 3,
+        "conflict_resolution_task": 3,
+        "exception_map": 2,
+        "require_test_plan": 3,
+        "require_domain_owner": 9,
+        "require_evidence": 4,
+        "calibration_review": 7,
+        "split_interpretations": 6,
+        "production_block": 1,
+        "generate_missing_artifact_task": 1
+      },
+      "delta_counts": {
+        "delta_graph_structure": 11,
+        "delta_human_review": 3,
+        "delta_conflict": 3,
+        "delta_rule": 2,
+        "delta_execution": 3,
+        "delta_domain": 9,
+        "delta_evidence": 4,
+        "delta_model_behavior": 7,
+        "delta_ambiguity": 6,
+        "delta_production": 1,
+        "delta_missingness": 1
+      },
+      "avg_material_delta_change": 10.91,
+      "task_count": 50
+    },
+    "readiness": "PRODUCTION_BLOCKED",
+    "allowed_actions": [
+      "inspect_graph",
+      "request_evidence",
+      "create_task_candidate",
+      "mark_candidate_edge",
+      "route_human_review"
+    ],
+    "blocked_actions": [
+      "client_facing_claim",
+      "automatic_nomination",
+      "implementation_execution",
+      "production_activation",
+      "automatic_merge",
+      "credential_handling"
+    ]
+  },
+  "tasks": [
+    {
+      "task_id": "TASK-001",
+      "origin": "GBTI-261280-N01",
+      "artifact_type": "graph_repair",
+      "source_delta": "delta_graph_structure",
+      "reason": "Repair bridge, relation type or orphan node.",
+      "recommended_gate": "STRUCTURE_ONLY",
+      "status": "OPEN_CANDIDATE"
+    },
+    {
+      "task_id": "TASK-002",
+      "origin": "GBTI-261280-N02",
+      "artifact_type": "human_review",
+      "source_delta": "delta_human_review",
+      "reason": "Route to human owner or reviewer.",
+      "recommended_gate": "HUMAN_REVIEW_REQUIRED",
+      "status": "OPEN_CANDIDATE"
+    },
+    {
+      "task_id": "TASK-003",
+      "origin": "GBTI-261280-N03",
+      "artifact_type": "arbitration",
+      "source_delta": "delta_conflict",
+      "reason": "Resolve conflicting sources/states/rules.",
+      "recommended_gate": "HUMAN_REVIEW_REQUIRED",
+      "status": "OPEN_CANDIDATE"
+    },
+    {
+      "task_id": "TASK-004",
+      "origin": "GBTI-261280-N04",
+      "artifact_type": "rule_map",
+      "source_delta": "delta_rule",
+      "reason": "Map rule source, scope, exception and applicability.",
+      "recommended_gate": "STRUCTURE_ONLY",
+      "status": "OPEN_CANDIDATE"
+    },
+    {
+      "task_id": "TASK-005",
+      "origin": "GBTI-261280-N05",
+      "artifact_type": "test_plan",
+      "source_delta": "delta_execution",
+      "reason": "Provide runtime, dependency and test context before execution.",
+      "recommended_gate": "TASK_ONLY",
+      "status": "OPEN_CANDIDATE"
+    },
+    {
+      "task_id": "TASK-006",
+      "origin": "GBTI-261280-N06",
+      "artifact_type": "domain_owner",
+      "source_delta": "delta_domain",
+      "reason": "Assign domain owner for sensitive decision.",
+      "recommended_gate": "HUMAN_REVIEW_REQUIRED",
+      "status": "OPEN_CANDIDATE"
+    },
+    {
+      "task_id": "TASK-007",
+      "origin": "GBTI-261280-N07",
+      "artifact_type": "graph_repair",
+      "source_delta": "delta_graph_structure",
+      "reason": "Repair bridge, relation type or orphan node.",
+      "recommended_gate": "STRUCTURE_ONLY",
+      "status": "OPEN_CANDIDATE"
+    },
+    {
+      "task_id": "TASK-008",
+      "origin": "GBTI-261280-N08",
+      "artifact_type": "evidence",
+      "source_delta": "delta_evidence",
+      "reason": "Attach source/evidence before committing graph relation.",
+      "recommended_gate": "ASK_FOR_EVIDENCE",
+      "status": "OPEN_CANDIDATE"
+    },
+    {
+      "task_id": "TASK-009",
+      "origin": "GBTI-261280-N09",
+      "artifact_type": "calibration_review",
+      "source_delta": "delta_model_behavior",
+      "reason": "Review anomaly pattern against calibration history.",
+      "recommended_gate": "TASK_ONLY",
+      "status": "OPEN_CANDIDATE"
+    },
+    {
+      "task_id": "TASK-010",
+      "origin": "GBTI-261280-N10",
+      "artifact_type": "test_plan",
+      "source_delta": "delta_execution",
+      "reason": "Provide runtime, dependency and test context before execution.",
+      "recommended_gate": "TASK_ONLY",
+      "status": "OPEN_CANDIDATE"
+    },
+    {
+      "task_id": "TASK-011",
+      "origin": "GBTI-261280-N11",
+      "artifact_type": "domain_owner",
+      "source_delta": "delta_domain",
+      "reason": "Assign domain owner for sensitive decision.",
+      "recommended_gate": "HUMAN_REVIEW_REQUIRED",
+      "status": "OPEN_CANDIDATE"
+    },
+    {
+      "task_id": "TASK-012",
+      "origin": "GBTI-261280-N12",
+      "artifact_type": "interpretation_split",
+      "source_delta": "delta_ambiguity",
+      "reason": "Split possible interpretations and keep candidate-only relation.",
+      "recommended_gate": "STRUCTURE_ONLY",
+      "status": "OPEN_CANDIDATE"
+    },
+    {
+      "task_id": "TASK-013",
+      "origin": "GBTI-261280-N13",
+      "artifact_type": "rule_map",
+      "source_delta": "delta_rule",
+      "reason": "Map rule source, scope, exception and applicability.",
+      "recommended_gate": "STRUCTURE_ONLY",
+      "status": "OPEN_CANDIDATE"
+    },
+    {
+      "task_id": "TASK-014",
+      "origin": "GBTI-261280-N14",
+      "artifact_type": "graph_repair",
+      "source_delta": "delta_graph_structure",
+      "reason": "Repair bridge, relation type or orphan node.",
+      "recommended_gate": "STRUCTURE_ONLY",
+      "status": "OPEN_CANDIDATE"
+    },
+    {
+      "task_id": "TASK-015",
+      "origin": "GBTI-261280-N15",
+      "artifact_type": "interpretation_split",
+      "source_delta": "delta_ambiguity",
+      "reason": "Split possible interpretations and keep candidate-only relation.",
+      "recommended_gate": "STRUCTURE_ONLY",
+      "status": "OPEN_CANDIDATE"
+    },
+    {
+      "task_id": "TASK-016",
+      "origin": "GBTI-261280-N16",
+      "artifact_type": "domain_owner",
+      "source_delta": "delta_domain",
+      "reason": "Assign domain owner for sensitive decision.",
+      "recommended_gate": "HUMAN_REVIEW_REQUIRED",
+      "status": "OPEN_CANDIDATE"
+    },
+    {
+      "task_id": "TASK-017",
+      "origin": "GBTI-261280-N17",
+      "artifact_type": "production_readiness",
+      "source_delta": "delta_production",
+      "reason": "Provide auth, audit, rollback, monitoring and support plan.",
+      "recommended_gate": "BLOCKED_UNSUPPORTED",
+      "status": "OPEN_CANDIDATE"
+    },
+    {
+      "task_id": "TASK-018",
+      "origin": "GBTI-261280-N18",
+      "artifact_type": "evidence",
+      "source_delta": "delta_evidence",
+      "reason": "Attach source/evidence before committing graph relation.",
+      "recommended_gate": "ASK_FOR_EVIDENCE",
+      "status": "OPEN_CANDIDATE"
+    },
+    {
+      "task_id": "TASK-019",
+      "origin": "GBTI-261280-E01",
+      "artifact_type": "domain_owner",
+      "source_delta": "delta_domain",
+      "reason": "Assign domain owner for sensitive decision.",
+      "recommended_gate": "HUMAN_REVIEW_REQUIRED",
+      "status": "OPEN_CANDIDATE"
+    },
+    {
+      "task_id": "TASK-020",
+      "origin": "GBTI-261280-E02",
+      "artifact_type": "domain_owner",
+      "source_delta": "delta_domain",
+      "reason": "Assign domain owner for sensitive decision.",
+      "recommended_gate": "HUMAN_REVIEW_REQUIRED",
+      "status": "OPEN_CANDIDATE"
+    },
+    {
+      "task_id": "TASK-021",
+      "origin": "GBTI-261280-E03",
+      "artifact_type": "arbitration",
+      "source_delta": "delta_conflict",
+      "reason": "Resolve conflicting sources/states/rules.",
+      "recommended_gate": "HUMAN_REVIEW_REQUIRED",
+      "status": "OPEN_CANDIDATE"
+    },
+    {
+      "task_id": "TASK-022",
+      "origin": "GBTI-261280-E04",
+      "artifact_type": "domain_owner",
+      "source_delta": "delta_domain",
+      "reason": "Assign domain owner for sensitive decision.",
+      "recommended_gate": "HUMAN_REVIEW_REQUIRED",
+      "status": "OPEN_CANDIDATE"
+    },
+    {
+      "task_id": "TASK-023",
+      "origin": "GBTI-261280-E05",
+      "artifact_type": "evidence",
+      "source_delta": "delta_evidence",
+      "reason": "Attach source/evidence before committing graph relation.",
+      "recommended_gate": "ASK_FOR_EVIDENCE",
+      "status": "OPEN_CANDIDATE"
+    },
+    {
+      "task_id": "TASK-024",
+      "origin": "GBTI-261280-E06",
+      "artifact_type": "domain_owner",
+      "source_delta": "delta_domain",
+      "reason": "Assign domain owner for sensitive decision.",
+      "recommended_gate": "HUMAN_REVIEW_REQUIRED",
+      "status": "OPEN_CANDIDATE"
+    },
+    {
+      "task_id": "TASK-025",
+      "origin": "GBTI-261280-E07",
+      "artifact_type": "graph_repair",
+      "source_delta": "delta_graph_structure",
+      "reason": "Repair bridge, relation type or orphan node.",
+      "recommended_gate": "STRUCTURE_ONLY",
+      "status": "OPEN_CANDIDATE"
+    },
+    {
+      "task_id": "TASK-026",
+      "origin": "GBTI-261280-E08",
+      "artifact_type": "interpretation_split",
+      "source_delta": "delta_ambiguity",
+      "reason": "Split possible interpretations and keep candidate-only relation.",
+      "recommended_gate": "STRUCTURE_ONLY",
+      "status": "OPEN_CANDIDATE"
+    },
+    {
+      "task_id": "TASK-027",
+      "origin": "GBTI-261280-E09",
+      "artifact_type": "calibration_review",
+      "source_delta": "delta_model_behavior",
+      "reason": "Review anomaly pattern against calibration history.",
+      "recommended_gate": "TASK_ONLY",
+      "status": "OPEN_CANDIDATE"
+    },
+    {
+      "task_id": "TASK-028",
+      "origin": "GBTI-261280-E10",
+      "artifact_type": "graph_repair",
+      "source_delta": "delta_graph_structure",
+      "reason": "Repair bridge, relation type or orphan node.",
+      "recommended_gate": "STRUCTURE_ONLY",
+      "status": "OPEN_CANDIDATE"
+    },
+    {
+      "task_id": "TASK-029",
+      "origin": "GBTI-261280-E11",
+      "artifact_type": "graph_repair",
+      "source_delta": "delta_graph_structure",
+      "reason": "Repair bridge, relation type or orphan node.",
+      "recommended_gate": "STRUCTURE_ONLY",
+      "status": "OPEN_CANDIDATE"
+    },
+    {
+      "task_id": "TASK-030",
+      "origin": "GBTI-261280-E12",
+      "artifact_type": "document",
+      "source_delta": "delta_missingness",
+      "reason": "Provide missing required document, field, test or domain artifact.",
+      "recommended_gate": "TASK_ONLY",
+      "status": "OPEN_CANDIDATE"
+    },
+    {
+      "task_id": "TASK-031",
+      "origin": "GBTI-261280-E13",
+      "artifact_type": "domain_owner",
+      "source_delta": "delta_domain",
+      "reason": "Assign domain owner for sensitive decision.",
+      "recommended_gate": "HUMAN_REVIEW_REQUIRED",
+      "status": "OPEN_CANDIDATE"
+    },
+    {
+      "task_id": "TASK-032",
+      "origin": "GBTI-261280-E14",
+      "artifact_type": "calibration_review",
+      "source_delta": "delta_model_behavior",
+      "reason": "Review anomaly pattern against calibration history.",
+      "recommended_gate": "TASK_ONLY",
+      "status": "OPEN_CANDIDATE"
+    },
+    {
+      "task_id": "TASK-033",
+      "origin": "GBTI-261280-E15",
+      "artifact_type": "interpretation_split",
+      "source_delta": "delta_ambiguity",
+      "reason": "Split possible interpretations and keep candidate-only relation.",
+      "recommended_gate": "STRUCTURE_ONLY",
+      "status": "OPEN_CANDIDATE"
+    },
+    {
+      "task_id": "TASK-034",
+      "origin": "GBTI-261280-E16",
+      "artifact_type": "graph_repair",
+      "source_delta": "delta_graph_structure",
+      "reason": "Repair bridge, relation type or orphan node.",
+      "recommended_gate": "STRUCTURE_ONLY",
+      "status": "OPEN_CANDIDATE"
+    },
+    {
+      "task_id": "TASK-035",
+      "origin": "GBTI-261280-E17",
+      "artifact_type": "evidence",
+      "source_delta": "delta_evidence",
+      "reason": "Attach source/evidence before committing graph relation.",
+      "recommended_gate": "ASK_FOR_EVIDENCE",
+      "status": "OPEN_CANDIDATE"
+    },
+    {
+      "task_id": "TASK-036",
+      "origin": "GBTI-261280-E18",
+      "artifact_type": "human_review",
+      "source_delta": "delta_human_review",
+      "reason": "Route to human owner or reviewer.",
+      "recommended_gate": "HUMAN_REVIEW_REQUIRED",
+      "status": "OPEN_CANDIDATE"
+    },
+    {
+      "task_id": "TASK-037",
+      "origin": "GBTI-261280-E19",
+      "artifact_type": "calibration_review",
+      "source_delta": "delta_model_behavior",
+      "reason": "Review anomaly pattern against calibration history.",
+      "recommended_gate": "TASK_ONLY",
+      "status": "OPEN_CANDIDATE"
+    },
+    {
+      "task_id": "TASK-038",
+      "origin": "GBTI-261280-E20",
+      "artifact_type": "graph_repair",
+      "source_delta": "delta_graph_structure",
+      "reason": "Repair bridge, relation type or orphan node.",
+      "recommended_gate": "STRUCTURE_ONLY",
+      "status": "OPEN_CANDIDATE"
+    },
+    {
+      "task_id": "TASK-039",
+      "origin": "GBTI-261280-E21",
+      "artifact_type": "calibration_review",
+      "source_delta": "delta_model_behavior",
+      "reason": "Review anomaly pattern against calibration history.",
+      "recommended_gate": "TASK_ONLY",
+      "status": "OPEN_CANDIDATE"
+    },
+    {
+      "task_id": "TASK-040",
+      "origin": "GBTI-261280-E22",
+      "artifact_type": "test_plan",
+      "source_delta": "delta_execution",
+      "reason": "Provide runtime, dependency and test context before execution.",
+      "recommended_gate": "TASK_ONLY",
+      "status": "OPEN_CANDIDATE"
+    },
+    {
+      "task_id": "TASK-041",
+      "origin": "GBTI-261280-E23",
+      "artifact_type": "interpretation_split",
+      "source_delta": "delta_ambiguity",
+      "reason": "Split possible interpretations and keep candidate-only relation.",
+      "recommended_gate": "STRUCTURE_ONLY",
+      "status": "OPEN_CANDIDATE"
+    },
+    {
+      "task_id": "TASK-042",
+      "origin": "GBTI-261280-E24",
+      "artifact_type": "interpretation_split",
+      "source_delta": "delta_ambiguity",
+      "reason": "Split possible interpretations and keep candidate-only relation.",
+      "recommended_gate": "STRUCTURE_ONLY",
+      "status": "OPEN_CANDIDATE"
+    },
+    {
+      "task_id": "TASK-043",
+      "origin": "GBTI-261280-E25",
+      "artifact_type": "human_review",
+      "source_delta": "delta_human_review",
+      "reason": "Route to human owner or reviewer.",
+      "recommended_gate": "HUMAN_REVIEW_REQUIRED",
+      "status": "OPEN_CANDIDATE"
+    },
+    {
+      "task_id": "TASK-044",
+      "origin": "GBTI-261280-E26",
+      "artifact_type": "graph_repair",
+      "source_delta": "delta_graph_structure",
+      "reason": "Repair bridge, relation type or orphan node.",
+      "recommended_gate": "STRUCTURE_ONLY",
+      "status": "OPEN_CANDIDATE"
+    },
+    {
+      "task_id": "TASK-045",
+      "origin": "GBTI-261280-E27",
+      "artifact_type": "graph_repair",
+      "source_delta": "delta_graph_structure",
+      "reason": "Repair bridge, relation type or orphan node.",
+      "recommended_gate": "STRUCTURE_ONLY",
+      "status": "OPEN_CANDIDATE"
+    },
+    {
+      "task_id": "TASK-046",
+      "origin": "GBTI-261280-E28",
+      "artifact_type": "arbitration",
+      "source_delta": "delta_conflict",
+      "reason": "Resolve conflicting sources/states/rules.",
+      "recommended_gate": "HUMAN_REVIEW_REQUIRED",
+      "status": "OPEN_CANDIDATE"
+    },
+    {
+      "task_id": "TASK-047",
+      "origin": "GBTI-261280-E29",
+      "artifact_type": "domain_owner",
+      "source_delta": "delta_domain",
+      "reason": "Assign domain owner for sensitive decision.",
+      "recommended_gate": "HUMAN_REVIEW_REQUIRED",
+      "status": "OPEN_CANDIDATE"
+    },
+    {
+      "task_id": "TASK-048",
+      "origin": "GBTI-261280-E30",
+      "artifact_type": "calibration_review",
+      "source_delta": "delta_model_behavior",
+      "reason": "Review anomaly pattern against calibration history.",
+      "recommended_gate": "TASK_ONLY",
+      "status": "OPEN_CANDIDATE"
+    },
+    {
+      "task_id": "TASK-049",
+      "origin": "GBTI-261280-E31",
+      "artifact_type": "calibration_review",
+      "source_delta": "delta_model_behavior",
+      "reason": "Review anomaly pattern against calibration history.",
+      "recommended_gate": "TASK_ONLY",
+      "status": "OPEN_CANDIDATE"
+    },
+    {
+      "task_id": "TASK-050",
+      "origin": "GBTI-261280-E32",
+      "artifact_type": "graph_repair",
+      "source_delta": "delta_graph_structure",
+      "reason": "Repair bridge, relation type or orphan node.",
+      "recommended_gate": "STRUCTURE_ONLY",
+      "status": "OPEN_CANDIDATE"
+    }
+  ],
+  "decision": {
+    "status": "PASS",
+    "decision": "PRODUCTION_BLOCKED",
+    "interpretation": "Graph builder telemetry produced candidate graph, controls, gates and practical tasks without production automation.",
+    "next_action": "Review generated missing artifact/control tasks and select which should become repo issues or human review tasks."
+  },
+  "blocked_actions": [
+    "client_facing_claim",
+    "automatic_nomination",
+    "implementation_execution",
+    "production_activation",
+    "automatic_merge",
+    "credential_handling"
+  ]
+}

@@ -19,13 +19,13 @@ class ProductRuntimeHandler(BaseHTTPRequestHandler):
         path=urlparse(self.path).path; clean=path.strip("/")
         try:
             if path in ["/","/ui","/ui/"]: return self.send_static(UI_ROOT/"index.html")
-            routes={"api/health":self.service.health,"api/product/status":self.service.product_status,"api/casulo/graph-sync/delta-library":self.service.delta_library_v2,"api/casulo/graph-sync/control-catalog":self.service.control_catalog,"api/casulo/graph-sync/lab-report":self.service.graph_sync_lab_report,"api/casulo/graph-sync/attempts":self.service.graph_sync_attempts,"api/casulo/graph-sync/summary":self.service.graph_sync_summary,"api/casulo/graph-sync/telemetry-agent":self.service.telemetry_control_agent,"api/casulo/graph-sync/practical-closure":self.service.practical_closure_policy,"api/casulo/graph-sync/readiness":self.service.graph_sync_readiness,"api/casulo/graph-sync/audit":self.service.graph_sync_audit,"api/reports":self.service.reports}
+            routes={"api/health":self.service.health,"api/product/status":self.service.product_status,"api/casulo/graph-builder-telemetry/candidate-graph":self.service.candidate_graph,"api/casulo/graph-builder-telemetry/missing-artifact-tasks":self.service.missing_artifact_tasks,"api/casulo/graph-builder-telemetry/result":self.service.graph_builder_result,"api/casulo/graph-builder-telemetry/native-policy":self.service.native_telemetry_policy,"api/casulo/graph-builder-telemetry/readiness":self.service.graph_builder_readiness,"api/casulo/graph-builder-telemetry/audit":self.service.graph_builder_audit,"api/reports":self.service.reports}
             if clean in routes: return self.send_json(routes[clean]())
             return self.send_json({"status":"NOT_FOUND","path":path},404)
         except Exception as exc: return self.send_json({"status":"ERROR","error":str(exc)},500)
 def main():
     ap=argparse.ArgumentParser(); ap.add_argument("--host",default="127.0.0.1"); ap.add_argument("--port",type=int,default=8097); args=ap.parse_args()
-    server=HTTPServer((args.host,args.port),ProductRuntimeHandler); print(f"Operational Cube product runtime API/UI running at http://{args.host}:{args.port}"); print("Open: /ui"); print("Try: /api/health, /api/casulo/graph-sync/lab-report")
+    server=HTTPServer((args.host,args.port),ProductRuntimeHandler); print(f"Operational Cube product runtime API/UI running at http://{args.host}:{args.port}"); print("Open: /ui"); print("Try: /api/health, /api/casulo/graph-builder-telemetry/result")
     try: server.serve_forever()
     except KeyboardInterrupt: print("Stopping product runtime API/UI.")
 if __name__=="__main__": main()

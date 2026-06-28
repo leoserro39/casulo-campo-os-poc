@@ -1,0 +1,4 @@
+{
+  "contract": "casulo.missing_artifact_recommender.v0.1",
+  "purpose": "Convert missingness/evidence/rule/execution deltas into practical document/domain/artifact tasks."
+}

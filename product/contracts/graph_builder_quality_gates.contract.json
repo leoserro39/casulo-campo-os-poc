@@ -1,0 +1,12 @@
+{
+  "contract": "casulo.graph_builder_quality_gates.v0.1",
+  "purpose": "Define readiness levels for graph builder telemetry output.",
+  "levels": [
+    "CANDIDATE_ONLY",
+    "EVIDENCE_REQUIRED",
+    "TASK_READY",
+    "HUMAN_REVIEW_REQUIRED",
+    "PRODUCTION_BLOCKED",
+    "READY_FOR_NEXT_ACTION"
+  ]
+}

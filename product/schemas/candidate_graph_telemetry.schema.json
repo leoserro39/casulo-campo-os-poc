@@ -1,0 +1,12 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Candidate Graph Telemetry",
+  "type": "object",
+  "required": [
+    "graph_id",
+    "nodes",
+    "edges",
+    "telemetry_summary",
+    "readiness"
+  ]
+}

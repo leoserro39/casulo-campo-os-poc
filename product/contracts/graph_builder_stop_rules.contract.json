@@ -1,0 +1,4 @@
+{
+  "contract": "casulo.graph_builder_stop_rules.v0.1",
+  "purpose": "Prevent endless graph building by stopping on enough_for_next_action, evidence_required, human_review_required, production_blocked or low material delta change."
+}

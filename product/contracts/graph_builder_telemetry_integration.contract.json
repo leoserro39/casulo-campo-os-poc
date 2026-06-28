@@ -1,0 +1,22 @@
+{
+  "contract": "casulo.graph_builder_telemetry_integration.v0.1",
+  "purpose": "Integrate Delta Library v2 and Graph Sync Telemetry into graph builder flow.",
+  "pipeline": [
+    "input_profile",
+    "candidate_graph",
+    "delta_detection",
+    "control_recommendation",
+    "gate_assignment",
+    "missing_artifact_tasks",
+    "sync_test",
+    "practical_closure"
+  ],
+  "blocked_actions": [
+    "client_facing_claim",
+    "automatic_nomination",
+    "implementation_execution",
+    "production_activation",
+    "automatic_merge",
+    "credential_handling"
+  ]
+}
