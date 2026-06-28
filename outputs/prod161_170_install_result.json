@@ -1,0 +1,16 @@
+{
+  "task": "PROD-161..170",
+  "status": "PASS",
+  "phase": "Public HTTPS Runtime / FastAPI Deploy Adapter",
+  "endpoints": [
+    "/api/casulo/public-runtime/openapi-spec",
+    "/api/casulo/public-runtime/deployment-plan",
+    "/api/casulo/public-runtime/fastapi-adapter",
+    "/api/casulo/public-runtime/action-import-guide",
+    "/api/casulo/public-runtime/security-gate",
+    "/api/casulo/public-runtime/parser-task-mode",
+    "/api/casulo/public-runtime/readiness",
+    "/api/casulo/public-runtime/audit"
+  ],
+  "next_recommended_bundle": "PROD-171..180 State Store / Evidence Store / Graph Store Baseline"
+}

@@ -60,24 +60,20 @@ class ProductRuntimeHandler(BaseHTTPRequestHandler):
                 if UI_ROOT.resolve() not in requested.parents and requested != UI_ROOT.resolve():
                     return self.send_json({"status": "FORBIDDEN"}, status=403)
                 return self.send_static(requested)
-
             route_map = {
                 "api/health": self.service.health,
                 "api/product/status": self.service.product_status,
-                "api/casulo/readiness/technical-memo": self.service.technical_readiness_memo,
-                "api/casulo/readiness/chat-agent-model": self.service.chat_agent_operating_model,
-                "api/casulo/readiness/target-stack": self.service.target_stack,
-                "api/casulo/readiness/codex-github-bridge": self.service.codex_github_bridge,
-                "api/casulo/readiness/poc-service-blueprint": self.service.poc_service_blueprint,
-                "api/casulo/readiness/incubator-pack": self.service.incubator_technical_pack,
                 "api/casulo/agent/openapi-spec": self.service.custom_gpt_openapi_spec,
                 "api/casulo/agent/custom-gpt-instructions": self.service.custom_gpt_instructions,
-                "api/casulo/agent/action-manifest": self.service.action_manifest,
-                "api/casulo/agent/tool-router": self.service.tool_router,
-                "api/casulo/agent/connector-session": self.service.connector_session,
-                "api/casulo/agent/security-policy": self.service.connector_security_policy,
                 "api/casulo/agent/readiness": self.service.connector_readiness,
-                "api/casulo/agent/audit": self.service.connector_audit,
+                "api/casulo/public-runtime/openapi-spec": self.service.public_openapi_spec,
+                "api/casulo/public-runtime/deployment-plan": self.service.deployment_plan,
+                "api/casulo/public-runtime/fastapi-adapter": self.service.fastapi_adapter,
+                "api/casulo/public-runtime/action-import-guide": self.service.action_import_guide,
+                "api/casulo/public-runtime/security-gate": self.service.security_gate,
+                "api/casulo/public-runtime/parser-task-mode": self.service.parser_task_mode,
+                "api/casulo/public-runtime/readiness": self.service.public_runtime_readiness,
+                "api/casulo/public-runtime/audit": self.service.public_runtime_audit,
                 "api/reports": self.service.reports,
             }
             if clean in route_map:
@@ -95,7 +91,7 @@ def main() -> int:
     server = HTTPServer((args.host, args.port), ProductRuntimeHandler)
     print(f"Operational Cube product runtime API/UI running at http://{args.host}:{args.port}")
     print("Open: /ui")
-    print("Try: /api/health, /api/casulo/agent/openapi-spec")
+    print("Try: /api/health, /api/casulo/public-runtime/readiness")
     try:
         server.serve_forever()
     except KeyboardInterrupt:

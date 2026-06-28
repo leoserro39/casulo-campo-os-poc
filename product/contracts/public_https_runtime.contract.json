@@ -1,0 +1,20 @@
+{
+  "contract": "casulo.public_https_runtime.v0.1",
+  "purpose": "Prepare the CASULO runtime to be exposed through a public HTTPS endpoint for Custom GPT Actions prototype.",
+  "mode": "prototype_deploy_adapter_not_production_saas",
+  "blocked_actions": [
+    "client_facing_claim",
+    "automatic_nomination",
+    "implementation_execution",
+    "production_activation",
+    "automatic_merge",
+    "credential_handling"
+  ],
+  "requires": [
+    "public_https_url",
+    "read_only_actions",
+    "redacted_or_anonymized_data",
+    "audit_log",
+    "auth_before_production"
+  ]
+}

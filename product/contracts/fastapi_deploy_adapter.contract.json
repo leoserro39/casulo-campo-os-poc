@@ -1,0 +1,6 @@
+{
+  "contract": "casulo.fastapi_deploy_adapter.v0.1",
+  "purpose": "Create a deployable FastAPI-compatible adapter wrapping the current product runtime service.",
+  "entrypoint": "product/deploy/fastapi_runtime_adapter.py",
+  "local_test": "uvicorn product.deploy.fastapi_runtime_adapter:app --host 0.0.0.0 --port 8098"
+}

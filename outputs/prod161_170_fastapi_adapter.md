@@ -1,0 +1,18 @@
+# FastAPI Deploy Adapter
+
+- contract_version: `casulo.fastapi_deploy_adapter.v0.1`
+- status: `PASS`
+- entrypoint: `product/deploy/fastapi_runtime_adapter.py`
+- requirements: `product/deploy/requirements.txt`
+- local_command: `python -m uvicorn product.deploy.fastapi_runtime_adapter:app --host 0.0.0.0 --port 8098`
+- docs_url: `/docs`
+- openapi_url: `/openapi.json`
+- read_only: `True`
+
+## Blocked Actions
+- `client_facing_claim`
+- `automatic_nomination`
+- `implementation_execution`
+- `production_activation`
+- `automatic_merge`
+- `credential_handling`

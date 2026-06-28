@@ -1,0 +1,22 @@
+{
+  "contract_version": "casulo.custom_gpt_action_import_guide.v0.1",
+  "status": "PASS",
+  "steps": [
+    "Start CASULO runtime or FastAPI adapter.",
+    "Expose it through a public HTTPS URL for Custom GPT use.",
+    "Regenerate public OpenAPI spec with --public-base-url https://your-url.",
+    "Copy outputs/prod161_170_public_openapi_spec.json into Custom GPT Actions.",
+    "Paste outputs/prod151_160_custom_gpt_instructions.md content as GPT instructions.",
+    "Keep Actions read-only until auth/write gates are implemented.",
+    "Test status, technical memo, calibration, delta control and audit endpoints."
+  ],
+  "warning": "Do not expose localhost or unprotected sensitive data to external users.",
+  "blocked_actions": [
+    "client_facing_claim",
+    "automatic_nomination",
+    "implementation_execution",
+    "production_activation",
+    "automatic_merge",
+    "credential_handling"
+  ]
+}

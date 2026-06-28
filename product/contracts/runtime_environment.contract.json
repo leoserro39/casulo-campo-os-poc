@@ -1,0 +1,10 @@
+{
+  "contract": "casulo.runtime_environment.v0.1",
+  "purpose": "Define local, tunnel, and prototype cloud deployment modes.",
+  "modes": [
+    "local_only",
+    "secure_tunnel_for_demo",
+    "prototype_cloud_api",
+    "production_hardened_later"
+  ]
+}

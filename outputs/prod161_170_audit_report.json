@@ -1,0 +1,10 @@
+{
+  "status": "PASS",
+  "audit": "Public HTTPS Runtime / FastAPI Deploy Adapter audit",
+  "server_url": "http://127.0.0.1:8098",
+  "https_url_valid": false,
+  "openapi_paths": 10,
+  "security_decision": "PUBLIC_HTTPS_PROTOTYPE_ALLOWED_ONLY_FOR_READ_ONLY_REDACTED_DATA",
+  "readiness": "READY_FOR_PUBLIC_HTTPS_RUNTIME_PROTOTYPE_PLANNING",
+  "finding": "PASS: adapter and action schema are ready for local/prototype deployment planning; HTTPS is mandatory for real Custom GPT Actions."
+}

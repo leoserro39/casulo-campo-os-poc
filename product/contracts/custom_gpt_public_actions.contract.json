@@ -1,0 +1,6 @@
+{
+  "contract": "casulo.custom_gpt_public_actions.v0.1",
+  "purpose": "Generate a public-url OpenAPI schema suitable for import into Custom GPT Actions.",
+  "schema_output": "outputs/prod161_170_public_openapi_spec.json",
+  "requires_public_https": true
+}

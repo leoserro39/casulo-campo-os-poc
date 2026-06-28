@@ -1,0 +1,37 @@
+{
+  "contract_version": "casulo.public_https_runtime.v0.1",
+  "status": "PASS",
+  "public_base_url": "http://127.0.0.1:8098",
+  "https_ready": false,
+  "deployment_modes": [
+    {
+      "mode": "local_only",
+      "use": "developer validation",
+      "url_type": "http://127.0.0.1"
+    },
+    {
+      "mode": "secure_tunnel_for_demo",
+      "use": "temporary Custom GPT demo",
+      "url_type": "https://temporary"
+    },
+    {
+      "mode": "prototype_cloud_api",
+      "use": "controlled POC demo",
+      "url_type": "https://stable"
+    },
+    {
+      "mode": "production_hardened_later",
+      "use": "after auth, persistence, audit and security",
+      "url_type": "https://stable_auth"
+    }
+  ],
+  "recommendation": "Use local runtime for now. Use secure public HTTPS tunnel or prototype cloud only for controlled Custom GPT Action testing.",
+  "blocked_actions": [
+    "client_facing_claim",
+    "automatic_nomination",
+    "implementation_execution",
+    "production_activation",
+    "automatic_merge",
+    "credential_handling"
+  ]
+}

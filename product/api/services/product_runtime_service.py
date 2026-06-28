@@ -46,18 +46,16 @@ class ProductRuntimeService:
 
     def product_status(self) -> Dict:
         checks = {
-            "technical_readiness_memo": exists(self.outputs_root / "prod141_150_technical_readiness_memo.json"),
-            "chat_agent_operating_model": exists(self.outputs_root / "prod141_150_chat_agent_operating_model.json"),
-            "target_stack": exists(self.outputs_root / "prod141_150_target_stack.json"),
-            "codex_github_bridge": exists(self.outputs_root / "prod141_150_codex_github_bridge.json"),
             "custom_gpt_openapi_spec": exists(self.outputs_root / "prod151_160_openapi_spec.json"),
-            "custom_gpt_instructions": exists(self.outputs_root / "prod151_160_custom_gpt_instructions.json"),
-            "action_manifest": exists(self.outputs_root / "prod151_160_action_manifest.json"),
-            "tool_router": exists(self.outputs_root / "prod151_160_tool_router.json"),
-            "connector_session": exists(self.outputs_root / "prod151_160_connector_session.json"),
-            "connector_security_policy": exists(self.outputs_root / "prod151_160_security_policy.json"),
             "connector_readiness": exists(self.outputs_root / "prod151_160_connector_readiness.json"),
-            "connector_audit": exists(self.outputs_root / "prod151_160_audit_report.json"),
+            "public_openapi_spec": exists(self.outputs_root / "prod161_170_public_openapi_spec.json"),
+            "deployment_plan": exists(self.outputs_root / "prod161_170_deployment_plan.json"),
+            "fastapi_adapter": exists(self.outputs_root / "prod161_170_fastapi_adapter.json"),
+            "action_import_guide": exists(self.outputs_root / "prod161_170_action_import_guide.json"),
+            "security_gate": exists(self.outputs_root / "prod161_170_security_gate.json"),
+            "parser_task_mode": exists(self.outputs_root / "prod161_170_parser_task_mode.json"),
+            "public_runtime_readiness": exists(self.outputs_root / "prod161_170_public_runtime_readiness.json"),
+            "public_runtime_audit": exists(self.outputs_root / "prod161_170_audit_report.json"),
         }
         return {
             "status": "PASS" if all(checks.values()) else "INCOMPLETE",
@@ -65,7 +63,7 @@ class ProductRuntimeService:
             "runtime_mode": RUNTIME_MODE,
             "checks": checks,
             "blocked_actions": BLOCKED_ACTIONS,
-            "next_recommended_step": "Expose runtime via public HTTPS or deploy FastAPI adapter, then import OpenAPI schema into Custom GPT Actions.",
+            "next_recommended_step": "Build State Store / Evidence Store / Graph Store baseline.",
         }
 
     def _payload(self, stem: str, key: str) -> Dict:
@@ -73,20 +71,17 @@ class ProductRuntimeService:
 
     def __getattr__(self, name):
         mapping = {
-            "technical_readiness_memo": ("prod141_150_technical_readiness_memo.json", "technical_readiness_memo"),
-            "chat_agent_operating_model": ("prod141_150_chat_agent_operating_model.json", "chat_agent_operating_model"),
-            "target_stack": ("prod141_150_target_stack.json", "target_stack"),
-            "codex_github_bridge": ("prod141_150_codex_github_bridge.json", "codex_github_bridge"),
-            "poc_service_blueprint": ("prod141_150_poc_service_blueprint.json", "poc_service_blueprint"),
-            "incubator_technical_pack": ("prod141_150_incubator_technical_pack.json", "incubator_technical_pack"),
             "custom_gpt_openapi_spec": ("prod151_160_openapi_spec.json", "openapi_spec"),
             "custom_gpt_instructions": ("prod151_160_custom_gpt_instructions.json", "custom_gpt_instructions"),
-            "action_manifest": ("prod151_160_action_manifest.json", "action_manifest"),
-            "tool_router": ("prod151_160_tool_router.json", "tool_router"),
-            "connector_session": ("prod151_160_connector_session.json", "connector_session"),
-            "connector_security_policy": ("prod151_160_security_policy.json", "connector_security_policy"),
             "connector_readiness": ("prod151_160_connector_readiness.json", "connector_readiness"),
-            "connector_audit": ("prod151_160_audit_report.json", "connector_audit"),
+            "public_openapi_spec": ("prod161_170_public_openapi_spec.json", "public_openapi_spec"),
+            "deployment_plan": ("prod161_170_deployment_plan.json", "deployment_plan"),
+            "fastapi_adapter": ("prod161_170_fastapi_adapter.json", "fastapi_adapter"),
+            "action_import_guide": ("prod161_170_action_import_guide.json", "action_import_guide"),
+            "security_gate": ("prod161_170_security_gate.json", "security_gate"),
+            "parser_task_mode": ("prod161_170_parser_task_mode.json", "parser_task_mode"),
+            "public_runtime_readiness": ("prod161_170_public_runtime_readiness.json", "public_runtime_readiness"),
+            "public_runtime_audit": ("prod161_170_audit_report.json", "public_runtime_audit"),
         }
         if name in mapping:
             stem, key = mapping[name]
@@ -95,14 +90,14 @@ class ProductRuntimeService:
 
     def reports(self) -> Dict:
         patterns = [
-            "prod151_160_openapi_spec.md",
-            "prod151_160_custom_gpt_instructions.md",
-            "prod151_160_action_manifest.md",
-            "prod151_160_tool_router.md",
-            "prod151_160_connector_session.md",
-            "prod151_160_security_policy.md",
-            "prod151_160_connector_readiness.md",
-            "prod151_160_audit_report.md",
+            "prod161_170_public_openapi_spec.md",
+            "prod161_170_deployment_plan.md",
+            "prod161_170_fastapi_adapter.md",
+            "prod161_170_action_import_guide.md",
+            "prod161_170_security_gate.md",
+            "prod161_170_parser_task_mode.md",
+            "prod161_170_public_runtime_readiness.md",
+            "prod161_170_audit_report.md",
         ]
         reports = []
         for name in patterns:
