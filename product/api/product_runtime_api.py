@@ -58,7 +58,6 @@ class ProductRuntimeHandler(BaseHTTPRequestHandler):
         try:
             if path in ["/", "/ui", "/ui/"]:
                 return self.send_static(UI_ROOT / "index.html")
-
             if clean.startswith("ui/"):
                 requested = (UI_ROOT / clean.replace("ui/", "", 1)).resolve()
                 if UI_ROOT.resolve() not in requested.parents and requested != UI_ROOT.resolve():
@@ -81,6 +80,8 @@ class ProductRuntimeHandler(BaseHTTPRequestHandler):
                 return self.send_json(self.service.vesselflow_state_definition())
             if clean == "api/vesselflow/state-definition/report":
                 return self.send_json(self.service.vesselflow_state_report_export())
+            if clean == "api/vesselflow/real-data-intake/preview":
+                return self.send_json(self.service.vesselflow_real_data_intake_preview())
             if clean == "api/reports":
                 return self.send_json(self.service.reports())
 
@@ -98,7 +99,7 @@ def main() -> int:
     server = HTTPServer((args.host, args.port), ProductRuntimeHandler)
     print(f"Operational Cube product runtime API/UI running at http://{args.host}:{args.port}")
     print("Open: /ui")
-    print("Try: /api/health, /api/vesselflow/state-definition, /api/vesselflow/state-definition/report")
+    print("Try: /api/health, /api/vesselflow/real-data-intake/preview")
     try:
         server.serve_forever()
     except KeyboardInterrupt:

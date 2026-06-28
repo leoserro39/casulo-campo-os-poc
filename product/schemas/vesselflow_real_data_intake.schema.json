@@ -1,0 +1,43 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "VesselFlow Real or Anonymized Data Intake",
+  "type": "object",
+  "required": [
+    "case_id",
+    "intake_status",
+    "data_classification",
+    "dataset_reference",
+    "expected_nomination_flow",
+    "qualification_rules",
+    "known_blocking_rules"
+  ],
+  "properties": {
+    "case_id": {
+      "type": "string"
+    },
+    "intake_status": {
+      "type": "string"
+    },
+    "data_classification": {
+      "type": "string"
+    },
+    "dataset_reference": {
+      "type": "object"
+    },
+    "expected_nomination_flow": {
+      "type": "array"
+    },
+    "qualification_rules": {
+      "type": "array"
+    },
+    "known_blocking_rules": {
+      "type": "array"
+    },
+    "optional_inputs": {
+      "type": "object"
+    },
+    "human_notes": {
+      "type": "string"
+    }
+  }
+}

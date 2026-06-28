@@ -1,0 +1,22 @@
+{
+  "contract": "operational_cube.vesselflow_real_data_intake.v0.8",
+  "purpose": "Prepare controlled intake of real or anonymized VesselFlow data without authorizing external use.",
+  "mode": "controlled_internal_intake",
+  "intake_modes": [
+    "WAITING_FOR_USER_DATA",
+    "ANONYMIZED_DATA_READY",
+    "REAL_DATA_READY"
+  ],
+  "writes_only_when_explicit": true,
+  "primary_script": "product/scripts/prepare_vesselflow_real_data_intake.py",
+  "default_outputs": [
+    "outputs/prod026_030_vesselflow_real_data_intake_preview.json",
+    "outputs/prod026_030_vesselflow_real_data_intake_preview.md"
+  ],
+  "blocked_actions": [
+    "automatic_nomination",
+    "client_facing_claim",
+    "implementation_execution",
+    "production_activation"
+  ]
+}

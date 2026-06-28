@@ -1,0 +1,62 @@
+{
+  "validation": {
+    "status": "PASS",
+    "intake_path": "product/verticals/vesselflow/real_data_intake/vesselflow_real_data_intake_template.json",
+    "case_id": "vesselflow_real_or_anonymized_intake_001",
+    "intake_status": "WAITING_FOR_USER_DATA",
+    "data_classification": "synthetic",
+    "errors": [],
+    "warnings": [
+      "dataset_reference.path_or_reference still looks like a placeholder"
+    ],
+    "blocked_actions": [
+      "automatic_nomination",
+      "client_facing_claim",
+      "implementation_execution",
+      "production_activation"
+    ]
+  },
+  "candidate_import_input": {
+    "case_id": "vesselflow_real_or_anonymized_intake_001",
+    "dataset_or_workbook": {
+      "status": "WAITING_FOR_USER_DATA",
+      "data_classification": "synthetic",
+      "path_or_reference": "REPLACE_WITH_REAL_OR_ANONYMIZED_WORKBOOK_OR_DATASET",
+      "description": "Replace this template with a real/anonymized VesselFlow dataset reference before using --write.",
+      "file_exists_check_required": false
+    },
+    "expected_nomination_flow": [
+      "load_master_workbook",
+      "extract_vessel_state",
+      "validate_pvq_q88",
+      "validate_documents_certificates",
+      "map_contract_constraints",
+      "evaluate_vessel_platform_sync",
+      "run_qualification_gate",
+      "run_nomination_gate",
+      "require_human_review",
+      "produce_nomination_state_report"
+    ],
+    "qualification_rules": [
+      "PVQ/Q88 must have required fields available or explicitly marked missing.",
+      "Certificates/documents must be present and validity must be checkable.",
+      "Contract constraints must not conflict with vessel/platform/cargo requirements.",
+      "Human review is required before any external use."
+    ],
+    "known_blocking_rules": [
+      "Do not execute nomination automatically.",
+      "Do not create client-facing claim without human approval.",
+      "Do not authorize implementation or production activation from intake data.",
+      "Block when required evidence is missing."
+    ],
+    "optional_inputs": {
+      "contract_records": [],
+      "pvq_q88_extract": {},
+      "certificate_list": [],
+      "cargo_platform_matrix": [],
+      "decision_logs": [],
+      "audit_reports": []
+    },
+    "human_notes": "Fill this file, then run prepare_vesselflow_real_data_intake.py with --write only after reviewing the data classification."
+  }
+}

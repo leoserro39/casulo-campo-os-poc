@@ -1,0 +1,8 @@
+{
+  "task": "PROD-026..030",
+  "status": "PASS",
+  "phase": "Real/Anonymized VesselFlow Dataset Intake",
+  "endpoint": "/api/vesselflow/real-data-intake/preview",
+  "write_policy": "explicit --write only",
+  "next_recommended_bundle": "PROD-031..035 Real Data UI Review and Before/After Delta"
+}

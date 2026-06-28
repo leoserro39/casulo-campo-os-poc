@@ -1,0 +1,16 @@
+{
+  "contract": "operational_cube.data_anonymization_gate.v0.8",
+  "purpose": "Require explicit classification of input data before controlled state rerun.",
+  "classification_required": true,
+  "allowed_classifications": [
+    "anonymized",
+    "synthetic",
+    "internal_real_restricted"
+  ],
+  "not_allowed_without_human_review": [
+    "external_client_data",
+    "production_secret",
+    "personal_sensitive_data",
+    "unredacted_confidential_contract"
+  ]
+}

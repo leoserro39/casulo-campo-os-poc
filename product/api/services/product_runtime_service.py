@@ -52,6 +52,7 @@ class ProductRuntimeService:
             "product_ui": exists(self.product_root / "ui" / "index.html"),
             "vesselflow_state_definition": exists(self.outputs_root / "prod016_020_vesselflow_state_definition.json"),
             "vesselflow_state_report_export": exists(self.outputs_root / "prod021_025_vesselflow_state_report_export.json"),
+            "vesselflow_real_data_intake": exists(self.product_root / "scripts" / "prepare_vesselflow_real_data_intake.py"),
         }
         return {
             "status": "PASS" if all(checks.values()) else "INCOMPLETE",
@@ -59,7 +60,7 @@ class ProductRuntimeService:
             "runtime_mode": RUNTIME_MODE,
             "checks": checks,
             "blocked_actions": BLOCKED_ACTIONS,
-            "next_recommended_step": "Load real/anonymized VesselFlow data or enhance UI with report export review.",
+            "next_recommended_step": "Prepare a real/anonymized VesselFlow intake JSON and run controlled state definition with --write --rerun-state.",
         }
 
     def verticals(self) -> Dict[str, Any]:
@@ -147,6 +148,18 @@ class ProductRuntimeService:
             "markdown_preview": read_text(md_path)[:4000] if md_path.exists() else "",
         }
 
+    def vesselflow_real_data_intake_preview(self) -> Dict[str, Any]:
+        json_path = self.outputs_root / "prod026_030_vesselflow_real_data_intake_preview.json"
+        md_path = self.outputs_root / "prod026_030_vesselflow_real_data_intake_preview.md"
+        if not json_path.exists():
+            return {"status": "MISSING", "error": "VesselFlow real data intake preview has not been generated yet."}
+        return {
+            "status": "PASS",
+            "preview": read_json(json_path),
+            "markdown_path": str(md_path),
+            "markdown_preview": read_text(md_path)[:4000] if md_path.exists() else "",
+        }
+
     def reports(self) -> Dict[str, Any]:
         patterns = [
             "prod001_005_product_foundation_report.md",
@@ -156,6 +169,7 @@ class ProductRuntimeService:
             "prod011_015_product_ui_shell_report.md",
             "prod016_020_vesselflow_state_definition.md",
             "prod021_025_vesselflow_state_report_export.md",
+            "prod026_030_vesselflow_real_data_intake_preview.md",
             "wb020_poc_completion_report.md",
         ]
         reports = []
