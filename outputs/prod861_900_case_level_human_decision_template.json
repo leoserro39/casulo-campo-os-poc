@@ -1,0 +1,168 @@
+{
+  "status": "PASS",
+  "usage": "Copy this file to inputs/human_decisions/<reviewer>.json and replace synthetic decisions with explicit reviewer decisions for real pilots.",
+  "decisions": [
+    {
+      "case_id": "PILOT-001",
+      "human_decision": null,
+      "human_comment": "",
+      "reviewer_mode": "user_provided_case_level_decision",
+      "auto_apply": false
+    },
+    {
+      "case_id": "PILOT-002",
+      "human_decision": null,
+      "human_comment": "",
+      "reviewer_mode": "user_provided_case_level_decision",
+      "auto_apply": false
+    },
+    {
+      "case_id": "PILOT-003",
+      "human_decision": null,
+      "human_comment": "",
+      "reviewer_mode": "user_provided_case_level_decision",
+      "auto_apply": false
+    },
+    {
+      "case_id": "PILOT-004",
+      "human_decision": null,
+      "human_comment": "",
+      "reviewer_mode": "user_provided_case_level_decision",
+      "auto_apply": false
+    },
+    {
+      "case_id": "PILOT-005",
+      "human_decision": null,
+      "human_comment": "",
+      "reviewer_mode": "user_provided_case_level_decision",
+      "auto_apply": false
+    },
+    {
+      "case_id": "PILOT-006",
+      "human_decision": null,
+      "human_comment": "",
+      "reviewer_mode": "user_provided_case_level_decision",
+      "auto_apply": false
+    },
+    {
+      "case_id": "PILOT-007",
+      "human_decision": null,
+      "human_comment": "",
+      "reviewer_mode": "user_provided_case_level_decision",
+      "auto_apply": false
+    },
+    {
+      "case_id": "PILOT-008",
+      "human_decision": null,
+      "human_comment": "",
+      "reviewer_mode": "user_provided_case_level_decision",
+      "auto_apply": false
+    },
+    {
+      "case_id": "PILOT-009",
+      "human_decision": null,
+      "human_comment": "",
+      "reviewer_mode": "user_provided_case_level_decision",
+      "auto_apply": false
+    },
+    {
+      "case_id": "PILOT-010",
+      "human_decision": null,
+      "human_comment": "",
+      "reviewer_mode": "user_provided_case_level_decision",
+      "auto_apply": false
+    },
+    {
+      "case_id": "PILOT-011",
+      "human_decision": null,
+      "human_comment": "",
+      "reviewer_mode": "user_provided_case_level_decision",
+      "auto_apply": false
+    },
+    {
+      "case_id": "PILOT-012",
+      "human_decision": null,
+      "human_comment": "",
+      "reviewer_mode": "user_provided_case_level_decision",
+      "auto_apply": false
+    },
+    {
+      "case_id": "PILOT-013",
+      "human_decision": null,
+      "human_comment": "",
+      "reviewer_mode": "user_provided_case_level_decision",
+      "auto_apply": false
+    },
+    {
+      "case_id": "PILOT-014",
+      "human_decision": null,
+      "human_comment": "",
+      "reviewer_mode": "user_provided_case_level_decision",
+      "auto_apply": false
+    },
+    {
+      "case_id": "PILOT-015",
+      "human_decision": null,
+      "human_comment": "",
+      "reviewer_mode": "user_provided_case_level_decision",
+      "auto_apply": false
+    },
+    {
+      "case_id": "PILOT-016",
+      "human_decision": null,
+      "human_comment": "",
+      "reviewer_mode": "user_provided_case_level_decision",
+      "auto_apply": false
+    },
+    {
+      "case_id": "PILOT-017",
+      "human_decision": null,
+      "human_comment": "",
+      "reviewer_mode": "user_provided_case_level_decision",
+      "auto_apply": false
+    },
+    {
+      "case_id": "PILOT-018",
+      "human_decision": null,
+      "human_comment": "",
+      "reviewer_mode": "user_provided_case_level_decision",
+      "auto_apply": false
+    },
+    {
+      "case_id": "PILOT-019",
+      "human_decision": null,
+      "human_comment": "",
+      "reviewer_mode": "user_provided_case_level_decision",
+      "auto_apply": false
+    },
+    {
+      "case_id": "PILOT-020",
+      "human_decision": null,
+      "human_comment": "",
+      "reviewer_mode": "user_provided_case_level_decision",
+      "auto_apply": false
+    }
+  ],
+  "allowed_human_decisions": [
+    "APPROVE_FIXED_GATE",
+    "KEEP_HUMAN_REVIEW",
+    "KEEP_EVIDENCE_REQUEST",
+    "APPROVE_DIRECT_BLOCK",
+    "APPROVE_CASE_LEVEL_RECLASSIFICATION",
+    "MARK_FALSE_ALLOW",
+    "MARK_FALSE_BLOCK_RESOLVED",
+    "REQUEST_MORE_EVIDENCE"
+  ],
+  "blocked_actions": [
+    "client_facing_claim",
+    "automatic_nomination",
+    "implementation_execution",
+    "production_activation",
+    "automatic_merge",
+    "credential_handling",
+    "automatic_threshold_mutation",
+    "autonomous_external_execution",
+    "real_world_side_effect",
+    "unapproved_real_company_data"
+  ]
+}

@@ -1,0 +1,48 @@
+{
+  "status": "PASS",
+  "closure_status": "CLOSED_CONTROLLED_POC",
+  "case_count": 20,
+  "closed_count": 20,
+  "false_allow_confirmed_cases": [],
+  "all_decisions_captured": true,
+  "decision_distribution": {
+    "APPROVE_DIRECT_BLOCK": 3,
+    "APPROVE_FIXED_GATE": 4,
+    "KEEP_EVIDENCE_REQUEST": 2,
+    "KEEP_HUMAN_REVIEW": 8,
+    "MARK_FALSE_BLOCK_RESOLVED": 3
+  },
+  "queue_distribution": {
+    "DIRECT_BLOCK_APPROVAL": 3,
+    "EVIDENCE_REQUEST_REVIEW": 2,
+    "FALSE_ALLOW_SCAN": 4,
+    "HUMAN_REVIEW_CONFIRMATION": 6,
+    "OVER_CONSERVATIVE_REVIEW": 2,
+    "POST_HOTFIX_FALSE_ALLOW_SCAN": 3
+  },
+  "closure_distribution": {
+    "approved_allow_after_scan": 4,
+    "approved_direct_block": 3,
+    "kept_evidence_request": 2,
+    "kept_human_review": 8,
+    "resolved_false_block": 3
+  },
+  "reviewer_mode_distribution": {
+    "synthetic_human_decision_seed_for_poc_only": 20
+  },
+  "external_execution_allowed": false,
+  "automatic_threshold_mutation_allowed": false,
+  "auto_apply": false,
+  "blocked_actions": [
+    "client_facing_claim",
+    "automatic_nomination",
+    "implementation_execution",
+    "production_activation",
+    "automatic_merge",
+    "credential_handling",
+    "automatic_threshold_mutation",
+    "autonomous_external_execution",
+    "real_world_side_effect",
+    "unapproved_real_company_data"
+  ]
+}

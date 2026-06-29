@@ -1,0 +1,5 @@
+{
+  "contract": "casulo.board_closure.v0.1",
+  "purpose": "Close the refreshed board only when every case has a case-level decision and no false allow is confirmed.",
+  "closure_policy": "no_false_allow_confirmed_and_all_cases_decided"
+}

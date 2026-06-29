@@ -1,0 +1,43 @@
+{
+  "status": "PASS",
+  "auto_apply": false,
+  "automatic_threshold_mutation_allowed": false,
+  "recommendations": [
+    {
+      "id": "CLOSURE-CAL-001",
+      "target": "50_case_expansion_design",
+      "recommendation": "Design a 50-case expansion pack only if this closed controlled POC remains free of confirmed false allows.",
+      "cases": [],
+      "auto_apply": false,
+      "requires_human_approval": true
+    },
+    {
+      "id": "CLOSURE-CAL-002",
+      "target": "decision_capture_mode",
+      "recommendation": "Replace synthetic decision seed with explicit reviewer-provided files in inputs/human_decisions for any real pilot.",
+      "cases": [],
+      "auto_apply": false,
+      "requires_human_approval": true
+    },
+    {
+      "id": "CLOSURE-CAL-003",
+      "target": "threshold_policy",
+      "recommendation": "Do not mutate global thresholds from this board closure; use case-level findings as evidence for future calibration proposals.",
+      "cases": [],
+      "auto_apply": false,
+      "requires_human_approval": true
+    }
+  ],
+  "blocked_actions": [
+    "client_facing_claim",
+    "automatic_nomination",
+    "implementation_execution",
+    "production_activation",
+    "automatic_merge",
+    "credential_handling",
+    "automatic_threshold_mutation",
+    "autonomous_external_execution",
+    "real_world_side_effect",
+    "unapproved_real_company_data"
+  ]
+}

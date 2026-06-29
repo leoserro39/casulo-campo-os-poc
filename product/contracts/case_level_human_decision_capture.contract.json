@@ -1,0 +1,19 @@
+{
+  "contract": "casulo.case_level_human_decision_capture.v0.1",
+  "purpose": "Capture case-level human review decisions from refreshed pilot board without global threshold mutation.",
+  "mode": "case_level_decision_capture_no_auto_mutation",
+  "input_override": "inputs/human_decisions/*.json",
+  "default_seed": "synthetic_human_decision_seed_for_poc_only",
+  "blocked_actions": [
+    "client_facing_claim",
+    "automatic_nomination",
+    "implementation_execution",
+    "production_activation",
+    "automatic_merge",
+    "credential_handling",
+    "automatic_threshold_mutation",
+    "autonomous_external_execution",
+    "real_world_side_effect",
+    "unapproved_real_company_data"
+  ]
+}

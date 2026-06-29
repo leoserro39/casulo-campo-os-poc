@@ -1,0 +1,16 @@
+{
+  "task": "PROD-861..900",
+  "status": "PASS",
+  "phase": "Case-Level Human Decision Capture and Board Closure",
+  "endpoints": [
+    "/api/casulo/case-level-decisions/template",
+    "/api/casulo/case-level-decisions/decisions",
+    "/api/casulo/case-level-decisions/closure",
+    "/api/casulo/case-level-decisions/ledger",
+    "/api/casulo/case-level-decisions/summary",
+    "/api/casulo/case-level-decisions/recommendations",
+    "/api/casulo/case-level-decisions/readiness",
+    "/api/casulo/case-level-decisions/audit"
+  ],
+  "next_recommended_bundle": "PROD-901 Controlled 50-Case Expansion Design and Graph Persistence Prep"
+}

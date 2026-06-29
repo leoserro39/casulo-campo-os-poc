@@ -1,12 +1,12 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "title": "closure_readiness.schema.json",
+  "title": "board_closure.schema.json",
   "type": "object",
   "required": [
     "status",
-    "decision",
-    "ready_for",
-    "not_ready_for",
+    "closure_status",
+    "case_count",
+    "closed_count",
     "blocked_actions"
   ]
 }

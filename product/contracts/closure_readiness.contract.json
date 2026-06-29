@@ -1,4 +1,4 @@
 {
   "contract": "casulo.closure_readiness.v0.1",
-  "purpose": "Gate readiness for closure based on evidence, URL presence, transition validity and manual-only execution policy."
+  "purpose": "Decide readiness for controlled 50-case expansion design after board closure."
 }

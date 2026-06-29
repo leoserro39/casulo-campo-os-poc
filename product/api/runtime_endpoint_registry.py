@@ -337,4 +337,18 @@ ENDPOINT_GROUPS = [
         ],
     },
 
+    {
+        "group": "case_level_human_decision_capture",
+        "routes": [
+            {"path": "/api/casulo/case-level-decisions/template", "file": "outputs/prod861_900_case_level_human_decision_template.json", "key": "template"},
+            {"path": "/api/casulo/case-level-decisions/decisions", "file": "outputs/prod861_900_case_level_human_decisions.json", "key": "decisions"},
+            {"path": "/api/casulo/case-level-decisions/closure", "file": "outputs/prod861_900_board_closure.json", "key": "closure"},
+            {"path": "/api/casulo/case-level-decisions/ledger", "file": "outputs/prod861_900_closed_decision_ledger.json", "key": "ledger"},
+            {"path": "/api/casulo/case-level-decisions/summary", "file": "outputs/prod861_900_human_decision_summary.json", "key": "summary"},
+            {"path": "/api/casulo/case-level-decisions/recommendations", "file": "outputs/prod861_900_case_level_recommendations.json", "key": "recommendations"},
+            {"path": "/api/casulo/case-level-decisions/readiness", "file": "outputs/prod861_900_closure_readiness.json", "key": "readiness"},
+            {"path": "/api/casulo/case-level-decisions/audit", "file": "outputs/prod861_900_closure_audit_report.json", "key": "audit"},
+        ],
+    },
+
 ]

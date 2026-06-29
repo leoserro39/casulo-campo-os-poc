@@ -1,0 +1,12 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "case_level_human_decision.schema.json",
+  "type": "object",
+  "required": [
+    "case_id",
+    "human_decision",
+    "human_comment",
+    "reviewer_mode",
+    "auto_apply"
+  ]
+}

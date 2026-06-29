@@ -1,0 +1,14 @@
+{
+  "contract": "casulo.human_decision_summary.v0.1",
+  "decision_types": [
+    "APPROVE_FIXED_GATE",
+    "KEEP_HUMAN_REVIEW",
+    "KEEP_EVIDENCE_REQUEST",
+    "APPROVE_DIRECT_BLOCK",
+    "APPROVE_CASE_LEVEL_RECLASSIFICATION",
+    "MARK_FALSE_ALLOW",
+    "MARK_FALSE_BLOCK_RESOLVED",
+    "REQUEST_MORE_EVIDENCE"
+  ],
+  "auto_apply": false
+}
