@@ -1,0 +1,11 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "auto_adjustment_candidates.schema.json",
+  "type": "object",
+  "required": [
+    "status",
+    "candidate_count",
+    "candidates",
+    "blocked_actions"
+  ]
+}

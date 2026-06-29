@@ -165,4 +165,16 @@ ENDPOINT_GROUPS = [
         ],
     },
 
+    {
+        "group": "telemetry_correlation_calibration",
+        "routes": [
+            {"path": "/api/casulo/telemetry-correlation/matrix", "file": "outputs/prod601b_620b_telemetry_correlation_matrix.json", "key": "correlation_matrix"},
+            {"path": "/api/casulo/telemetry-correlation/bounds", "file": "outputs/prod601b_620b_telemetry_bounds.json", "key": "telemetry_bounds"},
+            {"path": "/api/casulo/telemetry-correlation/optimal-zones", "file": "outputs/prod601b_620b_optimal_telemetry_zones.json", "key": "optimal_zones"},
+            {"path": "/api/casulo/telemetry-correlation/adjustments", "file": "outputs/prod601b_620b_auto_adjustment_candidates.json", "key": "auto_adjustment_candidates"},
+            {"path": "/api/casulo/telemetry-correlation/readiness", "file": "outputs/prod601b_620b_readiness.json", "key": "readiness"},
+            {"path": "/api/casulo/telemetry-correlation/audit", "file": "outputs/prod601b_620b_audit_report.json", "key": "audit"},
+        ],
+    },
+
 ]

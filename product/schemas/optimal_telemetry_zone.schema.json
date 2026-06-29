@@ -1,0 +1,10 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "optimal_telemetry_zone.schema.json",
+  "type": "object",
+  "required": [
+    "status",
+    "zones",
+    "blocked_actions"
+  ]
+}

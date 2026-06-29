@@ -1,0 +1,26 @@
+{
+  "status": "PASS",
+  "decision": "READY_FOR_TELEMETRY_GUIDED_CALIBRATION_NOT_AUTO_MUTATION",
+  "case_count": 1200,
+  "strong_correlation_count": 29,
+  "adjustment_candidate_count": 4,
+  "ready_for": [
+    "telemetry-guided threshold review",
+    "safe anomaly taxonomy",
+    "solver agent controlled stub",
+    "domain sensitivity calibration"
+  ],
+  "not_ready_for": [
+    "automatic threshold mutation",
+    "production activation",
+    "client-facing benchmark claim"
+  ],
+  "blocked_actions": [
+    "client_facing_claim",
+    "automatic_nomination",
+    "implementation_execution",
+    "production_activation",
+    "automatic_merge",
+    "credential_handling"
+  ]
+}

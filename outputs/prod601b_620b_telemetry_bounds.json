@@ -1,0 +1,2425 @@
+{
+  "status": "PASS",
+  "global_bounds": {
+    "stress_score": {
+      "min": 0.0,
+      "max": 56.0,
+      "mean": 31.1,
+      "stdev": 14.882
+    },
+    "direct_risk": {
+      "min": 44.0,
+      "max": 99.0,
+      "mean": 82.425,
+      "stdev": 14.4753
+    },
+    "cubo_risk": {
+      "min": 10.0,
+      "max": 72.0,
+      "mean": 44.7,
+      "stdev": 13.101
+    },
+    "risk_reduction": {
+      "min": 22.0,
+      "max": 48.0,
+      "mean": 37.725,
+      "stdev": 9.4087
+    },
+    "relative_risk_reduction_pct": {
+      "min": 27.27,
+      "max": 80.77,
+      "mean": 46.4299,
+      "stdev": 11.8463
+    },
+    "delta_control": {
+      "min": 80.0,
+      "max": 95.0,
+      "mean": 85.75,
+      "stdev": 3.8144
+    },
+    "evidence_coverage": {
+      "min": 55.0,
+      "max": 90.0,
+      "mean": 75.3333,
+      "stdev": 8.4862
+    },
+    "useful_output_rate": {
+      "min": 75.0,
+      "max": 92.0,
+      "mean": 81.2,
+      "stdev": 5.3182
+    },
+    "anomaly_numeric": {
+      "min": 0.0,
+      "max": 1.0,
+      "mean": 0.6333,
+      "stdev": 0.4821
+    },
+    "human_review_numeric": {
+      "min": 0.0,
+      "max": 1.0,
+      "mean": 0.3667,
+      "stdev": 0.4821
+    },
+    "unsupported_numeric": {
+      "min": 0.0,
+      "max": 1.0,
+      "mean": 0.1,
+      "stdev": 0.3001
+    },
+    "safe_review_success": {
+      "min": 0.0,
+      "max": 1.0,
+      "mean": 0.2833,
+      "stdev": 0.4508
+    },
+    "safe_block_success": {
+      "min": 0.0,
+      "max": 1.0,
+      "mean": 0.1,
+      "stdev": 0.3001
+    },
+    "true_failure_candidate": {
+      "min": 0.0,
+      "max": 0.0,
+      "mean": 0.0,
+      "stdev": 0.0
+    }
+  },
+  "by_workload": {
+    "parser": {
+      "stress_score": {
+        "min": 0.0,
+        "max": 56.0,
+        "mean": 31.1,
+        "stdev": 14.9508
+      },
+      "direct_risk": {
+        "min": 52.0,
+        "max": 99.0,
+        "mean": 82.2,
+        "stdev": 13.6241
+      },
+      "cubo_risk": {
+        "min": 10.0,
+        "max": 51.0,
+        "mean": 36.3,
+        "stdev": 12.1693
+      },
+      "risk_reduction": {
+        "min": 42.0,
+        "max": 48.0,
+        "mean": 45.9,
+        "stdev": 2.5995
+      },
+      "relative_risk_reduction_pct": {
+        "min": 48.48,
+        "max": 80.77,
+        "mean": 57.339,
+        "stdev": 9.7376
+      },
+      "delta_control": {
+        "min": 85.0,
+        "max": 95.0,
+        "mean": 89.5,
+        "stdev": 3.1543
+      },
+      "evidence_coverage": {
+        "min": 69.0,
+        "max": 90.0,
+        "mean": 80.0,
+        "stdev": 5.356
+      },
+      "useful_output_rate": {
+        "min": 75.0,
+        "max": 92.0,
+        "mean": 81.5,
+        "stdev": 5.3795
+      },
+      "anomaly_numeric": {
+        "min": 0.0,
+        "max": 1.0,
+        "mean": 0.4,
+        "stdev": 0.4924
+      },
+      "human_review_numeric": {
+        "min": 0.0,
+        "max": 1.0,
+        "mean": 0.2,
+        "stdev": 0.402
+      },
+      "unsupported_numeric": {
+        "min": 0.0,
+        "max": 1.0,
+        "mean": 0.1,
+        "stdev": 0.3015
+      },
+      "safe_review_success": {
+        "min": 0.0,
+        "max": 1.0,
+        "mean": 0.2,
+        "stdev": 0.402
+      },
+      "safe_block_success": {
+        "min": 0.0,
+        "max": 1.0,
+        "mean": 0.1,
+        "stdev": 0.3015
+      },
+      "true_failure_candidate": {
+        "min": 0.0,
+        "max": 0.0,
+        "mean": 0.0,
+        "stdev": 0.0
+      }
+    },
+    "document_field_extraction": {
+      "stress_score": {
+        "min": 0.0,
+        "max": 56.0,
+        "mean": 31.1,
+        "stdev": 14.9508
+      },
+      "direct_risk": {
+        "min": 52.0,
+        "max": 99.0,
+        "mean": 82.2,
+        "stdev": 13.6241
+      },
+      "cubo_risk": {
+        "min": 10.0,
+        "max": 51.0,
+        "mean": 36.3,
+        "stdev": 12.1693
+      },
+      "risk_reduction": {
+        "min": 42.0,
+        "max": 48.0,
+        "mean": 45.9,
+        "stdev": 2.5995
+      },
+      "relative_risk_reduction_pct": {
+        "min": 48.48,
+        "max": 80.77,
+        "mean": 57.339,
+        "stdev": 9.7376
+      },
+      "delta_control": {
+        "min": 85.0,
+        "max": 95.0,
+        "mean": 89.5,
+        "stdev": 3.1543
+      },
+      "evidence_coverage": {
+        "min": 69.0,
+        "max": 90.0,
+        "mean": 80.0,
+        "stdev": 5.356
+      },
+      "useful_output_rate": {
+        "min": 75.0,
+        "max": 92.0,
+        "mean": 81.5,
+        "stdev": 5.3795
+      },
+      "anomaly_numeric": {
+        "min": 0.0,
+        "max": 1.0,
+        "mean": 0.4,
+        "stdev": 0.4924
+      },
+      "human_review_numeric": {
+        "min": 0.0,
+        "max": 1.0,
+        "mean": 0.2,
+        "stdev": 0.402
+      },
+      "unsupported_numeric": {
+        "min": 0.0,
+        "max": 1.0,
+        "mean": 0.1,
+        "stdev": 0.3015
+      },
+      "safe_review_success": {
+        "min": 0.0,
+        "max": 1.0,
+        "mean": 0.2,
+        "stdev": 0.402
+      },
+      "safe_block_success": {
+        "min": 0.0,
+        "max": 1.0,
+        "mean": 0.1,
+        "stdev": 0.3015
+      },
+      "true_failure_candidate": {
+        "min": 0.0,
+        "max": 0.0,
+        "mean": 0.0,
+        "stdev": 0.0
+      }
+    },
+    "email_triage": {
+      "stress_score": {
+        "min": 0.0,
+        "max": 56.0,
+        "mean": 31.1,
+        "stdev": 14.9508
+      },
+      "direct_risk": {
+        "min": 44.0,
+        "max": 99.0,
+        "mean": 75.0,
+        "stdev": 14.7846
+      },
+      "cubo_risk": {
+        "min": 22.0,
+        "max": 72.0,
+        "mean": 50.0,
+        "stdev": 13.5363
+      },
+      "risk_reduction": {
+        "min": 22.0,
+        "max": 27.0,
+        "mean": 25.0,
+        "stdev": 2.4618
+      },
+      "relative_risk_reduction_pct": {
+        "min": 27.27,
+        "max": 50.0,
+        "mean": 34.493,
+        "stdev": 6.8667
+      },
+      "delta_control": {
+        "min": 80.0,
+        "max": 90.0,
+        "mean": 84.5,
+        "stdev": 3.1543
+      },
+      "evidence_coverage": {
+        "min": 55.0,
+        "max": 76.0,
+        "mean": 66.0,
+        "stdev": 5.356
+      },
+      "useful_output_rate": {
+        "min": 75.0,
+        "max": 92.0,
+        "mean": 81.1,
+        "stdev": 5.3267
+      },
+      "anomaly_numeric": {
+        "min": 0.0,
+        "max": 1.0,
+        "mean": 0.6,
+        "stdev": 0.4924
+      },
+      "human_review_numeric": {
+        "min": 0.0,
+        "max": 1.0,
+        "mean": 0.2,
+        "stdev": 0.402
+      },
+      "unsupported_numeric": {
+        "min": 0.0,
+        "max": 1.0,
+        "mean": 0.1,
+        "stdev": 0.3015
+      },
+      "safe_review_success": {
+        "min": 0.0,
+        "max": 1.0,
+        "mean": 0.2,
+        "stdev": 0.402
+      },
+      "safe_block_success": {
+        "min": 0.0,
+        "max": 1.0,
+        "mean": 0.1,
+        "stdev": 0.3015
+      },
+      "true_failure_candidate": {
+        "min": 0.0,
+        "max": 0.0,
+        "mean": 0.0,
+        "stdev": 0.0
+      }
+    },
+    "receipt_invoice_extraction": {
+      "stress_score": {
+        "min": 0.0,
+        "max": 56.0,
+        "mean": 31.1,
+        "stdev": 14.9508
+      },
+      "direct_risk": {
+        "min": 52.0,
+        "max": 99.0,
+        "mean": 82.2,
+        "stdev": 13.6241
+      },
+      "cubo_risk": {
+        "min": 10.0,
+        "max": 51.0,
+        "mean": 36.3,
+        "stdev": 12.1693
+      },
+      "risk_reduction": {
+        "min": 42.0,
+        "max": 48.0,
+        "mean": 45.9,
+        "stdev": 2.5995
+      },
+      "relative_risk_reduction_pct": {
+        "min": 48.48,
+        "max": 80.77,
+        "mean": 57.339,
+        "stdev": 9.7376
+      },
+      "delta_control": {
+        "min": 85.0,
+        "max": 95.0,
+        "mean": 89.5,
+        "stdev": 3.1543
+      },
+      "evidence_coverage": {
+        "min": 69.0,
+        "max": 90.0,
+        "mean": 80.0,
+        "stdev": 5.356
+      },
+      "useful_output_rate": {
+        "min": 75.0,
+        "max": 92.0,
+        "mean": 81.5,
+        "stdev": 5.3795
+      },
+      "anomaly_numeric": {
+        "min": 0.0,
+        "max": 1.0,
+        "mean": 0.4,
+        "stdev": 0.4924
+      },
+      "human_review_numeric": {
+        "min": 0.0,
+        "max": 1.0,
+        "mean": 0.2,
+        "stdev": 0.402
+      },
+      "unsupported_numeric": {
+        "min": 0.0,
+        "max": 1.0,
+        "mean": 0.1,
+        "stdev": 0.3015
+      },
+      "safe_review_success": {
+        "min": 0.0,
+        "max": 1.0,
+        "mean": 0.2,
+        "stdev": 0.402
+      },
+      "safe_block_success": {
+        "min": 0.0,
+        "max": 1.0,
+        "mean": 0.1,
+        "stdev": 0.3015
+      },
+      "true_failure_candidate": {
+        "min": 0.0,
+        "max": 0.0,
+        "mean": 0.0,
+        "stdev": 0.0
+      }
+    },
+    "contract_checklist": {
+      "stress_score": {
+        "min": 0.0,
+        "max": 56.0,
+        "mean": 31.1,
+        "stdev": 14.9508
+      },
+      "direct_risk": {
+        "min": 60.0,
+        "max": 99.0,
+        "mean": 88.5,
+        "stdev": 11.8087
+      },
+      "cubo_risk": {
+        "min": 20.0,
+        "max": 54.0,
+        "mean": 45.5,
+        "stdev": 10.6861
+      },
+      "risk_reduction": {
+        "min": 40.0,
+        "max": 45.0,
+        "mean": 43.0,
+        "stdev": 2.4618
+      },
+      "relative_risk_reduction_pct": {
+        "min": 43.96,
+        "max": 66.67,
+        "mean": 49.434,
+        "stdev": 6.9943
+      },
+      "delta_control": {
+        "min": 80.0,
+        "max": 90.0,
+        "mean": 84.5,
+        "stdev": 3.1543
+      },
+      "evidence_coverage": {
+        "min": 69.0,
+        "max": 90.0,
+        "mean": 80.0,
+        "stdev": 5.356
+      },
+      "useful_output_rate": {
+        "min": 75.0,
+        "max": 92.0,
+        "mean": 81.1,
+        "stdev": 5.3267
+      },
+      "anomaly_numeric": {
+        "min": 0.0,
+        "max": 1.0,
+        "mean": 0.8,
+        "stdev": 0.402
+      },
+      "human_review_numeric": {
+        "min": 0.0,
+        "max": 1.0,
+        "mean": 0.6,
+        "stdev": 0.4924
+      },
+      "unsupported_numeric": {
+        "min": 0.0,
+        "max": 1.0,
+        "mean": 0.1,
+        "stdev": 0.3015
+      },
+      "safe_review_success": {
+        "min": 0.0,
+        "max": 1.0,
+        "mean": 0.4,
+        "stdev": 0.4924
+      },
+      "safe_block_success": {
+        "min": 0.0,
+        "max": 1.0,
+        "mean": 0.1,
+        "stdev": 0.3015
+      },
+      "true_failure_candidate": {
+        "min": 0.0,
+        "max": 0.0,
+        "mean": 0.0,
+        "stdev": 0.0
+      }
+    },
+    "policy_rule_extraction": {
+      "stress_score": {
+        "min": 0.0,
+        "max": 56.0,
+        "mean": 31.1,
+        "stdev": 14.9508
+      },
+      "direct_risk": {
+        "min": 60.0,
+        "max": 99.0,
+        "mean": 88.5,
+        "stdev": 11.8087
+      },
+      "cubo_risk": {
+        "min": 20.0,
+        "max": 54.0,
+        "mean": 45.5,
+        "stdev": 10.6861
+      },
+      "risk_reduction": {
+        "min": 40.0,
+        "max": 45.0,
+        "mean": 43.0,
+        "stdev": 2.4618
+      },
+      "relative_risk_reduction_pct": {
+        "min": 43.96,
+        "max": 66.67,
+        "mean": 49.434,
+        "stdev": 6.9943
+      },
+      "delta_control": {
+        "min": 80.0,
+        "max": 90.0,
+        "mean": 84.5,
+        "stdev": 3.1543
+      },
+      "evidence_coverage": {
+        "min": 69.0,
+        "max": 90.0,
+        "mean": 80.0,
+        "stdev": 5.356
+      },
+      "useful_output_rate": {
+        "min": 75.0,
+        "max": 92.0,
+        "mean": 81.1,
+        "stdev": 5.3267
+      },
+      "anomaly_numeric": {
+        "min": 0.0,
+        "max": 1.0,
+        "mean": 0.8,
+        "stdev": 0.402
+      },
+      "human_review_numeric": {
+        "min": 0.0,
+        "max": 1.0,
+        "mean": 0.6,
+        "stdev": 0.4924
+      },
+      "unsupported_numeric": {
+        "min": 0.0,
+        "max": 1.0,
+        "mean": 0.1,
+        "stdev": 0.3015
+      },
+      "safe_review_success": {
+        "min": 0.0,
+        "max": 1.0,
+        "mean": 0.4,
+        "stdev": 0.4924
+      },
+      "safe_block_success": {
+        "min": 0.0,
+        "max": 1.0,
+        "mean": 0.1,
+        "stdev": 0.3015
+      },
+      "true_failure_candidate": {
+        "min": 0.0,
+        "max": 0.0,
+        "mean": 0.0,
+        "stdev": 0.0
+      }
+    },
+    "summary": {
+      "stress_score": {
+        "min": 0.0,
+        "max": 56.0,
+        "mean": 31.1,
+        "stdev": 14.9508
+      },
+      "direct_risk": {
+        "min": 44.0,
+        "max": 99.0,
+        "mean": 75.0,
+        "stdev": 14.7846
+      },
+      "cubo_risk": {
+        "min": 22.0,
+        "max": 72.0,
+        "mean": 50.0,
+        "stdev": 13.5363
+      },
+      "risk_reduction": {
+        "min": 22.0,
+        "max": 27.0,
+        "mean": 25.0,
+        "stdev": 2.4618
+      },
+      "relative_risk_reduction_pct": {
+        "min": 27.27,
+        "max": 50.0,
+        "mean": 34.493,
+        "stdev": 6.8667
+      },
+      "delta_control": {
+        "min": 80.0,
+        "max": 90.0,
+        "mean": 84.5,
+        "stdev": 3.1543
+      },
+      "evidence_coverage": {
+        "min": 55.0,
+        "max": 76.0,
+        "mean": 66.0,
+        "stdev": 5.356
+      },
+      "useful_output_rate": {
+        "min": 75.0,
+        "max": 92.0,
+        "mean": 81.1,
+        "stdev": 5.3267
+      },
+      "anomaly_numeric": {
+        "min": 0.0,
+        "max": 1.0,
+        "mean": 0.6,
+        "stdev": 0.4924
+      },
+      "human_review_numeric": {
+        "min": 0.0,
+        "max": 1.0,
+        "mean": 0.2,
+        "stdev": 0.402
+      },
+      "unsupported_numeric": {
+        "min": 0.0,
+        "max": 1.0,
+        "mean": 0.1,
+        "stdev": 0.3015
+      },
+      "safe_review_success": {
+        "min": 0.0,
+        "max": 1.0,
+        "mean": 0.2,
+        "stdev": 0.402
+      },
+      "safe_block_success": {
+        "min": 0.0,
+        "max": 1.0,
+        "mean": 0.1,
+        "stdev": 0.3015
+      },
+      "true_failure_candidate": {
+        "min": 0.0,
+        "max": 0.0,
+        "mean": 0.0,
+        "stdev": 0.0
+      }
+    },
+    "classification": {
+      "stress_score": {
+        "min": 0.0,
+        "max": 56.0,
+        "mean": 31.1,
+        "stdev": 14.9508
+      },
+      "direct_risk": {
+        "min": 44.0,
+        "max": 99.0,
+        "mean": 75.0,
+        "stdev": 14.7846
+      },
+      "cubo_risk": {
+        "min": 22.0,
+        "max": 72.0,
+        "mean": 50.0,
+        "stdev": 13.5363
+      },
+      "risk_reduction": {
+        "min": 22.0,
+        "max": 27.0,
+        "mean": 25.0,
+        "stdev": 2.4618
+      },
+      "relative_risk_reduction_pct": {
+        "min": 27.27,
+        "max": 50.0,
+        "mean": 34.493,
+        "stdev": 6.8667
+      },
+      "delta_control": {
+        "min": 80.0,
+        "max": 90.0,
+        "mean": 84.5,
+        "stdev": 3.1543
+      },
+      "evidence_coverage": {
+        "min": 55.0,
+        "max": 76.0,
+        "mean": 66.0,
+        "stdev": 5.356
+      },
+      "useful_output_rate": {
+        "min": 75.0,
+        "max": 92.0,
+        "mean": 81.1,
+        "stdev": 5.3267
+      },
+      "anomaly_numeric": {
+        "min": 0.0,
+        "max": 1.0,
+        "mean": 0.6,
+        "stdev": 0.4924
+      },
+      "human_review_numeric": {
+        "min": 0.0,
+        "max": 1.0,
+        "mean": 0.2,
+        "stdev": 0.402
+      },
+      "unsupported_numeric": {
+        "min": 0.0,
+        "max": 1.0,
+        "mean": 0.1,
+        "stdev": 0.3015
+      },
+      "safe_review_success": {
+        "min": 0.0,
+        "max": 1.0,
+        "mean": 0.2,
+        "stdev": 0.402
+      },
+      "safe_block_success": {
+        "min": 0.0,
+        "max": 1.0,
+        "mean": 0.1,
+        "stdev": 0.3015
+      },
+      "true_failure_candidate": {
+        "min": 0.0,
+        "max": 0.0,
+        "mean": 0.0,
+        "stdev": 0.0
+      }
+    },
+    "technical_review": {
+      "stress_score": {
+        "min": 0.0,
+        "max": 56.0,
+        "mean": 31.1,
+        "stdev": 14.9508
+      },
+      "direct_risk": {
+        "min": 60.0,
+        "max": 99.0,
+        "mean": 88.5,
+        "stdev": 11.8087
+      },
+      "cubo_risk": {
+        "min": 20.0,
+        "max": 54.0,
+        "mean": 45.5,
+        "stdev": 10.6861
+      },
+      "risk_reduction": {
+        "min": 40.0,
+        "max": 45.0,
+        "mean": 43.0,
+        "stdev": 2.4618
+      },
+      "relative_risk_reduction_pct": {
+        "min": 43.96,
+        "max": 66.67,
+        "mean": 49.434,
+        "stdev": 6.9943
+      },
+      "delta_control": {
+        "min": 80.0,
+        "max": 90.0,
+        "mean": 84.5,
+        "stdev": 3.1543
+      },
+      "evidence_coverage": {
+        "min": 69.0,
+        "max": 90.0,
+        "mean": 80.0,
+        "stdev": 5.356
+      },
+      "useful_output_rate": {
+        "min": 75.0,
+        "max": 92.0,
+        "mean": 81.1,
+        "stdev": 5.3267
+      },
+      "anomaly_numeric": {
+        "min": 0.0,
+        "max": 1.0,
+        "mean": 0.8,
+        "stdev": 0.402
+      },
+      "human_review_numeric": {
+        "min": 0.0,
+        "max": 1.0,
+        "mean": 0.6,
+        "stdev": 0.4924
+      },
+      "unsupported_numeric": {
+        "min": 0.0,
+        "max": 1.0,
+        "mean": 0.1,
+        "stdev": 0.3015
+      },
+      "safe_review_success": {
+        "min": 0.0,
+        "max": 1.0,
+        "mean": 0.4,
+        "stdev": 0.4924
+      },
+      "safe_block_success": {
+        "min": 0.0,
+        "max": 1.0,
+        "mean": 0.1,
+        "stdev": 0.3015
+      },
+      "true_failure_candidate": {
+        "min": 0.0,
+        "max": 0.0,
+        "mean": 0.0,
+        "stdev": 0.0
+      }
+    },
+    "task_generation": {
+      "stress_score": {
+        "min": 0.0,
+        "max": 56.0,
+        "mean": 31.1,
+        "stdev": 14.9508
+      },
+      "direct_risk": {
+        "min": 44.0,
+        "max": 99.0,
+        "mean": 75.0,
+        "stdev": 14.7846
+      },
+      "cubo_risk": {
+        "min": 22.0,
+        "max": 72.0,
+        "mean": 50.0,
+        "stdev": 13.5363
+      },
+      "risk_reduction": {
+        "min": 22.0,
+        "max": 27.0,
+        "mean": 25.0,
+        "stdev": 2.4618
+      },
+      "relative_risk_reduction_pct": {
+        "min": 27.27,
+        "max": 50.0,
+        "mean": 34.493,
+        "stdev": 6.8667
+      },
+      "delta_control": {
+        "min": 80.0,
+        "max": 90.0,
+        "mean": 84.5,
+        "stdev": 3.1543
+      },
+      "evidence_coverage": {
+        "min": 55.0,
+        "max": 76.0,
+        "mean": 66.0,
+        "stdev": 5.356
+      },
+      "useful_output_rate": {
+        "min": 75.0,
+        "max": 92.0,
+        "mean": 81.1,
+        "stdev": 5.3267
+      },
+      "anomaly_numeric": {
+        "min": 0.0,
+        "max": 1.0,
+        "mean": 0.6,
+        "stdev": 0.4924
+      },
+      "human_review_numeric": {
+        "min": 0.0,
+        "max": 1.0,
+        "mean": 0.2,
+        "stdev": 0.402
+      },
+      "unsupported_numeric": {
+        "min": 0.0,
+        "max": 1.0,
+        "mean": 0.1,
+        "stdev": 0.3015
+      },
+      "safe_review_success": {
+        "min": 0.0,
+        "max": 1.0,
+        "mean": 0.2,
+        "stdev": 0.402
+      },
+      "safe_block_success": {
+        "min": 0.0,
+        "max": 1.0,
+        "mean": 0.1,
+        "stdev": 0.3015
+      },
+      "true_failure_candidate": {
+        "min": 0.0,
+        "max": 0.0,
+        "mean": 0.0,
+        "stdev": 0.0
+      }
+    },
+    "delta_detection": {
+      "stress_score": {
+        "min": 0.0,
+        "max": 56.0,
+        "mean": 31.1,
+        "stdev": 14.9508
+      },
+      "direct_risk": {
+        "min": 60.0,
+        "max": 99.0,
+        "mean": 88.5,
+        "stdev": 11.8087
+      },
+      "cubo_risk": {
+        "min": 20.0,
+        "max": 54.0,
+        "mean": 45.5,
+        "stdev": 10.6861
+      },
+      "risk_reduction": {
+        "min": 40.0,
+        "max": 45.0,
+        "mean": 43.0,
+        "stdev": 2.4618
+      },
+      "relative_risk_reduction_pct": {
+        "min": 43.96,
+        "max": 66.67,
+        "mean": 49.434,
+        "stdev": 6.9943
+      },
+      "delta_control": {
+        "min": 80.0,
+        "max": 90.0,
+        "mean": 84.5,
+        "stdev": 3.1543
+      },
+      "evidence_coverage": {
+        "min": 69.0,
+        "max": 90.0,
+        "mean": 80.0,
+        "stdev": 5.356
+      },
+      "useful_output_rate": {
+        "min": 75.0,
+        "max": 92.0,
+        "mean": 81.1,
+        "stdev": 5.3267
+      },
+      "anomaly_numeric": {
+        "min": 0.0,
+        "max": 1.0,
+        "mean": 0.8,
+        "stdev": 0.402
+      },
+      "human_review_numeric": {
+        "min": 0.0,
+        "max": 1.0,
+        "mean": 0.6,
+        "stdev": 0.4924
+      },
+      "unsupported_numeric": {
+        "min": 0.0,
+        "max": 1.0,
+        "mean": 0.1,
+        "stdev": 0.3015
+      },
+      "safe_review_success": {
+        "min": 0.0,
+        "max": 1.0,
+        "mean": 0.4,
+        "stdev": 0.4924
+      },
+      "safe_block_success": {
+        "min": 0.0,
+        "max": 1.0,
+        "mean": 0.1,
+        "stdev": 0.3015
+      },
+      "true_failure_candidate": {
+        "min": 0.0,
+        "max": 0.0,
+        "mean": 0.0,
+        "stdev": 0.0
+      }
+    },
+    "evidence_gap_detection": {
+      "stress_score": {
+        "min": 0.0,
+        "max": 56.0,
+        "mean": 31.1,
+        "stdev": 14.9508
+      },
+      "direct_risk": {
+        "min": 60.0,
+        "max": 99.0,
+        "mean": 88.5,
+        "stdev": 11.8087
+      },
+      "cubo_risk": {
+        "min": 20.0,
+        "max": 54.0,
+        "mean": 45.5,
+        "stdev": 10.6861
+      },
+      "risk_reduction": {
+        "min": 40.0,
+        "max": 45.0,
+        "mean": 43.0,
+        "stdev": 2.4618
+      },
+      "relative_risk_reduction_pct": {
+        "min": 43.96,
+        "max": 66.67,
+        "mean": 49.434,
+        "stdev": 6.9943
+      },
+      "delta_control": {
+        "min": 80.0,
+        "max": 90.0,
+        "mean": 84.5,
+        "stdev": 3.1543
+      },
+      "evidence_coverage": {
+        "min": 69.0,
+        "max": 90.0,
+        "mean": 80.0,
+        "stdev": 5.356
+      },
+      "useful_output_rate": {
+        "min": 75.0,
+        "max": 92.0,
+        "mean": 81.1,
+        "stdev": 5.3267
+      },
+      "anomaly_numeric": {
+        "min": 0.0,
+        "max": 1.0,
+        "mean": 0.8,
+        "stdev": 0.402
+      },
+      "human_review_numeric": {
+        "min": 0.0,
+        "max": 1.0,
+        "mean": 0.6,
+        "stdev": 0.4924
+      },
+      "unsupported_numeric": {
+        "min": 0.0,
+        "max": 1.0,
+        "mean": 0.1,
+        "stdev": 0.3015
+      },
+      "safe_review_success": {
+        "min": 0.0,
+        "max": 1.0,
+        "mean": 0.4,
+        "stdev": 0.4924
+      },
+      "safe_block_success": {
+        "min": 0.0,
+        "max": 1.0,
+        "mean": 0.1,
+        "stdev": 0.3015
+      },
+      "true_failure_candidate": {
+        "min": 0.0,
+        "max": 0.0,
+        "mean": 0.0,
+        "stdev": 0.0
+      }
+    }
+  },
+  "by_stress_profile": {
+    "clean_baseline": {
+      "stress_score": {
+        "min": 0.0,
+        "max": 0.0,
+        "mean": 0.0,
+        "stdev": 0.0
+      },
+      "direct_risk": {
+        "min": 44.0,
+        "max": 60.0,
+        "mean": 52.6667,
+        "stdev": 6.925
+      },
+      "cubo_risk": {
+        "min": 10.0,
+        "max": 22.0,
+        "mean": 18.1667,
+        "stdev": 4.813
+      },
+      "risk_reduction": {
+        "min": 22.0,
+        "max": 42.0,
+        "mean": 34.5,
+        "stdev": 8.9113
+      },
+      "relative_risk_reduction_pct": {
+        "min": 50.0,
+        "max": 80.77,
+        "mean": 64.6383,
+        "stdev": 11.8053
+      },
+      "delta_control": {
+        "min": 90.0,
+        "max": 95.0,
+        "mean": 91.25,
+        "stdev": 2.1741
+      },
+      "evidence_coverage": {
+        "min": 76.0,
+        "max": 90.0,
+        "mean": 85.3333,
+        "stdev": 6.6273
+      },
+      "useful_output_rate": {
+        "min": 92.0,
+        "max": 92.0,
+        "mean": 92.0,
+        "stdev": 0.0
+      },
+      "anomaly_numeric": {
+        "min": 0.0,
+        "max": 0.0,
+        "mean": 0.0,
+        "stdev": 0.0
+      },
+      "human_review_numeric": {
+        "min": 0.0,
+        "max": 0.0,
+        "mean": 0.0,
+        "stdev": 0.0
+      },
+      "unsupported_numeric": {
+        "min": 0.0,
+        "max": 0.0,
+        "mean": 0.0,
+        "stdev": 0.0
+      },
+      "safe_review_success": {
+        "min": 0.0,
+        "max": 0.0,
+        "mean": 0.0,
+        "stdev": 0.0
+      },
+      "safe_block_success": {
+        "min": 0.0,
+        "max": 0.0,
+        "mean": 0.0,
+        "stdev": 0.0
+      },
+      "true_failure_candidate": {
+        "min": 0.0,
+        "max": 0.0,
+        "mean": 0.0,
+        "stdev": 0.0
+      }
+    },
+    "missing_required_field": {
+      "stress_score": {
+        "min": 17.0,
+        "max": 17.0,
+        "mean": 17.0,
+        "stdev": 0.0
+      },
+      "direct_risk": {
+        "min": 61.0,
+        "max": 77.0,
+        "mean": 69.6667,
+        "stdev": 6.925
+      },
+      "cubo_risk": {
+        "min": 21.0,
+        "max": 34.0,
+        "mean": 29.9167,
+        "stdev": 5.2414
+      },
+      "risk_reduction": {
+        "min": 27.0,
+        "max": 48.0,
+        "mean": 39.75,
+        "stdev": 9.1314
+      },
+      "relative_risk_reduction_pct": {
+        "min": 44.26,
+        "max": 69.57,
+        "mean": 56.4958,
+        "stdev": 9.7471
+      },
+      "delta_control": {
+        "min": 89.0,
+        "max": 94.0,
+        "mean": 90.25,
+        "stdev": 2.1741
+      },
+      "evidence_coverage": {
+        "min": 66.0,
+        "max": 80.0,
+        "mean": 75.3333,
+        "stdev": 6.6273
+      },
+      "useful_output_rate": {
+        "min": 89.0,
+        "max": 89.0,
+        "mean": 89.0,
+        "stdev": 0.0
+      },
+      "anomaly_numeric": {
+        "min": 0.0,
+        "max": 1.0,
+        "mean": 0.4167,
+        "stdev": 0.4951
+      },
+      "human_review_numeric": {
+        "min": 0.0,
+        "max": 1.0,
+        "mean": 0.4167,
+        "stdev": 0.4951
+      },
+      "unsupported_numeric": {
+        "min": 0.0,
+        "max": 0.0,
+        "mean": 0.0,
+        "stdev": 0.0
+      },
+      "safe_review_success": {
+        "min": 0.0,
+        "max": 0.0,
+        "mean": 0.0,
+        "stdev": 0.0
+      },
+      "safe_block_success": {
+        "min": 0.0,
+        "max": 0.0,
+        "mean": 0.0,
+        "stdev": 0.0
+      },
+      "true_failure_candidate": {
+        "min": 0.0,
+        "max": 0.0,
+        "mean": 0.0,
+        "stdev": 0.0
+      }
+    },
+    "conflicting_values": {
+      "stress_score": {
+        "min": 32.0,
+        "max": 32.0,
+        "mean": 32.0,
+        "stdev": 0.0
+      },
+      "direct_risk": {
+        "min": 76.0,
+        "max": 92.0,
+        "mean": 84.6667,
+        "stdev": 6.925
+      },
+      "cubo_risk": {
+        "min": 36.0,
+        "max": 49.0,
+        "mean": 44.9167,
+        "stdev": 5.2414
+      },
+      "risk_reduction": {
+        "min": 27.0,
+        "max": 48.0,
+        "mean": 39.75,
+        "stdev": 9.1314
+      },
+      "relative_risk_reduction_pct": {
+        "min": 35.53,
+        "max": 57.14,
+        "mean": 46.5075,
+        "stdev": 8.4517
+      },
+      "delta_control": {
+        "min": 84.0,
+        "max": 89.0,
+        "mean": 85.25,
+        "stdev": 2.1741
+      },
+      "evidence_coverage": {
+        "min": 72.0,
+        "max": 86.0,
+        "mean": 81.3333,
+        "stdev": 6.6273
+      },
+      "useful_output_rate": {
+        "min": 79.0,
+        "max": 79.0,
+        "mean": 79.0,
+        "stdev": 0.0
+      },
+      "anomaly_numeric": {
+        "min": 0.0,
+        "max": 1.0,
+        "mean": 0.4167,
+        "stdev": 0.4951
+      },
+      "human_review_numeric": {
+        "min": 0.0,
+        "max": 1.0,
+        "mean": 0.4167,
+        "stdev": 0.4951
+      },
+      "unsupported_numeric": {
+        "min": 0.0,
+        "max": 0.0,
+        "mean": 0.0,
+        "stdev": 0.0
+      },
+      "safe_review_success": {
+        "min": 0.0,
+        "max": 0.0,
+        "mean": 0.0,
+        "stdev": 0.0
+      },
+      "safe_block_success": {
+        "min": 0.0,
+        "max": 0.0,
+        "mean": 0.0,
+        "stdev": 0.0
+      },
+      "true_failure_candidate": {
+        "min": 0.0,
+        "max": 0.0,
+        "mean": 0.0,
+        "stdev": 0.0
+      }
+    },
+    "noisy_ocr_or_typo": {
+      "stress_score": {
+        "min": 23.0,
+        "max": 23.0,
+        "mean": 23.0,
+        "stdev": 0.0
+      },
+      "direct_risk": {
+        "min": 67.0,
+        "max": 83.0,
+        "mean": 75.6667,
+        "stdev": 6.925
+      },
+      "cubo_risk": {
+        "min": 32.0,
+        "max": 45.0,
+        "mean": 40.9167,
+        "stdev": 5.2414
+      },
+      "risk_reduction": {
+        "min": 22.0,
+        "max": 43.0,
+        "mean": 34.75,
+        "stdev": 9.1314
+      },
+      "relative_risk_reduction_pct": {
+        "min": 32.84,
+        "max": 57.33,
+        "mean": 45.3583,
+        "stdev": 9.6008
+      },
+      "delta_control": {
+        "min": 87.0,
+        "max": 92.0,
+        "mean": 88.25,
+        "stdev": 2.1741
+      },
+      "evidence_coverage": {
+        "min": 69.0,
+        "max": 83.0,
+        "mean": 78.3333,
+        "stdev": 6.6273
+      },
+      "useful_output_rate": {
+        "min": 80.0,
+        "max": 84.0,
+        "mean": 81.0,
+        "stdev": 1.7393
+      },
+      "anomaly_numeric": {
+        "min": 0.0,
+        "max": 0.0,
+        "mean": 0.0,
+        "stdev": 0.0
+      },
+      "human_review_numeric": {
+        "min": 0.0,
+        "max": 0.0,
+        "mean": 0.0,
+        "stdev": 0.0
+      },
+      "unsupported_numeric": {
+        "min": 0.0,
+        "max": 0.0,
+        "mean": 0.0,
+        "stdev": 0.0
+      },
+      "safe_review_success": {
+        "min": 0.0,
+        "max": 0.0,
+        "mean": 0.0,
+        "stdev": 0.0
+      },
+      "safe_block_success": {
+        "min": 0.0,
+        "max": 0.0,
+        "mean": 0.0,
+        "stdev": 0.0
+      },
+      "true_failure_candidate": {
+        "min": 0.0,
+        "max": 0.0,
+        "mean": 0.0,
+        "stdev": 0.0
+      }
+    },
+    "stale_or_undated_evidence": {
+      "stress_score": {
+        "min": 29.0,
+        "max": 29.0,
+        "mean": 29.0,
+        "stdev": 0.0
+      },
+      "direct_risk": {
+        "min": 73.0,
+        "max": 89.0,
+        "mean": 81.6667,
+        "stdev": 6.925
+      },
+      "cubo_risk": {
+        "min": 38.0,
+        "max": 51.0,
+        "mean": 46.9167,
+        "stdev": 5.2414
+      },
+      "risk_reduction": {
+        "min": 22.0,
+        "max": 43.0,
+        "mean": 34.75,
+        "stdev": 9.1314
+      },
+      "relative_risk_reduction_pct": {
+        "min": 30.14,
+        "max": 53.09,
+        "mean": 42.0442,
+        "stdev": 9.0507
+      },
+      "delta_control": {
+        "min": 83.0,
+        "max": 88.0,
+        "mean": 84.25,
+        "stdev": 2.1741
+      },
+      "evidence_coverage": {
+        "min": 64.0,
+        "max": 78.0,
+        "mean": 73.3333,
+        "stdev": 6.6273
+      },
+      "useful_output_rate": {
+        "min": 83.0,
+        "max": 83.0,
+        "mean": 83.0,
+        "stdev": 0.0
+      },
+      "anomaly_numeric": {
+        "min": 0.0,
+        "max": 1.0,
+        "mean": 0.75,
+        "stdev": 0.4348
+      },
+      "human_review_numeric": {
+        "min": 0.0,
+        "max": 1.0,
+        "mean": 0.4167,
+        "stdev": 0.4951
+      },
+      "unsupported_numeric": {
+        "min": 0.0,
+        "max": 0.0,
+        "mean": 0.0,
+        "stdev": 0.0
+      },
+      "safe_review_success": {
+        "min": 0.0,
+        "max": 1.0,
+        "mean": 0.4167,
+        "stdev": 0.4951
+      },
+      "safe_block_success": {
+        "min": 0.0,
+        "max": 0.0,
+        "mean": 0.0,
+        "stdev": 0.0
+      },
+      "true_failure_candidate": {
+        "min": 0.0,
+        "max": 0.0,
+        "mean": 0.0,
+        "stdev": 0.0
+      }
+    },
+    "partial_context": {
+      "stress_score": {
+        "min": 36.0,
+        "max": 36.0,
+        "mean": 36.0,
+        "stdev": 0.0
+      },
+      "direct_risk": {
+        "min": 80.0,
+        "max": 96.0,
+        "mean": 88.6667,
+        "stdev": 6.925
+      },
+      "cubo_risk": {
+        "min": 40.0,
+        "max": 53.0,
+        "mean": 48.9167,
+        "stdev": 5.2414
+      },
+      "risk_reduction": {
+        "min": 27.0,
+        "max": 48.0,
+        "mean": 39.75,
+        "stdev": 9.1314
+      },
+      "relative_risk_reduction_pct": {
+        "min": 33.75,
+        "max": 54.55,
+        "mean": 44.4208,
+        "stdev": 8.1658
+      },
+      "delta_control": {
+        "min": 84.0,
+        "max": 89.0,
+        "mean": 85.25,
+        "stdev": 2.1741
+      },
+      "evidence_coverage": {
+        "min": 63.0,
+        "max": 77.0,
+        "mean": 72.3333,
+        "stdev": 6.6273
+      },
+      "useful_output_rate": {
+        "min": 78.0,
+        "max": 78.0,
+        "mean": 78.0,
+        "stdev": 0.0
+      },
+      "anomaly_numeric": {
+        "min": 1.0,
+        "max": 1.0,
+        "mean": 1.0,
+        "stdev": 0.0
+      },
+      "human_review_numeric": {
+        "min": 0.0,
+        "max": 1.0,
+        "mean": 0.4167,
+        "stdev": 0.4951
+      },
+      "unsupported_numeric": {
+        "min": 0.0,
+        "max": 0.0,
+        "mean": 0.0,
+        "stdev": 0.0
+      },
+      "safe_review_success": {
+        "min": 0.0,
+        "max": 1.0,
+        "mean": 0.4167,
+        "stdev": 0.4951
+      },
+      "safe_block_success": {
+        "min": 0.0,
+        "max": 0.0,
+        "mean": 0.0,
+        "stdev": 0.0
+      },
+      "true_failure_candidate": {
+        "min": 0.0,
+        "max": 0.0,
+        "mean": 0.0,
+        "stdev": 0.0
+      }
+    },
+    "multi_record_table": {
+      "stress_score": {
+        "min": 31.0,
+        "max": 31.0,
+        "mean": 31.0,
+        "stdev": 0.0
+      },
+      "direct_risk": {
+        "min": 75.0,
+        "max": 91.0,
+        "mean": 83.6667,
+        "stdev": 6.925
+      },
+      "cubo_risk": {
+        "min": 40.0,
+        "max": 53.0,
+        "mean": 48.9167,
+        "stdev": 5.2414
+      },
+      "risk_reduction": {
+        "min": 22.0,
+        "max": 43.0,
+        "mean": 34.75,
+        "stdev": 9.1314
+      },
+      "relative_risk_reduction_pct": {
+        "min": 29.33,
+        "max": 51.81,
+        "mean": 41.0458,
+        "stdev": 8.8835
+      },
+      "delta_control": {
+        "min": 85.0,
+        "max": 90.0,
+        "mean": 86.25,
+        "stdev": 2.1741
+      },
+      "evidence_coverage": {
+        "min": 66.0,
+        "max": 80.0,
+        "mean": 75.3333,
+        "stdev": 6.6273
+      },
+      "useful_output_rate": {
+        "min": 82.0,
+        "max": 82.0,
+        "mean": 82.0,
+        "stdev": 0.0
+      },
+      "anomaly_numeric": {
+        "min": 0.0,
+        "max": 1.0,
+        "mean": 0.75,
+        "stdev": 0.4348
+      },
+      "human_review_numeric": {
+        "min": 0.0,
+        "max": 0.0,
+        "mean": 0.0,
+        "stdev": 0.0
+      },
+      "unsupported_numeric": {
+        "min": 0.0,
+        "max": 0.0,
+        "mean": 0.0,
+        "stdev": 0.0
+      },
+      "safe_review_success": {
+        "min": 0.0,
+        "max": 0.0,
+        "mean": 0.0,
+        "stdev": 0.0
+      },
+      "safe_block_success": {
+        "min": 0.0,
+        "max": 0.0,
+        "mean": 0.0,
+        "stdev": 0.0
+      },
+      "true_failure_candidate": {
+        "min": 0.0,
+        "max": 0.0,
+        "mean": 0.0,
+        "stdev": 0.0
+      }
+    },
+    "high_stakes_claim": {
+      "stress_score": {
+        "min": 40.0,
+        "max": 40.0,
+        "mean": 40.0,
+        "stdev": 0.0
+      },
+      "direct_risk": {
+        "min": 84.0,
+        "max": 99.0,
+        "mean": 92.25,
+        "stdev": 6.4837
+      },
+      "cubo_risk": {
+        "min": 44.0,
+        "max": 57.0,
+        "mean": 52.5,
+        "stdev": 5.0957
+      },
+      "risk_reduction": {
+        "min": 27.0,
+        "max": 48.0,
+        "mean": 39.75,
+        "stdev": 9.1314
+      },
+      "relative_risk_reduction_pct": {
+        "min": 32.14,
+        "max": 52.17,
+        "mean": 42.6933,
+        "stdev": 7.9542
+      },
+      "delta_control": {
+        "min": 82.0,
+        "max": 87.0,
+        "mean": 83.25,
+        "stdev": 2.1741
+      },
+      "evidence_coverage": {
+        "min": 65.0,
+        "max": 79.0,
+        "mean": 74.3333,
+        "stdev": 6.6273
+      },
+      "useful_output_rate": {
+        "min": 77.0,
+        "max": 77.0,
+        "mean": 77.0,
+        "stdev": 0.0
+      },
+      "anomaly_numeric": {
+        "min": 1.0,
+        "max": 1.0,
+        "mean": 1.0,
+        "stdev": 0.0
+      },
+      "human_review_numeric": {
+        "min": 1.0,
+        "max": 1.0,
+        "mean": 1.0,
+        "stdev": 0.0
+      },
+      "unsupported_numeric": {
+        "min": 0.0,
+        "max": 0.0,
+        "mean": 0.0,
+        "stdev": 0.0
+      },
+      "safe_review_success": {
+        "min": 1.0,
+        "max": 1.0,
+        "mean": 1.0,
+        "stdev": 0.0
+      },
+      "safe_block_success": {
+        "min": 0.0,
+        "max": 0.0,
+        "mean": 0.0,
+        "stdev": 0.0
+      },
+      "true_failure_candidate": {
+        "min": 0.0,
+        "max": 0.0,
+        "mean": 0.0,
+        "stdev": 0.0
+      }
+    },
+    "cross_document_mismatch": {
+      "stress_score": {
+        "min": 47.0,
+        "max": 47.0,
+        "mean": 47.0,
+        "stdev": 0.0
+      },
+      "direct_risk": {
+        "min": 91.0,
+        "max": 99.0,
+        "mean": 96.3333,
+        "stdev": 3.787
+      },
+      "cubo_risk": {
+        "min": 51.0,
+        "max": 64.0,
+        "mean": 56.5833,
+        "stdev": 5.3993
+      },
+      "risk_reduction": {
+        "min": 27.0,
+        "max": 48.0,
+        "mean": 39.75,
+        "stdev": 9.1314
+      },
+      "relative_risk_reduction_pct": {
+        "min": 29.67,
+        "max": 48.48,
+        "mean": 40.9475,
+        "stdev": 8.0977
+      },
+      "delta_control": {
+        "min": 81.0,
+        "max": 86.0,
+        "mean": 82.25,
+        "stdev": 2.1741
+      },
+      "evidence_coverage": {
+        "min": 64.0,
+        "max": 78.0,
+        "mean": 73.3333,
+        "stdev": 6.6273
+      },
+      "useful_output_rate": {
+        "min": 76.0,
+        "max": 76.0,
+        "mean": 76.0,
+        "stdev": 0.0
+      },
+      "anomaly_numeric": {
+        "min": 1.0,
+        "max": 1.0,
+        "mean": 1.0,
+        "stdev": 0.0
+      },
+      "human_review_numeric": {
+        "min": 1.0,
+        "max": 1.0,
+        "mean": 1.0,
+        "stdev": 0.0
+      },
+      "unsupported_numeric": {
+        "min": 0.0,
+        "max": 0.0,
+        "mean": 0.0,
+        "stdev": 0.0
+      },
+      "safe_review_success": {
+        "min": 1.0,
+        "max": 1.0,
+        "mean": 1.0,
+        "stdev": 0.0
+      },
+      "safe_block_success": {
+        "min": 0.0,
+        "max": 0.0,
+        "mean": 0.0,
+        "stdev": 0.0
+      },
+      "true_failure_candidate": {
+        "min": 0.0,
+        "max": 0.0,
+        "mean": 0.0,
+        "stdev": 0.0
+      }
+    },
+    "unknown_or_unsupported_input": {
+      "stress_score": {
+        "min": 56.0,
+        "max": 56.0,
+        "mean": 56.0,
+        "stdev": 0.0
+      },
+      "direct_risk": {
+        "min": 99.0,
+        "max": 99.0,
+        "mean": 99.0,
+        "stdev": 0.0
+      },
+      "cubo_risk": {
+        "min": 51.0,
+        "max": 72.0,
+        "mean": 59.25,
+        "stdev": 9.1314
+      },
+      "risk_reduction": {
+        "min": 27.0,
+        "max": 48.0,
+        "mean": 39.75,
+        "stdev": 9.1314
+      },
+      "relative_risk_reduction_pct": {
+        "min": 27.27,
+        "max": 48.48,
+        "mean": 40.1475,
+        "stdev": 9.2227
+      },
+      "delta_control": {
+        "min": 80.0,
+        "max": 85.0,
+        "mean": 81.25,
+        "stdev": 2.1741
+      },
+      "evidence_coverage": {
+        "min": 55.0,
+        "max": 69.0,
+        "mean": 64.3333,
+        "stdev": 6.6273
+      },
+      "useful_output_rate": {
+        "min": 75.0,
+        "max": 75.0,
+        "mean": 75.0,
+        "stdev": 0.0
+      },
+      "anomaly_numeric": {
+        "min": 1.0,
+        "max": 1.0,
+        "mean": 1.0,
+        "stdev": 0.0
+      },
+      "human_review_numeric": {
+        "min": 0.0,
+        "max": 0.0,
+        "mean": 0.0,
+        "stdev": 0.0
+      },
+      "unsupported_numeric": {
+        "min": 1.0,
+        "max": 1.0,
+        "mean": 1.0,
+        "stdev": 0.0
+      },
+      "safe_review_success": {
+        "min": 0.0,
+        "max": 0.0,
+        "mean": 0.0,
+        "stdev": 0.0
+      },
+      "safe_block_success": {
+        "min": 1.0,
+        "max": 1.0,
+        "mean": 1.0,
+        "stdev": 0.0
+      },
+      "true_failure_candidate": {
+        "min": 0.0,
+        "max": 0.0,
+        "mean": 0.0,
+        "stdev": 0.0
+      }
+    }
+  },
+  "by_gate": {
+    "PARSER_OUTPUT_ALLOWED": {
+      "stress_score": {
+        "min": 0.0,
+        "max": 36.0,
+        "mean": 24.0,
+        "stdev": 11.4164
+      },
+      "direct_risk": {
+        "min": 52.0,
+        "max": 88.0,
+        "mean": 76.0,
+        "stdev": 11.4164
+      },
+      "cubo_risk": {
+        "min": 10.0,
+        "max": 40.0,
+        "mean": 31.0,
+        "stdev": 10.5676
+      },
+      "risk_reduction": {
+        "min": 42.0,
+        "max": 48.0,
+        "mean": 45.0,
+        "stdev": 2.6249
+      },
+      "relative_risk_reduction_pct": {
+        "min": 51.81,
+        "max": 80.77,
+        "mean": 60.6086,
+        "stdev": 9.8813
+      },
+      "delta_control": {
+        "min": 88.0,
+        "max": 95.0,
+        "mean": 91.0,
+        "stdev": 2.5131
+      },
+      "evidence_coverage": {
+        "min": 77.0,
+        "max": 90.0,
+        "mean": 82.0,
+        "stdev": 4.3198
+      },
+      "useful_output_rate": {
+        "min": 78.0,
+        "max": 92.0,
+        "mean": 83.8571,
+        "stdev": 4.7147
+      },
+      "anomaly_numeric": {
+        "min": 0.0,
+        "max": 1.0,
+        "mean": 0.1429,
+        "stdev": 0.3508
+      },
+      "human_review_numeric": {
+        "min": 0.0,
+        "max": 0.0,
+        "mean": 0.0,
+        "stdev": 0.0
+      },
+      "unsupported_numeric": {
+        "min": 0.0,
+        "max": 0.0,
+        "mean": 0.0,
+        "stdev": 0.0
+      },
+      "safe_review_success": {
+        "min": 0.0,
+        "max": 0.0,
+        "mean": 0.0,
+        "stdev": 0.0
+      },
+      "safe_block_success": {
+        "min": 0.0,
+        "max": 0.0,
+        "mean": 0.0,
+        "stdev": 0.0
+      },
+      "true_failure_candidate": {
+        "min": 0.0,
+        "max": 0.0,
+        "mean": 0.0,
+        "stdev": 0.0
+      }
+    },
+    "HUMAN_REVIEW_REQUIRED": {
+      "stress_score": {
+        "min": 17.0,
+        "max": 47.0,
+        "mean": 36.6818,
+        "stdev": 9.2467
+      },
+      "direct_risk": {
+        "min": 77.0,
+        "max": 99.0,
+        "mean": 91.6591,
+        "stdev": 6.985
+      },
+      "cubo_risk": {
+        "min": 32.0,
+        "max": 64.0,
+        "mean": 50.0909,
+        "stdev": 8.1635
+      },
+      "risk_reduction": {
+        "min": 27.0,
+        "max": 48.0,
+        "mean": 41.5682,
+        "stdev": 7.1636
+      },
+      "relative_risk_reduction_pct": {
+        "min": 29.67,
+        "max": 58.44,
+        "mean": 45.4441,
+        "stdev": 7.9617
+      },
+      "delta_control": {
+        "min": 81.0,
+        "max": 89.0,
+        "mean": 83.7727,
+        "stdev": 2.5423
+      },
+      "evidence_coverage": {
+        "min": 64.0,
+        "max": 86.0,
+        "mean": 76.75,
+        "stdev": 6.3034
+      },
+      "useful_output_rate": {
+        "min": 76.0,
+        "max": 89.0,
+        "mean": 79.1136,
+        "stdev": 4.1069
+      },
+      "anomaly_numeric": {
+        "min": 1.0,
+        "max": 1.0,
+        "mean": 1.0,
+        "stdev": 0.0
+      },
+      "human_review_numeric": {
+        "min": 1.0,
+        "max": 1.0,
+        "mean": 1.0,
+        "stdev": 0.0
+      },
+      "unsupported_numeric": {
+        "min": 0.0,
+        "max": 0.0,
+        "mean": 0.0,
+        "stdev": 0.0
+      },
+      "safe_review_success": {
+        "min": 0.0,
+        "max": 1.0,
+        "mean": 0.7727,
+        "stdev": 0.4195
+      },
+      "safe_block_success": {
+        "min": 0.0,
+        "max": 0.0,
+        "mean": 0.0,
+        "stdev": 0.0
+      },
+      "true_failure_candidate": {
+        "min": 0.0,
+        "max": 0.0,
+        "mean": 0.0,
+        "stdev": 0.0
+      }
+    },
+    "UNSUPPORTED_BLOCKED": {
+      "stress_score": {
+        "min": 56.0,
+        "max": 56.0,
+        "mean": 56.0,
+        "stdev": 0.0
+      },
+      "direct_risk": {
+        "min": 99.0,
+        "max": 99.0,
+        "mean": 99.0,
+        "stdev": 0.0
+      },
+      "cubo_risk": {
+        "min": 51.0,
+        "max": 72.0,
+        "mean": 59.25,
+        "stdev": 9.1314
+      },
+      "risk_reduction": {
+        "min": 27.0,
+        "max": 48.0,
+        "mean": 39.75,
+        "stdev": 9.1314
+      },
+      "relative_risk_reduction_pct": {
+        "min": 27.27,
+        "max": 48.48,
+        "mean": 40.1475,
+        "stdev": 9.2227
+      },
+      "delta_control": {
+        "min": 80.0,
+        "max": 85.0,
+        "mean": 81.25,
+        "stdev": 2.1741
+      },
+      "evidence_coverage": {
+        "min": 55.0,
+        "max": 69.0,
+        "mean": 64.3333,
+        "stdev": 6.6273
+      },
+      "useful_output_rate": {
+        "min": 75.0,
+        "max": 75.0,
+        "mean": 75.0,
+        "stdev": 0.0
+      },
+      "anomaly_numeric": {
+        "min": 1.0,
+        "max": 1.0,
+        "mean": 1.0,
+        "stdev": 0.0
+      },
+      "human_review_numeric": {
+        "min": 0.0,
+        "max": 0.0,
+        "mean": 0.0,
+        "stdev": 0.0
+      },
+      "unsupported_numeric": {
+        "min": 1.0,
+        "max": 1.0,
+        "mean": 1.0,
+        "stdev": 0.0
+      },
+      "safe_review_success": {
+        "min": 0.0,
+        "max": 0.0,
+        "mean": 0.0,
+        "stdev": 0.0
+      },
+      "safe_block_success": {
+        "min": 1.0,
+        "max": 1.0,
+        "mean": 1.0,
+        "stdev": 0.0
+      },
+      "true_failure_candidate": {
+        "min": 0.0,
+        "max": 0.0,
+        "mean": 0.0,
+        "stdev": 0.0
+      }
+    },
+    "ANSWER_ALLOWED": {
+      "stress_score": {
+        "min": 0.0,
+        "max": 36.0,
+        "mean": 21.5,
+        "stdev": 12.5218
+      },
+      "direct_risk": {
+        "min": 44.0,
+        "max": 91.0,
+        "mean": 72.1667,
+        "stdev": 13.1299
+      },
+      "cubo_risk": {
+        "min": 20.0,
+        "max": 53.0,
+        "mean": 41.4167,
+        "stdev": 12.2107
+      },
+      "risk_reduction": {
+        "min": 22.0,
+        "max": 40.0,
+        "mean": 30.75,
+        "stdev": 8.054
+      },
+      "relative_risk_reduction_pct": {
+        "min": 29.33,
+        "max": 66.67,
+        "mean": 43.3792,
+        "stdev": 11.6563
+      },
+      "delta_control": {
+        "min": 83.0,
+        "max": 90.0,
+        "mean": 86.5556,
+        "stdev": 2.4237
+      },
+      "evidence_coverage": {
+        "min": 63.0,
+        "max": 90.0,
+        "mean": 74.8056,
+        "stdev": 9.1226
+      },
+      "useful_output_rate": {
+        "min": 78.0,
+        "max": 92.0,
+        "mean": 83.8611,
+        "stdev": 5.096
+      },
+      "anomaly_numeric": {
+        "min": 0.0,
+        "max": 1.0,
+        "mean": 0.3889,
+        "stdev": 0.4882
+      },
+      "human_review_numeric": {
+        "min": 0.0,
+        "max": 0.0,
+        "mean": 0.0,
+        "stdev": 0.0
+      },
+      "unsupported_numeric": {
+        "min": 0.0,
+        "max": 0.0,
+        "mean": 0.0,
+        "stdev": 0.0
+      },
+      "safe_review_success": {
+        "min": 0.0,
+        "max": 0.0,
+        "mean": 0.0,
+        "stdev": 0.0
+      },
+      "safe_block_success": {
+        "min": 0.0,
+        "max": 0.0,
+        "mean": 0.0,
+        "stdev": 0.0
+      },
+      "true_failure_candidate": {
+        "min": 0.0,
+        "max": 0.0,
+        "mean": 0.0,
+        "stdev": 0.0
+      }
+    },
+    "TASK_PROPOSAL_ALLOWED": {
+      "stress_score": {
+        "min": 0.0,
+        "max": 36.0,
+        "mean": 24.0,
+        "stdev": 11.4715
+      },
+      "direct_risk": {
+        "min": 44.0,
+        "max": 80.0,
+        "mean": 68.0,
+        "stdev": 11.4715
+      },
+      "cubo_risk": {
+        "min": 22.0,
+        "max": 53.0,
+        "mean": 43.8571,
+        "stdev": 10.9071
+      },
+      "risk_reduction": {
+        "min": 22.0,
+        "max": 27.0,
+        "mean": 24.1429,
+        "stdev": 2.4922
+      },
+      "relative_risk_reduction_pct": {
+        "min": 29.33,
+        "max": 50.0,
+        "mean": 36.55,
+        "stdev": 7.185
+      },
+      "delta_control": {
+        "min": 83.0,
+        "max": 90.0,
+        "mean": 86.0,
+        "stdev": 2.5252
+      },
+      "evidence_coverage": {
+        "min": 63.0,
+        "max": 76.0,
+        "mean": 68.0,
+        "stdev": 4.3406
+      },
+      "useful_output_rate": {
+        "min": 78.0,
+        "max": 92.0,
+        "mean": 83.2857,
+        "stdev": 4.926
+      },
+      "anomaly_numeric": {
+        "min": 0.0,
+        "max": 1.0,
+        "mean": 0.4286,
+        "stdev": 0.4984
+      },
+      "human_review_numeric": {
+        "min": 0.0,
+        "max": 0.0,
+        "mean": 0.0,
+        "stdev": 0.0
+      },
+      "unsupported_numeric": {
+        "min": 0.0,
+        "max": 0.0,
+        "mean": 0.0,
+        "stdev": 0.0
+      },
+      "safe_review_success": {
+        "min": 0.0,
+        "max": 0.0,
+        "mean": 0.0,
+        "stdev": 0.0
+      },
+      "safe_block_success": {
+        "min": 0.0,
+        "max": 0.0,
+        "mean": 0.0,
+        "stdev": 0.0
+      },
+      "true_failure_candidate": {
+        "min": 0.0,
+        "max": 0.0,
+        "mean": 0.0,
+        "stdev": 0.0
+      }
+    }
+  },
+  "blocked_actions": [
+    "client_facing_claim",
+    "automatic_nomination",
+    "implementation_execution",
+    "production_activation",
+    "automatic_merge",
+    "credential_handling"
+  ]
+}

@@ -1,0 +1,4 @@
+{
+  "contract": "casulo.optimal_telemetry_zone.v0.1",
+  "purpose": "Allow/review/block operating zones from telemetry."
+}

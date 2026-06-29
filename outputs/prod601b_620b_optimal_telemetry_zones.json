@@ -1,0 +1,71 @@
+{
+  "status": "PASS",
+  "zones": [
+    {
+      "zone": "allow_zone",
+      "case_count": 640,
+      "cubo_risk_range": [
+        10.0,
+        53.0
+      ],
+      "cubo_risk_mean": 38.2656,
+      "delta_control_mean": 87.9531,
+      "evidence_coverage_mean": 76.4219,
+      "useful_output_rate_mean": 83.7969
+    },
+    {
+      "zone": "review_zone",
+      "case_count": 440,
+      "cubo_risk_range": [
+        32.0,
+        64.0
+      ],
+      "cubo_risk_mean": 50.0909,
+      "delta_control_mean": 83.7727,
+      "evidence_coverage_mean": 76.75,
+      "useful_output_rate_mean": 79.1136
+    },
+    {
+      "zone": "block_zone",
+      "case_count": 120,
+      "cubo_risk_range": [
+        51.0,
+        72.0
+      ],
+      "cubo_risk_mean": 59.25,
+      "delta_control_mean": 81.25,
+      "evidence_coverage_mean": 64.3333,
+      "useful_output_rate_mean": 75.0
+    }
+  ],
+  "candidate_operating_policy": {
+    "allow_when": [
+      "gate allow and cubo_risk < 50",
+      "not unsupported",
+      "not high-risk without review"
+    ],
+    "review_when": [
+      "cubo_risk >= 50",
+      "high_stakes_claim",
+      "cross_document_mismatch",
+      "partial_context/stale in sensitive domain"
+    ],
+    "block_when": [
+      "unknown_or_unsupported_input",
+      "unsupported domain or missing minimum schema"
+    ]
+  },
+  "not_ready_for": [
+    "production activation",
+    "autonomous threshold mutation",
+    "client-facing benchmark claim"
+  ],
+  "blocked_actions": [
+    "client_facing_claim",
+    "automatic_nomination",
+    "implementation_execution",
+    "production_activation",
+    "automatic_merge",
+    "credential_handling"
+  ]
+}

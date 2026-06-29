@@ -1,0 +1,14 @@
+{
+  "task": "PROD-601B..620B",
+  "status": "PASS",
+  "phase": "Telemetry Correlation Calibration",
+  "endpoints": [
+    "/api/casulo/telemetry-correlation/matrix",
+    "/api/casulo/telemetry-correlation/bounds",
+    "/api/casulo/telemetry-correlation/optimal-zones",
+    "/api/casulo/telemetry-correlation/adjustments",
+    "/api/casulo/telemetry-correlation/readiness",
+    "/api/casulo/telemetry-correlation/audit"
+  ],
+  "next_recommended_bundle": "Solver Agent Controlled Stub with Telemetry Feedback"
+}

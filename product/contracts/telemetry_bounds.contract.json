@@ -1,0 +1,4 @@
+{
+  "contract": "casulo.telemetry_bounds.v0.1",
+  "purpose": "Observed min/max/mean/stdev by workload, stress profile and gate."
+}

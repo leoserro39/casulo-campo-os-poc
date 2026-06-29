@@ -1,0 +1,4 @@
+{
+  "contract": "casulo.correlation_state.v0.1",
+  "purpose": "Pairwise metric correlations and interpretation for calibration."
+}

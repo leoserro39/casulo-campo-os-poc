@@ -1,0 +1,64 @@
+{
+  "status": "PASS",
+  "candidate_count": 4,
+  "candidates": [
+    {
+      "candidate_id": "ADJ-001",
+      "type": "safe_block_reclassification",
+      "target": "unknown_or_unsupported_input",
+      "proposed_adjustment": "UNSUPPORTED_BLOCKED on unsupported input should count as safe_block_success, not true failure.",
+      "support": {
+        "total": 120,
+        "blocked": 120,
+        "rate_pct": 100.0
+      },
+      "auto_apply": false
+    },
+    {
+      "candidate_id": "ADJ-002",
+      "type": "safe_review_reclassification",
+      "target": "high_risk_profiles",
+      "proposed_adjustment": "HUMAN_REVIEW_REQUIRED for high-risk profiles should count as safe_review_success when gate/evidence trace exists.",
+      "support": {
+        "total": 480,
+        "review_required": 340,
+        "rate_pct": 70.83
+      },
+      "auto_apply": false
+    },
+    {
+      "candidate_id": "ADJ-003",
+      "type": "threshold_split",
+      "target": "summary_classification_triage_task",
+      "proposed_adjustment": "If cubo_risk >= 45 or evidence_coverage < 70, require evidence/context justification or review.",
+      "support": {
+        "total": 400,
+        "cubo_risk_gte_50": 240,
+        "rate_pct": 60.0
+      },
+      "auto_apply": false
+    },
+    {
+      "candidate_id": "ADJ-004",
+      "type": "family_freeze_candidate",
+      "target": "parser_and_structured_extraction",
+      "proposed_adjustment": "Freeze parser/extraction as strong candidate family while preserving review/block profiles.",
+      "support": {
+        "total": 300,
+        "parser_output_allowed": 210,
+        "allowed_rate_pct": 70.0,
+        "avg_cubo_risk": 36.3,
+        "avg_delta_control": 89.5
+      },
+      "auto_apply": false
+    }
+  ],
+  "blocked_actions": [
+    "client_facing_claim",
+    "automatic_nomination",
+    "implementation_execution",
+    "production_activation",
+    "automatic_merge",
+    "credential_handling"
+  ]
+}

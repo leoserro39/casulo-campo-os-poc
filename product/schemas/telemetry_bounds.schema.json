@@ -1,0 +1,11 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "telemetry_bounds.schema.json",
+  "type": "object",
+  "required": [
+    "status",
+    "global_bounds",
+    "by_workload",
+    "by_stress_profile"
+  ]
+}

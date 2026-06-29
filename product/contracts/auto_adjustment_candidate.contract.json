@@ -1,0 +1,4 @@
+{
+  "contract": "casulo.auto_adjustment_candidate.v0.1",
+  "purpose": "Adjustment candidates only; no automatic mutation."
+}

@@ -1,0 +1,12 @@
+{
+  "contract": "casulo.telemetry_correlation_calibration.v0.1",
+  "purpose": "Correlate telemetry metrics to calibrate thresholds, gates, operating zones and safe adjustment candidates.",
+  "blocked_actions": [
+    "client_facing_claim",
+    "automatic_nomination",
+    "implementation_execution",
+    "production_activation",
+    "automatic_merge",
+    "credential_handling"
+  ]
+}

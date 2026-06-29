@@ -1,0 +1,11 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "telemetry_correlation_matrix.schema.json",
+  "type": "object",
+  "required": [
+    "status",
+    "metric_names",
+    "correlations",
+    "blocked_actions"
+  ]
+}

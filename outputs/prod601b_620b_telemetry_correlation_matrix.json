@@ -1,0 +1,465 @@
+{
+  "status": "PASS",
+  "generated_at": "2026-06-29T02:46:45+00:00",
+  "case_count": 1200,
+  "metric_names": [
+    "stress_score",
+    "direct_risk",
+    "cubo_risk",
+    "risk_reduction",
+    "relative_risk_reduction_pct",
+    "delta_control",
+    "evidence_coverage",
+    "useful_output_rate",
+    "anomaly_numeric",
+    "human_review_numeric",
+    "unsupported_numeric",
+    "safe_review_success",
+    "safe_block_success",
+    "true_failure_candidate"
+  ],
+  "correlations": {
+    "stress_score": {
+      "stress_score": 1.0,
+      "direct_risk": 0.8899,
+      "cubo_risk": 0.873,
+      "risk_reduction": 0.1535,
+      "relative_risk_reduction_pct": -0.5543,
+      "delta_control": -0.7837,
+      "evidence_coverage": -0.5191,
+      "useful_output_rate": -0.936,
+      "anomaly_numeric": 0.6619,
+      "human_review_numeric": 0.2855,
+      "unsupported_numeric": 0.558,
+      "safe_review_success": 0.3874,
+      "safe_block_success": 0.558,
+      "true_failure_candidate": 0.0
+    },
+    "direct_risk": {
+      "stress_score": 0.8899,
+      "direct_risk": 1.0,
+      "cubo_risk": 0.7716,
+      "risk_reduction": 0.4641,
+      "relative_risk_reduction_pct": -0.3184,
+      "delta_control": -0.7089,
+      "evidence_coverage": -0.1589,
+      "useful_output_rate": -0.8604,
+      "anomaly_numeric": 0.7024,
+      "human_review_numeric": 0.4856,
+      "unsupported_numeric": 0.3818,
+      "safe_review_success": 0.4928,
+      "safe_block_success": 0.3818,
+      "true_failure_candidate": 0.0
+    },
+    "cubo_risk": {
+      "stress_score": 0.873,
+      "direct_risk": 0.7716,
+      "cubo_risk": 1.0,
+      "risk_reduction": -0.2053,
+      "relative_risk_reduction_pct": -0.8372,
+      "delta_control": -0.9151,
+      "evidence_coverage": -0.6584,
+      "useful_output_rate": -0.8639,
+      "anomaly_numeric": 0.6877,
+      "human_review_numeric": 0.3132,
+      "unsupported_numeric": 0.3704,
+      "safe_review_success": 0.4084,
+      "safe_block_success": 0.3704,
+      "true_failure_candidate": 0.0
+    },
+    "risk_reduction": {
+      "stress_score": 0.1535,
+      "direct_risk": 0.4641,
+      "cubo_risk": -0.2053,
+      "risk_reduction": 1.0,
+      "relative_risk_reduction_pct": 0.6758,
+      "delta_control": 0.1835,
+      "evidence_coverage": 0.6723,
+      "useful_output_rate": -0.1209,
+      "anomaly_numeric": 0.123,
+      "human_review_numeric": 0.3109,
+      "unsupported_numeric": 0.0718,
+      "safe_review_success": 0.1895,
+      "safe_block_success": 0.0718,
+      "true_failure_candidate": 0.0
+    },
+    "relative_risk_reduction_pct": {
+      "stress_score": -0.5543,
+      "direct_risk": -0.3184,
+      "cubo_risk": -0.8372,
+      "risk_reduction": 0.6758,
+      "relative_risk_reduction_pct": 1.0,
+      "delta_control": 0.7548,
+      "evidence_coverage": 0.8313,
+      "useful_output_rate": 0.5791,
+      "anomaly_numeric": -0.425,
+      "human_review_numeric": -0.0633,
+      "unsupported_numeric": -0.1769,
+      "safe_review_success": -0.1809,
+      "safe_block_success": -0.1769,
+      "true_failure_candidate": 0.0
+    },
+    "delta_control": {
+      "stress_score": -0.7837,
+      "direct_risk": -0.7089,
+      "cubo_risk": -0.9151,
+      "risk_reduction": 0.1835,
+      "relative_risk_reduction_pct": 0.7548,
+      "delta_control": 1.0,
+      "evidence_coverage": 0.5607,
+      "useful_output_rate": 0.7635,
+      "anomaly_numeric": -0.7075,
+      "human_review_numeric": -0.3946,
+      "unsupported_numeric": -0.3934,
+      "safe_review_success": -0.4584,
+      "safe_block_success": -0.3934,
+      "true_failure_candidate": 0.0
+    },
+    "evidence_coverage": {
+      "stress_score": -0.5191,
+      "direct_risk": -0.1589,
+      "cubo_risk": -0.6584,
+      "risk_reduction": 0.6723,
+      "relative_risk_reduction_pct": 0.8313,
+      "delta_control": 0.5607,
+      "evidence_coverage": 1.0,
+      "useful_output_rate": 0.4162,
+      "anomaly_numeric": -0.3534,
+      "human_review_numeric": 0.1271,
+      "unsupported_numeric": -0.4323,
+      "safe_review_success": -0.0312,
+      "safe_block_success": -0.4323,
+      "true_failure_candidate": 0.0
+    },
+    "useful_output_rate": {
+      "stress_score": -0.936,
+      "direct_risk": -0.8604,
+      "cubo_risk": -0.8639,
+      "risk_reduction": -0.1209,
+      "relative_risk_reduction_pct": 0.5791,
+      "delta_control": 0.7635,
+      "evidence_coverage": 0.4162,
+      "useful_output_rate": 1.0,
+      "anomaly_numeric": -0.5667,
+      "human_review_numeric": -0.2986,
+      "unsupported_numeric": -0.3888,
+      "safe_review_success": -0.4168,
+      "safe_block_success": -0.3888,
+      "true_failure_candidate": 0.0
+    },
+    "anomaly_numeric": {
+      "stress_score": 0.6619,
+      "direct_risk": 0.7024,
+      "cubo_risk": 0.6877,
+      "risk_reduction": 0.123,
+      "relative_risk_reduction_pct": -0.425,
+      "delta_control": -0.7075,
+      "evidence_coverage": -0.3534,
+      "useful_output_rate": -0.5667,
+      "anomaly_numeric": 1.0,
+      "human_review_numeric": 0.5789,
+      "unsupported_numeric": 0.2536,
+      "safe_review_success": 0.4784,
+      "safe_block_success": 0.2536,
+      "true_failure_candidate": 0.0
+    },
+    "human_review_numeric": {
+      "stress_score": 0.2855,
+      "direct_risk": 0.4856,
+      "cubo_risk": 0.3132,
+      "risk_reduction": 0.3109,
+      "relative_risk_reduction_pct": -0.0633,
+      "delta_control": -0.3946,
+      "evidence_coverage": 0.1271,
+      "useful_output_rate": -0.2986,
+      "anomaly_numeric": 0.5789,
+      "human_review_numeric": 1.0,
+      "unsupported_numeric": -0.2536,
+      "safe_review_success": 0.8264,
+      "safe_block_success": -0.2536,
+      "true_failure_candidate": 0.0
+    },
+    "unsupported_numeric": {
+      "stress_score": 0.558,
+      "direct_risk": 0.3818,
+      "cubo_risk": 0.3704,
+      "risk_reduction": 0.0718,
+      "relative_risk_reduction_pct": -0.1769,
+      "delta_control": -0.3934,
+      "evidence_coverage": -0.4323,
+      "useful_output_rate": -0.3888,
+      "anomaly_numeric": 0.2536,
+      "human_review_numeric": -0.2536,
+      "unsupported_numeric": 1.0,
+      "safe_review_success": -0.2096,
+      "safe_block_success": 1.0,
+      "true_failure_candidate": 0.0
+    },
+    "safe_review_success": {
+      "stress_score": 0.3874,
+      "direct_risk": 0.4928,
+      "cubo_risk": 0.4084,
+      "risk_reduction": 0.1895,
+      "relative_risk_reduction_pct": -0.1809,
+      "delta_control": -0.4584,
+      "evidence_coverage": -0.0312,
+      "useful_output_rate": -0.4168,
+      "anomaly_numeric": 0.4784,
+      "human_review_numeric": 0.8264,
+      "unsupported_numeric": -0.2096,
+      "safe_review_success": 1.0,
+      "safe_block_success": -0.2096,
+      "true_failure_candidate": 0.0
+    },
+    "safe_block_success": {
+      "stress_score": 0.558,
+      "direct_risk": 0.3818,
+      "cubo_risk": 0.3704,
+      "risk_reduction": 0.0718,
+      "relative_risk_reduction_pct": -0.1769,
+      "delta_control": -0.3934,
+      "evidence_coverage": -0.4323,
+      "useful_output_rate": -0.3888,
+      "anomaly_numeric": 0.2536,
+      "human_review_numeric": -0.2536,
+      "unsupported_numeric": 1.0,
+      "safe_review_success": -0.2096,
+      "safe_block_success": 1.0,
+      "true_failure_candidate": 0.0
+    },
+    "true_failure_candidate": {
+      "stress_score": 0.0,
+      "direct_risk": 0.0,
+      "cubo_risk": 0.0,
+      "risk_reduction": 0.0,
+      "relative_risk_reduction_pct": 0.0,
+      "delta_control": 0.0,
+      "evidence_coverage": 0.0,
+      "useful_output_rate": 0.0,
+      "anomaly_numeric": 0.0,
+      "human_review_numeric": 0.0,
+      "unsupported_numeric": 0.0,
+      "safe_review_success": 0.0,
+      "safe_block_success": 0.0,
+      "true_failure_candidate": 0.0
+    }
+  },
+  "strong_correlations": [
+    {
+      "metric_a": "unsupported_numeric",
+      "metric_b": "safe_block_success",
+      "correlation": 1.0,
+      "direction": "positive",
+      "strength": "strong"
+    },
+    {
+      "metric_a": "stress_score",
+      "metric_b": "useful_output_rate",
+      "correlation": -0.936,
+      "direction": "negative",
+      "strength": "strong"
+    },
+    {
+      "metric_a": "cubo_risk",
+      "metric_b": "delta_control",
+      "correlation": -0.9151,
+      "direction": "negative",
+      "strength": "strong"
+    },
+    {
+      "metric_a": "stress_score",
+      "metric_b": "direct_risk",
+      "correlation": 0.8899,
+      "direction": "positive",
+      "strength": "strong"
+    },
+    {
+      "metric_a": "stress_score",
+      "metric_b": "cubo_risk",
+      "correlation": 0.873,
+      "direction": "positive",
+      "strength": "strong"
+    },
+    {
+      "metric_a": "cubo_risk",
+      "metric_b": "useful_output_rate",
+      "correlation": -0.8639,
+      "direction": "negative",
+      "strength": "strong"
+    },
+    {
+      "metric_a": "direct_risk",
+      "metric_b": "useful_output_rate",
+      "correlation": -0.8604,
+      "direction": "negative",
+      "strength": "strong"
+    },
+    {
+      "metric_a": "cubo_risk",
+      "metric_b": "relative_risk_reduction_pct",
+      "correlation": -0.8372,
+      "direction": "negative",
+      "strength": "strong"
+    },
+    {
+      "metric_a": "relative_risk_reduction_pct",
+      "metric_b": "evidence_coverage",
+      "correlation": 0.8313,
+      "direction": "positive",
+      "strength": "strong"
+    },
+    {
+      "metric_a": "human_review_numeric",
+      "metric_b": "safe_review_success",
+      "correlation": 0.8264,
+      "direction": "positive",
+      "strength": "strong"
+    },
+    {
+      "metric_a": "stress_score",
+      "metric_b": "delta_control",
+      "correlation": -0.7837,
+      "direction": "negative",
+      "strength": "strong"
+    },
+    {
+      "metric_a": "direct_risk",
+      "metric_b": "cubo_risk",
+      "correlation": 0.7716,
+      "direction": "positive",
+      "strength": "strong"
+    },
+    {
+      "metric_a": "delta_control",
+      "metric_b": "useful_output_rate",
+      "correlation": 0.7635,
+      "direction": "positive",
+      "strength": "strong"
+    },
+    {
+      "metric_a": "relative_risk_reduction_pct",
+      "metric_b": "delta_control",
+      "correlation": 0.7548,
+      "direction": "positive",
+      "strength": "strong"
+    },
+    {
+      "metric_a": "direct_risk",
+      "metric_b": "delta_control",
+      "correlation": -0.7089,
+      "direction": "negative",
+      "strength": "moderate"
+    },
+    {
+      "metric_a": "delta_control",
+      "metric_b": "anomaly_numeric",
+      "correlation": -0.7075,
+      "direction": "negative",
+      "strength": "moderate"
+    },
+    {
+      "metric_a": "direct_risk",
+      "metric_b": "anomaly_numeric",
+      "correlation": 0.7024,
+      "direction": "positive",
+      "strength": "moderate"
+    },
+    {
+      "metric_a": "cubo_risk",
+      "metric_b": "anomaly_numeric",
+      "correlation": 0.6877,
+      "direction": "positive",
+      "strength": "moderate"
+    },
+    {
+      "metric_a": "risk_reduction",
+      "metric_b": "relative_risk_reduction_pct",
+      "correlation": 0.6758,
+      "direction": "positive",
+      "strength": "moderate"
+    },
+    {
+      "metric_a": "risk_reduction",
+      "metric_b": "evidence_coverage",
+      "correlation": 0.6723,
+      "direction": "positive",
+      "strength": "moderate"
+    },
+    {
+      "metric_a": "stress_score",
+      "metric_b": "anomaly_numeric",
+      "correlation": 0.6619,
+      "direction": "positive",
+      "strength": "moderate"
+    },
+    {
+      "metric_a": "cubo_risk",
+      "metric_b": "evidence_coverage",
+      "correlation": -0.6584,
+      "direction": "negative",
+      "strength": "moderate"
+    },
+    {
+      "metric_a": "relative_risk_reduction_pct",
+      "metric_b": "useful_output_rate",
+      "correlation": 0.5791,
+      "direction": "positive",
+      "strength": "moderate"
+    },
+    {
+      "metric_a": "anomaly_numeric",
+      "metric_b": "human_review_numeric",
+      "correlation": 0.5789,
+      "direction": "positive",
+      "strength": "moderate"
+    },
+    {
+      "metric_a": "useful_output_rate",
+      "metric_b": "anomaly_numeric",
+      "correlation": -0.5667,
+      "direction": "negative",
+      "strength": "moderate"
+    },
+    {
+      "metric_a": "delta_control",
+      "metric_b": "evidence_coverage",
+      "correlation": 0.5607,
+      "direction": "positive",
+      "strength": "moderate"
+    },
+    {
+      "metric_a": "stress_score",
+      "metric_b": "unsupported_numeric",
+      "correlation": 0.558,
+      "direction": "positive",
+      "strength": "moderate"
+    },
+    {
+      "metric_a": "stress_score",
+      "metric_b": "safe_block_success",
+      "correlation": 0.558,
+      "direction": "positive",
+      "strength": "moderate"
+    },
+    {
+      "metric_a": "stress_score",
+      "metric_b": "relative_risk_reduction_pct",
+      "correlation": -0.5543,
+      "direction": "negative",
+      "strength": "moderate"
+    }
+  ],
+  "interpretation": [
+    "Use correlation for candidates, not automatic mutation.",
+    "Split safe block/review from true failure.",
+    "Calibrate by workload family and stress profile."
+  ],
+  "blocked_actions": [
+    "client_facing_claim",
+    "automatic_nomination",
+    "implementation_execution",
+    "production_activation",
+    "automatic_merge",
+    "credential_handling"
+  ]
+}
