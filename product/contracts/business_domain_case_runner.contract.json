@@ -1,0 +1,4 @@
+{
+  "contract": "casulo.business_domain_case_runner.v0.1",
+  "purpose": "Run deterministic synthetic business cases through live delta and gate calibration."
+}

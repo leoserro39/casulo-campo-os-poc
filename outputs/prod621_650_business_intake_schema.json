@@ -1,0 +1,37 @@
+{
+  "status": "PASS",
+  "required_fields": [
+    "business_domain",
+    "problem_summary",
+    "available_evidence",
+    "known_facts",
+    "assumptions",
+    "desired_decision_support",
+    "consent_scope",
+    "data_sensitivity"
+  ],
+  "allowed_consent_scope": [
+    "synthetic_fixture_only",
+    "explicitly_approved_anonymized_real_case"
+  ],
+  "blocked_data": [
+    "credentials",
+    "raw confidential client identifiers",
+    "unapproved personal data",
+    "bank credentials",
+    "medical record identifiers",
+    "legal client identifiers without approval"
+  ],
+  "blocked_actions": [
+    "client_facing_claim",
+    "automatic_nomination",
+    "implementation_execution",
+    "production_activation",
+    "automatic_merge",
+    "credential_handling",
+    "automatic_threshold_mutation",
+    "autonomous_external_execution",
+    "real_world_side_effect",
+    "unapproved_real_company_data"
+  ]
+}

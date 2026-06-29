@@ -1,0 +1,4 @@
+{
+  "contract": "casulo.business_domain_sensitivity.v0.1",
+  "purpose": "Represent domain sensitivity coefficients and gate behavior by business domain."
+}

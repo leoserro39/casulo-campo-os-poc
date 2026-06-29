@@ -1,0 +1,173 @@
+{
+  "status": "PASS",
+  "domain_metrics": {
+    "accounting_tax_obligation": {
+      "case_count": 10,
+      "avg_adjusted_risk": 67.28,
+      "avg_live_delta_score": 0.4816,
+      "avg_evidence_coverage": 70.8,
+      "safe_behavior_rate_pct": 80.0,
+      "gate_distribution": {
+        "ANSWER_ALLOWED": 1,
+        "EVIDENCE_REQUIRED": 1,
+        "HUMAN_REVIEW_REQUIRED": 6,
+        "UNSUPPORTED_BLOCKED": 2
+      }
+    },
+    "clinic_billing_glosa": {
+      "case_count": 10,
+      "avg_adjusted_risk": 67.28,
+      "avg_live_delta_score": 0.4816,
+      "avg_evidence_coverage": 70.8,
+      "safe_behavior_rate_pct": 80.0,
+      "gate_distribution": {
+        "ANSWER_ALLOWED": 1,
+        "EVIDENCE_REQUIRED": 1,
+        "HUMAN_REVIEW_REQUIRED": 6,
+        "UNSUPPORTED_BLOCKED": 2
+      }
+    },
+    "clinic_scheduling": {
+      "case_count": 10,
+      "avg_adjusted_risk": 55.68,
+      "avg_live_delta_score": 0.3935,
+      "avg_evidence_coverage": 70.8,
+      "safe_behavior_rate_pct": 90.0,
+      "gate_distribution": {
+        "ANSWER_ALLOWED": 2,
+        "EVIDENCE_REQUIRED": 1,
+        "HUMAN_REVIEW_REQUIRED": 5,
+        "UNSUPPORTED_BLOCKED": 2
+      }
+    },
+    "construction_project_control": {
+      "case_count": 10,
+      "avg_adjusted_risk": 60.32,
+      "avg_live_delta_score": 0.4287,
+      "avg_evidence_coverage": 70.8,
+      "safe_behavior_rate_pct": 90.0,
+      "gate_distribution": {
+        "ANSWER_ALLOWED": 2,
+        "EVIDENCE_REQUIRED": 1,
+        "HUMAN_REVIEW_REQUIRED": 5,
+        "UNSUPPORTED_BLOCKED": 2
+      }
+    },
+    "contract_legal_review": {
+      "case_count": 10,
+      "avg_adjusted_risk": 69.6,
+      "avg_live_delta_score": 0.4993,
+      "avg_evidence_coverage": 70.8,
+      "safe_behavior_rate_pct": 80.0,
+      "gate_distribution": {
+        "ANSWER_ALLOWED": 1,
+        "EVIDENCE_REQUIRED": 1,
+        "HUMAN_REVIEW_REQUIRED": 6,
+        "UNSUPPORTED_BLOCKED": 2
+      }
+    },
+    "ecommerce_order_ops": {
+      "case_count": 10,
+      "avg_adjusted_risk": 51.04,
+      "avg_live_delta_score": 0.3582,
+      "avg_evidence_coverage": 70.8,
+      "safe_behavior_rate_pct": 100.0,
+      "gate_distribution": {
+        "ANSWER_ALLOWED": 2,
+        "EVIDENCE_REQUIRED": 2,
+        "HUMAN_REVIEW_REQUIRED": 4,
+        "UNSUPPORTED_BLOCKED": 2
+      }
+    },
+    "field_service_work_order": {
+      "case_count": 10,
+      "avg_adjusted_risk": 48.72,
+      "avg_live_delta_score": 0.3406,
+      "avg_evidence_coverage": 70.8,
+      "safe_behavior_rate_pct": 100.0,
+      "gate_distribution": {
+        "ANSWER_ALLOWED": 2,
+        "EVIDENCE_REQUIRED": 2,
+        "HUMAN_REVIEW_REQUIRED": 4,
+        "UNSUPPORTED_BLOCKED": 2
+      }
+    },
+    "fleet_maintenance_ops": {
+      "case_count": 10,
+      "avg_adjusted_risk": 55.68,
+      "avg_live_delta_score": 0.3935,
+      "avg_evidence_coverage": 70.8,
+      "safe_behavior_rate_pct": 90.0,
+      "gate_distribution": {
+        "ANSWER_ALLOWED": 2,
+        "EVIDENCE_REQUIRED": 1,
+        "HUMAN_REVIEW_REQUIRED": 5,
+        "UNSUPPORTED_BLOCKED": 2
+      }
+    },
+    "legal_office_case_intake": {
+      "case_count": 10,
+      "avg_adjusted_risk": 69.6,
+      "avg_live_delta_score": 0.4993,
+      "avg_evidence_coverage": 70.8,
+      "safe_behavior_rate_pct": 80.0,
+      "gate_distribution": {
+        "ANSWER_ALLOWED": 1,
+        "EVIDENCE_REQUIRED": 1,
+        "HUMAN_REVIEW_REQUIRED": 6,
+        "UNSUPPORTED_BLOCKED": 2
+      }
+    },
+    "restaurant_cashflow": {
+      "case_count": 10,
+      "avg_adjusted_risk": 55.68,
+      "avg_live_delta_score": 0.3935,
+      "avg_evidence_coverage": 70.8,
+      "safe_behavior_rate_pct": 90.0,
+      "gate_distribution": {
+        "ANSWER_ALLOWED": 2,
+        "EVIDENCE_REQUIRED": 1,
+        "HUMAN_REVIEW_REQUIRED": 5,
+        "UNSUPPORTED_BLOCKED": 2
+      }
+    },
+    "restaurant_inventory": {
+      "case_count": 10,
+      "avg_adjusted_risk": 46.4,
+      "avg_live_delta_score": 0.323,
+      "avg_evidence_coverage": 70.8,
+      "safe_behavior_rate_pct": 100.0,
+      "gate_distribution": {
+        "ANSWER_ALLOWED": 2,
+        "EVIDENCE_REQUIRED": 2,
+        "HUMAN_REVIEW_REQUIRED": 4,
+        "UNSUPPORTED_BLOCKED": 2
+      }
+    },
+    "small_industry_quality": {
+      "case_count": 10,
+      "avg_adjusted_risk": 58.0,
+      "avg_live_delta_score": 0.4111,
+      "avg_evidence_coverage": 70.8,
+      "safe_behavior_rate_pct": 90.0,
+      "gate_distribution": {
+        "ANSWER_ALLOWED": 2,
+        "EVIDENCE_REQUIRED": 1,
+        "HUMAN_REVIEW_REQUIRED": 5,
+        "UNSUPPORTED_BLOCKED": 2
+      }
+    }
+  },
+  "blocked_actions": [
+    "client_facing_claim",
+    "automatic_nomination",
+    "implementation_execution",
+    "production_activation",
+    "automatic_merge",
+    "credential_handling",
+    "automatic_threshold_mutation",
+    "autonomous_external_execution",
+    "real_world_side_effect",
+    "unapproved_real_company_data"
+  ]
+}

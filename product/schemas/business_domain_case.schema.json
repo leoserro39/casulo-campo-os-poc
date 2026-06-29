@@ -1,0 +1,13 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "business_domain_case.schema.json",
+  "type": "object",
+  "required": [
+    "case_id",
+    "domain",
+    "scenario",
+    "input_summary",
+    "evidence_profile",
+    "expected_gate"
+  ]
+}

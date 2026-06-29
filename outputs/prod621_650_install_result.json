@@ -1,0 +1,17 @@
+{
+  "task": "PROD-621..650",
+  "status": "PASS",
+  "phase": "Business Domain Calibration Matrix with Live Delta",
+  "endpoints": [
+    "/api/casulo/business-domain/matrix",
+    "/api/casulo/business-domain/cases",
+    "/api/casulo/business-domain/batch-result",
+    "/api/casulo/business-domain/domain-metrics",
+    "/api/casulo/business-domain/scenario-metrics",
+    "/api/casulo/business-domain/intake-schema",
+    "/api/casulo/business-domain/thresholds",
+    "/api/casulo/business-domain/readiness",
+    "/api/casulo/business-domain/audit"
+  ],
+  "next_recommended_bundle": "PROD-651 Business Case Interactive Runner with Live Delta"
+}

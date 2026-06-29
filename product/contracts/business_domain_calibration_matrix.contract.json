@@ -1,0 +1,17 @@
+{
+  "contract": "casulo.business_domain_calibration_matrix.v0.1",
+  "purpose": "Extend live-delta solver calibration into business-domain matrices using synthetic/controlled cases only.",
+  "mode": "controlled_business_domain_calibration_only",
+  "blocked_actions": [
+    "client_facing_claim",
+    "automatic_nomination",
+    "implementation_execution",
+    "production_activation",
+    "automatic_merge",
+    "credential_handling",
+    "automatic_threshold_mutation",
+    "autonomous_external_execution",
+    "real_world_side_effect",
+    "unapproved_real_company_data"
+  ]
+}

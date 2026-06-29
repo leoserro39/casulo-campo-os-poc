@@ -209,4 +209,19 @@ ENDPOINT_GROUPS = [
         ],
     },
 
+    {
+        "group": "business_domain_calibration",
+        "routes": [
+            {"path": "/api/casulo/business-domain/matrix", "file": "outputs/prod621_650_business_domain_matrix.json", "key": "business_domain_matrix"},
+            {"path": "/api/casulo/business-domain/cases", "file": "outputs/prod621_650_business_domain_cases.json", "key": "business_domain_cases"},
+            {"path": "/api/casulo/business-domain/batch-result", "file": "outputs/prod621_650_business_domain_batch_result.json", "key": "batch_result"},
+            {"path": "/api/casulo/business-domain/domain-metrics", "file": "outputs/prod621_650_business_domain_metrics.json", "key": "domain_metrics"},
+            {"path": "/api/casulo/business-domain/scenario-metrics", "file": "outputs/prod621_650_business_scenario_metrics.json", "key": "scenario_metrics"},
+            {"path": "/api/casulo/business-domain/intake-schema", "file": "outputs/prod621_650_business_intake_schema.json", "key": "intake_schema"},
+            {"path": "/api/casulo/business-domain/thresholds", "file": "outputs/prod621_650_business_calibration_thresholds.json", "key": "thresholds"},
+            {"path": "/api/casulo/business-domain/readiness", "file": "outputs/prod621_650_business_readiness.json", "key": "readiness"},
+            {"path": "/api/casulo/business-domain/audit", "file": "outputs/prod621_650_business_audit_report.json", "key": "audit"},
+        ],
+    },
+
 ]

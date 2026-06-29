@@ -1,0 +1,4 @@
+{
+  "contract": "casulo.business_domain_readiness.v0.1",
+  "purpose": "Decide if controlled user business cases can be accepted after matrix calibration."
+}

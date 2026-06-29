@@ -1,0 +1,4 @@
+{
+  "contract": "casulo.business_domain_intake.v0.1",
+  "purpose": "Define minimum intake fields, evidence scope, consent scope and blocked data types."
+}

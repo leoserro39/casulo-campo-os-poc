@@ -1,0 +1,303 @@
+{
+  "status": "PASS",
+  "generated_at": "2026-06-29T11:37:39+00:00",
+  "domain_count": 12,
+  "scenario_count": 10,
+  "case_count": 120,
+  "domains": [
+    {
+      "domain": "restaurant_inventory",
+      "label": "Restaurante / Estoque",
+      "sensitivity": 1.0,
+      "minimum_evidence": [
+        "menu_items",
+        "stock_list",
+        "purchase_frequency",
+        "waste_notes"
+      ],
+      "allowed_outputs": [
+        "state_summary",
+        "evidence_request",
+        "bottleneck_map",
+        "controlled_task_list"
+      ],
+      "blocked_outputs": [
+        "supplier_order_execution",
+        "financial_commitment",
+        "client_facing_claim"
+      ]
+    },
+    {
+      "domain": "restaurant_cashflow",
+      "label": "Restaurante / Caixa",
+      "sensitivity": 1.2,
+      "minimum_evidence": [
+        "daily_revenue_range",
+        "fixed_costs",
+        "supplier_payables",
+        "cash_shortage_notes"
+      ],
+      "allowed_outputs": [
+        "cashflow_state",
+        "risk_triage",
+        "evidence_request",
+        "controlled_task_list"
+      ],
+      "blocked_outputs": [
+        "loan_advice_as_fact",
+        "payment_execution",
+        "client_facing_claim"
+      ]
+    },
+    {
+      "domain": "clinic_scheduling",
+      "label": "Clínica / Agenda",
+      "sensitivity": 1.2,
+      "minimum_evidence": [
+        "appointment_schedule",
+        "no_show_rate",
+        "queue_notes",
+        "staffing_notes"
+      ],
+      "allowed_outputs": [
+        "scheduling_state",
+        "bottleneck_map",
+        "evidence_request",
+        "controlled_task_list"
+      ],
+      "blocked_outputs": [
+        "medical_advice",
+        "patient_contact",
+        "credential_handling"
+      ]
+    },
+    {
+      "domain": "clinic_billing_glosa",
+      "label": "Clínica / Faturamento e Glosa",
+      "sensitivity": 1.45,
+      "minimum_evidence": [
+        "billing_status",
+        "denial_reason",
+        "payer_rule_ref",
+        "date_of_claim"
+      ],
+      "allowed_outputs": [
+        "billing_state",
+        "evidence_gap_map",
+        "review_packet",
+        "controlled_task_list"
+      ],
+      "blocked_outputs": [
+        "legal_claim",
+        "payer_submission",
+        "patient_data_exposure"
+      ]
+    },
+    {
+      "domain": "accounting_tax_obligation",
+      "label": "Contábil / Obrigações",
+      "sensitivity": 1.45,
+      "minimum_evidence": [
+        "tax_period",
+        "obligation_type",
+        "document_status",
+        "deadline"
+      ],
+      "allowed_outputs": [
+        "obligation_state",
+        "evidence_request",
+        "deadline_risk_map",
+        "review_packet"
+      ],
+      "blocked_outputs": [
+        "tax_filing",
+        "legal_tax_opinion",
+        "credential_handling"
+      ]
+    },
+    {
+      "domain": "contract_legal_review",
+      "label": "Contrato / Jurídico",
+      "sensitivity": 1.5,
+      "minimum_evidence": [
+        "contract_excerpt",
+        "clause_ref",
+        "parties_role",
+        "effective_date"
+      ],
+      "allowed_outputs": [
+        "contract_state",
+        "risk_questions",
+        "evidence_request",
+        "human_review_packet"
+      ],
+      "blocked_outputs": [
+        "legal_advice_as_final",
+        "signature_recommendation",
+        "client_facing_claim"
+      ]
+    },
+    {
+      "domain": "ecommerce_order_ops",
+      "label": "E-commerce / Pedidos",
+      "sensitivity": 1.1,
+      "minimum_evidence": [
+        "order_status",
+        "inventory_status",
+        "shipping_status",
+        "customer_message"
+      ],
+      "allowed_outputs": [
+        "order_state",
+        "exception_triage",
+        "evidence_request",
+        "controlled_task_list"
+      ],
+      "blocked_outputs": [
+        "customer_message_send",
+        "refund_execution",
+        "credential_handling"
+      ]
+    },
+    {
+      "domain": "field_service_work_order",
+      "label": "Serviço de Campo / OS",
+      "sensitivity": 1.05,
+      "minimum_evidence": [
+        "work_order",
+        "asset_id",
+        "technician_notes",
+        "completion_status"
+      ],
+      "allowed_outputs": [
+        "os_state",
+        "delta_map",
+        "evidence_request",
+        "controlled_task_list"
+      ],
+      "blocked_outputs": [
+        "field_dispatch",
+        "parts_purchase",
+        "safety_override"
+      ]
+    },
+    {
+      "domain": "construction_project_control",
+      "label": "Construção / Obra",
+      "sensitivity": 1.3,
+      "minimum_evidence": [
+        "project_stage",
+        "schedule_status",
+        "budget_status",
+        "issue_log"
+      ],
+      "allowed_outputs": [
+        "project_state",
+        "risk_map",
+        "evidence_request",
+        "review_packet"
+      ],
+      "blocked_outputs": [
+        "engineering_signoff",
+        "supplier_commitment",
+        "safety_override"
+      ]
+    },
+    {
+      "domain": "small_industry_quality",
+      "label": "Microindústria / Qualidade",
+      "sensitivity": 1.25,
+      "minimum_evidence": [
+        "batch_id",
+        "defect_notes",
+        "inspection_result",
+        "operator_notes"
+      ],
+      "allowed_outputs": [
+        "quality_state",
+        "defect_triage",
+        "evidence_request",
+        "controlled_task_list"
+      ],
+      "blocked_outputs": [
+        "release_batch",
+        "regulatory_claim",
+        "safety_override"
+      ]
+    },
+    {
+      "domain": "legal_office_case_intake",
+      "label": "Escritório Jurídico / Intake",
+      "sensitivity": 1.5,
+      "minimum_evidence": [
+        "case_summary",
+        "party_role",
+        "document_list",
+        "deadline_or_event_date"
+      ],
+      "allowed_outputs": [
+        "intake_state",
+        "missing_document_map",
+        "risk_questions",
+        "human_review_packet"
+      ],
+      "blocked_outputs": [
+        "legal_advice_as_final",
+        "petition_generation_final",
+        "client_facing_claim"
+      ]
+    },
+    {
+      "domain": "fleet_maintenance_ops",
+      "label": "Frota / Manutenção",
+      "sensitivity": 1.2,
+      "minimum_evidence": [
+        "vehicle_id",
+        "maintenance_history",
+        "failure_notes",
+        "availability_need"
+      ],
+      "allowed_outputs": [
+        "fleet_state",
+        "maintenance_triage",
+        "evidence_request",
+        "controlled_task_list"
+      ],
+      "blocked_outputs": [
+        "maintenance_order_execution",
+        "safety_override",
+        "supplier_commitment"
+      ]
+    }
+  ],
+  "scenarios": [
+    "clean_baseline",
+    "missing_required_field",
+    "conflicting_values",
+    "noisy_input",
+    "partial_context",
+    "stale_evidence",
+    "high_stakes_claim",
+    "unsupported_request",
+    "cross_domain_mismatch",
+    "execution_request"
+  ],
+  "policy": {
+    "input_mode": "synthetic_or_explicitly_approved_anonymized_real_case",
+    "risk_adjustment": "adjusted_risk = base_risk * domain_sensitivity",
+    "live_delta": "risk + evidence + domain + missingness + conflict + execution",
+    "gate": "allow/evidence/review/block"
+  },
+  "blocked_actions": [
+    "client_facing_claim",
+    "automatic_nomination",
+    "implementation_execution",
+    "production_activation",
+    "automatic_merge",
+    "credential_handling",
+    "automatic_threshold_mutation",
+    "autonomous_external_execution",
+    "real_world_side_effect",
+    "unapproved_real_company_data"
+  ]
+}
