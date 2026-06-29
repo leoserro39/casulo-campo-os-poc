@@ -8,3 +8,5 @@ __pycache__/
 00_inbox/sources/real_atendimento_test/atendimento_real_sanitized.csv
 00_inbox/sources/real_atendimento_test/*REAL*.csv
 !00_inbox/sources/real_atendimento_test/atendimento_real_sanitized_FROM_RAW_SAMPLE.csv
+.artifacts/
+outputs/*_backups/

@@ -1,0 +1,5 @@
+{
+  "contract": "casulo.repo_hygiene_zip_cleanup.v0.1",
+  "purpose": "Detect generated zip artifacts, archive local packages outside git tracking and enforce .gitignore rules.",
+  "policy": "safe_scan_and_ignore_by_default"
+}

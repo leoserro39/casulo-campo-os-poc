@@ -1,0 +1,25 @@
+{
+  "status": "PASS",
+  "tracked_zip_count": 0,
+  "tracked_zips": [],
+  "local_zip_count": 0,
+  "local_zips_before": [],
+  "local_zips_after": [],
+  "zip_archive_records": [],
+  "zip_archive_dir": "/workspaces/casulo-campo-os-poc-package-archive",
+  "gitignore_rules_present": [
+    "*.zip",
+    ".artifacts/",
+    "outputs/*_backups/",
+    "__pycache__/"
+  ],
+  "gitignore_changed": false,
+  "blocked_actions": [
+    "client_facing_claim",
+    "automatic_nomination",
+    "implementation_execution",
+    "production_activation",
+    "automatic_merge",
+    "credential_handling"
+  ]
+}

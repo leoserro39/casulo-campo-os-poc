@@ -1,0 +1,4 @@
+{
+  "contract": "casulo.runtime_consolidation_readiness.v0.1",
+  "purpose": "Gate readiness for external evidence adapter and operator console phases."
+}

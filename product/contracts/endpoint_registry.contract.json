@@ -1,0 +1,4 @@
+{
+  "contract": "casulo.endpoint_registry.v0.1",
+  "purpose": "Map endpoint routes to output files and response keys with no package-specific overwriting."
+}

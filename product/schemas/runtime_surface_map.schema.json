@@ -1,0 +1,11 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "CASULO Runtime Surface Map",
+  "type": "object",
+  "required": [
+    "status",
+    "route_count",
+    "groups",
+    "blocked_actions"
+  ]
+}

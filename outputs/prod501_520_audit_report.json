@@ -1,0 +1,20 @@
+{
+  "status": "PASS",
+  "audit": "Runtime Endpoint Preservation and Repo Hygiene audit",
+  "endpoint_group_count": 10,
+  "endpoint_route_count": 54,
+  "missing_route_count": 0,
+  "tracked_zip_count": 0,
+  "local_zip_count_before": 0,
+  "local_zip_count_after": 0,
+  "gitignore_changed": false,
+  "finding": "Runtime endpoints consolidated through registry and generated zip artifacts are controlled by hygiene policy.",
+  "blocked_actions": [
+    "client_facing_claim",
+    "automatic_nomination",
+    "implementation_execution",
+    "production_activation",
+    "automatic_merge",
+    "credential_handling"
+  ]
+}

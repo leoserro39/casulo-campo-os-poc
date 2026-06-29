@@ -1,0 +1,12 @@
+{
+  "contract": "casulo.runtime_endpoint_preservation.v0.1",
+  "purpose": "Preserve runtime endpoints across product packages using a centralized registry and service router.",
+  "blocked_actions": [
+    "client_facing_claim",
+    "automatic_nomination",
+    "implementation_execution",
+    "production_activation",
+    "automatic_merge",
+    "credential_handling"
+  ]
+}

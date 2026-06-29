@@ -1,0 +1,4 @@
+{
+  "contract": "casulo.runtime_surface_map.v0.1",
+  "purpose": "Create a product surface map with all preserved endpoint groups and key output dependencies."
+}

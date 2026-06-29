@@ -1,0 +1,28 @@
+{
+  "contract_version": "casulo.runtime_consolidation_readiness.v0.1",
+  "status": "PASS",
+  "decision": "READY_FOR_EXTERNAL_EVIDENCE_ADAPTER",
+  "endpoint_group_count": 10,
+  "endpoint_route_count": 54,
+  "missing_route_count": 0,
+  "tracked_zip_count": 0,
+  "ready_for": [
+    "external evidence adapter",
+    "operator console",
+    "mass test planning"
+  ],
+  "not_ready_for": [
+    "production activation",
+    "automatic external claims",
+    "credential handling"
+  ],
+  "next": "Implement provider-neutral External Evidence Adapter with trust and citation gates.",
+  "blocked_actions": [
+    "client_facing_claim",
+    "automatic_nomination",
+    "implementation_execution",
+    "production_activation",
+    "automatic_merge",
+    "credential_handling"
+  ]
+}

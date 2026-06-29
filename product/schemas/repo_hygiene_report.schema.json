@@ -1,0 +1,11 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "CASULO Repo Hygiene Report",
+  "type": "object",
+  "required": [
+    "status",
+    "tracked_zip_count",
+    "local_zip_count",
+    "gitignore_rules_present"
+  ]
+}
