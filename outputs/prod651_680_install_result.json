@@ -1,0 +1,17 @@
+{
+  "task": "PROD-651..680",
+  "status": "PASS",
+  "phase": "Business Case Interactive Runner with Preflight and Live Delta",
+  "endpoints": [
+    "/api/casulo/business-runner/status",
+    "/api/casulo/business-runner/input-schema",
+    "/api/casulo/business-runner/sample-cases",
+    "/api/casulo/business-runner/runs",
+    "/api/casulo/business-runner/decisions",
+    "/api/casulo/business-runner/output-modes",
+    "/api/casulo/business-runner/telemetry",
+    "/api/casulo/business-runner/readiness",
+    "/api/casulo/business-runner/audit"
+  ],
+  "next_recommended_bundle": "PROD-681 Interactive Runner Feedback Calibration Loop"
+}

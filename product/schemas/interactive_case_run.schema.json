@@ -1,0 +1,13 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "interactive_case_run.schema.json",
+  "type": "object",
+  "required": [
+    "status",
+    "case_id",
+    "preflight",
+    "hallucination_budget",
+    "gate",
+    "output_mode"
+  ]
+}

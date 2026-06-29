@@ -1,0 +1,17 @@
+{
+  "contract": "casulo.business_case_interactive_runner.v0.1",
+  "purpose": "Accept controlled business cases through neutral seed, preflight, hallucination budget, live delta and output mode gating.",
+  "mode": "controlled_runner_no_external_execution",
+  "blocked_actions": [
+    "client_facing_claim",
+    "automatic_nomination",
+    "implementation_execution",
+    "production_activation",
+    "automatic_merge",
+    "credential_handling",
+    "automatic_threshold_mutation",
+    "autonomous_external_execution",
+    "real_world_side_effect",
+    "unapproved_real_company_data"
+  ]
+}

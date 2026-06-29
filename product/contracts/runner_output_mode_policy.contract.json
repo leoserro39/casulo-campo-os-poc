@@ -1,0 +1,10 @@
+{
+  "contract": "casulo.runner_output_mode_policy.v0.1",
+  "output_modes": [
+    "ANSWER",
+    "ALLOW_WITH_WARNING",
+    "EVIDENCE_REQUEST",
+    "HUMAN_REVIEW_PACKET",
+    "BLOCKED"
+  ]
+}

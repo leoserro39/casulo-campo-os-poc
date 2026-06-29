@@ -239,4 +239,19 @@ ENDPOINT_GROUPS = [
         ],
     },
 
+    {
+        "group": "business_case_interactive_runner",
+        "routes": [
+            {"path": "/api/casulo/business-runner/status", "file": "outputs/prod651_680_business_runner_status.json", "key": "status"},
+            {"path": "/api/casulo/business-runner/input-schema", "file": "outputs/prod651_680_business_runner_input_schema.json", "key": "input_schema"},
+            {"path": "/api/casulo/business-runner/sample-cases", "file": "outputs/prod651_680_business_runner_sample_cases.json", "key": "sample_cases"},
+            {"path": "/api/casulo/business-runner/runs", "file": "outputs/prod651_680_business_runner_runs.json", "key": "runs"},
+            {"path": "/api/casulo/business-runner/decisions", "file": "outputs/prod651_680_business_runner_decisions.json", "key": "decisions"},
+            {"path": "/api/casulo/business-runner/output-modes", "file": "outputs/prod651_680_business_runner_output_modes.json", "key": "output_modes"},
+            {"path": "/api/casulo/business-runner/telemetry", "file": "outputs/prod651_680_business_runner_telemetry.json", "key": "telemetry"},
+            {"path": "/api/casulo/business-runner/readiness", "file": "outputs/prod651_680_business_runner_readiness.json", "key": "readiness"},
+            {"path": "/api/casulo/business-runner/audit", "file": "outputs/prod651_680_business_runner_audit_report.json", "key": "audit"},
+        ],
+    },
+
 ]

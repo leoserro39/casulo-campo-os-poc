@@ -1,0 +1,12 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "runner_readiness.schema.json",
+  "type": "object",
+  "required": [
+    "status",
+    "decision",
+    "ready_for",
+    "not_ready_for",
+    "blocked_actions"
+  ]
+}

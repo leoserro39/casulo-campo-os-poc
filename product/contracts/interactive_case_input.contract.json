@@ -1,0 +1,18 @@
+{
+  "contract": "casulo.interactive_case_input.v0.1",
+  "required_fields": [
+    "case_id",
+    "business_domain",
+    "problem_summary",
+    "available_evidence",
+    "known_facts",
+    "assumptions",
+    "desired_decision_support",
+    "consent_scope",
+    "data_sensitivity"
+  ],
+  "allowed_consent_scope": [
+    "synthetic_fixture_only",
+    "explicitly_approved_anonymized_real_case"
+  ]
+}

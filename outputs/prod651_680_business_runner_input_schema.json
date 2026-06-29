@@ -1,0 +1,44 @@
+{
+  "status": "PASS",
+  "required_fields": [
+    "case_id",
+    "business_domain",
+    "problem_summary",
+    "available_evidence",
+    "known_facts",
+    "assumptions",
+    "desired_decision_support",
+    "consent_scope",
+    "data_sensitivity"
+  ],
+  "allowed_consent_scope": [
+    "synthetic_fixture_only",
+    "explicitly_approved_anonymized_real_case"
+  ],
+  "supported_domains": [
+    "accounting_tax_obligation",
+    "clinic_billing_glosa",
+    "clinic_scheduling",
+    "construction_project_control",
+    "contract_legal_review",
+    "ecommerce_order_ops",
+    "field_service_work_order",
+    "fleet_maintenance_ops",
+    "legal_office_case_intake",
+    "restaurant_cashflow",
+    "restaurant_inventory",
+    "small_industry_quality"
+  ],
+  "blocked_actions": [
+    "client_facing_claim",
+    "automatic_nomination",
+    "implementation_execution",
+    "production_activation",
+    "automatic_merge",
+    "credential_handling",
+    "automatic_threshold_mutation",
+    "autonomous_external_execution",
+    "real_world_side_effect",
+    "unapproved_real_company_data"
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "runner_telemetry.schema.json",
+  "type": "object",
+  "required": [
+    "status",
+    "event_count",
+    "events",
+    "blocked_actions"
+  ]
+}

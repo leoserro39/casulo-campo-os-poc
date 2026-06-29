@@ -1,0 +1,30 @@
+{
+  "status": "PASS",
+  "decision": "READY_FOR_CONTROLLED_ANONYMIZED_BUSINESS_CASE_PILOT",
+  "case_count": 6,
+  "ready_for": [
+    "controlled anonymized business case pilot",
+    "interactive preflight intake",
+    "telemetry-driven calibration",
+    "user feedback capture"
+  ],
+  "not_ready_for": [
+    "production activation",
+    "autonomous external execution",
+    "automatic threshold mutation",
+    "client-facing guarantees",
+    "unapproved real company data"
+  ],
+  "blocked_actions": [
+    "client_facing_claim",
+    "automatic_nomination",
+    "implementation_execution",
+    "production_activation",
+    "automatic_merge",
+    "credential_handling",
+    "automatic_threshold_mutation",
+    "autonomous_external_execution",
+    "real_world_side_effect",
+    "unapproved_real_company_data"
+  ]
+}

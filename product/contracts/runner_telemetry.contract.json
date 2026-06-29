@@ -1,0 +1,4 @@
+{
+  "contract": "casulo.runner_telemetry.v0.1",
+  "purpose": "Record preflight, budget, gate, output mode, safe escalation and feedback signals per run."
+}

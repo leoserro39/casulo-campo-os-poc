@@ -1,0 +1,698 @@
+{
+  "status": "PASS",
+  "case_count": 6,
+  "runs": [
+    {
+      "status": "PASS",
+      "case_id": "INTERACTIVE-001",
+      "input": {
+        "case_id": "INTERACTIVE-001",
+        "business_domain": "restaurant_inventory",
+        "problem_summary": "O estoque do restaurante está com divergência entre lista de compras, consumo real e perda diária.",
+        "available_evidence": [
+          "stock_list",
+          "purchase_frequency",
+          "waste_notes",
+          "menu_items"
+        ],
+        "known_facts": [
+          "há perda recorrente",
+          "há itens sem contagem diária"
+        ],
+        "assumptions": [
+          "a divergência pode estar concentrada nos itens perecíveis"
+        ],
+        "desired_decision_support": "mapear gargalos e sugerir coleta de evidência",
+        "consent_scope": "synthetic_fixture_only",
+        "data_sensitivity": "low"
+      },
+      "preflight": {
+        "status": "PASS",
+        "domain": "restaurant_inventory",
+        "supported_domain": true,
+        "scenario": "conflicting_values",
+        "domain_sensitivity": 1.0,
+        "domain_fit": 0.92,
+        "evidence_readiness": 0.8,
+        "schema_completeness": 1.0,
+        "consent_scope_score": 1.0,
+        "sensitivity_pressure": 0.0,
+        "contradiction_pressure": 1.0,
+        "execution_risk": 0.0,
+        "preflight_score": 0.6624,
+        "activation_state": "CANDIDATE_DOMAIN_REQUIRE_EVIDENCE"
+      },
+      "hallucination_budget": {
+        "hallucination_budget": 0.6936,
+        "reasoning_mode": "GUIDED_REASONING"
+      },
+      "decision": {
+        "status": "PASS",
+        "adjusted_risk": 1.0,
+        "live_delta_score": 0.0555,
+        "gate": "HUMAN_REVIEW_REQUIRED",
+        "output_mode": "HUMAN_REVIEW_PACKET",
+        "gate_reason": "high-stakes, conflict, stale evidence or regulated review signal",
+        "external_execution_allowed": false,
+        "automatic_threshold_mutation_allowed": false
+      },
+      "output": {
+        "status": "PASS",
+        "case_id": "INTERACTIVE-001",
+        "output_mode": "HUMAN_REVIEW_PACKET",
+        "summary": "Do not close the decision; prepare a review packet for human evaluation.",
+        "allowed_actions": [
+          "summarize facts",
+          "list risks",
+          "list questions",
+          "prepare review handoff"
+        ],
+        "blocked_actions": [
+          "client_facing_claim",
+          "automatic_nomination",
+          "implementation_execution",
+          "production_activation",
+          "automatic_merge",
+          "credential_handling",
+          "automatic_threshold_mutation",
+          "autonomous_external_execution",
+          "real_world_side_effect",
+          "unapproved_real_company_data"
+        ]
+      },
+      "telemetry_events": [
+        {
+          "event_type": "INTERACTIVE_CASE_RECEIVED",
+          "case_id": "INTERACTIVE-001",
+          "domain": "restaurant_inventory"
+        },
+        {
+          "event_type": "PREFLIGHT_COMPLETED",
+          "case_id": "INTERACTIVE-001",
+          "preflight_score": 0.6624,
+          "activation_state": "CANDIDATE_DOMAIN_REQUIRE_EVIDENCE"
+        },
+        {
+          "event_type": "HALLUCINATION_BUDGET_ASSIGNED",
+          "case_id": "INTERACTIVE-001",
+          "budget": 0.6936,
+          "reasoning_mode": "GUIDED_REASONING"
+        },
+        {
+          "event_type": "GATE_DECISION_EMITTED",
+          "case_id": "INTERACTIVE-001",
+          "gate": "HUMAN_REVIEW_REQUIRED",
+          "output_mode": "HUMAN_REVIEW_PACKET"
+        }
+      ],
+      "blocked_actions": [
+        "client_facing_claim",
+        "automatic_nomination",
+        "implementation_execution",
+        "production_activation",
+        "automatic_merge",
+        "credential_handling",
+        "automatic_threshold_mutation",
+        "autonomous_external_execution",
+        "real_world_side_effect",
+        "unapproved_real_company_data"
+      ]
+    },
+    {
+      "status": "PASS",
+      "case_id": "INTERACTIVE-002",
+      "input": {
+        "case_id": "INTERACTIVE-002",
+        "business_domain": "restaurant_cashflow",
+        "problem_summary": "O caixa fecha negativo em dias de maior venda e há fornecedor vencendo antes do recebimento.",
+        "available_evidence": [
+          "daily_revenue_range",
+          "fixed_costs",
+          "supplier_payables"
+        ],
+        "known_facts": [
+          "receita diária varia muito",
+          "fornecedor vence antes do pico de recebimento"
+        ],
+        "assumptions": [
+          "há descasamento de prazo"
+        ],
+        "desired_decision_support": "diagnóstico de fluxo e perguntas para decisão",
+        "consent_scope": "synthetic_fixture_only",
+        "data_sensitivity": "medium"
+      },
+      "preflight": {
+        "status": "PASS",
+        "domain": "restaurant_cashflow",
+        "supported_domain": true,
+        "scenario": "high_stakes_claim",
+        "domain_sensitivity": 1.2,
+        "domain_fit": 0.92,
+        "evidence_readiness": 0.64,
+        "schema_completeness": 1.0,
+        "consent_scope_score": 1.0,
+        "sensitivity_pressure": 0.3333,
+        "contradiction_pressure": 0.0,
+        "execution_risk": 0.0,
+        "preflight_score": 0.7904,
+        "activation_state": "CONTROLLED_ACTIVE_DOMAIN"
+      },
+      "hallucination_budget": {
+        "hallucination_budget": 0.7787,
+        "reasoning_mode": "FULL_REASONING_WITH_GROUNDING"
+      },
+      "decision": {
+        "status": "PASS",
+        "adjusted_risk": 1.0,
+        "live_delta_score": 0.1622,
+        "gate": "HUMAN_REVIEW_REQUIRED",
+        "output_mode": "HUMAN_REVIEW_PACKET",
+        "gate_reason": "high-stakes, conflict, stale evidence or regulated review signal",
+        "external_execution_allowed": false,
+        "automatic_threshold_mutation_allowed": false
+      },
+      "output": {
+        "status": "PASS",
+        "case_id": "INTERACTIVE-002",
+        "output_mode": "HUMAN_REVIEW_PACKET",
+        "summary": "Do not close the decision; prepare a review packet for human evaluation.",
+        "allowed_actions": [
+          "summarize facts",
+          "list risks",
+          "list questions",
+          "prepare review handoff"
+        ],
+        "blocked_actions": [
+          "client_facing_claim",
+          "automatic_nomination",
+          "implementation_execution",
+          "production_activation",
+          "automatic_merge",
+          "credential_handling",
+          "automatic_threshold_mutation",
+          "autonomous_external_execution",
+          "real_world_side_effect",
+          "unapproved_real_company_data"
+        ]
+      },
+      "telemetry_events": [
+        {
+          "event_type": "INTERACTIVE_CASE_RECEIVED",
+          "case_id": "INTERACTIVE-002",
+          "domain": "restaurant_cashflow"
+        },
+        {
+          "event_type": "PREFLIGHT_COMPLETED",
+          "case_id": "INTERACTIVE-002",
+          "preflight_score": 0.7904,
+          "activation_state": "CONTROLLED_ACTIVE_DOMAIN"
+        },
+        {
+          "event_type": "HALLUCINATION_BUDGET_ASSIGNED",
+          "case_id": "INTERACTIVE-002",
+          "budget": 0.7787,
+          "reasoning_mode": "FULL_REASONING_WITH_GROUNDING"
+        },
+        {
+          "event_type": "GATE_DECISION_EMITTED",
+          "case_id": "INTERACTIVE-002",
+          "gate": "HUMAN_REVIEW_REQUIRED",
+          "output_mode": "HUMAN_REVIEW_PACKET"
+        }
+      ],
+      "blocked_actions": [
+        "client_facing_claim",
+        "automatic_nomination",
+        "implementation_execution",
+        "production_activation",
+        "automatic_merge",
+        "credential_handling",
+        "automatic_threshold_mutation",
+        "autonomous_external_execution",
+        "real_world_side_effect",
+        "unapproved_real_company_data"
+      ]
+    },
+    {
+      "status": "PASS",
+      "case_id": "INTERACTIVE-003",
+      "input": {
+        "case_id": "INTERACTIVE-003",
+        "business_domain": "legal_office_case_intake",
+        "problem_summary": "Cliente relata caso jurídico com documentos incompletos e prazo possivelmente próximo.",
+        "available_evidence": [
+          "case_summary",
+          "document_list"
+        ],
+        "known_facts": [
+          "documentos estão incompletos",
+          "prazo não confirmado"
+        ],
+        "assumptions": [
+          "pode haver risco de prazo"
+        ],
+        "desired_decision_support": "organizar pacote para revisão humana",
+        "consent_scope": "synthetic_fixture_only",
+        "data_sensitivity": "high"
+      },
+      "preflight": {
+        "status": "PASS",
+        "domain": "legal_office_case_intake",
+        "supported_domain": true,
+        "scenario": "high_stakes_claim",
+        "domain_sensitivity": 1.5,
+        "domain_fit": 0.92,
+        "evidence_readiness": 0.43,
+        "schema_completeness": 1.0,
+        "consent_scope_score": 1.0,
+        "sensitivity_pressure": 0.8333,
+        "contradiction_pressure": 0.0,
+        "execution_risk": 0.0,
+        "preflight_score": 0.7184,
+        "activation_state": "CANDIDATE_DOMAIN_REQUIRE_EVIDENCE"
+      },
+      "hallucination_budget": {
+        "hallucination_budget": 0.6741,
+        "reasoning_mode": "GUIDED_REASONING"
+      },
+      "decision": {
+        "status": "PASS",
+        "adjusted_risk": 1.0,
+        "live_delta_score": 0.3147,
+        "gate": "HUMAN_REVIEW_REQUIRED",
+        "output_mode": "HUMAN_REVIEW_PACKET",
+        "gate_reason": "high-stakes, conflict, stale evidence or regulated review signal",
+        "external_execution_allowed": false,
+        "automatic_threshold_mutation_allowed": false
+      },
+      "output": {
+        "status": "PASS",
+        "case_id": "INTERACTIVE-003",
+        "output_mode": "HUMAN_REVIEW_PACKET",
+        "summary": "Do not close the decision; prepare a review packet for human evaluation.",
+        "allowed_actions": [
+          "summarize facts",
+          "list risks",
+          "list questions",
+          "prepare review handoff"
+        ],
+        "blocked_actions": [
+          "client_facing_claim",
+          "automatic_nomination",
+          "implementation_execution",
+          "production_activation",
+          "automatic_merge",
+          "credential_handling",
+          "automatic_threshold_mutation",
+          "autonomous_external_execution",
+          "real_world_side_effect",
+          "unapproved_real_company_data"
+        ]
+      },
+      "telemetry_events": [
+        {
+          "event_type": "INTERACTIVE_CASE_RECEIVED",
+          "case_id": "INTERACTIVE-003",
+          "domain": "legal_office_case_intake"
+        },
+        {
+          "event_type": "PREFLIGHT_COMPLETED",
+          "case_id": "INTERACTIVE-003",
+          "preflight_score": 0.7184,
+          "activation_state": "CANDIDATE_DOMAIN_REQUIRE_EVIDENCE"
+        },
+        {
+          "event_type": "HALLUCINATION_BUDGET_ASSIGNED",
+          "case_id": "INTERACTIVE-003",
+          "budget": 0.6741,
+          "reasoning_mode": "GUIDED_REASONING"
+        },
+        {
+          "event_type": "GATE_DECISION_EMITTED",
+          "case_id": "INTERACTIVE-003",
+          "gate": "HUMAN_REVIEW_REQUIRED",
+          "output_mode": "HUMAN_REVIEW_PACKET"
+        }
+      ],
+      "blocked_actions": [
+        "client_facing_claim",
+        "automatic_nomination",
+        "implementation_execution",
+        "production_activation",
+        "automatic_merge",
+        "credential_handling",
+        "automatic_threshold_mutation",
+        "autonomous_external_execution",
+        "real_world_side_effect",
+        "unapproved_real_company_data"
+      ]
+    },
+    {
+      "status": "PASS",
+      "case_id": "INTERACTIVE-004",
+      "input": {
+        "case_id": "INTERACTIVE-004",
+        "business_domain": "clinic_billing_glosa",
+        "problem_summary": "Glosa recorrente com motivo divergente entre faturamento e retorno do convênio.",
+        "available_evidence": [
+          "billing_status",
+          "denial_reason",
+          "date_of_claim"
+        ],
+        "known_facts": [
+          "há divergência de motivo",
+          "data da cobrança existe"
+        ],
+        "assumptions": [
+          "pode faltar regra de convênio"
+        ],
+        "desired_decision_support": "mapear evidência faltante e preparar revisão",
+        "consent_scope": "synthetic_fixture_only",
+        "data_sensitivity": "high"
+      },
+      "preflight": {
+        "status": "PASS",
+        "domain": "clinic_billing_glosa",
+        "supported_domain": true,
+        "scenario": "conflicting_values",
+        "domain_sensitivity": 1.45,
+        "domain_fit": 0.92,
+        "evidence_readiness": 0.59,
+        "schema_completeness": 1.0,
+        "consent_scope_score": 1.0,
+        "sensitivity_pressure": 0.75,
+        "contradiction_pressure": 1.0,
+        "execution_risk": 0.0,
+        "preflight_score": 0.5754,
+        "activation_state": "EXPLORATORY_ONLY"
+      },
+      "hallucination_budget": {
+        "hallucination_budget": 0.564,
+        "reasoning_mode": "GUIDED_REASONING"
+      },
+      "decision": {
+        "status": "PASS",
+        "adjusted_risk": 1.0,
+        "live_delta_score": 0.258,
+        "gate": "HUMAN_REVIEW_REQUIRED",
+        "output_mode": "HUMAN_REVIEW_PACKET",
+        "gate_reason": "high-stakes, conflict, stale evidence or regulated review signal",
+        "external_execution_allowed": false,
+        "automatic_threshold_mutation_allowed": false
+      },
+      "output": {
+        "status": "PASS",
+        "case_id": "INTERACTIVE-004",
+        "output_mode": "HUMAN_REVIEW_PACKET",
+        "summary": "Do not close the decision; prepare a review packet for human evaluation.",
+        "allowed_actions": [
+          "summarize facts",
+          "list risks",
+          "list questions",
+          "prepare review handoff"
+        ],
+        "blocked_actions": [
+          "client_facing_claim",
+          "automatic_nomination",
+          "implementation_execution",
+          "production_activation",
+          "automatic_merge",
+          "credential_handling",
+          "automatic_threshold_mutation",
+          "autonomous_external_execution",
+          "real_world_side_effect",
+          "unapproved_real_company_data"
+        ]
+      },
+      "telemetry_events": [
+        {
+          "event_type": "INTERACTIVE_CASE_RECEIVED",
+          "case_id": "INTERACTIVE-004",
+          "domain": "clinic_billing_glosa"
+        },
+        {
+          "event_type": "PREFLIGHT_COMPLETED",
+          "case_id": "INTERACTIVE-004",
+          "preflight_score": 0.5754,
+          "activation_state": "EXPLORATORY_ONLY"
+        },
+        {
+          "event_type": "HALLUCINATION_BUDGET_ASSIGNED",
+          "case_id": "INTERACTIVE-004",
+          "budget": 0.564,
+          "reasoning_mode": "GUIDED_REASONING"
+        },
+        {
+          "event_type": "GATE_DECISION_EMITTED",
+          "case_id": "INTERACTIVE-004",
+          "gate": "HUMAN_REVIEW_REQUIRED",
+          "output_mode": "HUMAN_REVIEW_PACKET"
+        }
+      ],
+      "blocked_actions": [
+        "client_facing_claim",
+        "automatic_nomination",
+        "implementation_execution",
+        "production_activation",
+        "automatic_merge",
+        "credential_handling",
+        "automatic_threshold_mutation",
+        "autonomous_external_execution",
+        "real_world_side_effect",
+        "unapproved_real_company_data"
+      ]
+    },
+    {
+      "status": "PASS",
+      "case_id": "INTERACTIVE-005",
+      "input": {
+        "case_id": "INTERACTIVE-005",
+        "business_domain": "ecommerce_order_ops",
+        "problem_summary": "Pedido atrasado com estoque disponível, mas status de envio sem atualização.",
+        "available_evidence": [
+          "order_status",
+          "inventory_status",
+          "shipping_status"
+        ],
+        "known_facts": [
+          "pedido pago",
+          "estoque disponível",
+          "status de envio parado"
+        ],
+        "assumptions": [
+          "pode haver falha de separação ou transportadora"
+        ],
+        "desired_decision_support": "triagem operacional sem enviar mensagem ao cliente",
+        "consent_scope": "synthetic_fixture_only",
+        "data_sensitivity": "medium"
+      },
+      "preflight": {
+        "status": "PASS",
+        "domain": "ecommerce_order_ops",
+        "supported_domain": true,
+        "scenario": "execution_request",
+        "domain_sensitivity": 1.1,
+        "domain_fit": 0.92,
+        "evidence_readiness": 0.72,
+        "schema_completeness": 1.0,
+        "consent_scope_score": 1.0,
+        "sensitivity_pressure": 0.1667,
+        "contradiction_pressure": 0.0,
+        "execution_risk": 1.0,
+        "preflight_score": 0.7964,
+        "activation_state": "CONTROLLED_ACTIVE_DOMAIN"
+      },
+      "hallucination_budget": {
+        "hallucination_budget": 0.5761,
+        "reasoning_mode": "GUIDED_REASONING"
+      },
+      "decision": {
+        "status": "PASS",
+        "adjusted_risk": 1.0,
+        "live_delta_score": 0.1088,
+        "gate": "UNSUPPORTED_BLOCKED",
+        "output_mode": "BLOCKED",
+        "gate_reason": "unsupported domain or external execution request",
+        "external_execution_allowed": false,
+        "automatic_threshold_mutation_allowed": false
+      },
+      "output": {
+        "status": "PASS",
+        "case_id": "INTERACTIVE-005",
+        "output_mode": "BLOCKED",
+        "summary": "Block the request and explain the unsupported/execution limitation.",
+        "allowed_actions": [
+          "explain block reason",
+          "suggest safe reformulation",
+          "request approved/anonymized data"
+        ],
+        "blocked_actions": [
+          "client_facing_claim",
+          "automatic_nomination",
+          "implementation_execution",
+          "production_activation",
+          "automatic_merge",
+          "credential_handling",
+          "automatic_threshold_mutation",
+          "autonomous_external_execution",
+          "real_world_side_effect",
+          "unapproved_real_company_data"
+        ]
+      },
+      "telemetry_events": [
+        {
+          "event_type": "INTERACTIVE_CASE_RECEIVED",
+          "case_id": "INTERACTIVE-005",
+          "domain": "ecommerce_order_ops"
+        },
+        {
+          "event_type": "PREFLIGHT_COMPLETED",
+          "case_id": "INTERACTIVE-005",
+          "preflight_score": 0.7964,
+          "activation_state": "CONTROLLED_ACTIVE_DOMAIN"
+        },
+        {
+          "event_type": "HALLUCINATION_BUDGET_ASSIGNED",
+          "case_id": "INTERACTIVE-005",
+          "budget": 0.5761,
+          "reasoning_mode": "GUIDED_REASONING"
+        },
+        {
+          "event_type": "GATE_DECISION_EMITTED",
+          "case_id": "INTERACTIVE-005",
+          "gate": "UNSUPPORTED_BLOCKED",
+          "output_mode": "BLOCKED"
+        }
+      ],
+      "blocked_actions": [
+        "client_facing_claim",
+        "automatic_nomination",
+        "implementation_execution",
+        "production_activation",
+        "automatic_merge",
+        "credential_handling",
+        "automatic_threshold_mutation",
+        "autonomous_external_execution",
+        "real_world_side_effect",
+        "unapproved_real_company_data"
+      ]
+    },
+    {
+      "status": "PASS",
+      "case_id": "INTERACTIVE-006",
+      "input": {
+        "case_id": "INTERACTIVE-006",
+        "business_domain": "unknown_domain",
+        "problem_summary": "Executar automaticamente uma ação externa sem dados mínimos.",
+        "available_evidence": [],
+        "known_facts": [],
+        "assumptions": [],
+        "desired_decision_support": "executar ação",
+        "consent_scope": "synthetic_fixture_only",
+        "data_sensitivity": "unknown"
+      },
+      "preflight": {
+        "status": "PASS",
+        "domain": "unknown_domain",
+        "supported_domain": false,
+        "scenario": "unsupported_request",
+        "domain_sensitivity": 1.6,
+        "domain_fit": 0.0,
+        "evidence_readiness": 0.0,
+        "schema_completeness": 1.0,
+        "consent_scope_score": 1.0,
+        "sensitivity_pressure": 1.0,
+        "contradiction_pressure": 0.0,
+        "execution_risk": 0.0,
+        "preflight_score": 0.42,
+        "activation_state": "DOMAIN_NOT_READY_COLLECT_MINIMUM_DATA"
+      },
+      "hallucination_budget": {
+        "hallucination_budget": 0.38,
+        "reasoning_mode": "GAP_MAPPING_ONLY"
+      },
+      "decision": {
+        "status": "PASS",
+        "adjusted_risk": 1.0,
+        "live_delta_score": 0.4555,
+        "gate": "UNSUPPORTED_BLOCKED",
+        "output_mode": "BLOCKED",
+        "gate_reason": "unsupported domain or external execution request",
+        "external_execution_allowed": false,
+        "automatic_threshold_mutation_allowed": false
+      },
+      "output": {
+        "status": "PASS",
+        "case_id": "INTERACTIVE-006",
+        "output_mode": "BLOCKED",
+        "summary": "Block the request and explain the unsupported/execution limitation.",
+        "allowed_actions": [
+          "explain block reason",
+          "suggest safe reformulation",
+          "request approved/anonymized data"
+        ],
+        "blocked_actions": [
+          "client_facing_claim",
+          "automatic_nomination",
+          "implementation_execution",
+          "production_activation",
+          "automatic_merge",
+          "credential_handling",
+          "automatic_threshold_mutation",
+          "autonomous_external_execution",
+          "real_world_side_effect",
+          "unapproved_real_company_data"
+        ]
+      },
+      "telemetry_events": [
+        {
+          "event_type": "INTERACTIVE_CASE_RECEIVED",
+          "case_id": "INTERACTIVE-006",
+          "domain": "unknown_domain"
+        },
+        {
+          "event_type": "PREFLIGHT_COMPLETED",
+          "case_id": "INTERACTIVE-006",
+          "preflight_score": 0.42,
+          "activation_state": "DOMAIN_NOT_READY_COLLECT_MINIMUM_DATA"
+        },
+        {
+          "event_type": "HALLUCINATION_BUDGET_ASSIGNED",
+          "case_id": "INTERACTIVE-006",
+          "budget": 0.38,
+          "reasoning_mode": "GAP_MAPPING_ONLY"
+        },
+        {
+          "event_type": "GATE_DECISION_EMITTED",
+          "case_id": "INTERACTIVE-006",
+          "gate": "UNSUPPORTED_BLOCKED",
+          "output_mode": "BLOCKED"
+        }
+      ],
+      "blocked_actions": [
+        "client_facing_claim",
+        "automatic_nomination",
+        "implementation_execution",
+        "production_activation",
+        "automatic_merge",
+        "credential_handling",
+        "automatic_threshold_mutation",
+        "autonomous_external_execution",
+        "real_world_side_effect",
+        "unapproved_real_company_data"
+      ]
+    }
+  ],
+  "blocked_actions": [
+    "client_facing_claim",
+    "automatic_nomination",
+    "implementation_execution",
+    "production_activation",
+    "automatic_merge",
+    "credential_handling",
+    "automatic_threshold_mutation",
+    "autonomous_external_execution",
+    "real_world_side_effect",
+    "unapproved_real_company_data"
+  ]
+}

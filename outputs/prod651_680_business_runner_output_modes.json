@@ -1,0 +1,159 @@
+{
+  "status": "PASS",
+  "outputs": [
+    {
+      "status": "PASS",
+      "case_id": "INTERACTIVE-001",
+      "output_mode": "HUMAN_REVIEW_PACKET",
+      "summary": "Do not close the decision; prepare a review packet for human evaluation.",
+      "allowed_actions": [
+        "summarize facts",
+        "list risks",
+        "list questions",
+        "prepare review handoff"
+      ],
+      "blocked_actions": [
+        "client_facing_claim",
+        "automatic_nomination",
+        "implementation_execution",
+        "production_activation",
+        "automatic_merge",
+        "credential_handling",
+        "automatic_threshold_mutation",
+        "autonomous_external_execution",
+        "real_world_side_effect",
+        "unapproved_real_company_data"
+      ]
+    },
+    {
+      "status": "PASS",
+      "case_id": "INTERACTIVE-002",
+      "output_mode": "HUMAN_REVIEW_PACKET",
+      "summary": "Do not close the decision; prepare a review packet for human evaluation.",
+      "allowed_actions": [
+        "summarize facts",
+        "list risks",
+        "list questions",
+        "prepare review handoff"
+      ],
+      "blocked_actions": [
+        "client_facing_claim",
+        "automatic_nomination",
+        "implementation_execution",
+        "production_activation",
+        "automatic_merge",
+        "credential_handling",
+        "automatic_threshold_mutation",
+        "autonomous_external_execution",
+        "real_world_side_effect",
+        "unapproved_real_company_data"
+      ]
+    },
+    {
+      "status": "PASS",
+      "case_id": "INTERACTIVE-003",
+      "output_mode": "HUMAN_REVIEW_PACKET",
+      "summary": "Do not close the decision; prepare a review packet for human evaluation.",
+      "allowed_actions": [
+        "summarize facts",
+        "list risks",
+        "list questions",
+        "prepare review handoff"
+      ],
+      "blocked_actions": [
+        "client_facing_claim",
+        "automatic_nomination",
+        "implementation_execution",
+        "production_activation",
+        "automatic_merge",
+        "credential_handling",
+        "automatic_threshold_mutation",
+        "autonomous_external_execution",
+        "real_world_side_effect",
+        "unapproved_real_company_data"
+      ]
+    },
+    {
+      "status": "PASS",
+      "case_id": "INTERACTIVE-004",
+      "output_mode": "HUMAN_REVIEW_PACKET",
+      "summary": "Do not close the decision; prepare a review packet for human evaluation.",
+      "allowed_actions": [
+        "summarize facts",
+        "list risks",
+        "list questions",
+        "prepare review handoff"
+      ],
+      "blocked_actions": [
+        "client_facing_claim",
+        "automatic_nomination",
+        "implementation_execution",
+        "production_activation",
+        "automatic_merge",
+        "credential_handling",
+        "automatic_threshold_mutation",
+        "autonomous_external_execution",
+        "real_world_side_effect",
+        "unapproved_real_company_data"
+      ]
+    },
+    {
+      "status": "PASS",
+      "case_id": "INTERACTIVE-005",
+      "output_mode": "BLOCKED",
+      "summary": "Block the request and explain the unsupported/execution limitation.",
+      "allowed_actions": [
+        "explain block reason",
+        "suggest safe reformulation",
+        "request approved/anonymized data"
+      ],
+      "blocked_actions": [
+        "client_facing_claim",
+        "automatic_nomination",
+        "implementation_execution",
+        "production_activation",
+        "automatic_merge",
+        "credential_handling",
+        "automatic_threshold_mutation",
+        "autonomous_external_execution",
+        "real_world_side_effect",
+        "unapproved_real_company_data"
+      ]
+    },
+    {
+      "status": "PASS",
+      "case_id": "INTERACTIVE-006",
+      "output_mode": "BLOCKED",
+      "summary": "Block the request and explain the unsupported/execution limitation.",
+      "allowed_actions": [
+        "explain block reason",
+        "suggest safe reformulation",
+        "request approved/anonymized data"
+      ],
+      "blocked_actions": [
+        "client_facing_claim",
+        "automatic_nomination",
+        "implementation_execution",
+        "production_activation",
+        "automatic_merge",
+        "credential_handling",
+        "automatic_threshold_mutation",
+        "autonomous_external_execution",
+        "real_world_side_effect",
+        "unapproved_real_company_data"
+      ]
+    }
+  ],
+  "blocked_actions": [
+    "client_facing_claim",
+    "automatic_nomination",
+    "implementation_execution",
+    "production_activation",
+    "automatic_merge",
+    "credential_handling",
+    "automatic_threshold_mutation",
+    "autonomous_external_execution",
+    "real_world_side_effect",
+    "unapproved_real_company_data"
+  ]
+}
