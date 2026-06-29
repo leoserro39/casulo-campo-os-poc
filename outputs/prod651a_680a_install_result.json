@@ -1,0 +1,15 @@
+{
+  "task": "PROD-651A..680A",
+  "status": "PASS",
+  "phase": "Business Runner Risk Scale and Telemetry Integrity Hotfix",
+  "endpoints": [
+    "/api/casulo/business-runner-risk/status",
+    "/api/casulo/business-runner-risk/runs",
+    "/api/casulo/business-runner-risk/decisions",
+    "/api/casulo/business-runner-risk/telemetry",
+    "/api/casulo/business-runner-risk/integrity",
+    "/api/casulo/business-runner-risk/readiness",
+    "/api/casulo/business-runner-risk/audit"
+  ],
+  "next_recommended_bundle": "PROD-681 Interactive Runner Feedback Calibration Loop"
+}

@@ -254,4 +254,17 @@ ENDPOINT_GROUPS = [
         ],
     },
 
+    {
+        "group": "business_runner_risk_scale_hotfix",
+        "routes": [
+            {"path": "/api/casulo/business-runner-risk/status", "file": "outputs/prod651a_680a_business_runner_status.json", "key": "status"},
+            {"path": "/api/casulo/business-runner-risk/runs", "file": "outputs/prod651a_680a_business_runner_runs.json", "key": "runs"},
+            {"path": "/api/casulo/business-runner-risk/decisions", "file": "outputs/prod651a_680a_business_runner_decisions.json", "key": "decisions"},
+            {"path": "/api/casulo/business-runner-risk/telemetry", "file": "outputs/prod651a_680a_business_runner_telemetry.json", "key": "telemetry"},
+            {"path": "/api/casulo/business-runner-risk/integrity", "file": "outputs/prod651a_680a_business_runner_risk_integrity.json", "key": "risk_integrity"},
+            {"path": "/api/casulo/business-runner-risk/readiness", "file": "outputs/prod651a_680a_business_runner_readiness.json", "key": "readiness"},
+            {"path": "/api/casulo/business-runner-risk/audit", "file": "outputs/prod651a_680a_business_runner_audit_report.json", "key": "audit"},
+        ],
+    },
+
 ]

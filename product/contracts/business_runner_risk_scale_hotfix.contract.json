@@ -1,0 +1,17 @@
+{
+  "contract": "casulo.business_runner_risk_scale_hotfix.v0.1",
+  "purpose": "Correct runner adjusted_risk scale to 0-100 and protect telemetry against collapsed risk metrics.",
+  "mode": "hotfix_no_behavioral_auto_mutation",
+  "blocked_actions": [
+    "client_facing_claim",
+    "automatic_nomination",
+    "implementation_execution",
+    "production_activation",
+    "automatic_merge",
+    "credential_handling",
+    "automatic_threshold_mutation",
+    "autonomous_external_execution",
+    "real_world_side_effect",
+    "unapproved_real_company_data"
+  ]
+}

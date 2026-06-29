@@ -1,0 +1,89 @@
+{
+  "status": "PASS",
+  "decisions": [
+    {
+      "case_id": "INTERACTIVE-001",
+      "status": "PASS",
+      "adjusted_risk": 66.0,
+      "risk_band": "HIGH",
+      "live_delta_score": 0.413,
+      "gate": "HUMAN_REVIEW_REQUIRED",
+      "output_mode": "HUMAN_REVIEW_PACKET",
+      "gate_reason": "high-stakes, conflict, stale evidence or regulated review signal",
+      "external_execution_allowed": false,
+      "automatic_threshold_mutation_allowed": false
+    },
+    {
+      "case_id": "INTERACTIVE-002",
+      "status": "PASS",
+      "adjusted_risk": 43.8,
+      "risk_band": "MEDIUM",
+      "live_delta_score": 0.3976,
+      "gate": "HUMAN_REVIEW_REQUIRED",
+      "output_mode": "HUMAN_REVIEW_PACKET",
+      "gate_reason": "high-stakes, conflict, stale evidence or regulated review signal",
+      "external_execution_allowed": false,
+      "automatic_threshold_mutation_allowed": false
+    },
+    {
+      "case_id": "INTERACTIVE-003",
+      "status": "PASS",
+      "adjusted_risk": 61.35,
+      "risk_band": "HIGH",
+      "live_delta_score": 0.6466,
+      "gate": "HUMAN_REVIEW_REQUIRED",
+      "output_mode": "HUMAN_REVIEW_PACKET",
+      "gate_reason": "high-stakes, conflict, stale evidence or regulated review signal",
+      "external_execution_allowed": false,
+      "automatic_threshold_mutation_allowed": false
+    },
+    {
+      "case_id": "INTERACTIVE-004",
+      "status": "PASS",
+      "adjusted_risk": 86.55,
+      "risk_band": "CRITICAL",
+      "live_delta_score": 0.7285,
+      "gate": "HUMAN_REVIEW_REQUIRED",
+      "output_mode": "HUMAN_REVIEW_PACKET",
+      "gate_reason": "high-stakes, conflict, stale evidence or regulated review signal",
+      "external_execution_allowed": false,
+      "automatic_threshold_mutation_allowed": false
+    },
+    {
+      "case_id": "INTERACTIVE-005",
+      "status": "PASS",
+      "adjusted_risk": 87.4,
+      "risk_band": "CRITICAL",
+      "live_delta_score": 0.584,
+      "gate": "UNSUPPORTED_BLOCKED",
+      "output_mode": "BLOCKED",
+      "gate_reason": "unsupported domain or external execution request",
+      "external_execution_allowed": false,
+      "automatic_threshold_mutation_allowed": false
+    },
+    {
+      "case_id": "INTERACTIVE-006",
+      "status": "PASS",
+      "adjusted_risk": 87.0,
+      "risk_band": "CRITICAL",
+      "live_delta_score": 0.9285,
+      "gate": "UNSUPPORTED_BLOCKED",
+      "output_mode": "BLOCKED",
+      "gate_reason": "unsupported domain or external execution request",
+      "external_execution_allowed": false,
+      "automatic_threshold_mutation_allowed": false
+    }
+  ],
+  "blocked_actions": [
+    "client_facing_claim",
+    "automatic_nomination",
+    "implementation_execution",
+    "production_activation",
+    "automatic_merge",
+    "credential_handling",
+    "automatic_threshold_mutation",
+    "autonomous_external_execution",
+    "real_world_side_effect",
+    "unapproved_real_company_data"
+  ]
+}

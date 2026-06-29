@@ -1,0 +1,48 @@
+{
+  "status": "PASS",
+  "generated_at": "2026-06-29T13:28:52+00:00",
+  "phase": "Business Runner Risk Scale and Telemetry Integrity Hotfix",
+  "mode": "controlled_runner_no_external_execution",
+  "case_count": 6,
+  "gate_distribution": {
+    "HUMAN_REVIEW_REQUIRED": 4,
+    "UNSUPPORTED_BLOCKED": 2
+  },
+  "output_mode_distribution": {
+    "BLOCKED": 2,
+    "HUMAN_REVIEW_PACKET": 4
+  },
+  "reasoning_mode_distribution": {
+    "FULL_REASONING_WITH_GROUNDING": 1,
+    "GAP_MAPPING_ONLY": 1,
+    "GUIDED_REASONING": 4
+  },
+  "risk_statistics": {
+    "min_adjusted_risk": 43.8,
+    "avg_adjusted_risk": 72.0167,
+    "max_adjusted_risk": 87.4,
+    "risk_range": 43.6,
+    "min_live_delta_score": 0.3976,
+    "avg_live_delta_score": 0.6164,
+    "max_live_delta_score": 0.9285
+  },
+  "risk_band_distribution": {
+    "CRITICAL": 3,
+    "HIGH": 2,
+    "MEDIUM": 1
+  },
+  "external_execution_allowed": false,
+  "automatic_threshold_mutation_allowed": false,
+  "blocked_actions": [
+    "client_facing_claim",
+    "automatic_nomination",
+    "implementation_execution",
+    "production_activation",
+    "automatic_merge",
+    "credential_handling",
+    "automatic_threshold_mutation",
+    "autonomous_external_execution",
+    "real_world_side_effect",
+    "unapproved_real_company_data"
+  ]
+}

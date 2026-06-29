@@ -1,0 +1,11 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "business_runner_risk_integrity.schema.json",
+  "type": "object",
+  "required": [
+    "status",
+    "risk_statistics",
+    "risk_band_distribution",
+    "blocked_actions"
+  ]
+}

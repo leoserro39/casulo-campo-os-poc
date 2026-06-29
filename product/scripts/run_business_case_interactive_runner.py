@@ -3,7 +3,6 @@ from __future__ import annotations
 
 import argparse
 import json
-import math
 from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any, Dict, List
@@ -119,8 +118,23 @@ def write_text(path: Path, text: str) -> None:
     path.parent.mkdir(parents=True, exist_ok=True)
     path.write_text(text, encoding="utf-8")
 
-def clamp(value: float, low: float = 0.0, high: float = 1.0) -> float:
-    return max(low, min(high, value))
+def clamp01(value: float) -> float:
+    return max(0.0, min(1.0, value))
+
+def clamp100(value: float) -> float:
+    return max(0.0, min(100.0, value))
+
+def avg(values: List[float]) -> float:
+    return round(sum(values) / len(values), 4) if values else 0.0
+
+def risk_band(risk: float) -> str:
+    if risk < 30:
+        return "LOW"
+    if risk < 55:
+        return "MEDIUM"
+    if risk < 75:
+        return "HIGH"
+    return "CRITICAL"
 
 def infer_evidence_score(case: Dict[str, Any]) -> float:
     evidence = case.get("available_evidence", [])
@@ -134,7 +148,7 @@ def infer_evidence_score(case: Dict[str, Any]) -> float:
         score -= 0.25
     if case.get("data_sensitivity") in {"high", "regulated"}:
         score -= 0.05
-    return round(clamp(score), 4)
+    return round(clamp01(score), 4)
 
 def infer_scenario(case: Dict[str, Any]) -> str:
     text = " ".join([
@@ -173,9 +187,9 @@ def preflight(case: Dict[str, Any]) -> Dict[str, Any]:
     execution = 1.0 if scenario == "execution_request" else 0.0
     consent_ok = 1.0 if case.get("consent_scope") in {"synthetic_fixture_only", "explicitly_approved_anonymized_real_case"} else 0.0
     domain_fit = 0.92 if supported else 0.0
-    sensitivity_pressure = clamp((sensitivity - 1.0) / 0.6)
+    sensitivity_pressure = clamp01((sensitivity - 1.0) / 0.6)
 
-    score = clamp(
+    score = clamp01(
         0.22 * domain_fit
         + 0.20 * evidence
         + 0.16 * schema_completeness
@@ -224,7 +238,7 @@ def hallucination_budget(case: Dict[str, Any], pf: Dict[str, Any]) -> Dict[str, 
     contradiction = pf["contradiction_pressure"]
     execution = pf["execution_risk"]
     missing = 1.0 if scenario in {"missing_required_field", "partial_context"} else 0.0
-    budget = clamp(
+    budget = clamp01(
         0.26 * evidence
         + 0.18 * pf["domain_fit"]
         + 0.16 * (1 - contradiction)
@@ -250,9 +264,15 @@ def decide_gate(case: Dict[str, Any], pf: Dict[str, Any], budget: Dict[str, Any]
     scenario = pf["scenario"]
     sensitivity = pf["domain_sensitivity"]
     evidence = pf["evidence_readiness"]
-    risk = clamp((1 - evidence) * 55 + sensitivity * 20 + pf["contradiction_pressure"] * 35 + pf["execution_risk"] * 50)
-    adjusted_risk = round(risk, 4)
-    live_delta_score = round(clamp((adjusted_risk / 100) * 0.55 + (1 - evidence) * 0.25 + pf["sensitivity_pressure"] * 0.20), 4)
+
+    raw_risk = (
+        (1 - evidence) * 55
+        + sensitivity * 20
+        + pf["contradiction_pressure"] * 35
+        + pf["execution_risk"] * 50
+    )
+    adjusted_risk = round(clamp100(raw_risk), 4)
+    live_delta_score = round(clamp01((adjusted_risk / 100) * 0.55 + (1 - evidence) * 0.25 + pf["sensitivity_pressure"] * 0.20), 4)
 
     if not pf["supported_domain"] or scenario in {"unsupported_request", "execution_request"}:
         gate = "UNSUPPORTED_BLOCKED"
@@ -292,6 +312,7 @@ def decide_gate(case: Dict[str, Any], pf: Dict[str, Any], budget: Dict[str, Any]
     return {
         "status": "PASS",
         "adjusted_risk": adjusted_risk,
+        "risk_band": risk_band(adjusted_risk),
         "live_delta_score": live_delta_score,
         "gate": gate,
         "output_mode": output_mode,
@@ -344,6 +365,7 @@ def run_case(case: Dict[str, Any]) -> Dict[str, Any]:
             {"event_type": "INTERACTIVE_CASE_RECEIVED", "case_id": case["case_id"], "domain": case.get("business_domain")},
             {"event_type": "PREFLIGHT_COMPLETED", "case_id": case["case_id"], "preflight_score": pf["preflight_score"], "activation_state": pf["activation_state"]},
             {"event_type": "HALLUCINATION_BUDGET_ASSIGNED", "case_id": case["case_id"], "budget": budget["hallucination_budget"], "reasoning_mode": budget["reasoning_mode"]},
+            {"event_type": "RISK_SCALE_ASSIGNED", "case_id": case["case_id"], "adjusted_risk": decision["adjusted_risk"], "risk_band": decision["risk_band"], "live_delta_score": decision["live_delta_score"]},
             {"event_type": "GATE_DECISION_EMITTED", "case_id": case["case_id"], "gate": decision["gate"], "output_mode": decision["output_mode"]},
         ],
         "blocked_actions": BLOCKED_ACTIONS,
@@ -371,43 +393,66 @@ def load_input_cases(repo: Path, explicit_file: str | None) -> List[Dict[str, An
 def build(repo: Path, input_file: str | None = None) -> Dict[str, Any]:
     out = repo / "outputs"
     generated_at = datetime.now(timezone.utc).replace(microsecond=0).isoformat()
-    upstream = load_json(out / "prod621b_650b_readiness.json", {})
-    upstream_ready = upstream.get("decision") == "READY_FOR_BUSINESS_CASE_INTERACTIVE_RUNNER_WITH_PREFLIGHT"
+    upstream = load_json(out / "prod651_680_business_runner_readiness.json", {})
+    upstream_ready = upstream.get("decision") == "READY_FOR_CONTROLLED_ANONYMIZED_BUSINESS_CASE_PILOT"
     cases = load_input_cases(repo, input_file)
     runs = [run_case(case) for case in cases]
 
     gate_distribution: Dict[str, int] = {}
     output_mode_distribution: Dict[str, int] = {}
     reasoning_mode_distribution: Dict[str, int] = {}
+    risk_band_distribution: Dict[str, int] = {}
+    risks: List[float] = []
+    deltas: List[float] = []
+
     for run in runs:
         gate = run["decision"]["gate"]
         mode = run["decision"]["output_mode"]
         reason = run["hallucination_budget"]["reasoning_mode"]
+        band = run["decision"]["risk_band"]
+        risk = float(run["decision"]["adjusted_risk"])
+        delta = float(run["decision"]["live_delta_score"])
         gate_distribution[gate] = gate_distribution.get(gate, 0) + 1
         output_mode_distribution[mode] = output_mode_distribution.get(mode, 0) + 1
         reasoning_mode_distribution[reason] = reasoning_mode_distribution.get(reason, 0) + 1
+        risk_band_distribution[band] = risk_band_distribution.get(band, 0) + 1
+        risks.append(risk)
+        deltas.append(delta)
 
-    input_schema = {
+    risk_statistics = {
+        "min_adjusted_risk": round(min(risks), 4) if risks else 0,
+        "avg_adjusted_risk": avg(risks),
+        "max_adjusted_risk": round(max(risks), 4) if risks else 0,
+        "risk_range": round(max(risks) - min(risks), 4) if risks else 0,
+        "min_live_delta_score": round(min(deltas), 4) if deltas else 0,
+        "avg_live_delta_score": avg(deltas),
+        "max_live_delta_score": round(max(deltas), 4) if deltas else 0,
+    }
+
+    risk_integrity = {
         "status": "PASS",
-        "required_fields": [
-            "case_id", "business_domain", "problem_summary", "available_evidence",
-            "known_facts", "assumptions", "desired_decision_support",
-            "consent_scope", "data_sensitivity"
-        ],
-        "allowed_consent_scope": ["synthetic_fixture_only", "explicitly_approved_anonymized_real_case"],
-        "supported_domains": sorted(SUPPORTED_DOMAINS.keys()),
+        "risk_statistics": risk_statistics,
+        "risk_band_distribution": dict(sorted(risk_band_distribution.items())),
+        "risk_scale": "adjusted_risk_0_100_live_delta_0_1",
+        "integrity_checks": {
+            "adjusted_risk_not_collapsed_to_one": not all(abs(r - 1.0) < 1e-9 for r in risks),
+            "adjusted_risk_has_operational_range": risk_statistics["risk_range"] > 5,
+            "live_delta_within_unit_interval": all(0 <= d <= 1 for d in deltas),
+        },
         "blocked_actions": BLOCKED_ACTIONS,
     }
 
     status = {
         "status": "PASS" if upstream_ready else "WARN",
         "generated_at": generated_at,
-        "phase": "Business Case Interactive Runner with Preflight and Live Delta",
+        "phase": "Business Runner Risk Scale and Telemetry Integrity Hotfix",
         "mode": "controlled_runner_no_external_execution",
         "case_count": len(runs),
         "gate_distribution": dict(sorted(gate_distribution.items())),
         "output_mode_distribution": dict(sorted(output_mode_distribution.items())),
         "reasoning_mode_distribution": dict(sorted(reasoning_mode_distribution.items())),
+        "risk_statistics": risk_statistics,
+        "risk_band_distribution": dict(sorted(risk_band_distribution.items())),
         "external_execution_allowed": False,
         "automatic_threshold_mutation_allowed": False,
         "blocked_actions": BLOCKED_ACTIONS,
@@ -422,13 +467,14 @@ def build(repo: Path, input_file: str | None = None) -> Dict[str, Any]:
 
     readiness = {
         "status": "PASS" if upstream_ready else "WARN",
-        "decision": "READY_FOR_CONTROLLED_ANONYMIZED_BUSINESS_CASE_PILOT" if upstream_ready else "REVIEW_UPSTREAM_PREFLIGHT_READINESS",
+        "decision": "READY_FOR_INTERACTIVE_FEEDBACK_CALIBRATION_LOOP" if upstream_ready else "REVIEW_UPSTREAM_RUNNER_READINESS",
         "case_count": len(runs),
+        "risk_integrity": risk_integrity["integrity_checks"],
         "ready_for": [
+            "interactive feedback calibration loop",
             "controlled anonymized business case pilot",
-            "interactive preflight intake",
-            "telemetry-driven calibration",
-            "user feedback capture"
+            "risk-band telemetry analysis",
+            "human feedback capture"
         ],
         "not_ready_for": [
             "production activation",
@@ -441,66 +487,65 @@ def build(repo: Path, input_file: str | None = None) -> Dict[str, Any]:
     }
 
     audit = {
-        "status": "PASS" if upstream_ready else "WARN",
-        "audit": "Business Case Interactive Runner audit",
+        "status": "PASS" if upstream_ready and all(risk_integrity["integrity_checks"].values()) else "WARN",
+        "audit": "Business Runner Risk Scale Hotfix audit",
         "case_count": len(runs),
         "external_execution_allowed": False,
         "automatic_threshold_mutation_allowed": False,
-        "finding": "PASS: interactive runner applies neutral preflight, hallucination budget, live delta gate, output mode and telemetry without external execution.",
+        "finding": "PASS: adjusted_risk now uses 0-100 scale, live_delta remains 0-1, and risk telemetry is not collapsed.",
         "readiness": readiness["decision"],
+        "risk_statistics": risk_statistics,
         "blocked_actions": BLOCKED_ACTIONS,
     }
 
     outputs = {
-        "prod651_680_business_runner_status.json": status,
-        "prod651_680_business_runner_input_schema.json": input_schema,
-        "prod651_680_business_runner_sample_cases.json": {"status": "PASS", "cases": SAMPLE_CASES, "blocked_actions": BLOCKED_ACTIONS},
-        "prod651_680_business_runner_runs.json": {"status": "PASS", "case_count": len(runs), "runs": runs, "blocked_actions": BLOCKED_ACTIONS},
-        "prod651_680_business_runner_decisions.json": {"status": "PASS", "decisions": [{"case_id": r["case_id"], **r["decision"]} for r in runs], "blocked_actions": BLOCKED_ACTIONS},
-        "prod651_680_business_runner_output_modes.json": {"status": "PASS", "outputs": [r["output"] for r in runs], "blocked_actions": BLOCKED_ACTIONS},
-        "prod651_680_business_runner_telemetry.json": telemetry,
-        "prod651_680_business_runner_readiness.json": readiness,
-        "prod651_680_business_runner_audit_report.json": audit,
+        "prod651a_680a_business_runner_status.json": status,
+        "prod651a_680a_business_runner_runs.json": {"status": "PASS", "case_count": len(runs), "runs": runs, "blocked_actions": BLOCKED_ACTIONS},
+        "prod651a_680a_business_runner_decisions.json": {"status": "PASS", "decisions": [{"case_id": r["case_id"], **r["decision"]} for r in runs], "blocked_actions": BLOCKED_ACTIONS},
+        "prod651a_680a_business_runner_telemetry.json": telemetry,
+        "prod651a_680a_business_runner_risk_integrity.json": risk_integrity,
+        "prod651a_680a_business_runner_readiness.json": readiness,
+        "prod651a_680a_business_runner_audit_report.json": audit,
     }
     for name, obj in outputs.items():
         write_json(out / name, obj)
 
     report = [
-        "# PROD-651..680 Business Case Interactive Runner with Preflight and Live Delta",
+        "# PROD-651A..680A Business Runner Risk Scale and Telemetry Integrity Hotfix",
         "",
-        f"- Status: `{status['status']}`",
+        f"- Status: `{audit['status']}`",
         f"- Case count: `{len(runs)}`",
         f"- Decision: `{readiness['decision']}`",
         f"- External execution allowed: `{status['external_execution_allowed']}`",
         f"- Automatic threshold mutation allowed: `{status['automatic_threshold_mutation_allowed']}`",
         "",
-        "## Gate Distribution",
+        "## Risk Statistics",
     ]
+    for key, value in risk_statistics.items():
+        report.append(f"- `{key}`: `{value}`")
+    report += ["", "## Risk Band Distribution"]
+    for key, value in status["risk_band_distribution"].items():
+        report.append(f"- `{key}`: `{value}`")
+    report += ["", "## Gate Distribution"]
     for key, value in status["gate_distribution"].items():
-        report.append(f"- `{key}`: `{value}`")
-    report += ["", "## Output Mode Distribution"]
-    for key, value in status["output_mode_distribution"].items():
-        report.append(f"- `{key}`: `{value}`")
-    report += ["", "## Reasoning Mode Distribution"]
-    for key, value in status["reasoning_mode_distribution"].items():
         report.append(f"- `{key}`: `{value}`")
     report += ["", "## Sample Decisions"]
     for run in runs:
-        report.append(f"- `{run['case_id']}` `{run['input'].get('business_domain')}` -> `{run['decision']['gate']}` / `{run['decision']['output_mode']}` / budget `{run['hallucination_budget']['hallucination_budget']}` / preflight `{run['preflight']['preflight_score']}`")
+        report.append(f"- `{run['case_id']}` `{run['input'].get('business_domain')}` -> risk `{run['decision']['adjusted_risk']}` `{run['decision']['risk_band']}` / delta `{run['decision']['live_delta_score']}` / gate `{run['decision']['gate']}` / output `{run['decision']['output_mode']}`")
     report += ["", "## Next Recommended Bundle", "- `PROD-681 Interactive Runner Feedback Calibration Loop`"]
-    write_text(out / "prod651_680_business_runner_report.md", "\n".join(report) + "\n")
+    write_text(out / "prod651a_680a_business_runner_risk_hotfix_report.md", "\n".join(report) + "\n")
 
     result = {
-        "task": "PROD-651..680",
-        "status": status["status"],
-        "phase": "Business Case Interactive Runner with Preflight and Live Delta",
+        "task": "PROD-651A..680A",
+        "status": audit["status"],
+        "phase": "Business Runner Risk Scale and Telemetry Integrity Hotfix",
         "decision": readiness["decision"],
         "outputs": ["outputs/" + key for key in outputs.keys()],
         "next_recommended_bundle": "PROD-681 Interactive Runner Feedback Calibration Loop",
         "blocked_actions": BLOCKED_ACTIONS,
     }
-    write_json(out / "prod651_680_result.json", result)
-    write_text(out / "prod651_680_report.md", "# PROD-651..680 Report\n\n" + json.dumps(result, indent=2, ensure_ascii=False) + "\n")
+    write_json(out / "prod651a_680a_result.json", result)
+    write_text(out / "prod651a_680a_report.md", "# PROD-651A..680A Report\n\n" + json.dumps(result, indent=2, ensure_ascii=False) + "\n")
     return result
 
 def main() -> int:

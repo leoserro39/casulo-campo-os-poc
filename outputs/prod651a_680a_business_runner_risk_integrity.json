@@ -1,0 +1,35 @@
+{
+  "status": "PASS",
+  "risk_statistics": {
+    "min_adjusted_risk": 43.8,
+    "avg_adjusted_risk": 72.0167,
+    "max_adjusted_risk": 87.4,
+    "risk_range": 43.6,
+    "min_live_delta_score": 0.3976,
+    "avg_live_delta_score": 0.6164,
+    "max_live_delta_score": 0.9285
+  },
+  "risk_band_distribution": {
+    "CRITICAL": 3,
+    "HIGH": 2,
+    "MEDIUM": 1
+  },
+  "risk_scale": "adjusted_risk_0_100_live_delta_0_1",
+  "integrity_checks": {
+    "adjusted_risk_not_collapsed_to_one": true,
+    "adjusted_risk_has_operational_range": true,
+    "live_delta_within_unit_interval": true
+  },
+  "blocked_actions": [
+    "client_facing_claim",
+    "automatic_nomination",
+    "implementation_execution",
+    "production_activation",
+    "automatic_merge",
+    "credential_handling",
+    "automatic_threshold_mutation",
+    "autonomous_external_execution",
+    "real_world_side_effect",
+    "unapproved_real_company_data"
+  ]
+}

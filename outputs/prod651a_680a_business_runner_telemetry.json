@@ -1,0 +1,198 @@
+{
+  "status": "PASS",
+  "event_count": 30,
+  "events": [
+    {
+      "event_type": "INTERACTIVE_CASE_RECEIVED",
+      "case_id": "INTERACTIVE-001",
+      "domain": "restaurant_inventory"
+    },
+    {
+      "event_type": "PREFLIGHT_COMPLETED",
+      "case_id": "INTERACTIVE-001",
+      "preflight_score": 0.6624,
+      "activation_state": "CANDIDATE_DOMAIN_REQUIRE_EVIDENCE"
+    },
+    {
+      "event_type": "HALLUCINATION_BUDGET_ASSIGNED",
+      "case_id": "INTERACTIVE-001",
+      "budget": 0.6936,
+      "reasoning_mode": "GUIDED_REASONING"
+    },
+    {
+      "event_type": "RISK_SCALE_ASSIGNED",
+      "case_id": "INTERACTIVE-001",
+      "adjusted_risk": 66.0,
+      "risk_band": "HIGH",
+      "live_delta_score": 0.413
+    },
+    {
+      "event_type": "GATE_DECISION_EMITTED",
+      "case_id": "INTERACTIVE-001",
+      "gate": "HUMAN_REVIEW_REQUIRED",
+      "output_mode": "HUMAN_REVIEW_PACKET"
+    },
+    {
+      "event_type": "INTERACTIVE_CASE_RECEIVED",
+      "case_id": "INTERACTIVE-002",
+      "domain": "restaurant_cashflow"
+    },
+    {
+      "event_type": "PREFLIGHT_COMPLETED",
+      "case_id": "INTERACTIVE-002",
+      "preflight_score": 0.7904,
+      "activation_state": "CONTROLLED_ACTIVE_DOMAIN"
+    },
+    {
+      "event_type": "HALLUCINATION_BUDGET_ASSIGNED",
+      "case_id": "INTERACTIVE-002",
+      "budget": 0.7787,
+      "reasoning_mode": "FULL_REASONING_WITH_GROUNDING"
+    },
+    {
+      "event_type": "RISK_SCALE_ASSIGNED",
+      "case_id": "INTERACTIVE-002",
+      "adjusted_risk": 43.8,
+      "risk_band": "MEDIUM",
+      "live_delta_score": 0.3976
+    },
+    {
+      "event_type": "GATE_DECISION_EMITTED",
+      "case_id": "INTERACTIVE-002",
+      "gate": "HUMAN_REVIEW_REQUIRED",
+      "output_mode": "HUMAN_REVIEW_PACKET"
+    },
+    {
+      "event_type": "INTERACTIVE_CASE_RECEIVED",
+      "case_id": "INTERACTIVE-003",
+      "domain": "legal_office_case_intake"
+    },
+    {
+      "event_type": "PREFLIGHT_COMPLETED",
+      "case_id": "INTERACTIVE-003",
+      "preflight_score": 0.7184,
+      "activation_state": "CANDIDATE_DOMAIN_REQUIRE_EVIDENCE"
+    },
+    {
+      "event_type": "HALLUCINATION_BUDGET_ASSIGNED",
+      "case_id": "INTERACTIVE-003",
+      "budget": 0.6741,
+      "reasoning_mode": "GUIDED_REASONING"
+    },
+    {
+      "event_type": "RISK_SCALE_ASSIGNED",
+      "case_id": "INTERACTIVE-003",
+      "adjusted_risk": 61.35,
+      "risk_band": "HIGH",
+      "live_delta_score": 0.6466
+    },
+    {
+      "event_type": "GATE_DECISION_EMITTED",
+      "case_id": "INTERACTIVE-003",
+      "gate": "HUMAN_REVIEW_REQUIRED",
+      "output_mode": "HUMAN_REVIEW_PACKET"
+    },
+    {
+      "event_type": "INTERACTIVE_CASE_RECEIVED",
+      "case_id": "INTERACTIVE-004",
+      "domain": "clinic_billing_glosa"
+    },
+    {
+      "event_type": "PREFLIGHT_COMPLETED",
+      "case_id": "INTERACTIVE-004",
+      "preflight_score": 0.5754,
+      "activation_state": "EXPLORATORY_ONLY"
+    },
+    {
+      "event_type": "HALLUCINATION_BUDGET_ASSIGNED",
+      "case_id": "INTERACTIVE-004",
+      "budget": 0.564,
+      "reasoning_mode": "GUIDED_REASONING"
+    },
+    {
+      "event_type": "RISK_SCALE_ASSIGNED",
+      "case_id": "INTERACTIVE-004",
+      "adjusted_risk": 86.55,
+      "risk_band": "CRITICAL",
+      "live_delta_score": 0.7285
+    },
+    {
+      "event_type": "GATE_DECISION_EMITTED",
+      "case_id": "INTERACTIVE-004",
+      "gate": "HUMAN_REVIEW_REQUIRED",
+      "output_mode": "HUMAN_REVIEW_PACKET"
+    },
+    {
+      "event_type": "INTERACTIVE_CASE_RECEIVED",
+      "case_id": "INTERACTIVE-005",
+      "domain": "ecommerce_order_ops"
+    },
+    {
+      "event_type": "PREFLIGHT_COMPLETED",
+      "case_id": "INTERACTIVE-005",
+      "preflight_score": 0.7964,
+      "activation_state": "CONTROLLED_ACTIVE_DOMAIN"
+    },
+    {
+      "event_type": "HALLUCINATION_BUDGET_ASSIGNED",
+      "case_id": "INTERACTIVE-005",
+      "budget": 0.5761,
+      "reasoning_mode": "GUIDED_REASONING"
+    },
+    {
+      "event_type": "RISK_SCALE_ASSIGNED",
+      "case_id": "INTERACTIVE-005",
+      "adjusted_risk": 87.4,
+      "risk_band": "CRITICAL",
+      "live_delta_score": 0.584
+    },
+    {
+      "event_type": "GATE_DECISION_EMITTED",
+      "case_id": "INTERACTIVE-005",
+      "gate": "UNSUPPORTED_BLOCKED",
+      "output_mode": "BLOCKED"
+    },
+    {
+      "event_type": "INTERACTIVE_CASE_RECEIVED",
+      "case_id": "INTERACTIVE-006",
+      "domain": "unknown_domain"
+    },
+    {
+      "event_type": "PREFLIGHT_COMPLETED",
+      "case_id": "INTERACTIVE-006",
+      "preflight_score": 0.42,
+      "activation_state": "DOMAIN_NOT_READY_COLLECT_MINIMUM_DATA"
+    },
+    {
+      "event_type": "HALLUCINATION_BUDGET_ASSIGNED",
+      "case_id": "INTERACTIVE-006",
+      "budget": 0.38,
+      "reasoning_mode": "GAP_MAPPING_ONLY"
+    },
+    {
+      "event_type": "RISK_SCALE_ASSIGNED",
+      "case_id": "INTERACTIVE-006",
+      "adjusted_risk": 87.0,
+      "risk_band": "CRITICAL",
+      "live_delta_score": 0.9285
+    },
+    {
+      "event_type": "GATE_DECISION_EMITTED",
+      "case_id": "INTERACTIVE-006",
+      "gate": "UNSUPPORTED_BLOCKED",
+      "output_mode": "BLOCKED"
+    }
+  ],
+  "blocked_actions": [
+    "client_facing_claim",
+    "automatic_nomination",
+    "implementation_execution",
+    "production_activation",
+    "automatic_merge",
+    "credential_handling",
+    "automatic_threshold_mutation",
+    "autonomous_external_execution",
+    "real_world_side_effect",
+    "unapproved_real_company_data"
+  ]
+}
