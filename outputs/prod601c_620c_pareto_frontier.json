@@ -1,0 +1,115 @@
+{
+  "status": "PASS",
+  "pareto_front": [
+    {
+      "profile": "clean_baseline",
+      "avg_cubo_risk": 18.1667,
+      "avg_delta_control": 91.25,
+      "avg_evidence_coverage": 85.3333,
+      "avg_useful_output_rate": 92.0,
+      "safe_review_success_rate": 0.0,
+      "safe_block_success_rate": 0.0
+    }
+  ],
+  "all_points": [
+    {
+      "profile": "clean_baseline",
+      "avg_cubo_risk": 18.1667,
+      "avg_delta_control": 91.25,
+      "avg_evidence_coverage": 85.3333,
+      "avg_useful_output_rate": 92.0,
+      "safe_review_success_rate": 0.0,
+      "safe_block_success_rate": 0.0
+    },
+    {
+      "profile": "missing_required_field",
+      "avg_cubo_risk": 29.9167,
+      "avg_delta_control": 90.25,
+      "avg_evidence_coverage": 75.3333,
+      "avg_useful_output_rate": 89.0,
+      "safe_review_success_rate": 0.0,
+      "safe_block_success_rate": 0.0
+    },
+    {
+      "profile": "conflicting_values",
+      "avg_cubo_risk": 44.9167,
+      "avg_delta_control": 85.25,
+      "avg_evidence_coverage": 81.3333,
+      "avg_useful_output_rate": 79.0,
+      "safe_review_success_rate": 0.0,
+      "safe_block_success_rate": 0.0
+    },
+    {
+      "profile": "noisy_ocr_or_typo",
+      "avg_cubo_risk": 40.9167,
+      "avg_delta_control": 88.25,
+      "avg_evidence_coverage": 78.3333,
+      "avg_useful_output_rate": 81.0,
+      "safe_review_success_rate": 0.0,
+      "safe_block_success_rate": 0.0
+    },
+    {
+      "profile": "stale_or_undated_evidence",
+      "avg_cubo_risk": 46.9167,
+      "avg_delta_control": 84.25,
+      "avg_evidence_coverage": 73.3333,
+      "avg_useful_output_rate": 83.0,
+      "safe_review_success_rate": 41.67,
+      "safe_block_success_rate": 0.0
+    },
+    {
+      "profile": "partial_context",
+      "avg_cubo_risk": 48.9167,
+      "avg_delta_control": 85.25,
+      "avg_evidence_coverage": 72.3333,
+      "avg_useful_output_rate": 78.0,
+      "safe_review_success_rate": 41.67,
+      "safe_block_success_rate": 0.0
+    },
+    {
+      "profile": "multi_record_table",
+      "avg_cubo_risk": 48.9167,
+      "avg_delta_control": 86.25,
+      "avg_evidence_coverage": 75.3333,
+      "avg_useful_output_rate": 82.0,
+      "safe_review_success_rate": 0.0,
+      "safe_block_success_rate": 0.0
+    },
+    {
+      "profile": "high_stakes_claim",
+      "avg_cubo_risk": 52.5,
+      "avg_delta_control": 83.25,
+      "avg_evidence_coverage": 74.3333,
+      "avg_useful_output_rate": 77.0,
+      "safe_review_success_rate": 100.0,
+      "safe_block_success_rate": 0.0
+    },
+    {
+      "profile": "cross_document_mismatch",
+      "avg_cubo_risk": 56.5833,
+      "avg_delta_control": 82.25,
+      "avg_evidence_coverage": 73.3333,
+      "avg_useful_output_rate": 76.0,
+      "safe_review_success_rate": 100.0,
+      "safe_block_success_rate": 0.0
+    },
+    {
+      "profile": "unknown_or_unsupported_input",
+      "avg_cubo_risk": 59.25,
+      "avg_delta_control": 81.25,
+      "avg_evidence_coverage": 64.3333,
+      "avg_useful_output_rate": 75.0,
+      "safe_review_success_rate": 0.0,
+      "safe_block_success_rate": 100.0
+    }
+  ],
+  "blocked_actions": [
+    "client_facing_claim",
+    "automatic_nomination",
+    "implementation_execution",
+    "production_activation",
+    "automatic_merge",
+    "credential_handling",
+    "automatic_threshold_mutation"
+  ]
+}

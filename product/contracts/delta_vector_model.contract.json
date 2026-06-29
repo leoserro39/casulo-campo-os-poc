@@ -1,0 +1,15 @@
+{
+  "contract": "casulo.delta_vector_model.v0.1",
+  "components": [
+    "delta_risk",
+    "delta_evidence",
+    "delta_control",
+    "delta_stress",
+    "delta_conflict",
+    "delta_gate",
+    "delta_correlation",
+    "delta_domain",
+    "delta_review",
+    "delta_block"
+  ]
+}

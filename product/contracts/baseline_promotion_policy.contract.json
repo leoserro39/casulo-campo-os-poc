@@ -1,0 +1,4 @@
+{
+  "contract": "casulo.baseline_promotion_policy.v0.1",
+  "purpose": "Promote only tested, regression-safe and human-approved calibration baselines."
+}

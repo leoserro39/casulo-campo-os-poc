@@ -1,0 +1,11 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "gate_transition_result.schema.json",
+  "type": "object",
+  "required": [
+    "status",
+    "gate_distribution",
+    "transition_distribution",
+    "blocked_actions"
+  ]
+}

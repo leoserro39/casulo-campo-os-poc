@@ -1,0 +1,12 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "live_delta_vector.schema.json",
+  "type": "object",
+  "required": [
+    "case_id",
+    "workload_family",
+    "stress_profile",
+    "delta_vector",
+    "gate_transition"
+  ]
+}

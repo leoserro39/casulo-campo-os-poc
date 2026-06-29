@@ -1,0 +1,33 @@
+{
+  "status": "PASS",
+  "gate_distribution": {
+    "ANSWER_ALLOWED": 360,
+    "HUMAN_REVIEW_REQUIRED": 440,
+    "PARSER_OUTPUT_ALLOWED": 210,
+    "TASK_PROPOSAL_ALLOWED": 70,
+    "UNSUPPORTED_BLOCKED": 120
+  },
+  "transition_distribution": {
+    "ALLOW_WITH_WARNING_ZONE": 190,
+    "ALLOW_ZONE": 350,
+    "BLOCK_ZONE": 120,
+    "EVIDENCE_OR_REVIEW_ZONE": 80,
+    "REVIEW_ZONE": 460
+  },
+  "transition_policy": [
+    "unsupported profile always blocks",
+    "high_stakes_claim and cross_document_mismatch require review",
+    "cubo_risk >= 50 requires review unless already blocked",
+    "generic workload with evidence_coverage < 70 requires evidence or review",
+    "low live_delta_score plus allowed gate remains allow"
+  ],
+  "blocked_actions": [
+    "client_facing_claim",
+    "automatic_nomination",
+    "implementation_execution",
+    "production_activation",
+    "automatic_merge",
+    "credential_handling",
+    "automatic_threshold_mutation"
+  ]
+}

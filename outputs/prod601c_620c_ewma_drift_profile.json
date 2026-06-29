@@ -1,0 +1,38 @@
+{
+  "status": "PASS",
+  "alpha": 0.35,
+  "previous_batch": {
+    "avg_cubo_risk": 31.33,
+    "avg_delta_control": 86.25,
+    "avg_evidence_coverage": 77.33,
+    "avg_useful_output_rate": 85.7
+  },
+  "current_batch": {
+    "avg_cubo_risk": 44.7,
+    "avg_delta_control": 85.75,
+    "avg_evidence_coverage": 75.3333,
+    "avg_useful_output_rate": 81.2
+  },
+  "ewma": {
+    "avg_cubo_risk": 36.0095,
+    "avg_delta_control": 86.075,
+    "avg_evidence_coverage": 76.6312,
+    "avg_useful_output_rate": 84.125
+  },
+  "drift": {
+    "avg_cubo_risk": 13.37,
+    "avg_delta_control": -0.5,
+    "avg_evidence_coverage": -1.9967,
+    "avg_useful_output_rate": -4.5
+  },
+  "interpretation": "stress calibration intentionally increases residual risk; use as sensitivity baseline, not regression failure",
+  "blocked_actions": [
+    "client_facing_claim",
+    "automatic_nomination",
+    "implementation_execution",
+    "production_activation",
+    "automatic_merge",
+    "credential_handling",
+    "automatic_threshold_mutation"
+  ]
+}

@@ -1,0 +1,45 @@
+{
+  "status": "PASS",
+  "event_count": 6,
+  "events": [
+    {
+      "event_type": "DELTA_INTERSECTION_DETECTED",
+      "signal": "cubo_risk_delta_control_inverse_relation",
+      "interpretation": "higher Cubo risk reduces delta control; review threshold should react before production"
+    },
+    {
+      "event_type": "SAFE_BLOCK_SUCCESS",
+      "signal": "unsupported_input_blocked",
+      "interpretation": "unsupported inputs should count as successful block, not failure"
+    },
+    {
+      "event_type": "SAFE_REVIEW_SUCCESS",
+      "signal": "high_risk_human_review",
+      "interpretation": "human review in high-risk profiles is a desired gate behavior"
+    },
+    {
+      "event_type": "PARTIAL_FREEZE_CANDIDATE",
+      "signal": "parser_extraction_stability",
+      "interpretation": "parser/extraction can be frozen as candidate family after regression"
+    },
+    {
+      "event_type": "THRESHOLD_SPLIT_REQUIRED",
+      "signal": "generic_workload_evidence_gap",
+      "interpretation": "summary/classification/triage/task require context/evidence thresholds"
+    },
+    {
+      "event_type": "NO_AUTO_MUTATION",
+      "signal": "baseline_promotion_gate",
+      "interpretation": "correlation suggests changes but does not apply them automatically"
+    }
+  ],
+  "blocked_actions": [
+    "client_facing_claim",
+    "automatic_nomination",
+    "implementation_execution",
+    "production_activation",
+    "automatic_merge",
+    "credential_handling",
+    "automatic_threshold_mutation"
+  ]
+}

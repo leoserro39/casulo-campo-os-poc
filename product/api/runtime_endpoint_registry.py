@@ -177,4 +177,20 @@ ENDPOINT_GROUPS = [
         ],
     },
 
+    {
+        "group": "live_delta_intersection",
+        "routes": [
+            {"path": "/api/casulo/live-delta/vectors", "file": "outputs/prod601c_620c_live_delta_vectors.json", "key": "live_delta_vectors"},
+            {"path": "/api/casulo/live-delta/gate-transitions", "file": "outputs/prod601c_620c_gate_transition_model.json", "key": "gate_transition_model"},
+            {"path": "/api/casulo/live-delta/domain-sensitivity", "file": "outputs/prod601c_620c_domain_sensitivity_model.json", "key": "domain_sensitivity_model"},
+            {"path": "/api/casulo/live-delta/bayesian-trust", "file": "outputs/prod601c_620c_bayesian_gate_trust.json", "key": "bayesian_gate_trust"},
+            {"path": "/api/casulo/live-delta/ewma-drift", "file": "outputs/prod601c_620c_ewma_drift_profile.json", "key": "ewma_drift_profile"},
+            {"path": "/api/casulo/live-delta/pareto-frontier", "file": "outputs/prod601c_620c_pareto_frontier.json", "key": "pareto_frontier"},
+            {"path": "/api/casulo/live-delta/baseline-policy", "file": "outputs/prod601c_620c_baseline_promotion_policy.json", "key": "baseline_promotion_policy"},
+            {"path": "/api/casulo/live-delta/telemetry-events", "file": "outputs/prod601c_620c_telemetry_feedback_events.json", "key": "telemetry_feedback_events"},
+            {"path": "/api/casulo/live-delta/readiness", "file": "outputs/prod601c_620c_readiness.json", "key": "readiness"},
+            {"path": "/api/casulo/live-delta/audit", "file": "outputs/prod601c_620c_audit_report.json", "key": "audit"},
+        ],
+    },
+
 ]

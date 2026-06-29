@@ -1,0 +1,39 @@
+{
+  "status": "PASS",
+  "workload_sensitivity": {
+    "parser": 0.9,
+    "document_field_extraction": 0.9,
+    "receipt_invoice_extraction": 0.95,
+    "summary": 1.1,
+    "classification": 1.1,
+    "email_triage": 1.1,
+    "task_generation": 1.15,
+    "contract_checklist": 1.25,
+    "policy_rule_extraction": 1.25,
+    "technical_review": 1.3,
+    "delta_detection": 1.3,
+    "evidence_gap_detection": 1.3
+  },
+  "business_domain_sensitivity": {
+    "restaurant_inventory": 1.0,
+    "restaurant_cashflow": 1.2,
+    "clinic_scheduling": 1.2,
+    "clinic_billing_glosa": 1.45,
+    "accounting_tax_obligation": 1.45,
+    "contract_legal_review": 1.5,
+    "ecommerce_order_ops": 1.1,
+    "field_service_work_order": 1.05,
+    "construction_project_control": 1.3,
+    "small_industry_quality": 1.25
+  },
+  "policy": "risk_adjusted = cubo_risk * sensitivity",
+  "blocked_actions": [
+    "client_facing_claim",
+    "automatic_nomination",
+    "implementation_execution",
+    "production_activation",
+    "automatic_merge",
+    "credential_handling",
+    "automatic_threshold_mutation"
+  ]
+}

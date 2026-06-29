@@ -1,0 +1,4 @@
+{
+  "contract": "casulo.domain_sensitivity_model.v0.1",
+  "purpose": "Apply coefficients to adjust residual risk by workload and future business domain sensitivity."
+}

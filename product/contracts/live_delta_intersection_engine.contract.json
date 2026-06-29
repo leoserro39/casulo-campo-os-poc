@@ -1,0 +1,14 @@
+{
+  "contract": "casulo.live_delta_intersection_engine.v0.1",
+  "purpose": "Apply correlation-backed mathematical models to convert telemetry into live delta vectors, gate transitions, operating zones and baseline promotion candidates.",
+  "policy": "candidate_adjustment_only_no_auto_mutation",
+  "blocked_actions": [
+    "client_facing_claim",
+    "automatic_nomination",
+    "implementation_execution",
+    "production_activation",
+    "automatic_merge",
+    "credential_handling",
+    "automatic_threshold_mutation"
+  ]
+}

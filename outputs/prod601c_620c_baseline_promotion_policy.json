@@ -1,0 +1,66 @@
+{
+  "status": "PASS",
+  "decisions": [
+    {
+      "target": "parser_and_structured_extraction",
+      "decision": "PARTIAL_FREEZE_CANDIDATE",
+      "reason": "low residual risk relative to stress, high delta control, strong parser output gate",
+      "metrics": {
+        "avg_cubo_risk": 36.3,
+        "avg_delta_control": 89.5,
+        "allowed_rate_pct": 70.0
+      },
+      "regression_required": true,
+      "human_approval_required": true
+    },
+    {
+      "target": "safe_block_taxonomy",
+      "decision": "PROMOTE_CANDIDATE_AFTER_REGRESSION",
+      "reason": "unsupported input maps perfectly to UNSUPPORTED_BLOCKED in calibration",
+      "metrics": {
+        "unsupported_count": 120,
+        "safe_block_rate_pct": 100.0
+      },
+      "regression_required": true,
+      "human_approval_required": true
+    },
+    {
+      "target": "safe_review_taxonomy",
+      "decision": "PROMOTE_CANDIDATE_WITH_TRACE_REQUIREMENT",
+      "reason": "high-risk profiles frequently map to safe human review, but not all high-risk cases do",
+      "metrics": {
+        "high_risk_count": 480,
+        "safe_review_rate_pct": 70.83
+      },
+      "regression_required": true,
+      "human_approval_required": true
+    },
+    {
+      "target": "summary_classification_email_task",
+      "decision": "CALIBRATE_MORE_REQUIRE_CONTEXT",
+      "reason": "generic workloads have higher residual Cubo risk and lower evidence coverage",
+      "metrics": {
+        "avg_cubo_risk": 50.0,
+        "avg_evidence_coverage": 66.0
+      },
+      "regression_required": true,
+      "human_approval_required": true
+    },
+    {
+      "target": "core_architecture",
+      "decision": "KEEP_STABLE_NO_CORE_CHANGE",
+      "reason": "apply mathematical interpretation layer; do not mutate runtime/product core yet",
+      "regression_required": false,
+      "human_approval_required": false
+    }
+  ],
+  "blocked_actions": [
+    "client_facing_claim",
+    "automatic_nomination",
+    "implementation_execution",
+    "production_activation",
+    "automatic_merge",
+    "credential_handling",
+    "automatic_threshold_mutation"
+  ]
+}

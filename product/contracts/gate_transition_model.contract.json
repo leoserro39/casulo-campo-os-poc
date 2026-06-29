@@ -1,0 +1,4 @@
+{
+  "contract": "casulo.gate_transition_model.v0.1",
+  "purpose": "Map live delta vectors and operating zones to allow, review or block gate transitions."
+}
