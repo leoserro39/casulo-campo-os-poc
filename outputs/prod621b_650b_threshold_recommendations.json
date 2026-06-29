@@ -1,0 +1,41 @@
+{
+  "status": "PASS",
+  "recommendations": [
+    {
+      "id": "THR-001",
+      "target": "partial_context",
+      "rule": "sensitivity <1.25 -> EVIDENCE_REQUIRED; sensitivity >=1.25 or adjusted_risk >=55 -> HUMAN_REVIEW_REQUIRED",
+      "auto_apply": false
+    },
+    {
+      "id": "THR-002",
+      "target": "noisy_input",
+      "rule": "evidence >=70 and sensitivity <=1.20 -> ALLOW_WITH_WARNING; sensitivity >=1.45 -> HUMAN_REVIEW_REQUIRED",
+      "auto_apply": false
+    },
+    {
+      "id": "THR-003",
+      "target": "hallucination_budget",
+      "rule": "budget <0.25 block/review only; 0.25-0.45 gap mapping; 0.45-0.70 guided reasoning; >0.70 full grounded reasoning",
+      "auto_apply": false
+    },
+    {
+      "id": "THR-004",
+      "target": "evidence_variance",
+      "rule": "test low 40-55, medium 60-75, high 80-95 evidence before interactive runner",
+      "auto_apply": false
+    }
+  ],
+  "blocked_actions": [
+    "client_facing_claim",
+    "automatic_nomination",
+    "implementation_execution",
+    "production_activation",
+    "automatic_merge",
+    "credential_handling",
+    "automatic_threshold_mutation",
+    "autonomous_external_execution",
+    "real_world_side_effect",
+    "unapproved_real_company_data"
+  ]
+}

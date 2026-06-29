@@ -1,0 +1,33 @@
+{
+  "status": "PASS",
+  "decision": "READY_FOR_BUSINESS_CASE_INTERACTIVE_RUNNER_WITH_PREFLIGHT",
+  "case_count": 120,
+  "domain_count": 12,
+  "original_safe_behavior_rate_pct": 89.17,
+  "recalibrated_safe_behavior_rate_pct": 100.0,
+  "ready_for": [
+    "business case interactive runner with preflight",
+    "neutral domain seed intake",
+    "hallucination budget gating",
+    "safe escalation reporting"
+  ],
+  "not_ready_for": [
+    "production activation",
+    "autonomous external execution",
+    "automatic threshold mutation",
+    "client-facing claims",
+    "unapproved real company data"
+  ],
+  "blocked_actions": [
+    "client_facing_claim",
+    "automatic_nomination",
+    "implementation_execution",
+    "production_activation",
+    "automatic_merge",
+    "credential_handling",
+    "automatic_threshold_mutation",
+    "autonomous_external_execution",
+    "real_world_side_effect",
+    "unapproved_real_company_data"
+  ]
+}

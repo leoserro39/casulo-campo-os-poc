@@ -1,0 +1,86 @@
+{
+  "status": "PASS",
+  "generated_at": "2026-06-29T12:46:45+00:00",
+  "case_count": 120,
+  "correlations": {
+    "adjusted_risk x live_delta_score": 0.8732,
+    "adjusted_risk x gate_numeric": 0.8436,
+    "domain_sensitivity x adjusted_risk": 0.4205,
+    "domain_sensitivity x gate_numeric": 0.1253,
+    "hallucination_budget x gate_numeric": -0.7959,
+    "hallucination_budget x safe_behavior_v2": 0.0,
+    "safe_behavior_v1 x safe_behavior_v2": 0.0
+  },
+  "pattern_findings": [
+    {
+      "finding_id": "PATTERN-001",
+      "name": "domain_sensitivity_pressure",
+      "interpretation": "Domain sensitivity pushes adjusted risk, live delta and review pressure."
+    },
+    {
+      "finding_id": "PATTERN-002",
+      "name": "partial_context_safe_escalation",
+      "interpretation": "Partial context splits into evidence-required for lighter domains and review for sensitive domains."
+    },
+    {
+      "finding_id": "PATTERN-003",
+      "name": "noisy_input_allow_warning_gap",
+      "interpretation": "Noisy input needs ALLOW_WITH_WARNING to preserve useful output without pretending certainty."
+    },
+    {
+      "finding_id": "PATTERN-004",
+      "name": "evidence_variance_gap",
+      "interpretation": "PROD-621 evidence coverage was too constant; this layer adds evidence probes."
+    },
+    {
+      "finding_id": "PATTERN-005",
+      "name": "preflight_before_domain_activation",
+      "interpretation": "A domain should start as neutral seed and only become operational after preflight."
+    }
+  ],
+  "gate_confusion_matrix_v1_expected": {
+    "ANSWER_ALLOWED": {
+      "ANSWER_ALLOWED": 20,
+      "HUMAN_REVIEW_REQUIRED": 4
+    },
+    "EVIDENCE_REQUIRED": {
+      "EVIDENCE_REQUIRED": 15,
+      "HUMAN_REVIEW_REQUIRED": 9
+    },
+    "HUMAN_REVIEW_REQUIRED": {
+      "HUMAN_REVIEW_REQUIRED": 48
+    },
+    "UNSUPPORTED_BLOCKED": {
+      "UNSUPPORTED_BLOCKED": 24
+    }
+  },
+  "gate_confusion_matrix_v2_recommended": {
+    "ALLOW_WITH_WARNING": {
+      "ANSWER_ALLOWED": 8
+    },
+    "ANSWER_ALLOWED": {
+      "ANSWER_ALLOWED": 12
+    },
+    "EVIDENCE_REQUIRED": {
+      "EVIDENCE_REQUIRED": 15
+    },
+    "HUMAN_REVIEW_REQUIRED": {
+      "HUMAN_REVIEW_REQUIRED": 61
+    },
+    "UNSUPPORTED_BLOCKED": {
+      "UNSUPPORTED_BLOCKED": 24
+    }
+  },
+  "blocked_actions": [
+    "client_facing_claim",
+    "automatic_nomination",
+    "implementation_execution",
+    "production_activation",
+    "automatic_merge",
+    "credential_handling",
+    "automatic_threshold_mutation",
+    "autonomous_external_execution",
+    "real_world_side_effect",
+    "unapproved_real_company_data"
+  ]
+}

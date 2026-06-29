@@ -1,0 +1,17 @@
+{
+  "contract": "casulo.business.pattern.mining.v0.1",
+  "purpose": "Mine domain/scenario patterns and correlations.",
+  "mode": "controlled_no_auto_mutation",
+  "blocked_actions": [
+    "client_facing_claim",
+    "automatic_nomination",
+    "implementation_execution",
+    "production_activation",
+    "automatic_merge",
+    "credential_handling",
+    "automatic_threshold_mutation",
+    "autonomous_external_execution",
+    "real_world_side_effect",
+    "unapproved_real_company_data"
+  ]
+}

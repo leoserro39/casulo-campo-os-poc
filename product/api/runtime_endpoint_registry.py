@@ -224,4 +224,19 @@ ENDPOINT_GROUPS = [
         ],
     },
 
+    {
+        "group": "domain_preflight_pattern_mining",
+        "routes": [
+            {"path": "/api/casulo/domain-preflight/matrix", "file": "outputs/prod621b_650b_domain_preflight_matrix.json", "key": "domain_preflight_matrix"},
+            {"path": "/api/casulo/domain-preflight/hallucination-budget", "file": "outputs/prod621b_650b_hallucination_budget.json", "key": "hallucination_budget"},
+            {"path": "/api/casulo/domain-preflight/safe-escalation", "file": "outputs/prod621b_650b_safe_escalation_taxonomy.json", "key": "safe_escalation_taxonomy"},
+            {"path": "/api/casulo/domain-preflight/patterns", "file": "outputs/prod621b_650b_business_pattern_mining.json", "key": "business_pattern_mining"},
+            {"path": "/api/casulo/domain-preflight/evidence-grid", "file": "outputs/prod621b_650b_evidence_variance_grid.json", "key": "evidence_variance_grid"},
+            {"path": "/api/casulo/domain-preflight/gate-confusion", "file": "outputs/prod621b_650b_gate_confusion_matrix.json", "key": "gate_confusion_matrix"},
+            {"path": "/api/casulo/domain-preflight/threshold-recommendations", "file": "outputs/prod621b_650b_threshold_recommendations.json", "key": "threshold_recommendations"},
+            {"path": "/api/casulo/domain-preflight/readiness", "file": "outputs/prod621b_650b_readiness.json", "key": "readiness"},
+            {"path": "/api/casulo/domain-preflight/audit", "file": "outputs/prod621b_650b_audit_report.json", "key": "audit"},
+        ],
+    },
+
 ]

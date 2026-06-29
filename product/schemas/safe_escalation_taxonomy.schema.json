@@ -1,0 +1,11 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "safe_escalation_taxonomy.schema.json",
+  "type": "object",
+  "required": [
+    "status",
+    "rules",
+    "recalibrated_safe_behavior_rate_pct",
+    "blocked_actions"
+  ]
+}

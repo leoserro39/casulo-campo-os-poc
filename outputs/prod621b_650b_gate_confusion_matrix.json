@@ -1,0 +1,48 @@
+{
+  "status": "PASS",
+  "v1_expected": {
+    "ANSWER_ALLOWED": {
+      "ANSWER_ALLOWED": 20,
+      "HUMAN_REVIEW_REQUIRED": 4
+    },
+    "EVIDENCE_REQUIRED": {
+      "EVIDENCE_REQUIRED": 15,
+      "HUMAN_REVIEW_REQUIRED": 9
+    },
+    "HUMAN_REVIEW_REQUIRED": {
+      "HUMAN_REVIEW_REQUIRED": 48
+    },
+    "UNSUPPORTED_BLOCKED": {
+      "UNSUPPORTED_BLOCKED": 24
+    }
+  },
+  "v2_recommended": {
+    "ALLOW_WITH_WARNING": {
+      "ANSWER_ALLOWED": 8
+    },
+    "ANSWER_ALLOWED": {
+      "ANSWER_ALLOWED": 12
+    },
+    "EVIDENCE_REQUIRED": {
+      "EVIDENCE_REQUIRED": 15
+    },
+    "HUMAN_REVIEW_REQUIRED": {
+      "HUMAN_REVIEW_REQUIRED": 61
+    },
+    "UNSUPPORTED_BLOCKED": {
+      "UNSUPPORTED_BLOCKED": 24
+    }
+  },
+  "blocked_actions": [
+    "client_facing_claim",
+    "automatic_nomination",
+    "implementation_execution",
+    "production_activation",
+    "automatic_merge",
+    "credential_handling",
+    "automatic_threshold_mutation",
+    "autonomous_external_execution",
+    "real_world_side_effect",
+    "unapproved_real_company_data"
+  ]
+}

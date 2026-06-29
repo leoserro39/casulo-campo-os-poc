@@ -1,0 +1,22 @@
+{
+  "status": "PASS",
+  "audit": "Domain Preflight and Pattern Mining audit",
+  "case_count": 120,
+  "domain_count": 12,
+  "original_safe_behavior_rate_pct": 89.17,
+  "recalibrated_safe_behavior_rate_pct": 100.0,
+  "finding": "PASS: neutral domain preflight, hallucination budget, safe escalation taxonomy and pattern mining generated without auto mutation.",
+  "readiness": "READY_FOR_BUSINESS_CASE_INTERACTIVE_RUNNER_WITH_PREFLIGHT",
+  "blocked_actions": [
+    "client_facing_claim",
+    "automatic_nomination",
+    "implementation_execution",
+    "production_activation",
+    "automatic_merge",
+    "credential_handling",
+    "automatic_threshold_mutation",
+    "autonomous_external_execution",
+    "real_world_side_effect",
+    "unapproved_real_company_data"
+  ]
+}

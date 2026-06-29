@@ -1,0 +1,17 @@
+{
+  "task": "PROD-621B..650B",
+  "status": "PASS",
+  "phase": "Domain Preflight and Pattern Mining Layer",
+  "endpoints": [
+    "/api/casulo/domain-preflight/matrix",
+    "/api/casulo/domain-preflight/hallucination-budget",
+    "/api/casulo/domain-preflight/safe-escalation",
+    "/api/casulo/domain-preflight/patterns",
+    "/api/casulo/domain-preflight/evidence-grid",
+    "/api/casulo/domain-preflight/gate-confusion",
+    "/api/casulo/domain-preflight/threshold-recommendations",
+    "/api/casulo/domain-preflight/readiness",
+    "/api/casulo/domain-preflight/audit"
+  ],
+  "next_recommended_bundle": "PROD-651 Business Case Interactive Runner with Preflight and Live Delta"
+}
