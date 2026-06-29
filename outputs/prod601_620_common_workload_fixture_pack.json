@@ -1,0 +1,1933 @@
+{
+  "status": "PASS",
+  "cases": [
+    {
+      "case_id": "CWL-PARSER-001",
+      "workload_family": "parser",
+      "input_class": "document",
+      "expected_output": "parsed_fields",
+      "ambiguity_level": 1,
+      "evidence_required": true,
+      "synthetic_fixture": true,
+      "input_summary": "Synthetic routine workload case 1 for parser.",
+      "ground_truth_shape": {
+        "must_return": "parsed_fields",
+        "must_include_evidence_trace": true,
+        "must_include_gate": true,
+        "must_include_delta": false
+      }
+    },
+    {
+      "case_id": "CWL-PARSER-002",
+      "workload_family": "parser",
+      "input_class": "document",
+      "expected_output": "parsed_fields",
+      "ambiguity_level": 2,
+      "evidence_required": true,
+      "synthetic_fixture": true,
+      "input_summary": "Synthetic routine workload case 2 for parser.",
+      "ground_truth_shape": {
+        "must_return": "parsed_fields",
+        "must_include_evidence_trace": true,
+        "must_include_gate": true,
+        "must_include_delta": false
+      }
+    },
+    {
+      "case_id": "CWL-PARSER-003",
+      "workload_family": "parser",
+      "input_class": "document",
+      "expected_output": "parsed_fields",
+      "ambiguity_level": 3,
+      "evidence_required": true,
+      "synthetic_fixture": true,
+      "input_summary": "Synthetic routine workload case 3 for parser.",
+      "ground_truth_shape": {
+        "must_return": "parsed_fields",
+        "must_include_evidence_trace": true,
+        "must_include_gate": true,
+        "must_include_delta": false
+      }
+    },
+    {
+      "case_id": "CWL-PARSER-004",
+      "workload_family": "parser",
+      "input_class": "document",
+      "expected_output": "parsed_fields",
+      "ambiguity_level": 4,
+      "evidence_required": true,
+      "synthetic_fixture": true,
+      "input_summary": "Synthetic routine workload case 4 for parser.",
+      "ground_truth_shape": {
+        "must_return": "parsed_fields",
+        "must_include_evidence_trace": true,
+        "must_include_gate": true,
+        "must_include_delta": false
+      }
+    },
+    {
+      "case_id": "CWL-PARSER-005",
+      "workload_family": "parser",
+      "input_class": "document",
+      "expected_output": "parsed_fields",
+      "ambiguity_level": 0,
+      "evidence_required": true,
+      "synthetic_fixture": true,
+      "input_summary": "Synthetic routine workload case 5 for parser.",
+      "ground_truth_shape": {
+        "must_return": "parsed_fields",
+        "must_include_evidence_trace": true,
+        "must_include_gate": true,
+        "must_include_delta": false
+      }
+    },
+    {
+      "case_id": "CWL-PARSER-006",
+      "workload_family": "parser",
+      "input_class": "document",
+      "expected_output": "parsed_fields",
+      "ambiguity_level": 1,
+      "evidence_required": true,
+      "synthetic_fixture": true,
+      "input_summary": "Synthetic routine workload case 6 for parser.",
+      "ground_truth_shape": {
+        "must_return": "parsed_fields",
+        "must_include_evidence_trace": true,
+        "must_include_gate": true,
+        "must_include_delta": false
+      }
+    },
+    {
+      "case_id": "CWL-PARSER-007",
+      "workload_family": "parser",
+      "input_class": "document",
+      "expected_output": "parsed_fields",
+      "ambiguity_level": 2,
+      "evidence_required": true,
+      "synthetic_fixture": true,
+      "input_summary": "Synthetic routine workload case 7 for parser.",
+      "ground_truth_shape": {
+        "must_return": "parsed_fields",
+        "must_include_evidence_trace": true,
+        "must_include_gate": true,
+        "must_include_delta": false
+      }
+    },
+    {
+      "case_id": "CWL-PARSER-008",
+      "workload_family": "parser",
+      "input_class": "document",
+      "expected_output": "parsed_fields",
+      "ambiguity_level": 3,
+      "evidence_required": true,
+      "synthetic_fixture": true,
+      "input_summary": "Synthetic routine workload case 8 for parser.",
+      "ground_truth_shape": {
+        "must_return": "parsed_fields",
+        "must_include_evidence_trace": true,
+        "must_include_gate": true,
+        "must_include_delta": false
+      }
+    },
+    {
+      "case_id": "CWL-PARSER-009",
+      "workload_family": "parser",
+      "input_class": "document",
+      "expected_output": "parsed_fields",
+      "ambiguity_level": 4,
+      "evidence_required": true,
+      "synthetic_fixture": true,
+      "input_summary": "Synthetic routine workload case 9 for parser.",
+      "ground_truth_shape": {
+        "must_return": "parsed_fields",
+        "must_include_evidence_trace": true,
+        "must_include_gate": true,
+        "must_include_delta": false
+      }
+    },
+    {
+      "case_id": "CWL-PARSER-010",
+      "workload_family": "parser",
+      "input_class": "document",
+      "expected_output": "parsed_fields",
+      "ambiguity_level": 0,
+      "evidence_required": true,
+      "synthetic_fixture": true,
+      "input_summary": "Synthetic routine workload case 10 for parser.",
+      "ground_truth_shape": {
+        "must_return": "parsed_fields",
+        "must_include_evidence_trace": true,
+        "must_include_gate": true,
+        "must_include_delta": false
+      }
+    },
+    {
+      "case_id": "CWL-DOCUMENT-FIELD-EXTRACTION-001",
+      "workload_family": "document_field_extraction",
+      "input_class": "document",
+      "expected_output": "parsed_fields",
+      "ambiguity_level": 1,
+      "evidence_required": true,
+      "synthetic_fixture": true,
+      "input_summary": "Synthetic routine workload case 1 for document_field_extraction.",
+      "ground_truth_shape": {
+        "must_return": "parsed_fields",
+        "must_include_evidence_trace": true,
+        "must_include_gate": true,
+        "must_include_delta": false
+      }
+    },
+    {
+      "case_id": "CWL-DOCUMENT-FIELD-EXTRACTION-002",
+      "workload_family": "document_field_extraction",
+      "input_class": "document",
+      "expected_output": "parsed_fields",
+      "ambiguity_level": 2,
+      "evidence_required": true,
+      "synthetic_fixture": true,
+      "input_summary": "Synthetic routine workload case 2 for document_field_extraction.",
+      "ground_truth_shape": {
+        "must_return": "parsed_fields",
+        "must_include_evidence_trace": true,
+        "must_include_gate": true,
+        "must_include_delta": false
+      }
+    },
+    {
+      "case_id": "CWL-DOCUMENT-FIELD-EXTRACTION-003",
+      "workload_family": "document_field_extraction",
+      "input_class": "document",
+      "expected_output": "parsed_fields",
+      "ambiguity_level": 3,
+      "evidence_required": true,
+      "synthetic_fixture": true,
+      "input_summary": "Synthetic routine workload case 3 for document_field_extraction.",
+      "ground_truth_shape": {
+        "must_return": "parsed_fields",
+        "must_include_evidence_trace": true,
+        "must_include_gate": true,
+        "must_include_delta": false
+      }
+    },
+    {
+      "case_id": "CWL-DOCUMENT-FIELD-EXTRACTION-004",
+      "workload_family": "document_field_extraction",
+      "input_class": "document",
+      "expected_output": "parsed_fields",
+      "ambiguity_level": 4,
+      "evidence_required": true,
+      "synthetic_fixture": true,
+      "input_summary": "Synthetic routine workload case 4 for document_field_extraction.",
+      "ground_truth_shape": {
+        "must_return": "parsed_fields",
+        "must_include_evidence_trace": true,
+        "must_include_gate": true,
+        "must_include_delta": false
+      }
+    },
+    {
+      "case_id": "CWL-DOCUMENT-FIELD-EXTRACTION-005",
+      "workload_family": "document_field_extraction",
+      "input_class": "document",
+      "expected_output": "parsed_fields",
+      "ambiguity_level": 0,
+      "evidence_required": true,
+      "synthetic_fixture": true,
+      "input_summary": "Synthetic routine workload case 5 for document_field_extraction.",
+      "ground_truth_shape": {
+        "must_return": "parsed_fields",
+        "must_include_evidence_trace": true,
+        "must_include_gate": true,
+        "must_include_delta": false
+      }
+    },
+    {
+      "case_id": "CWL-DOCUMENT-FIELD-EXTRACTION-006",
+      "workload_family": "document_field_extraction",
+      "input_class": "document",
+      "expected_output": "parsed_fields",
+      "ambiguity_level": 1,
+      "evidence_required": true,
+      "synthetic_fixture": true,
+      "input_summary": "Synthetic routine workload case 6 for document_field_extraction.",
+      "ground_truth_shape": {
+        "must_return": "parsed_fields",
+        "must_include_evidence_trace": true,
+        "must_include_gate": true,
+        "must_include_delta": false
+      }
+    },
+    {
+      "case_id": "CWL-DOCUMENT-FIELD-EXTRACTION-007",
+      "workload_family": "document_field_extraction",
+      "input_class": "document",
+      "expected_output": "parsed_fields",
+      "ambiguity_level": 2,
+      "evidence_required": true,
+      "synthetic_fixture": true,
+      "input_summary": "Synthetic routine workload case 7 for document_field_extraction.",
+      "ground_truth_shape": {
+        "must_return": "parsed_fields",
+        "must_include_evidence_trace": true,
+        "must_include_gate": true,
+        "must_include_delta": false
+      }
+    },
+    {
+      "case_id": "CWL-DOCUMENT-FIELD-EXTRACTION-008",
+      "workload_family": "document_field_extraction",
+      "input_class": "document",
+      "expected_output": "parsed_fields",
+      "ambiguity_level": 3,
+      "evidence_required": true,
+      "synthetic_fixture": true,
+      "input_summary": "Synthetic routine workload case 8 for document_field_extraction.",
+      "ground_truth_shape": {
+        "must_return": "parsed_fields",
+        "must_include_evidence_trace": true,
+        "must_include_gate": true,
+        "must_include_delta": false
+      }
+    },
+    {
+      "case_id": "CWL-DOCUMENT-FIELD-EXTRACTION-009",
+      "workload_family": "document_field_extraction",
+      "input_class": "document",
+      "expected_output": "parsed_fields",
+      "ambiguity_level": 4,
+      "evidence_required": true,
+      "synthetic_fixture": true,
+      "input_summary": "Synthetic routine workload case 9 for document_field_extraction.",
+      "ground_truth_shape": {
+        "must_return": "parsed_fields",
+        "must_include_evidence_trace": true,
+        "must_include_gate": true,
+        "must_include_delta": false
+      }
+    },
+    {
+      "case_id": "CWL-DOCUMENT-FIELD-EXTRACTION-010",
+      "workload_family": "document_field_extraction",
+      "input_class": "document",
+      "expected_output": "parsed_fields",
+      "ambiguity_level": 0,
+      "evidence_required": true,
+      "synthetic_fixture": true,
+      "input_summary": "Synthetic routine workload case 10 for document_field_extraction.",
+      "ground_truth_shape": {
+        "must_return": "parsed_fields",
+        "must_include_evidence_trace": true,
+        "must_include_gate": true,
+        "must_include_delta": false
+      }
+    },
+    {
+      "case_id": "CWL-EMAIL-TRIAGE-001",
+      "workload_family": "email_triage",
+      "input_class": "email",
+      "expected_output": "classification",
+      "ambiguity_level": 1,
+      "evidence_required": false,
+      "synthetic_fixture": true,
+      "input_summary": "Synthetic routine workload case 1 for email_triage.",
+      "ground_truth_shape": {
+        "must_return": "classification",
+        "must_include_evidence_trace": false,
+        "must_include_gate": true,
+        "must_include_delta": false
+      }
+    },
+    {
+      "case_id": "CWL-EMAIL-TRIAGE-002",
+      "workload_family": "email_triage",
+      "input_class": "email",
+      "expected_output": "classification",
+      "ambiguity_level": 2,
+      "evidence_required": false,
+      "synthetic_fixture": true,
+      "input_summary": "Synthetic routine workload case 2 for email_triage.",
+      "ground_truth_shape": {
+        "must_return": "classification",
+        "must_include_evidence_trace": false,
+        "must_include_gate": true,
+        "must_include_delta": false
+      }
+    },
+    {
+      "case_id": "CWL-EMAIL-TRIAGE-003",
+      "workload_family": "email_triage",
+      "input_class": "email",
+      "expected_output": "classification",
+      "ambiguity_level": 3,
+      "evidence_required": false,
+      "synthetic_fixture": true,
+      "input_summary": "Synthetic routine workload case 3 for email_triage.",
+      "ground_truth_shape": {
+        "must_return": "classification",
+        "must_include_evidence_trace": false,
+        "must_include_gate": true,
+        "must_include_delta": false
+      }
+    },
+    {
+      "case_id": "CWL-EMAIL-TRIAGE-004",
+      "workload_family": "email_triage",
+      "input_class": "email",
+      "expected_output": "classification",
+      "ambiguity_level": 4,
+      "evidence_required": false,
+      "synthetic_fixture": true,
+      "input_summary": "Synthetic routine workload case 4 for email_triage.",
+      "ground_truth_shape": {
+        "must_return": "classification",
+        "must_include_evidence_trace": false,
+        "must_include_gate": true,
+        "must_include_delta": false
+      }
+    },
+    {
+      "case_id": "CWL-EMAIL-TRIAGE-005",
+      "workload_family": "email_triage",
+      "input_class": "email",
+      "expected_output": "classification",
+      "ambiguity_level": 0,
+      "evidence_required": false,
+      "synthetic_fixture": true,
+      "input_summary": "Synthetic routine workload case 5 for email_triage.",
+      "ground_truth_shape": {
+        "must_return": "classification",
+        "must_include_evidence_trace": false,
+        "must_include_gate": true,
+        "must_include_delta": false
+      }
+    },
+    {
+      "case_id": "CWL-EMAIL-TRIAGE-006",
+      "workload_family": "email_triage",
+      "input_class": "email",
+      "expected_output": "classification",
+      "ambiguity_level": 1,
+      "evidence_required": false,
+      "synthetic_fixture": true,
+      "input_summary": "Synthetic routine workload case 6 for email_triage.",
+      "ground_truth_shape": {
+        "must_return": "classification",
+        "must_include_evidence_trace": false,
+        "must_include_gate": true,
+        "must_include_delta": false
+      }
+    },
+    {
+      "case_id": "CWL-EMAIL-TRIAGE-007",
+      "workload_family": "email_triage",
+      "input_class": "email",
+      "expected_output": "classification",
+      "ambiguity_level": 2,
+      "evidence_required": false,
+      "synthetic_fixture": true,
+      "input_summary": "Synthetic routine workload case 7 for email_triage.",
+      "ground_truth_shape": {
+        "must_return": "classification",
+        "must_include_evidence_trace": false,
+        "must_include_gate": true,
+        "must_include_delta": false
+      }
+    },
+    {
+      "case_id": "CWL-EMAIL-TRIAGE-008",
+      "workload_family": "email_triage",
+      "input_class": "email",
+      "expected_output": "classification",
+      "ambiguity_level": 3,
+      "evidence_required": false,
+      "synthetic_fixture": true,
+      "input_summary": "Synthetic routine workload case 8 for email_triage.",
+      "ground_truth_shape": {
+        "must_return": "classification",
+        "must_include_evidence_trace": false,
+        "must_include_gate": true,
+        "must_include_delta": false
+      }
+    },
+    {
+      "case_id": "CWL-EMAIL-TRIAGE-009",
+      "workload_family": "email_triage",
+      "input_class": "email",
+      "expected_output": "classification",
+      "ambiguity_level": 4,
+      "evidence_required": false,
+      "synthetic_fixture": true,
+      "input_summary": "Synthetic routine workload case 9 for email_triage.",
+      "ground_truth_shape": {
+        "must_return": "classification",
+        "must_include_evidence_trace": false,
+        "must_include_gate": true,
+        "must_include_delta": false
+      }
+    },
+    {
+      "case_id": "CWL-EMAIL-TRIAGE-010",
+      "workload_family": "email_triage",
+      "input_class": "email",
+      "expected_output": "classification",
+      "ambiguity_level": 0,
+      "evidence_required": false,
+      "synthetic_fixture": true,
+      "input_summary": "Synthetic routine workload case 10 for email_triage.",
+      "ground_truth_shape": {
+        "must_return": "classification",
+        "must_include_evidence_trace": false,
+        "must_include_gate": true,
+        "must_include_delta": false
+      }
+    },
+    {
+      "case_id": "CWL-RECEIPT-INVOICE-EXTRACTION-001",
+      "workload_family": "receipt_invoice_extraction",
+      "input_class": "document",
+      "expected_output": "parsed_fields",
+      "ambiguity_level": 1,
+      "evidence_required": true,
+      "synthetic_fixture": true,
+      "input_summary": "Synthetic routine workload case 1 for receipt_invoice_extraction.",
+      "ground_truth_shape": {
+        "must_return": "parsed_fields",
+        "must_include_evidence_trace": true,
+        "must_include_gate": true,
+        "must_include_delta": false
+      }
+    },
+    {
+      "case_id": "CWL-RECEIPT-INVOICE-EXTRACTION-002",
+      "workload_family": "receipt_invoice_extraction",
+      "input_class": "document",
+      "expected_output": "parsed_fields",
+      "ambiguity_level": 2,
+      "evidence_required": true,
+      "synthetic_fixture": true,
+      "input_summary": "Synthetic routine workload case 2 for receipt_invoice_extraction.",
+      "ground_truth_shape": {
+        "must_return": "parsed_fields",
+        "must_include_evidence_trace": true,
+        "must_include_gate": true,
+        "must_include_delta": false
+      }
+    },
+    {
+      "case_id": "CWL-RECEIPT-INVOICE-EXTRACTION-003",
+      "workload_family": "receipt_invoice_extraction",
+      "input_class": "document",
+      "expected_output": "parsed_fields",
+      "ambiguity_level": 3,
+      "evidence_required": true,
+      "synthetic_fixture": true,
+      "input_summary": "Synthetic routine workload case 3 for receipt_invoice_extraction.",
+      "ground_truth_shape": {
+        "must_return": "parsed_fields",
+        "must_include_evidence_trace": true,
+        "must_include_gate": true,
+        "must_include_delta": false
+      }
+    },
+    {
+      "case_id": "CWL-RECEIPT-INVOICE-EXTRACTION-004",
+      "workload_family": "receipt_invoice_extraction",
+      "input_class": "document",
+      "expected_output": "parsed_fields",
+      "ambiguity_level": 4,
+      "evidence_required": true,
+      "synthetic_fixture": true,
+      "input_summary": "Synthetic routine workload case 4 for receipt_invoice_extraction.",
+      "ground_truth_shape": {
+        "must_return": "parsed_fields",
+        "must_include_evidence_trace": true,
+        "must_include_gate": true,
+        "must_include_delta": false
+      }
+    },
+    {
+      "case_id": "CWL-RECEIPT-INVOICE-EXTRACTION-005",
+      "workload_family": "receipt_invoice_extraction",
+      "input_class": "document",
+      "expected_output": "parsed_fields",
+      "ambiguity_level": 0,
+      "evidence_required": true,
+      "synthetic_fixture": true,
+      "input_summary": "Synthetic routine workload case 5 for receipt_invoice_extraction.",
+      "ground_truth_shape": {
+        "must_return": "parsed_fields",
+        "must_include_evidence_trace": true,
+        "must_include_gate": true,
+        "must_include_delta": false
+      }
+    },
+    {
+      "case_id": "CWL-RECEIPT-INVOICE-EXTRACTION-006",
+      "workload_family": "receipt_invoice_extraction",
+      "input_class": "document",
+      "expected_output": "parsed_fields",
+      "ambiguity_level": 1,
+      "evidence_required": true,
+      "synthetic_fixture": true,
+      "input_summary": "Synthetic routine workload case 6 for receipt_invoice_extraction.",
+      "ground_truth_shape": {
+        "must_return": "parsed_fields",
+        "must_include_evidence_trace": true,
+        "must_include_gate": true,
+        "must_include_delta": false
+      }
+    },
+    {
+      "case_id": "CWL-RECEIPT-INVOICE-EXTRACTION-007",
+      "workload_family": "receipt_invoice_extraction",
+      "input_class": "document",
+      "expected_output": "parsed_fields",
+      "ambiguity_level": 2,
+      "evidence_required": true,
+      "synthetic_fixture": true,
+      "input_summary": "Synthetic routine workload case 7 for receipt_invoice_extraction.",
+      "ground_truth_shape": {
+        "must_return": "parsed_fields",
+        "must_include_evidence_trace": true,
+        "must_include_gate": true,
+        "must_include_delta": false
+      }
+    },
+    {
+      "case_id": "CWL-RECEIPT-INVOICE-EXTRACTION-008",
+      "workload_family": "receipt_invoice_extraction",
+      "input_class": "document",
+      "expected_output": "parsed_fields",
+      "ambiguity_level": 3,
+      "evidence_required": true,
+      "synthetic_fixture": true,
+      "input_summary": "Synthetic routine workload case 8 for receipt_invoice_extraction.",
+      "ground_truth_shape": {
+        "must_return": "parsed_fields",
+        "must_include_evidence_trace": true,
+        "must_include_gate": true,
+        "must_include_delta": false
+      }
+    },
+    {
+      "case_id": "CWL-RECEIPT-INVOICE-EXTRACTION-009",
+      "workload_family": "receipt_invoice_extraction",
+      "input_class": "document",
+      "expected_output": "parsed_fields",
+      "ambiguity_level": 4,
+      "evidence_required": true,
+      "synthetic_fixture": true,
+      "input_summary": "Synthetic routine workload case 9 for receipt_invoice_extraction.",
+      "ground_truth_shape": {
+        "must_return": "parsed_fields",
+        "must_include_evidence_trace": true,
+        "must_include_gate": true,
+        "must_include_delta": false
+      }
+    },
+    {
+      "case_id": "CWL-RECEIPT-INVOICE-EXTRACTION-010",
+      "workload_family": "receipt_invoice_extraction",
+      "input_class": "document",
+      "expected_output": "parsed_fields",
+      "ambiguity_level": 0,
+      "evidence_required": true,
+      "synthetic_fixture": true,
+      "input_summary": "Synthetic routine workload case 10 for receipt_invoice_extraction.",
+      "ground_truth_shape": {
+        "must_return": "parsed_fields",
+        "must_include_evidence_trace": true,
+        "must_include_gate": true,
+        "must_include_delta": false
+      }
+    },
+    {
+      "case_id": "CWL-CONTRACT-CHECKLIST-001",
+      "workload_family": "contract_checklist",
+      "input_class": "document",
+      "expected_output": "checklist",
+      "ambiguity_level": 1,
+      "evidence_required": true,
+      "synthetic_fixture": true,
+      "input_summary": "Synthetic routine workload case 1 for contract_checklist.",
+      "ground_truth_shape": {
+        "must_return": "checklist",
+        "must_include_evidence_trace": true,
+        "must_include_gate": true,
+        "must_include_delta": false
+      }
+    },
+    {
+      "case_id": "CWL-CONTRACT-CHECKLIST-002",
+      "workload_family": "contract_checklist",
+      "input_class": "document",
+      "expected_output": "checklist",
+      "ambiguity_level": 2,
+      "evidence_required": true,
+      "synthetic_fixture": true,
+      "input_summary": "Synthetic routine workload case 2 for contract_checklist.",
+      "ground_truth_shape": {
+        "must_return": "checklist",
+        "must_include_evidence_trace": true,
+        "must_include_gate": true,
+        "must_include_delta": false
+      }
+    },
+    {
+      "case_id": "CWL-CONTRACT-CHECKLIST-003",
+      "workload_family": "contract_checklist",
+      "input_class": "document",
+      "expected_output": "checklist",
+      "ambiguity_level": 3,
+      "evidence_required": true,
+      "synthetic_fixture": true,
+      "input_summary": "Synthetic routine workload case 3 for contract_checklist.",
+      "ground_truth_shape": {
+        "must_return": "checklist",
+        "must_include_evidence_trace": true,
+        "must_include_gate": true,
+        "must_include_delta": false
+      }
+    },
+    {
+      "case_id": "CWL-CONTRACT-CHECKLIST-004",
+      "workload_family": "contract_checklist",
+      "input_class": "document",
+      "expected_output": "checklist",
+      "ambiguity_level": 4,
+      "evidence_required": true,
+      "synthetic_fixture": true,
+      "input_summary": "Synthetic routine workload case 4 for contract_checklist.",
+      "ground_truth_shape": {
+        "must_return": "checklist",
+        "must_include_evidence_trace": true,
+        "must_include_gate": true,
+        "must_include_delta": false
+      }
+    },
+    {
+      "case_id": "CWL-CONTRACT-CHECKLIST-005",
+      "workload_family": "contract_checklist",
+      "input_class": "document",
+      "expected_output": "checklist",
+      "ambiguity_level": 0,
+      "evidence_required": true,
+      "synthetic_fixture": true,
+      "input_summary": "Synthetic routine workload case 5 for contract_checklist.",
+      "ground_truth_shape": {
+        "must_return": "checklist",
+        "must_include_evidence_trace": true,
+        "must_include_gate": true,
+        "must_include_delta": false
+      }
+    },
+    {
+      "case_id": "CWL-CONTRACT-CHECKLIST-006",
+      "workload_family": "contract_checklist",
+      "input_class": "document",
+      "expected_output": "checklist",
+      "ambiguity_level": 1,
+      "evidence_required": true,
+      "synthetic_fixture": true,
+      "input_summary": "Synthetic routine workload case 6 for contract_checklist.",
+      "ground_truth_shape": {
+        "must_return": "checklist",
+        "must_include_evidence_trace": true,
+        "must_include_gate": true,
+        "must_include_delta": false
+      }
+    },
+    {
+      "case_id": "CWL-CONTRACT-CHECKLIST-007",
+      "workload_family": "contract_checklist",
+      "input_class": "document",
+      "expected_output": "checklist",
+      "ambiguity_level": 2,
+      "evidence_required": true,
+      "synthetic_fixture": true,
+      "input_summary": "Synthetic routine workload case 7 for contract_checklist.",
+      "ground_truth_shape": {
+        "must_return": "checklist",
+        "must_include_evidence_trace": true,
+        "must_include_gate": true,
+        "must_include_delta": false
+      }
+    },
+    {
+      "case_id": "CWL-CONTRACT-CHECKLIST-008",
+      "workload_family": "contract_checklist",
+      "input_class": "document",
+      "expected_output": "checklist",
+      "ambiguity_level": 3,
+      "evidence_required": true,
+      "synthetic_fixture": true,
+      "input_summary": "Synthetic routine workload case 8 for contract_checklist.",
+      "ground_truth_shape": {
+        "must_return": "checklist",
+        "must_include_evidence_trace": true,
+        "must_include_gate": true,
+        "must_include_delta": false
+      }
+    },
+    {
+      "case_id": "CWL-CONTRACT-CHECKLIST-009",
+      "workload_family": "contract_checklist",
+      "input_class": "document",
+      "expected_output": "checklist",
+      "ambiguity_level": 4,
+      "evidence_required": true,
+      "synthetic_fixture": true,
+      "input_summary": "Synthetic routine workload case 9 for contract_checklist.",
+      "ground_truth_shape": {
+        "must_return": "checklist",
+        "must_include_evidence_trace": true,
+        "must_include_gate": true,
+        "must_include_delta": false
+      }
+    },
+    {
+      "case_id": "CWL-CONTRACT-CHECKLIST-010",
+      "workload_family": "contract_checklist",
+      "input_class": "document",
+      "expected_output": "checklist",
+      "ambiguity_level": 0,
+      "evidence_required": true,
+      "synthetic_fixture": true,
+      "input_summary": "Synthetic routine workload case 10 for contract_checklist.",
+      "ground_truth_shape": {
+        "must_return": "checklist",
+        "must_include_evidence_trace": true,
+        "must_include_gate": true,
+        "must_include_delta": false
+      }
+    },
+    {
+      "case_id": "CWL-POLICY-RULE-EXTRACTION-001",
+      "workload_family": "policy_rule_extraction",
+      "input_class": "document",
+      "expected_output": "checklist",
+      "ambiguity_level": 1,
+      "evidence_required": true,
+      "synthetic_fixture": true,
+      "input_summary": "Synthetic routine workload case 1 for policy_rule_extraction.",
+      "ground_truth_shape": {
+        "must_return": "checklist",
+        "must_include_evidence_trace": true,
+        "must_include_gate": true,
+        "must_include_delta": false
+      }
+    },
+    {
+      "case_id": "CWL-POLICY-RULE-EXTRACTION-002",
+      "workload_family": "policy_rule_extraction",
+      "input_class": "document",
+      "expected_output": "checklist",
+      "ambiguity_level": 2,
+      "evidence_required": true,
+      "synthetic_fixture": true,
+      "input_summary": "Synthetic routine workload case 2 for policy_rule_extraction.",
+      "ground_truth_shape": {
+        "must_return": "checklist",
+        "must_include_evidence_trace": true,
+        "must_include_gate": true,
+        "must_include_delta": false
+      }
+    },
+    {
+      "case_id": "CWL-POLICY-RULE-EXTRACTION-003",
+      "workload_family": "policy_rule_extraction",
+      "input_class": "document",
+      "expected_output": "checklist",
+      "ambiguity_level": 3,
+      "evidence_required": true,
+      "synthetic_fixture": true,
+      "input_summary": "Synthetic routine workload case 3 for policy_rule_extraction.",
+      "ground_truth_shape": {
+        "must_return": "checklist",
+        "must_include_evidence_trace": true,
+        "must_include_gate": true,
+        "must_include_delta": false
+      }
+    },
+    {
+      "case_id": "CWL-POLICY-RULE-EXTRACTION-004",
+      "workload_family": "policy_rule_extraction",
+      "input_class": "document",
+      "expected_output": "checklist",
+      "ambiguity_level": 4,
+      "evidence_required": true,
+      "synthetic_fixture": true,
+      "input_summary": "Synthetic routine workload case 4 for policy_rule_extraction.",
+      "ground_truth_shape": {
+        "must_return": "checklist",
+        "must_include_evidence_trace": true,
+        "must_include_gate": true,
+        "must_include_delta": false
+      }
+    },
+    {
+      "case_id": "CWL-POLICY-RULE-EXTRACTION-005",
+      "workload_family": "policy_rule_extraction",
+      "input_class": "document",
+      "expected_output": "checklist",
+      "ambiguity_level": 0,
+      "evidence_required": true,
+      "synthetic_fixture": true,
+      "input_summary": "Synthetic routine workload case 5 for policy_rule_extraction.",
+      "ground_truth_shape": {
+        "must_return": "checklist",
+        "must_include_evidence_trace": true,
+        "must_include_gate": true,
+        "must_include_delta": false
+      }
+    },
+    {
+      "case_id": "CWL-POLICY-RULE-EXTRACTION-006",
+      "workload_family": "policy_rule_extraction",
+      "input_class": "document",
+      "expected_output": "checklist",
+      "ambiguity_level": 1,
+      "evidence_required": true,
+      "synthetic_fixture": true,
+      "input_summary": "Synthetic routine workload case 6 for policy_rule_extraction.",
+      "ground_truth_shape": {
+        "must_return": "checklist",
+        "must_include_evidence_trace": true,
+        "must_include_gate": true,
+        "must_include_delta": false
+      }
+    },
+    {
+      "case_id": "CWL-POLICY-RULE-EXTRACTION-007",
+      "workload_family": "policy_rule_extraction",
+      "input_class": "document",
+      "expected_output": "checklist",
+      "ambiguity_level": 2,
+      "evidence_required": true,
+      "synthetic_fixture": true,
+      "input_summary": "Synthetic routine workload case 7 for policy_rule_extraction.",
+      "ground_truth_shape": {
+        "must_return": "checklist",
+        "must_include_evidence_trace": true,
+        "must_include_gate": true,
+        "must_include_delta": false
+      }
+    },
+    {
+      "case_id": "CWL-POLICY-RULE-EXTRACTION-008",
+      "workload_family": "policy_rule_extraction",
+      "input_class": "document",
+      "expected_output": "checklist",
+      "ambiguity_level": 3,
+      "evidence_required": true,
+      "synthetic_fixture": true,
+      "input_summary": "Synthetic routine workload case 8 for policy_rule_extraction.",
+      "ground_truth_shape": {
+        "must_return": "checklist",
+        "must_include_evidence_trace": true,
+        "must_include_gate": true,
+        "must_include_delta": false
+      }
+    },
+    {
+      "case_id": "CWL-POLICY-RULE-EXTRACTION-009",
+      "workload_family": "policy_rule_extraction",
+      "input_class": "document",
+      "expected_output": "checklist",
+      "ambiguity_level": 4,
+      "evidence_required": true,
+      "synthetic_fixture": true,
+      "input_summary": "Synthetic routine workload case 9 for policy_rule_extraction.",
+      "ground_truth_shape": {
+        "must_return": "checklist",
+        "must_include_evidence_trace": true,
+        "must_include_gate": true,
+        "must_include_delta": false
+      }
+    },
+    {
+      "case_id": "CWL-POLICY-RULE-EXTRACTION-010",
+      "workload_family": "policy_rule_extraction",
+      "input_class": "document",
+      "expected_output": "checklist",
+      "ambiguity_level": 0,
+      "evidence_required": true,
+      "synthetic_fixture": true,
+      "input_summary": "Synthetic routine workload case 10 for policy_rule_extraction.",
+      "ground_truth_shape": {
+        "must_return": "checklist",
+        "must_include_evidence_trace": true,
+        "must_include_gate": true,
+        "must_include_delta": false
+      }
+    },
+    {
+      "case_id": "CWL-SUMMARY-001",
+      "workload_family": "summary",
+      "input_class": "text",
+      "expected_output": "summary",
+      "ambiguity_level": 1,
+      "evidence_required": false,
+      "synthetic_fixture": true,
+      "input_summary": "Synthetic routine workload case 1 for summary.",
+      "ground_truth_shape": {
+        "must_return": "summary",
+        "must_include_evidence_trace": false,
+        "must_include_gate": true,
+        "must_include_delta": false
+      }
+    },
+    {
+      "case_id": "CWL-SUMMARY-002",
+      "workload_family": "summary",
+      "input_class": "text",
+      "expected_output": "summary",
+      "ambiguity_level": 2,
+      "evidence_required": false,
+      "synthetic_fixture": true,
+      "input_summary": "Synthetic routine workload case 2 for summary.",
+      "ground_truth_shape": {
+        "must_return": "summary",
+        "must_include_evidence_trace": false,
+        "must_include_gate": true,
+        "must_include_delta": false
+      }
+    },
+    {
+      "case_id": "CWL-SUMMARY-003",
+      "workload_family": "summary",
+      "input_class": "text",
+      "expected_output": "summary",
+      "ambiguity_level": 3,
+      "evidence_required": false,
+      "synthetic_fixture": true,
+      "input_summary": "Synthetic routine workload case 3 for summary.",
+      "ground_truth_shape": {
+        "must_return": "summary",
+        "must_include_evidence_trace": false,
+        "must_include_gate": true,
+        "must_include_delta": false
+      }
+    },
+    {
+      "case_id": "CWL-SUMMARY-004",
+      "workload_family": "summary",
+      "input_class": "text",
+      "expected_output": "summary",
+      "ambiguity_level": 4,
+      "evidence_required": false,
+      "synthetic_fixture": true,
+      "input_summary": "Synthetic routine workload case 4 for summary.",
+      "ground_truth_shape": {
+        "must_return": "summary",
+        "must_include_evidence_trace": false,
+        "must_include_gate": true,
+        "must_include_delta": false
+      }
+    },
+    {
+      "case_id": "CWL-SUMMARY-005",
+      "workload_family": "summary",
+      "input_class": "text",
+      "expected_output": "summary",
+      "ambiguity_level": 0,
+      "evidence_required": false,
+      "synthetic_fixture": true,
+      "input_summary": "Synthetic routine workload case 5 for summary.",
+      "ground_truth_shape": {
+        "must_return": "summary",
+        "must_include_evidence_trace": false,
+        "must_include_gate": true,
+        "must_include_delta": false
+      }
+    },
+    {
+      "case_id": "CWL-SUMMARY-006",
+      "workload_family": "summary",
+      "input_class": "text",
+      "expected_output": "summary",
+      "ambiguity_level": 1,
+      "evidence_required": false,
+      "synthetic_fixture": true,
+      "input_summary": "Synthetic routine workload case 6 for summary.",
+      "ground_truth_shape": {
+        "must_return": "summary",
+        "must_include_evidence_trace": false,
+        "must_include_gate": true,
+        "must_include_delta": false
+      }
+    },
+    {
+      "case_id": "CWL-SUMMARY-007",
+      "workload_family": "summary",
+      "input_class": "text",
+      "expected_output": "summary",
+      "ambiguity_level": 2,
+      "evidence_required": false,
+      "synthetic_fixture": true,
+      "input_summary": "Synthetic routine workload case 7 for summary.",
+      "ground_truth_shape": {
+        "must_return": "summary",
+        "must_include_evidence_trace": false,
+        "must_include_gate": true,
+        "must_include_delta": false
+      }
+    },
+    {
+      "case_id": "CWL-SUMMARY-008",
+      "workload_family": "summary",
+      "input_class": "text",
+      "expected_output": "summary",
+      "ambiguity_level": 3,
+      "evidence_required": false,
+      "synthetic_fixture": true,
+      "input_summary": "Synthetic routine workload case 8 for summary.",
+      "ground_truth_shape": {
+        "must_return": "summary",
+        "must_include_evidence_trace": false,
+        "must_include_gate": true,
+        "must_include_delta": false
+      }
+    },
+    {
+      "case_id": "CWL-SUMMARY-009",
+      "workload_family": "summary",
+      "input_class": "text",
+      "expected_output": "summary",
+      "ambiguity_level": 4,
+      "evidence_required": false,
+      "synthetic_fixture": true,
+      "input_summary": "Synthetic routine workload case 9 for summary.",
+      "ground_truth_shape": {
+        "must_return": "summary",
+        "must_include_evidence_trace": false,
+        "must_include_gate": true,
+        "must_include_delta": false
+      }
+    },
+    {
+      "case_id": "CWL-SUMMARY-010",
+      "workload_family": "summary",
+      "input_class": "text",
+      "expected_output": "summary",
+      "ambiguity_level": 0,
+      "evidence_required": false,
+      "synthetic_fixture": true,
+      "input_summary": "Synthetic routine workload case 10 for summary.",
+      "ground_truth_shape": {
+        "must_return": "summary",
+        "must_include_evidence_trace": false,
+        "must_include_gate": true,
+        "must_include_delta": false
+      }
+    },
+    {
+      "case_id": "CWL-CLASSIFICATION-001",
+      "workload_family": "classification",
+      "input_class": "text",
+      "expected_output": "classification",
+      "ambiguity_level": 1,
+      "evidence_required": false,
+      "synthetic_fixture": true,
+      "input_summary": "Synthetic routine workload case 1 for classification.",
+      "ground_truth_shape": {
+        "must_return": "classification",
+        "must_include_evidence_trace": false,
+        "must_include_gate": true,
+        "must_include_delta": false
+      }
+    },
+    {
+      "case_id": "CWL-CLASSIFICATION-002",
+      "workload_family": "classification",
+      "input_class": "text",
+      "expected_output": "classification",
+      "ambiguity_level": 2,
+      "evidence_required": false,
+      "synthetic_fixture": true,
+      "input_summary": "Synthetic routine workload case 2 for classification.",
+      "ground_truth_shape": {
+        "must_return": "classification",
+        "must_include_evidence_trace": false,
+        "must_include_gate": true,
+        "must_include_delta": false
+      }
+    },
+    {
+      "case_id": "CWL-CLASSIFICATION-003",
+      "workload_family": "classification",
+      "input_class": "text",
+      "expected_output": "classification",
+      "ambiguity_level": 3,
+      "evidence_required": false,
+      "synthetic_fixture": true,
+      "input_summary": "Synthetic routine workload case 3 for classification.",
+      "ground_truth_shape": {
+        "must_return": "classification",
+        "must_include_evidence_trace": false,
+        "must_include_gate": true,
+        "must_include_delta": false
+      }
+    },
+    {
+      "case_id": "CWL-CLASSIFICATION-004",
+      "workload_family": "classification",
+      "input_class": "text",
+      "expected_output": "classification",
+      "ambiguity_level": 4,
+      "evidence_required": false,
+      "synthetic_fixture": true,
+      "input_summary": "Synthetic routine workload case 4 for classification.",
+      "ground_truth_shape": {
+        "must_return": "classification",
+        "must_include_evidence_trace": false,
+        "must_include_gate": true,
+        "must_include_delta": false
+      }
+    },
+    {
+      "case_id": "CWL-CLASSIFICATION-005",
+      "workload_family": "classification",
+      "input_class": "text",
+      "expected_output": "classification",
+      "ambiguity_level": 0,
+      "evidence_required": false,
+      "synthetic_fixture": true,
+      "input_summary": "Synthetic routine workload case 5 for classification.",
+      "ground_truth_shape": {
+        "must_return": "classification",
+        "must_include_evidence_trace": false,
+        "must_include_gate": true,
+        "must_include_delta": false
+      }
+    },
+    {
+      "case_id": "CWL-CLASSIFICATION-006",
+      "workload_family": "classification",
+      "input_class": "text",
+      "expected_output": "classification",
+      "ambiguity_level": 1,
+      "evidence_required": false,
+      "synthetic_fixture": true,
+      "input_summary": "Synthetic routine workload case 6 for classification.",
+      "ground_truth_shape": {
+        "must_return": "classification",
+        "must_include_evidence_trace": false,
+        "must_include_gate": true,
+        "must_include_delta": false
+      }
+    },
+    {
+      "case_id": "CWL-CLASSIFICATION-007",
+      "workload_family": "classification",
+      "input_class": "text",
+      "expected_output": "classification",
+      "ambiguity_level": 2,
+      "evidence_required": false,
+      "synthetic_fixture": true,
+      "input_summary": "Synthetic routine workload case 7 for classification.",
+      "ground_truth_shape": {
+        "must_return": "classification",
+        "must_include_evidence_trace": false,
+        "must_include_gate": true,
+        "must_include_delta": false
+      }
+    },
+    {
+      "case_id": "CWL-CLASSIFICATION-008",
+      "workload_family": "classification",
+      "input_class": "text",
+      "expected_output": "classification",
+      "ambiguity_level": 3,
+      "evidence_required": false,
+      "synthetic_fixture": true,
+      "input_summary": "Synthetic routine workload case 8 for classification.",
+      "ground_truth_shape": {
+        "must_return": "classification",
+        "must_include_evidence_trace": false,
+        "must_include_gate": true,
+        "must_include_delta": false
+      }
+    },
+    {
+      "case_id": "CWL-CLASSIFICATION-009",
+      "workload_family": "classification",
+      "input_class": "text",
+      "expected_output": "classification",
+      "ambiguity_level": 4,
+      "evidence_required": false,
+      "synthetic_fixture": true,
+      "input_summary": "Synthetic routine workload case 9 for classification.",
+      "ground_truth_shape": {
+        "must_return": "classification",
+        "must_include_evidence_trace": false,
+        "must_include_gate": true,
+        "must_include_delta": false
+      }
+    },
+    {
+      "case_id": "CWL-CLASSIFICATION-010",
+      "workload_family": "classification",
+      "input_class": "text",
+      "expected_output": "classification",
+      "ambiguity_level": 0,
+      "evidence_required": false,
+      "synthetic_fixture": true,
+      "input_summary": "Synthetic routine workload case 10 for classification.",
+      "ground_truth_shape": {
+        "must_return": "classification",
+        "must_include_evidence_trace": false,
+        "must_include_gate": true,
+        "must_include_delta": false
+      }
+    },
+    {
+      "case_id": "CWL-TECHNICAL-REVIEW-001",
+      "workload_family": "technical_review",
+      "input_class": "technical_request",
+      "expected_output": "delta_report",
+      "ambiguity_level": 1,
+      "evidence_required": true,
+      "synthetic_fixture": true,
+      "input_summary": "Synthetic routine workload case 1 for technical_review.",
+      "ground_truth_shape": {
+        "must_return": "delta_report",
+        "must_include_evidence_trace": true,
+        "must_include_gate": true,
+        "must_include_delta": true
+      }
+    },
+    {
+      "case_id": "CWL-TECHNICAL-REVIEW-002",
+      "workload_family": "technical_review",
+      "input_class": "technical_request",
+      "expected_output": "delta_report",
+      "ambiguity_level": 2,
+      "evidence_required": true,
+      "synthetic_fixture": true,
+      "input_summary": "Synthetic routine workload case 2 for technical_review.",
+      "ground_truth_shape": {
+        "must_return": "delta_report",
+        "must_include_evidence_trace": true,
+        "must_include_gate": true,
+        "must_include_delta": true
+      }
+    },
+    {
+      "case_id": "CWL-TECHNICAL-REVIEW-003",
+      "workload_family": "technical_review",
+      "input_class": "technical_request",
+      "expected_output": "delta_report",
+      "ambiguity_level": 3,
+      "evidence_required": true,
+      "synthetic_fixture": true,
+      "input_summary": "Synthetic routine workload case 3 for technical_review.",
+      "ground_truth_shape": {
+        "must_return": "delta_report",
+        "must_include_evidence_trace": true,
+        "must_include_gate": true,
+        "must_include_delta": true
+      }
+    },
+    {
+      "case_id": "CWL-TECHNICAL-REVIEW-004",
+      "workload_family": "technical_review",
+      "input_class": "technical_request",
+      "expected_output": "delta_report",
+      "ambiguity_level": 4,
+      "evidence_required": true,
+      "synthetic_fixture": true,
+      "input_summary": "Synthetic routine workload case 4 for technical_review.",
+      "ground_truth_shape": {
+        "must_return": "delta_report",
+        "must_include_evidence_trace": true,
+        "must_include_gate": true,
+        "must_include_delta": true
+      }
+    },
+    {
+      "case_id": "CWL-TECHNICAL-REVIEW-005",
+      "workload_family": "technical_review",
+      "input_class": "technical_request",
+      "expected_output": "delta_report",
+      "ambiguity_level": 0,
+      "evidence_required": true,
+      "synthetic_fixture": true,
+      "input_summary": "Synthetic routine workload case 5 for technical_review.",
+      "ground_truth_shape": {
+        "must_return": "delta_report",
+        "must_include_evidence_trace": true,
+        "must_include_gate": true,
+        "must_include_delta": true
+      }
+    },
+    {
+      "case_id": "CWL-TECHNICAL-REVIEW-006",
+      "workload_family": "technical_review",
+      "input_class": "technical_request",
+      "expected_output": "delta_report",
+      "ambiguity_level": 1,
+      "evidence_required": true,
+      "synthetic_fixture": true,
+      "input_summary": "Synthetic routine workload case 6 for technical_review.",
+      "ground_truth_shape": {
+        "must_return": "delta_report",
+        "must_include_evidence_trace": true,
+        "must_include_gate": true,
+        "must_include_delta": true
+      }
+    },
+    {
+      "case_id": "CWL-TECHNICAL-REVIEW-007",
+      "workload_family": "technical_review",
+      "input_class": "technical_request",
+      "expected_output": "delta_report",
+      "ambiguity_level": 2,
+      "evidence_required": true,
+      "synthetic_fixture": true,
+      "input_summary": "Synthetic routine workload case 7 for technical_review.",
+      "ground_truth_shape": {
+        "must_return": "delta_report",
+        "must_include_evidence_trace": true,
+        "must_include_gate": true,
+        "must_include_delta": true
+      }
+    },
+    {
+      "case_id": "CWL-TECHNICAL-REVIEW-008",
+      "workload_family": "technical_review",
+      "input_class": "technical_request",
+      "expected_output": "delta_report",
+      "ambiguity_level": 3,
+      "evidence_required": true,
+      "synthetic_fixture": true,
+      "input_summary": "Synthetic routine workload case 8 for technical_review.",
+      "ground_truth_shape": {
+        "must_return": "delta_report",
+        "must_include_evidence_trace": true,
+        "must_include_gate": true,
+        "must_include_delta": true
+      }
+    },
+    {
+      "case_id": "CWL-TECHNICAL-REVIEW-009",
+      "workload_family": "technical_review",
+      "input_class": "technical_request",
+      "expected_output": "delta_report",
+      "ambiguity_level": 4,
+      "evidence_required": true,
+      "synthetic_fixture": true,
+      "input_summary": "Synthetic routine workload case 9 for technical_review.",
+      "ground_truth_shape": {
+        "must_return": "delta_report",
+        "must_include_evidence_trace": true,
+        "must_include_gate": true,
+        "must_include_delta": true
+      }
+    },
+    {
+      "case_id": "CWL-TECHNICAL-REVIEW-010",
+      "workload_family": "technical_review",
+      "input_class": "technical_request",
+      "expected_output": "delta_report",
+      "ambiguity_level": 0,
+      "evidence_required": true,
+      "synthetic_fixture": true,
+      "input_summary": "Synthetic routine workload case 10 for technical_review.",
+      "ground_truth_shape": {
+        "must_return": "delta_report",
+        "must_include_evidence_trace": true,
+        "must_include_gate": true,
+        "must_include_delta": true
+      }
+    },
+    {
+      "case_id": "CWL-TASK-GENERATION-001",
+      "workload_family": "task_generation",
+      "input_class": "business_case",
+      "expected_output": "task_proposal",
+      "ambiguity_level": 1,
+      "evidence_required": false,
+      "synthetic_fixture": true,
+      "input_summary": "Synthetic routine workload case 1 for task_generation.",
+      "ground_truth_shape": {
+        "must_return": "task_proposal",
+        "must_include_evidence_trace": false,
+        "must_include_gate": true,
+        "must_include_delta": false
+      }
+    },
+    {
+      "case_id": "CWL-TASK-GENERATION-002",
+      "workload_family": "task_generation",
+      "input_class": "business_case",
+      "expected_output": "task_proposal",
+      "ambiguity_level": 2,
+      "evidence_required": false,
+      "synthetic_fixture": true,
+      "input_summary": "Synthetic routine workload case 2 for task_generation.",
+      "ground_truth_shape": {
+        "must_return": "task_proposal",
+        "must_include_evidence_trace": false,
+        "must_include_gate": true,
+        "must_include_delta": false
+      }
+    },
+    {
+      "case_id": "CWL-TASK-GENERATION-003",
+      "workload_family": "task_generation",
+      "input_class": "business_case",
+      "expected_output": "task_proposal",
+      "ambiguity_level": 3,
+      "evidence_required": false,
+      "synthetic_fixture": true,
+      "input_summary": "Synthetic routine workload case 3 for task_generation.",
+      "ground_truth_shape": {
+        "must_return": "task_proposal",
+        "must_include_evidence_trace": false,
+        "must_include_gate": true,
+        "must_include_delta": false
+      }
+    },
+    {
+      "case_id": "CWL-TASK-GENERATION-004",
+      "workload_family": "task_generation",
+      "input_class": "business_case",
+      "expected_output": "task_proposal",
+      "ambiguity_level": 4,
+      "evidence_required": false,
+      "synthetic_fixture": true,
+      "input_summary": "Synthetic routine workload case 4 for task_generation.",
+      "ground_truth_shape": {
+        "must_return": "task_proposal",
+        "must_include_evidence_trace": false,
+        "must_include_gate": true,
+        "must_include_delta": false
+      }
+    },
+    {
+      "case_id": "CWL-TASK-GENERATION-005",
+      "workload_family": "task_generation",
+      "input_class": "business_case",
+      "expected_output": "task_proposal",
+      "ambiguity_level": 0,
+      "evidence_required": false,
+      "synthetic_fixture": true,
+      "input_summary": "Synthetic routine workload case 5 for task_generation.",
+      "ground_truth_shape": {
+        "must_return": "task_proposal",
+        "must_include_evidence_trace": false,
+        "must_include_gate": true,
+        "must_include_delta": false
+      }
+    },
+    {
+      "case_id": "CWL-TASK-GENERATION-006",
+      "workload_family": "task_generation",
+      "input_class": "business_case",
+      "expected_output": "task_proposal",
+      "ambiguity_level": 1,
+      "evidence_required": false,
+      "synthetic_fixture": true,
+      "input_summary": "Synthetic routine workload case 6 for task_generation.",
+      "ground_truth_shape": {
+        "must_return": "task_proposal",
+        "must_include_evidence_trace": false,
+        "must_include_gate": true,
+        "must_include_delta": false
+      }
+    },
+    {
+      "case_id": "CWL-TASK-GENERATION-007",
+      "workload_family": "task_generation",
+      "input_class": "business_case",
+      "expected_output": "task_proposal",
+      "ambiguity_level": 2,
+      "evidence_required": false,
+      "synthetic_fixture": true,
+      "input_summary": "Synthetic routine workload case 7 for task_generation.",
+      "ground_truth_shape": {
+        "must_return": "task_proposal",
+        "must_include_evidence_trace": false,
+        "must_include_gate": true,
+        "must_include_delta": false
+      }
+    },
+    {
+      "case_id": "CWL-TASK-GENERATION-008",
+      "workload_family": "task_generation",
+      "input_class": "business_case",
+      "expected_output": "task_proposal",
+      "ambiguity_level": 3,
+      "evidence_required": false,
+      "synthetic_fixture": true,
+      "input_summary": "Synthetic routine workload case 8 for task_generation.",
+      "ground_truth_shape": {
+        "must_return": "task_proposal",
+        "must_include_evidence_trace": false,
+        "must_include_gate": true,
+        "must_include_delta": false
+      }
+    },
+    {
+      "case_id": "CWL-TASK-GENERATION-009",
+      "workload_family": "task_generation",
+      "input_class": "business_case",
+      "expected_output": "task_proposal",
+      "ambiguity_level": 4,
+      "evidence_required": false,
+      "synthetic_fixture": true,
+      "input_summary": "Synthetic routine workload case 9 for task_generation.",
+      "ground_truth_shape": {
+        "must_return": "task_proposal",
+        "must_include_evidence_trace": false,
+        "must_include_gate": true,
+        "must_include_delta": false
+      }
+    },
+    {
+      "case_id": "CWL-TASK-GENERATION-010",
+      "workload_family": "task_generation",
+      "input_class": "business_case",
+      "expected_output": "task_proposal",
+      "ambiguity_level": 0,
+      "evidence_required": false,
+      "synthetic_fixture": true,
+      "input_summary": "Synthetic routine workload case 10 for task_generation.",
+      "ground_truth_shape": {
+        "must_return": "task_proposal",
+        "must_include_evidence_trace": false,
+        "must_include_gate": true,
+        "must_include_delta": false
+      }
+    },
+    {
+      "case_id": "CWL-DELTA-DETECTION-001",
+      "workload_family": "delta_detection",
+      "input_class": "technical_request",
+      "expected_output": "delta_report",
+      "ambiguity_level": 1,
+      "evidence_required": true,
+      "synthetic_fixture": true,
+      "input_summary": "Synthetic routine workload case 1 for delta_detection.",
+      "ground_truth_shape": {
+        "must_return": "delta_report",
+        "must_include_evidence_trace": true,
+        "must_include_gate": true,
+        "must_include_delta": true
+      }
+    },
+    {
+      "case_id": "CWL-DELTA-DETECTION-002",
+      "workload_family": "delta_detection",
+      "input_class": "technical_request",
+      "expected_output": "delta_report",
+      "ambiguity_level": 2,
+      "evidence_required": true,
+      "synthetic_fixture": true,
+      "input_summary": "Synthetic routine workload case 2 for delta_detection.",
+      "ground_truth_shape": {
+        "must_return": "delta_report",
+        "must_include_evidence_trace": true,
+        "must_include_gate": true,
+        "must_include_delta": true
+      }
+    },
+    {
+      "case_id": "CWL-DELTA-DETECTION-003",
+      "workload_family": "delta_detection",
+      "input_class": "technical_request",
+      "expected_output": "delta_report",
+      "ambiguity_level": 3,
+      "evidence_required": true,
+      "synthetic_fixture": true,
+      "input_summary": "Synthetic routine workload case 3 for delta_detection.",
+      "ground_truth_shape": {
+        "must_return": "delta_report",
+        "must_include_evidence_trace": true,
+        "must_include_gate": true,
+        "must_include_delta": true
+      }
+    },
+    {
+      "case_id": "CWL-DELTA-DETECTION-004",
+      "workload_family": "delta_detection",
+      "input_class": "technical_request",
+      "expected_output": "delta_report",
+      "ambiguity_level": 4,
+      "evidence_required": true,
+      "synthetic_fixture": true,
+      "input_summary": "Synthetic routine workload case 4 for delta_detection.",
+      "ground_truth_shape": {
+        "must_return": "delta_report",
+        "must_include_evidence_trace": true,
+        "must_include_gate": true,
+        "must_include_delta": true
+      }
+    },
+    {
+      "case_id": "CWL-DELTA-DETECTION-005",
+      "workload_family": "delta_detection",
+      "input_class": "technical_request",
+      "expected_output": "delta_report",
+      "ambiguity_level": 0,
+      "evidence_required": true,
+      "synthetic_fixture": true,
+      "input_summary": "Synthetic routine workload case 5 for delta_detection.",
+      "ground_truth_shape": {
+        "must_return": "delta_report",
+        "must_include_evidence_trace": true,
+        "must_include_gate": true,
+        "must_include_delta": true
+      }
+    },
+    {
+      "case_id": "CWL-DELTA-DETECTION-006",
+      "workload_family": "delta_detection",
+      "input_class": "technical_request",
+      "expected_output": "delta_report",
+      "ambiguity_level": 1,
+      "evidence_required": true,
+      "synthetic_fixture": true,
+      "input_summary": "Synthetic routine workload case 6 for delta_detection.",
+      "ground_truth_shape": {
+        "must_return": "delta_report",
+        "must_include_evidence_trace": true,
+        "must_include_gate": true,
+        "must_include_delta": true
+      }
+    },
+    {
+      "case_id": "CWL-DELTA-DETECTION-007",
+      "workload_family": "delta_detection",
+      "input_class": "technical_request",
+      "expected_output": "delta_report",
+      "ambiguity_level": 2,
+      "evidence_required": true,
+      "synthetic_fixture": true,
+      "input_summary": "Synthetic routine workload case 7 for delta_detection.",
+      "ground_truth_shape": {
+        "must_return": "delta_report",
+        "must_include_evidence_trace": true,
+        "must_include_gate": true,
+        "must_include_delta": true
+      }
+    },
+    {
+      "case_id": "CWL-DELTA-DETECTION-008",
+      "workload_family": "delta_detection",
+      "input_class": "technical_request",
+      "expected_output": "delta_report",
+      "ambiguity_level": 3,
+      "evidence_required": true,
+      "synthetic_fixture": true,
+      "input_summary": "Synthetic routine workload case 8 for delta_detection.",
+      "ground_truth_shape": {
+        "must_return": "delta_report",
+        "must_include_evidence_trace": true,
+        "must_include_gate": true,
+        "must_include_delta": true
+      }
+    },
+    {
+      "case_id": "CWL-DELTA-DETECTION-009",
+      "workload_family": "delta_detection",
+      "input_class": "technical_request",
+      "expected_output": "delta_report",
+      "ambiguity_level": 4,
+      "evidence_required": true,
+      "synthetic_fixture": true,
+      "input_summary": "Synthetic routine workload case 9 for delta_detection.",
+      "ground_truth_shape": {
+        "must_return": "delta_report",
+        "must_include_evidence_trace": true,
+        "must_include_gate": true,
+        "must_include_delta": true
+      }
+    },
+    {
+      "case_id": "CWL-DELTA-DETECTION-010",
+      "workload_family": "delta_detection",
+      "input_class": "technical_request",
+      "expected_output": "delta_report",
+      "ambiguity_level": 0,
+      "evidence_required": true,
+      "synthetic_fixture": true,
+      "input_summary": "Synthetic routine workload case 10 for delta_detection.",
+      "ground_truth_shape": {
+        "must_return": "delta_report",
+        "must_include_evidence_trace": true,
+        "must_include_gate": true,
+        "must_include_delta": true
+      }
+    },
+    {
+      "case_id": "CWL-EVIDENCE-GAP-DETECTION-001",
+      "workload_family": "evidence_gap_detection",
+      "input_class": "business_case",
+      "expected_output": "evidence_gap_report",
+      "ambiguity_level": 1,
+      "evidence_required": true,
+      "synthetic_fixture": true,
+      "input_summary": "Synthetic routine workload case 1 for evidence_gap_detection.",
+      "ground_truth_shape": {
+        "must_return": "evidence_gap_report",
+        "must_include_evidence_trace": true,
+        "must_include_gate": true,
+        "must_include_delta": true
+      }
+    },
+    {
+      "case_id": "CWL-EVIDENCE-GAP-DETECTION-002",
+      "workload_family": "evidence_gap_detection",
+      "input_class": "business_case",
+      "expected_output": "evidence_gap_report",
+      "ambiguity_level": 2,
+      "evidence_required": true,
+      "synthetic_fixture": true,
+      "input_summary": "Synthetic routine workload case 2 for evidence_gap_detection.",
+      "ground_truth_shape": {
+        "must_return": "evidence_gap_report",
+        "must_include_evidence_trace": true,
+        "must_include_gate": true,
+        "must_include_delta": true
+      }
+    },
+    {
+      "case_id": "CWL-EVIDENCE-GAP-DETECTION-003",
+      "workload_family": "evidence_gap_detection",
+      "input_class": "business_case",
+      "expected_output": "evidence_gap_report",
+      "ambiguity_level": 3,
+      "evidence_required": true,
+      "synthetic_fixture": true,
+      "input_summary": "Synthetic routine workload case 3 for evidence_gap_detection.",
+      "ground_truth_shape": {
+        "must_return": "evidence_gap_report",
+        "must_include_evidence_trace": true,
+        "must_include_gate": true,
+        "must_include_delta": true
+      }
+    },
+    {
+      "case_id": "CWL-EVIDENCE-GAP-DETECTION-004",
+      "workload_family": "evidence_gap_detection",
+      "input_class": "business_case",
+      "expected_output": "evidence_gap_report",
+      "ambiguity_level": 4,
+      "evidence_required": true,
+      "synthetic_fixture": true,
+      "input_summary": "Synthetic routine workload case 4 for evidence_gap_detection.",
+      "ground_truth_shape": {
+        "must_return": "evidence_gap_report",
+        "must_include_evidence_trace": true,
+        "must_include_gate": true,
+        "must_include_delta": true
+      }
+    },
+    {
+      "case_id": "CWL-EVIDENCE-GAP-DETECTION-005",
+      "workload_family": "evidence_gap_detection",
+      "input_class": "business_case",
+      "expected_output": "evidence_gap_report",
+      "ambiguity_level": 0,
+      "evidence_required": true,
+      "synthetic_fixture": true,
+      "input_summary": "Synthetic routine workload case 5 for evidence_gap_detection.",
+      "ground_truth_shape": {
+        "must_return": "evidence_gap_report",
+        "must_include_evidence_trace": true,
+        "must_include_gate": true,
+        "must_include_delta": true
+      }
+    },
+    {
+      "case_id": "CWL-EVIDENCE-GAP-DETECTION-006",
+      "workload_family": "evidence_gap_detection",
+      "input_class": "business_case",
+      "expected_output": "evidence_gap_report",
+      "ambiguity_level": 1,
+      "evidence_required": true,
+      "synthetic_fixture": true,
+      "input_summary": "Synthetic routine workload case 6 for evidence_gap_detection.",
+      "ground_truth_shape": {
+        "must_return": "evidence_gap_report",
+        "must_include_evidence_trace": true,
+        "must_include_gate": true,
+        "must_include_delta": true
+      }
+    },
+    {
+      "case_id": "CWL-EVIDENCE-GAP-DETECTION-007",
+      "workload_family": "evidence_gap_detection",
+      "input_class": "business_case",
+      "expected_output": "evidence_gap_report",
+      "ambiguity_level": 2,
+      "evidence_required": true,
+      "synthetic_fixture": true,
+      "input_summary": "Synthetic routine workload case 7 for evidence_gap_detection.",
+      "ground_truth_shape": {
+        "must_return": "evidence_gap_report",
+        "must_include_evidence_trace": true,
+        "must_include_gate": true,
+        "must_include_delta": true
+      }
+    },
+    {
+      "case_id": "CWL-EVIDENCE-GAP-DETECTION-008",
+      "workload_family": "evidence_gap_detection",
+      "input_class": "business_case",
+      "expected_output": "evidence_gap_report",
+      "ambiguity_level": 3,
+      "evidence_required": true,
+      "synthetic_fixture": true,
+      "input_summary": "Synthetic routine workload case 8 for evidence_gap_detection.",
+      "ground_truth_shape": {
+        "must_return": "evidence_gap_report",
+        "must_include_evidence_trace": true,
+        "must_include_gate": true,
+        "must_include_delta": true
+      }
+    },
+    {
+      "case_id": "CWL-EVIDENCE-GAP-DETECTION-009",
+      "workload_family": "evidence_gap_detection",
+      "input_class": "business_case",
+      "expected_output": "evidence_gap_report",
+      "ambiguity_level": 4,
+      "evidence_required": true,
+      "synthetic_fixture": true,
+      "input_summary": "Synthetic routine workload case 9 for evidence_gap_detection.",
+      "ground_truth_shape": {
+        "must_return": "evidence_gap_report",
+        "must_include_evidence_trace": true,
+        "must_include_gate": true,
+        "must_include_delta": true
+      }
+    },
+    {
+      "case_id": "CWL-EVIDENCE-GAP-DETECTION-010",
+      "workload_family": "evidence_gap_detection",
+      "input_class": "business_case",
+      "expected_output": "evidence_gap_report",
+      "ambiguity_level": 0,
+      "evidence_required": true,
+      "synthetic_fixture": true,
+      "input_summary": "Synthetic routine workload case 10 for evidence_gap_detection.",
+      "ground_truth_shape": {
+        "must_return": "evidence_gap_report",
+        "must_include_evidence_trace": true,
+        "must_include_gate": true,
+        "must_include_delta": true
+      }
+    }
+  ],
+  "blocked_actions": [
+    "client_facing_claim",
+    "automatic_nomination",
+    "implementation_execution",
+    "production_activation",
+    "automatic_merge",
+    "credential_handling"
+  ]
+}

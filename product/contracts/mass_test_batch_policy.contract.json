@@ -1,0 +1,5 @@
+{
+  "contract": "casulo.mass_test_batch_policy.v0.1",
+  "purpose": "Run fixture-only deterministic batches before real/user data batches.",
+  "policy": "no_real_data_no_external_claim_no_network"
+}

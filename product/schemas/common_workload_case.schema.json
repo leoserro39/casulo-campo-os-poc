@@ -1,0 +1,12 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "common_workload_case.schema.json",
+  "type": "object",
+  "required": [
+    "case_id",
+    "workload_family",
+    "input_class",
+    "expected_output",
+    "evidence_required"
+  ]
+}

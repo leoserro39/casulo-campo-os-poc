@@ -1,0 +1,14 @@
+{
+  "task": "PROD-601..620",
+  "status": "PASS",
+  "phase": "Common Workload Mass Test Lab",
+  "endpoints": [
+    "/api/casulo/common-workload/fixtures",
+    "/api/casulo/common-workload/batch-result",
+    "/api/casulo/common-workload/metrics",
+    "/api/casulo/common-workload/workload-metrics",
+    "/api/casulo/common-workload/readiness",
+    "/api/casulo/common-workload/audit"
+  ],
+  "next_recommended_bundle": "PROD-621..650 Business Domain Mass Test Lab"
+}

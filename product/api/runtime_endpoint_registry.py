@@ -139,4 +139,16 @@ ENDPOINT_GROUPS = [
         ],
     },
 
+    {
+        "group": "common_workload_mass_test",
+        "routes": [
+            {"path": "/api/casulo/common-workload/fixtures", "file": "outputs/prod601_620_common_workload_fixture_pack.json", "key": "fixture_pack"},
+            {"path": "/api/casulo/common-workload/batch-result", "file": "outputs/prod601_620_common_workload_batch_result.json", "key": "batch_result"},
+            {"path": "/api/casulo/common-workload/metrics", "file": "outputs/prod601_620_direct_vs_cubo_metrics.json", "key": "metrics"},
+            {"path": "/api/casulo/common-workload/workload-metrics", "file": "outputs/prod601_620_workload_metrics.json", "key": "workload_metrics"},
+            {"path": "/api/casulo/common-workload/readiness", "file": "outputs/prod601_620_readiness.json", "key": "readiness"},
+            {"path": "/api/casulo/common-workload/audit", "file": "outputs/prod601_620_audit_report.json", "key": "audit"},
+        ],
+    },
+
 ]

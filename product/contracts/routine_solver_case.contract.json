@@ -1,0 +1,4 @@
+{
+  "contract": "casulo.routine_solver_case.v0.1",
+  "purpose": "Define one routine input case routed through direct baseline and Cubo evidence-gated solver simulation."
+}

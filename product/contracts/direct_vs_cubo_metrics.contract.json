@@ -1,0 +1,4 @@
+{
+  "contract": "casulo.direct_vs_cubo_metrics.v0.1",
+  "purpose": "Compare direct output risk with Cubo evidence-gated output risk across routine workloads."
+}

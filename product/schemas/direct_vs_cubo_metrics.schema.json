@@ -1,0 +1,11 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "direct_vs_cubo_metrics.schema.json",
+  "type": "object",
+  "required": [
+    "avg_direct_risk",
+    "avg_cubo_risk",
+    "avg_risk_reduction",
+    "avg_delta_control"
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "status": "PASS",
+  "decision": "READY_FOR_SOLVER_API_STUB_IMPLEMENTATION_OR_LARGER_BATCH",
+  "case_count": 120,
+  "workload_count": 12,
+  "avg_direct_risk": 63.83,
+  "avg_cubo_risk": 31.33,
+  "avg_risk_reduction": 32.5,
+  "avg_delta_control": 86.25,
+  "ready_for": [
+    "solver API stub implementation",
+    "larger synthetic routine workload batches",
+    "business domain mass test planning"
+  ],
+  "not_ready_for": [
+    "production activation",
+    "client-facing benchmark claims",
+    "real personal or confidential data ingestion",
+    "automatic external actions"
+  ],
+  "blocked_actions": [
+    "client_facing_claim",
+    "automatic_nomination",
+    "implementation_execution",
+    "production_activation",
+    "automatic_merge",
+    "credential_handling"
+  ]
+}

@@ -1,0 +1,4 @@
+{
+  "contract": "casulo.common_workload_readiness.v0.1",
+  "purpose": "Gate readiness for solver API stub and business-domain mass test planning."
+}

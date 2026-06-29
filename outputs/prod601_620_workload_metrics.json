@@ -1,0 +1,209 @@
+{
+  "status": "PASS",
+  "workload_metrics": [
+    {
+      "workload_family": "classification",
+      "case_count": 10,
+      "avg_direct_risk": 56.0,
+      "avg_cubo_risk": 32.0,
+      "avg_risk_reduction": 24.0,
+      "avg_delta_control": 82.0,
+      "avg_evidence_coverage": 68.0,
+      "avg_useful_output_rate": 83.4,
+      "gate_distribution": {
+        "PARSER_OUTPUT_ALLOWED": 0,
+        "ANSWER_ALLOWED": 10,
+        "TASK_PROPOSAL_ALLOWED": 0,
+        "EVIDENCE_REQUIRED": 0,
+        "HUMAN_REVIEW_REQUIRED": 0
+      }
+    },
+    {
+      "workload_family": "contract_checklist",
+      "case_count": 10,
+      "avg_direct_risk": 64.0,
+      "avg_cubo_risk": 34.0,
+      "avg_risk_reduction": 30.0,
+      "avg_delta_control": 85.0,
+      "avg_evidence_coverage": 82.0,
+      "avg_useful_output_rate": 86.4,
+      "gate_distribution": {
+        "PARSER_OUTPUT_ALLOWED": 0,
+        "ANSWER_ALLOWED": 10,
+        "TASK_PROPOSAL_ALLOWED": 0,
+        "EVIDENCE_REQUIRED": 0,
+        "HUMAN_REVIEW_REQUIRED": 0
+      }
+    },
+    {
+      "workload_family": "delta_detection",
+      "case_count": 10,
+      "avg_direct_risk": 74.0,
+      "avg_cubo_risk": 36.0,
+      "avg_risk_reduction": 38.0,
+      "avg_delta_control": 89.0,
+      "avg_evidence_coverage": 82.0,
+      "avg_useful_output_rate": 86.4,
+      "gate_distribution": {
+        "PARSER_OUTPUT_ALLOWED": 0,
+        "ANSWER_ALLOWED": 6,
+        "TASK_PROPOSAL_ALLOWED": 0,
+        "EVIDENCE_REQUIRED": 0,
+        "HUMAN_REVIEW_REQUIRED": 4
+      }
+    },
+    {
+      "workload_family": "document_field_extraction",
+      "case_count": 10,
+      "avg_direct_risk": 64.0,
+      "avg_cubo_risk": 24.0,
+      "avg_risk_reduction": 40.0,
+      "avg_delta_control": 90.0,
+      "avg_evidence_coverage": 82.0,
+      "avg_useful_output_rate": 87.6,
+      "gate_distribution": {
+        "PARSER_OUTPUT_ALLOWED": 10,
+        "ANSWER_ALLOWED": 0,
+        "TASK_PROPOSAL_ALLOWED": 0,
+        "EVIDENCE_REQUIRED": 0,
+        "HUMAN_REVIEW_REQUIRED": 0
+      }
+    },
+    {
+      "workload_family": "email_triage",
+      "case_count": 10,
+      "avg_direct_risk": 56.0,
+      "avg_cubo_risk": 32.0,
+      "avg_risk_reduction": 24.0,
+      "avg_delta_control": 82.0,
+      "avg_evidence_coverage": 68.0,
+      "avg_useful_output_rate": 83.4,
+      "gate_distribution": {
+        "PARSER_OUTPUT_ALLOWED": 0,
+        "ANSWER_ALLOWED": 10,
+        "TASK_PROPOSAL_ALLOWED": 0,
+        "EVIDENCE_REQUIRED": 0,
+        "HUMAN_REVIEW_REQUIRED": 0
+      }
+    },
+    {
+      "workload_family": "evidence_gap_detection",
+      "case_count": 10,
+      "avg_direct_risk": 74.0,
+      "avg_cubo_risk": 36.0,
+      "avg_risk_reduction": 38.0,
+      "avg_delta_control": 89.0,
+      "avg_evidence_coverage": 82.0,
+      "avg_useful_output_rate": 86.4,
+      "gate_distribution": {
+        "PARSER_OUTPUT_ALLOWED": 0,
+        "ANSWER_ALLOWED": 6,
+        "TASK_PROPOSAL_ALLOWED": 0,
+        "EVIDENCE_REQUIRED": 0,
+        "HUMAN_REVIEW_REQUIRED": 4
+      }
+    },
+    {
+      "workload_family": "parser",
+      "case_count": 10,
+      "avg_direct_risk": 64.0,
+      "avg_cubo_risk": 24.0,
+      "avg_risk_reduction": 40.0,
+      "avg_delta_control": 90.0,
+      "avg_evidence_coverage": 82.0,
+      "avg_useful_output_rate": 87.6,
+      "gate_distribution": {
+        "PARSER_OUTPUT_ALLOWED": 10,
+        "ANSWER_ALLOWED": 0,
+        "TASK_PROPOSAL_ALLOWED": 0,
+        "EVIDENCE_REQUIRED": 0,
+        "HUMAN_REVIEW_REQUIRED": 0
+      }
+    },
+    {
+      "workload_family": "policy_rule_extraction",
+      "case_count": 10,
+      "avg_direct_risk": 64.0,
+      "avg_cubo_risk": 34.0,
+      "avg_risk_reduction": 30.0,
+      "avg_delta_control": 85.0,
+      "avg_evidence_coverage": 82.0,
+      "avg_useful_output_rate": 86.4,
+      "gate_distribution": {
+        "PARSER_OUTPUT_ALLOWED": 0,
+        "ANSWER_ALLOWED": 10,
+        "TASK_PROPOSAL_ALLOWED": 0,
+        "EVIDENCE_REQUIRED": 0,
+        "HUMAN_REVIEW_REQUIRED": 0
+      }
+    },
+    {
+      "workload_family": "receipt_invoice_extraction",
+      "case_count": 10,
+      "avg_direct_risk": 64.0,
+      "avg_cubo_risk": 24.0,
+      "avg_risk_reduction": 40.0,
+      "avg_delta_control": 90.0,
+      "avg_evidence_coverage": 82.0,
+      "avg_useful_output_rate": 87.6,
+      "gate_distribution": {
+        "PARSER_OUTPUT_ALLOWED": 10,
+        "ANSWER_ALLOWED": 0,
+        "TASK_PROPOSAL_ALLOWED": 0,
+        "EVIDENCE_REQUIRED": 0,
+        "HUMAN_REVIEW_REQUIRED": 0
+      }
+    },
+    {
+      "workload_family": "summary",
+      "case_count": 10,
+      "avg_direct_risk": 56.0,
+      "avg_cubo_risk": 32.0,
+      "avg_risk_reduction": 24.0,
+      "avg_delta_control": 82.0,
+      "avg_evidence_coverage": 68.0,
+      "avg_useful_output_rate": 83.4,
+      "gate_distribution": {
+        "PARSER_OUTPUT_ALLOWED": 0,
+        "ANSWER_ALLOWED": 10,
+        "TASK_PROPOSAL_ALLOWED": 0,
+        "EVIDENCE_REQUIRED": 0,
+        "HUMAN_REVIEW_REQUIRED": 0
+      }
+    },
+    {
+      "workload_family": "task_generation",
+      "case_count": 10,
+      "avg_direct_risk": 56.0,
+      "avg_cubo_risk": 32.0,
+      "avg_risk_reduction": 24.0,
+      "avg_delta_control": 82.0,
+      "avg_evidence_coverage": 68.0,
+      "avg_useful_output_rate": 83.4,
+      "gate_distribution": {
+        "PARSER_OUTPUT_ALLOWED": 0,
+        "ANSWER_ALLOWED": 0,
+        "TASK_PROPOSAL_ALLOWED": 10,
+        "EVIDENCE_REQUIRED": 0,
+        "HUMAN_REVIEW_REQUIRED": 0
+      }
+    },
+    {
+      "workload_family": "technical_review",
+      "case_count": 10,
+      "avg_direct_risk": 74.0,
+      "avg_cubo_risk": 36.0,
+      "avg_risk_reduction": 38.0,
+      "avg_delta_control": 89.0,
+      "avg_evidence_coverage": 82.0,
+      "avg_useful_output_rate": 86.4,
+      "gate_distribution": {
+        "PARSER_OUTPUT_ALLOWED": 0,
+        "ANSWER_ALLOWED": 6,
+        "TASK_PROPOSAL_ALLOWED": 0,
+        "EVIDENCE_REQUIRED": 0,
+        "HUMAN_REVIEW_REQUIRED": 4
+      }
+    }
+  ]
+}
