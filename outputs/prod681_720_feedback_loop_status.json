@@ -1,0 +1,25 @@
+{
+  "status": "PASS",
+  "generated_at": "2026-06-29T13:50:08+00:00",
+  "phase": "Interactive Runner Feedback Calibration Loop",
+  "mode": "controlled_feedback_loop_no_auto_mutation",
+  "case_count": 6,
+  "feedback_count": 6,
+  "safe_feedback_rate_pct": 83.33,
+  "useful_feedback_rate_pct": 50.0,
+  "auto_apply": false,
+  "external_execution_allowed": false,
+  "automatic_threshold_mutation_allowed": false,
+  "blocked_actions": [
+    "client_facing_claim",
+    "automatic_nomination",
+    "implementation_execution",
+    "production_activation",
+    "automatic_merge",
+    "credential_handling",
+    "automatic_threshold_mutation",
+    "autonomous_external_execution",
+    "real_world_side_effect",
+    "unapproved_real_company_data"
+  ]
+}

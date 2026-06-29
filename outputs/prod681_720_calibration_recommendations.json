@@ -1,0 +1,53 @@
+{
+  "status": "PASS",
+  "auto_apply": false,
+  "automatic_threshold_mutation_allowed": false,
+  "recommendations": [
+    {
+      "id": "CAL-001",
+      "target": "review_threshold_or_output_mode",
+      "recommendation": "Inspect medium-risk HUMAN_REVIEW_REQUIRED cases in controlled active domains for possible ALLOW_WITH_WARNING or EVIDENCE_REQUEST split.",
+      "cases": [
+        "INTERACTIVE-002"
+      ],
+      "auto_apply": false,
+      "requires_human_approval": true
+    },
+    {
+      "id": "CAL-002",
+      "target": "block_policy",
+      "recommendation": "No false block candidates detected. Maintain unsupported/execution block policy.",
+      "cases": [],
+      "auto_apply": false,
+      "requires_human_approval": true
+    },
+    {
+      "id": "CAL-003",
+      "target": "allow_policy",
+      "recommendation": "No false allow candidates detected.",
+      "cases": [],
+      "auto_apply": false,
+      "requires_human_approval": true
+    },
+    {
+      "id": "CAL-004",
+      "target": "feedback_collection",
+      "recommendation": "Collect at least 20 controlled anonymized cases before any threshold proposal can move from candidate to approved.",
+      "cases": [],
+      "auto_apply": false,
+      "requires_human_approval": true
+    }
+  ],
+  "blocked_actions": [
+    "client_facing_claim",
+    "automatic_nomination",
+    "implementation_execution",
+    "production_activation",
+    "automatic_merge",
+    "credential_handling",
+    "automatic_threshold_mutation",
+    "autonomous_external_execution",
+    "real_world_side_effect",
+    "unapproved_real_company_data"
+  ]
+}

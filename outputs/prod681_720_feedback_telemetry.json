@@ -1,0 +1,84 @@
+{
+  "status": "PASS",
+  "event_count": 10,
+  "events": [
+    {
+      "event_type": "RUNNER_FEEDBACK_RECEIVED",
+      "feedback_id": "FB-INTERACTIVE-001",
+      "case_id": "INTERACTIVE-001",
+      "feedback_label": "REVIEW_APPROPRIATE",
+      "auto_apply": false
+    },
+    {
+      "event_type": "RUNNER_FEEDBACK_RECEIVED",
+      "feedback_id": "FB-INTERACTIVE-002",
+      "case_id": "INTERACTIVE-002",
+      "feedback_label": "OVER_CONSERVATIVE_CANDIDATE",
+      "auto_apply": false
+    },
+    {
+      "event_type": "RUNNER_FEEDBACK_RECEIVED",
+      "feedback_id": "FB-INTERACTIVE-003",
+      "case_id": "INTERACTIVE-003",
+      "feedback_label": "REVIEW_APPROPRIATE",
+      "auto_apply": false
+    },
+    {
+      "event_type": "RUNNER_FEEDBACK_RECEIVED",
+      "feedback_id": "FB-INTERACTIVE-004",
+      "case_id": "INTERACTIVE-004",
+      "feedback_label": "REVIEW_APPROPRIATE",
+      "auto_apply": false
+    },
+    {
+      "event_type": "RUNNER_FEEDBACK_RECEIVED",
+      "feedback_id": "FB-INTERACTIVE-005",
+      "case_id": "INTERACTIVE-005",
+      "feedback_label": "BLOCK_APPROPRIATE",
+      "auto_apply": false
+    },
+    {
+      "event_type": "RUNNER_FEEDBACK_RECEIVED",
+      "feedback_id": "FB-INTERACTIVE-006",
+      "case_id": "INTERACTIVE-006",
+      "feedback_label": "BLOCK_APPROPRIATE",
+      "auto_apply": false
+    },
+    {
+      "event_type": "CALIBRATION_RECOMMENDATION_CREATED",
+      "recommendation_id": "CAL-001",
+      "target": "review_threshold_or_output_mode",
+      "auto_apply": false
+    },
+    {
+      "event_type": "CALIBRATION_RECOMMENDATION_CREATED",
+      "recommendation_id": "CAL-002",
+      "target": "block_policy",
+      "auto_apply": false
+    },
+    {
+      "event_type": "CALIBRATION_RECOMMENDATION_CREATED",
+      "recommendation_id": "CAL-003",
+      "target": "allow_policy",
+      "auto_apply": false
+    },
+    {
+      "event_type": "CALIBRATION_RECOMMENDATION_CREATED",
+      "recommendation_id": "CAL-004",
+      "target": "feedback_collection",
+      "auto_apply": false
+    }
+  ],
+  "blocked_actions": [
+    "client_facing_claim",
+    "automatic_nomination",
+    "implementation_execution",
+    "production_activation",
+    "automatic_merge",
+    "credential_handling",
+    "automatic_threshold_mutation",
+    "autonomous_external_execution",
+    "real_world_side_effect",
+    "unapproved_real_company_data"
+  ]
+}

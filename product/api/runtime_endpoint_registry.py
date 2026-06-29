@@ -267,4 +267,18 @@ ENDPOINT_GROUPS = [
         ],
     },
 
+    {
+        "group": "interactive_runner_feedback_calibration",
+        "routes": [
+            {"path": "/api/casulo/runner-feedback/status", "file": "outputs/prod681_720_feedback_loop_status.json", "key": "status"},
+            {"path": "/api/casulo/runner-feedback/events", "file": "outputs/prod681_720_feedback_events.json", "key": "feedback_events"},
+            {"path": "/api/casulo/runner-feedback/analysis", "file": "outputs/prod681_720_feedback_analysis.json", "key": "feedback_analysis"},
+            {"path": "/api/casulo/runner-feedback/taxonomy", "file": "outputs/prod681_720_feedback_taxonomy.json", "key": "feedback_taxonomy"},
+            {"path": "/api/casulo/runner-feedback/recommendations", "file": "outputs/prod681_720_calibration_recommendations.json", "key": "calibration_recommendations"},
+            {"path": "/api/casulo/runner-feedback/telemetry", "file": "outputs/prod681_720_feedback_telemetry.json", "key": "feedback_telemetry"},
+            {"path": "/api/casulo/runner-feedback/readiness", "file": "outputs/prod681_720_feedback_readiness.json", "key": "readiness"},
+            {"path": "/api/casulo/runner-feedback/audit", "file": "outputs/prod681_720_feedback_audit_report.json", "key": "audit"},
+        ],
+    },
+
 ]

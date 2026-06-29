@@ -1,0 +1,13 @@
+{
+  "contract": "casulo.runner_feedback_event.v0.1",
+  "feedback_labels": [
+    "REVIEW_APPROPRIATE",
+    "BLOCK_APPROPRIATE",
+    "NEEDS_MORE_EVIDENCE",
+    "OVER_CONSERVATIVE_CANDIDATE",
+    "FALSE_ALLOW_CANDIDATE",
+    "FALSE_BLOCK_CANDIDATE",
+    "OUTPUT_USEFUL",
+    "OUTPUT_NOT_USEFUL"
+  ]
+}

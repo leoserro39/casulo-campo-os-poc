@@ -1,0 +1,4 @@
+{
+  "contract": "casulo.runner_feedback_readiness.v0.1",
+  "purpose": "Decide readiness for controlled user feedback pilot."
+}

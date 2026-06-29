@@ -1,0 +1,11 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "runner_feedback_calibration.schema.json",
+  "type": "object",
+  "required": [
+    "status",
+    "recommendations",
+    "auto_apply",
+    "blocked_actions"
+  ]
+}

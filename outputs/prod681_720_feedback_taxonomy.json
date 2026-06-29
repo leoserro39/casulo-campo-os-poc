@@ -1,0 +1,49 @@
+{
+  "status": "PASS",
+  "feedback_labels": [
+    {
+      "label": "REVIEW_APPROPRIATE",
+      "meaning": "Human review packet is a safe and useful output for the case."
+    },
+    {
+      "label": "BLOCK_APPROPRIATE",
+      "meaning": "Block is appropriate due to unsupported domain, external execution or unsafe request."
+    },
+    {
+      "label": "NEEDS_MORE_EVIDENCE",
+      "meaning": "System should ask for more evidence before answering."
+    },
+    {
+      "label": "OVER_CONSERVATIVE_CANDIDATE",
+      "meaning": "System may be too conservative; investigate before changing threshold."
+    },
+    {
+      "label": "FALSE_ALLOW_CANDIDATE",
+      "meaning": "System may have allowed too much; investigate urgently."
+    },
+    {
+      "label": "FALSE_BLOCK_CANDIDATE",
+      "meaning": "System may have blocked too much; investigate before changing block policy."
+    },
+    {
+      "label": "OUTPUT_USEFUL",
+      "meaning": "Output was useful under current safety constraints."
+    },
+    {
+      "label": "OUTPUT_NOT_USEFUL",
+      "meaning": "Output did not help enough; inspect output mode or evidence request."
+    }
+  ],
+  "blocked_actions": [
+    "client_facing_claim",
+    "automatic_nomination",
+    "implementation_execution",
+    "production_activation",
+    "automatic_merge",
+    "credential_handling",
+    "automatic_threshold_mutation",
+    "autonomous_external_execution",
+    "real_world_side_effect",
+    "unapproved_real_company_data"
+  ]
+}

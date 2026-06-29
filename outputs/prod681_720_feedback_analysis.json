@@ -1,0 +1,44 @@
+{
+  "status": "PASS",
+  "feedback_count": 6,
+  "analysis": {
+    "feedback_count": 6,
+    "label_distribution": {
+      "BLOCK_APPROPRIATE": 2,
+      "OVER_CONSERVATIVE_CANDIDATE": 1,
+      "REVIEW_APPROPRIATE": 3
+    },
+    "gate_distribution": {
+      "HUMAN_REVIEW_REQUIRED": 4,
+      "UNSUPPORTED_BLOCKED": 2
+    },
+    "output_mode_distribution": {
+      "BLOCKED": 2,
+      "HUMAN_REVIEW_PACKET": 4
+    },
+    "risk_band_distribution": {
+      "CRITICAL": 3,
+      "HIGH": 2,
+      "MEDIUM": 1
+    },
+    "safe_feedback_rate_pct": 83.33,
+    "useful_feedback_rate_pct": 50.0,
+    "over_conservative_cases": [
+      "INTERACTIVE-002"
+    ],
+    "false_block_candidate_cases": [],
+    "false_allow_candidate_cases": []
+  },
+  "blocked_actions": [
+    "client_facing_claim",
+    "automatic_nomination",
+    "implementation_execution",
+    "production_activation",
+    "automatic_merge",
+    "credential_handling",
+    "automatic_threshold_mutation",
+    "autonomous_external_execution",
+    "real_world_side_effect",
+    "unapproved_real_company_data"
+  ]
+}

@@ -1,0 +1,4 @@
+{
+  "contract": "casulo.runner_feedback_calibration.v0.1",
+  "purpose": "Convert feedback into candidate calibration recommendations with auto_apply=false."
+}

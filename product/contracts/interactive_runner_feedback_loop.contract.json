@@ -1,0 +1,17 @@
+{
+  "contract": "casulo.interactive_runner_feedback_loop.v0.1",
+  "purpose": "Capture human/user feedback on interactive runner decisions and generate non-mutating calibration recommendations.",
+  "mode": "controlled_feedback_loop_no_auto_mutation",
+  "blocked_actions": [
+    "client_facing_claim",
+    "automatic_nomination",
+    "implementation_execution",
+    "production_activation",
+    "automatic_merge",
+    "credential_handling",
+    "automatic_threshold_mutation",
+    "autonomous_external_execution",
+    "real_world_side_effect",
+    "unapproved_real_company_data"
+  ]
+}
