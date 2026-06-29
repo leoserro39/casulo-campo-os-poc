@@ -1,0 +1,20 @@
+{
+  "contract": "casulo.graph_export_stub.v0.1",
+  "purpose": "Generate JSONL graph node and relationship export stubs without connecting to Neo4j.",
+  "graph_write_allowed": false,
+  "neo4j_connection_allowed": false,
+  "blocked_actions": [
+    "client_facing_claim",
+    "automatic_nomination",
+    "implementation_execution",
+    "production_activation",
+    "automatic_merge",
+    "credential_handling",
+    "automatic_threshold_mutation",
+    "autonomous_external_execution",
+    "real_world_side_effect",
+    "unapproved_real_company_data",
+    "live_graph_database_write",
+    "neo4j_connection"
+  ]
+}

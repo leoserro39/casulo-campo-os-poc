@@ -1,0 +1,17 @@
+{
+  "task": "PROD-941..980",
+  "status": "PASS",
+  "phase": "Controlled 50-Case Dry-Run Simulation and Graph Export Stub",
+  "endpoints": [
+    "/api/casulo/expansion-50-dryrun/status",
+    "/api/casulo/expansion-50-dryrun/runnable-cases",
+    "/api/casulo/expansion-50-dryrun/runs",
+    "/api/casulo/expansion-50-dryrun/decisions",
+    "/api/casulo/expansion-50-dryrun/graph-summary",
+    "/api/casulo/expansion-50-dryrun/diagnostics",
+    "/api/casulo/expansion-50-dryrun/recommendations",
+    "/api/casulo/expansion-50-dryrun/readiness",
+    "/api/casulo/expansion-50-dryrun/audit"
+  ],
+  "next_recommended_bundle": "PROD-981 Business Diagnostic Report Pack and Graph Adapter Boundary"
+}

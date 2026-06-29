@@ -1,0 +1,313 @@
+{"id": "readiness:READY_FOR_BUSINESS_DIAGNOSTIC_REPORT_AND_GRAPH_ADAPTER_BOUNDARY", "label": "ReadinessState", "properties": {"decision": "READY_FOR_BUSINESS_DIAGNOSTIC_REPORT_AND_GRAPH_ADAPTER_BOUNDARY"}}
+{"id": "case:EXP50-001", "label": "Case", "properties": {"case_id": "EXP50-001", "business_domain": "restaurant_inventory", "risk_theme": "clean_controlled_answer", "evidence_profile": "complete_minimum_evidence", "source_mode": "synthetic_design_only"}}
+{"id": "domain:restaurant_inventory", "label": "Domain", "properties": {"business_domain": "restaurant_inventory", "activation_state": "CANDIDATE_DOMAIN_REQUIRE_EVIDENCE", "preflight_score": 0.6964}}
+{"id": "evidence:EXP50-001:complete_minimum_evidence", "label": "Evidence", "properties": {"case_id": "EXP50-001", "evidence_profile": "complete_minimum_evidence", "evidence_count": 5}}
+{"id": "risk:EXP50-001:clean_controlled_answer", "label": "RiskSignal", "properties": {"case_id": "EXP50-001", "risk_theme": "clean_controlled_answer", "adjusted_risk": 33.75, "risk_band": "MEDIUM", "live_delta_score": 0.2481}}
+{"id": "gate:EXP50-001:ANSWER_ALLOWED", "label": "Gate", "properties": {"case_id": "EXP50-001", "gate": "ANSWER_ALLOWED"}}
+{"id": "output:EXP50-001:ANSWER", "label": "OutputMode", "properties": {"case_id": "EXP50-001", "output_mode": "ANSWER"}}
+{"id": "budget:EXP50-001", "label": "HallucinationBudget", "properties": {"case_id": "EXP50-001", "hallucination_budget": 0.8406, "reasoning_mode": "FULL_REASONING_WITH_GROUNDING"}}
+{"id": "case:EXP50-002", "label": "Case", "properties": {"case_id": "EXP50-002", "business_domain": "restaurant_inventory", "risk_theme": "missing_evidence", "evidence_profile": "partial_evidence", "source_mode": "synthetic_design_only"}}
+{"id": "evidence:EXP50-002:partial_evidence", "label": "Evidence", "properties": {"case_id": "EXP50-002", "evidence_profile": "partial_evidence", "evidence_count": 2}}
+{"id": "risk:EXP50-002:missing_evidence", "label": "RiskSignal", "properties": {"case_id": "EXP50-002", "risk_theme": "missing_evidence", "adjusted_risk": 57.95, "risk_band": "HIGH", "live_delta_score": 0.4912}}
+{"id": "gate:EXP50-002:HUMAN_REVIEW_REQUIRED", "label": "Gate", "properties": {"case_id": "EXP50-002", "gate": "HUMAN_REVIEW_REQUIRED"}}
+{"id": "output:EXP50-002:HUMAN_REVIEW_PACKET", "label": "OutputMode", "properties": {"case_id": "EXP50-002", "output_mode": "HUMAN_REVIEW_PACKET"}}
+{"id": "budget:EXP50-002", "label": "HallucinationBudget", "properties": {"case_id": "EXP50-002", "hallucination_budget": 0.6762, "reasoning_mode": "GUIDED_REASONING"}}
+{"id": "case:EXP50-003", "label": "Case", "properties": {"case_id": "EXP50-003", "business_domain": "restaurant_inventory", "risk_theme": "conflicting_information", "evidence_profile": "conflicting_evidence", "source_mode": "synthetic_design_only"}}
+{"id": "evidence:EXP50-003:conflicting_evidence", "label": "Evidence", "properties": {"case_id": "EXP50-003", "evidence_profile": "conflicting_evidence", "evidence_count": 4}}
+{"id": "risk:EXP50-003:conflicting_information", "label": "RiskSignal", "properties": {"case_id": "EXP50-003", "risk_theme": "conflicting_information", "adjusted_risk": 75.35, "risk_band": "CRITICAL", "live_delta_score": 0.5069}}
+{"id": "gate:EXP50-003:HUMAN_REVIEW_REQUIRED", "label": "Gate", "properties": {"case_id": "EXP50-003", "gate": "HUMAN_REVIEW_REQUIRED"}}
+{"id": "output:EXP50-003:HUMAN_REVIEW_PACKET", "label": "OutputMode", "properties": {"case_id": "EXP50-003", "output_mode": "HUMAN_REVIEW_PACKET"}}
+{"id": "budget:EXP50-003", "label": "HallucinationBudget", "properties": {"case_id": "EXP50-003", "hallucination_budget": 0.6494, "reasoning_mode": "GUIDED_REASONING"}}
+{"id": "case:EXP50-004", "label": "Case", "properties": {"case_id": "EXP50-004", "business_domain": "restaurant_inventory", "risk_theme": "high_stakes_review", "evidence_profile": "stale_evidence", "source_mode": "synthetic_design_only"}}
+{"id": "evidence:EXP50-004:stale_evidence", "label": "Evidence", "properties": {"case_id": "EXP50-004", "evidence_profile": "stale_evidence", "evidence_count": 3}}
+{"id": "risk:EXP50-004:high_stakes_review", "label": "RiskSignal", "properties": {"case_id": "EXP50-004", "risk_theme": "high_stakes_review", "adjusted_risk": 49.15, "risk_band": "MEDIUM", "live_delta_score": 0.4028}}
+{"id": "gate:EXP50-004:ANSWER_ALLOWED", "label": "Gate", "properties": {"case_id": "EXP50-004", "gate": "ANSWER_ALLOWED"}}
+{"id": "output:EXP50-004:ANSWER", "label": "OutputMode", "properties": {"case_id": "EXP50-004", "output_mode": "ANSWER"}}
+{"id": "budget:EXP50-004", "label": "HallucinationBudget", "properties": {"case_id": "EXP50-004", "hallucination_budget": 0.7678, "reasoning_mode": "FULL_REASONING_WITH_GROUNDING"}}
+{"id": "case:EXP50-005", "label": "Case", "properties": {"case_id": "EXP50-005", "business_domain": "restaurant_cashflow", "risk_theme": "clean_controlled_answer", "evidence_profile": "high_sensitivity_evidence", "source_mode": "synthetic_design_only"}}
+{"id": "domain:restaurant_cashflow", "label": "Domain", "properties": {"business_domain": "restaurant_cashflow", "activation_state": "CANDIDATE_DOMAIN_REQUIRE_EVIDENCE", "preflight_score": 0.7084}}
+{"id": "evidence:EXP50-005:high_sensitivity_evidence", "label": "Evidence", "properties": {"case_id": "EXP50-005", "evidence_profile": "high_sensitivity_evidence", "evidence_count": 3}}
+{"id": "risk:EXP50-005:clean_controlled_answer", "label": "RiskSignal", "properties": {"case_id": "EXP50-005", "risk_theme": "clean_controlled_answer", "adjusted_risk": 55.9, "risk_band": "HIGH", "live_delta_score": 0.5191}}
+{"id": "gate:EXP50-005:ANSWER_ALLOWED", "label": "Gate", "properties": {"case_id": "EXP50-005", "gate": "ANSWER_ALLOWED"}}
+{"id": "output:EXP50-005:ANSWER", "label": "OutputMode", "properties": {"case_id": "EXP50-005", "output_mode": "ANSWER"}}
+{"id": "budget:EXP50-005", "label": "HallucinationBudget", "properties": {"case_id": "EXP50-005", "hallucination_budget": 0.7215, "reasoning_mode": "FULL_REASONING_WITH_GROUNDING"}}
+{"id": "case:EXP50-006", "label": "Case", "properties": {"case_id": "EXP50-006", "business_domain": "restaurant_cashflow", "risk_theme": "missing_evidence", "evidence_profile": "complete_minimum_evidence", "source_mode": "synthetic_design_only"}}
+{"id": "evidence:EXP50-006:complete_minimum_evidence", "label": "Evidence", "properties": {"case_id": "EXP50-006", "evidence_profile": "complete_minimum_evidence", "evidence_count": 2}}
+{"id": "risk:EXP50-006:missing_evidence", "label": "RiskSignal", "properties": {"case_id": "EXP50-006", "risk_theme": "missing_evidence", "adjusted_risk": 61.95, "risk_band": "HIGH", "live_delta_score": 0.5799}}
+{"id": "gate:EXP50-006:HUMAN_REVIEW_REQUIRED", "label": "Gate", "properties": {"case_id": "EXP50-006", "gate": "HUMAN_REVIEW_REQUIRED"}}
+{"id": "output:EXP50-006:HUMAN_REVIEW_PACKET", "label": "OutputMode", "properties": {"case_id": "EXP50-006", "output_mode": "HUMAN_REVIEW_PACKET"}}
+{"id": "budget:EXP50-006", "label": "HallucinationBudget", "properties": {"case_id": "EXP50-006", "hallucination_budget": 0.6429, "reasoning_mode": "GUIDED_REASONING"}}
+{"id": "case:EXP50-007", "label": "Case", "properties": {"case_id": "EXP50-007", "business_domain": "restaurant_cashflow", "risk_theme": "conflicting_information", "evidence_profile": "partial_evidence", "source_mode": "synthetic_design_only"}}
+{"id": "evidence:EXP50-007:partial_evidence", "label": "Evidence", "properties": {"case_id": "EXP50-007", "evidence_profile": "partial_evidence", "evidence_count": 2}}
+{"id": "risk:EXP50-007:conflicting_information", "label": "RiskSignal", "properties": {"case_id": "EXP50-007", "risk_theme": "conflicting_information", "adjusted_risk": 96.95, "risk_band": "CRITICAL", "live_delta_score": 0.7724}}
+{"id": "gate:EXP50-007:HUMAN_REVIEW_REQUIRED", "label": "Gate", "properties": {"case_id": "EXP50-007", "gate": "HUMAN_REVIEW_REQUIRED"}}
+{"id": "output:EXP50-007:HUMAN_REVIEW_PACKET", "label": "OutputMode", "properties": {"case_id": "EXP50-007", "output_mode": "HUMAN_REVIEW_PACKET"}}
+{"id": "budget:EXP50-007", "label": "HallucinationBudget", "properties": {"case_id": "EXP50-007", "hallucination_budget": 0.5329, "reasoning_mode": "GUIDED_REASONING"}}
+{"id": "case:EXP50-008", "label": "Case", "properties": {"case_id": "EXP50-008", "business_domain": "restaurant_cashflow", "risk_theme": "high_stakes_review", "evidence_profile": "conflicting_evidence", "source_mode": "synthetic_design_only"}}
+{"id": "evidence:EXP50-008:conflicting_evidence", "label": "Evidence", "properties": {"case_id": "EXP50-008", "evidence_profile": "conflicting_evidence", "evidence_count": 4}}
+{"id": "risk:EXP50-008:high_stakes_review", "label": "RiskSignal", "properties": {"case_id": "EXP50-008", "risk_theme": "high_stakes_review", "adjusted_risk": 44.35, "risk_band": "MEDIUM", "live_delta_score": 0.4031}}
+{"id": "gate:EXP50-008:ANSWER_ALLOWED", "label": "Gate", "properties": {"case_id": "EXP50-008", "gate": "ANSWER_ALLOWED"}}
+{"id": "output:EXP50-008:ANSWER", "label": "OutputMode", "properties": {"case_id": "EXP50-008", "output_mode": "ANSWER"}}
+{"id": "budget:EXP50-008", "label": "HallucinationBudget", "properties": {"case_id": "EXP50-008", "hallucination_budget": 0.7761, "reasoning_mode": "FULL_REASONING_WITH_GROUNDING"}}
+{"id": "case:EXP50-009", "label": "Case", "properties": {"case_id": "EXP50-009", "business_domain": "clinic_scheduling", "risk_theme": "clean_controlled_answer", "evidence_profile": "stale_evidence", "source_mode": "synthetic_design_only"}}
+{"id": "domain:clinic_scheduling", "label": "Domain", "properties": {"business_domain": "clinic_scheduling", "activation_state": "CANDIDATE_DOMAIN_REQUIRE_EVIDENCE", "preflight_score": 0.6444}}
+{"id": "evidence:EXP50-009:stale_evidence", "label": "Evidence", "properties": {"case_id": "EXP50-009", "evidence_profile": "stale_evidence", "evidence_count": 3}}
+{"id": "risk:EXP50-009:clean_controlled_answer", "label": "RiskSignal", "properties": {"case_id": "EXP50-009", "risk_theme": "clean_controlled_answer", "adjusted_risk": 53.15, "risk_band": "MEDIUM", "live_delta_score": 0.4915}}
+{"id": "gate:EXP50-009:ANSWER_ALLOWED", "label": "Gate", "properties": {"case_id": "EXP50-009", "gate": "ANSWER_ALLOWED"}}
+{"id": "output:EXP50-009:ANSWER", "label": "OutputMode", "properties": {"case_id": "EXP50-009", "output_mode": "ANSWER"}}
+{"id": "budget:EXP50-009", "label": "HallucinationBudget", "properties": {"case_id": "EXP50-009", "hallucination_budget": 0.7345, "reasoning_mode": "FULL_REASONING_WITH_GROUNDING"}}
+{"id": "case:EXP50-010", "label": "Case", "properties": {"case_id": "EXP50-010", "business_domain": "clinic_scheduling", "risk_theme": "missing_evidence", "evidence_profile": "high_sensitivity_evidence", "source_mode": "synthetic_design_only"}}
+{"id": "evidence:EXP50-010:high_sensitivity_evidence", "label": "Evidence", "properties": {"case_id": "EXP50-010", "evidence_profile": "high_sensitivity_evidence", "evidence_count": 2}}
+{"id": "risk:EXP50-010:missing_evidence", "label": "RiskSignal", "properties": {"case_id": "EXP50-010", "risk_theme": "missing_evidence", "adjusted_risk": 64.7, "risk_band": "HIGH", "live_delta_score": 0.6075}}
+{"id": "gate:EXP50-010:HUMAN_REVIEW_REQUIRED", "label": "Gate", "properties": {"case_id": "EXP50-010", "gate": "HUMAN_REVIEW_REQUIRED"}}
+{"id": "output:EXP50-010:HUMAN_REVIEW_PACKET", "label": "OutputMode", "properties": {"case_id": "EXP50-010", "output_mode": "HUMAN_REVIEW_PACKET"}}
+{"id": "budget:EXP50-010", "label": "HallucinationBudget", "properties": {"case_id": "EXP50-010", "hallucination_budget": 0.6299, "reasoning_mode": "GUIDED_REASONING"}}
+{"id": "case:EXP50-011", "label": "Case", "properties": {"case_id": "EXP50-011", "business_domain": "clinic_scheduling", "risk_theme": "conflicting_information", "evidence_profile": "complete_minimum_evidence", "source_mode": "synthetic_design_only"}}
+{"id": "evidence:EXP50-011:complete_minimum_evidence", "label": "Evidence", "properties": {"case_id": "EXP50-011", "evidence_profile": "complete_minimum_evidence", "evidence_count": 5}}
+{"id": "risk:EXP50-011:conflicting_information", "label": "RiskSignal", "properties": {"case_id": "EXP50-011", "risk_theme": "conflicting_information", "adjusted_risk": 72.75, "risk_band": "HIGH", "live_delta_score": 0.5293}}
+{"id": "gate:EXP50-011:HUMAN_REVIEW_REQUIRED", "label": "Gate", "properties": {"case_id": "EXP50-011", "gate": "HUMAN_REVIEW_REQUIRED"}}
+{"id": "output:EXP50-011:HUMAN_REVIEW_PACKET", "label": "OutputMode", "properties": {"case_id": "EXP50-011", "output_mode": "HUMAN_REVIEW_PACKET"}}
+{"id": "budget:EXP50-011", "label": "HallucinationBudget", "properties": {"case_id": "EXP50-011", "hallucination_budget": 0.6473, "reasoning_mode": "GUIDED_REASONING"}}
+{"id": "case:EXP50-012", "label": "Case", "properties": {"case_id": "EXP50-012", "business_domain": "clinic_scheduling", "risk_theme": "high_stakes_review", "evidence_profile": "partial_evidence", "source_mode": "synthetic_design_only"}}
+{"id": "evidence:EXP50-012:partial_evidence", "label": "Evidence", "properties": {"case_id": "EXP50-012", "evidence_profile": "partial_evidence", "evidence_count": 2}}
+{"id": "risk:EXP50-012:high_stakes_review", "label": "RiskSignal", "properties": {"case_id": "EXP50-012", "risk_theme": "high_stakes_review", "adjusted_risk": 61.95, "risk_band": "HIGH", "live_delta_score": 0.5799}}
+{"id": "gate:EXP50-012:HUMAN_REVIEW_REQUIRED", "label": "Gate", "properties": {"case_id": "EXP50-012", "gate": "HUMAN_REVIEW_REQUIRED"}}
+{"id": "output:EXP50-012:HUMAN_REVIEW_PACKET", "label": "OutputMode", "properties": {"case_id": "EXP50-012", "output_mode": "HUMAN_REVIEW_PACKET"}}
+{"id": "budget:EXP50-012", "label": "HallucinationBudget", "properties": {"case_id": "EXP50-012", "hallucination_budget": 0.6429, "reasoning_mode": "GUIDED_REASONING"}}
+{"id": "case:EXP50-013", "label": "Case", "properties": {"case_id": "EXP50-013", "business_domain": "clinic_billing_glosa", "risk_theme": "clean_controlled_answer", "evidence_profile": "conflicting_evidence", "source_mode": "synthetic_design_only"}}
+{"id": "domain:clinic_billing_glosa", "label": "Domain", "properties": {"business_domain": "clinic_billing_glosa", "activation_state": "CANDIDATE_DOMAIN_REQUIRE_EVIDENCE", "preflight_score": 0.7074}}
+{"id": "evidence:EXP50-013:conflicting_evidence", "label": "Evidence", "properties": {"case_id": "EXP50-013", "evidence_profile": "conflicting_evidence", "evidence_count": 4}}
+{"id": "risk:EXP50-013:clean_controlled_answer", "label": "RiskSignal", "properties": {"case_id": "EXP50-013", "risk_theme": "clean_controlled_answer", "adjusted_risk": 49.35, "risk_band": "MEDIUM", "live_delta_score": 0.5139}}
+{"id": "gate:EXP50-013:HUMAN_REVIEW_REQUIRED", "label": "Gate", "properties": {"case_id": "EXP50-013", "gate": "HUMAN_REVIEW_REQUIRED"}}
+{"id": "output:EXP50-013:HUMAN_REVIEW_PACKET", "label": "OutputMode", "properties": {"case_id": "EXP50-013", "output_mode": "HUMAN_REVIEW_PACKET"}}
+{"id": "budget:EXP50-013", "label": "HallucinationBudget", "properties": {"case_id": "EXP50-013", "hallucination_budget": 0.7344, "reasoning_mode": "FULL_REASONING_WITH_GROUNDING"}}
+{"id": "case:EXP50-014", "label": "Case", "properties": {"case_id": "EXP50-014", "business_domain": "clinic_billing_glosa", "risk_theme": "missing_evidence", "evidence_profile": "stale_evidence", "source_mode": "synthetic_design_only"}}
+{"id": "evidence:EXP50-014:stale_evidence", "label": "Evidence", "properties": {"case_id": "EXP50-014", "evidence_profile": "stale_evidence", "evidence_count": 2}}
+{"id": "risk:EXP50-014:missing_evidence", "label": "RiskSignal", "properties": {"case_id": "EXP50-014", "risk_theme": "missing_evidence", "adjusted_risk": 66.95, "risk_band": "HIGH", "live_delta_score": 0.6907}}
+{"id": "gate:EXP50-014:HUMAN_REVIEW_REQUIRED", "label": "Gate", "properties": {"case_id": "EXP50-014", "gate": "HUMAN_REVIEW_REQUIRED"}}
+{"id": "output:EXP50-014:HUMAN_REVIEW_PACKET", "label": "OutputMode", "properties": {"case_id": "EXP50-014", "output_mode": "HUMAN_REVIEW_PACKET"}}
+{"id": "budget:EXP50-014", "label": "HallucinationBudget", "properties": {"case_id": "EXP50-014", "hallucination_budget": 0.6512, "reasoning_mode": "GUIDED_REASONING"}}
+{"id": "case:EXP50-015", "label": "Case", "properties": {"case_id": "EXP50-015", "business_domain": "clinic_billing_glosa", "risk_theme": "conflicting_information", "evidence_profile": "high_sensitivity_evidence", "source_mode": "synthetic_design_only"}}
+{"id": "evidence:EXP50-015:high_sensitivity_evidence", "label": "Evidence", "properties": {"case_id": "EXP50-015", "evidence_profile": "high_sensitivity_evidence", "evidence_count": 3}}
+{"id": "risk:EXP50-015:conflicting_information", "label": "RiskSignal", "properties": {"case_id": "EXP50-015", "risk_theme": "conflicting_information", "adjusted_risk": 95.9, "risk_band": "CRITICAL", "live_delta_score": 0.8225}}
+{"id": "gate:EXP50-015:HUMAN_REVIEW_REQUIRED", "label": "Gate", "properties": {"case_id": "EXP50-015", "gate": "HUMAN_REVIEW_REQUIRED"}}
+{"id": "output:EXP50-015:HUMAN_REVIEW_PACKET", "label": "OutputMode", "properties": {"case_id": "EXP50-015", "output_mode": "HUMAN_REVIEW_PACKET"}}
+{"id": "budget:EXP50-015", "label": "HallucinationBudget", "properties": {"case_id": "EXP50-015", "hallucination_budget": 0.5198, "reasoning_mode": "GUIDED_REASONING"}}
+{"id": "case:EXP50-016", "label": "Case", "properties": {"case_id": "EXP50-016", "business_domain": "clinic_billing_glosa", "risk_theme": "high_stakes_review", "evidence_profile": "complete_minimum_evidence", "source_mode": "synthetic_design_only"}}
+{"id": "evidence:EXP50-016:complete_minimum_evidence", "label": "Evidence", "properties": {"case_id": "EXP50-016", "evidence_profile": "complete_minimum_evidence", "evidence_count": 5}}
+{"id": "risk:EXP50-016:high_stakes_review", "label": "RiskSignal", "properties": {"case_id": "EXP50-016", "risk_theme": "high_stakes_review", "adjusted_risk": 42.75, "risk_band": "MEDIUM", "live_delta_score": 0.4476}}
+{"id": "gate:EXP50-016:HUMAN_REVIEW_REQUIRED", "label": "Gate", "properties": {"case_id": "EXP50-016", "gate": "HUMAN_REVIEW_REQUIRED"}}
+{"id": "output:EXP50-016:HUMAN_REVIEW_PACKET", "label": "OutputMode", "properties": {"case_id": "EXP50-016", "output_mode": "HUMAN_REVIEW_PACKET"}}
+{"id": "budget:EXP50-016", "label": "HallucinationBudget", "properties": {"case_id": "EXP50-016", "hallucination_budget": 0.7656, "reasoning_mode": "FULL_REASONING_WITH_GROUNDING"}}
+{"id": "case:EXP50-017", "label": "Case", "properties": {"case_id": "EXP50-017", "business_domain": "accounting_tax_obligation", "risk_theme": "clean_controlled_answer", "evidence_profile": "partial_evidence", "source_mode": "synthetic_design_only"}}
+{"id": "domain:accounting_tax_obligation", "label": "Domain", "properties": {"business_domain": "accounting_tax_obligation", "activation_state": "CANDIDATE_DOMAIN_REQUIRE_EVIDENCE", "preflight_score": 0.6414}}
+{"id": "evidence:EXP50-017:partial_evidence", "label": "Evidence", "properties": {"case_id": "EXP50-017", "evidence_profile": "partial_evidence", "evidence_count": 2}}
+{"id": "risk:EXP50-017:clean_controlled_answer", "label": "RiskSignal", "properties": {"case_id": "EXP50-017", "risk_theme": "clean_controlled_answer", "adjusted_risk": 66.95, "risk_band": "HIGH", "live_delta_score": 0.6907}}
+{"id": "gate:EXP50-017:HUMAN_REVIEW_REQUIRED", "label": "Gate", "properties": {"case_id": "EXP50-017", "gate": "HUMAN_REVIEW_REQUIRED"}}
+{"id": "output:EXP50-017:HUMAN_REVIEW_PACKET", "label": "OutputMode", "properties": {"case_id": "EXP50-017", "output_mode": "HUMAN_REVIEW_PACKET"}}
+{"id": "budget:EXP50-017", "label": "HallucinationBudget", "properties": {"case_id": "EXP50-017", "hallucination_budget": 0.6012, "reasoning_mode": "GUIDED_REASONING"}}
+{"id": "case:EXP50-018", "label": "Case", "properties": {"case_id": "EXP50-018", "business_domain": "accounting_tax_obligation", "risk_theme": "missing_evidence", "evidence_profile": "conflicting_evidence", "source_mode": "synthetic_design_only"}}
+{"id": "evidence:EXP50-018:conflicting_evidence", "label": "Evidence", "properties": {"case_id": "EXP50-018", "evidence_profile": "conflicting_evidence", "evidence_count": 2}}
+{"id": "risk:EXP50-018:missing_evidence", "label": "RiskSignal", "properties": {"case_id": "EXP50-018", "risk_theme": "missing_evidence", "adjusted_risk": 66.95, "risk_band": "HIGH", "live_delta_score": 0.6907}}
+{"id": "gate:EXP50-018:HUMAN_REVIEW_REQUIRED", "label": "Gate", "properties": {"case_id": "EXP50-018", "gate": "HUMAN_REVIEW_REQUIRED"}}
+{"id": "output:EXP50-018:HUMAN_REVIEW_PACKET", "label": "OutputMode", "properties": {"case_id": "EXP50-018", "output_mode": "HUMAN_REVIEW_PACKET"}}
+{"id": "budget:EXP50-018", "label": "HallucinationBudget", "properties": {"case_id": "EXP50-018", "hallucination_budget": 0.6012, "reasoning_mode": "GUIDED_REASONING"}}
+{"id": "case:EXP50-019", "label": "Case", "properties": {"case_id": "EXP50-019", "business_domain": "accounting_tax_obligation", "risk_theme": "conflicting_information", "evidence_profile": "stale_evidence", "source_mode": "synthetic_design_only"}}
+{"id": "evidence:EXP50-019:stale_evidence", "label": "Evidence", "properties": {"case_id": "EXP50-019", "evidence_profile": "stale_evidence", "evidence_count": 3}}
+{"id": "risk:EXP50-019:conflicting_information", "label": "RiskSignal", "properties": {"case_id": "EXP50-019", "risk_theme": "conflicting_information", "adjusted_risk": 93.15, "risk_band": "CRITICAL", "live_delta_score": 0.7948}}
+{"id": "gate:EXP50-019:HUMAN_REVIEW_REQUIRED", "label": "Gate", "properties": {"case_id": "EXP50-019", "gate": "HUMAN_REVIEW_REQUIRED"}}
+{"id": "output:EXP50-019:HUMAN_REVIEW_PACKET", "label": "OutputMode", "properties": {"case_id": "EXP50-019", "output_mode": "HUMAN_REVIEW_PACKET"}}
+{"id": "budget:EXP50-019", "label": "HallucinationBudget", "properties": {"case_id": "EXP50-019", "hallucination_budget": 0.5328, "reasoning_mode": "GUIDED_REASONING"}}
+{"id": "case:EXP50-020", "label": "Case", "properties": {"case_id": "EXP50-020", "business_domain": "accounting_tax_obligation", "risk_theme": "high_stakes_review", "evidence_profile": "high_sensitivity_evidence", "source_mode": "synthetic_design_only"}}
+{"id": "evidence:EXP50-020:high_sensitivity_evidence", "label": "Evidence", "properties": {"case_id": "EXP50-020", "evidence_profile": "high_sensitivity_evidence", "evidence_count": 3}}
+{"id": "risk:EXP50-020:high_stakes_review", "label": "RiskSignal", "properties": {"case_id": "EXP50-020", "risk_theme": "high_stakes_review", "adjusted_risk": 60.9, "risk_band": "HIGH", "live_delta_score": 0.63}}
+{"id": "gate:EXP50-020:ANSWER_ALLOWED", "label": "Gate", "properties": {"case_id": "EXP50-020", "gate": "ANSWER_ALLOWED"}}
+{"id": "output:EXP50-020:ANSWER", "label": "OutputMode", "properties": {"case_id": "EXP50-020", "output_mode": "ANSWER"}}
+{"id": "budget:EXP50-020", "label": "HallucinationBudget", "properties": {"case_id": "EXP50-020", "hallucination_budget": 0.6798, "reasoning_mode": "GUIDED_REASONING"}}
+{"id": "case:EXP50-021", "label": "Case", "properties": {"case_id": "EXP50-021", "business_domain": "contract_legal_review", "risk_theme": "clean_controlled_answer", "evidence_profile": "complete_minimum_evidence", "source_mode": "synthetic_design_only"}}
+{"id": "domain:contract_legal_review", "label": "Domain", "properties": {"business_domain": "contract_legal_review", "activation_state": "CANDIDATE_DOMAIN_REQUIRE_EVIDENCE", "preflight_score": 0.6464}}
+{"id": "evidence:EXP50-021:complete_minimum_evidence", "label": "Evidence", "properties": {"case_id": "EXP50-021", "evidence_profile": "complete_minimum_evidence", "evidence_count": 5}}
+{"id": "risk:EXP50-021:clean_controlled_answer", "label": "RiskSignal", "properties": {"case_id": "EXP50-021", "risk_theme": "clean_controlled_answer", "adjusted_risk": 43.75, "risk_band": "MEDIUM", "live_delta_score": 0.4698}}
+{"id": "gate:EXP50-021:ANSWER_ALLOWED", "label": "Gate", "properties": {"case_id": "EXP50-021", "gate": "ANSWER_ALLOWED"}}
+{"id": "output:EXP50-021:ANSWER", "label": "OutputMode", "properties": {"case_id": "EXP50-021", "output_mode": "ANSWER"}}
+{"id": "budget:EXP50-021", "label": "HallucinationBudget", "properties": {"case_id": "EXP50-021", "hallucination_budget": 0.7573, "reasoning_mode": "FULL_REASONING_WITH_GROUNDING"}}
+{"id": "case:EXP50-022", "label": "Case", "properties": {"case_id": "EXP50-022", "business_domain": "contract_legal_review", "risk_theme": "missing_evidence", "evidence_profile": "partial_evidence", "source_mode": "synthetic_design_only"}}
+{"id": "evidence:EXP50-022:partial_evidence", "label": "Evidence", "properties": {"case_id": "EXP50-022", "evidence_profile": "partial_evidence", "evidence_count": 2}}
+{"id": "risk:EXP50-022:missing_evidence", "label": "RiskSignal", "properties": {"case_id": "EXP50-022", "risk_theme": "missing_evidence", "adjusted_risk": 67.95, "risk_band": "HIGH", "live_delta_score": 0.7129}}
+{"id": "gate:EXP50-022:HUMAN_REVIEW_REQUIRED", "label": "Gate", "properties": {"case_id": "EXP50-022", "gate": "HUMAN_REVIEW_REQUIRED"}}
+{"id": "output:EXP50-022:HUMAN_REVIEW_PACKET", "label": "OutputMode", "properties": {"case_id": "EXP50-022", "output_mode": "HUMAN_REVIEW_PACKET"}}
+{"id": "budget:EXP50-022", "label": "HallucinationBudget", "properties": {"case_id": "EXP50-022", "hallucination_budget": 0.5929, "reasoning_mode": "GUIDED_REASONING"}}
+{"id": "case:EXP50-023", "label": "Case", "properties": {"case_id": "EXP50-023", "business_domain": "contract_legal_review", "risk_theme": "conflicting_information", "evidence_profile": "conflicting_evidence", "source_mode": "synthetic_design_only"}}
+{"id": "evidence:EXP50-023:conflicting_evidence", "label": "Evidence", "properties": {"case_id": "EXP50-023", "evidence_profile": "conflicting_evidence", "evidence_count": 4}}
+{"id": "risk:EXP50-023:conflicting_information", "label": "RiskSignal", "properties": {"case_id": "EXP50-023", "risk_theme": "conflicting_information", "adjusted_risk": 85.35, "risk_band": "CRITICAL", "live_delta_score": 0.7286}}
+{"id": "gate:EXP50-023:HUMAN_REVIEW_REQUIRED", "label": "Gate", "properties": {"case_id": "EXP50-023", "gate": "HUMAN_REVIEW_REQUIRED"}}
+{"id": "output:EXP50-023:HUMAN_REVIEW_PACKET", "label": "OutputMode", "properties": {"case_id": "EXP50-023", "output_mode": "HUMAN_REVIEW_PACKET"}}
+{"id": "budget:EXP50-023", "label": "HallucinationBudget", "properties": {"case_id": "EXP50-023", "hallucination_budget": 0.5661, "reasoning_mode": "GUIDED_REASONING"}}
+{"id": "case:EXP50-024", "label": "Case", "properties": {"case_id": "EXP50-024", "business_domain": "contract_legal_review", "risk_theme": "high_stakes_review", "evidence_profile": "stale_evidence", "source_mode": "synthetic_design_only"}}
+{"id": "evidence:EXP50-024:stale_evidence", "label": "Evidence", "properties": {"case_id": "EXP50-024", "evidence_profile": "stale_evidence", "evidence_count": 3}}
+{"id": "risk:EXP50-024:high_stakes_review", "label": "RiskSignal", "properties": {"case_id": "EXP50-024", "risk_theme": "high_stakes_review", "adjusted_risk": 59.15, "risk_band": "HIGH", "live_delta_score": 0.6245}}
+{"id": "gate:EXP50-024:ANSWER_ALLOWED", "label": "Gate", "properties": {"case_id": "EXP50-024", "gate": "ANSWER_ALLOWED"}}
+{"id": "output:EXP50-024:ANSWER", "label": "OutputMode", "properties": {"case_id": "EXP50-024", "output_mode": "ANSWER"}}
+{"id": "budget:EXP50-024", "label": "HallucinationBudget", "properties": {"case_id": "EXP50-024", "hallucination_budget": 0.6845, "reasoning_mode": "GUIDED_REASONING"}}
+{"id": "case:EXP50-025", "label": "Case", "properties": {"case_id": "EXP50-025", "business_domain": "ecommerce_order_ops", "risk_theme": "clean_controlled_answer", "evidence_profile": "high_sensitivity_evidence", "source_mode": "synthetic_design_only"}}
+{"id": "domain:ecommerce_order_ops", "label": "Domain", "properties": {"business_domain": "ecommerce_order_ops", "activation_state": "CANDIDATE_DOMAIN_REQUIRE_EVIDENCE", "preflight_score": 0.6564}}
+{"id": "evidence:EXP50-025:high_sensitivity_evidence", "label": "Evidence", "properties": {"case_id": "EXP50-025", "evidence_profile": "high_sensitivity_evidence", "evidence_count": 3}}
+{"id": "risk:EXP50-025:clean_controlled_answer", "label": "RiskSignal", "properties": {"case_id": "EXP50-025", "risk_theme": "clean_controlled_answer", "adjusted_risk": 53.9, "risk_band": "MEDIUM", "live_delta_score": 0.4748}}
+{"id": "gate:EXP50-025:ANSWER_ALLOWED", "label": "Gate", "properties": {"case_id": "EXP50-025", "gate": "ANSWER_ALLOWED"}}
+{"id": "output:EXP50-025:ANSWER", "label": "OutputMode", "properties": {"case_id": "EXP50-025", "output_mode": "ANSWER"}}
+{"id": "budget:EXP50-025", "label": "HallucinationBudget", "properties": {"case_id": "EXP50-025", "hallucination_budget": 0.7381, "reasoning_mode": "FULL_REASONING_WITH_GROUNDING"}}
+{"id": "case:EXP50-026", "label": "Case", "properties": {"case_id": "EXP50-026", "business_domain": "ecommerce_order_ops", "risk_theme": "missing_evidence", "evidence_profile": "complete_minimum_evidence", "source_mode": "synthetic_design_only"}}
+{"id": "evidence:EXP50-026:complete_minimum_evidence", "label": "Evidence", "properties": {"case_id": "EXP50-026", "evidence_profile": "complete_minimum_evidence", "evidence_count": 2}}
+{"id": "risk:EXP50-026:missing_evidence", "label": "RiskSignal", "properties": {"case_id": "EXP50-026", "risk_theme": "missing_evidence", "adjusted_risk": 59.95, "risk_band": "HIGH", "live_delta_score": 0.5356}}
+{"id": "gate:EXP50-026:HUMAN_REVIEW_REQUIRED", "label": "Gate", "properties": {"case_id": "EXP50-026", "gate": "HUMAN_REVIEW_REQUIRED"}}
+{"id": "output:EXP50-026:HUMAN_REVIEW_PACKET", "label": "OutputMode", "properties": {"case_id": "EXP50-026", "output_mode": "HUMAN_REVIEW_PACKET"}}
+{"id": "budget:EXP50-026", "label": "HallucinationBudget", "properties": {"case_id": "EXP50-026", "hallucination_budget": 0.6595, "reasoning_mode": "GUIDED_REASONING"}}
+{"id": "case:EXP50-027", "label": "Case", "properties": {"case_id": "EXP50-027", "business_domain": "ecommerce_order_ops", "risk_theme": "conflicting_information", "evidence_profile": "partial_evidence", "source_mode": "synthetic_design_only"}}
+{"id": "evidence:EXP50-027:partial_evidence", "label": "Evidence", "properties": {"case_id": "EXP50-027", "evidence_profile": "partial_evidence", "evidence_count": 2}}
+{"id": "risk:EXP50-027:conflicting_information", "label": "RiskSignal", "properties": {"case_id": "EXP50-027", "risk_theme": "conflicting_information", "adjusted_risk": 94.95, "risk_band": "CRITICAL", "live_delta_score": 0.7281}}
+{"id": "gate:EXP50-027:HUMAN_REVIEW_REQUIRED", "label": "Gate", "properties": {"case_id": "EXP50-027", "gate": "HUMAN_REVIEW_REQUIRED"}}
+{"id": "output:EXP50-027:HUMAN_REVIEW_PACKET", "label": "OutputMode", "properties": {"case_id": "EXP50-027", "output_mode": "HUMAN_REVIEW_PACKET"}}
+{"id": "budget:EXP50-027", "label": "HallucinationBudget", "properties": {"case_id": "EXP50-027", "hallucination_budget": 0.5495, "reasoning_mode": "GUIDED_REASONING"}}
+{"id": "case:EXP50-028", "label": "Case", "properties": {"case_id": "EXP50-028", "business_domain": "ecommerce_order_ops", "risk_theme": "high_stakes_review", "evidence_profile": "conflicting_evidence", "source_mode": "synthetic_design_only"}}
+{"id": "evidence:EXP50-028:conflicting_evidence", "label": "Evidence", "properties": {"case_id": "EXP50-028", "evidence_profile": "conflicting_evidence", "evidence_count": 4}}
+{"id": "risk:EXP50-028:high_stakes_review", "label": "RiskSignal", "properties": {"case_id": "EXP50-028", "risk_theme": "high_stakes_review", "adjusted_risk": 42.35, "risk_band": "MEDIUM", "live_delta_score": 0.3588}}
+{"id": "gate:EXP50-028:ANSWER_ALLOWED", "label": "Gate", "properties": {"case_id": "EXP50-028", "gate": "ANSWER_ALLOWED"}}
+{"id": "output:EXP50-028:ANSWER", "label": "OutputMode", "properties": {"case_id": "EXP50-028", "output_mode": "ANSWER"}}
+{"id": "budget:EXP50-028", "label": "HallucinationBudget", "properties": {"case_id": "EXP50-028", "hallucination_budget": 0.7927, "reasoning_mode": "FULL_REASONING_WITH_GROUNDING"}}
+{"id": "case:EXP50-029", "label": "Case", "properties": {"case_id": "EXP50-029", "business_domain": "field_service_work_order", "risk_theme": "clean_controlled_answer", "evidence_profile": "stale_evidence", "source_mode": "synthetic_design_only"}}
+{"id": "domain:field_service_work_order", "label": "Domain", "properties": {"business_domain": "field_service_work_order", "activation_state": "CANDIDATE_DOMAIN_REQUIRE_EVIDENCE", "preflight_score": 0.6594}}
+{"id": "evidence:EXP50-029:stale_evidence", "label": "Evidence", "properties": {"case_id": "EXP50-029", "evidence_profile": "stale_evidence", "evidence_count": 3}}
+{"id": "risk:EXP50-029:clean_controlled_answer", "label": "RiskSignal", "properties": {"case_id": "EXP50-029", "risk_theme": "clean_controlled_answer", "adjusted_risk": 50.15, "risk_band": "MEDIUM", "live_delta_score": 0.425}}
+{"id": "gate:EXP50-029:ANSWER_ALLOWED", "label": "Gate", "properties": {"case_id": "EXP50-029", "gate": "ANSWER_ALLOWED"}}
+{"id": "output:EXP50-029:ANSWER", "label": "OutputMode", "properties": {"case_id": "EXP50-029", "output_mode": "ANSWER"}}
+{"id": "budget:EXP50-029", "label": "HallucinationBudget", "properties": {"case_id": "EXP50-029", "hallucination_budget": 0.7595, "reasoning_mode": "FULL_REASONING_WITH_GROUNDING"}}
+{"id": "case:EXP50-030", "label": "Case", "properties": {"case_id": "EXP50-030", "business_domain": "field_service_work_order", "risk_theme": "missing_evidence", "evidence_profile": "high_sensitivity_evidence", "source_mode": "synthetic_design_only"}}
+{"id": "evidence:EXP50-030:high_sensitivity_evidence", "label": "Evidence", "properties": {"case_id": "EXP50-030", "evidence_profile": "high_sensitivity_evidence", "evidence_count": 2}}
+{"id": "risk:EXP50-030:missing_evidence", "label": "RiskSignal", "properties": {"case_id": "EXP50-030", "risk_theme": "missing_evidence", "adjusted_risk": 61.7, "risk_band": "HIGH", "live_delta_score": 0.541}}
+{"id": "gate:EXP50-030:HUMAN_REVIEW_REQUIRED", "label": "Gate", "properties": {"case_id": "EXP50-030", "gate": "HUMAN_REVIEW_REQUIRED"}}
+{"id": "output:EXP50-030:HUMAN_REVIEW_PACKET", "label": "OutputMode", "properties": {"case_id": "EXP50-030", "output_mode": "HUMAN_REVIEW_PACKET"}}
+{"id": "budget:EXP50-030", "label": "HallucinationBudget", "properties": {"case_id": "EXP50-030", "hallucination_budget": 0.6549, "reasoning_mode": "GUIDED_REASONING"}}
+{"id": "case:EXP50-031", "label": "Case", "properties": {"case_id": "EXP50-031", "business_domain": "field_service_work_order", "risk_theme": "conflicting_information", "evidence_profile": "complete_minimum_evidence", "source_mode": "synthetic_design_only"}}
+{"id": "evidence:EXP50-031:complete_minimum_evidence", "label": "Evidence", "properties": {"case_id": "EXP50-031", "evidence_profile": "complete_minimum_evidence", "evidence_count": 5}}
+{"id": "risk:EXP50-031:conflicting_information", "label": "RiskSignal", "properties": {"case_id": "EXP50-031", "risk_theme": "conflicting_information", "adjusted_risk": 69.75, "risk_band": "HIGH", "live_delta_score": 0.4628}}
+{"id": "gate:EXP50-031:HUMAN_REVIEW_REQUIRED", "label": "Gate", "properties": {"case_id": "EXP50-031", "gate": "HUMAN_REVIEW_REQUIRED"}}
+{"id": "output:EXP50-031:HUMAN_REVIEW_PACKET", "label": "OutputMode", "properties": {"case_id": "EXP50-031", "output_mode": "HUMAN_REVIEW_PACKET"}}
+{"id": "budget:EXP50-031", "label": "HallucinationBudget", "properties": {"case_id": "EXP50-031", "hallucination_budget": 0.6723, "reasoning_mode": "GUIDED_REASONING"}}
+{"id": "case:EXP50-032", "label": "Case", "properties": {"case_id": "EXP50-032", "business_domain": "field_service_work_order", "risk_theme": "high_stakes_review", "evidence_profile": "partial_evidence", "source_mode": "synthetic_design_only"}}
+{"id": "evidence:EXP50-032:partial_evidence", "label": "Evidence", "properties": {"case_id": "EXP50-032", "evidence_profile": "partial_evidence", "evidence_count": 2}}
+{"id": "risk:EXP50-032:high_stakes_review", "label": "RiskSignal", "properties": {"case_id": "EXP50-032", "risk_theme": "high_stakes_review", "adjusted_risk": 58.95, "risk_band": "HIGH", "live_delta_score": 0.5134}}
+{"id": "gate:EXP50-032:HUMAN_REVIEW_REQUIRED", "label": "Gate", "properties": {"case_id": "EXP50-032", "gate": "HUMAN_REVIEW_REQUIRED"}}
+{"id": "output:EXP50-032:HUMAN_REVIEW_PACKET", "label": "OutputMode", "properties": {"case_id": "EXP50-032", "output_mode": "HUMAN_REVIEW_PACKET"}}
+{"id": "budget:EXP50-032", "label": "HallucinationBudget", "properties": {"case_id": "EXP50-032", "hallucination_budget": 0.6679, "reasoning_mode": "GUIDED_REASONING"}}
+{"id": "case:EXP50-033", "label": "Case", "properties": {"case_id": "EXP50-033", "business_domain": "construction_project_control", "risk_theme": "clean_controlled_answer", "evidence_profile": "conflicting_evidence", "source_mode": "synthetic_design_only"}}
+{"id": "domain:construction_project_control", "label": "Domain", "properties": {"business_domain": "construction_project_control", "activation_state": "CANDIDATE_DOMAIN_REQUIRE_EVIDENCE", "preflight_score": 0.7224}}
+{"id": "evidence:EXP50-033:conflicting_evidence", "label": "Evidence", "properties": {"case_id": "EXP50-033", "evidence_profile": "conflicting_evidence", "evidence_count": 4}}
+{"id": "risk:EXP50-033:clean_controlled_answer", "label": "RiskSignal", "properties": {"case_id": "EXP50-033", "risk_theme": "clean_controlled_answer", "adjusted_risk": 46.35, "risk_band": "MEDIUM", "live_delta_score": 0.4474}}
+{"id": "gate:EXP50-033:ANSWER_ALLOWED", "label": "Gate", "properties": {"case_id": "EXP50-033", "gate": "ANSWER_ALLOWED"}}
+{"id": "output:EXP50-033:ANSWER", "label": "OutputMode", "properties": {"case_id": "EXP50-033", "output_mode": "ANSWER"}}
+{"id": "budget:EXP50-033", "label": "HallucinationBudget", "properties": {"case_id": "EXP50-033", "hallucination_budget": 0.7594, "reasoning_mode": "FULL_REASONING_WITH_GROUNDING"}}
+{"id": "case:EXP50-034", "label": "Case", "properties": {"case_id": "EXP50-034", "business_domain": "construction_project_control", "risk_theme": "missing_evidence", "evidence_profile": "stale_evidence", "source_mode": "synthetic_design_only"}}
+{"id": "evidence:EXP50-034:stale_evidence", "label": "Evidence", "properties": {"case_id": "EXP50-034", "evidence_profile": "stale_evidence", "evidence_count": 2}}
+{"id": "risk:EXP50-034:missing_evidence", "label": "RiskSignal", "properties": {"case_id": "EXP50-034", "risk_theme": "missing_evidence", "adjusted_risk": 63.95, "risk_band": "HIGH", "live_delta_score": 0.6242}}
+{"id": "gate:EXP50-034:HUMAN_REVIEW_REQUIRED", "label": "Gate", "properties": {"case_id": "EXP50-034", "gate": "HUMAN_REVIEW_REQUIRED"}}
+{"id": "output:EXP50-034:HUMAN_REVIEW_PACKET", "label": "OutputMode", "properties": {"case_id": "EXP50-034", "output_mode": "HUMAN_REVIEW_PACKET"}}
+{"id": "budget:EXP50-034", "label": "HallucinationBudget", "properties": {"case_id": "EXP50-034", "hallucination_budget": 0.6262, "reasoning_mode": "GUIDED_REASONING"}}
+{"id": "case:EXP50-035", "label": "Case", "properties": {"case_id": "EXP50-035", "business_domain": "construction_project_control", "risk_theme": "conflicting_information", "evidence_profile": "high_sensitivity_evidence", "source_mode": "synthetic_design_only"}}
+{"id": "evidence:EXP50-035:high_sensitivity_evidence", "label": "Evidence", "properties": {"case_id": "EXP50-035", "evidence_profile": "high_sensitivity_evidence", "evidence_count": 3}}
+{"id": "risk:EXP50-035:conflicting_information", "label": "RiskSignal", "properties": {"case_id": "EXP50-035", "risk_theme": "conflicting_information", "adjusted_risk": 92.9, "risk_band": "CRITICAL", "live_delta_score": 0.756}}
+{"id": "gate:EXP50-035:HUMAN_REVIEW_REQUIRED", "label": "Gate", "properties": {"case_id": "EXP50-035", "gate": "HUMAN_REVIEW_REQUIRED"}}
+{"id": "output:EXP50-035:HUMAN_REVIEW_PACKET", "label": "OutputMode", "properties": {"case_id": "EXP50-035", "output_mode": "HUMAN_REVIEW_PACKET"}}
+{"id": "budget:EXP50-035", "label": "HallucinationBudget", "properties": {"case_id": "EXP50-035", "hallucination_budget": 0.5448, "reasoning_mode": "GUIDED_REASONING"}}
+{"id": "case:EXP50-036", "label": "Case", "properties": {"case_id": "EXP50-036", "business_domain": "construction_project_control", "risk_theme": "high_stakes_review", "evidence_profile": "complete_minimum_evidence", "source_mode": "synthetic_design_only"}}
+{"id": "evidence:EXP50-036:complete_minimum_evidence", "label": "Evidence", "properties": {"case_id": "EXP50-036", "evidence_profile": "complete_minimum_evidence", "evidence_count": 5}}
+{"id": "risk:EXP50-036:high_stakes_review", "label": "RiskSignal", "properties": {"case_id": "EXP50-036", "risk_theme": "high_stakes_review", "adjusted_risk": 39.75, "risk_band": "MEDIUM", "live_delta_score": 0.3811}}
+{"id": "gate:EXP50-036:ANSWER_ALLOWED", "label": "Gate", "properties": {"case_id": "EXP50-036", "gate": "ANSWER_ALLOWED"}}
+{"id": "output:EXP50-036:ANSWER", "label": "OutputMode", "properties": {"case_id": "EXP50-036", "output_mode": "ANSWER"}}
+{"id": "budget:EXP50-036", "label": "HallucinationBudget", "properties": {"case_id": "EXP50-036", "hallucination_budget": 0.7906, "reasoning_mode": "FULL_REASONING_WITH_GROUNDING"}}
+{"id": "case:EXP50-037", "label": "Case", "properties": {"case_id": "EXP50-037", "business_domain": "small_industry_quality", "risk_theme": "clean_controlled_answer", "evidence_profile": "partial_evidence", "source_mode": "synthetic_design_only"}}
+{"id": "domain:small_industry_quality", "label": "Domain", "properties": {"business_domain": "small_industry_quality", "activation_state": "CANDIDATE_DOMAIN_REQUIRE_EVIDENCE", "preflight_score": 0.6614}}
+{"id": "evidence:EXP50-037:partial_evidence", "label": "Evidence", "properties": {"case_id": "EXP50-037", "evidence_profile": "partial_evidence", "evidence_count": 2}}
+{"id": "risk:EXP50-037:clean_controlled_answer", "label": "RiskSignal", "properties": {"case_id": "EXP50-037", "risk_theme": "clean_controlled_answer", "adjusted_risk": 62.95, "risk_band": "HIGH", "live_delta_score": 0.6021}}
+{"id": "gate:EXP50-037:HUMAN_REVIEW_REQUIRED", "label": "Gate", "properties": {"case_id": "EXP50-037", "gate": "HUMAN_REVIEW_REQUIRED"}}
+{"id": "output:EXP50-037:HUMAN_REVIEW_PACKET", "label": "OutputMode", "properties": {"case_id": "EXP50-037", "output_mode": "HUMAN_REVIEW_PACKET"}}
+{"id": "budget:EXP50-037", "label": "HallucinationBudget", "properties": {"case_id": "EXP50-037", "hallucination_budget": 0.6345, "reasoning_mode": "GUIDED_REASONING"}}
+{"id": "case:EXP50-038", "label": "Case", "properties": {"case_id": "EXP50-038", "business_domain": "small_industry_quality", "risk_theme": "missing_evidence", "evidence_profile": "conflicting_evidence", "source_mode": "synthetic_design_only"}}
+{"id": "evidence:EXP50-038:conflicting_evidence", "label": "Evidence", "properties": {"case_id": "EXP50-038", "evidence_profile": "conflicting_evidence", "evidence_count": 2}}
+{"id": "risk:EXP50-038:missing_evidence", "label": "RiskSignal", "properties": {"case_id": "EXP50-038", "risk_theme": "missing_evidence", "adjusted_risk": 62.95, "risk_band": "HIGH", "live_delta_score": 0.6021}}
+{"id": "gate:EXP50-038:HUMAN_REVIEW_REQUIRED", "label": "Gate", "properties": {"case_id": "EXP50-038", "gate": "HUMAN_REVIEW_REQUIRED"}}
+{"id": "output:EXP50-038:HUMAN_REVIEW_PACKET", "label": "OutputMode", "properties": {"case_id": "EXP50-038", "output_mode": "HUMAN_REVIEW_PACKET"}}
+{"id": "budget:EXP50-038", "label": "HallucinationBudget", "properties": {"case_id": "EXP50-038", "hallucination_budget": 0.6345, "reasoning_mode": "GUIDED_REASONING"}}
+{"id": "case:EXP50-039", "label": "Case", "properties": {"case_id": "EXP50-039", "business_domain": "small_industry_quality", "risk_theme": "conflicting_information", "evidence_profile": "stale_evidence", "source_mode": "synthetic_design_only"}}
+{"id": "evidence:EXP50-039:stale_evidence", "label": "Evidence", "properties": {"case_id": "EXP50-039", "evidence_profile": "stale_evidence", "evidence_count": 3}}
+{"id": "risk:EXP50-039:conflicting_information", "label": "RiskSignal", "properties": {"case_id": "EXP50-039", "risk_theme": "conflicting_information", "adjusted_risk": 89.15, "risk_band": "CRITICAL", "live_delta_score": 0.7062}}
+{"id": "gate:EXP50-039:HUMAN_REVIEW_REQUIRED", "label": "Gate", "properties": {"case_id": "EXP50-039", "gate": "HUMAN_REVIEW_REQUIRED"}}
+{"id": "output:EXP50-039:HUMAN_REVIEW_PACKET", "label": "OutputMode", "properties": {"case_id": "EXP50-039", "output_mode": "HUMAN_REVIEW_PACKET"}}
+{"id": "budget:EXP50-039", "label": "HallucinationBudget", "properties": {"case_id": "EXP50-039", "hallucination_budget": 0.5661, "reasoning_mode": "GUIDED_REASONING"}}
+{"id": "case:EXP50-040", "label": "Case", "properties": {"case_id": "EXP50-040", "business_domain": "small_industry_quality", "risk_theme": "high_stakes_review", "evidence_profile": "high_sensitivity_evidence", "source_mode": "synthetic_design_only"}}
+{"id": "evidence:EXP50-040:high_sensitivity_evidence", "label": "Evidence", "properties": {"case_id": "EXP50-040", "evidence_profile": "high_sensitivity_evidence", "evidence_count": 3}}
+{"id": "risk:EXP50-040:high_stakes_review", "label": "RiskSignal", "properties": {"case_id": "EXP50-040", "risk_theme": "high_stakes_review", "adjusted_risk": 56.9, "risk_band": "HIGH", "live_delta_score": 0.5413}}
+{"id": "gate:EXP50-040:ANSWER_ALLOWED", "label": "Gate", "properties": {"case_id": "EXP50-040", "gate": "ANSWER_ALLOWED"}}
+{"id": "output:EXP50-040:ANSWER", "label": "OutputMode", "properties": {"case_id": "EXP50-040", "output_mode": "ANSWER"}}
+{"id": "budget:EXP50-040", "label": "HallucinationBudget", "properties": {"case_id": "EXP50-040", "hallucination_budget": 0.7131, "reasoning_mode": "FULL_REASONING_WITH_GROUNDING"}}
+{"id": "case:EXP50-041", "label": "Case", "properties": {"case_id": "EXP50-041", "business_domain": "legal_office_case_intake", "risk_theme": "clean_controlled_answer", "evidence_profile": "complete_minimum_evidence", "source_mode": "synthetic_design_only"}}
+{"id": "domain:legal_office_case_intake", "label": "Domain", "properties": {"business_domain": "legal_office_case_intake", "activation_state": "CANDIDATE_DOMAIN_REQUIRE_EVIDENCE", "preflight_score": 0.6464}}
+{"id": "evidence:EXP50-041:complete_minimum_evidence", "label": "Evidence", "properties": {"case_id": "EXP50-041", "evidence_profile": "complete_minimum_evidence", "evidence_count": 5}}
+{"id": "risk:EXP50-041:clean_controlled_answer", "label": "RiskSignal", "properties": {"case_id": "EXP50-041", "risk_theme": "clean_controlled_answer", "adjusted_risk": 43.75, "risk_band": "MEDIUM", "live_delta_score": 0.4698}}
+{"id": "gate:EXP50-041:ANSWER_ALLOWED", "label": "Gate", "properties": {"case_id": "EXP50-041", "gate": "ANSWER_ALLOWED"}}
+{"id": "output:EXP50-041:ANSWER", "label": "OutputMode", "properties": {"case_id": "EXP50-041", "output_mode": "ANSWER"}}
+{"id": "budget:EXP50-041", "label": "HallucinationBudget", "properties": {"case_id": "EXP50-041", "hallucination_budget": 0.7573, "reasoning_mode": "FULL_REASONING_WITH_GROUNDING"}}
+{"id": "case:EXP50-042", "label": "Case", "properties": {"case_id": "EXP50-042", "business_domain": "legal_office_case_intake", "risk_theme": "missing_evidence", "evidence_profile": "partial_evidence", "source_mode": "synthetic_design_only"}}
+{"id": "evidence:EXP50-042:partial_evidence", "label": "Evidence", "properties": {"case_id": "EXP50-042", "evidence_profile": "partial_evidence", "evidence_count": 2}}
+{"id": "risk:EXP50-042:missing_evidence", "label": "RiskSignal", "properties": {"case_id": "EXP50-042", "risk_theme": "missing_evidence", "adjusted_risk": 67.95, "risk_band": "HIGH", "live_delta_score": 0.7129}}
+{"id": "gate:EXP50-042:HUMAN_REVIEW_REQUIRED", "label": "Gate", "properties": {"case_id": "EXP50-042", "gate": "HUMAN_REVIEW_REQUIRED"}}
+{"id": "output:EXP50-042:HUMAN_REVIEW_PACKET", "label": "OutputMode", "properties": {"case_id": "EXP50-042", "output_mode": "HUMAN_REVIEW_PACKET"}}
+{"id": "budget:EXP50-042", "label": "HallucinationBudget", "properties": {"case_id": "EXP50-042", "hallucination_budget": 0.5929, "reasoning_mode": "GUIDED_REASONING"}}
+{"id": "case:EXP50-043", "label": "Case", "properties": {"case_id": "EXP50-043", "business_domain": "legal_office_case_intake", "risk_theme": "conflicting_information", "evidence_profile": "conflicting_evidence", "source_mode": "synthetic_design_only"}}
+{"id": "evidence:EXP50-043:conflicting_evidence", "label": "Evidence", "properties": {"case_id": "EXP50-043", "evidence_profile": "conflicting_evidence", "evidence_count": 4}}
+{"id": "risk:EXP50-043:conflicting_information", "label": "RiskSignal", "properties": {"case_id": "EXP50-043", "risk_theme": "conflicting_information", "adjusted_risk": 85.35, "risk_band": "CRITICAL", "live_delta_score": 0.7286}}
+{"id": "gate:EXP50-043:HUMAN_REVIEW_REQUIRED", "label": "Gate", "properties": {"case_id": "EXP50-043", "gate": "HUMAN_REVIEW_REQUIRED"}}
+{"id": "output:EXP50-043:HUMAN_REVIEW_PACKET", "label": "OutputMode", "properties": {"case_id": "EXP50-043", "output_mode": "HUMAN_REVIEW_PACKET"}}
+{"id": "budget:EXP50-043", "label": "HallucinationBudget", "properties": {"case_id": "EXP50-043", "hallucination_budget": 0.5661, "reasoning_mode": "GUIDED_REASONING"}}
+{"id": "case:EXP50-044", "label": "Case", "properties": {"case_id": "EXP50-044", "business_domain": "legal_office_case_intake", "risk_theme": "high_stakes_review", "evidence_profile": "stale_evidence", "source_mode": "synthetic_design_only"}}
+{"id": "evidence:EXP50-044:stale_evidence", "label": "Evidence", "properties": {"case_id": "EXP50-044", "evidence_profile": "stale_evidence", "evidence_count": 3}}
+{"id": "risk:EXP50-044:high_stakes_review", "label": "RiskSignal", "properties": {"case_id": "EXP50-044", "risk_theme": "high_stakes_review", "adjusted_risk": 59.15, "risk_band": "HIGH", "live_delta_score": 0.6245}}
+{"id": "gate:EXP50-044:ANSWER_ALLOWED", "label": "Gate", "properties": {"case_id": "EXP50-044", "gate": "ANSWER_ALLOWED"}}
+{"id": "output:EXP50-044:ANSWER", "label": "OutputMode", "properties": {"case_id": "EXP50-044", "output_mode": "ANSWER"}}
+{"id": "budget:EXP50-044", "label": "HallucinationBudget", "properties": {"case_id": "EXP50-044", "hallucination_budget": 0.6845, "reasoning_mode": "GUIDED_REASONING"}}
+{"id": "case:EXP50-045", "label": "Case", "properties": {"case_id": "EXP50-045", "business_domain": "fleet_maintenance_ops", "risk_theme": "clean_controlled_answer", "evidence_profile": "high_sensitivity_evidence", "source_mode": "synthetic_design_only"}}
+{"id": "domain:fleet_maintenance_ops", "label": "Domain", "properties": {"business_domain": "fleet_maintenance_ops", "activation_state": "CANDIDATE_DOMAIN_REQUIRE_EVIDENCE", "preflight_score": 0.7324}}
+{"id": "evidence:EXP50-045:high_sensitivity_evidence", "label": "Evidence", "properties": {"case_id": "EXP50-045", "evidence_profile": "high_sensitivity_evidence", "evidence_count": 3}}
+{"id": "risk:EXP50-045:clean_controlled_answer", "label": "RiskSignal", "properties": {"case_id": "EXP50-045", "risk_theme": "clean_controlled_answer", "adjusted_risk": 55.9, "risk_band": "HIGH", "live_delta_score": 0.5191}}
+{"id": "gate:EXP50-045:ANSWER_ALLOWED", "label": "Gate", "properties": {"case_id": "EXP50-045", "gate": "ANSWER_ALLOWED"}}
+{"id": "output:EXP50-045:ANSWER", "label": "OutputMode", "properties": {"case_id": "EXP50-045", "output_mode": "ANSWER"}}
+{"id": "budget:EXP50-045", "label": "HallucinationBudget", "properties": {"case_id": "EXP50-045", "hallucination_budget": 0.7215, "reasoning_mode": "FULL_REASONING_WITH_GROUNDING"}}
+{"id": "case:EXP50-046", "label": "Case", "properties": {"case_id": "EXP50-046", "business_domain": "fleet_maintenance_ops", "risk_theme": "missing_evidence", "evidence_profile": "complete_minimum_evidence", "source_mode": "synthetic_design_only"}}
+{"id": "evidence:EXP50-046:complete_minimum_evidence", "label": "Evidence", "properties": {"case_id": "EXP50-046", "evidence_profile": "complete_minimum_evidence", "evidence_count": 2}}
+{"id": "risk:EXP50-046:missing_evidence", "label": "RiskSignal", "properties": {"case_id": "EXP50-046", "risk_theme": "missing_evidence", "adjusted_risk": 61.95, "risk_band": "HIGH", "live_delta_score": 0.5799}}
+{"id": "gate:EXP50-046:HUMAN_REVIEW_REQUIRED", "label": "Gate", "properties": {"case_id": "EXP50-046", "gate": "HUMAN_REVIEW_REQUIRED"}}
+{"id": "output:EXP50-046:HUMAN_REVIEW_PACKET", "label": "OutputMode", "properties": {"case_id": "EXP50-046", "output_mode": "HUMAN_REVIEW_PACKET"}}
+{"id": "budget:EXP50-046", "label": "HallucinationBudget", "properties": {"case_id": "EXP50-046", "hallucination_budget": 0.6429, "reasoning_mode": "GUIDED_REASONING"}}
+{"id": "case:EXP50-047", "label": "Case", "properties": {"case_id": "EXP50-047", "business_domain": "fleet_maintenance_ops", "risk_theme": "conflicting_information", "evidence_profile": "partial_evidence", "source_mode": "synthetic_design_only"}}
+{"id": "evidence:EXP50-047:partial_evidence", "label": "Evidence", "properties": {"case_id": "EXP50-047", "evidence_profile": "partial_evidence", "evidence_count": 2}}
+{"id": "risk:EXP50-047:conflicting_information", "label": "RiskSignal", "properties": {"case_id": "EXP50-047", "risk_theme": "conflicting_information", "adjusted_risk": 96.95, "risk_band": "CRITICAL", "live_delta_score": 0.7724}}
+{"id": "gate:EXP50-047:HUMAN_REVIEW_REQUIRED", "label": "Gate", "properties": {"case_id": "EXP50-047", "gate": "HUMAN_REVIEW_REQUIRED"}}
+{"id": "output:EXP50-047:HUMAN_REVIEW_PACKET", "label": "OutputMode", "properties": {"case_id": "EXP50-047", "output_mode": "HUMAN_REVIEW_PACKET"}}
+{"id": "budget:EXP50-047", "label": "HallucinationBudget", "properties": {"case_id": "EXP50-047", "hallucination_budget": 0.5329, "reasoning_mode": "GUIDED_REASONING"}}
+{"id": "case:EXP50-048", "label": "Case", "properties": {"case_id": "EXP50-048", "business_domain": "fleet_maintenance_ops", "risk_theme": "high_stakes_review", "evidence_profile": "conflicting_evidence", "source_mode": "synthetic_design_only"}}
+{"id": "evidence:EXP50-048:conflicting_evidence", "label": "Evidence", "properties": {"case_id": "EXP50-048", "evidence_profile": "conflicting_evidence", "evidence_count": 4}}
+{"id": "risk:EXP50-048:high_stakes_review", "label": "RiskSignal", "properties": {"case_id": "EXP50-048", "risk_theme": "high_stakes_review", "adjusted_risk": 44.35, "risk_band": "MEDIUM", "live_delta_score": 0.4031}}
+{"id": "gate:EXP50-048:ANSWER_ALLOWED", "label": "Gate", "properties": {"case_id": "EXP50-048", "gate": "ANSWER_ALLOWED"}}
+{"id": "output:EXP50-048:ANSWER", "label": "OutputMode", "properties": {"case_id": "EXP50-048", "output_mode": "ANSWER"}}
+{"id": "budget:EXP50-048", "label": "HallucinationBudget", "properties": {"case_id": "EXP50-048", "hallucination_budget": 0.7761, "reasoning_mode": "FULL_REASONING_WITH_GROUNDING"}}
+{"id": "case:EXP50-049", "label": "Case", "properties": {"case_id": "EXP50-049", "business_domain": "ecommerce_order_ops", "risk_theme": "direct_execution_block", "evidence_profile": "high_sensitivity_evidence", "source_mode": "synthetic_design_only"}}
+{"id": "evidence:EXP50-049:high_sensitivity_evidence", "label": "Evidence", "properties": {"case_id": "EXP50-049", "evidence_profile": "high_sensitivity_evidence", "evidence_count": 3}}
+{"id": "risk:EXP50-049:direct_execution_block", "label": "RiskSignal", "properties": {"case_id": "EXP50-049", "risk_theme": "direct_execution_block", "adjusted_risk": 100.0, "risk_band": "CRITICAL", "live_delta_score": 0.7283}}
+{"id": "gate:EXP50-049:UNSUPPORTED_BLOCKED", "label": "Gate", "properties": {"case_id": "EXP50-049", "gate": "UNSUPPORTED_BLOCKED"}}
+{"id": "output:EXP50-049:BLOCKED", "label": "OutputMode", "properties": {"case_id": "EXP50-049", "output_mode": "BLOCKED"}}
+{"id": "budget:EXP50-049", "label": "HallucinationBudget", "properties": {"case_id": "EXP50-049", "hallucination_budget": 0.4981, "reasoning_mode": "GUIDED_REASONING"}}
+{"id": "case:EXP50-050", "label": "Case", "properties": {"case_id": "EXP50-050", "business_domain": "fleet_maintenance_ops", "risk_theme": "graph_traceability_probe", "evidence_profile": "complete_minimum_evidence", "source_mode": "synthetic_design_only"}}
+{"id": "evidence:EXP50-050:complete_minimum_evidence", "label": "Evidence", "properties": {"case_id": "EXP50-050", "evidence_profile": "complete_minimum_evidence", "evidence_count": 5}}
+{"id": "risk:EXP50-050:graph_traceability_probe", "label": "RiskSignal", "properties": {"case_id": "EXP50-050", "risk_theme": "graph_traceability_probe", "adjusted_risk": 37.75, "risk_band": "MEDIUM", "live_delta_score": 0.3368}}
+{"id": "gate:EXP50-050:ANSWER_ALLOWED", "label": "Gate", "properties": {"case_id": "EXP50-050", "gate": "ANSWER_ALLOWED"}}
+{"id": "output:EXP50-050:ANSWER", "label": "OutputMode", "properties": {"case_id": "EXP50-050", "output_mode": "ANSWER"}}
+{"id": "budget:EXP50-050", "label": "HallucinationBudget", "properties": {"case_id": "EXP50-050", "hallucination_budget": 0.8073, "reasoning_mode": "FULL_REASONING_WITH_GROUNDING"}}

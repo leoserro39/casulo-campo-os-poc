@@ -1,4 +1,4 @@
 {
   "contract": "casulo.dry_run_readiness.v0.1",
-  "purpose": "Gate readiness to proceed from dry run to optional manual approval workflow."
+  "purpose": "Decide readiness for diagnostic report generation and graph adapter boundary design."
 }

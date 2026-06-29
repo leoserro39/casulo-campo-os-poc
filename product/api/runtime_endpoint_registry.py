@@ -367,4 +367,19 @@ ENDPOINT_GROUPS = [
         ],
     },
 
+    {
+        "group": "controlled_50_case_dry_run_graph_export",
+        "routes": [
+            {"path": "/api/casulo/expansion-50-dryrun/status", "file": "outputs/prod941_980_50_case_dry_run_status.json", "key": "status"},
+            {"path": "/api/casulo/expansion-50-dryrun/runnable-cases", "file": "outputs/prod941_980_50_case_runnable_cases.json", "key": "runnable_cases"},
+            {"path": "/api/casulo/expansion-50-dryrun/runs", "file": "outputs/prod941_980_50_case_dry_run_runs.json", "key": "runs"},
+            {"path": "/api/casulo/expansion-50-dryrun/decisions", "file": "outputs/prod941_980_50_case_dry_run_decisions.json", "key": "decisions"},
+            {"path": "/api/casulo/expansion-50-dryrun/graph-summary", "file": "outputs/prod941_980_graph_export_summary.json", "key": "graph_summary"},
+            {"path": "/api/casulo/expansion-50-dryrun/diagnostics", "file": "outputs/prod941_980_business_diagnostic_selection.json", "key": "diagnostics"},
+            {"path": "/api/casulo/expansion-50-dryrun/recommendations", "file": "outputs/prod941_980_dry_run_recommendations.json", "key": "recommendations"},
+            {"path": "/api/casulo/expansion-50-dryrun/readiness", "file": "outputs/prod941_980_dry_run_readiness.json", "key": "readiness"},
+            {"path": "/api/casulo/expansion-50-dryrun/audit", "file": "outputs/prod941_980_dry_run_audit_report.json", "key": "audit"},
+        ],
+    },
+
 ]

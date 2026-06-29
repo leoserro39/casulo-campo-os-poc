@@ -1,0 +1,4 @@
+{
+  "contract": "casulo.dry_run_diagnostic_selection.v0.1",
+  "purpose": "Select representative cases for business diagnostic reporting."
+}

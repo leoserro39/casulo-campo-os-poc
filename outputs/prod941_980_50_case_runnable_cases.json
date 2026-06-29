@@ -1,0 +1,1337 @@
+{
+  "status": "PASS",
+  "case_count": 50,
+  "cases": [
+    {
+      "case_id": "EXP50-001",
+      "business_domain": "restaurant_inventory",
+      "problem_summary": "restaurant_inventory synthetic dry-run case for clean_controlled_answer with complete_minimum_evidence. Dados suficientes para resposta controlada.",
+      "available_evidence": [
+        "case_summary",
+        "current_state",
+        "operational_log",
+        "supporting_document",
+        "review_note"
+      ],
+      "known_facts": [
+        "domain=restaurant_inventory",
+        "risk_theme=clean_controlled_answer",
+        "evidence_profile=complete_minimum_evidence"
+      ],
+      "assumptions": [
+        "dry-run only",
+        "no external execution",
+        "no production activation"
+      ],
+      "desired_decision_support": "responder com orientação controlada sem executar ações externas",
+      "consent_scope": "synthetic_design_only",
+      "data_sensitivity": "medium",
+      "source_mode": "synthetic_design_only",
+      "risk_theme": "clean_controlled_answer",
+      "evidence_profile": "complete_minimum_evidence"
+    },
+    {
+      "case_id": "EXP50-002",
+      "business_domain": "restaurant_inventory",
+      "problem_summary": "restaurant_inventory synthetic dry-run case for missing_evidence with partial_evidence. Evidência incompleta exige coleta adicional antes da decisão.",
+      "available_evidence": [
+        "case_summary",
+        "current_state"
+      ],
+      "known_facts": [
+        "domain=restaurant_inventory",
+        "risk_theme=missing_evidence",
+        "evidence_profile=partial_evidence"
+      ],
+      "assumptions": [
+        "dry-run only",
+        "no external execution",
+        "no production activation"
+      ],
+      "desired_decision_support": "pedir evidências faltantes sem executar ações externas",
+      "consent_scope": "synthetic_design_only",
+      "data_sensitivity": "medium",
+      "source_mode": "synthetic_design_only",
+      "risk_theme": "missing_evidence",
+      "evidence_profile": "partial_evidence"
+    },
+    {
+      "case_id": "EXP50-003",
+      "business_domain": "restaurant_inventory",
+      "problem_summary": "restaurant_inventory synthetic dry-run case for conflicting_information with conflicting_evidence. Há conflito entre fontes e a decisão precisa ser revisada.",
+      "available_evidence": [
+        "case_summary",
+        "source_a_value",
+        "source_b_value",
+        "conflict_note"
+      ],
+      "known_facts": [
+        "domain=restaurant_inventory",
+        "risk_theme=conflicting_information",
+        "evidence_profile=conflicting_evidence"
+      ],
+      "assumptions": [
+        "dry-run only",
+        "no external execution",
+        "no production activation",
+        "fontes podem divergir"
+      ],
+      "desired_decision_support": "mapear conflitos e recomendar revisão humana",
+      "consent_scope": "synthetic_design_only",
+      "data_sensitivity": "medium",
+      "source_mode": "synthetic_design_only",
+      "risk_theme": "conflicting_information",
+      "evidence_profile": "conflicting_evidence"
+    },
+    {
+      "case_id": "EXP50-004",
+      "business_domain": "restaurant_inventory",
+      "problem_summary": "restaurant_inventory synthetic dry-run case for high_stakes_review with stale_evidence. Há risco alto, sensibilidade ou impacto de negócio relevante.",
+      "available_evidence": [
+        "case_summary",
+        "old_report",
+        "stale_timestamp_note"
+      ],
+      "known_facts": [
+        "domain=restaurant_inventory",
+        "risk_theme=high_stakes_review",
+        "evidence_profile=stale_evidence"
+      ],
+      "assumptions": [
+        "dry-run only",
+        "no external execution",
+        "no production activation"
+      ],
+      "desired_decision_support": "preparar pacote de revisão humana",
+      "consent_scope": "synthetic_design_only",
+      "data_sensitivity": "medium",
+      "source_mode": "synthetic_design_only",
+      "risk_theme": "high_stakes_review",
+      "evidence_profile": "stale_evidence"
+    },
+    {
+      "case_id": "EXP50-005",
+      "business_domain": "restaurant_cashflow",
+      "problem_summary": "restaurant_cashflow synthetic dry-run case for clean_controlled_answer with high_sensitivity_evidence. Dados suficientes para resposta controlada.",
+      "available_evidence": [
+        "case_summary",
+        "sensitive_context",
+        "restricted_note"
+      ],
+      "known_facts": [
+        "domain=restaurant_cashflow",
+        "risk_theme=clean_controlled_answer",
+        "evidence_profile=high_sensitivity_evidence"
+      ],
+      "assumptions": [
+        "dry-run only",
+        "no external execution",
+        "no production activation"
+      ],
+      "desired_decision_support": "responder com orientação controlada sem executar ações externas",
+      "consent_scope": "synthetic_design_only",
+      "data_sensitivity": "high",
+      "source_mode": "synthetic_design_only",
+      "risk_theme": "clean_controlled_answer",
+      "evidence_profile": "high_sensitivity_evidence"
+    },
+    {
+      "case_id": "EXP50-006",
+      "business_domain": "restaurant_cashflow",
+      "problem_summary": "restaurant_cashflow synthetic dry-run case for missing_evidence with complete_minimum_evidence. Evidência incompleta exige coleta adicional antes da decisão.",
+      "available_evidence": [
+        "case_summary",
+        "current_state"
+      ],
+      "known_facts": [
+        "domain=restaurant_cashflow",
+        "risk_theme=missing_evidence",
+        "evidence_profile=complete_minimum_evidence"
+      ],
+      "assumptions": [
+        "dry-run only",
+        "no external execution",
+        "no production activation"
+      ],
+      "desired_decision_support": "pedir evidências faltantes sem executar ações externas",
+      "consent_scope": "synthetic_design_only",
+      "data_sensitivity": "medium",
+      "source_mode": "synthetic_design_only",
+      "risk_theme": "missing_evidence",
+      "evidence_profile": "complete_minimum_evidence"
+    },
+    {
+      "case_id": "EXP50-007",
+      "business_domain": "restaurant_cashflow",
+      "problem_summary": "restaurant_cashflow synthetic dry-run case for conflicting_information with partial_evidence. Há conflito entre fontes e a decisão precisa ser revisada.",
+      "available_evidence": [
+        "case_summary",
+        "current_state"
+      ],
+      "known_facts": [
+        "domain=restaurant_cashflow",
+        "risk_theme=conflicting_information",
+        "evidence_profile=partial_evidence"
+      ],
+      "assumptions": [
+        "dry-run only",
+        "no external execution",
+        "no production activation",
+        "fontes podem divergir"
+      ],
+      "desired_decision_support": "mapear conflitos e recomendar revisão humana",
+      "consent_scope": "synthetic_design_only",
+      "data_sensitivity": "medium",
+      "source_mode": "synthetic_design_only",
+      "risk_theme": "conflicting_information",
+      "evidence_profile": "partial_evidence"
+    },
+    {
+      "case_id": "EXP50-008",
+      "business_domain": "restaurant_cashflow",
+      "problem_summary": "restaurant_cashflow synthetic dry-run case for high_stakes_review with conflicting_evidence. Há risco alto, sensibilidade ou impacto de negócio relevante.",
+      "available_evidence": [
+        "case_summary",
+        "source_a_value",
+        "source_b_value",
+        "conflict_note"
+      ],
+      "known_facts": [
+        "domain=restaurant_cashflow",
+        "risk_theme=high_stakes_review",
+        "evidence_profile=conflicting_evidence"
+      ],
+      "assumptions": [
+        "dry-run only",
+        "no external execution",
+        "no production activation"
+      ],
+      "desired_decision_support": "preparar pacote de revisão humana",
+      "consent_scope": "synthetic_design_only",
+      "data_sensitivity": "medium",
+      "source_mode": "synthetic_design_only",
+      "risk_theme": "high_stakes_review",
+      "evidence_profile": "conflicting_evidence"
+    },
+    {
+      "case_id": "EXP50-009",
+      "business_domain": "clinic_scheduling",
+      "problem_summary": "clinic_scheduling synthetic dry-run case for clean_controlled_answer with stale_evidence. Dados suficientes para resposta controlada.",
+      "available_evidence": [
+        "case_summary",
+        "old_report",
+        "stale_timestamp_note"
+      ],
+      "known_facts": [
+        "domain=clinic_scheduling",
+        "risk_theme=clean_controlled_answer",
+        "evidence_profile=stale_evidence"
+      ],
+      "assumptions": [
+        "dry-run only",
+        "no external execution",
+        "no production activation"
+      ],
+      "desired_decision_support": "responder com orientação controlada sem executar ações externas",
+      "consent_scope": "synthetic_design_only",
+      "data_sensitivity": "medium",
+      "source_mode": "synthetic_design_only",
+      "risk_theme": "clean_controlled_answer",
+      "evidence_profile": "stale_evidence"
+    },
+    {
+      "case_id": "EXP50-010",
+      "business_domain": "clinic_scheduling",
+      "problem_summary": "clinic_scheduling synthetic dry-run case for missing_evidence with high_sensitivity_evidence. Evidência incompleta exige coleta adicional antes da decisão.",
+      "available_evidence": [
+        "case_summary",
+        "sensitive_context"
+      ],
+      "known_facts": [
+        "domain=clinic_scheduling",
+        "risk_theme=missing_evidence",
+        "evidence_profile=high_sensitivity_evidence"
+      ],
+      "assumptions": [
+        "dry-run only",
+        "no external execution",
+        "no production activation"
+      ],
+      "desired_decision_support": "pedir evidências faltantes sem executar ações externas",
+      "consent_scope": "synthetic_design_only",
+      "data_sensitivity": "high",
+      "source_mode": "synthetic_design_only",
+      "risk_theme": "missing_evidence",
+      "evidence_profile": "high_sensitivity_evidence"
+    },
+    {
+      "case_id": "EXP50-011",
+      "business_domain": "clinic_scheduling",
+      "problem_summary": "clinic_scheduling synthetic dry-run case for conflicting_information with complete_minimum_evidence. Há conflito entre fontes e a decisão precisa ser revisada.",
+      "available_evidence": [
+        "case_summary",
+        "current_state",
+        "operational_log",
+        "supporting_document",
+        "review_note"
+      ],
+      "known_facts": [
+        "domain=clinic_scheduling",
+        "risk_theme=conflicting_information",
+        "evidence_profile=complete_minimum_evidence"
+      ],
+      "assumptions": [
+        "dry-run only",
+        "no external execution",
+        "no production activation",
+        "fontes podem divergir"
+      ],
+      "desired_decision_support": "mapear conflitos e recomendar revisão humana",
+      "consent_scope": "synthetic_design_only",
+      "data_sensitivity": "medium",
+      "source_mode": "synthetic_design_only",
+      "risk_theme": "conflicting_information",
+      "evidence_profile": "complete_minimum_evidence"
+    },
+    {
+      "case_id": "EXP50-012",
+      "business_domain": "clinic_scheduling",
+      "problem_summary": "clinic_scheduling synthetic dry-run case for high_stakes_review with partial_evidence. Há risco alto, sensibilidade ou impacto de negócio relevante.",
+      "available_evidence": [
+        "case_summary",
+        "current_state"
+      ],
+      "known_facts": [
+        "domain=clinic_scheduling",
+        "risk_theme=high_stakes_review",
+        "evidence_profile=partial_evidence"
+      ],
+      "assumptions": [
+        "dry-run only",
+        "no external execution",
+        "no production activation"
+      ],
+      "desired_decision_support": "preparar pacote de revisão humana",
+      "consent_scope": "synthetic_design_only",
+      "data_sensitivity": "medium",
+      "source_mode": "synthetic_design_only",
+      "risk_theme": "high_stakes_review",
+      "evidence_profile": "partial_evidence"
+    },
+    {
+      "case_id": "EXP50-013",
+      "business_domain": "clinic_billing_glosa",
+      "problem_summary": "clinic_billing_glosa synthetic dry-run case for clean_controlled_answer with conflicting_evidence. Dados suficientes para resposta controlada.",
+      "available_evidence": [
+        "case_summary",
+        "source_a_value",
+        "source_b_value",
+        "conflict_note"
+      ],
+      "known_facts": [
+        "domain=clinic_billing_glosa",
+        "risk_theme=clean_controlled_answer",
+        "evidence_profile=conflicting_evidence"
+      ],
+      "assumptions": [
+        "dry-run only",
+        "no external execution",
+        "no production activation"
+      ],
+      "desired_decision_support": "responder com orientação controlada sem executar ações externas",
+      "consent_scope": "synthetic_design_only",
+      "data_sensitivity": "medium",
+      "source_mode": "synthetic_design_only",
+      "risk_theme": "clean_controlled_answer",
+      "evidence_profile": "conflicting_evidence"
+    },
+    {
+      "case_id": "EXP50-014",
+      "business_domain": "clinic_billing_glosa",
+      "problem_summary": "clinic_billing_glosa synthetic dry-run case for missing_evidence with stale_evidence. Evidência incompleta exige coleta adicional antes da decisão.",
+      "available_evidence": [
+        "case_summary",
+        "old_report"
+      ],
+      "known_facts": [
+        "domain=clinic_billing_glosa",
+        "risk_theme=missing_evidence",
+        "evidence_profile=stale_evidence"
+      ],
+      "assumptions": [
+        "dry-run only",
+        "no external execution",
+        "no production activation"
+      ],
+      "desired_decision_support": "pedir evidências faltantes sem executar ações externas",
+      "consent_scope": "synthetic_design_only",
+      "data_sensitivity": "medium",
+      "source_mode": "synthetic_design_only",
+      "risk_theme": "missing_evidence",
+      "evidence_profile": "stale_evidence"
+    },
+    {
+      "case_id": "EXP50-015",
+      "business_domain": "clinic_billing_glosa",
+      "problem_summary": "clinic_billing_glosa synthetic dry-run case for conflicting_information with high_sensitivity_evidence. Há conflito entre fontes e a decisão precisa ser revisada.",
+      "available_evidence": [
+        "case_summary",
+        "sensitive_context",
+        "restricted_note"
+      ],
+      "known_facts": [
+        "domain=clinic_billing_glosa",
+        "risk_theme=conflicting_information",
+        "evidence_profile=high_sensitivity_evidence"
+      ],
+      "assumptions": [
+        "dry-run only",
+        "no external execution",
+        "no production activation",
+        "fontes podem divergir"
+      ],
+      "desired_decision_support": "mapear conflitos e recomendar revisão humana",
+      "consent_scope": "synthetic_design_only",
+      "data_sensitivity": "high",
+      "source_mode": "synthetic_design_only",
+      "risk_theme": "conflicting_information",
+      "evidence_profile": "high_sensitivity_evidence"
+    },
+    {
+      "case_id": "EXP50-016",
+      "business_domain": "clinic_billing_glosa",
+      "problem_summary": "clinic_billing_glosa synthetic dry-run case for high_stakes_review with complete_minimum_evidence. Há risco alto, sensibilidade ou impacto de negócio relevante.",
+      "available_evidence": [
+        "case_summary",
+        "current_state",
+        "operational_log",
+        "supporting_document",
+        "review_note"
+      ],
+      "known_facts": [
+        "domain=clinic_billing_glosa",
+        "risk_theme=high_stakes_review",
+        "evidence_profile=complete_minimum_evidence"
+      ],
+      "assumptions": [
+        "dry-run only",
+        "no external execution",
+        "no production activation"
+      ],
+      "desired_decision_support": "preparar pacote de revisão humana",
+      "consent_scope": "synthetic_design_only",
+      "data_sensitivity": "medium",
+      "source_mode": "synthetic_design_only",
+      "risk_theme": "high_stakes_review",
+      "evidence_profile": "complete_minimum_evidence"
+    },
+    {
+      "case_id": "EXP50-017",
+      "business_domain": "accounting_tax_obligation",
+      "problem_summary": "accounting_tax_obligation synthetic dry-run case for clean_controlled_answer with partial_evidence. Dados suficientes para resposta controlada.",
+      "available_evidence": [
+        "case_summary",
+        "current_state"
+      ],
+      "known_facts": [
+        "domain=accounting_tax_obligation",
+        "risk_theme=clean_controlled_answer",
+        "evidence_profile=partial_evidence"
+      ],
+      "assumptions": [
+        "dry-run only",
+        "no external execution",
+        "no production activation"
+      ],
+      "desired_decision_support": "responder com orientação controlada sem executar ações externas",
+      "consent_scope": "synthetic_design_only",
+      "data_sensitivity": "medium",
+      "source_mode": "synthetic_design_only",
+      "risk_theme": "clean_controlled_answer",
+      "evidence_profile": "partial_evidence"
+    },
+    {
+      "case_id": "EXP50-018",
+      "business_domain": "accounting_tax_obligation",
+      "problem_summary": "accounting_tax_obligation synthetic dry-run case for missing_evidence with conflicting_evidence. Evidência incompleta exige coleta adicional antes da decisão.",
+      "available_evidence": [
+        "case_summary",
+        "source_a_value"
+      ],
+      "known_facts": [
+        "domain=accounting_tax_obligation",
+        "risk_theme=missing_evidence",
+        "evidence_profile=conflicting_evidence"
+      ],
+      "assumptions": [
+        "dry-run only",
+        "no external execution",
+        "no production activation"
+      ],
+      "desired_decision_support": "pedir evidências faltantes sem executar ações externas",
+      "consent_scope": "synthetic_design_only",
+      "data_sensitivity": "medium",
+      "source_mode": "synthetic_design_only",
+      "risk_theme": "missing_evidence",
+      "evidence_profile": "conflicting_evidence"
+    },
+    {
+      "case_id": "EXP50-019",
+      "business_domain": "accounting_tax_obligation",
+      "problem_summary": "accounting_tax_obligation synthetic dry-run case for conflicting_information with stale_evidence. Há conflito entre fontes e a decisão precisa ser revisada.",
+      "available_evidence": [
+        "case_summary",
+        "old_report",
+        "stale_timestamp_note"
+      ],
+      "known_facts": [
+        "domain=accounting_tax_obligation",
+        "risk_theme=conflicting_information",
+        "evidence_profile=stale_evidence"
+      ],
+      "assumptions": [
+        "dry-run only",
+        "no external execution",
+        "no production activation",
+        "fontes podem divergir"
+      ],
+      "desired_decision_support": "mapear conflitos e recomendar revisão humana",
+      "consent_scope": "synthetic_design_only",
+      "data_sensitivity": "medium",
+      "source_mode": "synthetic_design_only",
+      "risk_theme": "conflicting_information",
+      "evidence_profile": "stale_evidence"
+    },
+    {
+      "case_id": "EXP50-020",
+      "business_domain": "accounting_tax_obligation",
+      "problem_summary": "accounting_tax_obligation synthetic dry-run case for high_stakes_review with high_sensitivity_evidence. Há risco alto, sensibilidade ou impacto de negócio relevante.",
+      "available_evidence": [
+        "case_summary",
+        "sensitive_context",
+        "restricted_note"
+      ],
+      "known_facts": [
+        "domain=accounting_tax_obligation",
+        "risk_theme=high_stakes_review",
+        "evidence_profile=high_sensitivity_evidence"
+      ],
+      "assumptions": [
+        "dry-run only",
+        "no external execution",
+        "no production activation"
+      ],
+      "desired_decision_support": "preparar pacote de revisão humana",
+      "consent_scope": "synthetic_design_only",
+      "data_sensitivity": "high",
+      "source_mode": "synthetic_design_only",
+      "risk_theme": "high_stakes_review",
+      "evidence_profile": "high_sensitivity_evidence"
+    },
+    {
+      "case_id": "EXP50-021",
+      "business_domain": "contract_legal_review",
+      "problem_summary": "contract_legal_review synthetic dry-run case for clean_controlled_answer with complete_minimum_evidence. Dados suficientes para resposta controlada.",
+      "available_evidence": [
+        "case_summary",
+        "current_state",
+        "operational_log",
+        "supporting_document",
+        "review_note"
+      ],
+      "known_facts": [
+        "domain=contract_legal_review",
+        "risk_theme=clean_controlled_answer",
+        "evidence_profile=complete_minimum_evidence"
+      ],
+      "assumptions": [
+        "dry-run only",
+        "no external execution",
+        "no production activation"
+      ],
+      "desired_decision_support": "responder com orientação controlada sem executar ações externas",
+      "consent_scope": "synthetic_design_only",
+      "data_sensitivity": "medium",
+      "source_mode": "synthetic_design_only",
+      "risk_theme": "clean_controlled_answer",
+      "evidence_profile": "complete_minimum_evidence"
+    },
+    {
+      "case_id": "EXP50-022",
+      "business_domain": "contract_legal_review",
+      "problem_summary": "contract_legal_review synthetic dry-run case for missing_evidence with partial_evidence. Evidência incompleta exige coleta adicional antes da decisão.",
+      "available_evidence": [
+        "case_summary",
+        "current_state"
+      ],
+      "known_facts": [
+        "domain=contract_legal_review",
+        "risk_theme=missing_evidence",
+        "evidence_profile=partial_evidence"
+      ],
+      "assumptions": [
+        "dry-run only",
+        "no external execution",
+        "no production activation"
+      ],
+      "desired_decision_support": "pedir evidências faltantes sem executar ações externas",
+      "consent_scope": "synthetic_design_only",
+      "data_sensitivity": "medium",
+      "source_mode": "synthetic_design_only",
+      "risk_theme": "missing_evidence",
+      "evidence_profile": "partial_evidence"
+    },
+    {
+      "case_id": "EXP50-023",
+      "business_domain": "contract_legal_review",
+      "problem_summary": "contract_legal_review synthetic dry-run case for conflicting_information with conflicting_evidence. Há conflito entre fontes e a decisão precisa ser revisada.",
+      "available_evidence": [
+        "case_summary",
+        "source_a_value",
+        "source_b_value",
+        "conflict_note"
+      ],
+      "known_facts": [
+        "domain=contract_legal_review",
+        "risk_theme=conflicting_information",
+        "evidence_profile=conflicting_evidence"
+      ],
+      "assumptions": [
+        "dry-run only",
+        "no external execution",
+        "no production activation",
+        "fontes podem divergir"
+      ],
+      "desired_decision_support": "mapear conflitos e recomendar revisão humana",
+      "consent_scope": "synthetic_design_only",
+      "data_sensitivity": "medium",
+      "source_mode": "synthetic_design_only",
+      "risk_theme": "conflicting_information",
+      "evidence_profile": "conflicting_evidence"
+    },
+    {
+      "case_id": "EXP50-024",
+      "business_domain": "contract_legal_review",
+      "problem_summary": "contract_legal_review synthetic dry-run case for high_stakes_review with stale_evidence. Há risco alto, sensibilidade ou impacto de negócio relevante.",
+      "available_evidence": [
+        "case_summary",
+        "old_report",
+        "stale_timestamp_note"
+      ],
+      "known_facts": [
+        "domain=contract_legal_review",
+        "risk_theme=high_stakes_review",
+        "evidence_profile=stale_evidence"
+      ],
+      "assumptions": [
+        "dry-run only",
+        "no external execution",
+        "no production activation"
+      ],
+      "desired_decision_support": "preparar pacote de revisão humana",
+      "consent_scope": "synthetic_design_only",
+      "data_sensitivity": "medium",
+      "source_mode": "synthetic_design_only",
+      "risk_theme": "high_stakes_review",
+      "evidence_profile": "stale_evidence"
+    },
+    {
+      "case_id": "EXP50-025",
+      "business_domain": "ecommerce_order_ops",
+      "problem_summary": "ecommerce_order_ops synthetic dry-run case for clean_controlled_answer with high_sensitivity_evidence. Dados suficientes para resposta controlada.",
+      "available_evidence": [
+        "case_summary",
+        "sensitive_context",
+        "restricted_note"
+      ],
+      "known_facts": [
+        "domain=ecommerce_order_ops",
+        "risk_theme=clean_controlled_answer",
+        "evidence_profile=high_sensitivity_evidence"
+      ],
+      "assumptions": [
+        "dry-run only",
+        "no external execution",
+        "no production activation"
+      ],
+      "desired_decision_support": "responder com orientação controlada sem executar ações externas",
+      "consent_scope": "synthetic_design_only",
+      "data_sensitivity": "high",
+      "source_mode": "synthetic_design_only",
+      "risk_theme": "clean_controlled_answer",
+      "evidence_profile": "high_sensitivity_evidence"
+    },
+    {
+      "case_id": "EXP50-026",
+      "business_domain": "ecommerce_order_ops",
+      "problem_summary": "ecommerce_order_ops synthetic dry-run case for missing_evidence with complete_minimum_evidence. Evidência incompleta exige coleta adicional antes da decisão.",
+      "available_evidence": [
+        "case_summary",
+        "current_state"
+      ],
+      "known_facts": [
+        "domain=ecommerce_order_ops",
+        "risk_theme=missing_evidence",
+        "evidence_profile=complete_minimum_evidence"
+      ],
+      "assumptions": [
+        "dry-run only",
+        "no external execution",
+        "no production activation"
+      ],
+      "desired_decision_support": "pedir evidências faltantes sem executar ações externas",
+      "consent_scope": "synthetic_design_only",
+      "data_sensitivity": "medium",
+      "source_mode": "synthetic_design_only",
+      "risk_theme": "missing_evidence",
+      "evidence_profile": "complete_minimum_evidence"
+    },
+    {
+      "case_id": "EXP50-027",
+      "business_domain": "ecommerce_order_ops",
+      "problem_summary": "ecommerce_order_ops synthetic dry-run case for conflicting_information with partial_evidence. Há conflito entre fontes e a decisão precisa ser revisada.",
+      "available_evidence": [
+        "case_summary",
+        "current_state"
+      ],
+      "known_facts": [
+        "domain=ecommerce_order_ops",
+        "risk_theme=conflicting_information",
+        "evidence_profile=partial_evidence"
+      ],
+      "assumptions": [
+        "dry-run only",
+        "no external execution",
+        "no production activation",
+        "fontes podem divergir"
+      ],
+      "desired_decision_support": "mapear conflitos e recomendar revisão humana",
+      "consent_scope": "synthetic_design_only",
+      "data_sensitivity": "medium",
+      "source_mode": "synthetic_design_only",
+      "risk_theme": "conflicting_information",
+      "evidence_profile": "partial_evidence"
+    },
+    {
+      "case_id": "EXP50-028",
+      "business_domain": "ecommerce_order_ops",
+      "problem_summary": "ecommerce_order_ops synthetic dry-run case for high_stakes_review with conflicting_evidence. Há risco alto, sensibilidade ou impacto de negócio relevante.",
+      "available_evidence": [
+        "case_summary",
+        "source_a_value",
+        "source_b_value",
+        "conflict_note"
+      ],
+      "known_facts": [
+        "domain=ecommerce_order_ops",
+        "risk_theme=high_stakes_review",
+        "evidence_profile=conflicting_evidence"
+      ],
+      "assumptions": [
+        "dry-run only",
+        "no external execution",
+        "no production activation"
+      ],
+      "desired_decision_support": "preparar pacote de revisão humana",
+      "consent_scope": "synthetic_design_only",
+      "data_sensitivity": "medium",
+      "source_mode": "synthetic_design_only",
+      "risk_theme": "high_stakes_review",
+      "evidence_profile": "conflicting_evidence"
+    },
+    {
+      "case_id": "EXP50-029",
+      "business_domain": "field_service_work_order",
+      "problem_summary": "field_service_work_order synthetic dry-run case for clean_controlled_answer with stale_evidence. Dados suficientes para resposta controlada.",
+      "available_evidence": [
+        "case_summary",
+        "old_report",
+        "stale_timestamp_note"
+      ],
+      "known_facts": [
+        "domain=field_service_work_order",
+        "risk_theme=clean_controlled_answer",
+        "evidence_profile=stale_evidence"
+      ],
+      "assumptions": [
+        "dry-run only",
+        "no external execution",
+        "no production activation"
+      ],
+      "desired_decision_support": "responder com orientação controlada sem executar ações externas",
+      "consent_scope": "synthetic_design_only",
+      "data_sensitivity": "medium",
+      "source_mode": "synthetic_design_only",
+      "risk_theme": "clean_controlled_answer",
+      "evidence_profile": "stale_evidence"
+    },
+    {
+      "case_id": "EXP50-030",
+      "business_domain": "field_service_work_order",
+      "problem_summary": "field_service_work_order synthetic dry-run case for missing_evidence with high_sensitivity_evidence. Evidência incompleta exige coleta adicional antes da decisão.",
+      "available_evidence": [
+        "case_summary",
+        "sensitive_context"
+      ],
+      "known_facts": [
+        "domain=field_service_work_order",
+        "risk_theme=missing_evidence",
+        "evidence_profile=high_sensitivity_evidence"
+      ],
+      "assumptions": [
+        "dry-run only",
+        "no external execution",
+        "no production activation"
+      ],
+      "desired_decision_support": "pedir evidências faltantes sem executar ações externas",
+      "consent_scope": "synthetic_design_only",
+      "data_sensitivity": "high",
+      "source_mode": "synthetic_design_only",
+      "risk_theme": "missing_evidence",
+      "evidence_profile": "high_sensitivity_evidence"
+    },
+    {
+      "case_id": "EXP50-031",
+      "business_domain": "field_service_work_order",
+      "problem_summary": "field_service_work_order synthetic dry-run case for conflicting_information with complete_minimum_evidence. Há conflito entre fontes e a decisão precisa ser revisada.",
+      "available_evidence": [
+        "case_summary",
+        "current_state",
+        "operational_log",
+        "supporting_document",
+        "review_note"
+      ],
+      "known_facts": [
+        "domain=field_service_work_order",
+        "risk_theme=conflicting_information",
+        "evidence_profile=complete_minimum_evidence"
+      ],
+      "assumptions": [
+        "dry-run only",
+        "no external execution",
+        "no production activation",
+        "fontes podem divergir"
+      ],
+      "desired_decision_support": "mapear conflitos e recomendar revisão humana",
+      "consent_scope": "synthetic_design_only",
+      "data_sensitivity": "medium",
+      "source_mode": "synthetic_design_only",
+      "risk_theme": "conflicting_information",
+      "evidence_profile": "complete_minimum_evidence"
+    },
+    {
+      "case_id": "EXP50-032",
+      "business_domain": "field_service_work_order",
+      "problem_summary": "field_service_work_order synthetic dry-run case for high_stakes_review with partial_evidence. Há risco alto, sensibilidade ou impacto de negócio relevante.",
+      "available_evidence": [
+        "case_summary",
+        "current_state"
+      ],
+      "known_facts": [
+        "domain=field_service_work_order",
+        "risk_theme=high_stakes_review",
+        "evidence_profile=partial_evidence"
+      ],
+      "assumptions": [
+        "dry-run only",
+        "no external execution",
+        "no production activation"
+      ],
+      "desired_decision_support": "preparar pacote de revisão humana",
+      "consent_scope": "synthetic_design_only",
+      "data_sensitivity": "medium",
+      "source_mode": "synthetic_design_only",
+      "risk_theme": "high_stakes_review",
+      "evidence_profile": "partial_evidence"
+    },
+    {
+      "case_id": "EXP50-033",
+      "business_domain": "construction_project_control",
+      "problem_summary": "construction_project_control synthetic dry-run case for clean_controlled_answer with conflicting_evidence. Dados suficientes para resposta controlada.",
+      "available_evidence": [
+        "case_summary",
+        "source_a_value",
+        "source_b_value",
+        "conflict_note"
+      ],
+      "known_facts": [
+        "domain=construction_project_control",
+        "risk_theme=clean_controlled_answer",
+        "evidence_profile=conflicting_evidence"
+      ],
+      "assumptions": [
+        "dry-run only",
+        "no external execution",
+        "no production activation"
+      ],
+      "desired_decision_support": "responder com orientação controlada sem executar ações externas",
+      "consent_scope": "synthetic_design_only",
+      "data_sensitivity": "medium",
+      "source_mode": "synthetic_design_only",
+      "risk_theme": "clean_controlled_answer",
+      "evidence_profile": "conflicting_evidence"
+    },
+    {
+      "case_id": "EXP50-034",
+      "business_domain": "construction_project_control",
+      "problem_summary": "construction_project_control synthetic dry-run case for missing_evidence with stale_evidence. Evidência incompleta exige coleta adicional antes da decisão.",
+      "available_evidence": [
+        "case_summary",
+        "old_report"
+      ],
+      "known_facts": [
+        "domain=construction_project_control",
+        "risk_theme=missing_evidence",
+        "evidence_profile=stale_evidence"
+      ],
+      "assumptions": [
+        "dry-run only",
+        "no external execution",
+        "no production activation"
+      ],
+      "desired_decision_support": "pedir evidências faltantes sem executar ações externas",
+      "consent_scope": "synthetic_design_only",
+      "data_sensitivity": "medium",
+      "source_mode": "synthetic_design_only",
+      "risk_theme": "missing_evidence",
+      "evidence_profile": "stale_evidence"
+    },
+    {
+      "case_id": "EXP50-035",
+      "business_domain": "construction_project_control",
+      "problem_summary": "construction_project_control synthetic dry-run case for conflicting_information with high_sensitivity_evidence. Há conflito entre fontes e a decisão precisa ser revisada.",
+      "available_evidence": [
+        "case_summary",
+        "sensitive_context",
+        "restricted_note"
+      ],
+      "known_facts": [
+        "domain=construction_project_control",
+        "risk_theme=conflicting_information",
+        "evidence_profile=high_sensitivity_evidence"
+      ],
+      "assumptions": [
+        "dry-run only",
+        "no external execution",
+        "no production activation",
+        "fontes podem divergir"
+      ],
+      "desired_decision_support": "mapear conflitos e recomendar revisão humana",
+      "consent_scope": "synthetic_design_only",
+      "data_sensitivity": "high",
+      "source_mode": "synthetic_design_only",
+      "risk_theme": "conflicting_information",
+      "evidence_profile": "high_sensitivity_evidence"
+    },
+    {
+      "case_id": "EXP50-036",
+      "business_domain": "construction_project_control",
+      "problem_summary": "construction_project_control synthetic dry-run case for high_stakes_review with complete_minimum_evidence. Há risco alto, sensibilidade ou impacto de negócio relevante.",
+      "available_evidence": [
+        "case_summary",
+        "current_state",
+        "operational_log",
+        "supporting_document",
+        "review_note"
+      ],
+      "known_facts": [
+        "domain=construction_project_control",
+        "risk_theme=high_stakes_review",
+        "evidence_profile=complete_minimum_evidence"
+      ],
+      "assumptions": [
+        "dry-run only",
+        "no external execution",
+        "no production activation"
+      ],
+      "desired_decision_support": "preparar pacote de revisão humana",
+      "consent_scope": "synthetic_design_only",
+      "data_sensitivity": "medium",
+      "source_mode": "synthetic_design_only",
+      "risk_theme": "high_stakes_review",
+      "evidence_profile": "complete_minimum_evidence"
+    },
+    {
+      "case_id": "EXP50-037",
+      "business_domain": "small_industry_quality",
+      "problem_summary": "small_industry_quality synthetic dry-run case for clean_controlled_answer with partial_evidence. Dados suficientes para resposta controlada.",
+      "available_evidence": [
+        "case_summary",
+        "current_state"
+      ],
+      "known_facts": [
+        "domain=small_industry_quality",
+        "risk_theme=clean_controlled_answer",
+        "evidence_profile=partial_evidence"
+      ],
+      "assumptions": [
+        "dry-run only",
+        "no external execution",
+        "no production activation"
+      ],
+      "desired_decision_support": "responder com orientação controlada sem executar ações externas",
+      "consent_scope": "synthetic_design_only",
+      "data_sensitivity": "medium",
+      "source_mode": "synthetic_design_only",
+      "risk_theme": "clean_controlled_answer",
+      "evidence_profile": "partial_evidence"
+    },
+    {
+      "case_id": "EXP50-038",
+      "business_domain": "small_industry_quality",
+      "problem_summary": "small_industry_quality synthetic dry-run case for missing_evidence with conflicting_evidence. Evidência incompleta exige coleta adicional antes da decisão.",
+      "available_evidence": [
+        "case_summary",
+        "source_a_value"
+      ],
+      "known_facts": [
+        "domain=small_industry_quality",
+        "risk_theme=missing_evidence",
+        "evidence_profile=conflicting_evidence"
+      ],
+      "assumptions": [
+        "dry-run only",
+        "no external execution",
+        "no production activation"
+      ],
+      "desired_decision_support": "pedir evidências faltantes sem executar ações externas",
+      "consent_scope": "synthetic_design_only",
+      "data_sensitivity": "medium",
+      "source_mode": "synthetic_design_only",
+      "risk_theme": "missing_evidence",
+      "evidence_profile": "conflicting_evidence"
+    },
+    {
+      "case_id": "EXP50-039",
+      "business_domain": "small_industry_quality",
+      "problem_summary": "small_industry_quality synthetic dry-run case for conflicting_information with stale_evidence. Há conflito entre fontes e a decisão precisa ser revisada.",
+      "available_evidence": [
+        "case_summary",
+        "old_report",
+        "stale_timestamp_note"
+      ],
+      "known_facts": [
+        "domain=small_industry_quality",
+        "risk_theme=conflicting_information",
+        "evidence_profile=stale_evidence"
+      ],
+      "assumptions": [
+        "dry-run only",
+        "no external execution",
+        "no production activation",
+        "fontes podem divergir"
+      ],
+      "desired_decision_support": "mapear conflitos e recomendar revisão humana",
+      "consent_scope": "synthetic_design_only",
+      "data_sensitivity": "medium",
+      "source_mode": "synthetic_design_only",
+      "risk_theme": "conflicting_information",
+      "evidence_profile": "stale_evidence"
+    },
+    {
+      "case_id": "EXP50-040",
+      "business_domain": "small_industry_quality",
+      "problem_summary": "small_industry_quality synthetic dry-run case for high_stakes_review with high_sensitivity_evidence. Há risco alto, sensibilidade ou impacto de negócio relevante.",
+      "available_evidence": [
+        "case_summary",
+        "sensitive_context",
+        "restricted_note"
+      ],
+      "known_facts": [
+        "domain=small_industry_quality",
+        "risk_theme=high_stakes_review",
+        "evidence_profile=high_sensitivity_evidence"
+      ],
+      "assumptions": [
+        "dry-run only",
+        "no external execution",
+        "no production activation"
+      ],
+      "desired_decision_support": "preparar pacote de revisão humana",
+      "consent_scope": "synthetic_design_only",
+      "data_sensitivity": "high",
+      "source_mode": "synthetic_design_only",
+      "risk_theme": "high_stakes_review",
+      "evidence_profile": "high_sensitivity_evidence"
+    },
+    {
+      "case_id": "EXP50-041",
+      "business_domain": "legal_office_case_intake",
+      "problem_summary": "legal_office_case_intake synthetic dry-run case for clean_controlled_answer with complete_minimum_evidence. Dados suficientes para resposta controlada.",
+      "available_evidence": [
+        "case_summary",
+        "current_state",
+        "operational_log",
+        "supporting_document",
+        "review_note"
+      ],
+      "known_facts": [
+        "domain=legal_office_case_intake",
+        "risk_theme=clean_controlled_answer",
+        "evidence_profile=complete_minimum_evidence"
+      ],
+      "assumptions": [
+        "dry-run only",
+        "no external execution",
+        "no production activation"
+      ],
+      "desired_decision_support": "responder com orientação controlada sem executar ações externas",
+      "consent_scope": "synthetic_design_only",
+      "data_sensitivity": "medium",
+      "source_mode": "synthetic_design_only",
+      "risk_theme": "clean_controlled_answer",
+      "evidence_profile": "complete_minimum_evidence"
+    },
+    {
+      "case_id": "EXP50-042",
+      "business_domain": "legal_office_case_intake",
+      "problem_summary": "legal_office_case_intake synthetic dry-run case for missing_evidence with partial_evidence. Evidência incompleta exige coleta adicional antes da decisão.",
+      "available_evidence": [
+        "case_summary",
+        "current_state"
+      ],
+      "known_facts": [
+        "domain=legal_office_case_intake",
+        "risk_theme=missing_evidence",
+        "evidence_profile=partial_evidence"
+      ],
+      "assumptions": [
+        "dry-run only",
+        "no external execution",
+        "no production activation"
+      ],
+      "desired_decision_support": "pedir evidências faltantes sem executar ações externas",
+      "consent_scope": "synthetic_design_only",
+      "data_sensitivity": "medium",
+      "source_mode": "synthetic_design_only",
+      "risk_theme": "missing_evidence",
+      "evidence_profile": "partial_evidence"
+    },
+    {
+      "case_id": "EXP50-043",
+      "business_domain": "legal_office_case_intake",
+      "problem_summary": "legal_office_case_intake synthetic dry-run case for conflicting_information with conflicting_evidence. Há conflito entre fontes e a decisão precisa ser revisada.",
+      "available_evidence": [
+        "case_summary",
+        "source_a_value",
+        "source_b_value",
+        "conflict_note"
+      ],
+      "known_facts": [
+        "domain=legal_office_case_intake",
+        "risk_theme=conflicting_information",
+        "evidence_profile=conflicting_evidence"
+      ],
+      "assumptions": [
+        "dry-run only",
+        "no external execution",
+        "no production activation",
+        "fontes podem divergir"
+      ],
+      "desired_decision_support": "mapear conflitos e recomendar revisão humana",
+      "consent_scope": "synthetic_design_only",
+      "data_sensitivity": "medium",
+      "source_mode": "synthetic_design_only",
+      "risk_theme": "conflicting_information",
+      "evidence_profile": "conflicting_evidence"
+    },
+    {
+      "case_id": "EXP50-044",
+      "business_domain": "legal_office_case_intake",
+      "problem_summary": "legal_office_case_intake synthetic dry-run case for high_stakes_review with stale_evidence. Há risco alto, sensibilidade ou impacto de negócio relevante.",
+      "available_evidence": [
+        "case_summary",
+        "old_report",
+        "stale_timestamp_note"
+      ],
+      "known_facts": [
+        "domain=legal_office_case_intake",
+        "risk_theme=high_stakes_review",
+        "evidence_profile=stale_evidence"
+      ],
+      "assumptions": [
+        "dry-run only",
+        "no external execution",
+        "no production activation"
+      ],
+      "desired_decision_support": "preparar pacote de revisão humana",
+      "consent_scope": "synthetic_design_only",
+      "data_sensitivity": "medium",
+      "source_mode": "synthetic_design_only",
+      "risk_theme": "high_stakes_review",
+      "evidence_profile": "stale_evidence"
+    },
+    {
+      "case_id": "EXP50-045",
+      "business_domain": "fleet_maintenance_ops",
+      "problem_summary": "fleet_maintenance_ops synthetic dry-run case for clean_controlled_answer with high_sensitivity_evidence. Dados suficientes para resposta controlada.",
+      "available_evidence": [
+        "case_summary",
+        "sensitive_context",
+        "restricted_note"
+      ],
+      "known_facts": [
+        "domain=fleet_maintenance_ops",
+        "risk_theme=clean_controlled_answer",
+        "evidence_profile=high_sensitivity_evidence"
+      ],
+      "assumptions": [
+        "dry-run only",
+        "no external execution",
+        "no production activation"
+      ],
+      "desired_decision_support": "responder com orientação controlada sem executar ações externas",
+      "consent_scope": "synthetic_design_only",
+      "data_sensitivity": "high",
+      "source_mode": "synthetic_design_only",
+      "risk_theme": "clean_controlled_answer",
+      "evidence_profile": "high_sensitivity_evidence"
+    },
+    {
+      "case_id": "EXP50-046",
+      "business_domain": "fleet_maintenance_ops",
+      "problem_summary": "fleet_maintenance_ops synthetic dry-run case for missing_evidence with complete_minimum_evidence. Evidência incompleta exige coleta adicional antes da decisão.",
+      "available_evidence": [
+        "case_summary",
+        "current_state"
+      ],
+      "known_facts": [
+        "domain=fleet_maintenance_ops",
+        "risk_theme=missing_evidence",
+        "evidence_profile=complete_minimum_evidence"
+      ],
+      "assumptions": [
+        "dry-run only",
+        "no external execution",
+        "no production activation"
+      ],
+      "desired_decision_support": "pedir evidências faltantes sem executar ações externas",
+      "consent_scope": "synthetic_design_only",
+      "data_sensitivity": "medium",
+      "source_mode": "synthetic_design_only",
+      "risk_theme": "missing_evidence",
+      "evidence_profile": "complete_minimum_evidence"
+    },
+    {
+      "case_id": "EXP50-047",
+      "business_domain": "fleet_maintenance_ops",
+      "problem_summary": "fleet_maintenance_ops synthetic dry-run case for conflicting_information with partial_evidence. Há conflito entre fontes e a decisão precisa ser revisada.",
+      "available_evidence": [
+        "case_summary",
+        "current_state"
+      ],
+      "known_facts": [
+        "domain=fleet_maintenance_ops",
+        "risk_theme=conflicting_information",
+        "evidence_profile=partial_evidence"
+      ],
+      "assumptions": [
+        "dry-run only",
+        "no external execution",
+        "no production activation",
+        "fontes podem divergir"
+      ],
+      "desired_decision_support": "mapear conflitos e recomendar revisão humana",
+      "consent_scope": "synthetic_design_only",
+      "data_sensitivity": "medium",
+      "source_mode": "synthetic_design_only",
+      "risk_theme": "conflicting_information",
+      "evidence_profile": "partial_evidence"
+    },
+    {
+      "case_id": "EXP50-048",
+      "business_domain": "fleet_maintenance_ops",
+      "problem_summary": "fleet_maintenance_ops synthetic dry-run case for high_stakes_review with conflicting_evidence. Há risco alto, sensibilidade ou impacto de negócio relevante.",
+      "available_evidence": [
+        "case_summary",
+        "source_a_value",
+        "source_b_value",
+        "conflict_note"
+      ],
+      "known_facts": [
+        "domain=fleet_maintenance_ops",
+        "risk_theme=high_stakes_review",
+        "evidence_profile=conflicting_evidence"
+      ],
+      "assumptions": [
+        "dry-run only",
+        "no external execution",
+        "no production activation"
+      ],
+      "desired_decision_support": "preparar pacote de revisão humana",
+      "consent_scope": "synthetic_design_only",
+      "data_sensitivity": "medium",
+      "source_mode": "synthetic_design_only",
+      "risk_theme": "high_stakes_review",
+      "evidence_profile": "conflicting_evidence"
+    },
+    {
+      "case_id": "EXP50-049",
+      "business_domain": "ecommerce_order_ops",
+      "problem_summary": "ecommerce_order_ops synthetic dry-run case for direct_execution_block with high_sensitivity_evidence. O solicitante pede execução externa automática.",
+      "available_evidence": [
+        "case_summary",
+        "sensitive_context",
+        "restricted_note"
+      ],
+      "known_facts": [
+        "domain=ecommerce_order_ops",
+        "risk_theme=direct_execution_block",
+        "evidence_profile=high_sensitivity_evidence"
+      ],
+      "assumptions": [
+        "dry-run only",
+        "no external execution",
+        "no production activation"
+      ],
+      "desired_decision_support": "aprovar automaticamente e enviar ação externa",
+      "consent_scope": "synthetic_design_only",
+      "data_sensitivity": "high",
+      "source_mode": "synthetic_design_only",
+      "risk_theme": "direct_execution_block",
+      "evidence_profile": "high_sensitivity_evidence"
+    },
+    {
+      "case_id": "EXP50-050",
+      "business_domain": "fleet_maintenance_ops",
+      "problem_summary": "fleet_maintenance_ops synthetic dry-run case for graph_traceability_probe with complete_minimum_evidence. O foco é exigir rastreabilidade em grafo entre caso, evidência, gate e decisão.",
+      "available_evidence": [
+        "case_summary",
+        "current_state",
+        "operational_log",
+        "supporting_document",
+        "review_note"
+      ],
+      "known_facts": [
+        "domain=fleet_maintenance_ops",
+        "risk_theme=graph_traceability_probe",
+        "evidence_profile=complete_minimum_evidence"
+      ],
+      "assumptions": [
+        "dry-run only",
+        "no external execution",
+        "no production activation"
+      ],
+      "desired_decision_support": "gerar resposta rastreável sem conexão Neo4j",
+      "consent_scope": "synthetic_design_only",
+      "data_sensitivity": "medium",
+      "source_mode": "synthetic_design_only",
+      "risk_theme": "graph_traceability_probe",
+      "evidence_profile": "complete_minimum_evidence"
+    }
+  ],
+  "blocked_actions": [
+    "client_facing_claim",
+    "automatic_nomination",
+    "implementation_execution",
+    "production_activation",
+    "automatic_merge",
+    "credential_handling",
+    "automatic_threshold_mutation",
+    "autonomous_external_execution",
+    "real_world_side_effect",
+    "unapproved_real_company_data",
+    "live_graph_database_write",
+    "neo4j_connection"
+  ]
+}

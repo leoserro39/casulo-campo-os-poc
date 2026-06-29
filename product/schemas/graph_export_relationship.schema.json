@@ -1,0 +1,12 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "graph_export_relationship.schema.json",
+  "type": "object",
+  "required": [
+    "id",
+    "type",
+    "from",
+    "to",
+    "properties"
+  ]
+}

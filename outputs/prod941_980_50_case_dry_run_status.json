@@ -1,0 +1,73 @@
+{
+  "status": "PASS",
+  "generated_at": "2026-06-29T16:44:14+00:00",
+  "phase": "Controlled 50-Case Dry-Run Simulation and Graph Export Stub",
+  "mode": "dry_run_only_no_execution",
+  "case_count": 50,
+  "gate_distribution": {
+    "ANSWER_ALLOWED": 19,
+    "HUMAN_REVIEW_REQUIRED": 30,
+    "UNSUPPORTED_BLOCKED": 1
+  },
+  "output_mode_distribution": {
+    "ANSWER": 19,
+    "BLOCKED": 1,
+    "HUMAN_REVIEW_PACKET": 30
+  },
+  "risk_band_distribution": {
+    "CRITICAL": 11,
+    "HIGH": 24,
+    "MEDIUM": 15
+  },
+  "domain_distribution": {
+    "accounting_tax_obligation": 4,
+    "clinic_billing_glosa": 4,
+    "clinic_scheduling": 4,
+    "construction_project_control": 4,
+    "contract_legal_review": 4,
+    "ecommerce_order_ops": 5,
+    "field_service_work_order": 4,
+    "fleet_maintenance_ops": 5,
+    "legal_office_case_intake": 4,
+    "restaurant_cashflow": 4,
+    "restaurant_inventory": 4,
+    "small_industry_quality": 4
+  },
+  "risk_theme_distribution": {
+    "clean_controlled_answer": 12,
+    "conflicting_information": 12,
+    "direct_execution_block": 1,
+    "graph_traceability_probe": 1,
+    "high_stakes_review": 12,
+    "missing_evidence": 12
+  },
+  "reasoning_mode_distribution": {
+    "FULL_REASONING_WITH_GROUNDING": 18,
+    "GUIDED_REASONING": 32
+  },
+  "min_adjusted_risk": 33.75,
+  "avg_adjusted_risk": 63.734,
+  "max_adjusted_risk": 100.0,
+  "min_live_delta_score": 0.2481,
+  "avg_live_delta_score": 0.5705,
+  "max_live_delta_score": 0.8225,
+  "external_execution_allowed": false,
+  "graph_write_allowed": false,
+  "neo4j_connection_allowed": false,
+  "automatic_threshold_mutation_allowed": false,
+  "auto_apply": false,
+  "blocked_actions": [
+    "client_facing_claim",
+    "automatic_nomination",
+    "implementation_execution",
+    "production_activation",
+    "automatic_merge",
+    "credential_handling",
+    "automatic_threshold_mutation",
+    "autonomous_external_execution",
+    "real_world_side_effect",
+    "unapproved_real_company_data",
+    "live_graph_database_write",
+    "neo4j_connection"
+  ]
+}

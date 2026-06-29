@@ -1,0 +1,42 @@
+{
+  "status": "PASS",
+  "auto_apply": false,
+  "automatic_threshold_mutation_allowed": false,
+  "recommendations": [
+    {
+      "id": "DRYRUN-CAL-001",
+      "target": "business_diagnostic_report",
+      "recommendation": "Generate executive-operational diagnostic report using 2-3 selected cases and consolidated telemetry.",
+      "auto_apply": false,
+      "requires_human_approval": true
+    },
+    {
+      "id": "DRYRUN-CAL-002",
+      "target": "graph_adapter_boundary",
+      "recommendation": "Review graph JSONL export shape before any Neo4j connector or live write is implemented.",
+      "auto_apply": false,
+      "requires_human_approval": true
+    },
+    {
+      "id": "DRYRUN-CAL-003",
+      "target": "pilot_policy",
+      "recommendation": "Keep all real pilot data anonymized and explicitly approved; no client-facing claims.",
+      "auto_apply": false,
+      "requires_human_approval": true
+    }
+  ],
+  "blocked_actions": [
+    "client_facing_claim",
+    "automatic_nomination",
+    "implementation_execution",
+    "production_activation",
+    "automatic_merge",
+    "credential_handling",
+    "automatic_threshold_mutation",
+    "autonomous_external_execution",
+    "real_world_side_effect",
+    "unapproved_real_company_data",
+    "live_graph_database_write",
+    "neo4j_connection"
+  ]
+}
