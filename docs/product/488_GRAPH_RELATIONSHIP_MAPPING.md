@@ -1,0 +1,3 @@
+# Graph Relationship Mapping
+
+Maps BELONGS_TO, HAS_EVIDENCE, TRIGGERS, CONTRIBUTES_TO, ALLOWS, RECEIVES and REQUIRES relationships.

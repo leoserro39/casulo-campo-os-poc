@@ -1,0 +1,4 @@
+{
+  "contract": "casulo.expansion_readiness.v0.1",
+  "purpose": "Decide readiness for controlled 50-case dry-run simulation and graph export stub."
+}

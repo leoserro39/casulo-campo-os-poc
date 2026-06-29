@@ -1,0 +1,18 @@
+{
+  "task": "PROD-901..940",
+  "status": "PASS",
+  "phase": "Controlled 50-Case Expansion Design and Graph Persistence Prep",
+  "endpoints": [
+    "/api/casulo/expansion-50/status",
+    "/api/casulo/expansion-50/candidate-pack",
+    "/api/casulo/expansion-50/gate-plan",
+    "/api/casulo/expansion-50/risk-plan",
+    "/api/casulo/expansion-50/graph-nodes",
+    "/api/casulo/expansion-50/graph-relationships",
+    "/api/casulo/expansion-50/graph-prep",
+    "/api/casulo/expansion-50/recommendations",
+    "/api/casulo/expansion-50/readiness",
+    "/api/casulo/expansion-50/audit"
+  ],
+  "next_recommended_bundle": "PROD-941 Controlled 50-Case Dry-Run Simulation and Graph Export Stub"
+}

@@ -1,0 +1,30 @@
+{
+  "contract": "casulo.graph_entity_mapping.v0.1",
+  "node_types": [
+    "Domain",
+    "Case",
+    "Evidence",
+    "Claim",
+    "RiskSignal",
+    "Gate",
+    "OutputMode",
+    "Feedback",
+    "HumanDecision",
+    "Recommendation",
+    "AuditEvent",
+    "ReadinessState"
+  ],
+  "relationship_types": [
+    "BELONGS_TO",
+    "HAS_EVIDENCE",
+    "SUPPORTS",
+    "TRIGGERS",
+    "CONTRIBUTES_TO",
+    "ALLOWS",
+    "PRODUCES",
+    "RECEIVES",
+    "CREATES",
+    "REQUIRES",
+    "AUDITS"
+  ]
+}

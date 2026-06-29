@@ -1,0 +1,65 @@
+{
+  "status": "PASS",
+  "generated_at": "2026-06-29T16:03:42+00:00",
+  "phase": "Controlled 50-Case Expansion Design and Graph Persistence Prep",
+  "mode": "design_only_not_execution",
+  "case_target": 50,
+  "case_count": 50,
+  "domain_count": 12,
+  "risk_theme_count": 6,
+  "domain_distribution": {
+    "accounting_tax_obligation": 4,
+    "clinic_billing_glosa": 4,
+    "clinic_scheduling": 4,
+    "construction_project_control": 4,
+    "contract_legal_review": 4,
+    "ecommerce_order_ops": 5,
+    "field_service_work_order": 4,
+    "fleet_maintenance_ops": 5,
+    "legal_office_case_intake": 4,
+    "restaurant_cashflow": 4,
+    "restaurant_inventory": 4,
+    "small_industry_quality": 4
+  },
+  "risk_theme_distribution": {
+    "clean_controlled_answer": 12,
+    "conflicting_information": 12,
+    "direct_execution_block": 1,
+    "graph_traceability_probe": 1,
+    "high_stakes_review": 12,
+    "missing_evidence": 12
+  },
+  "evidence_profile_distribution": {
+    "complete_minimum_evidence": 11,
+    "conflicting_evidence": 10,
+    "high_sensitivity_evidence": 10,
+    "partial_evidence": 10,
+    "stale_evidence": 9
+  },
+  "expected_gate_distribution": {
+    "ANSWER_OR_WARNING_ALLOWED": 12,
+    "EVIDENCE_REQUIRED": 12,
+    "GRAPH_TRACEABILITY_REQUIRED": 1,
+    "HUMAN_REVIEW_REQUIRED": 24,
+    "UNSUPPORTED_BLOCKED": 1
+  },
+  "execution_allowed": false,
+  "graph_write_allowed": false,
+  "neo4j_connection_allowed": false,
+  "automatic_threshold_mutation_allowed": false,
+  "auto_apply": false,
+  "blocked_actions": [
+    "client_facing_claim",
+    "automatic_nomination",
+    "implementation_execution",
+    "production_activation",
+    "automatic_merge",
+    "credential_handling",
+    "automatic_threshold_mutation",
+    "autonomous_external_execution",
+    "real_world_side_effect",
+    "unapproved_real_company_data",
+    "live_graph_database_write",
+    "neo4j_connection"
+  ]
+}

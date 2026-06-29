@@ -1,0 +1,123 @@
+{
+  "status": "PASS",
+  "node_mappings": [
+    {
+      "node_type": "Domain",
+      "source_file": "outputs/prod621_650_business_domain_matrix.json",
+      "key_fields": [
+        "domain_id",
+        "business_domain"
+      ],
+      "properties": [
+        "activation_state",
+        "sensitivity",
+        "minimum_evidence_profile",
+        "preflight_score"
+      ]
+    },
+    {
+      "node_type": "Case",
+      "source_file": "outputs/prod901_940_controlled_50_case_candidate_pack.json",
+      "key_fields": [
+        "case_id"
+      ],
+      "properties": [
+        "business_domain",
+        "risk_theme",
+        "evidence_profile",
+        "expected_review_focus",
+        "source_mode"
+      ]
+    },
+    {
+      "node_type": "Evidence",
+      "source_file": "outputs/prod901_940_controlled_50_case_candidate_pack.json",
+      "key_fields": [
+        "case_id",
+        "evidence_profile"
+      ],
+      "properties": [
+        "evidence_profile",
+        "expected_missingness",
+        "expected_conflict"
+      ]
+    },
+    {
+      "node_type": "RiskSignal",
+      "source_file": "outputs/prod901_940_expansion_risk_plan.json",
+      "key_fields": [
+        "case_id",
+        "risk_theme"
+      ],
+      "properties": [
+        "risk_theme",
+        "risk_probe",
+        "safety_intent"
+      ]
+    },
+    {
+      "node_type": "Gate",
+      "source_file": "outputs/prod901_940_gate_expectation_plan.json",
+      "key_fields": [
+        "case_id",
+        "expected_gate_family"
+      ],
+      "properties": [
+        "expected_gate_family",
+        "must_not_execute",
+        "review_required"
+      ]
+    },
+    {
+      "node_type": "OutputMode",
+      "source_file": "outputs/prod901_940_gate_expectation_plan.json",
+      "key_fields": [
+        "case_id",
+        "expected_output_mode_family"
+      ],
+      "properties": [
+        "expected_output_mode_family",
+        "allowed_output_scope"
+      ]
+    },
+    {
+      "node_type": "HumanDecision",
+      "source_file": "outputs/prod861_900_closed_decision_ledger.json",
+      "key_fields": [
+        "case_id",
+        "human_decision"
+      ],
+      "properties": [
+        "human_review_status",
+        "closure_bucket",
+        "false_allow_confirmed"
+      ]
+    },
+    {
+      "node_type": "ReadinessState",
+      "source_file": "outputs/prod861_900_closure_readiness.json",
+      "key_fields": [
+        "decision"
+      ],
+      "properties": [
+        "decision",
+        "ready_for",
+        "not_ready_for"
+      ]
+    }
+  ],
+  "blocked_actions": [
+    "client_facing_claim",
+    "automatic_nomination",
+    "implementation_execution",
+    "production_activation",
+    "automatic_merge",
+    "credential_handling",
+    "automatic_threshold_mutation",
+    "autonomous_external_execution",
+    "real_world_side_effect",
+    "unapproved_real_company_data",
+    "live_graph_database_write",
+    "neo4j_connection"
+  ]
+}

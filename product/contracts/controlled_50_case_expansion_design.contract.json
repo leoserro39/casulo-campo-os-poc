@@ -1,0 +1,20 @@
+{
+  "contract": "casulo.controlled_50_case_expansion_design.v0.1",
+  "purpose": "Design a controlled 50-case expansion pack without running execution or mutating thresholds.",
+  "mode": "design_only_not_execution",
+  "case_target": 50,
+  "blocked_actions": [
+    "client_facing_claim",
+    "automatic_nomination",
+    "implementation_execution",
+    "production_activation",
+    "automatic_merge",
+    "credential_handling",
+    "automatic_threshold_mutation",
+    "autonomous_external_execution",
+    "real_world_side_effect",
+    "unapproved_real_company_data",
+    "live_graph_database_write",
+    "neo4j_connection"
+  ]
+}

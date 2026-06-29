@@ -1,0 +1,11 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "graph_node_mapping.schema.json",
+  "type": "object",
+  "required": [
+    "node_type",
+    "source_file",
+    "key_fields",
+    "properties"
+  ]
+}

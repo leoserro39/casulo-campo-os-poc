@@ -1,0 +1,61 @@
+{
+  "status": "PASS",
+  "relationship_mappings": [
+    {
+      "relationship_type": "BELONGS_TO",
+      "from_node": "Case",
+      "to_node": "Domain",
+      "source_logic": "Case.business_domain == Domain.business_domain"
+    },
+    {
+      "relationship_type": "HAS_EVIDENCE",
+      "from_node": "Case",
+      "to_node": "Evidence",
+      "source_logic": "Case.case_id == Evidence.case_id"
+    },
+    {
+      "relationship_type": "TRIGGERS",
+      "from_node": "Case",
+      "to_node": "RiskSignal",
+      "source_logic": "Case.risk_theme creates expected RiskSignal"
+    },
+    {
+      "relationship_type": "CONTRIBUTES_TO",
+      "from_node": "RiskSignal",
+      "to_node": "Gate",
+      "source_logic": "risk_theme maps to expected_gate_family"
+    },
+    {
+      "relationship_type": "ALLOWS",
+      "from_node": "Gate",
+      "to_node": "OutputMode",
+      "source_logic": "gate expectation maps to output mode expectation"
+    },
+    {
+      "relationship_type": "RECEIVES",
+      "from_node": "Case",
+      "to_node": "HumanDecision",
+      "source_logic": "previous 20-case board closure captured decisions"
+    },
+    {
+      "relationship_type": "REQUIRES",
+      "from_node": "Case",
+      "to_node": "ReadinessState",
+      "source_logic": "50-case design requires previous readiness state"
+    }
+  ],
+  "blocked_actions": [
+    "client_facing_claim",
+    "automatic_nomination",
+    "implementation_execution",
+    "production_activation",
+    "automatic_merge",
+    "credential_handling",
+    "automatic_threshold_mutation",
+    "autonomous_external_execution",
+    "real_world_side_effect",
+    "unapproved_real_company_data",
+    "live_graph_database_write",
+    "neo4j_connection"
+  ]
+}

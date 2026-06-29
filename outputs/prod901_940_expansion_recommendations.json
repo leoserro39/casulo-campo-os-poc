@@ -1,0 +1,42 @@
+{
+  "status": "PASS",
+  "auto_apply": false,
+  "automatic_threshold_mutation_allowed": false,
+  "recommendations": [
+    {
+      "id": "EXP50-CAL-001",
+      "target": "50_case_dry_run",
+      "recommendation": "Next package may run a controlled dry-run simulation over this 50-case design, still without production execution.",
+      "auto_apply": false,
+      "requires_human_approval": true
+    },
+    {
+      "id": "EXP50-CAL-002",
+      "target": "graph_export_stub",
+      "recommendation": "Prepare JSONL/CSV graph export stubs before connecting to Neo4j; no live database write yet.",
+      "auto_apply": false,
+      "requires_human_approval": true
+    },
+    {
+      "id": "EXP50-CAL-003",
+      "target": "real_pilot_policy",
+      "recommendation": "Any real pilot must replace synthetic cases and synthetic decisions with explicitly approved anonymized data and reviewer files.",
+      "auto_apply": false,
+      "requires_human_approval": true
+    }
+  ],
+  "blocked_actions": [
+    "client_facing_claim",
+    "automatic_nomination",
+    "implementation_execution",
+    "production_activation",
+    "automatic_merge",
+    "credential_handling",
+    "automatic_threshold_mutation",
+    "autonomous_external_execution",
+    "real_world_side_effect",
+    "unapproved_real_company_data",
+    "live_graph_database_write",
+    "neo4j_connection"
+  ]
+}

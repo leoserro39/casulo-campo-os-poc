@@ -1,0 +1,13 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "controlled_50_case_candidate.schema.json",
+  "type": "object",
+  "required": [
+    "case_id",
+    "business_domain",
+    "source_mode",
+    "risk_theme",
+    "evidence_profile",
+    "expected_review_focus"
+  ]
+}

@@ -351,4 +351,20 @@ ENDPOINT_GROUPS = [
         ],
     },
 
+    {
+        "group": "controlled_50_case_expansion_graph_prep",
+        "routes": [
+            {"path": "/api/casulo/expansion-50/status", "file": "outputs/prod901_940_controlled_50_case_expansion_status.json", "key": "status"},
+            {"path": "/api/casulo/expansion-50/candidate-pack", "file": "outputs/prod901_940_controlled_50_case_candidate_pack.json", "key": "candidate_pack"},
+            {"path": "/api/casulo/expansion-50/gate-plan", "file": "outputs/prod901_940_gate_expectation_plan.json", "key": "gate_plan"},
+            {"path": "/api/casulo/expansion-50/risk-plan", "file": "outputs/prod901_940_expansion_risk_plan.json", "key": "risk_plan"},
+            {"path": "/api/casulo/expansion-50/graph-nodes", "file": "outputs/prod901_940_graph_node_mapping.json", "key": "graph_nodes"},
+            {"path": "/api/casulo/expansion-50/graph-relationships", "file": "outputs/prod901_940_graph_relationship_mapping.json", "key": "graph_relationships"},
+            {"path": "/api/casulo/expansion-50/graph-prep", "file": "outputs/prod901_940_graph_persistence_prep.json", "key": "graph_prep"},
+            {"path": "/api/casulo/expansion-50/recommendations", "file": "outputs/prod901_940_expansion_recommendations.json", "key": "recommendations"},
+            {"path": "/api/casulo/expansion-50/readiness", "file": "outputs/prod901_940_expansion_readiness.json", "key": "readiness"},
+            {"path": "/api/casulo/expansion-50/audit", "file": "outputs/prod901_940_expansion_audit_report.json", "key": "audit"},
+        ],
+    },
+
 ]
