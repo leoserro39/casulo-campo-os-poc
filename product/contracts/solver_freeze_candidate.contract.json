@@ -1,0 +1,4 @@
+{
+  "contract": "casulo.solver_freeze_candidate.v0.1",
+  "purpose": "Freeze the calibration baseline after stress tests and avoid architecture churn before controlled real-case use."
+}

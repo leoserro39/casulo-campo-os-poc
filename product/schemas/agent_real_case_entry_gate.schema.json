@@ -1,0 +1,11 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "agent_real_case_entry_gate.schema.json",
+  "type": "object",
+  "required": [
+    "status",
+    "entry_conditions",
+    "not_ready_for",
+    "blocked_actions"
+  ]
+}

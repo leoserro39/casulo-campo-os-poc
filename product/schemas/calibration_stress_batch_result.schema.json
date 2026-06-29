@@ -1,0 +1,12 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "calibration_stress_batch_result.schema.json",
+  "type": "object",
+  "required": [
+    "status",
+    "case_count",
+    "workload_count",
+    "metrics",
+    "stress_profile_metrics"
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "status": "PASS",
+  "decision": "READY_FOR_AGENT_SOLVER_STUB_NOT_REAL_PRODUCTION",
+  "entry_conditions": [
+    "Use synthetic or explicitly approved real cases only.",
+    "Keep evidence trace, delta trace and gate trace mandatory.",
+    "No external action execution by default.",
+    "No client-facing benchmark claims from synthetic calibration.",
+    "Human review remains required for high-stakes, conflicting, unsupported or stale evidence cases."
+  ],
+  "not_ready_for": [
+    "production activation",
+    "autonomous real-world execution",
+    "confidential data ingestion without policy",
+    "external client claims"
+  ],
+  "blocked_actions": [
+    "client_facing_claim",
+    "automatic_nomination",
+    "implementation_execution",
+    "production_activation",
+    "automatic_merge",
+    "credential_handling"
+  ]
+}

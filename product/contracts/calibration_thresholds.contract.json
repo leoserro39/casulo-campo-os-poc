@@ -1,0 +1,4 @@
+{
+  "contract": "casulo.calibration_thresholds.v0.1",
+  "purpose": "Produce provisional thresholds for solver API gating, escalation and review before real-case use."
+}

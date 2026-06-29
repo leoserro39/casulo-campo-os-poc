@@ -1,0 +1,4 @@
+{
+  "contract": "casulo.agent_real_case_entry_gate.v0.1",
+  "purpose": "Define entry conditions before the agent can receive real user/business cases."
+}

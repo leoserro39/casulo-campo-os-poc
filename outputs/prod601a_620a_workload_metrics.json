@@ -1,0 +1,257 @@
+{
+  "status": "PASS",
+  "workload_metrics": [
+    {
+      "case_count": 100,
+      "avg_direct_risk": 75.0,
+      "avg_cubo_risk": 50.0,
+      "avg_risk_reduction": 25.0,
+      "avg_relative_risk_reduction_pct": 34.49,
+      "avg_delta_control": 84.5,
+      "avg_evidence_coverage": 66.0,
+      "avg_useful_output_rate": 81.1,
+      "anomaly_count": 60,
+      "anomaly_rate_pct": 60.0,
+      "gate_distribution": {
+        "PARSER_OUTPUT_ALLOWED": 0,
+        "ANSWER_ALLOWED": 70,
+        "TASK_PROPOSAL_ALLOWED": 0,
+        "EVIDENCE_REQUIRED": 0,
+        "HUMAN_REVIEW_REQUIRED": 20,
+        "UNSUPPORTED_BLOCKED": 10
+      },
+      "workload_family": "classification"
+    },
+    {
+      "case_count": 100,
+      "avg_direct_risk": 88.5,
+      "avg_cubo_risk": 45.5,
+      "avg_risk_reduction": 43.0,
+      "avg_relative_risk_reduction_pct": 49.43,
+      "avg_delta_control": 84.5,
+      "avg_evidence_coverage": 80.0,
+      "avg_useful_output_rate": 81.1,
+      "anomaly_count": 80,
+      "anomaly_rate_pct": 80.0,
+      "gate_distribution": {
+        "PARSER_OUTPUT_ALLOWED": 0,
+        "ANSWER_ALLOWED": 30,
+        "TASK_PROPOSAL_ALLOWED": 0,
+        "EVIDENCE_REQUIRED": 0,
+        "HUMAN_REVIEW_REQUIRED": 60,
+        "UNSUPPORTED_BLOCKED": 10
+      },
+      "workload_family": "contract_checklist"
+    },
+    {
+      "case_count": 100,
+      "avg_direct_risk": 88.5,
+      "avg_cubo_risk": 45.5,
+      "avg_risk_reduction": 43.0,
+      "avg_relative_risk_reduction_pct": 49.43,
+      "avg_delta_control": 84.5,
+      "avg_evidence_coverage": 80.0,
+      "avg_useful_output_rate": 81.1,
+      "anomaly_count": 80,
+      "anomaly_rate_pct": 80.0,
+      "gate_distribution": {
+        "PARSER_OUTPUT_ALLOWED": 0,
+        "ANSWER_ALLOWED": 30,
+        "TASK_PROPOSAL_ALLOWED": 0,
+        "EVIDENCE_REQUIRED": 0,
+        "HUMAN_REVIEW_REQUIRED": 60,
+        "UNSUPPORTED_BLOCKED": 10
+      },
+      "workload_family": "delta_detection"
+    },
+    {
+      "case_count": 100,
+      "avg_direct_risk": 82.2,
+      "avg_cubo_risk": 36.3,
+      "avg_risk_reduction": 45.9,
+      "avg_relative_risk_reduction_pct": 57.34,
+      "avg_delta_control": 89.5,
+      "avg_evidence_coverage": 80.0,
+      "avg_useful_output_rate": 81.5,
+      "anomaly_count": 40,
+      "anomaly_rate_pct": 40.0,
+      "gate_distribution": {
+        "PARSER_OUTPUT_ALLOWED": 70,
+        "ANSWER_ALLOWED": 0,
+        "TASK_PROPOSAL_ALLOWED": 0,
+        "EVIDENCE_REQUIRED": 0,
+        "HUMAN_REVIEW_REQUIRED": 20,
+        "UNSUPPORTED_BLOCKED": 10
+      },
+      "workload_family": "document_field_extraction"
+    },
+    {
+      "case_count": 100,
+      "avg_direct_risk": 75.0,
+      "avg_cubo_risk": 50.0,
+      "avg_risk_reduction": 25.0,
+      "avg_relative_risk_reduction_pct": 34.49,
+      "avg_delta_control": 84.5,
+      "avg_evidence_coverage": 66.0,
+      "avg_useful_output_rate": 81.1,
+      "anomaly_count": 60,
+      "anomaly_rate_pct": 60.0,
+      "gate_distribution": {
+        "PARSER_OUTPUT_ALLOWED": 0,
+        "ANSWER_ALLOWED": 70,
+        "TASK_PROPOSAL_ALLOWED": 0,
+        "EVIDENCE_REQUIRED": 0,
+        "HUMAN_REVIEW_REQUIRED": 20,
+        "UNSUPPORTED_BLOCKED": 10
+      },
+      "workload_family": "email_triage"
+    },
+    {
+      "case_count": 100,
+      "avg_direct_risk": 88.5,
+      "avg_cubo_risk": 45.5,
+      "avg_risk_reduction": 43.0,
+      "avg_relative_risk_reduction_pct": 49.43,
+      "avg_delta_control": 84.5,
+      "avg_evidence_coverage": 80.0,
+      "avg_useful_output_rate": 81.1,
+      "anomaly_count": 80,
+      "anomaly_rate_pct": 80.0,
+      "gate_distribution": {
+        "PARSER_OUTPUT_ALLOWED": 0,
+        "ANSWER_ALLOWED": 30,
+        "TASK_PROPOSAL_ALLOWED": 0,
+        "EVIDENCE_REQUIRED": 0,
+        "HUMAN_REVIEW_REQUIRED": 60,
+        "UNSUPPORTED_BLOCKED": 10
+      },
+      "workload_family": "evidence_gap_detection"
+    },
+    {
+      "case_count": 100,
+      "avg_direct_risk": 82.2,
+      "avg_cubo_risk": 36.3,
+      "avg_risk_reduction": 45.9,
+      "avg_relative_risk_reduction_pct": 57.34,
+      "avg_delta_control": 89.5,
+      "avg_evidence_coverage": 80.0,
+      "avg_useful_output_rate": 81.5,
+      "anomaly_count": 40,
+      "anomaly_rate_pct": 40.0,
+      "gate_distribution": {
+        "PARSER_OUTPUT_ALLOWED": 70,
+        "ANSWER_ALLOWED": 0,
+        "TASK_PROPOSAL_ALLOWED": 0,
+        "EVIDENCE_REQUIRED": 0,
+        "HUMAN_REVIEW_REQUIRED": 20,
+        "UNSUPPORTED_BLOCKED": 10
+      },
+      "workload_family": "parser"
+    },
+    {
+      "case_count": 100,
+      "avg_direct_risk": 88.5,
+      "avg_cubo_risk": 45.5,
+      "avg_risk_reduction": 43.0,
+      "avg_relative_risk_reduction_pct": 49.43,
+      "avg_delta_control": 84.5,
+      "avg_evidence_coverage": 80.0,
+      "avg_useful_output_rate": 81.1,
+      "anomaly_count": 80,
+      "anomaly_rate_pct": 80.0,
+      "gate_distribution": {
+        "PARSER_OUTPUT_ALLOWED": 0,
+        "ANSWER_ALLOWED": 30,
+        "TASK_PROPOSAL_ALLOWED": 0,
+        "EVIDENCE_REQUIRED": 0,
+        "HUMAN_REVIEW_REQUIRED": 60,
+        "UNSUPPORTED_BLOCKED": 10
+      },
+      "workload_family": "policy_rule_extraction"
+    },
+    {
+      "case_count": 100,
+      "avg_direct_risk": 82.2,
+      "avg_cubo_risk": 36.3,
+      "avg_risk_reduction": 45.9,
+      "avg_relative_risk_reduction_pct": 57.34,
+      "avg_delta_control": 89.5,
+      "avg_evidence_coverage": 80.0,
+      "avg_useful_output_rate": 81.5,
+      "anomaly_count": 40,
+      "anomaly_rate_pct": 40.0,
+      "gate_distribution": {
+        "PARSER_OUTPUT_ALLOWED": 70,
+        "ANSWER_ALLOWED": 0,
+        "TASK_PROPOSAL_ALLOWED": 0,
+        "EVIDENCE_REQUIRED": 0,
+        "HUMAN_REVIEW_REQUIRED": 20,
+        "UNSUPPORTED_BLOCKED": 10
+      },
+      "workload_family": "receipt_invoice_extraction"
+    },
+    {
+      "case_count": 100,
+      "avg_direct_risk": 75.0,
+      "avg_cubo_risk": 50.0,
+      "avg_risk_reduction": 25.0,
+      "avg_relative_risk_reduction_pct": 34.49,
+      "avg_delta_control": 84.5,
+      "avg_evidence_coverage": 66.0,
+      "avg_useful_output_rate": 81.1,
+      "anomaly_count": 60,
+      "anomaly_rate_pct": 60.0,
+      "gate_distribution": {
+        "PARSER_OUTPUT_ALLOWED": 0,
+        "ANSWER_ALLOWED": 70,
+        "TASK_PROPOSAL_ALLOWED": 0,
+        "EVIDENCE_REQUIRED": 0,
+        "HUMAN_REVIEW_REQUIRED": 20,
+        "UNSUPPORTED_BLOCKED": 10
+      },
+      "workload_family": "summary"
+    },
+    {
+      "case_count": 100,
+      "avg_direct_risk": 75.0,
+      "avg_cubo_risk": 50.0,
+      "avg_risk_reduction": 25.0,
+      "avg_relative_risk_reduction_pct": 34.49,
+      "avg_delta_control": 84.5,
+      "avg_evidence_coverage": 66.0,
+      "avg_useful_output_rate": 81.1,
+      "anomaly_count": 60,
+      "anomaly_rate_pct": 60.0,
+      "gate_distribution": {
+        "PARSER_OUTPUT_ALLOWED": 0,
+        "ANSWER_ALLOWED": 0,
+        "TASK_PROPOSAL_ALLOWED": 70,
+        "EVIDENCE_REQUIRED": 0,
+        "HUMAN_REVIEW_REQUIRED": 20,
+        "UNSUPPORTED_BLOCKED": 10
+      },
+      "workload_family": "task_generation"
+    },
+    {
+      "case_count": 100,
+      "avg_direct_risk": 88.5,
+      "avg_cubo_risk": 45.5,
+      "avg_risk_reduction": 43.0,
+      "avg_relative_risk_reduction_pct": 49.43,
+      "avg_delta_control": 84.5,
+      "avg_evidence_coverage": 80.0,
+      "avg_useful_output_rate": 81.1,
+      "anomaly_count": 80,
+      "anomaly_rate_pct": 80.0,
+      "gate_distribution": {
+        "PARSER_OUTPUT_ALLOWED": 0,
+        "ANSWER_ALLOWED": 30,
+        "TASK_PROPOSAL_ALLOWED": 0,
+        "EVIDENCE_REQUIRED": 0,
+        "HUMAN_REVIEW_REQUIRED": 60,
+        "UNSUPPORTED_BLOCKED": 10
+      },
+      "workload_family": "technical_review"
+    }
+  ]
+}

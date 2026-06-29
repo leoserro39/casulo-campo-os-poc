@@ -1,0 +1,4 @@
+{
+  "contract": "casulo.stress_case_generator.v0.1",
+  "purpose": "Generate varied synthetic cases across ambiguity, contradiction, missing evidence, stale source, noisy input and multi-record extraction patterns."
+}

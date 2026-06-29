@@ -1,0 +1,16 @@
+{
+  "task": "PROD-601A..620A",
+  "status": "PASS",
+  "phase": "Advanced Common Workload Calibration Stress Lab",
+  "endpoints": [
+    "/api/casulo/common-workload-calibration/fixtures",
+    "/api/casulo/common-workload-calibration/batch-result",
+    "/api/casulo/common-workload-calibration/metrics",
+    "/api/casulo/common-workload-calibration/workload-metrics",
+    "/api/casulo/common-workload-calibration/stress-profile-metrics",
+    "/api/casulo/common-workload-calibration/thresholds",
+    "/api/casulo/common-workload-calibration/agent-entry-gate",
+    "/api/casulo/common-workload-calibration/audit"
+  ],
+  "next_recommended_bundle": "Solver Agent Controlled Stub or PROD-621..650 Business Domain Mass Test Lab"
+}

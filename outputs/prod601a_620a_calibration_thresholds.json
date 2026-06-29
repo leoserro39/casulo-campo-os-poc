@@ -1,0 +1,26 @@
+{
+  "status": "PASS",
+  "thresholds": {
+    "solver_stub_allowed_if_avg_cubo_risk_lte": 35,
+    "human_review_required_if_cubo_risk_gte": 50,
+    "evidence_required_if_evidence_coverage_lt": 70,
+    "attention_if_anomaly_rate_pct_gt": 35,
+    "freeze_candidate_if_delta_control_gte": 84,
+    "freeze_candidate_if_relative_risk_reduction_pct_gte": 45
+  },
+  "observed": {
+    "avg_cubo_risk": 44.7,
+    "avg_delta_control": 85.75,
+    "avg_relative_risk_reduction_pct": 46.43,
+    "anomaly_rate_pct": 63.33
+  },
+  "freeze_recommendation": "REVIEW_BEFORE_FREEZE",
+  "blocked_actions": [
+    "client_facing_claim",
+    "automatic_nomination",
+    "implementation_execution",
+    "production_activation",
+    "automatic_merge",
+    "credential_handling"
+  ]
+}

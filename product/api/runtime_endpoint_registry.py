@@ -151,4 +151,18 @@ ENDPOINT_GROUPS = [
         ],
     },
 
+    {
+        "group": "common_workload_calibration_stress",
+        "routes": [
+            {"path": "/api/casulo/common-workload-calibration/fixtures", "file": "outputs/prod601a_620a_calibration_stress_fixture_pack.json", "key": "fixture_pack"},
+            {"path": "/api/casulo/common-workload-calibration/batch-result", "file": "outputs/prod601a_620a_calibration_stress_batch_result.json", "key": "batch_result"},
+            {"path": "/api/casulo/common-workload-calibration/metrics", "file": "outputs/prod601a_620a_calibration_metrics.json", "key": "metrics"},
+            {"path": "/api/casulo/common-workload-calibration/workload-metrics", "file": "outputs/prod601a_620a_workload_metrics.json", "key": "workload_metrics"},
+            {"path": "/api/casulo/common-workload-calibration/stress-profile-metrics", "file": "outputs/prod601a_620a_stress_profile_metrics.json", "key": "stress_profile_metrics"},
+            {"path": "/api/casulo/common-workload-calibration/thresholds", "file": "outputs/prod601a_620a_calibration_thresholds.json", "key": "thresholds"},
+            {"path": "/api/casulo/common-workload-calibration/agent-entry-gate", "file": "outputs/prod601a_620a_agent_real_case_entry_gate.json", "key": "agent_real_case_entry_gate"},
+            {"path": "/api/casulo/common-workload-calibration/audit", "file": "outputs/prod601a_620a_audit_report.json", "key": "audit"},
+        ],
+    },
+
 ]

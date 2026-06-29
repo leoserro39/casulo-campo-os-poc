@@ -1,0 +1,20 @@
+{
+  "case_count": 1200,
+  "avg_direct_risk": 82.42,
+  "avg_cubo_risk": 44.7,
+  "avg_risk_reduction": 37.73,
+  "avg_relative_risk_reduction_pct": 46.43,
+  "avg_delta_control": 85.75,
+  "avg_evidence_coverage": 75.33,
+  "avg_useful_output_rate": 81.2,
+  "anomaly_count": 760,
+  "anomaly_rate_pct": 63.33,
+  "gate_distribution": {
+    "PARSER_OUTPUT_ALLOWED": 210,
+    "ANSWER_ALLOWED": 360,
+    "TASK_PROPOSAL_ALLOWED": 70,
+    "EVIDENCE_REQUIRED": 0,
+    "HUMAN_REVIEW_REQUIRED": 440,
+    "UNSUPPORTED_BLOCKED": 120
+  }
+}
