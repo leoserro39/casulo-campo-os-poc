@@ -1,0 +1,5 @@
+{
+  "contract": "casulo.business_domain_lab_protocol.v0.1",
+  "purpose": "Define later mass tests for companies and business domains.",
+  "future_phase": "PROD-621..650"
+}

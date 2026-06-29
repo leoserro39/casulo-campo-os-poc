@@ -1,0 +1,76 @@
+{
+  "status": "PASS",
+  "surface": "solver_api_contract",
+  "planned_endpoints": [
+    {
+      "method": "POST",
+      "path": "/api/casulo/solver/input",
+      "purpose": "single user input routed through Cubo solver",
+      "implemented_now": false
+    },
+    {
+      "method": "POST",
+      "path": "/api/casulo/solver/batch",
+      "purpose": "batch/mass testing for common workloads",
+      "implemented_now": false
+    },
+    {
+      "method": "GET",
+      "path": "/api/casulo/solver/run/{run_id}",
+      "purpose": "run state",
+      "implemented_now": false
+    },
+    {
+      "method": "GET",
+      "path": "/api/casulo/solver/evidence/{run_id}",
+      "purpose": "evidence trace",
+      "implemented_now": false
+    },
+    {
+      "method": "GET",
+      "path": "/api/casulo/solver/gates/{run_id}",
+      "purpose": "gate decisions",
+      "implemented_now": false
+    },
+    {
+      "method": "GET",
+      "path": "/api/casulo/solver/report/{run_id}",
+      "purpose": "final report",
+      "implemented_now": false
+    }
+  ],
+  "input_policy": [
+    "Classify input before solving.",
+    "Route to parser/solver only after input class is identified.",
+    "Create candidate state, evidence trace, delta trace and gate trace.",
+    "Return answer, task, parser output, plan or safe block.",
+    "Do not execute external actions without explicit gate and human approval."
+  ],
+  "input_classes": [
+    "text",
+    "document",
+    "spreadsheet",
+    "email",
+    "business_case",
+    "technical_request",
+    "unknown"
+  ],
+  "solver_outputs": [
+    "parsed_fields",
+    "summary",
+    "classification",
+    "checklist",
+    "delta_report",
+    "evidence_gap_report",
+    "task_proposal",
+    "safe_block"
+  ],
+  "blocked_actions": [
+    "client_facing_claim",
+    "automatic_nomination",
+    "implementation_execution",
+    "production_activation",
+    "automatic_merge",
+    "credential_handling"
+  ]
+}

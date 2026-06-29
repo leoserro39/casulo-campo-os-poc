@@ -1,0 +1,29 @@
+{
+  "status": "PASS",
+  "input_classes": [
+    "text",
+    "document",
+    "spreadsheet",
+    "email",
+    "business_case",
+    "technical_request",
+    "unknown"
+  ],
+  "gate_outcomes": [
+    "ANSWER_ALLOWED",
+    "PARSER_OUTPUT_ALLOWED",
+    "TASK_PROPOSAL_ALLOWED",
+    "EVIDENCE_REQUIRED",
+    "HUMAN_REVIEW_REQUIRED",
+    "UNSUPPORTED_BLOCKED",
+    "EXTERNAL_ACTION_BLOCKED"
+  ],
+  "blocked_actions": [
+    "client_facing_claim",
+    "automatic_nomination",
+    "implementation_execution",
+    "production_activation",
+    "automatic_merge",
+    "credential_handling"
+  ]
+}

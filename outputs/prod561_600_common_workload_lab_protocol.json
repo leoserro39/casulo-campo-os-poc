@@ -1,0 +1,37 @@
+{
+  "status": "PASS",
+  "future_phase": "PROD-601..620 Common Workload Mass Test Lab",
+  "workload_families": [
+    "parser",
+    "document_field_extraction",
+    "email_triage",
+    "receipt_invoice_extraction",
+    "contract_checklist",
+    "policy_rule_extraction",
+    "summary",
+    "classification",
+    "technical_review",
+    "task_generation",
+    "delta_detection",
+    "evidence_gap_detection"
+  ],
+  "batch_policy": [
+    "Start with deterministic fixtures.",
+    "Compare direct response vs Cubo evidence-gated output.",
+    "Measure hallucination risk, missing evidence, delta control, gate correctness and useful output rate.",
+    "No client-facing claims from synthetic/mocked data."
+  ],
+  "minimum_batch_plan": {
+    "phase_1": "100 cases across routine workloads",
+    "phase_2": "500 cases after solver stub stabilizes",
+    "phase_3": "1000+ cases after metrics are stable"
+  },
+  "blocked_actions": [
+    "client_facing_claim",
+    "automatic_nomination",
+    "implementation_execution",
+    "production_activation",
+    "automatic_merge",
+    "credential_handling"
+  ]
+}

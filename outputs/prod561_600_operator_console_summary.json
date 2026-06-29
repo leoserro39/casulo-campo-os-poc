@@ -1,0 +1,35 @@
+{
+  "status": "PASS",
+  "surface": "operator_console",
+  "generated_at": "2026-06-29T00:34:19+00:00",
+  "readiness": "READY_FOR_SOLVER_API_STUB_AND_COMMON_WORKLOAD_LAB",
+  "runtime_surface": {
+    "endpoint_group_count": 10,
+    "endpoint_route_count": 54,
+    "missing_route_count": 0
+  },
+  "external_evidence": {
+    "provider_mode": "mock_only",
+    "network_call_performed": false,
+    "candidate_count": 3,
+    "committed_count": 1,
+    "human_review_count": 1,
+    "rejected_count": 1
+  },
+  "milestone_pending_evidence": {
+    "pending_real_manual_url_count": 2,
+    "valid_real_evidence_count": 0,
+    "pending_manual_creation_count": 2,
+    "synthetic_created_manually_ready_to_link_count": 1,
+    "real_evidence_required": true,
+    "real_evidence_status": "PENDING_REAL_MANUAL_URL"
+  },
+  "blocked_actions": [
+    "client_facing_claim",
+    "automatic_nomination",
+    "implementation_execution",
+    "production_activation",
+    "automatic_merge",
+    "credential_handling"
+  ]
+}

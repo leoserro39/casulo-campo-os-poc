@@ -1,0 +1,15 @@
+{
+  "task": "PROD-561..600",
+  "status": "PASS",
+  "phase": "Operator Console and Solver API Surface",
+  "endpoints": [
+    "/api/casulo/operator-console/summary",
+    "/api/casulo/operator-console/solver-api-surface",
+    "/api/casulo/operator-console/common-workload-lab",
+    "/api/casulo/operator-console/business-domain-lab",
+    "/api/casulo/operator-console/solver-safety-gate",
+    "/api/casulo/operator-console/readiness",
+    "/api/casulo/operator-console/audit"
+  ],
+  "next_recommended_bundle": "PROD-601..620 Common Workload Mass Test Lab"
+}

@@ -1,0 +1,11 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "solver_input_safety_gate.schema.json",
+  "type": "object",
+  "required": [
+    "status",
+    "input_classes",
+    "gate_outcomes",
+    "blocked_actions"
+  ]
+}

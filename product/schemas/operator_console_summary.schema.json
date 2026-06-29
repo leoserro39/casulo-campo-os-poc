@@ -1,0 +1,11 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "operator_console_summary.schema.json",
+  "type": "object",
+  "required": [
+    "status",
+    "surface",
+    "readiness",
+    "blocked_actions"
+  ]
+}

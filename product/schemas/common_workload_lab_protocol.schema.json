@@ -1,0 +1,11 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "common_workload_lab_protocol.schema.json",
+  "type": "object",
+  "required": [
+    "status",
+    "future_phase",
+    "workload_families",
+    "batch_policy"
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "solver_api_surface.schema.json",
+  "type": "object",
+  "required": [
+    "status",
+    "planned_endpoints",
+    "input_policy",
+    "blocked_actions"
+  ]
+}

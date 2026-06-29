@@ -126,4 +126,17 @@ ENDPOINT_GROUPS = [
         ],
     },
 
+    {
+        "group": "operator_console_solver_surface",
+        "routes": [
+            {"path": "/api/casulo/operator-console/summary", "file": "outputs/prod561_600_operator_console_summary.json", "key": "operator_console_summary"},
+            {"path": "/api/casulo/operator-console/solver-api-surface", "file": "outputs/prod561_600_solver_api_surface.json", "key": "solver_api_surface"},
+            {"path": "/api/casulo/operator-console/common-workload-lab", "file": "outputs/prod561_600_common_workload_lab_protocol.json", "key": "common_workload_lab_protocol"},
+            {"path": "/api/casulo/operator-console/business-domain-lab", "file": "outputs/prod561_600_business_domain_lab_protocol.json", "key": "business_domain_lab_protocol"},
+            {"path": "/api/casulo/operator-console/solver-safety-gate", "file": "outputs/prod561_600_solver_input_safety_gate.json", "key": "solver_input_safety_gate"},
+            {"path": "/api/casulo/operator-console/readiness", "file": "outputs/prod561_600_readiness.json", "key": "readiness"},
+            {"path": "/api/casulo/operator-console/audit", "file": "outputs/prod561_600_audit_report.json", "key": "audit"},
+        ],
+    },
+
 ]

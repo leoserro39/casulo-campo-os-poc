@@ -1,0 +1,5 @@
+{
+  "contract": "casulo.common_workload_lab_protocol.v0.1",
+  "purpose": "Define the next mass test lab for routine workloads such as parser, extraction, summary and classification.",
+  "future_phase": "PROD-601..620"
+}

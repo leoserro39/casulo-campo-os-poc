@@ -1,0 +1,4 @@
+{
+  "contract": "casulo.solver_input_safety_gate.v0.1",
+  "purpose": "Ensure any future solver input is classified, evidence-gated and blocked when unsafe or unsupported."
+}

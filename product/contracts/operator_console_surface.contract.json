@@ -1,0 +1,12 @@
+{
+  "contract": "casulo.operator_console_surface.v0.1",
+  "purpose": "Provide one consolidated operator surface for state, evidence, gates, deltas, blocked actions and next actions.",
+  "blocked_actions": [
+    "client_facing_claim",
+    "automatic_nomination",
+    "implementation_execution",
+    "production_activation",
+    "automatic_merge",
+    "credential_handling"
+  ]
+}

@@ -1,0 +1,5 @@
+{
+  "contract": "casulo.solver_api_surface.v0.1",
+  "purpose": "Prepare the Cubo Solver API contract for user input, batch runs, evidence trace, gate trace and reports.",
+  "execution_policy": "contract_and_surface_only_no_blind_execution"
+}
