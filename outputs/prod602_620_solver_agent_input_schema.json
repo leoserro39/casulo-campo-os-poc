@@ -1,0 +1,31 @@
+{
+  "status": "PASS",
+  "required_fields": [
+    "run_id",
+    "input_text",
+    "workload_family",
+    "domain_context",
+    "consent_scope"
+  ],
+  "allowed_consent_scope": [
+    "synthetic_fixture_only",
+    "explicitly_approved_anonymized_real_case"
+  ],
+  "blocked_inputs": [
+    "credentials",
+    "unapproved confidential data",
+    "external action request",
+    "production activation request"
+  ],
+  "blocked_actions": [
+    "client_facing_claim",
+    "automatic_nomination",
+    "implementation_execution",
+    "production_activation",
+    "automatic_merge",
+    "credential_handling",
+    "automatic_threshold_mutation",
+    "autonomous_external_execution",
+    "real_world_side_effect"
+  ]
+}

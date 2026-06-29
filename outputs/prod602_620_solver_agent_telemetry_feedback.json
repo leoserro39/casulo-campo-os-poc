@@ -1,0 +1,119 @@
+{
+  "status": "PASS",
+  "event_count": 18,
+  "events": [
+    {
+      "event_type": "SOLVER_AGENT_STUB_RUN",
+      "run_id": "SOLVER-STUB-001",
+      "domain_context": "routine_document_extraction",
+      "workload_family": "receipt_invoice_extraction"
+    },
+    {
+      "event_type": "LIVE_DELTA_SCORE_COMPUTED",
+      "run_id": "SOLVER-STUB-001",
+      "live_delta_score": 0.1353
+    },
+    {
+      "event_type": "GATE_DECISION_EMITTED",
+      "run_id": "SOLVER-STUB-001",
+      "gate": "PARSER_OUTPUT_ALLOWED",
+      "decision": "ALLOW_CONTROLLED_OUTPUT"
+    },
+    {
+      "event_type": "SOLVER_AGENT_STUB_RUN",
+      "run_id": "SOLVER-STUB-002",
+      "domain_context": "routine_email_triage",
+      "workload_family": "email_triage"
+    },
+    {
+      "event_type": "LIVE_DELTA_SCORE_COMPUTED",
+      "run_id": "SOLVER-STUB-002",
+      "live_delta_score": 0.2974
+    },
+    {
+      "event_type": "GATE_DECISION_EMITTED",
+      "run_id": "SOLVER-STUB-002",
+      "gate": "ANSWER_ALLOWED",
+      "decision": "ALLOW_CONTROLLED_OUTPUT"
+    },
+    {
+      "event_type": "SOLVER_AGENT_STUB_RUN",
+      "run_id": "SOLVER-STUB-003",
+      "domain_context": "contract_legal_review",
+      "workload_family": "contract_checklist"
+    },
+    {
+      "event_type": "LIVE_DELTA_SCORE_COMPUTED",
+      "run_id": "SOLVER-STUB-003",
+      "live_delta_score": 0.5152
+    },
+    {
+      "event_type": "GATE_DECISION_EMITTED",
+      "run_id": "SOLVER-STUB-003",
+      "gate": "HUMAN_REVIEW_REQUIRED",
+      "decision": "REVIEW"
+    },
+    {
+      "event_type": "SOLVER_AGENT_STUB_RUN",
+      "run_id": "SOLVER-STUB-004",
+      "domain_context": "unknown_or_unsupported_domain",
+      "workload_family": "classification"
+    },
+    {
+      "event_type": "LIVE_DELTA_SCORE_COMPUTED",
+      "run_id": "SOLVER-STUB-004",
+      "live_delta_score": 0.6176
+    },
+    {
+      "event_type": "GATE_DECISION_EMITTED",
+      "run_id": "SOLVER-STUB-004",
+      "gate": "UNSUPPORTED_BLOCKED",
+      "decision": "BLOCK"
+    },
+    {
+      "event_type": "SOLVER_AGENT_STUB_RUN",
+      "run_id": "SOLVER-STUB-005",
+      "domain_context": "restaurant_cashflow",
+      "workload_family": "task_generation"
+    },
+    {
+      "event_type": "LIVE_DELTA_SCORE_COMPUTED",
+      "run_id": "SOLVER-STUB-005",
+      "live_delta_score": 0.3864
+    },
+    {
+      "event_type": "GATE_DECISION_EMITTED",
+      "run_id": "SOLVER-STUB-005",
+      "gate": "HUMAN_REVIEW_REQUIRED",
+      "decision": "REVIEW"
+    },
+    {
+      "event_type": "SOLVER_AGENT_STUB_RUN",
+      "run_id": "SOLVER-STUB-006",
+      "domain_context": "clinic_billing_glosa",
+      "workload_family": "delta_detection"
+    },
+    {
+      "event_type": "LIVE_DELTA_SCORE_COMPUTED",
+      "run_id": "SOLVER-STUB-006",
+      "live_delta_score": 0.4592
+    },
+    {
+      "event_type": "GATE_DECISION_EMITTED",
+      "run_id": "SOLVER-STUB-006",
+      "gate": "HUMAN_REVIEW_REQUIRED",
+      "decision": "REVIEW"
+    }
+  ],
+  "blocked_actions": [
+    "client_facing_claim",
+    "automatic_nomination",
+    "implementation_execution",
+    "production_activation",
+    "automatic_merge",
+    "credential_handling",
+    "automatic_threshold_mutation",
+    "autonomous_external_execution",
+    "real_world_side_effect"
+  ]
+}

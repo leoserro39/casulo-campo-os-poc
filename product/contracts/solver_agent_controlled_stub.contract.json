@@ -1,0 +1,16 @@
+{
+  "contract": "casulo.solver_agent_controlled_stub.v0.1",
+  "purpose": "Expose a controlled solver-agent stub wired to live delta, evidence trace, gate trace and telemetry feedback.",
+  "mode": "stub_only_no_external_execution",
+  "blocked_actions": [
+    "client_facing_claim",
+    "automatic_nomination",
+    "implementation_execution",
+    "production_activation",
+    "automatic_merge",
+    "credential_handling",
+    "automatic_threshold_mutation",
+    "autonomous_external_execution",
+    "real_world_side_effect"
+  ]
+}

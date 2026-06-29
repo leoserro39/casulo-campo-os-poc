@@ -1,0 +1,4 @@
+{
+  "contract": "casulo.solver_agent_gate_trace.v0.1",
+  "purpose": "Trace gate decisions from live delta, domain sensitivity and baseline policy."
+}

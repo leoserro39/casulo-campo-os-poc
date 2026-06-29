@@ -1,0 +1,12 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "solver_agent_run_report.schema.json",
+  "type": "object",
+  "required": [
+    "status",
+    "run_id",
+    "decision",
+    "gate",
+    "live_delta_score"
+  ]
+}

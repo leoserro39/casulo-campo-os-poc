@@ -1,0 +1,113 @@
+{
+  "status": "PASS",
+  "sample_run": {
+    "status": "PASS",
+    "run_id": "SOLVER-STUB-001",
+    "input": {
+      "run_id": "SOLVER-STUB-001",
+      "input_text": "Parse a clean synthetic invoice and return structured fields with evidence trace.",
+      "workload_family": "receipt_invoice_extraction",
+      "domain_context": "routine_document_extraction",
+      "stress_profile": "clean_baseline",
+      "consent_scope": "synthetic_fixture_only"
+    },
+    "domain_sensitivity": 0.95,
+    "profile_metrics": {
+      "cubo_risk": 18.17,
+      "delta_control": 91.25,
+      "evidence_coverage": 85.33,
+      "useful_output_rate": 92.0
+    },
+    "delta_vector": {
+      "delta_risk": 0.1726,
+      "delta_evidence": 0.1467,
+      "delta_control": 0.0875,
+      "delta_usefulness": 0.08,
+      "delta_domain": 0.1333
+    },
+    "live_delta_score": 0.1353,
+    "gate": "PARSER_OUTPUT_ALLOWED",
+    "decision": "ALLOW_CONTROLLED_OUTPUT",
+    "gate_reason": "live delta score and evidence are inside controlled allow zone",
+    "output_allowed": true,
+    "external_execution_allowed": false,
+    "evidence_trace": [
+      {
+        "evidence_id": "SOLVER-STUB-001-EVID-001",
+        "type": "synthetic_input_summary",
+        "available": true,
+        "description": "Synthetic stub input supplied by controlled runner."
+      },
+      {
+        "evidence_id": "SOLVER-STUB-001-EVID-002",
+        "type": "live_delta_baseline",
+        "available": true,
+        "description": "Profile metrics derived from PROD-601C live delta baseline."
+      },
+      {
+        "evidence_id": "SOLVER-STUB-001-EVID-003",
+        "type": "external_source",
+        "available": false,
+        "description": "External sources are blocked in stub mode."
+      }
+    ],
+    "gate_trace": {
+      "status": "PASS",
+      "gate": "PARSER_OUTPUT_ALLOWED",
+      "decision": "ALLOW_CONTROLLED_OUTPUT",
+      "gate_reason": "live delta score and evidence are inside controlled allow zone",
+      "blocked_actions": [
+        "client_facing_claim",
+        "automatic_nomination",
+        "implementation_execution",
+        "production_activation",
+        "automatic_merge",
+        "credential_handling",
+        "automatic_threshold_mutation",
+        "autonomous_external_execution",
+        "real_world_side_effect"
+      ]
+    },
+    "telemetry_events": [
+      {
+        "event_type": "SOLVER_AGENT_STUB_RUN",
+        "run_id": "SOLVER-STUB-001",
+        "domain_context": "routine_document_extraction",
+        "workload_family": "receipt_invoice_extraction"
+      },
+      {
+        "event_type": "LIVE_DELTA_SCORE_COMPUTED",
+        "run_id": "SOLVER-STUB-001",
+        "live_delta_score": 0.1353
+      },
+      {
+        "event_type": "GATE_DECISION_EMITTED",
+        "run_id": "SOLVER-STUB-001",
+        "gate": "PARSER_OUTPUT_ALLOWED",
+        "decision": "ALLOW_CONTROLLED_OUTPUT"
+      }
+    ],
+    "blocked_actions": [
+      "client_facing_claim",
+      "automatic_nomination",
+      "implementation_execution",
+      "production_activation",
+      "automatic_merge",
+      "credential_handling",
+      "automatic_threshold_mutation",
+      "autonomous_external_execution",
+      "real_world_side_effect"
+    ]
+  },
+  "blocked_actions": [
+    "client_facing_claim",
+    "automatic_nomination",
+    "implementation_execution",
+    "production_activation",
+    "automatic_merge",
+    "credential_handling",
+    "automatic_threshold_mutation",
+    "autonomous_external_execution",
+    "real_world_side_effect"
+  ]
+}

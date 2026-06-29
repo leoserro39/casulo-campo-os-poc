@@ -1,0 +1,11 @@
+{
+  "contract": "casulo.solver_agent_input.v0.1",
+  "required_fields": [
+    "run_id",
+    "input_text",
+    "workload_family",
+    "domain_context",
+    "consent_scope"
+  ],
+  "policy": "synthetic_or_explicitly_approved_real_cases_only"
+}

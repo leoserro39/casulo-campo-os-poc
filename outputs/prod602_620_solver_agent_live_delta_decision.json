@@ -1,0 +1,22 @@
+{
+  "status": "PASS",
+  "policy": "live_delta_decides_gate_not_execution",
+  "decision_rules": [
+    "unsupported input/domain -> UNSUPPORTED_BLOCKED",
+    "high stakes or adjusted risk >= 55 -> HUMAN_REVIEW_REQUIRED",
+    "generic workload with evidence below 70 -> EVIDENCE_REQUIRED",
+    "low live delta score -> controlled allow output",
+    "all external execution remains blocked"
+  ],
+  "blocked_actions": [
+    "client_facing_claim",
+    "automatic_nomination",
+    "implementation_execution",
+    "production_activation",
+    "automatic_merge",
+    "credential_handling",
+    "automatic_threshold_mutation",
+    "autonomous_external_execution",
+    "real_world_side_effect"
+  ]
+}

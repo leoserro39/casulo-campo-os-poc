@@ -1,0 +1,142 @@
+{
+  "status": "PASS",
+  "gate_distribution": {
+    "PARSER_OUTPUT_ALLOWED": 1,
+    "ANSWER_ALLOWED": 1,
+    "HUMAN_REVIEW_REQUIRED": 3,
+    "UNSUPPORTED_BLOCKED": 1
+  },
+  "runs": [
+    {
+      "run_id": "SOLVER-STUB-001",
+      "gate_trace": {
+        "status": "PASS",
+        "gate": "PARSER_OUTPUT_ALLOWED",
+        "decision": "ALLOW_CONTROLLED_OUTPUT",
+        "gate_reason": "live delta score and evidence are inside controlled allow zone",
+        "blocked_actions": [
+          "client_facing_claim",
+          "automatic_nomination",
+          "implementation_execution",
+          "production_activation",
+          "automatic_merge",
+          "credential_handling",
+          "automatic_threshold_mutation",
+          "autonomous_external_execution",
+          "real_world_side_effect"
+        ]
+      }
+    },
+    {
+      "run_id": "SOLVER-STUB-002",
+      "gate_trace": {
+        "status": "PASS",
+        "gate": "ANSWER_ALLOWED",
+        "decision": "ALLOW_CONTROLLED_OUTPUT",
+        "gate_reason": "live delta score and evidence are inside controlled allow zone",
+        "blocked_actions": [
+          "client_facing_claim",
+          "automatic_nomination",
+          "implementation_execution",
+          "production_activation",
+          "automatic_merge",
+          "credential_handling",
+          "automatic_threshold_mutation",
+          "autonomous_external_execution",
+          "real_world_side_effect"
+        ]
+      }
+    },
+    {
+      "run_id": "SOLVER-STUB-003",
+      "gate_trace": {
+        "status": "PASS",
+        "gate": "HUMAN_REVIEW_REQUIRED",
+        "decision": "REVIEW",
+        "gate_reason": "high sensitivity, high residual risk or high-stakes profile",
+        "blocked_actions": [
+          "client_facing_claim",
+          "automatic_nomination",
+          "implementation_execution",
+          "production_activation",
+          "automatic_merge",
+          "credential_handling",
+          "automatic_threshold_mutation",
+          "autonomous_external_execution",
+          "real_world_side_effect"
+        ]
+      }
+    },
+    {
+      "run_id": "SOLVER-STUB-004",
+      "gate_trace": {
+        "status": "PASS",
+        "gate": "UNSUPPORTED_BLOCKED",
+        "decision": "BLOCK",
+        "gate_reason": "unsupported input/domain or missing minimum schema",
+        "blocked_actions": [
+          "client_facing_claim",
+          "automatic_nomination",
+          "implementation_execution",
+          "production_activation",
+          "automatic_merge",
+          "credential_handling",
+          "automatic_threshold_mutation",
+          "autonomous_external_execution",
+          "real_world_side_effect"
+        ]
+      }
+    },
+    {
+      "run_id": "SOLVER-STUB-005",
+      "gate_trace": {
+        "status": "PASS",
+        "gate": "HUMAN_REVIEW_REQUIRED",
+        "decision": "REVIEW",
+        "gate_reason": "high sensitivity, high residual risk or high-stakes profile",
+        "blocked_actions": [
+          "client_facing_claim",
+          "automatic_nomination",
+          "implementation_execution",
+          "production_activation",
+          "automatic_merge",
+          "credential_handling",
+          "automatic_threshold_mutation",
+          "autonomous_external_execution",
+          "real_world_side_effect"
+        ]
+      }
+    },
+    {
+      "run_id": "SOLVER-STUB-006",
+      "gate_trace": {
+        "status": "PASS",
+        "gate": "HUMAN_REVIEW_REQUIRED",
+        "decision": "REVIEW",
+        "gate_reason": "high sensitivity, high residual risk or high-stakes profile",
+        "blocked_actions": [
+          "client_facing_claim",
+          "automatic_nomination",
+          "implementation_execution",
+          "production_activation",
+          "automatic_merge",
+          "credential_handling",
+          "automatic_threshold_mutation",
+          "autonomous_external_execution",
+          "real_world_side_effect"
+        ]
+      }
+    }
+  ],
+  "blocked_actions": [
+    "client_facing_claim",
+    "automatic_nomination",
+    "implementation_execution",
+    "production_activation",
+    "automatic_merge",
+    "credential_handling",
+    "automatic_threshold_mutation",
+    "autonomous_external_execution",
+    "real_world_side_effect"
+  ]
+}

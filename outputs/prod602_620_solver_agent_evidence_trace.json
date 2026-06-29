@@ -1,0 +1,155 @@
+{
+  "status": "PASS",
+  "trace_count": 18,
+  "runs": [
+    {
+      "run_id": "SOLVER-STUB-001",
+      "evidence_trace": [
+        {
+          "evidence_id": "SOLVER-STUB-001-EVID-001",
+          "type": "synthetic_input_summary",
+          "available": true,
+          "description": "Synthetic stub input supplied by controlled runner."
+        },
+        {
+          "evidence_id": "SOLVER-STUB-001-EVID-002",
+          "type": "live_delta_baseline",
+          "available": true,
+          "description": "Profile metrics derived from PROD-601C live delta baseline."
+        },
+        {
+          "evidence_id": "SOLVER-STUB-001-EVID-003",
+          "type": "external_source",
+          "available": false,
+          "description": "External sources are blocked in stub mode."
+        }
+      ]
+    },
+    {
+      "run_id": "SOLVER-STUB-002",
+      "evidence_trace": [
+        {
+          "evidence_id": "SOLVER-STUB-002-EVID-001",
+          "type": "synthetic_input_summary",
+          "available": true,
+          "description": "Synthetic stub input supplied by controlled runner."
+        },
+        {
+          "evidence_id": "SOLVER-STUB-002-EVID-002",
+          "type": "live_delta_baseline",
+          "available": true,
+          "description": "Profile metrics derived from PROD-601C live delta baseline."
+        },
+        {
+          "evidence_id": "SOLVER-STUB-002-EVID-003",
+          "type": "external_source",
+          "available": false,
+          "description": "External sources are blocked in stub mode."
+        }
+      ]
+    },
+    {
+      "run_id": "SOLVER-STUB-003",
+      "evidence_trace": [
+        {
+          "evidence_id": "SOLVER-STUB-003-EVID-001",
+          "type": "synthetic_input_summary",
+          "available": true,
+          "description": "Synthetic stub input supplied by controlled runner."
+        },
+        {
+          "evidence_id": "SOLVER-STUB-003-EVID-002",
+          "type": "live_delta_baseline",
+          "available": true,
+          "description": "Profile metrics derived from PROD-601C live delta baseline."
+        },
+        {
+          "evidence_id": "SOLVER-STUB-003-EVID-003",
+          "type": "external_source",
+          "available": false,
+          "description": "External sources are blocked in stub mode."
+        }
+      ]
+    },
+    {
+      "run_id": "SOLVER-STUB-004",
+      "evidence_trace": [
+        {
+          "evidence_id": "SOLVER-STUB-004-EVID-001",
+          "type": "synthetic_input_summary",
+          "available": true,
+          "description": "Synthetic stub input supplied by controlled runner."
+        },
+        {
+          "evidence_id": "SOLVER-STUB-004-EVID-002",
+          "type": "live_delta_baseline",
+          "available": true,
+          "description": "Profile metrics derived from PROD-601C live delta baseline."
+        },
+        {
+          "evidence_id": "SOLVER-STUB-004-EVID-003",
+          "type": "external_source",
+          "available": false,
+          "description": "External sources are blocked in stub mode."
+        }
+      ]
+    },
+    {
+      "run_id": "SOLVER-STUB-005",
+      "evidence_trace": [
+        {
+          "evidence_id": "SOLVER-STUB-005-EVID-001",
+          "type": "synthetic_input_summary",
+          "available": true,
+          "description": "Synthetic stub input supplied by controlled runner."
+        },
+        {
+          "evidence_id": "SOLVER-STUB-005-EVID-002",
+          "type": "live_delta_baseline",
+          "available": true,
+          "description": "Profile metrics derived from PROD-601C live delta baseline."
+        },
+        {
+          "evidence_id": "SOLVER-STUB-005-EVID-003",
+          "type": "external_source",
+          "available": false,
+          "description": "External sources are blocked in stub mode."
+        }
+      ]
+    },
+    {
+      "run_id": "SOLVER-STUB-006",
+      "evidence_trace": [
+        {
+          "evidence_id": "SOLVER-STUB-006-EVID-001",
+          "type": "synthetic_input_summary",
+          "available": true,
+          "description": "Synthetic stub input supplied by controlled runner."
+        },
+        {
+          "evidence_id": "SOLVER-STUB-006-EVID-002",
+          "type": "live_delta_baseline",
+          "available": true,
+          "description": "Profile metrics derived from PROD-601C live delta baseline."
+        },
+        {
+          "evidence_id": "SOLVER-STUB-006-EVID-003",
+          "type": "external_source",
+          "available": false,
+          "description": "External sources are blocked in stub mode."
+        }
+      ]
+    }
+  ],
+  "blocked_actions": [
+    "client_facing_claim",
+    "automatic_nomination",
+    "implementation_execution",
+    "production_activation",
+    "automatic_merge",
+    "credential_handling",
+    "automatic_threshold_mutation",
+    "autonomous_external_execution",
+    "real_world_side_effect"
+  ]
+}

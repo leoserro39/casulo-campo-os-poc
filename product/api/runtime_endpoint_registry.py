@@ -193,4 +193,20 @@ ENDPOINT_GROUPS = [
         ],
     },
 
+    {
+        "group": "solver_agent_controlled_stub",
+        "routes": [
+            {"path": "/api/casulo/solver-agent/status", "file": "outputs/prod602_620_solver_agent_status.json", "key": "solver_agent_status"},
+            {"path": "/api/casulo/solver-agent/input-schema", "file": "outputs/prod602_620_solver_agent_input_schema.json", "key": "input_schema"},
+            {"path": "/api/casulo/solver-agent/sample-run", "file": "outputs/prod602_620_solver_agent_sample_run.json", "key": "sample_run"},
+            {"path": "/api/casulo/solver-agent/run-report", "file": "outputs/prod602_620_solver_agent_run_report.json", "key": "run_report"},
+            {"path": "/api/casulo/solver-agent/live-delta-decision", "file": "outputs/prod602_620_solver_agent_live_delta_decision.json", "key": "live_delta_decision"},
+            {"path": "/api/casulo/solver-agent/evidence-trace", "file": "outputs/prod602_620_solver_agent_evidence_trace.json", "key": "evidence_trace"},
+            {"path": "/api/casulo/solver-agent/gate-trace", "file": "outputs/prod602_620_solver_agent_gate_trace.json", "key": "gate_trace"},
+            {"path": "/api/casulo/solver-agent/telemetry-feedback", "file": "outputs/prod602_620_solver_agent_telemetry_feedback.json", "key": "telemetry_feedback"},
+            {"path": "/api/casulo/solver-agent/readiness", "file": "outputs/prod602_620_solver_agent_readiness.json", "key": "readiness"},
+            {"path": "/api/casulo/solver-agent/audit", "file": "outputs/prod602_620_solver_agent_audit_report.json", "key": "audit"},
+        ],
+    },
+
 ]

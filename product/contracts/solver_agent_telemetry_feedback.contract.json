@@ -1,0 +1,4 @@
+{
+  "contract": "casulo.solver_agent_telemetry_feedback.v0.1",
+  "purpose": "Emit telemetry feedback events from controlled solver runs without changing thresholds automatically."
+}

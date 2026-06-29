@@ -1,0 +1,665 @@
+{
+  "status": "PASS",
+  "run_count": 6,
+  "runs": [
+    {
+      "status": "PASS",
+      "run_id": "SOLVER-STUB-001",
+      "input": {
+        "run_id": "SOLVER-STUB-001",
+        "input_text": "Parse a clean synthetic invoice and return structured fields with evidence trace.",
+        "workload_family": "receipt_invoice_extraction",
+        "domain_context": "routine_document_extraction",
+        "stress_profile": "clean_baseline",
+        "consent_scope": "synthetic_fixture_only"
+      },
+      "domain_sensitivity": 0.95,
+      "profile_metrics": {
+        "cubo_risk": 18.17,
+        "delta_control": 91.25,
+        "evidence_coverage": 85.33,
+        "useful_output_rate": 92.0
+      },
+      "delta_vector": {
+        "delta_risk": 0.1726,
+        "delta_evidence": 0.1467,
+        "delta_control": 0.0875,
+        "delta_usefulness": 0.08,
+        "delta_domain": 0.1333
+      },
+      "live_delta_score": 0.1353,
+      "gate": "PARSER_OUTPUT_ALLOWED",
+      "decision": "ALLOW_CONTROLLED_OUTPUT",
+      "gate_reason": "live delta score and evidence are inside controlled allow zone",
+      "output_allowed": true,
+      "external_execution_allowed": false,
+      "evidence_trace": [
+        {
+          "evidence_id": "SOLVER-STUB-001-EVID-001",
+          "type": "synthetic_input_summary",
+          "available": true,
+          "description": "Synthetic stub input supplied by controlled runner."
+        },
+        {
+          "evidence_id": "SOLVER-STUB-001-EVID-002",
+          "type": "live_delta_baseline",
+          "available": true,
+          "description": "Profile metrics derived from PROD-601C live delta baseline."
+        },
+        {
+          "evidence_id": "SOLVER-STUB-001-EVID-003",
+          "type": "external_source",
+          "available": false,
+          "description": "External sources are blocked in stub mode."
+        }
+      ],
+      "gate_trace": {
+        "status": "PASS",
+        "gate": "PARSER_OUTPUT_ALLOWED",
+        "decision": "ALLOW_CONTROLLED_OUTPUT",
+        "gate_reason": "live delta score and evidence are inside controlled allow zone",
+        "blocked_actions": [
+          "client_facing_claim",
+          "automatic_nomination",
+          "implementation_execution",
+          "production_activation",
+          "automatic_merge",
+          "credential_handling",
+          "automatic_threshold_mutation",
+          "autonomous_external_execution",
+          "real_world_side_effect"
+        ]
+      },
+      "telemetry_events": [
+        {
+          "event_type": "SOLVER_AGENT_STUB_RUN",
+          "run_id": "SOLVER-STUB-001",
+          "domain_context": "routine_document_extraction",
+          "workload_family": "receipt_invoice_extraction"
+        },
+        {
+          "event_type": "LIVE_DELTA_SCORE_COMPUTED",
+          "run_id": "SOLVER-STUB-001",
+          "live_delta_score": 0.1353
+        },
+        {
+          "event_type": "GATE_DECISION_EMITTED",
+          "run_id": "SOLVER-STUB-001",
+          "gate": "PARSER_OUTPUT_ALLOWED",
+          "decision": "ALLOW_CONTROLLED_OUTPUT"
+        }
+      ],
+      "blocked_actions": [
+        "client_facing_claim",
+        "automatic_nomination",
+        "implementation_execution",
+        "production_activation",
+        "automatic_merge",
+        "credential_handling",
+        "automatic_threshold_mutation",
+        "autonomous_external_execution",
+        "real_world_side_effect"
+      ]
+    },
+    {
+      "status": "PASS",
+      "run_id": "SOLVER-STUB-002",
+      "input": {
+        "run_id": "SOLVER-STUB-002",
+        "input_text": "Summarize a noisy synthetic email and classify urgency with supporting evidence.",
+        "workload_family": "email_triage",
+        "domain_context": "routine_email_triage",
+        "stress_profile": "noisy_ocr_or_typo",
+        "consent_scope": "synthetic_fixture_only"
+      },
+      "domain_sensitivity": 1.1,
+      "profile_metrics": {
+        "cubo_risk": 40.92,
+        "delta_control": 88.25,
+        "evidence_coverage": 78.33,
+        "useful_output_rate": 81.0
+      },
+      "delta_vector": {
+        "delta_risk": 0.4501,
+        "delta_evidence": 0.2167,
+        "delta_control": 0.1175,
+        "delta_usefulness": 0.19,
+        "delta_domain": 0.3333
+      },
+      "live_delta_score": 0.2974,
+      "gate": "ANSWER_ALLOWED",
+      "decision": "ALLOW_CONTROLLED_OUTPUT",
+      "gate_reason": "live delta score and evidence are inside controlled allow zone",
+      "output_allowed": true,
+      "external_execution_allowed": false,
+      "evidence_trace": [
+        {
+          "evidence_id": "SOLVER-STUB-002-EVID-001",
+          "type": "synthetic_input_summary",
+          "available": true,
+          "description": "Synthetic stub input supplied by controlled runner."
+        },
+        {
+          "evidence_id": "SOLVER-STUB-002-EVID-002",
+          "type": "live_delta_baseline",
+          "available": true,
+          "description": "Profile metrics derived from PROD-601C live delta baseline."
+        },
+        {
+          "evidence_id": "SOLVER-STUB-002-EVID-003",
+          "type": "external_source",
+          "available": false,
+          "description": "External sources are blocked in stub mode."
+        }
+      ],
+      "gate_trace": {
+        "status": "PASS",
+        "gate": "ANSWER_ALLOWED",
+        "decision": "ALLOW_CONTROLLED_OUTPUT",
+        "gate_reason": "live delta score and evidence are inside controlled allow zone",
+        "blocked_actions": [
+          "client_facing_claim",
+          "automatic_nomination",
+          "implementation_execution",
+          "production_activation",
+          "automatic_merge",
+          "credential_handling",
+          "automatic_threshold_mutation",
+          "autonomous_external_execution",
+          "real_world_side_effect"
+        ]
+      },
+      "telemetry_events": [
+        {
+          "event_type": "SOLVER_AGENT_STUB_RUN",
+          "run_id": "SOLVER-STUB-002",
+          "domain_context": "routine_email_triage",
+          "workload_family": "email_triage"
+        },
+        {
+          "event_type": "LIVE_DELTA_SCORE_COMPUTED",
+          "run_id": "SOLVER-STUB-002",
+          "live_delta_score": 0.2974
+        },
+        {
+          "event_type": "GATE_DECISION_EMITTED",
+          "run_id": "SOLVER-STUB-002",
+          "gate": "ANSWER_ALLOWED",
+          "decision": "ALLOW_CONTROLLED_OUTPUT"
+        }
+      ],
+      "blocked_actions": [
+        "client_facing_claim",
+        "automatic_nomination",
+        "implementation_execution",
+        "production_activation",
+        "automatic_merge",
+        "credential_handling",
+        "automatic_threshold_mutation",
+        "autonomous_external_execution",
+        "real_world_side_effect"
+      ]
+    },
+    {
+      "status": "PASS",
+      "run_id": "SOLVER-STUB-003",
+      "input": {
+        "run_id": "SOLVER-STUB-003",
+        "input_text": "Review a high-stakes synthetic contract claim with cross-field conflict.",
+        "workload_family": "contract_checklist",
+        "domain_context": "contract_legal_review",
+        "stress_profile": "high_stakes_claim",
+        "consent_scope": "synthetic_fixture_only"
+      },
+      "domain_sensitivity": 1.5,
+      "profile_metrics": {
+        "cubo_risk": 52.5,
+        "delta_control": 83.25,
+        "evidence_coverage": 74.33,
+        "useful_output_rate": 77.0
+      },
+      "delta_vector": {
+        "delta_risk": 0.7875,
+        "delta_evidence": 0.2567,
+        "delta_control": 0.1675,
+        "delta_usefulness": 0.23,
+        "delta_domain": 0.8667
+      },
+      "live_delta_score": 0.5152,
+      "gate": "HUMAN_REVIEW_REQUIRED",
+      "decision": "REVIEW",
+      "gate_reason": "high sensitivity, high residual risk or high-stakes profile",
+      "output_allowed": false,
+      "external_execution_allowed": false,
+      "evidence_trace": [
+        {
+          "evidence_id": "SOLVER-STUB-003-EVID-001",
+          "type": "synthetic_input_summary",
+          "available": true,
+          "description": "Synthetic stub input supplied by controlled runner."
+        },
+        {
+          "evidence_id": "SOLVER-STUB-003-EVID-002",
+          "type": "live_delta_baseline",
+          "available": true,
+          "description": "Profile metrics derived from PROD-601C live delta baseline."
+        },
+        {
+          "evidence_id": "SOLVER-STUB-003-EVID-003",
+          "type": "external_source",
+          "available": false,
+          "description": "External sources are blocked in stub mode."
+        }
+      ],
+      "gate_trace": {
+        "status": "PASS",
+        "gate": "HUMAN_REVIEW_REQUIRED",
+        "decision": "REVIEW",
+        "gate_reason": "high sensitivity, high residual risk or high-stakes profile",
+        "blocked_actions": [
+          "client_facing_claim",
+          "automatic_nomination",
+          "implementation_execution",
+          "production_activation",
+          "automatic_merge",
+          "credential_handling",
+          "automatic_threshold_mutation",
+          "autonomous_external_execution",
+          "real_world_side_effect"
+        ]
+      },
+      "telemetry_events": [
+        {
+          "event_type": "SOLVER_AGENT_STUB_RUN",
+          "run_id": "SOLVER-STUB-003",
+          "domain_context": "contract_legal_review",
+          "workload_family": "contract_checklist"
+        },
+        {
+          "event_type": "LIVE_DELTA_SCORE_COMPUTED",
+          "run_id": "SOLVER-STUB-003",
+          "live_delta_score": 0.5152
+        },
+        {
+          "event_type": "GATE_DECISION_EMITTED",
+          "run_id": "SOLVER-STUB-003",
+          "gate": "HUMAN_REVIEW_REQUIRED",
+          "decision": "REVIEW"
+        }
+      ],
+      "blocked_actions": [
+        "client_facing_claim",
+        "automatic_nomination",
+        "implementation_execution",
+        "production_activation",
+        "automatic_merge",
+        "credential_handling",
+        "automatic_threshold_mutation",
+        "autonomous_external_execution",
+        "real_world_side_effect"
+      ]
+    },
+    {
+      "status": "PASS",
+      "run_id": "SOLVER-STUB-004",
+      "input": {
+        "run_id": "SOLVER-STUB-004",
+        "input_text": "Handle an unsupported synthetic input with no minimum schema.",
+        "workload_family": "classification",
+        "domain_context": "unknown_or_unsupported_domain",
+        "stress_profile": "unknown_or_unsupported_input",
+        "consent_scope": "synthetic_fixture_only"
+      },
+      "domain_sensitivity": 1.6,
+      "profile_metrics": {
+        "cubo_risk": 59.25,
+        "delta_control": 81.25,
+        "evidence_coverage": 64.33,
+        "useful_output_rate": 75.0
+      },
+      "delta_vector": {
+        "delta_risk": 0.948,
+        "delta_evidence": 0.3567,
+        "delta_control": 0.1875,
+        "delta_usefulness": 0.25,
+        "delta_domain": 1.0
+      },
+      "live_delta_score": 0.6176,
+      "gate": "UNSUPPORTED_BLOCKED",
+      "decision": "BLOCK",
+      "gate_reason": "unsupported input/domain or missing minimum schema",
+      "output_allowed": false,
+      "external_execution_allowed": false,
+      "evidence_trace": [
+        {
+          "evidence_id": "SOLVER-STUB-004-EVID-001",
+          "type": "synthetic_input_summary",
+          "available": true,
+          "description": "Synthetic stub input supplied by controlled runner."
+        },
+        {
+          "evidence_id": "SOLVER-STUB-004-EVID-002",
+          "type": "live_delta_baseline",
+          "available": true,
+          "description": "Profile metrics derived from PROD-601C live delta baseline."
+        },
+        {
+          "evidence_id": "SOLVER-STUB-004-EVID-003",
+          "type": "external_source",
+          "available": false,
+          "description": "External sources are blocked in stub mode."
+        }
+      ],
+      "gate_trace": {
+        "status": "PASS",
+        "gate": "UNSUPPORTED_BLOCKED",
+        "decision": "BLOCK",
+        "gate_reason": "unsupported input/domain or missing minimum schema",
+        "blocked_actions": [
+          "client_facing_claim",
+          "automatic_nomination",
+          "implementation_execution",
+          "production_activation",
+          "automatic_merge",
+          "credential_handling",
+          "automatic_threshold_mutation",
+          "autonomous_external_execution",
+          "real_world_side_effect"
+        ]
+      },
+      "telemetry_events": [
+        {
+          "event_type": "SOLVER_AGENT_STUB_RUN",
+          "run_id": "SOLVER-STUB-004",
+          "domain_context": "unknown_or_unsupported_domain",
+          "workload_family": "classification"
+        },
+        {
+          "event_type": "LIVE_DELTA_SCORE_COMPUTED",
+          "run_id": "SOLVER-STUB-004",
+          "live_delta_score": 0.6176
+        },
+        {
+          "event_type": "GATE_DECISION_EMITTED",
+          "run_id": "SOLVER-STUB-004",
+          "gate": "UNSUPPORTED_BLOCKED",
+          "decision": "BLOCK"
+        }
+      ],
+      "blocked_actions": [
+        "client_facing_claim",
+        "automatic_nomination",
+        "implementation_execution",
+        "production_activation",
+        "automatic_merge",
+        "credential_handling",
+        "automatic_threshold_mutation",
+        "autonomous_external_execution",
+        "real_world_side_effect"
+      ]
+    },
+    {
+      "status": "PASS",
+      "run_id": "SOLVER-STUB-005",
+      "input": {
+        "run_id": "SOLVER-STUB-005",
+        "input_text": "Create a task proposal for a restaurant cashflow bottleneck using only provided evidence.",
+        "workload_family": "task_generation",
+        "domain_context": "restaurant_cashflow",
+        "stress_profile": "partial_context",
+        "consent_scope": "synthetic_fixture_only"
+      },
+      "domain_sensitivity": 1.2,
+      "profile_metrics": {
+        "cubo_risk": 48.92,
+        "delta_control": 85.25,
+        "evidence_coverage": 72.33,
+        "useful_output_rate": 78.0
+      },
+      "delta_vector": {
+        "delta_risk": 0.587,
+        "delta_evidence": 0.2767,
+        "delta_control": 0.1475,
+        "delta_usefulness": 0.22,
+        "delta_domain": 0.4667
+      },
+      "live_delta_score": 0.3864,
+      "gate": "HUMAN_REVIEW_REQUIRED",
+      "decision": "REVIEW",
+      "gate_reason": "high sensitivity, high residual risk or high-stakes profile",
+      "output_allowed": false,
+      "external_execution_allowed": false,
+      "evidence_trace": [
+        {
+          "evidence_id": "SOLVER-STUB-005-EVID-001",
+          "type": "synthetic_input_summary",
+          "available": true,
+          "description": "Synthetic stub input supplied by controlled runner."
+        },
+        {
+          "evidence_id": "SOLVER-STUB-005-EVID-002",
+          "type": "live_delta_baseline",
+          "available": true,
+          "description": "Profile metrics derived from PROD-601C live delta baseline."
+        },
+        {
+          "evidence_id": "SOLVER-STUB-005-EVID-003",
+          "type": "external_source",
+          "available": false,
+          "description": "External sources are blocked in stub mode."
+        }
+      ],
+      "gate_trace": {
+        "status": "PASS",
+        "gate": "HUMAN_REVIEW_REQUIRED",
+        "decision": "REVIEW",
+        "gate_reason": "high sensitivity, high residual risk or high-stakes profile",
+        "blocked_actions": [
+          "client_facing_claim",
+          "automatic_nomination",
+          "implementation_execution",
+          "production_activation",
+          "automatic_merge",
+          "credential_handling",
+          "automatic_threshold_mutation",
+          "autonomous_external_execution",
+          "real_world_side_effect"
+        ]
+      },
+      "telemetry_events": [
+        {
+          "event_type": "SOLVER_AGENT_STUB_RUN",
+          "run_id": "SOLVER-STUB-005",
+          "domain_context": "restaurant_cashflow",
+          "workload_family": "task_generation"
+        },
+        {
+          "event_type": "LIVE_DELTA_SCORE_COMPUTED",
+          "run_id": "SOLVER-STUB-005",
+          "live_delta_score": 0.3864
+        },
+        {
+          "event_type": "GATE_DECISION_EMITTED",
+          "run_id": "SOLVER-STUB-005",
+          "gate": "HUMAN_REVIEW_REQUIRED",
+          "decision": "REVIEW"
+        }
+      ],
+      "blocked_actions": [
+        "client_facing_claim",
+        "automatic_nomination",
+        "implementation_execution",
+        "production_activation",
+        "automatic_merge",
+        "credential_handling",
+        "automatic_threshold_mutation",
+        "autonomous_external_execution",
+        "real_world_side_effect"
+      ]
+    },
+    {
+      "status": "PASS",
+      "run_id": "SOLVER-STUB-006",
+      "input": {
+        "run_id": "SOLVER-STUB-006",
+        "input_text": "Detect deltas in a clinic billing/glosa scenario with stale evidence.",
+        "workload_family": "delta_detection",
+        "domain_context": "clinic_billing_glosa",
+        "stress_profile": "stale_or_undated_evidence",
+        "consent_scope": "synthetic_fixture_only"
+      },
+      "domain_sensitivity": 1.45,
+      "profile_metrics": {
+        "cubo_risk": 46.92,
+        "delta_control": 84.25,
+        "evidence_coverage": 73.33,
+        "useful_output_rate": 83.0
+      },
+      "delta_vector": {
+        "delta_risk": 0.6803,
+        "delta_evidence": 0.2667,
+        "delta_control": 0.1575,
+        "delta_usefulness": 0.17,
+        "delta_domain": 0.8
+      },
+      "live_delta_score": 0.4592,
+      "gate": "HUMAN_REVIEW_REQUIRED",
+      "decision": "REVIEW",
+      "gate_reason": "high sensitivity, high residual risk or high-stakes profile",
+      "output_allowed": false,
+      "external_execution_allowed": false,
+      "evidence_trace": [
+        {
+          "evidence_id": "SOLVER-STUB-006-EVID-001",
+          "type": "synthetic_input_summary",
+          "available": true,
+          "description": "Synthetic stub input supplied by controlled runner."
+        },
+        {
+          "evidence_id": "SOLVER-STUB-006-EVID-002",
+          "type": "live_delta_baseline",
+          "available": true,
+          "description": "Profile metrics derived from PROD-601C live delta baseline."
+        },
+        {
+          "evidence_id": "SOLVER-STUB-006-EVID-003",
+          "type": "external_source",
+          "available": false,
+          "description": "External sources are blocked in stub mode."
+        }
+      ],
+      "gate_trace": {
+        "status": "PASS",
+        "gate": "HUMAN_REVIEW_REQUIRED",
+        "decision": "REVIEW",
+        "gate_reason": "high sensitivity, high residual risk or high-stakes profile",
+        "blocked_actions": [
+          "client_facing_claim",
+          "automatic_nomination",
+          "implementation_execution",
+          "production_activation",
+          "automatic_merge",
+          "credential_handling",
+          "automatic_threshold_mutation",
+          "autonomous_external_execution",
+          "real_world_side_effect"
+        ]
+      },
+      "telemetry_events": [
+        {
+          "event_type": "SOLVER_AGENT_STUB_RUN",
+          "run_id": "SOLVER-STUB-006",
+          "domain_context": "clinic_billing_glosa",
+          "workload_family": "delta_detection"
+        },
+        {
+          "event_type": "LIVE_DELTA_SCORE_COMPUTED",
+          "run_id": "SOLVER-STUB-006",
+          "live_delta_score": 0.4592
+        },
+        {
+          "event_type": "GATE_DECISION_EMITTED",
+          "run_id": "SOLVER-STUB-006",
+          "gate": "HUMAN_REVIEW_REQUIRED",
+          "decision": "REVIEW"
+        }
+      ],
+      "blocked_actions": [
+        "client_facing_claim",
+        "automatic_nomination",
+        "implementation_execution",
+        "production_activation",
+        "automatic_merge",
+        "credential_handling",
+        "automatic_threshold_mutation",
+        "autonomous_external_execution",
+        "real_world_side_effect"
+      ]
+    }
+  ],
+  "baseline_policy_summary": [
+    {
+      "target": "parser_and_structured_extraction",
+      "decision": "PARTIAL_FREEZE_CANDIDATE",
+      "reason": "low residual risk relative to stress, high delta control, strong parser output gate",
+      "metrics": {
+        "avg_cubo_risk": 36.3,
+        "avg_delta_control": 89.5,
+        "allowed_rate_pct": 70.0
+      },
+      "regression_required": true,
+      "human_approval_required": true
+    },
+    {
+      "target": "safe_block_taxonomy",
+      "decision": "PROMOTE_CANDIDATE_AFTER_REGRESSION",
+      "reason": "unsupported input maps perfectly to UNSUPPORTED_BLOCKED in calibration",
+      "metrics": {
+        "unsupported_count": 120,
+        "safe_block_rate_pct": 100.0
+      },
+      "regression_required": true,
+      "human_approval_required": true
+    },
+    {
+      "target": "safe_review_taxonomy",
+      "decision": "PROMOTE_CANDIDATE_WITH_TRACE_REQUIREMENT",
+      "reason": "high-risk profiles frequently map to safe human review, but not all high-risk cases do",
+      "metrics": {
+        "high_risk_count": 480,
+        "safe_review_rate_pct": 70.83
+      },
+      "regression_required": true,
+      "human_approval_required": true
+    },
+    {
+      "target": "summary_classification_email_task",
+      "decision": "CALIBRATE_MORE_REQUIRE_CONTEXT",
+      "reason": "generic workloads have higher residual Cubo risk and lower evidence coverage",
+      "metrics": {
+        "avg_cubo_risk": 50.0,
+        "avg_evidence_coverage": 66.0
+      },
+      "regression_required": true,
+      "human_approval_required": true
+    },
+    {
+      "target": "core_architecture",
+      "decision": "KEEP_STABLE_NO_CORE_CHANGE",
+      "reason": "apply mathematical interpretation layer; do not mutate runtime/product core yet",
+      "regression_required": false,
+      "human_approval_required": false
+    }
+  ],
+  "blocked_actions": [
+    "client_facing_claim",
+    "automatic_nomination",
+    "implementation_execution",
+    "production_activation",
+    "automatic_merge",
+    "credential_handling",
+    "automatic_threshold_mutation",
+    "autonomous_external_execution",
+    "real_world_side_effect"
+  ]
+}

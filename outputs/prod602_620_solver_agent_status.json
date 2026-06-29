@@ -1,0 +1,32 @@
+{
+  "status": "PASS",
+  "phase": "Solver Agent Controlled Stub with Live Delta",
+  "generated_at": "2026-06-29T03:29:51+00:00",
+  "upstream_readiness": "READY_FOR_SOLVER_AGENT_CONTROLLED_STUB_WITH_LIVE_DELTA",
+  "mode": "stub_only_no_external_execution",
+  "run_count": 6,
+  "gate_distribution": {
+    "PARSER_OUTPUT_ALLOWED": 1,
+    "ANSWER_ALLOWED": 1,
+    "HUMAN_REVIEW_REQUIRED": 3,
+    "UNSUPPORTED_BLOCKED": 1
+  },
+  "decision_distribution": {
+    "ALLOW_CONTROLLED_OUTPUT": 2,
+    "REVIEW": 3,
+    "BLOCK": 1
+  },
+  "external_execution_allowed": false,
+  "automatic_threshold_mutation_allowed": false,
+  "blocked_actions": [
+    "client_facing_claim",
+    "automatic_nomination",
+    "implementation_execution",
+    "production_activation",
+    "automatic_merge",
+    "credential_handling",
+    "automatic_threshold_mutation",
+    "autonomous_external_execution",
+    "real_world_side_effect"
+  ]
+}

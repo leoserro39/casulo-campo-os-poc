@@ -1,0 +1,4 @@
+{
+  "contract": "casulo.solver_agent_run_report.v0.1",
+  "purpose": "Store a decision report for each controlled stub run."
+}
