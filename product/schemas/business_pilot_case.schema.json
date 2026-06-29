@@ -1,0 +1,16 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "business_pilot_case.schema.json",
+  "type": "object",
+  "required": [
+    "case_id",
+    "business_domain",
+    "problem_summary",
+    "available_evidence",
+    "known_facts",
+    "assumptions",
+    "desired_decision_support",
+    "consent_scope",
+    "data_sensitivity"
+  ]
+}

@@ -1,0 +1,54 @@
+{
+  "status": "PASS",
+  "auto_apply": false,
+  "automatic_threshold_mutation_allowed": false,
+  "recommendations": [
+    {
+      "id": "PILOT-CAL-001",
+      "target": "over_conservative_review",
+      "recommendation": "Inspect medium-risk controlled active domain review packets for possible ALLOW_WITH_WARNING or EVIDENCE_REQUEST split.",
+      "cases": [
+        "PILOT-002",
+        "PILOT-006"
+      ],
+      "auto_apply": false,
+      "requires_human_approval": true
+    },
+    {
+      "id": "PILOT-CAL-002",
+      "target": "block_policy",
+      "recommendation": "Maintain external execution and unsupported-domain block policy unless false block candidates appear in reviewed feedback.",
+      "cases": [],
+      "auto_apply": false,
+      "requires_human_approval": true
+    },
+    {
+      "id": "PILOT-CAL-003",
+      "target": "allow_policy",
+      "recommendation": "No threshold relaxation without human-reviewed false allow scan.",
+      "cases": [],
+      "auto_apply": false,
+      "requires_human_approval": true
+    },
+    {
+      "id": "PILOT-CAL-004",
+      "target": "pilot_expansion",
+      "recommendation": "After human review of this 20-case pack, expand to 50 controlled cases only if no false allow candidates are confirmed.",
+      "cases": [],
+      "auto_apply": false,
+      "requires_human_approval": true
+    }
+  ],
+  "blocked_actions": [
+    "client_facing_claim",
+    "automatic_nomination",
+    "implementation_execution",
+    "production_activation",
+    "automatic_merge",
+    "credential_handling",
+    "automatic_threshold_mutation",
+    "autonomous_external_execution",
+    "real_world_side_effect",
+    "unapproved_real_company_data"
+  ]
+}

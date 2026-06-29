@@ -1,0 +1,4 @@
+{
+  "contract": "casulo.business_pilot_readiness.v0.1",
+  "purpose": "Decide readiness for controlled human-reviewed 20-case pilot review."
+}

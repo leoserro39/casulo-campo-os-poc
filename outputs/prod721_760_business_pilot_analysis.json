@@ -1,0 +1,47 @@
+{
+  "status": "PASS",
+  "analysis": {
+    "case_count": 20,
+    "feedback_count": 20,
+    "feedback_label_distribution": {
+      "BLOCK_APPROPRIATE": 6,
+      "NEEDS_MORE_EVIDENCE": 2,
+      "OUTPUT_USEFUL": 4,
+      "OVER_CONSERVATIVE_CANDIDATE": 2,
+      "REVIEW_APPROPRIATE": 6
+    },
+    "gate_distribution": {
+      "ALLOW_WITH_WARNING": 1,
+      "ANSWER_ALLOWED": 3,
+      "EVIDENCE_REQUIRED": 2,
+      "HUMAN_REVIEW_REQUIRED": 8,
+      "UNSUPPORTED_BLOCKED": 6
+    },
+    "risk_band_distribution": {
+      "CRITICAL": 6,
+      "HIGH": 6,
+      "LOW": 3,
+      "MEDIUM": 5
+    },
+    "safe_feedback_rate_pct": 90.0,
+    "utility_candidate_rate_pct": 40.0,
+    "over_conservative_cases": [
+      "PILOT-002",
+      "PILOT-006"
+    ],
+    "false_block_candidate_cases": [],
+    "false_allow_candidate_cases": []
+  },
+  "blocked_actions": [
+    "client_facing_claim",
+    "automatic_nomination",
+    "implementation_execution",
+    "production_activation",
+    "automatic_merge",
+    "credential_handling",
+    "automatic_threshold_mutation",
+    "autonomous_external_execution",
+    "real_world_side_effect",
+    "unapproved_real_company_data"
+  ]
+}

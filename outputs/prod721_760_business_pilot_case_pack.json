@@ -1,0 +1,427 @@
+{
+  "status": "PASS",
+  "case_count": 20,
+  "cases": [
+    {
+      "case_id": "PILOT-001",
+      "business_domain": "restaurant_inventory",
+      "problem_summary": "Restaurante quer reduzir perda de itens perecíveis com base em lista de estoque e consumo diário.",
+      "available_evidence": [
+        "stock_list",
+        "daily_consumption",
+        "purchase_frequency",
+        "waste_notes",
+        "menu_items"
+      ],
+      "known_facts": [
+        "perda ocorre em itens perecíveis",
+        "há compra recorrente semanal",
+        "cardápio é estável"
+      ],
+      "assumptions": [
+        "a perda pode estar ligada a previsão de demanda"
+      ],
+      "desired_decision_support": "sugerir análise controlada e próximos dados sem executar compra",
+      "consent_scope": "synthetic_fixture_only",
+      "data_sensitivity": "low"
+    },
+    {
+      "case_id": "PILOT-002",
+      "business_domain": "restaurant_cashflow",
+      "problem_summary": "Restaurante quer entender descasamento de caixa entre recebimentos e pagamentos de fornecedores.",
+      "available_evidence": [
+        "daily_revenue_range",
+        "fixed_costs",
+        "supplier_payables",
+        "payment_terms",
+        "cash_balance"
+      ],
+      "known_facts": [
+        "fornecedor vence antes do pico de recebimento",
+        "fim de semana concentra vendas"
+      ],
+      "assumptions": [
+        "pode haver gargalo de prazo e reserva"
+      ],
+      "desired_decision_support": "mapear hipóteses e perguntas para fluxo de caixa",
+      "consent_scope": "synthetic_fixture_only",
+      "data_sensitivity": "medium"
+    },
+    {
+      "case_id": "PILOT-003",
+      "business_domain": "clinic_scheduling",
+      "problem_summary": "Clínica tem agenda cheia, faltas recorrentes e encaixes manuais sem padrão.",
+      "available_evidence": [
+        "appointment_slots",
+        "no_show_notes",
+        "professional_calendar",
+        "patient_type"
+      ],
+      "known_facts": [
+        "há faltas recorrentes",
+        "encaixes são manuais"
+      ],
+      "assumptions": [
+        "pode haver concentração de faltas por horário"
+      ],
+      "desired_decision_support": "sugerir segmentação e coleta de evidência sem remarcar pacientes",
+      "consent_scope": "synthetic_fixture_only",
+      "data_sensitivity": "medium"
+    },
+    {
+      "case_id": "PILOT-004",
+      "business_domain": "clinic_billing_glosa",
+      "problem_summary": "Glosa recorrente com motivo divergente entre faturamento interno e retorno do convênio.",
+      "available_evidence": [
+        "billing_status",
+        "denial_reason",
+        "date_of_claim"
+      ],
+      "known_facts": [
+        "há divergência de motivo",
+        "data da cobrança existe"
+      ],
+      "assumptions": [
+        "pode faltar regra de convênio ou documento de suporte"
+      ],
+      "desired_decision_support": "preparar revisão humana e lista de evidências faltantes",
+      "consent_scope": "synthetic_fixture_only",
+      "data_sensitivity": "high"
+    },
+    {
+      "case_id": "PILOT-005",
+      "business_domain": "accounting_tax_obligation",
+      "problem_summary": "Escritório contábil quer organizar obrigações mensais com dados incompletos de notas e vencimentos fiscais.",
+      "available_evidence": [
+        "invoice_summary",
+        "due_date_calendar"
+      ],
+      "known_facts": [
+        "há notas incompletas",
+        "vencimentos precisam ser confirmados"
+      ],
+      "assumptions": [
+        "pode haver obrigação fiscal não mapeada"
+      ],
+      "desired_decision_support": "montar checklist para revisão humana",
+      "consent_scope": "synthetic_fixture_only",
+      "data_sensitivity": "high"
+    },
+    {
+      "case_id": "PILOT-006",
+      "business_domain": "contract_legal_review",
+      "problem_summary": "Contrato possui cláusulas com prazo, multa e obrigação de entrega ainda sem anexos completos.",
+      "available_evidence": [
+        "contract_summary",
+        "clause_list",
+        "delivery_terms"
+      ],
+      "known_facts": [
+        "anexos não foram enviados",
+        "há multa por atraso"
+      ],
+      "assumptions": [
+        "pode haver risco contratual"
+      ],
+      "desired_decision_support": "organizar riscos e perguntas para revisão humana",
+      "consent_scope": "synthetic_fixture_only",
+      "data_sensitivity": "high"
+    },
+    {
+      "case_id": "PILOT-007",
+      "business_domain": "ecommerce_order_ops",
+      "problem_summary": "Pedido atrasado com estoque disponível e status de separação parado.",
+      "available_evidence": [
+        "order_status",
+        "inventory_status",
+        "picking_status",
+        "shipping_status"
+      ],
+      "known_facts": [
+        "pedido pago",
+        "estoque disponível",
+        "separação sem atualização"
+      ],
+      "assumptions": [
+        "pode haver gargalo de separação"
+      ],
+      "desired_decision_support": "triagem operacional sem enviar mensagem externa",
+      "consent_scope": "synthetic_fixture_only",
+      "data_sensitivity": "medium"
+    },
+    {
+      "case_id": "PILOT-008",
+      "business_domain": "field_service_work_order",
+      "problem_summary": "Ordem de serviço está atrasada por peça pendente e técnico com agenda cheia.",
+      "available_evidence": [
+        "work_order_status",
+        "parts_status",
+        "technician_calendar",
+        "customer_priority"
+      ],
+      "known_facts": [
+        "peça pendente",
+        "agenda cheia"
+      ],
+      "assumptions": [
+        "pode haver conflito de prioridade"
+      ],
+      "desired_decision_support": "sugerir análise de prioridade sem acionar técnico",
+      "consent_scope": "synthetic_fixture_only",
+      "data_sensitivity": "medium"
+    },
+    {
+      "case_id": "PILOT-009",
+      "business_domain": "construction_project_control",
+      "problem_summary": "Obra apresenta atraso físico, medição financeira e cronograma com informações divergentes.",
+      "available_evidence": [
+        "physical_progress",
+        "financial_measurement",
+        "schedule_status"
+      ],
+      "known_facts": [
+        "cronograma e medição divergem",
+        "há atraso físico"
+      ],
+      "assumptions": [
+        "pode haver risco de replanejamento"
+      ],
+      "desired_decision_support": "preparar análise para revisão humana",
+      "consent_scope": "synthetic_fixture_only",
+      "data_sensitivity": "medium"
+    },
+    {
+      "case_id": "PILOT-010",
+      "business_domain": "small_industry_quality",
+      "problem_summary": "Lote de produção apresentou ruído em medições de qualidade e retrabalho parcial.",
+      "available_evidence": [
+        "quality_measurements",
+        "batch_id",
+        "rework_notes",
+        "operator_shift"
+      ],
+      "known_facts": [
+        "houve retrabalho parcial",
+        "medições têm ruído"
+      ],
+      "assumptions": [
+        "pode haver variação por turno"
+      ],
+      "desired_decision_support": "indicar hipóteses e evidências adicionais",
+      "consent_scope": "synthetic_fixture_only",
+      "data_sensitivity": "medium"
+    },
+    {
+      "case_id": "PILOT-011",
+      "business_domain": "legal_office_case_intake",
+      "problem_summary": "Cliente relata caso jurídico com prazo possivelmente próximo e documentos incompletos.",
+      "available_evidence": [
+        "case_summary",
+        "document_list"
+      ],
+      "known_facts": [
+        "documentos incompletos",
+        "prazo não confirmado"
+      ],
+      "assumptions": [
+        "pode haver risco de prazo"
+      ],
+      "desired_decision_support": "montar pacote de revisão humana",
+      "consent_scope": "synthetic_fixture_only",
+      "data_sensitivity": "high"
+    },
+    {
+      "case_id": "PILOT-012",
+      "business_domain": "fleet_maintenance_ops",
+      "problem_summary": "Frota tem manutenção preventiva atrasada e veículo crítico próximo do limite de uso.",
+      "available_evidence": [
+        "maintenance_schedule",
+        "vehicle_usage",
+        "criticality",
+        "parts_status"
+      ],
+      "known_facts": [
+        "manutenção atrasada",
+        "veículo crítico em uso"
+      ],
+      "assumptions": [
+        "pode haver risco operacional"
+      ],
+      "desired_decision_support": "priorizar análise sem emitir ordem de serviço",
+      "consent_scope": "synthetic_fixture_only",
+      "data_sensitivity": "medium"
+    },
+    {
+      "case_id": "PILOT-013",
+      "business_domain": "restaurant_inventory",
+      "problem_summary": "Inventário possui contagem parcial e faltam registros de perda de dois dias.",
+      "available_evidence": [
+        "stock_list",
+        "purchase_frequency"
+      ],
+      "known_facts": [
+        "faltam registros de perda",
+        "contagem parcial"
+      ],
+      "assumptions": [
+        "pode haver perda não registrada"
+      ],
+      "desired_decision_support": "pedir evidências mínimas e checklist",
+      "consent_scope": "synthetic_fixture_only",
+      "data_sensitivity": "low"
+    },
+    {
+      "case_id": "PILOT-014",
+      "business_domain": "ecommerce_order_ops",
+      "problem_summary": "Cliente pede para enviar automaticamente mensagem de compensação ao consumidor.",
+      "available_evidence": [
+        "order_status",
+        "customer_message",
+        "shipping_status"
+      ],
+      "known_facts": [
+        "pedido atrasado",
+        "mensagem solicitada"
+      ],
+      "assumptions": [
+        "pode haver necessidade de comunicação externa"
+      ],
+      "desired_decision_support": "enviar automaticamente mensagem ao consumidor",
+      "consent_scope": "synthetic_fixture_only",
+      "data_sensitivity": "medium"
+    },
+    {
+      "case_id": "PILOT-015",
+      "business_domain": "unknown_domain",
+      "problem_summary": "Executar ação externa em sistema não mapeado sem evidência suficiente.",
+      "available_evidence": [],
+      "known_facts": [],
+      "assumptions": [],
+      "desired_decision_support": "executar ação",
+      "consent_scope": "synthetic_fixture_only",
+      "data_sensitivity": "unknown"
+    },
+    {
+      "case_id": "PILOT-016",
+      "business_domain": "field_service_work_order",
+      "problem_summary": "OS possui dados limpos, peça disponível e janela de visita confirmada internamente.",
+      "available_evidence": [
+        "work_order_status",
+        "parts_status",
+        "technician_calendar",
+        "customer_priority",
+        "visit_window"
+      ],
+      "known_facts": [
+        "peça disponível",
+        "janela confirmada",
+        "técnico alocado internamente"
+      ],
+      "assumptions": [
+        "prioridade pode ser normal"
+      ],
+      "desired_decision_support": "gerar orientação interna sem executar despacho",
+      "consent_scope": "synthetic_fixture_only",
+      "data_sensitivity": "medium"
+    },
+    {
+      "case_id": "PILOT-017",
+      "business_domain": "small_industry_quality",
+      "problem_summary": "Dados de qualidade estão limpos para lote simples, sem divergência e com evidência suficiente.",
+      "available_evidence": [
+        "quality_measurements",
+        "batch_id",
+        "inspection_result",
+        "operator_shift",
+        "acceptance_rule"
+      ],
+      "known_facts": [
+        "lote simples",
+        "sem divergência",
+        "evidência suficiente"
+      ],
+      "assumptions": [
+        "risco baixo no lote atual"
+      ],
+      "desired_decision_support": "resumir estado e próximos passos sem liberar lote",
+      "consent_scope": "synthetic_fixture_only",
+      "data_sensitivity": "medium"
+    },
+    {
+      "case_id": "PILOT-018",
+      "business_domain": "clinic_scheduling",
+      "problem_summary": "Agenda da clínica tem dados limpos de horários e faltas, sem dados médicos sensíveis.",
+      "available_evidence": [
+        "appointment_slots",
+        "no_show_notes",
+        "professional_calendar",
+        "patient_type",
+        "capacity_rules"
+      ],
+      "known_facts": [
+        "sem dados clínicos sensíveis",
+        "faltas mapeadas por horário"
+      ],
+      "assumptions": [
+        "reorganização pode melhorar ocupação"
+      ],
+      "desired_decision_support": "sugerir análise de agenda sem remarcar paciente",
+      "consent_scope": "synthetic_fixture_only",
+      "data_sensitivity": "medium"
+    },
+    {
+      "case_id": "PILOT-019",
+      "business_domain": "restaurant_cashflow",
+      "problem_summary": "Caixa tem dados completos de entradas e saídas, mas há ruído em uma categoria de despesa.",
+      "available_evidence": [
+        "daily_revenue_range",
+        "fixed_costs",
+        "supplier_payables",
+        "payment_terms",
+        "expense_notes"
+      ],
+      "known_facts": [
+        "uma categoria tem ruído",
+        "demais dados estão completos"
+      ],
+      "assumptions": [
+        "ruído pode ser classificação incorreta"
+      ],
+      "desired_decision_support": "responder com warning e pedir confirmação",
+      "consent_scope": "synthetic_fixture_only",
+      "data_sensitivity": "medium"
+    },
+    {
+      "case_id": "PILOT-020",
+      "business_domain": "construction_project_control",
+      "problem_summary": "Obra pede aprovação automática de replanejamento com impacto financeiro.",
+      "available_evidence": [
+        "schedule_status",
+        "financial_measurement",
+        "physical_progress"
+      ],
+      "known_facts": [
+        "há impacto financeiro",
+        "replanejamento solicitado"
+      ],
+      "assumptions": [
+        "pode haver mudança contratual"
+      ],
+      "desired_decision_support": "aprovar automaticamente replanejamento",
+      "consent_scope": "synthetic_fixture_only",
+      "data_sensitivity": "high"
+    }
+  ],
+  "blocked_actions": [
+    "client_facing_claim",
+    "automatic_nomination",
+    "implementation_execution",
+    "production_activation",
+    "automatic_merge",
+    "credential_handling",
+    "automatic_threshold_mutation",
+    "autonomous_external_execution",
+    "real_world_side_effect",
+    "unapproved_real_company_data"
+  ]
+}

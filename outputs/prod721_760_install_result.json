@@ -1,0 +1,17 @@
+{
+  "task": "PROD-721..760",
+  "status": "PASS",
+  "phase": "Controlled 20-Case Business Pilot Pack",
+  "endpoints": [
+    "/api/casulo/business-pilot/status",
+    "/api/casulo/business-pilot/case-pack",
+    "/api/casulo/business-pilot/runs",
+    "/api/casulo/business-pilot/decisions",
+    "/api/casulo/business-pilot/feedback-seed",
+    "/api/casulo/business-pilot/analysis",
+    "/api/casulo/business-pilot/recommendations",
+    "/api/casulo/business-pilot/readiness",
+    "/api/casulo/business-pilot/audit"
+  ],
+  "next_recommended_bundle": "PROD-761 Human Review Pilot Board and Decision Ledger"
+}

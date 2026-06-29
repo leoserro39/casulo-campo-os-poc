@@ -1,0 +1,56 @@
+{
+  "status": "PASS",
+  "generated_at": "2026-06-29T14:29:35+00:00",
+  "phase": "Controlled 20-Case Business Pilot Pack",
+  "mode": "controlled_pilot_no_external_execution",
+  "case_count": 20,
+  "run_count": 20,
+  "gate_distribution": {
+    "ALLOW_WITH_WARNING": 1,
+    "ANSWER_ALLOWED": 3,
+    "EVIDENCE_REQUIRED": 2,
+    "HUMAN_REVIEW_REQUIRED": 8,
+    "UNSUPPORTED_BLOCKED": 6
+  },
+  "output_mode_distribution": {
+    "ALLOW_WITH_WARNING": 1,
+    "ANSWER": 3,
+    "BLOCKED": 6,
+    "EVIDENCE_REQUEST": 2,
+    "HUMAN_REVIEW_PACKET": 8
+  },
+  "reasoning_mode_distribution": {
+    "FULL_REASONING_WITH_GROUNDING": 9,
+    "GAP_MAPPING_ONLY": 1,
+    "GUIDED_REASONING": 10
+  },
+  "risk_band_distribution": {
+    "CRITICAL": 6,
+    "HIGH": 6,
+    "LOW": 3,
+    "MEDIUM": 5
+  },
+  "activation_distribution": {
+    "CANDIDATE_DOMAIN_REQUIRE_EVIDENCE": 5,
+    "CONTROLLED_ACTIVE_DOMAIN": 13,
+    "DOMAIN_NOT_READY_COLLECT_MINIMUM_DATA": 1,
+    "EXPLORATORY_ONLY": 1
+  },
+  "min_adjusted_risk": 26.2,
+  "avg_adjusted_risk": 59.9375,
+  "max_adjusted_risk": 98.55,
+  "external_execution_allowed": false,
+  "automatic_threshold_mutation_allowed": false,
+  "blocked_actions": [
+    "client_facing_claim",
+    "automatic_nomination",
+    "implementation_execution",
+    "production_activation",
+    "automatic_merge",
+    "credential_handling",
+    "automatic_threshold_mutation",
+    "autonomous_external_execution",
+    "real_world_side_effect",
+    "unapproved_real_company_data"
+  ]
+}

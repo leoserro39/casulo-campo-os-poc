@@ -281,4 +281,19 @@ ENDPOINT_GROUPS = [
         ],
     },
 
+    {
+        "group": "controlled_20_case_business_pilot",
+        "routes": [
+            {"path": "/api/casulo/business-pilot/status", "file": "outputs/prod721_760_business_pilot_status.json", "key": "status"},
+            {"path": "/api/casulo/business-pilot/case-pack", "file": "outputs/prod721_760_business_pilot_case_pack.json", "key": "case_pack"},
+            {"path": "/api/casulo/business-pilot/runs", "file": "outputs/prod721_760_business_pilot_runs.json", "key": "runs"},
+            {"path": "/api/casulo/business-pilot/decisions", "file": "outputs/prod721_760_business_pilot_decisions.json", "key": "decisions"},
+            {"path": "/api/casulo/business-pilot/feedback-seed", "file": "outputs/prod721_760_business_pilot_feedback_seed.json", "key": "feedback_seed"},
+            {"path": "/api/casulo/business-pilot/analysis", "file": "outputs/prod721_760_business_pilot_analysis.json", "key": "analysis"},
+            {"path": "/api/casulo/business-pilot/recommendations", "file": "outputs/prod721_760_business_pilot_calibration_recommendations.json", "key": "recommendations"},
+            {"path": "/api/casulo/business-pilot/readiness", "file": "outputs/prod721_760_business_pilot_readiness.json", "key": "readiness"},
+            {"path": "/api/casulo/business-pilot/audit", "file": "outputs/prod721_760_business_pilot_audit_report.json", "key": "audit"},
+        ],
+    },
+
 ]

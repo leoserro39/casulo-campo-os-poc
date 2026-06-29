@@ -1,0 +1,8 @@
+{
+  "contract": "casulo.business_pilot_case_pack.v0.1",
+  "case_count": 20,
+  "allowed_case_source": [
+    "synthetic_fixture_only",
+    "explicitly_approved_anonymized_real_case"
+  ]
+}

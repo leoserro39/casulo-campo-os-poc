@@ -1,0 +1,4 @@
+{
+  "contract": "casulo.business_pilot_feedback_seed.v0.1",
+  "purpose": "Seed feedback labels for the 20 pilot cases without auto-applying calibration."
+}

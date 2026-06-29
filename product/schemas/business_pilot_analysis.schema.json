@@ -1,0 +1,10 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "business_pilot_analysis.schema.json",
+  "type": "object",
+  "required": [
+    "status",
+    "analysis",
+    "blocked_actions"
+  ]
+}
