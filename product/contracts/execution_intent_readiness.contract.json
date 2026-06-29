@@ -1,0 +1,4 @@
+{
+  "contract": "casulo.execution_intent_readiness.v0.1",
+  "purpose": "Determine readiness for pilot board refresh after negation-aware intent handling."
+}

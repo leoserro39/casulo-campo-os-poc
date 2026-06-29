@@ -1,0 +1,11 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "false_block_regression.schema.json",
+  "type": "object",
+  "required": [
+    "status",
+    "resolved_false_block_candidates",
+    "direct_execution_blocks_preserved",
+    "blocked_actions"
+  ]
+}

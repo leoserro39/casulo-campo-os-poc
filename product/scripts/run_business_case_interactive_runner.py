@@ -150,6 +150,83 @@ def infer_evidence_score(case: Dict[str, Any]) -> float:
         score -= 0.05
     return round(clamp01(score), 4)
 
+
+NEGATED_EXECUTION_PATTERNS = [
+    "sem executar",
+    "sem enviar",
+    "sem acionar",
+    "sem liberar",
+    "sem aprovar",
+    "não executar",
+    "nao executar",
+    "não enviar",
+    "nao enviar",
+    "não acionar",
+    "nao acionar",
+    "não liberar",
+    "nao liberar",
+    "não aprovar",
+    "nao aprovar",
+]
+
+DIRECT_EXECUTION_PATTERNS = [
+    "aprovar automaticamente",
+    "executar automaticamente",
+    "enviar automaticamente",
+    "acionar automaticamente",
+    "liberar automaticamente",
+    "executar ação",
+    "executar acao",
+    "ação externa",
+    "acao externa",
+]
+
+DIRECT_EXECUTION_TERMS = ["executar", "enviar", "acionar", "liberar", "aprovar"]
+
+
+def _execution_text(case: Dict[str, Any]) -> str:
+    return " ".join([
+        str(case.get("problem_summary", "")),
+        str(case.get("desired_decision_support", "")),
+        " ".join(case.get("known_facts", []) if isinstance(case.get("known_facts"), list) else []),
+        " ".join(case.get("assumptions", []) if isinstance(case.get("assumptions"), list) else []),
+    ]).lower()
+
+
+def _desired_action_text(case: Dict[str, Any]) -> str:
+    return str(case.get("desired_decision_support", "")).lower()
+
+
+def has_negated_execution_intent(case: Dict[str, Any]) -> bool:
+    text = _execution_text(case)
+    return any(pattern in text for pattern in NEGATED_EXECUTION_PATTERNS)
+
+
+def has_direct_execution_intent(case: Dict[str, Any]) -> bool:
+    text = _execution_text(case)
+    desired = _desired_action_text(case)
+
+    if any(pattern in text for pattern in DIRECT_EXECUTION_PATTERNS):
+        return True
+
+    if any(term in desired for term in DIRECT_EXECUTION_TERMS):
+        if not any(pattern in desired for pattern in NEGATED_EXECUTION_PATTERNS):
+            return True
+
+    return False
+
+
+def classify_execution_intent(case: Dict[str, Any]) -> str:
+    direct = has_direct_execution_intent(case)
+    negated = has_negated_execution_intent(case)
+
+    if direct:
+        return "EXECUTION_REQUEST"
+    if negated:
+        return "SAFE_NON_EXECUTING_REQUEST"
+    return "NO_EXECUTION_REQUEST"
+
+
 def infer_scenario(case: Dict[str, Any]) -> str:
     text = " ".join([
         str(case.get("problem_summary", "")),
@@ -159,7 +236,8 @@ def infer_scenario(case: Dict[str, Any]) -> str:
     ]).lower()
     if case.get("business_domain") not in SUPPORTED_DOMAINS:
         return "unsupported_request"
-    if any(word in text for word in ["executar", "enviar", "aprovar automaticamente", "automaticamente", "ação externa"]):
+    intent = classify_execution_intent(case)
+    if intent == "EXECUTION_REQUEST":
         return "execution_request"
     if any(word in text for word in ["divergente", "divergência", "conflito", "incompatível"]):
         return "conflicting_values"

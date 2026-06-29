@@ -1,0 +1,4 @@
+{
+  "contract": "casulo.false_block_regression.v0.1",
+  "purpose": "Confirm false block candidates from the human review board are resolved while direct execution blocks remain preserved."
+}

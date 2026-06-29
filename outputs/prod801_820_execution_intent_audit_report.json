@@ -1,0 +1,32 @@
+{
+  "status": "PASS",
+  "audit": "Negation-Aware Execution Intent Classifier Hotfix audit",
+  "case_count": 20,
+  "resolved_false_block_candidates": [
+    "PILOT-001",
+    "PILOT-007",
+    "PILOT-016"
+  ],
+  "direct_execution_blocks_preserved": [
+    "PILOT-014",
+    "PILOT-015",
+    "PILOT-020"
+  ],
+  "external_execution_allowed": false,
+  "automatic_threshold_mutation_allowed": false,
+  "auto_apply": false,
+  "finding": "PASS: negated execution phrases are no longer treated as external execution requests while direct execution blocks remain preserved.",
+  "readiness": "READY_FOR_PILOT_BOARD_REFRESH_AFTER_INTENT_HOTFIX",
+  "blocked_actions": [
+    "client_facing_claim",
+    "automatic_nomination",
+    "implementation_execution",
+    "production_activation",
+    "automatic_merge",
+    "credential_handling",
+    "automatic_threshold_mutation",
+    "autonomous_external_execution",
+    "real_world_side_effect",
+    "unapproved_real_company_data"
+  ]
+}

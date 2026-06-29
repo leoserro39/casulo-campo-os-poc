@@ -1,0 +1,32 @@
+{
+  "status": "PASS",
+  "decision": "READY_FOR_PILOT_BOARD_REFRESH_AFTER_INTENT_HOTFIX",
+  "case_count": 20,
+  "resolved_false_block_count": 3,
+  "direct_execution_blocks_preserved_count": 3,
+  "ready_for": [
+    "pilot board refresh",
+    "case-level human review of reclassified cases",
+    "false allow scan after intent hotfix",
+    "controlled continuation without threshold mutation"
+  ],
+  "not_ready_for": [
+    "automatic threshold mutation",
+    "production activation",
+    "autonomous external execution",
+    "client-facing guarantees",
+    "50-case expansion before refreshed human review"
+  ],
+  "blocked_actions": [
+    "client_facing_claim",
+    "automatic_nomination",
+    "implementation_execution",
+    "production_activation",
+    "automatic_merge",
+    "credential_handling",
+    "automatic_threshold_mutation",
+    "autonomous_external_execution",
+    "real_world_side_effect",
+    "unapproved_real_company_data"
+  ]
+}

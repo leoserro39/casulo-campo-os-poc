@@ -1,0 +1,55 @@
+{
+  "status": "PASS",
+  "auto_apply": false,
+  "automatic_threshold_mutation_allowed": false,
+  "recommendations": [
+    {
+      "id": "INTENT-CAL-001",
+      "target": "pilot_board_refresh",
+      "recommendation": "Refresh the human review board after the negation-aware classifier so resolved false blocks move to case-level review rather than global threshold mutation.",
+      "cases": [
+        "PILOT-001",
+        "PILOT-007",
+        "PILOT-016"
+      ],
+      "auto_apply": false,
+      "requires_human_approval": true
+    },
+    {
+      "id": "INTENT-CAL-002",
+      "target": "direct_execution_block_policy",
+      "recommendation": "Maintain direct execution block policy for automatic approval, automatic send and unknown external actions.",
+      "cases": [
+        "PILOT-014",
+        "PILOT-015",
+        "PILOT-020"
+      ],
+      "auto_apply": false,
+      "requires_human_approval": true
+    },
+    {
+      "id": "INTENT-CAL-003",
+      "target": "false_allow_scan",
+      "recommendation": "Run false-allow scan on newly allowed cases before any expansion to 50 cases.",
+      "cases": [
+        "PILOT-001",
+        "PILOT-007",
+        "PILOT-016"
+      ],
+      "auto_apply": false,
+      "requires_human_approval": true
+    }
+  ],
+  "blocked_actions": [
+    "client_facing_claim",
+    "automatic_nomination",
+    "implementation_execution",
+    "production_activation",
+    "automatic_merge",
+    "credential_handling",
+    "automatic_threshold_mutation",
+    "autonomous_external_execution",
+    "real_world_side_effect",
+    "unapproved_real_company_data"
+  ]
+}

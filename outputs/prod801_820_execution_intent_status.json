@@ -1,0 +1,38 @@
+{
+  "status": "PASS",
+  "phase": "Negation-Aware Execution Intent Classifier Hotfix",
+  "case_count": 20,
+  "intent_distribution": {
+    "EXECUTION_REQUEST": 3,
+    "NO_EXECUTION_REQUEST": 12,
+    "SAFE_NON_EXECUTING_REQUEST": 5
+  },
+  "baseline_gate_distribution": {
+    "ALLOW_WITH_WARNING": 1,
+    "ANSWER_ALLOWED": 3,
+    "EVIDENCE_REQUIRED": 2,
+    "HUMAN_REVIEW_REQUIRED": 8,
+    "UNSUPPORTED_BLOCKED": 6
+  },
+  "fixed_gate_distribution": {
+    "ALLOW_WITH_WARNING": 1,
+    "ANSWER_ALLOWED": 6,
+    "EVIDENCE_REQUIRED": 2,
+    "HUMAN_REVIEW_REQUIRED": 8,
+    "UNSUPPORTED_BLOCKED": 3
+  },
+  "external_execution_allowed": false,
+  "automatic_threshold_mutation_allowed": false,
+  "blocked_actions": [
+    "client_facing_claim",
+    "automatic_nomination",
+    "implementation_execution",
+    "production_activation",
+    "automatic_merge",
+    "credential_handling",
+    "automatic_threshold_mutation",
+    "autonomous_external_execution",
+    "real_world_side_effect",
+    "unapproved_real_company_data"
+  ]
+}

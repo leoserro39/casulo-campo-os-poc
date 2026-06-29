@@ -1,0 +1,9 @@
+{
+  "contract": "casulo.execution_intent_classifier.v0.1",
+  "intent_classes": [
+    "EXECUTION_REQUEST",
+    "SAFE_NON_EXECUTING_REQUEST",
+    "NO_EXECUTION_REQUEST"
+  ],
+  "rule": "Negated execution phrases must not be treated as external execution requests unless a direct automatic execution phrase is also present."
+}

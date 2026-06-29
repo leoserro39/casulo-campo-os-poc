@@ -1,0 +1,17 @@
+{
+  "contract": "casulo.negation_aware_execution_intent_hotfix.v0.1",
+  "purpose": "Fix false execution intent when the user explicitly says sem executar, sem enviar, sem acionar, sem liberar or sem aprovar.",
+  "mode": "hotfix_no_auto_threshold_mutation",
+  "blocked_actions": [
+    "client_facing_claim",
+    "automatic_nomination",
+    "implementation_execution",
+    "production_activation",
+    "automatic_merge",
+    "credential_handling",
+    "automatic_threshold_mutation",
+    "autonomous_external_execution",
+    "real_world_side_effect",
+    "unapproved_real_company_data"
+  ]
+}

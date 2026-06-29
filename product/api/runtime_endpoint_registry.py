@@ -309,4 +309,19 @@ ENDPOINT_GROUPS = [
         ],
     },
 
+    {
+        "group": "negation_aware_execution_intent_hotfix",
+        "routes": [
+            {"path": "/api/casulo/execution-intent/status", "file": "outputs/prod801_820_execution_intent_status.json", "key": "status"},
+            {"path": "/api/casulo/execution-intent/classifications", "file": "outputs/prod801_820_execution_intent_classifications.json", "key": "classifications"},
+            {"path": "/api/casulo/execution-intent/regression", "file": "outputs/prod801_820_false_block_regression.json", "key": "regression"},
+            {"path": "/api/casulo/execution-intent/fixed-runs", "file": "outputs/prod801_820_business_pilot_fixed_runs.json", "key": "fixed_runs"},
+            {"path": "/api/casulo/execution-intent/fixed-decisions", "file": "outputs/prod801_820_business_pilot_fixed_decisions.json", "key": "fixed_decisions"},
+            {"path": "/api/casulo/execution-intent/false-block-resolution", "file": "outputs/prod801_820_false_block_resolution.json", "key": "false_block_resolution"},
+            {"path": "/api/casulo/execution-intent/recommendations", "file": "outputs/prod801_820_execution_intent_recommendations.json", "key": "recommendations"},
+            {"path": "/api/casulo/execution-intent/readiness", "file": "outputs/prod801_820_execution_intent_readiness.json", "key": "readiness"},
+            {"path": "/api/casulo/execution-intent/audit", "file": "outputs/prod801_820_execution_intent_audit_report.json", "key": "audit"},
+        ],
+    },
+
 ]

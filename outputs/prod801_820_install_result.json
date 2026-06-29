@@ -1,0 +1,17 @@
+{
+  "task": "PROD-801..820",
+  "status": "PASS",
+  "phase": "Negation-Aware Execution Intent Classifier Hotfix",
+  "endpoints": [
+    "/api/casulo/execution-intent/status",
+    "/api/casulo/execution-intent/classifications",
+    "/api/casulo/execution-intent/regression",
+    "/api/casulo/execution-intent/fixed-runs",
+    "/api/casulo/execution-intent/fixed-decisions",
+    "/api/casulo/execution-intent/false-block-resolution",
+    "/api/casulo/execution-intent/recommendations",
+    "/api/casulo/execution-intent/readiness",
+    "/api/casulo/execution-intent/audit"
+  ],
+  "next_recommended_bundle": "PROD-821 Pilot Board Refresh and Case-Level Review Decisions"
+}
