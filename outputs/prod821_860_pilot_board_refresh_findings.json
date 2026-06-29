@@ -1,0 +1,60 @@
+{
+  "status": "PASS",
+  "findings": [
+    {
+      "id": "REFRESH-FINDING-001",
+      "name": "false_blocks_resolved_by_intent_hotfix",
+      "cases": [
+        "PILOT-001",
+        "PILOT-007",
+        "PILOT-016"
+      ],
+      "meaning": "Negation-aware intent handling resolved prior false block candidates, but each newly allowed case still requires false-allow scan."
+    },
+    {
+      "id": "REFRESH-FINDING-002",
+      "name": "direct_execution_blocks_preserved",
+      "cases": [
+        "PILOT-014",
+        "PILOT-015",
+        "PILOT-020"
+      ],
+      "meaning": "Direct execution requests remain blocked after the hotfix."
+    },
+    {
+      "id": "REFRESH-FINDING-003",
+      "name": "over_conservative_review_candidates",
+      "cases": [
+        "PILOT-002",
+        "PILOT-006"
+      ],
+      "meaning": "These cases should be reviewed for case-level reclassification, not global threshold mutation."
+    },
+    {
+      "id": "REFRESH-FINDING-004",
+      "name": "false_allow_scan_required",
+      "cases": [
+        "PILOT-001",
+        "PILOT-003",
+        "PILOT-007",
+        "PILOT-012",
+        "PILOT-016",
+        "PILOT-018",
+        "PILOT-019"
+      ],
+      "meaning": "Allowed or warning outputs must be reviewed before any 50-case expansion."
+    }
+  ],
+  "blocked_actions": [
+    "client_facing_claim",
+    "automatic_nomination",
+    "implementation_execution",
+    "production_activation",
+    "automatic_merge",
+    "credential_handling",
+    "automatic_threshold_mutation",
+    "autonomous_external_execution",
+    "real_world_side_effect",
+    "unapproved_real_company_data"
+  ]
+}

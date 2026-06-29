@@ -1,0 +1,4 @@
+{
+  "contract": "casulo.pilot_refresh_ledger.v0.1",
+  "purpose": "Carry forward previous ledger, fixed decisions and post-hotfix review decisions."
+}

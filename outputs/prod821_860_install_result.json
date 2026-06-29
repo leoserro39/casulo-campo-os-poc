@@ -1,0 +1,15 @@
+{
+  "task": "PROD-821..860",
+  "status": "PASS",
+  "phase": "Pilot Board Refresh and Case-Level Review Decisions",
+  "endpoints": [
+    "/api/casulo/pilot-board-refresh/status",
+    "/api/casulo/pilot-board-refresh/board",
+    "/api/casulo/pilot-board-refresh/ledger",
+    "/api/casulo/pilot-board-refresh/findings",
+    "/api/casulo/pilot-board-refresh/recommendations",
+    "/api/casulo/pilot-board-refresh/readiness",
+    "/api/casulo/pilot-board-refresh/audit"
+  ],
+  "next_recommended_bundle": "PROD-861 Case-Level Human Decision Capture and Board Closure"
+}

@@ -1,0 +1,17 @@
+{
+  "contract": "casulo.pilot_board_refresh.v0.1",
+  "purpose": "Refresh human review board after negation-aware execution intent hotfix using fixed runner decisions.",
+  "mode": "case_level_review_no_global_threshold_mutation",
+  "blocked_actions": [
+    "client_facing_claim",
+    "automatic_nomination",
+    "implementation_execution",
+    "production_activation",
+    "automatic_merge",
+    "credential_handling",
+    "automatic_threshold_mutation",
+    "autonomous_external_execution",
+    "real_world_side_effect",
+    "unapproved_real_company_data"
+  ]
+}

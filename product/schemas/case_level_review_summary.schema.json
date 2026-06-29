@@ -1,0 +1,10 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "case_level_review_summary.schema.json",
+  "type": "object",
+  "required": [
+    "status",
+    "summary",
+    "blocked_actions"
+  ]
+}

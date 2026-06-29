@@ -1,0 +1,23 @@
+{
+  "status": "PASS",
+  "audit": "Pilot Board Refresh and Case-Level Review Decisions audit",
+  "case_count": 20,
+  "ledger_count": 20,
+  "external_execution_allowed": false,
+  "automatic_threshold_mutation_allowed": false,
+  "auto_apply": false,
+  "finding": "PASS: refreshed pilot board uses fixed decisions and case-level review queues without global threshold mutation.",
+  "readiness": "READY_FOR_CASE_LEVEL_HUMAN_DECISION_SESSION",
+  "blocked_actions": [
+    "client_facing_claim",
+    "automatic_nomination",
+    "implementation_execution",
+    "production_activation",
+    "automatic_merge",
+    "credential_handling",
+    "automatic_threshold_mutation",
+    "autonomous_external_execution",
+    "real_world_side_effect",
+    "unapproved_real_company_data"
+  ]
+}

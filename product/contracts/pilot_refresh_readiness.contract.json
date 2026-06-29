@@ -1,0 +1,4 @@
+{
+  "contract": "casulo.pilot_refresh_readiness.v0.1",
+  "purpose": "Decide readiness for controlled case-level review session after intent hotfix."
+}

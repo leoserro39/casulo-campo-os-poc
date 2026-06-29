@@ -1,0 +1,72 @@
+{
+  "status": "PASS",
+  "auto_apply": false,
+  "automatic_threshold_mutation_allowed": false,
+  "recommendations": [
+    {
+      "id": "REFRESH-CAL-001",
+      "target": "case_level_false_block_resolution",
+      "recommendation": "Approve resolved false block cases only at case level after false-allow scan confirms the allowed output is safe.",
+      "cases": [
+        "PILOT-001",
+        "PILOT-007",
+        "PILOT-016"
+      ],
+      "auto_apply": false,
+      "requires_human_approval": true
+    },
+    {
+      "id": "REFRESH-CAL-002",
+      "target": "direct_execution_block_policy",
+      "recommendation": "Keep direct execution block policy unchanged.",
+      "cases": [
+        "PILOT-014",
+        "PILOT-015",
+        "PILOT-020"
+      ],
+      "auto_apply": false,
+      "requires_human_approval": true
+    },
+    {
+      "id": "REFRESH-CAL-003",
+      "target": "over_conservative_review",
+      "recommendation": "Inspect over-conservative candidates and approve only case-level reclassification if justified.",
+      "cases": [
+        "PILOT-002",
+        "PILOT-006"
+      ],
+      "auto_apply": false,
+      "requires_human_approval": true
+    },
+    {
+      "id": "REFRESH-CAL-004",
+      "target": "pilot_expansion_gate",
+      "recommendation": "Do not expand to 50 cases until refreshed board queues are human-reviewed.",
+      "cases": [
+        "PILOT-001",
+        "PILOT-003",
+        "PILOT-007",
+        "PILOT-012",
+        "PILOT-016",
+        "PILOT-018",
+        "PILOT-019",
+        "PILOT-002",
+        "PILOT-006"
+      ],
+      "auto_apply": false,
+      "requires_human_approval": true
+    }
+  ],
+  "blocked_actions": [
+    "client_facing_claim",
+    "automatic_nomination",
+    "implementation_execution",
+    "production_activation",
+    "automatic_merge",
+    "credential_handling",
+    "automatic_threshold_mutation",
+    "autonomous_external_execution",
+    "real_world_side_effect",
+    "unapproved_real_company_data"
+  ]
+}

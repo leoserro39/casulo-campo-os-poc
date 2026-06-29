@@ -1,0 +1,12 @@
+{
+  "contract": "casulo.case_level_review_decision.v0.1",
+  "decision_types": [
+    "APPROVE_FIXED_GATE_PENDING_FALSE_ALLOW_SCAN",
+    "APPROVE_DIRECT_BLOCK",
+    "KEEP_HUMAN_REVIEW",
+    "RECLASSIFICATION_CANDIDATE",
+    "KEEP_EVIDENCE_REQUEST",
+    "PENDING_FALSE_ALLOW_SCAN"
+  ],
+  "auto_apply": false
+}

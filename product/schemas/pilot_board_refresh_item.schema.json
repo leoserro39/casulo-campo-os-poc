@@ -1,0 +1,11 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "pilot_board_refresh_item.schema.json",
+  "type": "object",
+  "required": [
+    "case_id",
+    "fixed_gate",
+    "post_hotfix_review_status",
+    "case_level_recommendation"
+  ]
+}
