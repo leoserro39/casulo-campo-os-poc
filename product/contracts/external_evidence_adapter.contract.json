@@ -1,0 +1,19 @@
+{
+  "contract": "casulo.external_evidence_adapter.v0.1",
+  "purpose": "Provider-neutral adapter for external evidence discovery; providers generate evidence candidates, never committed evidence by default.",
+  "providers": [
+    "mock",
+    "tavily_contract",
+    "exa_contract",
+    "perplexity_contract"
+  ],
+  "policy": "external_sources_are_candidates_until_trust_and_citation_gates_pass",
+  "blocked_actions": [
+    "client_facing_claim",
+    "automatic_nomination",
+    "implementation_execution",
+    "production_activation",
+    "automatic_merge",
+    "credential_handling"
+  ]
+}

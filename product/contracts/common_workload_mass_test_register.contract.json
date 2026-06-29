@@ -1,0 +1,5 @@
+{
+  "contract": "casulo.common_workload_mass_test_register.v0.1",
+  "purpose": "Register future mass testing for common workloads: parser, extraction, classification, summary, checklist, triage and task generation.",
+  "future_phase": "PROD-601..620 Common Workload Mass Test Lab"
+}

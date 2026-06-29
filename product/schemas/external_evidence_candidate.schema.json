@@ -1,0 +1,14 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "external_evidence_candidate.schema.json",
+  "type": "object",
+  "required": [
+    "evidence_id",
+    "source_provider",
+    "source_url",
+    "claim",
+    "trust_level",
+    "gate",
+    "retrieved_at"
+  ]
+}

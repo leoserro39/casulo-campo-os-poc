@@ -1,0 +1,31 @@
+{
+  "contract_version": "casulo.external_evidence_adapter_readiness.v0.1",
+  "status": "PASS",
+  "decision": "READY_FOR_OPERATOR_CONSOLE_AND_SOLVER_API_PLANNING",
+  "provider_count": 4,
+  "candidate_count": 3,
+  "committed_count": 1,
+  "human_review_count": 1,
+  "network_call_performed": false,
+  "ready_for": [
+    "operator console",
+    "solver API planning",
+    "common workload mass test planning",
+    "business domain mass test planning"
+  ],
+  "not_ready_for": [
+    "automatic external claims",
+    "production activation",
+    "credential handling",
+    "unreviewed provider network calls"
+  ],
+  "next": "Build operator/demo surface and solver API plan before mass tests.",
+  "blocked_actions": [
+    "client_facing_claim",
+    "automatic_nomination",
+    "implementation_execution",
+    "production_activation",
+    "automatic_merge",
+    "credential_handling"
+  ]
+}

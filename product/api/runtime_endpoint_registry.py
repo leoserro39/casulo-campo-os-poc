@@ -114,4 +114,16 @@ ENDPOINT_GROUPS = [
             {"path": "/api/casulo/milestone-snapshot/audit", "file": "outputs/prod481_500_audit_report.json", "key": "audit"},
         ],
     },
+    {
+        "group": "external_evidence",
+        "routes": [
+            {"path": "/api/casulo/external-evidence/providers", "file": "outputs/prod521_560_provider_registry.json", "key": "provider_registry"},
+            {"path": "/api/casulo/external-evidence/candidates", "file": "outputs/prod521_560_external_evidence_candidates.json", "key": "external_evidence_candidates"},
+            {"path": "/api/casulo/external-evidence/citation-gate", "file": "outputs/prod521_560_citation_gate_result.json", "key": "citation_gate_result"},
+            {"path": "/api/casulo/external-evidence/common-workloads", "file": "outputs/prod521_560_common_workload_mass_test_register.json", "key": "common_workload_mass_test_register"},
+            {"path": "/api/casulo/external-evidence/readiness", "file": "outputs/prod521_560_readiness.json", "key": "readiness"},
+            {"path": "/api/casulo/external-evidence/audit", "file": "outputs/prod521_560_audit_report.json", "key": "audit"},
+        ],
+    },
+
 ]

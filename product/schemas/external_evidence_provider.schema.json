@@ -1,0 +1,11 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "external_evidence_provider.schema.json",
+  "type": "object",
+  "required": [
+    "provider",
+    "mode",
+    "network_call_allowed",
+    "credential_required"
+  ]
+}

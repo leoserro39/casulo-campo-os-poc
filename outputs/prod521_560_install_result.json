@@ -1,0 +1,14 @@
+{
+  "task": "PROD-521..560",
+  "status": "PASS",
+  "phase": "External Evidence Adapter and Trust Gate",
+  "endpoints": [
+    "/api/casulo/external-evidence/providers",
+    "/api/casulo/external-evidence/candidates",
+    "/api/casulo/external-evidence/citation-gate",
+    "/api/casulo/external-evidence/common-workloads",
+    "/api/casulo/external-evidence/readiness",
+    "/api/casulo/external-evidence/audit"
+  ],
+  "next_recommended_bundle": "PROD-561..600 Operator Console and Solver API Surface"
+}

@@ -1,0 +1,5 @@
+{
+  "contract": "casulo.provider_contracts.v0.1",
+  "purpose": "Define safe provider interfaces for Tavily, Exa and Perplexity without requiring credentials or network calls.",
+  "execution_policy": "no_network_call_by_default"
+}

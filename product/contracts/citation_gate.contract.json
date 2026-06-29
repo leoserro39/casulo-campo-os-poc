@@ -1,0 +1,10 @@
+{
+  "contract": "casulo.citation_gate.v0.1",
+  "purpose": "Require URL, retrieved_at, claim, supporting excerpt and citation support status before evidence can be used.",
+  "gate_outcomes": [
+    "EVIDENCE_CANDIDATE",
+    "COMMITTED_EVIDENCE",
+    "HUMAN_REVIEW_REQUIRED",
+    "REJECTED"
+  ]
+}

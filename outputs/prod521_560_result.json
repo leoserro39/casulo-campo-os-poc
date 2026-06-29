@@ -1,0 +1,23 @@
+{
+  "task": "PROD-521..560",
+  "status": "PASS",
+  "phase": "External Evidence Adapter and Trust Gate",
+  "decision": "READY_FOR_OPERATOR_CONSOLE_AND_SOLVER_API_PLANNING",
+  "outputs": [
+    "outputs/prod521_560_provider_registry.json",
+    "outputs/prod521_560_external_evidence_candidates.json",
+    "outputs/prod521_560_citation_gate_result.json",
+    "outputs/prod521_560_common_workload_mass_test_register.json",
+    "outputs/prod521_560_readiness.json",
+    "outputs/prod521_560_audit_report.json"
+  ],
+  "next_recommended_bundle": "PROD-561..600 Operator Console and Solver API Surface",
+  "blocked_actions": [
+    "client_facing_claim",
+    "automatic_nomination",
+    "implementation_execution",
+    "production_activation",
+    "automatic_merge",
+    "credential_handling"
+  ]
+}

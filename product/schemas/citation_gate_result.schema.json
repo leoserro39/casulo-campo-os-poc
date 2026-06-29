@@ -1,0 +1,12 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "citation_gate_result.schema.json",
+  "type": "object",
+  "required": [
+    "status",
+    "candidate_count",
+    "committed_count",
+    "human_review_count",
+    "rejected_count"
+  ]
+}

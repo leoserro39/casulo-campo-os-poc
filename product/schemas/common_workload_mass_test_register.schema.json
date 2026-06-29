@@ -1,0 +1,11 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "common_workload_mass_test_register.schema.json",
+  "type": "object",
+  "required": [
+    "status",
+    "future_phase",
+    "workload_families",
+    "solver_api_target"
+  ]
+}

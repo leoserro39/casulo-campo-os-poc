@@ -1,0 +1,44 @@
+{
+  "status": "PASS",
+  "provider_count": 4,
+  "providers": [
+    {
+      "provider": "mock",
+      "mode": "local_fixture",
+      "network_call_allowed": false,
+      "credential_required": false,
+      "role": "safe deterministic adapter validation"
+    },
+    {
+      "provider": "tavily",
+      "mode": "contract_only",
+      "network_call_allowed": false,
+      "credential_required": true,
+      "role": "search/extract/crawl candidate provider when credentials are explicitly configured"
+    },
+    {
+      "provider": "exa",
+      "mode": "contract_only",
+      "network_call_allowed": false,
+      "credential_required": true,
+      "role": "semantic/web/research candidate provider when credentials are explicitly configured"
+    },
+    {
+      "provider": "perplexity",
+      "mode": "contract_only",
+      "network_call_allowed": false,
+      "credential_required": true,
+      "role": "research synthesis provider; never trusted as committed evidence without source verification"
+    }
+  ],
+  "network_call_allowed_by_default": false,
+  "credential_handling": "blocked_until_explicit_secure_configuration",
+  "blocked_actions": [
+    "client_facing_claim",
+    "automatic_nomination",
+    "implementation_execution",
+    "production_activation",
+    "automatic_merge",
+    "credential_handling"
+  ]
+}

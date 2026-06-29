@@ -1,0 +1,4 @@
+{
+  "contract": "casulo.source_trust_policy.v0.1",
+  "purpose": "Classify source trust from A to D and require primary-source preference for committed evidence."
+}
