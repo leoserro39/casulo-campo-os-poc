@@ -1,0 +1,47 @@
+{
+  "status": "PASS",
+  "findings": [
+    {
+      "id": "HR-FINDING-001",
+      "name": "false_block_negated_execution_scan",
+      "cases": [
+        "PILOT-001",
+        "PILOT-007",
+        "PILOT-016"
+      ],
+      "meaning": "Some blocked cases contain negated execution wording such as 'sem executar' or 'sem enviar'. These require human review because they may not be true execution requests."
+    },
+    {
+      "id": "HR-FINDING-002",
+      "name": "over_conservative_review_scan",
+      "cases": [
+        "PILOT-002",
+        "PILOT-006"
+      ],
+      "meaning": "Some review packets may be too conservative and could become ALLOW_WITH_WARNING or EVIDENCE_REQUEST after human approval."
+    },
+    {
+      "id": "HR-FINDING-003",
+      "name": "false_allow_scan",
+      "cases": [
+        "PILOT-003",
+        "PILOT-012",
+        "PILOT-018",
+        "PILOT-019"
+      ],
+      "meaning": "All allowed/warning outputs must be scanned before pilot expansion."
+    }
+  ],
+  "blocked_actions": [
+    "client_facing_claim",
+    "automatic_nomination",
+    "implementation_execution",
+    "production_activation",
+    "automatic_merge",
+    "credential_handling",
+    "automatic_threshold_mutation",
+    "autonomous_external_execution",
+    "real_world_side_effect",
+    "unapproved_real_company_data"
+  ]
+}

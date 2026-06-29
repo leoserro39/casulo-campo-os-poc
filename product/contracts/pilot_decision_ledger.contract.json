@@ -1,0 +1,12 @@
+{
+  "contract": "casulo.pilot_decision_ledger.v0.1",
+  "purpose": "Record each case review item, risk, gate, candidate issue, proposed human action and decision status.",
+  "decision_statuses": [
+    "PENDING_HUMAN_REVIEW",
+    "APPROVED_AS_IS",
+    "RECLASSIFICATION_CANDIDATE",
+    "FALSE_BLOCK_CANDIDATE",
+    "FALSE_ALLOW_CANDIDATE",
+    "NEEDS_MORE_EVIDENCE"
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "human_review_board_item.schema.json",
+  "type": "object",
+  "required": [
+    "case_id",
+    "review_priority",
+    "current_gate",
+    "candidate_issue",
+    "decision_status"
+  ]
+}

@@ -296,4 +296,17 @@ ENDPOINT_GROUPS = [
         ],
     },
 
+    {
+        "group": "human_review_pilot_board",
+        "routes": [
+            {"path": "/api/casulo/human-review/status", "file": "outputs/prod761_800_human_review_board_status.json", "key": "status"},
+            {"path": "/api/casulo/human-review/board", "file": "outputs/prod761_800_human_review_board.json", "key": "board"},
+            {"path": "/api/casulo/human-review/ledger", "file": "outputs/prod761_800_decision_ledger.json", "key": "ledger"},
+            {"path": "/api/casulo/human-review/findings", "file": "outputs/prod761_800_human_review_findings.json", "key": "findings"},
+            {"path": "/api/casulo/human-review/recommendations", "file": "outputs/prod761_800_human_review_recommendations.json", "key": "recommendations"},
+            {"path": "/api/casulo/human-review/readiness", "file": "outputs/prod761_800_human_review_readiness.json", "key": "readiness"},
+            {"path": "/api/casulo/human-review/audit", "file": "outputs/prod761_800_human_review_audit_report.json", "key": "audit"},
+        ],
+    },
+
 ]

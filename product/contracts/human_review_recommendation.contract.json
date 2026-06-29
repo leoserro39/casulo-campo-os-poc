@@ -1,0 +1,5 @@
+{
+  "contract": "casulo.human_review_recommendation.v0.1",
+  "purpose": "Generate human review recommendations without changing thresholds.",
+  "auto_apply": false
+}

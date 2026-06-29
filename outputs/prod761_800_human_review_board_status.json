@@ -1,0 +1,47 @@
+{
+  "status": "PASS",
+  "generated_at": "2026-06-29T14:53:31+00:00",
+  "phase": "Human Review Pilot Board and Decision Ledger",
+  "mode": "human_review_board_no_auto_mutation",
+  "case_count": 20,
+  "ledger_count": 20,
+  "issue_distribution": {
+    "ALLOW_GATE_FALSE_ALLOW_SCAN": 4,
+    "DIRECT_EXECUTION_BLOCK_CONFIRMED": 3,
+    "EVIDENCE_REQUEST_INSPECTION": 2,
+    "HIGH_RISK_REVIEW_CONFIRMED": 2,
+    "POSSIBLE_FALSE_BLOCK_NEGATED_EXECUTION_PHRASE": 3,
+    "POSSIBLE_OVER_CONSERVATIVE_REVIEW": 2,
+    "REVIEW_GATE_INSPECTION": 4
+  },
+  "priority_distribution": {
+    "HIGH": 5,
+    "LOW": 2,
+    "NORMAL": 13
+  },
+  "decision_status_distribution": {
+    "APPROVED_AS_IS": 5,
+    "FALSE_BLOCK_CANDIDATE": 3,
+    "NEEDS_MORE_EVIDENCE": 2,
+    "PENDING_HUMAN_REVIEW": 8,
+    "RECLASSIFICATION_CANDIDATE": 2
+  },
+  "false_block_candidate_count": 3,
+  "reclassification_candidate_count": 2,
+  "false_allow_scan_count": 4,
+  "external_execution_allowed": false,
+  "automatic_threshold_mutation_allowed": false,
+  "auto_apply": false,
+  "blocked_actions": [
+    "client_facing_claim",
+    "automatic_nomination",
+    "implementation_execution",
+    "production_activation",
+    "automatic_merge",
+    "credential_handling",
+    "automatic_threshold_mutation",
+    "autonomous_external_execution",
+    "real_world_side_effect",
+    "unapproved_real_company_data"
+  ]
+}

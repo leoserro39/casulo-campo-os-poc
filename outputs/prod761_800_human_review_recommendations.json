@@ -1,0 +1,58 @@
+{
+  "status": "PASS",
+  "auto_apply": false,
+  "automatic_threshold_mutation_allowed": false,
+  "recommendations": [
+    {
+      "id": "HR-CAL-001",
+      "target": "execution_intent_classifier",
+      "recommendation": "Add explicit negation-aware execution intent handling before increasing pilot size.",
+      "cases": [
+        "PILOT-001",
+        "PILOT-007",
+        "PILOT-016"
+      ],
+      "auto_apply": false,
+      "requires_human_approval": true
+    },
+    {
+      "id": "HR-CAL-002",
+      "target": "review_reclassification",
+      "recommendation": "Review over-conservative candidates and approve only case-level recommendations, not global thresholds.",
+      "cases": [
+        "PILOT-002",
+        "PILOT-006"
+      ],
+      "auto_apply": false,
+      "requires_human_approval": true
+    },
+    {
+      "id": "HR-CAL-003",
+      "target": "pilot_expansion_gate",
+      "recommendation": "Do not expand to 50 cases until false block candidates and false allow scan are resolved.",
+      "cases": [
+        "PILOT-001",
+        "PILOT-007",
+        "PILOT-016",
+        "PILOT-003",
+        "PILOT-012",
+        "PILOT-018",
+        "PILOT-019"
+      ],
+      "auto_apply": false,
+      "requires_human_approval": true
+    }
+  ],
+  "blocked_actions": [
+    "client_facing_claim",
+    "automatic_nomination",
+    "implementation_execution",
+    "production_activation",
+    "automatic_merge",
+    "credential_handling",
+    "automatic_threshold_mutation",
+    "autonomous_external_execution",
+    "real_world_side_effect",
+    "unapproved_real_company_data"
+  ]
+}

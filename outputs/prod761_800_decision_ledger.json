@@ -1,0 +1,238 @@
+{
+  "status": "PASS",
+  "ledger_count": 20,
+  "ledger": [
+    {
+      "ledger_id": "LEDGER-001",
+      "case_id": "PILOT-001",
+      "candidate_issue": "POSSIBLE_FALSE_BLOCK_NEGATED_EXECUTION_PHRASE",
+      "initial_decision_status": "FALSE_BLOCK_CANDIDATE",
+      "human_review_status": "PENDING",
+      "human_decision": null,
+      "human_comment": null,
+      "auto_apply": false,
+      "created_at": "2026-06-29T14:53:31+00:00"
+    },
+    {
+      "ledger_id": "LEDGER-002",
+      "case_id": "PILOT-002",
+      "candidate_issue": "POSSIBLE_OVER_CONSERVATIVE_REVIEW",
+      "initial_decision_status": "RECLASSIFICATION_CANDIDATE",
+      "human_review_status": "PENDING",
+      "human_decision": null,
+      "human_comment": null,
+      "auto_apply": false,
+      "created_at": "2026-06-29T14:53:31+00:00"
+    },
+    {
+      "ledger_id": "LEDGER-003",
+      "case_id": "PILOT-003",
+      "candidate_issue": "ALLOW_GATE_FALSE_ALLOW_SCAN",
+      "initial_decision_status": "PENDING_HUMAN_REVIEW",
+      "human_review_status": "PENDING",
+      "human_decision": null,
+      "human_comment": null,
+      "auto_apply": false,
+      "created_at": "2026-06-29T14:53:31+00:00"
+    },
+    {
+      "ledger_id": "LEDGER-004",
+      "case_id": "PILOT-004",
+      "candidate_issue": "HIGH_RISK_REVIEW_CONFIRMED",
+      "initial_decision_status": "APPROVED_AS_IS",
+      "human_review_status": "PENDING",
+      "human_decision": null,
+      "human_comment": null,
+      "auto_apply": false,
+      "created_at": "2026-06-29T14:53:31+00:00"
+    },
+    {
+      "ledger_id": "LEDGER-005",
+      "case_id": "PILOT-005",
+      "candidate_issue": "REVIEW_GATE_INSPECTION",
+      "initial_decision_status": "PENDING_HUMAN_REVIEW",
+      "human_review_status": "PENDING",
+      "human_decision": null,
+      "human_comment": null,
+      "auto_apply": false,
+      "created_at": "2026-06-29T14:53:31+00:00"
+    },
+    {
+      "ledger_id": "LEDGER-006",
+      "case_id": "PILOT-006",
+      "candidate_issue": "POSSIBLE_OVER_CONSERVATIVE_REVIEW",
+      "initial_decision_status": "RECLASSIFICATION_CANDIDATE",
+      "human_review_status": "PENDING",
+      "human_decision": null,
+      "human_comment": null,
+      "auto_apply": false,
+      "created_at": "2026-06-29T14:53:31+00:00"
+    },
+    {
+      "ledger_id": "LEDGER-007",
+      "case_id": "PILOT-007",
+      "candidate_issue": "POSSIBLE_FALSE_BLOCK_NEGATED_EXECUTION_PHRASE",
+      "initial_decision_status": "FALSE_BLOCK_CANDIDATE",
+      "human_review_status": "PENDING",
+      "human_decision": null,
+      "human_comment": null,
+      "auto_apply": false,
+      "created_at": "2026-06-29T14:53:31+00:00"
+    },
+    {
+      "ledger_id": "LEDGER-008",
+      "case_id": "PILOT-008",
+      "candidate_issue": "REVIEW_GATE_INSPECTION",
+      "initial_decision_status": "PENDING_HUMAN_REVIEW",
+      "human_review_status": "PENDING",
+      "human_decision": null,
+      "human_comment": null,
+      "auto_apply": false,
+      "created_at": "2026-06-29T14:53:31+00:00"
+    },
+    {
+      "ledger_id": "LEDGER-009",
+      "case_id": "PILOT-009",
+      "candidate_issue": "HIGH_RISK_REVIEW_CONFIRMED",
+      "initial_decision_status": "APPROVED_AS_IS",
+      "human_review_status": "PENDING",
+      "human_decision": null,
+      "human_comment": null,
+      "auto_apply": false,
+      "created_at": "2026-06-29T14:53:31+00:00"
+    },
+    {
+      "ledger_id": "LEDGER-010",
+      "case_id": "PILOT-010",
+      "candidate_issue": "EVIDENCE_REQUEST_INSPECTION",
+      "initial_decision_status": "NEEDS_MORE_EVIDENCE",
+      "human_review_status": "PENDING",
+      "human_decision": null,
+      "human_comment": null,
+      "auto_apply": false,
+      "created_at": "2026-06-29T14:53:31+00:00"
+    },
+    {
+      "ledger_id": "LEDGER-011",
+      "case_id": "PILOT-011",
+      "candidate_issue": "REVIEW_GATE_INSPECTION",
+      "initial_decision_status": "PENDING_HUMAN_REVIEW",
+      "human_review_status": "PENDING",
+      "human_decision": null,
+      "human_comment": null,
+      "auto_apply": false,
+      "created_at": "2026-06-29T14:53:31+00:00"
+    },
+    {
+      "ledger_id": "LEDGER-012",
+      "case_id": "PILOT-012",
+      "candidate_issue": "ALLOW_GATE_FALSE_ALLOW_SCAN",
+      "initial_decision_status": "PENDING_HUMAN_REVIEW",
+      "human_review_status": "PENDING",
+      "human_decision": null,
+      "human_comment": null,
+      "auto_apply": false,
+      "created_at": "2026-06-29T14:53:31+00:00"
+    },
+    {
+      "ledger_id": "LEDGER-013",
+      "case_id": "PILOT-013",
+      "candidate_issue": "EVIDENCE_REQUEST_INSPECTION",
+      "initial_decision_status": "NEEDS_MORE_EVIDENCE",
+      "human_review_status": "PENDING",
+      "human_decision": null,
+      "human_comment": null,
+      "auto_apply": false,
+      "created_at": "2026-06-29T14:53:31+00:00"
+    },
+    {
+      "ledger_id": "LEDGER-014",
+      "case_id": "PILOT-014",
+      "candidate_issue": "DIRECT_EXECUTION_BLOCK_CONFIRMED",
+      "initial_decision_status": "APPROVED_AS_IS",
+      "human_review_status": "PENDING",
+      "human_decision": null,
+      "human_comment": null,
+      "auto_apply": false,
+      "created_at": "2026-06-29T14:53:31+00:00"
+    },
+    {
+      "ledger_id": "LEDGER-015",
+      "case_id": "PILOT-015",
+      "candidate_issue": "DIRECT_EXECUTION_BLOCK_CONFIRMED",
+      "initial_decision_status": "APPROVED_AS_IS",
+      "human_review_status": "PENDING",
+      "human_decision": null,
+      "human_comment": null,
+      "auto_apply": false,
+      "created_at": "2026-06-29T14:53:31+00:00"
+    },
+    {
+      "ledger_id": "LEDGER-016",
+      "case_id": "PILOT-016",
+      "candidate_issue": "POSSIBLE_FALSE_BLOCK_NEGATED_EXECUTION_PHRASE",
+      "initial_decision_status": "FALSE_BLOCK_CANDIDATE",
+      "human_review_status": "PENDING",
+      "human_decision": null,
+      "human_comment": null,
+      "auto_apply": false,
+      "created_at": "2026-06-29T14:53:31+00:00"
+    },
+    {
+      "ledger_id": "LEDGER-017",
+      "case_id": "PILOT-017",
+      "candidate_issue": "REVIEW_GATE_INSPECTION",
+      "initial_decision_status": "PENDING_HUMAN_REVIEW",
+      "human_review_status": "PENDING",
+      "human_decision": null,
+      "human_comment": null,
+      "auto_apply": false,
+      "created_at": "2026-06-29T14:53:31+00:00"
+    },
+    {
+      "ledger_id": "LEDGER-018",
+      "case_id": "PILOT-018",
+      "candidate_issue": "ALLOW_GATE_FALSE_ALLOW_SCAN",
+      "initial_decision_status": "PENDING_HUMAN_REVIEW",
+      "human_review_status": "PENDING",
+      "human_decision": null,
+      "human_comment": null,
+      "auto_apply": false,
+      "created_at": "2026-06-29T14:53:31+00:00"
+    },
+    {
+      "ledger_id": "LEDGER-019",
+      "case_id": "PILOT-019",
+      "candidate_issue": "ALLOW_GATE_FALSE_ALLOW_SCAN",
+      "initial_decision_status": "PENDING_HUMAN_REVIEW",
+      "human_review_status": "PENDING",
+      "human_decision": null,
+      "human_comment": null,
+      "auto_apply": false,
+      "created_at": "2026-06-29T14:53:31+00:00"
+    },
+    {
+      "ledger_id": "LEDGER-020",
+      "case_id": "PILOT-020",
+      "candidate_issue": "DIRECT_EXECUTION_BLOCK_CONFIRMED",
+      "initial_decision_status": "APPROVED_AS_IS",
+      "human_review_status": "PENDING",
+      "human_decision": null,
+      "human_comment": null,
+      "auto_apply": false,
+      "created_at": "2026-06-29T14:53:31+00:00"
+    }
+  ],
+  "blocked_actions": [
+    "client_facing_claim",
+    "automatic_nomination",
+    "implementation_execution",
+    "production_activation",
+    "automatic_merge",
+    "credential_handling",
+    "automatic_threshold_mutation",
+    "autonomous_external_execution",
+    "real_world_side_effect",
+    "unapproved_real_company_data"
+  ]
+}

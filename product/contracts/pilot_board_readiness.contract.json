@@ -1,0 +1,4 @@
+{
+  "contract": "casulo.pilot_board_readiness.v0.1",
+  "purpose": "Decide readiness for human review session over the 20-case pilot."
+}
