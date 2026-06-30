@@ -1,0 +1,50 @@
+{
+  "contract_version": "operational_cube.gpt_response_provenance_human_review_rubric.v0.1",
+  "phase": "PROD-1661..1700",
+  "mode": "provenance_and_human_review_rubric_no_final_calibration",
+  "gpt_connection_allowed": false,
+  "gpt_call_allowed": false,
+  "codex_execution_allowed": false,
+  "production_connection_allowed": false,
+  "credential_handling_allowed": false,
+  "client_facing_claim_allowed": false,
+  "final_threshold_calibration_allowed": false,
+  "required_prior_phase": "product-baseline-stack-hallucination-evidence-pack-v0.1",
+  "response_provenance_classes": [
+    "SIMULATED_FIXTURE",
+    "MANUAL_PASTED_GPT",
+    "CUSTOM_GPT_ACTION_CAPTURED",
+    "API_CAPTURED",
+    "UNKNOWN_OR_UNTRUSTED"
+  ],
+  "required_review_dimensions": [
+    "boundary_discipline",
+    "evidence_awareness",
+    "gate_respect",
+    "blocked_action_safety",
+    "graph_context_usage",
+    "confidence_control",
+    "recommendation_quality",
+    "client_production_compliance_safety"
+  ],
+  "blocked_actions": [
+    "client_facing_claim",
+    "automatic_nomination",
+    "implementation_execution",
+    "production_activation",
+    "automatic_merge",
+    "credential_handling",
+    "automatic_threshold_mutation",
+    "autonomous_external_execution",
+    "real_world_side_effect",
+    "unapproved_real_company_data",
+    "production_neo4j_connection",
+    "production_graph_write",
+    "final_answer_generation_without_boundary",
+    "gpt_call",
+    "codex_execution",
+    "public_api_publication",
+    "custom_gpt_connection_without_human_approval",
+    "final_threshold_calibration"
+  ]
+}

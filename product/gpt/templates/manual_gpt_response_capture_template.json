@@ -1,0 +1,23 @@
+{
+  "template_version": "manual_gpt_response_capture_template.v0.1",
+  "phase": "PROD-1661..1700",
+  "purpose": "Capture real GPT responses manually pasted by a human operator for future review.",
+  "calibration_status": "NOT_CALIBRATED_CAPTURE_TEMPLATE_ONLY",
+  "captures": [
+    {
+      "capture_id": "MANUAL-GPT-CAPTURE-001",
+      "provenance": "MANUAL_PASTED_GPT",
+      "model_label": "fill_manually",
+      "capture_datetime_utc": "fill_manually",
+      "operator": "fill_manually",
+      "mode": "pure_without_stack_or_stack_grounded",
+      "prompt": "fill_manually",
+      "context_packet_used": false,
+      "context_packet_reference": "none_or_path",
+      "raw_response": "paste_real_gpt_response_here",
+      "human_review_required": true,
+      "review_status": "PENDING_HUMAN_REVIEW",
+      "notes": "Do not use this capture for final calibration until reviewed."
+    }
+  ]
+}
