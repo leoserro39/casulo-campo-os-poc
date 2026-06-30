@@ -1,0 +1,19 @@
+{
+  "phase": "PROD-3021..3060",
+  "required_prior_tag": "product-expanded-test-matrix-pack-v0.1",
+  "mode": "apex_maturity_index_contract",
+  "value_delta_relation_required": true,
+  "hallucination_index_relation_required": true,
+  "future_business_packaging_signal": true,
+  "blocked_actions": [
+    "real_world_profit_claim",
+    "validated_savings_claim",
+    "client_facing_value_claim",
+    "validated_hallucination_reduction_claim",
+    "production_activation",
+    "automatic_memory_delete",
+    "gpt_memory_api_execution",
+    "business_package_pricing_claim"
+  ],
+  "recommended_next_phase": "PROD-3061..3100 - Calibration Plan for Real Sessions"
+}

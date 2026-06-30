@@ -1,0 +1,14 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "CASULO Exocortex Apex Maturity Index",
+  "type": "object",
+  "required": [
+    "version",
+    "phase",
+    "positive_components",
+    "negative_components",
+    "uses",
+    "maturity_bands",
+    "summary"
+  ]
+}

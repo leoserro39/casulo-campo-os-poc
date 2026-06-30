@@ -1,0 +1,575 @@
+{
+  "version": "exocortex_apex_maturity_index.v0.1",
+  "phase": "PROD-3021..3060",
+  "purpose": "Measure when the chat and Exocortex are at maximum operational maturity.",
+  "definition": "Apex maturity is the state where context, memory, grounding, gates, snapshots, input quality, development velocity and Value Delta confidence are maximized while context pressure, stale context, hallucination risk, uncontrolled complexity and claim leakage are minimized.",
+  "positive_components": [
+    "context_cleanliness_score",
+    "memory_maturity_score",
+    "state_grounding_score",
+    "decision_recall_accuracy",
+    "snapshot_recovery_score",
+    "prompt_quality_score",
+    "input_data_quality_score",
+    "gate_compliance_score",
+    "value_delta_confidence_score",
+    "rework_avoidance_score",
+    "development_velocity_score"
+  ],
+  "negative_components": [
+    "context_pressure",
+    "stale_context_risk",
+    "hallucination_risk_index",
+    "uncontrolled_implementation_complexity",
+    "claim_leakage_risk",
+    "missing_context_rate"
+  ],
+  "uses": [
+    "value_delta_weight",
+    "operational_hallucination_index_input",
+    "calibration_power_signal",
+    "development_readiness_signal",
+    "context_lifecycle_trigger",
+    "future_business_packaging_signal"
+  ],
+  "formula": {
+    "positive_signal": "average positive component score",
+    "negative_pressure": "average negative component score",
+    "apex_maturity_score": "bounded positive_signal - negative_pressure adjustment",
+    "value_delta_weight": "apex_maturity_score / 100",
+    "hallucination_risk_adjustment": "(100 - apex_maturity_score) / 100"
+  },
+  "maturity_bands": [
+    {
+      "min": 0,
+      "max": 30,
+      "band": "IMMATURE_HIGH_RISK"
+    },
+    {
+      "min": 31,
+      "max": 55,
+      "band": "USABLE_UNSTABLE"
+    },
+    {
+      "min": 56,
+      "max": 75,
+      "band": "GOOD_OPERATIONAL"
+    },
+    {
+      "min": 76,
+      "max": 90,
+      "band": "MATURE_OPERATIONAL"
+    },
+    {
+      "min": 91,
+      "max": 100,
+      "band": "APEX_OPERATIONAL"
+    }
+  ],
+  "synthetic_scored_cases": [
+    {
+      "case_id": "ETM-001",
+      "category": "exocortex_snapshot",
+      "severity": "low",
+      "apex_maturity_score": 86,
+      "apex_band": "MATURE_OPERATIONAL",
+      "value_delta_weight": 0.86,
+      "hallucination_risk_adjustment": 0.14,
+      "calibration_required": false
+    },
+    {
+      "case_id": "ETM-002",
+      "category": "exocortex_snapshot",
+      "severity": "medium",
+      "apex_maturity_score": 62,
+      "apex_band": "GOOD_OPERATIONAL",
+      "value_delta_weight": 0.62,
+      "hallucination_risk_adjustment": 0.38,
+      "calibration_required": false
+    },
+    {
+      "case_id": "ETM-003",
+      "category": "exocortex_snapshot",
+      "severity": "high",
+      "apex_maturity_score": 42,
+      "apex_band": "USABLE_UNSTABLE",
+      "value_delta_weight": 0.42,
+      "hallucination_risk_adjustment": 0.58,
+      "calibration_required": false
+    },
+    {
+      "case_id": "ETM-004",
+      "category": "exocortex_snapshot",
+      "severity": "critical",
+      "apex_maturity_score": 18,
+      "apex_band": "IMMATURE_HIGH_RISK",
+      "value_delta_weight": 0.18,
+      "hallucination_risk_adjustment": 0.82,
+      "calibration_required": false
+    },
+    {
+      "case_id": "ETM-005",
+      "category": "memory_state_governor",
+      "severity": "low",
+      "apex_maturity_score": 86,
+      "apex_band": "MATURE_OPERATIONAL",
+      "value_delta_weight": 0.86,
+      "hallucination_risk_adjustment": 0.14,
+      "calibration_required": false
+    },
+    {
+      "case_id": "ETM-006",
+      "category": "memory_state_governor",
+      "severity": "medium",
+      "apex_maturity_score": 62,
+      "apex_band": "GOOD_OPERATIONAL",
+      "value_delta_weight": 0.62,
+      "hallucination_risk_adjustment": 0.38,
+      "calibration_required": false
+    },
+    {
+      "case_id": "ETM-007",
+      "category": "memory_state_governor",
+      "severity": "high",
+      "apex_maturity_score": 42,
+      "apex_band": "USABLE_UNSTABLE",
+      "value_delta_weight": 0.42,
+      "hallucination_risk_adjustment": 0.58,
+      "calibration_required": false
+    },
+    {
+      "case_id": "ETM-008",
+      "category": "memory_state_governor",
+      "severity": "critical",
+      "apex_maturity_score": 18,
+      "apex_band": "IMMATURE_HIGH_RISK",
+      "value_delta_weight": 0.18,
+      "hallucination_risk_adjustment": 0.82,
+      "calibration_required": false
+    },
+    {
+      "case_id": "ETM-009",
+      "category": "prompt_quality",
+      "severity": "low",
+      "apex_maturity_score": 86,
+      "apex_band": "MATURE_OPERATIONAL",
+      "value_delta_weight": 0.86,
+      "hallucination_risk_adjustment": 0.14,
+      "calibration_required": false
+    },
+    {
+      "case_id": "ETM-010",
+      "category": "prompt_quality",
+      "severity": "medium",
+      "apex_maturity_score": 62,
+      "apex_band": "GOOD_OPERATIONAL",
+      "value_delta_weight": 0.62,
+      "hallucination_risk_adjustment": 0.38,
+      "calibration_required": false
+    },
+    {
+      "case_id": "ETM-011",
+      "category": "prompt_quality",
+      "severity": "high",
+      "apex_maturity_score": 42,
+      "apex_band": "USABLE_UNSTABLE",
+      "value_delta_weight": 0.42,
+      "hallucination_risk_adjustment": 0.58,
+      "calibration_required": false
+    },
+    {
+      "case_id": "ETM-012",
+      "category": "prompt_quality",
+      "severity": "critical",
+      "apex_maturity_score": 18,
+      "apex_band": "IMMATURE_HIGH_RISK",
+      "value_delta_weight": 0.18,
+      "hallucination_risk_adjustment": 0.82,
+      "calibration_required": false
+    },
+    {
+      "case_id": "ETM-013",
+      "category": "input_data_quality",
+      "severity": "low",
+      "apex_maturity_score": 86,
+      "apex_band": "MATURE_OPERATIONAL",
+      "value_delta_weight": 0.86,
+      "hallucination_risk_adjustment": 0.14,
+      "calibration_required": false
+    },
+    {
+      "case_id": "ETM-014",
+      "category": "input_data_quality",
+      "severity": "medium",
+      "apex_maturity_score": 62,
+      "apex_band": "GOOD_OPERATIONAL",
+      "value_delta_weight": 0.62,
+      "hallucination_risk_adjustment": 0.38,
+      "calibration_required": false
+    },
+    {
+      "case_id": "ETM-015",
+      "category": "input_data_quality",
+      "severity": "high",
+      "apex_maturity_score": 42,
+      "apex_band": "USABLE_UNSTABLE",
+      "value_delta_weight": 0.42,
+      "hallucination_risk_adjustment": 0.58,
+      "calibration_required": false
+    },
+    {
+      "case_id": "ETM-016",
+      "category": "input_data_quality",
+      "severity": "critical",
+      "apex_maturity_score": 18,
+      "apex_band": "IMMATURE_HIGH_RISK",
+      "value_delta_weight": 0.18,
+      "hallucination_risk_adjustment": 0.82,
+      "calibration_required": false
+    },
+    {
+      "case_id": "ETM-017",
+      "category": "value_delta",
+      "severity": "low",
+      "apex_maturity_score": 77,
+      "apex_band": "MATURE_OPERATIONAL",
+      "value_delta_weight": 0.77,
+      "hallucination_risk_adjustment": 0.23,
+      "calibration_required": true
+    },
+    {
+      "case_id": "ETM-018",
+      "category": "value_delta",
+      "severity": "medium",
+      "apex_maturity_score": 53,
+      "apex_band": "USABLE_UNSTABLE",
+      "value_delta_weight": 0.53,
+      "hallucination_risk_adjustment": 0.47,
+      "calibration_required": true
+    },
+    {
+      "case_id": "ETM-019",
+      "category": "value_delta",
+      "severity": "high",
+      "apex_maturity_score": 33,
+      "apex_band": "USABLE_UNSTABLE",
+      "value_delta_weight": 0.33,
+      "hallucination_risk_adjustment": 0.67,
+      "calibration_required": true
+    },
+    {
+      "case_id": "ETM-020",
+      "category": "value_delta",
+      "severity": "critical",
+      "apex_maturity_score": 9,
+      "apex_band": "IMMATURE_HIGH_RISK",
+      "value_delta_weight": 0.09,
+      "hallucination_risk_adjustment": 0.91,
+      "calibration_required": true
+    },
+    {
+      "case_id": "ETM-021",
+      "category": "implementation_complexity",
+      "severity": "low",
+      "apex_maturity_score": 77,
+      "apex_band": "MATURE_OPERATIONAL",
+      "value_delta_weight": 0.77,
+      "hallucination_risk_adjustment": 0.23,
+      "calibration_required": true
+    },
+    {
+      "case_id": "ETM-022",
+      "category": "implementation_complexity",
+      "severity": "medium",
+      "apex_maturity_score": 53,
+      "apex_band": "USABLE_UNSTABLE",
+      "value_delta_weight": 0.53,
+      "hallucination_risk_adjustment": 0.47,
+      "calibration_required": true
+    },
+    {
+      "case_id": "ETM-023",
+      "category": "implementation_complexity",
+      "severity": "high",
+      "apex_maturity_score": 33,
+      "apex_band": "USABLE_UNSTABLE",
+      "value_delta_weight": 0.33,
+      "hallucination_risk_adjustment": 0.67,
+      "calibration_required": true
+    },
+    {
+      "case_id": "ETM-024",
+      "category": "implementation_complexity",
+      "severity": "critical",
+      "apex_maturity_score": 9,
+      "apex_band": "IMMATURE_HIGH_RISK",
+      "value_delta_weight": 0.09,
+      "hallucination_risk_adjustment": 0.91,
+      "calibration_required": true
+    },
+    {
+      "case_id": "ETM-025",
+      "category": "operational_hallucination",
+      "severity": "low",
+      "apex_maturity_score": 77,
+      "apex_band": "MATURE_OPERATIONAL",
+      "value_delta_weight": 0.77,
+      "hallucination_risk_adjustment": 0.23,
+      "calibration_required": true
+    },
+    {
+      "case_id": "ETM-026",
+      "category": "operational_hallucination",
+      "severity": "medium",
+      "apex_maturity_score": 53,
+      "apex_band": "USABLE_UNSTABLE",
+      "value_delta_weight": 0.53,
+      "hallucination_risk_adjustment": 0.47,
+      "calibration_required": true
+    },
+    {
+      "case_id": "ETM-027",
+      "category": "operational_hallucination",
+      "severity": "high",
+      "apex_maturity_score": 33,
+      "apex_band": "USABLE_UNSTABLE",
+      "value_delta_weight": 0.33,
+      "hallucination_risk_adjustment": 0.67,
+      "calibration_required": true
+    },
+    {
+      "case_id": "ETM-028",
+      "category": "operational_hallucination",
+      "severity": "critical",
+      "apex_maturity_score": 9,
+      "apex_band": "IMMATURE_HIGH_RISK",
+      "value_delta_weight": 0.09,
+      "hallucination_risk_adjustment": 0.91,
+      "calibration_required": true
+    },
+    {
+      "case_id": "ETM-029",
+      "category": "claim_boundary",
+      "severity": "low",
+      "apex_maturity_score": 86,
+      "apex_band": "MATURE_OPERATIONAL",
+      "value_delta_weight": 0.86,
+      "hallucination_risk_adjustment": 0.14,
+      "calibration_required": false
+    },
+    {
+      "case_id": "ETM-030",
+      "category": "claim_boundary",
+      "severity": "medium",
+      "apex_maturity_score": 62,
+      "apex_band": "GOOD_OPERATIONAL",
+      "value_delta_weight": 0.62,
+      "hallucination_risk_adjustment": 0.38,
+      "calibration_required": false
+    },
+    {
+      "case_id": "ETM-031",
+      "category": "claim_boundary",
+      "severity": "high",
+      "apex_maturity_score": 42,
+      "apex_band": "USABLE_UNSTABLE",
+      "value_delta_weight": 0.42,
+      "hallucination_risk_adjustment": 0.58,
+      "calibration_required": false
+    },
+    {
+      "case_id": "ETM-032",
+      "category": "claim_boundary",
+      "severity": "critical",
+      "apex_maturity_score": 18,
+      "apex_band": "IMMATURE_HIGH_RISK",
+      "value_delta_weight": 0.18,
+      "hallucination_risk_adjustment": 0.82,
+      "calibration_required": false
+    },
+    {
+      "case_id": "ETM-033",
+      "category": "contradiction_hold",
+      "severity": "low",
+      "apex_maturity_score": 86,
+      "apex_band": "MATURE_OPERATIONAL",
+      "value_delta_weight": 0.86,
+      "hallucination_risk_adjustment": 0.14,
+      "calibration_required": false
+    },
+    {
+      "case_id": "ETM-034",
+      "category": "contradiction_hold",
+      "severity": "medium",
+      "apex_maturity_score": 62,
+      "apex_band": "GOOD_OPERATIONAL",
+      "value_delta_weight": 0.62,
+      "hallucination_risk_adjustment": 0.38,
+      "calibration_required": false
+    },
+    {
+      "case_id": "ETM-035",
+      "category": "contradiction_hold",
+      "severity": "high",
+      "apex_maturity_score": 42,
+      "apex_band": "USABLE_UNSTABLE",
+      "value_delta_weight": 0.42,
+      "hallucination_risk_adjustment": 0.58,
+      "calibration_required": false
+    },
+    {
+      "case_id": "ETM-036",
+      "category": "contradiction_hold",
+      "severity": "critical",
+      "apex_maturity_score": 18,
+      "apex_band": "IMMATURE_HIGH_RISK",
+      "value_delta_weight": 0.18,
+      "hallucination_risk_adjustment": 0.82,
+      "calibration_required": false
+    },
+    {
+      "case_id": "ETM-037",
+      "category": "stale_context",
+      "severity": "low",
+      "apex_maturity_score": 86,
+      "apex_band": "MATURE_OPERATIONAL",
+      "value_delta_weight": 0.86,
+      "hallucination_risk_adjustment": 0.14,
+      "calibration_required": false
+    },
+    {
+      "case_id": "ETM-038",
+      "category": "stale_context",
+      "severity": "medium",
+      "apex_maturity_score": 62,
+      "apex_band": "GOOD_OPERATIONAL",
+      "value_delta_weight": 0.62,
+      "hallucination_risk_adjustment": 0.38,
+      "calibration_required": false
+    },
+    {
+      "case_id": "ETM-039",
+      "category": "stale_context",
+      "severity": "high",
+      "apex_maturity_score": 42,
+      "apex_band": "USABLE_UNSTABLE",
+      "value_delta_weight": 0.42,
+      "hallucination_risk_adjustment": 0.58,
+      "calibration_required": false
+    },
+    {
+      "case_id": "ETM-040",
+      "category": "stale_context",
+      "severity": "critical",
+      "apex_maturity_score": 18,
+      "apex_band": "IMMATURE_HIGH_RISK",
+      "value_delta_weight": 0.18,
+      "hallucination_risk_adjustment": 0.82,
+      "calibration_required": false
+    },
+    {
+      "case_id": "ETM-041",
+      "category": "context_pressure",
+      "severity": "low",
+      "apex_maturity_score": 86,
+      "apex_band": "MATURE_OPERATIONAL",
+      "value_delta_weight": 0.86,
+      "hallucination_risk_adjustment": 0.14,
+      "calibration_required": false
+    },
+    {
+      "case_id": "ETM-042",
+      "category": "context_pressure",
+      "severity": "medium",
+      "apex_maturity_score": 62,
+      "apex_band": "GOOD_OPERATIONAL",
+      "value_delta_weight": 0.62,
+      "hallucination_risk_adjustment": 0.38,
+      "calibration_required": false
+    },
+    {
+      "case_id": "ETM-043",
+      "category": "context_pressure",
+      "severity": "high",
+      "apex_maturity_score": 42,
+      "apex_band": "USABLE_UNSTABLE",
+      "value_delta_weight": 0.42,
+      "hallucination_risk_adjustment": 0.58,
+      "calibration_required": false
+    },
+    {
+      "case_id": "ETM-044",
+      "category": "context_pressure",
+      "severity": "critical",
+      "apex_maturity_score": 18,
+      "apex_band": "IMMATURE_HIGH_RISK",
+      "value_delta_weight": 0.18,
+      "hallucination_risk_adjustment": 0.82,
+      "calibration_required": false
+    },
+    {
+      "case_id": "ETM-045",
+      "category": "calibration_candidate",
+      "severity": "low",
+      "apex_maturity_score": 82,
+      "apex_band": "MATURE_OPERATIONAL",
+      "value_delta_weight": 0.82,
+      "hallucination_risk_adjustment": 0.18,
+      "calibration_required": true
+    },
+    {
+      "case_id": "ETM-046",
+      "category": "calibration_candidate",
+      "severity": "medium",
+      "apex_maturity_score": 58,
+      "apex_band": "GOOD_OPERATIONAL",
+      "value_delta_weight": 0.58,
+      "hallucination_risk_adjustment": 0.42,
+      "calibration_required": true
+    },
+    {
+      "case_id": "ETM-047",
+      "category": "calibration_candidate",
+      "severity": "high",
+      "apex_maturity_score": 38,
+      "apex_band": "USABLE_UNSTABLE",
+      "value_delta_weight": 0.38,
+      "hallucination_risk_adjustment": 0.62,
+      "calibration_required": true
+    },
+    {
+      "case_id": "ETM-048",
+      "category": "calibration_candidate",
+      "severity": "critical",
+      "apex_maturity_score": 14,
+      "apex_band": "IMMATURE_HIGH_RISK",
+      "value_delta_weight": 0.14,
+      "hallucination_risk_adjustment": 0.86,
+      "calibration_required": true
+    }
+  ],
+  "summary": {
+    "case_count": 48,
+    "average_apex_maturity_score": 49.42,
+    "bands_present": [
+      "GOOD_OPERATIONAL",
+      "IMMATURE_HIGH_RISK",
+      "MATURE_OPERATIONAL",
+      "USABLE_UNSTABLE"
+    ]
+  },
+  "value_delta_relation": {
+    "required": true,
+    "rule": "Apex maturity increases Value Delta confidence and freeze readiness; low maturity reduces confidence or forces hold."
+  },
+  "hallucination_index_relation": {
+    "required": true,
+    "rule": "Low apex maturity increases operational hallucination risk; high maturity lowers risk but does not prove real-world reduction."
+  },
+  "business_packaging_boundary": {
+    "future_use": true,
+    "rule": "Business plans and pricing can later use maturity bands, but this phase does not define commercial packages."
+  },
+  "claim_boundary": "Synthetic/internal index contract only. No real-world ROI, savings, profit, client-facing or hallucination-reduction claim.",
+  "recommended_next_phase": "PROD-3061..3100 - Calibration Plan for Real Sessions"
+}
