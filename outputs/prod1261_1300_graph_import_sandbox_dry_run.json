@@ -1,0 +1,30 @@
+{
+  "status": "PASS",
+  "phase": "Graph Import Sandbox Dry Run",
+  "generated_at": "2026-06-30T16:55:04+00:00",
+  "mode": "offline_cypher_preview_no_connection",
+  "source_nodes_jsonl": "outputs/prod941_980_graph_export_nodes.jsonl",
+  "source_relationships_jsonl": "outputs/prod941_980_graph_export_relationships.jsonl",
+  "source_node_count": 313,
+  "source_relationship_count": 350,
+  "cypher_preview_file": "outputs/prod1261_1300_neo4j_sandbox_import_preview.cypher",
+  "cypher_statement_count": 666,
+  "neo4j_connection_attempted": false,
+  "cypher_executed": false,
+  "production_connection_allowed": false,
+  "credential_handling_allowed": false,
+  "blocked_actions": [
+    "client_facing_claim",
+    "automatic_nomination",
+    "implementation_execution",
+    "production_activation",
+    "automatic_merge",
+    "credential_handling",
+    "automatic_threshold_mutation",
+    "autonomous_external_execution",
+    "real_world_side_effect",
+    "unapproved_real_company_data",
+    "production_neo4j_connection",
+    "production_graph_write"
+  ]
+}

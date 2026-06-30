@@ -1,0 +1,25 @@
+{
+  "status": "PASS",
+  "queries": [
+    "MATCH (n:CasuloNode) RETURN count(n) AS casulo_nodes",
+    "MATCH (:CasuloNode)-[r]->(:CasuloNode) RETURN count(r) AS casulo_relationships",
+    "MATCH p=(c:CasuloNode)-[*1..4]->(g:CasuloNode) RETURN c.id, g.id, length(p) LIMIT 50",
+    "MATCH (n:CasuloNode) RETURN n.casulo_label AS label, count(*) AS count ORDER BY count DESC"
+  ],
+  "expected_min_nodes": 313,
+  "expected_min_relationships": 350,
+  "blocked_actions": [
+    "client_facing_claim",
+    "automatic_nomination",
+    "implementation_execution",
+    "production_activation",
+    "automatic_merge",
+    "credential_handling",
+    "automatic_threshold_mutation",
+    "autonomous_external_execution",
+    "real_world_side_effect",
+    "unapproved_real_company_data",
+    "production_neo4j_connection",
+    "production_graph_write"
+  ]
+}

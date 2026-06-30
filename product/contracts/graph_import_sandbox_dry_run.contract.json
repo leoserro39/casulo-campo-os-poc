@@ -1,0 +1,19 @@
+{
+  "contract": "casulo.graph_import_sandbox_dry_run.v0.1",
+  "scope": "Generate offline Cypher import preview and sandbox run plan; no Neo4j connection by default.",
+  "mode": "sandbox_dry_run_no_connection_by_default",
+  "blocked_actions": [
+    "client_facing_claim",
+    "automatic_nomination",
+    "implementation_execution",
+    "production_activation",
+    "automatic_merge",
+    "credential_handling",
+    "automatic_threshold_mutation",
+    "autonomous_external_execution",
+    "real_world_side_effect",
+    "unapproved_real_company_data",
+    "production_neo4j_connection",
+    "production_graph_write"
+  ]
+}

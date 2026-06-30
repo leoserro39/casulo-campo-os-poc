@@ -1,0 +1,14 @@
+services:
+  neo4j:
+    image: neo4j:latest
+    container_name: casulo-neo4j-sandbox
+    ports:
+      - "7474:7474"
+      - "7687:7687"
+    environment:
+      NEO4J_AUTH: "neo4j/casulo_sandbox_1234"
+    volumes:
+      - casulo_neo4j_data:/data
+
+volumes:
+  casulo_neo4j_data:

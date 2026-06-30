@@ -1,0 +1,8 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "neo4j_sandbox_manual_runbook.schema.json",
+  "type": "object",
+  "required": [
+    "status"
+  ]
+}

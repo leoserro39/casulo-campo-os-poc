@@ -1,0 +1,18 @@
+{
+  "status": "PASS",
+  "decision": "READY_FOR_MANUAL_NEO4J_SANDBOX_IMPORT_AND_GRAPH_RETRIEVAL_GAIN_EVALUATION",
+  "blocked_actions": [
+    "client_facing_claim",
+    "automatic_nomination",
+    "implementation_execution",
+    "production_activation",
+    "automatic_merge",
+    "credential_handling",
+    "automatic_threshold_mutation",
+    "autonomous_external_execution",
+    "real_world_side_effect",
+    "unapproved_real_company_data",
+    "production_neo4j_connection",
+    "production_graph_write"
+  ]
+}

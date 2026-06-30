@@ -1,0 +1,29 @@
+{
+  "status": "PASS",
+  "docker_compose_example": "product/config/neo4j_sandbox_docker_compose.example.yml",
+  "env_example": "product/config/neo4j_sandbox_import.env.example",
+  "manual_steps": [
+    "Start local Neo4j sandbox.",
+    "Open Neo4j Browser on port 7474.",
+    "Review outputs/prod1261_1300_neo4j_sandbox_import_preview.cypher.",
+    "Run only in local sandbox if approved.",
+    "Run count verification queries.",
+    "Do not connect to production."
+  ],
+  "browser_url": "http://localhost:7474",
+  "bolt_uri": "bolt://localhost:7687",
+  "blocked_actions": [
+    "client_facing_claim",
+    "automatic_nomination",
+    "implementation_execution",
+    "production_activation",
+    "automatic_merge",
+    "credential_handling",
+    "automatic_threshold_mutation",
+    "autonomous_external_execution",
+    "real_world_side_effect",
+    "unapproved_real_company_data",
+    "production_neo4j_connection",
+    "production_graph_write"
+  ]
+}

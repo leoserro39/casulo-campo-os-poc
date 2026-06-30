@@ -446,4 +446,15 @@ ENDPOINT_GROUPS = [
         ],
     },
 
+    {
+        "group": "graph_import_sandbox_dry_run",
+        "routes": [
+            {"path": "/api/casulo/neo4j/import-dry-run", "file": "outputs/prod1261_1300_graph_import_sandbox_dry_run.json", "key": "dry_run"},
+            {"path": "/api/casulo/neo4j/manual-runbook", "file": "outputs/prod1261_1300_neo4j_manual_runbook.json", "key": "runbook"},
+            {"path": "/api/casulo/neo4j/validation-queries", "file": "outputs/prod1261_1300_graph_validation_queries.json", "key": "queries"},
+            {"path": "/api/casulo/neo4j/import-readiness", "file": "outputs/prod1261_1300_readiness.json", "key": "readiness"},
+            {"path": "/api/casulo/neo4j/import-audit", "file": "outputs/prod1261_1300_audit_report.json", "key": "audit"}
+        ],
+    },
+
 ]
