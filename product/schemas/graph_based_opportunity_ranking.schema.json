@@ -1,0 +1,18 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "CASULO Graph-Based Opportunity Ranking",
+  "type": "object",
+  "required": ["status", "phase", "decision", "graph", "rankings", "checks", "blocked_actions"],
+  "properties": {
+    "status": {"type": "string"},
+    "phase": {"type": "string"},
+    "decision": {"type": "string"},
+    "graph": {"type": "object"},
+    "rankings": {"type": "object"},
+    "checks": {"type": "object"},
+    "blocked_actions": {
+      "type": "array",
+      "items": {"type": "string"}
+    }
+  }
+}

@@ -1,0 +1,706 @@
+{
+  "status": "PASS",
+  "phase": "PROD-1781..1820",
+  "decision": "GRAPH_BASED_OPPORTUNITY_RANKING_READY",
+  "generated_at": "2026-06-30T19:37:55.968542+00:00",
+  "graph": {
+    "mode": "in_memory_graph_projection_no_production_write",
+    "node_count": 64,
+    "edge_count": 77,
+    "node_kinds": [
+      "Case",
+      "CompanyMaturity",
+      "CompanyProfile",
+      "Gate",
+      "GovernanceNeed",
+      "MonitoringNeed",
+      "RecommendationType",
+      "RecommendedMode",
+      "ServicePackage",
+      "SolutionType",
+      "StackDependency"
+    ],
+    "relationship_types": [
+      "DEPENDS_ON_STACK",
+      "HAS_CASE",
+      "HAS_GOVERNANCE_NEED",
+      "HAS_MATURITY",
+      "HAS_RECOMMENDATION",
+      "NEEDS_MONITORING",
+      "RECOMMENDS_MODE",
+      "REQUIRES_GATE",
+      "SUGGESTS_SOLUTION",
+      "USES_PACKAGE"
+    ],
+    "top_central_nodes": [
+      {
+        "id": "Case:BST_GOV_COMPLIANCE_001",
+        "kind": "Case",
+        "label": "BST-GOV-COMPLIANCE-001",
+        "weighted_degree": 1070.5,
+        "score_avg": 80.05,
+        "case_count": 1,
+        "centrality_band": "very_high"
+      },
+      {
+        "id": "Case:BST_TICSI_001",
+        "kind": "Case",
+        "label": "BST-TICSI-001",
+        "weighted_degree": 1063.5,
+        "score_avg": 79.85,
+        "case_count": 1,
+        "centrality_band": "very_high"
+      },
+      {
+        "id": "Case:BST_AI_PME_001",
+        "kind": "Case",
+        "label": "BST-AI-PME-001",
+        "weighted_degree": 844.2,
+        "score_avg": 73.65,
+        "case_count": 1,
+        "centrality_band": "very_high"
+      },
+      {
+        "id": "Case:BST_PME_ACCOUNTING_001",
+        "kind": "Case",
+        "label": "BST-PME-ACCOUNTING-001",
+        "weighted_degree": 687.15,
+        "score_avg": 67.45,
+        "case_count": 1,
+        "centrality_band": "very_high"
+      },
+      {
+        "id": "Case:BST_SOFTWARE_REVIEW_001",
+        "kind": "Case",
+        "label": "BST-SOFTWARE-REVIEW-001",
+        "weighted_degree": 631.55,
+        "score_avg": 61.65,
+        "case_count": 1,
+        "centrality_band": "very_high"
+      },
+      {
+        "id": "Case:BST_ASSISTED_OPS_001",
+        "kind": "Case",
+        "label": "BST-ASSISTED-OPS-001",
+        "weighted_degree": 618.85,
+        "score_avg": 60.55,
+        "case_count": 1,
+        "centrality_band": "very_high"
+      },
+      {
+        "id": "Case:BST_SOLUTION_FACTORY_001",
+        "kind": "Case",
+        "label": "BST-SOLUTION-FACTORY-001",
+        "weighted_degree": 591.45,
+        "score_avg": 57.35,
+        "case_count": 1,
+        "centrality_band": "very_high"
+      },
+      {
+        "id": "StackDependency:high",
+        "kind": "StackDependency",
+        "label": "high",
+        "weighted_degree": 360.0,
+        "score_avg": 75.25,
+        "case_count": 4,
+        "centrality_band": "very_high"
+      },
+      {
+        "id": "Gate:STACK_GROUNDED_REVIEW_REQUIRED",
+        "kind": "Gate",
+        "label": "STACK_GROUNDED_REVIEW_REQUIRED",
+        "weighted_degree": 301.0,
+        "score_avg": 0.0,
+        "case_count": 0,
+        "centrality_band": "very_high"
+      },
+      {
+        "id": "Gate:GOVERNANCE_REVIEW_REQUIRED",
+        "kind": "Gate",
+        "label": "GOVERNANCE_REVIEW_REQUIRED",
+        "weighted_degree": 295.2,
+        "score_avg": 0.0,
+        "case_count": 0,
+        "centrality_band": "very_high"
+      }
+    ],
+    "calibration_status": "NOT_CALIBRATED_GRAPH_RANKING_ONLY"
+  },
+  "rankings": {
+    "cases": [
+      {
+        "id": "BST-GOV-COMPLIANCE-001",
+        "company_profile": "regulated or process-heavy company",
+        "service_package": "Governance Compliance State Mesh",
+        "casulo_opportunity_score": 80.05,
+        "opportunity_band": "high",
+        "recommended_mode": "DIAGNOSTIC_PLUS_ASSISTED_OPERATION",
+        "hard_gates": [
+          "GOVERNANCE_REVIEW_REQUIRED",
+          "IMPLEMENTATION_RISK_REVIEW_REQUIRED",
+          "STACK_GROUNDED_REVIEW_REQUIRED",
+          "COMPLIANCE_REVIEW_REQUIRED"
+        ],
+        "hallucination_reduction_potential": 71,
+        "governance_pressure_score": 95,
+        "monitoring_recurrence_score": 85,
+        "commercial_value_proxy": 58
+      },
+      {
+        "id": "BST-TICSI-001",
+        "company_profile": "mid-sized company with internal IT/SI",
+        "service_package": "TIC/SI State Mesh",
+        "casulo_opportunity_score": 79.85,
+        "opportunity_band": "high",
+        "recommended_mode": "DIAGNOSTIC_PLUS_RISK_GATE",
+        "hard_gates": [
+          "GOVERNANCE_REVIEW_REQUIRED",
+          "IMPLEMENTATION_RISK_REVIEW_REQUIRED",
+          "STACK_GROUNDED_REVIEW_REQUIRED",
+          "CHANGE_REVIEW_REQUIRED"
+        ],
+        "hallucination_reduction_potential": 71,
+        "governance_pressure_score": 85,
+        "monitoring_recurrence_score": 90,
+        "commercial_value_proxy": 66
+      },
+      {
+        "id": "BST-AI-PME-001",
+        "company_profile": "PME seeking AI adoption",
+        "service_package": "Programa de IA PME",
+        "casulo_opportunity_score": 73.65,
+        "opportunity_band": "high",
+        "recommended_mode": "STARTER_IMPLANTATION",
+        "hard_gates": [
+          "GOVERNANCE_REVIEW_REQUIRED",
+          "STACK_GROUNDED_REVIEW_REQUIRED"
+        ],
+        "hallucination_reduction_potential": 59,
+        "governance_pressure_score": 85,
+        "monitoring_recurrence_score": 80,
+        "commercial_value_proxy": 66
+      },
+      {
+        "id": "BST-PME-ACCOUNTING-001",
+        "company_profile": "PME accounting office",
+        "service_package": "Cubo PME Starter",
+        "casulo_opportunity_score": 67.45,
+        "opportunity_band": "medium",
+        "recommended_mode": "DIAGNOSTIC_AND_BACKLOG",
+        "hard_gates": [
+          "STACK_GROUNDED_REVIEW_REQUIRED"
+        ],
+        "hallucination_reduction_potential": 65,
+        "governance_pressure_score": 45,
+        "monitoring_recurrence_score": 80,
+        "commercial_value_proxy": 74
+      },
+      {
+        "id": "BST-SOFTWARE-REVIEW-001",
+        "company_profile": "company with existing internal software",
+        "service_package": "Software Review Gate",
+        "casulo_opportunity_score": 61.65,
+        "opportunity_band": "medium",
+        "recommended_mode": "DIAGNOSTIC_AND_BACKLOG",
+        "hard_gates": [
+          "GOVERNANCE_REVIEW_REQUIRED"
+        ],
+        "hallucination_reduction_potential": 45,
+        "governance_pressure_score": 85,
+        "monitoring_recurrence_score": 45,
+        "commercial_value_proxy": 48
+      },
+      {
+        "id": "BST-ASSISTED-OPS-001",
+        "company_profile": "service company with recurring operations",
+        "service_package": "Operacao Assistida",
+        "casulo_opportunity_score": 60.55,
+        "opportunity_band": "medium",
+        "recommended_mode": "DIAGNOSTIC_AND_BACKLOG",
+        "hard_gates": [
+          "MONITORING_REVIEW_REQUIRED"
+        ],
+        "hallucination_reduction_potential": 67,
+        "governance_pressure_score": 45,
+        "monitoring_recurrence_score": 80,
+        "commercial_value_proxy": 66
+      },
+      {
+        "id": "BST-SOLUTION-FACTORY-001",
+        "company_profile": "business unit needing a new operational application",
+        "service_package": "Solution Factory Sprint",
+        "casulo_opportunity_score": 57.35,
+        "opportunity_band": "medium",
+        "recommended_mode": "DIAGNOSTIC_AND_BACKLOG",
+        "hard_gates": [
+          "STANDARD_HUMAN_REVIEW_REQUIRED"
+        ],
+        "hallucination_reduction_potential": 45,
+        "governance_pressure_score": 65,
+        "monitoring_recurrence_score": 55,
+        "commercial_value_proxy": 48
+      }
+    ],
+    "service_packages": [
+      {
+        "service_package": "TIC/SI State Mesh",
+        "case_count": 1,
+        "avg_opportunity_score": 79.85,
+        "avg_hallucination_reduction_potential": 71.0,
+        "avg_governance_pressure_score": 85.0,
+        "avg_monitoring_recurrence_score": 90.0,
+        "avg_commercial_value_proxy": 66.0,
+        "graph_strength_score": 78.3
+      },
+      {
+        "service_package": "Governance Compliance State Mesh",
+        "case_count": 1,
+        "avg_opportunity_score": 80.05,
+        "avg_hallucination_reduction_potential": 71.0,
+        "avg_governance_pressure_score": 95.0,
+        "avg_monitoring_recurrence_score": 85.0,
+        "avg_commercial_value_proxy": 58.0,
+        "graph_strength_score": 77.92
+      },
+      {
+        "service_package": "Programa de IA PME",
+        "case_count": 1,
+        "avg_opportunity_score": 73.65,
+        "avg_hallucination_reduction_potential": 59.0,
+        "avg_governance_pressure_score": 85.0,
+        "avg_monitoring_recurrence_score": 80.0,
+        "avg_commercial_value_proxy": 66.0,
+        "graph_strength_score": 72.23
+      },
+      {
+        "service_package": "Cubo PME Starter",
+        "case_count": 1,
+        "avg_opportunity_score": 67.45,
+        "avg_hallucination_reduction_potential": 65.0,
+        "avg_governance_pressure_score": 45.0,
+        "avg_monitoring_recurrence_score": 80.0,
+        "avg_commercial_value_proxy": 74.0,
+        "graph_strength_score": 66.46
+      },
+      {
+        "service_package": "Operacao Assistida",
+        "case_count": 1,
+        "avg_opportunity_score": 60.55,
+        "avg_hallucination_reduction_potential": 67.0,
+        "avg_governance_pressure_score": 45.0,
+        "avg_monitoring_recurrence_score": 80.0,
+        "avg_commercial_value_proxy": 66.0,
+        "graph_strength_score": 63.24
+      },
+      {
+        "service_package": "Software Review Gate",
+        "case_count": 1,
+        "avg_opportunity_score": 61.65,
+        "avg_hallucination_reduction_potential": 45.0,
+        "avg_governance_pressure_score": 85.0,
+        "avg_monitoring_recurrence_score": 45.0,
+        "avg_commercial_value_proxy": 48.0,
+        "graph_strength_score": 57.28
+      },
+      {
+        "service_package": "Solution Factory Sprint",
+        "case_count": 1,
+        "avg_opportunity_score": 57.35,
+        "avg_hallucination_reduction_potential": 45.0,
+        "avg_governance_pressure_score": 65.0,
+        "avg_monitoring_recurrence_score": 55.0,
+        "avg_commercial_value_proxy": 48.0,
+        "graph_strength_score": 54.27
+      }
+    ],
+    "company_profiles": [
+      {
+        "company_profile": "mid-sized company with internal IT/SI",
+        "case_count": 1,
+        "avg_opportunity_score": 79.85,
+        "avg_hallucination_reduction_potential": 71.0,
+        "avg_governance_pressure_score": 85.0,
+        "avg_monitoring_recurrence_score": 90.0,
+        "avg_commercial_value_proxy": 66.0,
+        "graph_strength_score": 78.3
+      },
+      {
+        "company_profile": "regulated or process-heavy company",
+        "case_count": 1,
+        "avg_opportunity_score": 80.05,
+        "avg_hallucination_reduction_potential": 71.0,
+        "avg_governance_pressure_score": 95.0,
+        "avg_monitoring_recurrence_score": 85.0,
+        "avg_commercial_value_proxy": 58.0,
+        "graph_strength_score": 77.92
+      },
+      {
+        "company_profile": "PME seeking AI adoption",
+        "case_count": 1,
+        "avg_opportunity_score": 73.65,
+        "avg_hallucination_reduction_potential": 59.0,
+        "avg_governance_pressure_score": 85.0,
+        "avg_monitoring_recurrence_score": 80.0,
+        "avg_commercial_value_proxy": 66.0,
+        "graph_strength_score": 72.23
+      },
+      {
+        "company_profile": "PME accounting office",
+        "case_count": 1,
+        "avg_opportunity_score": 67.45,
+        "avg_hallucination_reduction_potential": 65.0,
+        "avg_governance_pressure_score": 45.0,
+        "avg_monitoring_recurrence_score": 80.0,
+        "avg_commercial_value_proxy": 74.0,
+        "graph_strength_score": 66.46
+      },
+      {
+        "company_profile": "service company with recurring operations",
+        "case_count": 1,
+        "avg_opportunity_score": 60.55,
+        "avg_hallucination_reduction_potential": 67.0,
+        "avg_governance_pressure_score": 45.0,
+        "avg_monitoring_recurrence_score": 80.0,
+        "avg_commercial_value_proxy": 66.0,
+        "graph_strength_score": 63.24
+      },
+      {
+        "company_profile": "company with existing internal software",
+        "case_count": 1,
+        "avg_opportunity_score": 61.65,
+        "avg_hallucination_reduction_potential": 45.0,
+        "avg_governance_pressure_score": 85.0,
+        "avg_monitoring_recurrence_score": 45.0,
+        "avg_commercial_value_proxy": 48.0,
+        "graph_strength_score": 57.28
+      },
+      {
+        "company_profile": "business unit needing a new operational application",
+        "case_count": 1,
+        "avg_opportunity_score": 57.35,
+        "avg_hallucination_reduction_potential": 45.0,
+        "avg_governance_pressure_score": 65.0,
+        "avg_monitoring_recurrence_score": 55.0,
+        "avg_commercial_value_proxy": 48.0,
+        "graph_strength_score": 54.27
+      }
+    ],
+    "solution_types": [
+      {
+        "solution_type": "application_integration_change_risk_mesh",
+        "case_count": 1,
+        "avg_opportunity_score": 79.85,
+        "avg_hallucination_reduction_potential": 71.0,
+        "avg_governance_pressure_score": 85.0,
+        "avg_monitoring_recurrence_score": 90.0,
+        "avg_commercial_value_proxy": 66.0,
+        "graph_strength_score": 78.3
+      },
+      {
+        "solution_type": "controls_evidence_audit_gate_mesh",
+        "case_count": 1,
+        "avg_opportunity_score": 80.05,
+        "avg_hallucination_reduction_potential": 71.0,
+        "avg_governance_pressure_score": 95.0,
+        "avg_monitoring_recurrence_score": 85.0,
+        "avg_commercial_value_proxy": 58.0,
+        "graph_strength_score": 77.92
+      },
+      {
+        "solution_type": "AI_use_case_map_and_pilot_governance",
+        "case_count": 1,
+        "avg_opportunity_score": 73.65,
+        "avg_hallucination_reduction_potential": 59.0,
+        "avg_governance_pressure_score": 85.0,
+        "avg_monitoring_recurrence_score": 80.0,
+        "avg_commercial_value_proxy": 66.0,
+        "graph_strength_score": 72.23
+      },
+      {
+        "solution_type": "operational_dashboard_and_pending_documents_gate",
+        "case_count": 1,
+        "avg_opportunity_score": 67.45,
+        "avg_hallucination_reduction_potential": 65.0,
+        "avg_governance_pressure_score": 45.0,
+        "avg_monitoring_recurrence_score": 80.0,
+        "avg_commercial_value_proxy": 74.0,
+        "graph_strength_score": 66.46
+      },
+      {
+        "solution_type": "monthly_state_delta_monitoring",
+        "case_count": 1,
+        "avg_opportunity_score": 60.55,
+        "avg_hallucination_reduction_potential": 67.0,
+        "avg_governance_pressure_score": 45.0,
+        "avg_monitoring_recurrence_score": 80.0,
+        "avg_commercial_value_proxy": 66.0,
+        "graph_strength_score": 63.24
+      },
+      {
+        "solution_type": "technical_review_backlog_and_quality_gate",
+        "case_count": 1,
+        "avg_opportunity_score": 61.65,
+        "avg_hallucination_reduction_potential": 45.0,
+        "avg_governance_pressure_score": 85.0,
+        "avg_monitoring_recurrence_score": 45.0,
+        "avg_commercial_value_proxy": 48.0,
+        "graph_strength_score": 57.28
+      },
+      {
+        "solution_type": "state_driven_backlog_prototype_and_validation",
+        "case_count": 1,
+        "avg_opportunity_score": 57.35,
+        "avg_hallucination_reduction_potential": 45.0,
+        "avg_governance_pressure_score": 65.0,
+        "avg_monitoring_recurrence_score": 55.0,
+        "avg_commercial_value_proxy": 48.0,
+        "graph_strength_score": 54.27
+      }
+    ],
+    "recommended_modes": [
+      {
+        "service_package": "TIC/SI State Mesh",
+        "case_count": 1,
+        "avg_opportunity_score": 79.85,
+        "avg_hallucination_reduction_potential": 71.0,
+        "avg_governance_pressure_score": 85.0,
+        "avg_monitoring_recurrence_score": 90.0,
+        "avg_commercial_value_proxy": 66.0,
+        "graph_strength_score": 78.3
+      },
+      {
+        "service_package": "Governance Compliance State Mesh",
+        "case_count": 1,
+        "avg_opportunity_score": 80.05,
+        "avg_hallucination_reduction_potential": 71.0,
+        "avg_governance_pressure_score": 95.0,
+        "avg_monitoring_recurrence_score": 85.0,
+        "avg_commercial_value_proxy": 58.0,
+        "graph_strength_score": 77.92
+      },
+      {
+        "service_package": "Programa de IA PME",
+        "case_count": 1,
+        "avg_opportunity_score": 73.65,
+        "avg_hallucination_reduction_potential": 59.0,
+        "avg_governance_pressure_score": 85.0,
+        "avg_monitoring_recurrence_score": 80.0,
+        "avg_commercial_value_proxy": 66.0,
+        "graph_strength_score": 72.23
+      },
+      {
+        "service_package": "Cubo PME Starter",
+        "case_count": 1,
+        "avg_opportunity_score": 67.45,
+        "avg_hallucination_reduction_potential": 65.0,
+        "avg_governance_pressure_score": 45.0,
+        "avg_monitoring_recurrence_score": 80.0,
+        "avg_commercial_value_proxy": 74.0,
+        "graph_strength_score": 66.46
+      },
+      {
+        "service_package": "Operacao Assistida",
+        "case_count": 1,
+        "avg_opportunity_score": 60.55,
+        "avg_hallucination_reduction_potential": 67.0,
+        "avg_governance_pressure_score": 45.0,
+        "avg_monitoring_recurrence_score": 80.0,
+        "avg_commercial_value_proxy": 66.0,
+        "graph_strength_score": 63.24
+      },
+      {
+        "service_package": "Software Review Gate",
+        "case_count": 1,
+        "avg_opportunity_score": 61.65,
+        "avg_hallucination_reduction_potential": 45.0,
+        "avg_governance_pressure_score": 85.0,
+        "avg_monitoring_recurrence_score": 45.0,
+        "avg_commercial_value_proxy": 48.0,
+        "graph_strength_score": 57.28
+      },
+      {
+        "service_package": "Solution Factory Sprint",
+        "case_count": 1,
+        "avg_opportunity_score": 57.35,
+        "avg_hallucination_reduction_potential": 45.0,
+        "avg_governance_pressure_score": 65.0,
+        "avg_monitoring_recurrence_score": 55.0,
+        "avg_commercial_value_proxy": 48.0,
+        "graph_strength_score": 54.27
+      }
+    ],
+    "central_nodes": [
+      {
+        "id": "Case:BST_GOV_COMPLIANCE_001",
+        "kind": "Case",
+        "label": "BST-GOV-COMPLIANCE-001",
+        "weighted_degree": 1070.5,
+        "score_avg": 80.05,
+        "case_count": 1,
+        "centrality_band": "very_high"
+      },
+      {
+        "id": "Case:BST_TICSI_001",
+        "kind": "Case",
+        "label": "BST-TICSI-001",
+        "weighted_degree": 1063.5,
+        "score_avg": 79.85,
+        "case_count": 1,
+        "centrality_band": "very_high"
+      },
+      {
+        "id": "Case:BST_AI_PME_001",
+        "kind": "Case",
+        "label": "BST-AI-PME-001",
+        "weighted_degree": 844.2,
+        "score_avg": 73.65,
+        "case_count": 1,
+        "centrality_band": "very_high"
+      },
+      {
+        "id": "Case:BST_PME_ACCOUNTING_001",
+        "kind": "Case",
+        "label": "BST-PME-ACCOUNTING-001",
+        "weighted_degree": 687.15,
+        "score_avg": 67.45,
+        "case_count": 1,
+        "centrality_band": "very_high"
+      },
+      {
+        "id": "Case:BST_SOFTWARE_REVIEW_001",
+        "kind": "Case",
+        "label": "BST-SOFTWARE-REVIEW-001",
+        "weighted_degree": 631.55,
+        "score_avg": 61.65,
+        "case_count": 1,
+        "centrality_band": "very_high"
+      },
+      {
+        "id": "Case:BST_ASSISTED_OPS_001",
+        "kind": "Case",
+        "label": "BST-ASSISTED-OPS-001",
+        "weighted_degree": 618.85,
+        "score_avg": 60.55,
+        "case_count": 1,
+        "centrality_band": "very_high"
+      },
+      {
+        "id": "Case:BST_SOLUTION_FACTORY_001",
+        "kind": "Case",
+        "label": "BST-SOLUTION-FACTORY-001",
+        "weighted_degree": 591.45,
+        "score_avg": 57.35,
+        "case_count": 1,
+        "centrality_band": "very_high"
+      },
+      {
+        "id": "StackDependency:high",
+        "kind": "StackDependency",
+        "label": "high",
+        "weighted_degree": 360.0,
+        "score_avg": 75.25,
+        "case_count": 4,
+        "centrality_band": "very_high"
+      },
+      {
+        "id": "Gate:STACK_GROUNDED_REVIEW_REQUIRED",
+        "kind": "Gate",
+        "label": "STACK_GROUNDED_REVIEW_REQUIRED",
+        "weighted_degree": 301.0,
+        "score_avg": 0.0,
+        "case_count": 0,
+        "centrality_band": "very_high"
+      },
+      {
+        "id": "Gate:GOVERNANCE_REVIEW_REQUIRED",
+        "kind": "Gate",
+        "label": "GOVERNANCE_REVIEW_REQUIRED",
+        "weighted_degree": 295.2,
+        "score_avg": 0.0,
+        "case_count": 0,
+        "centrality_band": "very_high"
+      },
+      {
+        "id": "GovernanceNeed:high",
+        "kind": "GovernanceNeed",
+        "label": "high",
+        "weighted_degree": 255.0,
+        "score_avg": 71.72,
+        "case_count": 3,
+        "centrality_band": "very_high"
+      },
+      {
+        "id": "RecommendedMode:DIAGNOSTIC_AND_BACKLOG",
+        "kind": "RecommendedMode",
+        "label": "DIAGNOSTIC_AND_BACKLOG",
+        "weighted_degree": 247.0,
+        "score_avg": 61.75,
+        "case_count": 4,
+        "centrality_band": "very_high"
+      },
+      {
+        "id": "MonitoringNeed:monthly",
+        "kind": "MonitoringNeed",
+        "label": "monthly",
+        "weighted_degree": 240.0,
+        "score_avg": 67.22,
+        "case_count": 3,
+        "centrality_band": "very_high"
+      },
+      {
+        "id": "StackDependency:medium_high",
+        "kind": "StackDependency",
+        "label": "medium_high",
+        "weighted_degree": 210.0,
+        "score_avg": 59.85,
+        "case_count": 3,
+        "centrality_band": "very_high"
+      },
+      {
+        "id": "Gate:IMPLEMENTATION_RISK_REVIEW_REQUIRED",
+        "kind": "Gate",
+        "label": "IMPLEMENTATION_RISK_REVIEW_REQUIRED",
+        "weighted_degree": 159.9,
+        "score_avg": 0.0,
+        "case_count": 0,
+        "centrality_band": "very_high"
+      }
+    ]
+  },
+  "checks": {
+    "source_ensemble_exists": true,
+    "source_ensemble_status_pass": true,
+    "case_count": 7,
+    "node_count": 64,
+    "edge_count": 77,
+    "has_case_ranking": true,
+    "has_service_package_ranking": true,
+    "has_company_profile_ranking": true,
+    "has_solution_type_ranking": true,
+    "has_central_nodes": true,
+    "no_production_graph_write": true,
+    "calibration_status": "NOT_CALIBRATED_GRAPH_RANKING_ONLY"
+  },
+  "errors": [],
+  "blocked_actions": [
+    "client_facing_claim",
+    "automatic_nomination",
+    "implementation_execution",
+    "production_activation",
+    "automatic_merge",
+    "credential_handling",
+    "automatic_threshold_mutation",
+    "autonomous_external_execution",
+    "real_world_side_effect",
+    "unapproved_real_company_data",
+    "production_neo4j_connection",
+    "production_graph_write",
+    "final_answer_generation_without_boundary",
+    "gpt_call",
+    "codex_execution",
+    "public_api_publication",
+    "custom_gpt_connection_without_human_approval",
+    "final_threshold_calibration",
+    "final_weight_calibration"
+  ]
+}
