@@ -1,0 +1,249 @@
+{
+  "version": "demo_chat_semantic_classifier.v0.1",
+  "principle": "Short as possible, complete as necessary, grounded in state, governed by gates.",
+  "task_types": [
+    {
+      "name": "production_activation_request",
+      "priority": 100,
+      "risk": "critical",
+      "signals": [
+        "producao",
+        "produção",
+        "liberar",
+        "libera",
+        "ativar",
+        "go live",
+        "deploy"
+      ],
+      "gate": "PRODUCTION_REVIEW_REQUIRED",
+      "mode": "PRODUCTION_REVIEW_PACKET",
+      "evidence": [
+        "production_gate",
+        "tests",
+        "rollback",
+        "approval"
+      ],
+      "generic_risk": "Pode liberar produção sem gate, rollback ou aprovação.",
+      "casulo": "Bloqueia produção e exige gate, evidência, rollback e revisão."
+    },
+    {
+      "name": "client_claim_request",
+      "priority": 95,
+      "risk": "critical",
+      "signals": [
+        "cliente",
+        "apresentar",
+        "claim",
+        "evidencia validada",
+        "evidência validada",
+        "conformidade"
+      ],
+      "gate": "CLIENT_CLAIM_REVIEW_REQUIRED",
+      "mode": "CLIENT_CLAIM_REVIEW_PACKET",
+      "evidence": [
+        "evidence_status",
+        "review_status",
+        "approval"
+      ],
+      "generic_risk": "Pode transformar evidência fraca em claim externo.",
+      "casulo": "Bloqueia claim cliente até evidência e aprovação."
+    },
+    {
+      "name": "codex_or_merge_request",
+      "priority": 90,
+      "risk": "critical",
+      "signals": [
+        "codex",
+        "merge",
+        "commit",
+        "push",
+        "pull request",
+        "automatico",
+        "automático"
+      ],
+      "gate": "HUMAN_REVIEW_REQUIRED",
+      "mode": "HUMAN_REVIEW_PACKET",
+      "evidence": [
+        "repo_state",
+        "checks",
+        "approval",
+        "rollback"
+      ],
+      "generic_risk": "Pode sugerir execução, commit ou merge prematuro.",
+      "casulo": "Bloqueia Codex/merge e gera pacote de revisão."
+    },
+    {
+      "name": "parser_generation_request",
+      "priority": 85,
+      "risk": "critical",
+      "signals": [
+        "parser",
+        "planilha",
+        "excel",
+        "xlsx",
+        "abas",
+        "colunas",
+        "schema"
+      ],
+      "gate": "SCHEMA_REQUIRED",
+      "mode": "PARSER_CONTRACT_PACKET",
+      "evidence": [
+        "workbook_inventory",
+        "schema",
+        "fixture",
+        "golden_output",
+        "validator"
+      ],
+      "generic_risk": "Pode gerar código que compila, mas inventa abas, colunas e regras.",
+      "casulo": "Bloqueia parser final e exige inventário, schema, fixture, golden output e validador."
+    },
+    {
+      "name": "implementation_request",
+      "priority": 80,
+      "risk": "critical",
+      "signals": [
+        "implemente",
+        "codigo",
+        "código",
+        "patch",
+        "script",
+        "desenvolver"
+      ],
+      "gate": "IMPLEMENTATION_REVIEW_REQUIRED",
+      "mode": "IMPLEMENTATION_PACKET",
+      "evidence": [
+        "repo_state",
+        "contract",
+        "tests",
+        "validator"
+      ],
+      "generic_risk": "Pode gerar código sem contrato, teste ou estado real do repo.",
+      "casulo": "Exige repo state, contrato, testes, validação e rollback antes de implementar."
+    },
+    {
+      "name": "product_generation_request",
+      "priority": 70,
+      "risk": "high",
+      "signals": [
+        "produto",
+        "mvp",
+        "pacote",
+        "oferta",
+        "funcionalidades"
+      ],
+      "gate": "PRODUCT_REVIEW_REQUIRED",
+      "mode": "PRODUCT_SPEC_PACKET",
+      "evidence": [
+        "target_user",
+        "pain",
+        "scope",
+        "validation_plan"
+      ],
+      "generic_risk": "Pode gerar lista bonita de features sem validação ou escopo.",
+      "casulo": "Gera especificação limitada, hipótese de valor, escopo e plano de validação."
+    },
+    {
+      "name": "solution_design_request",
+      "priority": 65,
+      "risk": "high",
+      "signals": [
+        "arquitetura",
+        "modelo",
+        "fluxo",
+        "sistema",
+        "solucao",
+        "solução"
+      ],
+      "gate": "SOLUTION_REVIEW_REQUIRED",
+      "mode": "SOLUTION_BLUEPRINT",
+      "evidence": [
+        "problem",
+        "constraints",
+        "target_state",
+        "acceptance_criteria"
+      ],
+      "generic_risk": "Pode desenhar arquitetura sem restrição real.",
+      "casulo": "Gera blueprint com escopo, premissas, riscos, validação e próximo passo."
+    },
+    {
+      "name": "research_request",
+      "priority": 60,
+      "risk": "high",
+      "signals": [
+        "pesquise",
+        "pesquisa",
+        "mercado",
+        "referencias",
+        "referências",
+        "artigos",
+        "stack"
+      ],
+      "gate": "SOURCE_REVIEW_REQUIRED",
+      "mode": "RESEARCH_PACKET",
+      "evidence": [
+        "sources",
+        "dates",
+        "citations",
+        "uncertainty"
+      ],
+      "generic_risk": "Pode responder de memória, sem fonte ou com informação vencida.",
+      "casulo": "Exige fonte, data, incerteza, lacunas e próximo teste."
+    },
+    {
+      "name": "diagnostic_request",
+      "priority": 50,
+      "risk": "high",
+      "signals": [
+        "diagnostico",
+        "diagnóstico",
+        "diagnostique",
+        "problema",
+        "erro",
+        "falhou",
+        "falha",
+        "causa"
+      ],
+      "gate": "DIAGNOSTIC_REVIEW_REQUIRED",
+      "mode": "DIAGNOSTIC_PACKET",
+      "evidence": [
+        "symptom",
+        "artifact",
+        "state_snapshot",
+        "validator"
+      ],
+      "generic_risk": "Pode inventar causa raiz sem evidência.",
+      "casulo": "Separa sintoma, hipótese, evidência, risco e validação."
+    },
+    {
+      "name": "simple_state_question",
+      "priority": 10,
+      "risk": "medium",
+      "signals": [
+        "pode",
+        "status",
+        "pronto",
+        "estado",
+        "o que fazer agora"
+      ],
+      "gate": "STATE_REVIEW_REQUIRED",
+      "mode": "STATE_ANSWER",
+      "evidence": [
+        "state_snapshot",
+        "gate",
+        "blocked_actions"
+      ],
+      "generic_risk": "Pode responder sim/não sem gate.",
+      "casulo": "Responde curto: estado, gate, risco e próxima ação permitida."
+    }
+  ],
+  "output_contract": [
+    "task_type",
+    "risk",
+    "gate",
+    "missing_evidence",
+    "blocked_actions",
+    "generic_response_risk",
+    "casulo_response",
+    "next_allowed_action"
+  ]
+}
