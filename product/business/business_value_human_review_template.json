@@ -1,0 +1,44 @@
+{
+  "template_version": "business_value_human_review_template.v0.1",
+  "phase": "PROD-1821..1860",
+  "calibration_status": "NOT_CALIBRATED_REVIEW_TEMPLATE_ONLY",
+  "review_scale": {
+    "0": "reject_or_unsafe",
+    "1": "weak",
+    "2": "partial",
+    "3": "good",
+    "4": "strong"
+  },
+  "review_dimensions": [
+    "business_fit",
+    "pain_clarity",
+    "evidence_gap_clarity",
+    "service_package_fit",
+    "implementation_risk_realism",
+    "governance_pressure_realism",
+    "monitoring_recurrence_potential",
+    "hallucination_reduction_relevance",
+    "commercial_value_plausibility",
+    "pilot_priority"
+  ],
+  "review_record_template": {
+    "case_id": "fill_manually",
+    "reviewer": "fill_manually",
+    "review_datetime_utc": "fill_manually",
+    "scores": {
+      "business_fit": null,
+      "pain_clarity": null,
+      "evidence_gap_clarity": null,
+      "service_package_fit": null,
+      "implementation_risk_realism": null,
+      "governance_pressure_realism": null,
+      "monitoring_recurrence_potential": null,
+      "hallucination_reduction_relevance": null,
+      "commercial_value_plausibility": null,
+      "pilot_priority": null
+    },
+    "review_decision": "PENDING_REVIEW",
+    "review_notes": "fill_manually",
+    "calibration_eligible": false
+  }
+}

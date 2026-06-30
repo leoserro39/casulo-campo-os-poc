@@ -1,0 +1,21 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "CASULO Business Value Human Calibration Dataset",
+  "type": "object",
+  "required": ["status", "phase", "decision", "dataset", "checks", "blocked_actions"],
+  "properties": {
+    "status": {"type": "string"},
+    "phase": {"type": "string"},
+    "decision": {"type": "string"},
+    "dataset": {"type": "object"},
+    "cases": {
+      "type": "array",
+      "items": {"type": "object"}
+    },
+    "checks": {"type": "object"},
+    "blocked_actions": {
+      "type": "array",
+      "items": {"type": "string"}
+    }
+  }
+}
