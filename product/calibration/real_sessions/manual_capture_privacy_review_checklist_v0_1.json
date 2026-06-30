@@ -1,0 +1,46 @@
+{
+  "version": "manual_capture_privacy_review_checklist.v0.1",
+  "phase": "PROD-3181..3220",
+  "checks": [
+    {
+      "id": "CHK-001",
+      "name": "source_refs_only",
+      "required": true
+    },
+    {
+      "id": "CHK-002",
+      "name": "no_raw_private_chat_storage",
+      "required": true
+    },
+    {
+      "id": "CHK-003",
+      "name": "pii_redacted",
+      "required": true
+    },
+    {
+      "id": "CHK-004",
+      "name": "secret_scan_completed",
+      "required": true
+    },
+    {
+      "id": "CHK-005",
+      "name": "claim_boundary_confirmed",
+      "required": true
+    },
+    {
+      "id": "CHK-006",
+      "name": "human_reviewer_notes_present",
+      "required": true
+    },
+    {
+      "id": "CHK-007",
+      "name": "decision_gate_present",
+      "required": true
+    },
+    {
+      "id": "CHK-008",
+      "name": "dataset_acceptance_decision_present",
+      "required": true
+    }
+  ]
+}

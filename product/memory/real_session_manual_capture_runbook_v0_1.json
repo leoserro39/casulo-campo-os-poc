@@ -1,0 +1,54 @@
+{
+  "version": "real_session_manual_capture_runbook.v0.1",
+  "phase": "PROD-3181..3220",
+  "purpose": "Define manual capture runbook for future sanitized real-session calibration.",
+  "steps": [
+    "select_controlled_session",
+    "copy_empty_intake_template",
+    "assign_session_id",
+    "classify_chat_layer_and_work_type",
+    "record_source_references_only",
+    "redact_pii_before_storage",
+    "run_secret_scan_before_storage",
+    "capture_baseline_vs_exocortex_scores",
+    "score_value_delta_apex_cost_and_hallucination",
+    "attach_evidence_pointers",
+    "human_reviewer_decision",
+    "accept_or_reject_into_calibration_dataset"
+  ],
+  "review_gates": [
+    "PRIVACY_REVIEW_REQUIRED",
+    "PII_REDACTION_REQUIRED",
+    "SECRET_SCAN_REQUIRED",
+    "HUMAN_REVIEW_REQUIRED",
+    "CLAIM_BOUNDARY_REVIEW_REQUIRED",
+    "DATASET_ACCEPTANCE_REVIEW_REQUIRED"
+  ],
+  "privacy_review_checklist": "product/calibration/real_sessions/manual_capture_privacy_review_checklist_v0_1.json",
+  "schema": "product/schemas/real_session_capture.schema.json",
+  "empty_intake": "product/calibration/real_sessions/real_session_empty_intake_v0_1.json",
+  "real_data_captured": false,
+  "runbook_boundary": "Preparation only. No real session data captured in this phase.",
+  "dataset_acceptance_rule": "A session can enter calibration dataset only after privacy review, PII redaction, secret scan, source-ref-only capture and human reviewer acceptance.",
+  "allowed_actions": [
+    "manual_capture_runbook_creation",
+    "privacy_review_checklist_creation",
+    "controlled_capture_preparation",
+    "sanitized_source_reference_capture",
+    "human_review_protocol_preparation"
+  ],
+  "blocked_actions": [
+    "real_session_data_capture_without_review",
+    "raw_private_data_storage",
+    "secret_or_credential_storage",
+    "unredacted_pii_storage",
+    "client_facing_value_claim",
+    "real_world_profit_claim",
+    "validated_savings_claim",
+    "validated_hallucination_reduction_claim",
+    "production_activation",
+    "automatic_memory_delete",
+    "gpt_memory_api_execution"
+  ],
+  "recommended_next_phase": "PROD-3221..3260 - Real Session Intake Validator and Empty Batch Audit"
+}

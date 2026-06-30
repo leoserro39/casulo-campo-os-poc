@@ -1,0 +1,31 @@
+{
+  "phase": "PROD-3181..3220",
+  "required_prior_tag": "product-real-session-capture-schema-empty-intake-v0.1",
+  "mode": "manual_capture_runbook_only",
+  "real_data_captured": false,
+  "source_refs_only_required": true,
+  "human_review_required": true,
+  "privacy_review_required": true,
+  "secret_scan_required": true,
+  "blocked_actions": [
+    "real_session_data_capture_without_review",
+    "raw_private_data_storage",
+    "secret_or_credential_storage",
+    "unredacted_pii_storage",
+    "client_facing_value_claim",
+    "real_world_profit_claim",
+    "validated_savings_claim",
+    "validated_hallucination_reduction_claim",
+    "production_activation",
+    "automatic_memory_delete",
+    "gpt_memory_api_execution"
+  ],
+  "allowed_actions": [
+    "manual_capture_runbook_creation",
+    "privacy_review_checklist_creation",
+    "controlled_capture_preparation",
+    "sanitized_source_reference_capture",
+    "human_review_protocol_preparation"
+  ],
+  "recommended_next_phase": "PROD-3221..3260 - Real Session Intake Validator and Empty Batch Audit"
+}
