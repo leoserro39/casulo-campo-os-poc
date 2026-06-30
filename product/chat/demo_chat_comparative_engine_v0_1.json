@@ -1,0 +1,14 @@
+{
+  "version": "demo_chat_comparative_engine.v0.1",
+  "input": "user_prompt",
+  "output": [
+    "task_type",
+    "risk",
+    "gate",
+    "generic_response",
+    "generic_response_risk",
+    "casulo_response",
+    "problems_avoided",
+    "next_allowed_action"
+  ]
+}
