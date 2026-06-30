@@ -1,0 +1,33 @@
+{
+  "contract_version": "operational_cube.graph_context_api_endpoint.v0.1",
+  "phase": "PROD-1381..1420",
+  "mode": "local_http_read_only_graph_context_api",
+  "final_answer_generation_allowed": false,
+  "gpt_call_allowed": false,
+  "codex_execution_allowed": false,
+  "production_connection_allowed": false,
+  "credential_handling_allowed": false,
+  "client_facing_claim_allowed": false,
+  "required_prior_phase": "product-graph-backed-retrieval-adapter-v0.1",
+  "endpoints": [
+    "/api/health",
+    "/api/graph/context"
+  ],
+  "blocked_actions": [
+    "client_facing_claim",
+    "automatic_nomination",
+    "implementation_execution",
+    "production_activation",
+    "automatic_merge",
+    "credential_handling",
+    "automatic_threshold_mutation",
+    "autonomous_external_execution",
+    "real_world_side_effect",
+    "unapproved_real_company_data",
+    "production_neo4j_connection",
+    "production_graph_write",
+    "final_answer_generation",
+    "gpt_call",
+    "codex_execution"
+  ]
+}

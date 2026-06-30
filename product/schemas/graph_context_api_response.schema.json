@@ -1,0 +1,16 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "CASULO Graph Context API Response",
+  "type": "object",
+  "required": ["status", "endpoint", "mode"],
+  "properties": {
+    "status": {"type": "string"},
+    "endpoint": {"type": "string"},
+    "mode": {"type": "string"},
+    "response": {"type": "object"},
+    "blocked_actions": {
+      "type": "array",
+      "items": {"type": "string"}
+    }
+  }
+}

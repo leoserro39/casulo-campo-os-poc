@@ -1,0 +1,46 @@
+{
+  "status": "PASS",
+  "phase": "PROD-1381..1420",
+  "health": {
+    "status": "PASS",
+    "endpoint": "/api/health",
+    "mode": "local_http_read_only_graph_context_api",
+    "service": "CASULO Graph Context API",
+    "blocked_actions": [
+      "client_facing_claim",
+      "automatic_nomination",
+      "implementation_execution",
+      "production_activation",
+      "automatic_merge",
+      "credential_handling",
+      "automatic_threshold_mutation",
+      "autonomous_external_execution",
+      "real_world_side_effect",
+      "unapproved_real_company_data",
+      "production_neo4j_connection",
+      "production_graph_write",
+      "final_answer_generation",
+      "gpt_call",
+      "codex_execution"
+    ]
+  },
+  "context_status": "PASS",
+  "context_result_count": 5,
+  "blocked_actions": [
+    "client_facing_claim",
+    "automatic_nomination",
+    "implementation_execution",
+    "production_activation",
+    "automatic_merge",
+    "credential_handling",
+    "automatic_threshold_mutation",
+    "autonomous_external_execution",
+    "real_world_side_effect",
+    "unapproved_real_company_data",
+    "production_neo4j_connection",
+    "production_graph_write",
+    "final_answer_generation",
+    "gpt_call",
+    "codex_execution"
+  ]
+}
