@@ -1,0 +1,10 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "demo_surface_operator_readiness",
+  "type": "object",
+  "required": [
+    "status",
+    "phase",
+    "blocked_actions"
+  ]
+}

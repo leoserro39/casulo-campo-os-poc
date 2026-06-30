@@ -424,4 +424,14 @@ ENDPOINT_GROUPS = [
         ],
     },
 
+    {
+        "group": "umbrella_demo_surface_operator_readiness",
+        "routes": [
+            {"path": "/api/casulo/umbrella/demo-surface/status", "file": "outputs/umbrella_prod-1141_1180_demo_surface_operator_readiness_status.json", "key": "status"},
+            {"path": "/api/casulo/umbrella/demo-surface/main", "file": "outputs/umbrella_prod-1141_1180_demo_surface_operator_readiness.json", "key": "main"},
+            {"path": "/api/casulo/umbrella/demo-surface/readiness", "file": "outputs/umbrella_prod-1141_1180_demo_surface_operator_readiness_readiness.json", "key": "readiness"},
+            {"path": "/api/casulo/umbrella/demo-surface/audit", "file": "outputs/umbrella_prod-1141_1180_demo_surface_operator_readiness_audit_report.json", "key": "audit"},
+        ],
+    },
+
 ]

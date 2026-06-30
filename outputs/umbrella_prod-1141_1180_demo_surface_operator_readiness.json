@@ -1,0 +1,52 @@
+{
+  "status": "PASS",
+  "phase": "Demo Surface and Operator Readiness",
+  "operator_views": [
+    {
+      "view": "Executive Summary",
+      "source": "outputs/prod981_1020_business_diagnostic_report_pack.json"
+    },
+    {
+      "view": "Diagnostic Cases",
+      "source": "outputs/prod981_1020_diagnostic_case_reports.json"
+    },
+    {
+      "view": "Graph Boundary",
+      "source": "outputs/prod981_1020_graph_adapter_boundary.json"
+    },
+    {
+      "view": "Business Value Metrics",
+      "source": "outputs/umbrella_prod1101_1140_business_value_metrics.json"
+    },
+    {
+      "view": "Demo Evidence Pack",
+      "source": "outputs/umbrella_prod1021_1060_controlled_demo_evidence.json"
+    }
+  ],
+  "operator_script": [
+    "open summary",
+    "show gates",
+    "show cases",
+    "show graph boundary",
+    "show value metrics",
+    "close readiness"
+  ],
+  "operator_view_count": 5,
+  "value_proxy_points": null,
+  "graph_node_count": null,
+  "auto_apply": false,
+  "blocked_actions": [
+    "client_facing_claim",
+    "automatic_nomination",
+    "implementation_execution",
+    "production_activation",
+    "automatic_merge",
+    "credential_handling",
+    "automatic_threshold_mutation",
+    "autonomous_external_execution",
+    "real_world_side_effect",
+    "unapproved_real_company_data",
+    "live_graph_database_write",
+    "neo4j_connection"
+  ]
+}

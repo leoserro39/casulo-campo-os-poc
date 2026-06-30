@@ -1,0 +1,27 @@
+{
+  "status": "PASS",
+  "phase": "Demo Surface and Operator Readiness",
+  "generated_at": "2026-06-30T15:46:16+00:00",
+  "operator_view_count": 5,
+  "value_proxy_points": null,
+  "graph_node_count": null,
+  "external_execution_allowed": false,
+  "graph_write_allowed": false,
+  "neo4j_connection_allowed": false,
+  "automatic_threshold_mutation_allowed": false,
+  "auto_apply": false,
+  "blocked_actions": [
+    "client_facing_claim",
+    "automatic_nomination",
+    "implementation_execution",
+    "production_activation",
+    "automatic_merge",
+    "credential_handling",
+    "automatic_threshold_mutation",
+    "autonomous_external_execution",
+    "real_world_side_effect",
+    "unapproved_real_company_data",
+    "live_graph_database_write",
+    "neo4j_connection"
+  ]
+}
