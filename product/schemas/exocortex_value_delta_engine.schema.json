@@ -1,0 +1,12 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "CASULO Exocortex Value Delta Engine Contract",
+  "type": "object",
+  "required": [
+    "version",
+    "phase",
+    "formula",
+    "value_components",
+    "evaluated_cases"
+  ]
+}

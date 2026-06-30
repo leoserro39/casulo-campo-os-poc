@@ -1,0 +1,30 @@
+{
+  "phase": "PROD-2821..2860",
+  "required_prior_tag": "product-prompt-input-data-quality-gate-v0.1",
+  "mode": "value_delta_engine_contract_only",
+  "value_components": [
+    "time_saved_value",
+    "rework_avoided_value",
+    "context_waste_reduction_value",
+    "memory_state_preservation_value",
+    "hallucination_risk_avoided_value",
+    "claim_leakage_avoided_value",
+    "input_quality_adjustment",
+    "operational_risk_avoided_value",
+    "casulo_operational_cost",
+    "net_value_delta",
+    "confidence_score"
+  ],
+  "input_quality_gate_required": true,
+  "hallucination_memory_context_accounted": true,
+  "blocked_actions": [
+    "real_world_profit_claim",
+    "validated_savings_claim",
+    "client_facing_value_claim",
+    "production_activation",
+    "automatic_memory_delete",
+    "gpt_memory_api_execution",
+    "value_delta_claim_with_low_input_quality"
+  ],
+  "recommended_next_phase": "PROD-2861..2900 - Value Delta Synthetic Fixture Pack"
+}
