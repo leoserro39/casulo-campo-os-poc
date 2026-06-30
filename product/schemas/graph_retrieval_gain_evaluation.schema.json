@@ -1,0 +1,16 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "CASULO Graph Retrieval Gain Evaluation",
+  "type": "object",
+  "required": ["status", "decision", "neo4j", "retrieval_gain", "blocked_actions"],
+  "properties": {
+    "status": {"type": "string"},
+    "decision": {"type": "string"},
+    "neo4j": {"type": "object"},
+    "retrieval_gain": {"type": "object"},
+    "blocked_actions": {
+      "type": "array",
+      "items": {"type": "string"}
+    }
+  }
+}

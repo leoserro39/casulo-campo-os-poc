@@ -1,0 +1,184 @@
+{
+  "status": "PASS",
+  "decision": "GRAPH_RETRIEVAL_GAIN_CONFIRMED_FOR_SANDBOX",
+  "generated_at": "2026-06-30T18:01:54.490820+00:00",
+  "mode": "neo4j_sandbox_read_only_topology_aware_evaluation",
+  "neo4j": {
+    "casulo_nodes": 313,
+    "casulo_relationships": 350,
+    "label_counts": {
+      "Case": 50,
+      "Evidence": 50,
+      "RiskSignal": 50,
+      "Gate": 50,
+      "OutputMode": 50,
+      "HallucinationBudget": 50,
+      "Domain": 12,
+      "ReadinessState": 1
+    },
+    "relationship_type_counts": {
+      "BELONGS_TO": 50,
+      "HAS_EVIDENCE": 50,
+      "TRIGGERS": 50,
+      "CONTRIBUTES_TO": 50,
+      "ALLOWS": 50,
+      "HAS_BUDGET": 50,
+      "REQUIRES": 50
+    },
+    "direct_context": {
+      "cases": "50",
+      "evidence_nodes": "50",
+      "risk_nodes": "50",
+      "budget_nodes": "50",
+      "domain_nodes": "12"
+    },
+    "controlled_paths": {
+      "cases": "50",
+      "cases_reaching_gate_controlled": "50",
+      "cases_reaching_output_controlled": "50"
+    },
+    "sample_controlled_paths": [
+      {
+        "case_id": "case:EXP50-001",
+        "risk_id": "risk:EXP50-001:clean_controlled_answer",
+        "gate_id": "gate:EXP50-001:ANSWER_ALLOWED",
+        "output_id": "output:EXP50-001:ANSWER"
+      },
+      {
+        "case_id": "case:EXP50-002",
+        "risk_id": "risk:EXP50-002:missing_evidence",
+        "gate_id": "gate:EXP50-002:HUMAN_REVIEW_REQUIRED",
+        "output_id": "output:EXP50-002:HUMAN_REVIEW_PACKET"
+      },
+      {
+        "case_id": "case:EXP50-003",
+        "risk_id": "risk:EXP50-003:conflicting_information",
+        "gate_id": "gate:EXP50-003:HUMAN_REVIEW_REQUIRED",
+        "output_id": "output:EXP50-003:HUMAN_REVIEW_PACKET"
+      },
+      {
+        "case_id": "case:EXP50-004",
+        "risk_id": "risk:EXP50-004:high_stakes_review",
+        "gate_id": "gate:EXP50-004:ANSWER_ALLOWED",
+        "output_id": "output:EXP50-004:ANSWER"
+      },
+      {
+        "case_id": "case:EXP50-005",
+        "risk_id": "risk:EXP50-005:clean_controlled_answer",
+        "gate_id": "gate:EXP50-005:ANSWER_ALLOWED",
+        "output_id": "output:EXP50-005:ANSWER"
+      },
+      {
+        "case_id": "case:EXP50-006",
+        "risk_id": "risk:EXP50-006:missing_evidence",
+        "gate_id": "gate:EXP50-006:HUMAN_REVIEW_REQUIRED",
+        "output_id": "output:EXP50-006:HUMAN_REVIEW_PACKET"
+      },
+      {
+        "case_id": "case:EXP50-007",
+        "risk_id": "risk:EXP50-007:conflicting_information",
+        "gate_id": "gate:EXP50-007:HUMAN_REVIEW_REQUIRED",
+        "output_id": "output:EXP50-007:HUMAN_REVIEW_PACKET"
+      },
+      {
+        "case_id": "case:EXP50-008",
+        "risk_id": "risk:EXP50-008:high_stakes_review",
+        "gate_id": "gate:EXP50-008:ANSWER_ALLOWED",
+        "output_id": "output:EXP50-008:ANSWER"
+      },
+      {
+        "case_id": "case:EXP50-009",
+        "risk_id": "risk:EXP50-009:clean_controlled_answer",
+        "gate_id": "gate:EXP50-009:ANSWER_ALLOWED",
+        "output_id": "output:EXP50-009:ANSWER"
+      },
+      {
+        "case_id": "case:EXP50-010",
+        "risk_id": "risk:EXP50-010:missing_evidence",
+        "gate_id": "gate:EXP50-010:HUMAN_REVIEW_REQUIRED",
+        "output_id": "output:EXP50-010:HUMAN_REVIEW_PACKET"
+      },
+      {
+        "case_id": "case:EXP50-011",
+        "risk_id": "risk:EXP50-011:conflicting_information",
+        "gate_id": "gate:EXP50-011:HUMAN_REVIEW_REQUIRED",
+        "output_id": "output:EXP50-011:HUMAN_REVIEW_PACKET"
+      },
+      {
+        "case_id": "case:EXP50-012",
+        "risk_id": "risk:EXP50-012:high_stakes_review",
+        "gate_id": "gate:EXP50-012:HUMAN_REVIEW_REQUIRED",
+        "output_id": "output:EXP50-012:HUMAN_REVIEW_PACKET"
+      },
+      {
+        "case_id": "case:EXP50-013",
+        "risk_id": "risk:EXP50-013:clean_controlled_answer",
+        "gate_id": "gate:EXP50-013:HUMAN_REVIEW_REQUIRED",
+        "output_id": "output:EXP50-013:HUMAN_REVIEW_PACKET"
+      },
+      {
+        "case_id": "case:EXP50-014",
+        "risk_id": "risk:EXP50-014:missing_evidence",
+        "gate_id": "gate:EXP50-014:HUMAN_REVIEW_REQUIRED",
+        "output_id": "output:EXP50-014:HUMAN_REVIEW_PACKET"
+      },
+      {
+        "case_id": "case:EXP50-015",
+        "risk_id": "risk:EXP50-015:conflicting_information",
+        "gate_id": "gate:EXP50-015:HUMAN_REVIEW_REQUIRED",
+        "output_id": "output:EXP50-015:HUMAN_REVIEW_PACKET"
+      },
+      {
+        "case_id": "case:EXP50-016",
+        "risk_id": "risk:EXP50-016:high_stakes_review",
+        "gate_id": "gate:EXP50-016:HUMAN_REVIEW_REQUIRED",
+        "output_id": "output:EXP50-016:HUMAN_REVIEW_PACKET"
+      },
+      {
+        "case_id": "case:EXP50-017",
+        "risk_id": "risk:EXP50-017:clean_controlled_answer",
+        "gate_id": "gate:EXP50-017:HUMAN_REVIEW_REQUIRED",
+        "output_id": "output:EXP50-017:HUMAN_REVIEW_PACKET"
+      },
+      {
+        "case_id": "case:EXP50-018",
+        "risk_id": "risk:EXP50-018:missing_evidence",
+        "gate_id": "gate:EXP50-018:HUMAN_REVIEW_REQUIRED",
+        "output_id": "output:EXP50-018:HUMAN_REVIEW_PACKET"
+      },
+      {
+        "case_id": "case:EXP50-019",
+        "risk_id": "risk:EXP50-019:conflicting_information",
+        "gate_id": "gate:EXP50-019:HUMAN_REVIEW_REQUIRED",
+        "output_id": "output:EXP50-019:HUMAN_REVIEW_PACKET"
+      },
+      {
+        "case_id": "case:EXP50-020",
+        "risk_id": "risk:EXP50-020:high_stakes_review",
+        "gate_id": "gate:EXP50-020:ANSWER_ALLOWED",
+        "output_id": "output:EXP50-020:ANSWER"
+      }
+    ]
+  },
+  "retrieval_gain": {
+    "import_match": true,
+    "direct_context_ok": true,
+    "controlled_path_ok": true,
+    "interpretation": "Neo4j sandbox confirms topology-aware retrieval from Case to Evidence, RiskSignal, HallucinationBudget, Domain, Gate and OutputMode through controlled paths.",
+    "external_claim_allowed": false
+  },
+  "blocked_actions": [
+    "client_facing_claim",
+    "automatic_nomination",
+    "implementation_execution",
+    "production_activation",
+    "automatic_merge",
+    "credential_handling",
+    "automatic_threshold_mutation",
+    "autonomous_external_execution",
+    "real_world_side_effect",
+    "unapproved_real_company_data",
+    "production_neo4j_connection",
+    "production_graph_write"
+  ]
+}
