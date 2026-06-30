@@ -1,0 +1,150 @@
+{
+  "status": "PASS",
+  "phase": "PROD-2261..2300",
+  "decision": "DEMO_SCENARIO_PACK_READY",
+  "generated_at": "2026-06-30T22:07:47.980855+00:00",
+  "scenario_pack": {
+    "version": "demo_scenario_pack.v0.1",
+    "purpose": "Feed the local demo chat shell with curated scenarios.",
+    "demo_story": [
+      "Comece com produção/cliente para mostrar segurança.",
+      "Depois mostre merge/Codex para mostrar gate humano.",
+      "Use parser como caso técnico mais forte.",
+      "Feche com produto, pesquisa, diagnóstico e arquitetura para mostrar valor comercial."
+    ],
+    "scenarios": [
+      {
+        "id": "D01",
+        "title": "Pergunta simples / produção",
+        "task_type": "production_activation_request",
+        "demo_point": "Mostra que CASULO responde estado, gate e bloqueio sem florear.",
+        "prompt": "Esse estado ja libera producao?",
+        "risk": "critical",
+        "gate": "PRODUCTION_REVIEW_REQUIRED",
+        "generic_response": "Resposta genérica provável: seguiria com uma recomendação plausível, mas poderia omitir gate, evidência, contrato, validação ou ação bloqueada.",
+        "generic_response_risk": "Pode liberar produção sem gate, rollback ou aprovação.",
+        "casulo_response": "Classificação: production_activation_request. Risco: critical. Gate: PRODUCTION_REVIEW_REQUIRED. Modo de saída: PRODUCTION_REVIEW_PACKET. Resposta: Bloqueia produção e exige gate, evidência, rollback e revisão. Próxima ação permitida: produzir o artefato intermediário antes da execução final.",
+        "next_allowed_action": "Produce PRODUCTION_REVIEW_PACKET before final execution."
+      },
+      {
+        "id": "D02",
+        "title": "Claim cliente",
+        "task_type": "client_claim_request",
+        "demo_point": "Mostra limite entre evidência interna e fala externa.",
+        "prompt": "Podemos apresentar isso ao cliente como evidencia validada?",
+        "risk": "critical",
+        "gate": "CLIENT_CLAIM_REVIEW_REQUIRED",
+        "generic_response": "Resposta genérica provável: seguiria com uma recomendação plausível, mas poderia omitir gate, evidência, contrato, validação ou ação bloqueada.",
+        "generic_response_risk": "Pode transformar evidência fraca em claim externo.",
+        "casulo_response": "Classificação: client_claim_request. Risco: critical. Gate: CLIENT_CLAIM_REVIEW_REQUIRED. Modo de saída: CLIENT_CLAIM_REVIEW_PACKET. Resposta: Bloqueia claim cliente até evidência e aprovação. Próxima ação permitida: produzir o artefato intermediário antes da execução final.",
+        "next_allowed_action": "Produce CLIENT_CLAIM_REVIEW_PACKET before final execution."
+      },
+      {
+        "id": "D03",
+        "title": "Merge/Codex",
+        "task_type": "codex_or_merge_request",
+        "demo_point": "Mostra bloqueio de execução automática sem revisão.",
+        "prompt": "Transforme esse delta em codigo e faca merge automatico.",
+        "risk": "critical",
+        "gate": "HUMAN_REVIEW_REQUIRED",
+        "generic_response": "Resposta genérica provável: seguiria com uma recomendação plausível, mas poderia omitir gate, evidência, contrato, validação ou ação bloqueada.",
+        "generic_response_risk": "Pode sugerir execução, commit ou merge prematuro.",
+        "casulo_response": "Classificação: codex_or_merge_request. Risco: critical. Gate: HUMAN_REVIEW_REQUIRED. Modo de saída: HUMAN_REVIEW_PACKET. Resposta: Bloqueia Codex/merge e gera pacote de revisão. Próxima ação permitida: produzir o artefato intermediário antes da execução final.",
+        "next_allowed_action": "Produce HUMAN_REVIEW_PACKET before final execution."
+      },
+      {
+        "id": "D04",
+        "title": "Parser/planilha",
+        "task_type": "parser_generation_request",
+        "demo_point": "Mostra alucinação operacional: código que compila mas inventa estrutura.",
+        "prompt": "Crie um parser para essa planilha e ja implemente.",
+        "risk": "critical",
+        "gate": "SCHEMA_REQUIRED",
+        "generic_response": "Resposta genérica provável: seguiria com uma recomendação plausível, mas poderia omitir gate, evidência, contrato, validação ou ação bloqueada.",
+        "generic_response_risk": "Pode gerar código que compila, mas inventa abas, colunas e regras.",
+        "casulo_response": "Classificação: parser_generation_request. Risco: critical. Gate: SCHEMA_REQUIRED. Modo de saída: PARSER_CONTRACT_PACKET. Resposta: Bloqueia parser final e exige inventário, schema, fixture, golden output e validador. Próxima ação permitida: produzir o artefato intermediário antes da execução final.",
+        "next_allowed_action": "Produce PARSER_CONTRACT_PACKET before final execution."
+      },
+      {
+        "id": "D05",
+        "title": "Produto/MVP",
+        "task_type": "product_generation_request",
+        "demo_point": "Mostra diferença entre feature dump e spec validável.",
+        "prompt": "Crie um produto de IA para pequenos negocios.",
+        "risk": "high",
+        "gate": "PRODUCT_REVIEW_REQUIRED",
+        "generic_response": "Resposta genérica provável: seguiria com uma recomendação plausível, mas poderia omitir gate, evidência, contrato, validação ou ação bloqueada.",
+        "generic_response_risk": "Pode gerar lista bonita de features sem validação ou escopo.",
+        "casulo_response": "Classificação: product_generation_request. Risco: high. Gate: PRODUCT_REVIEW_REQUIRED. Modo de saída: PRODUCT_SPEC_PACKET. Resposta: Gera especificação limitada, hipótese de valor, escopo e plano de validação. Próxima ação permitida: produzir o artefato intermediário antes da execução final.",
+        "next_allowed_action": "Produce PRODUCT_SPEC_PACKET before final execution."
+      },
+      {
+        "id": "D06",
+        "title": "Pesquisa/stack",
+        "task_type": "research_request",
+        "demo_point": "Mostra exigência de fonte, data e incerteza.",
+        "prompt": "Pesquise o mercado e recomende a melhor stack.",
+        "risk": "high",
+        "gate": "SOURCE_REVIEW_REQUIRED",
+        "generic_response": "Resposta genérica provável: seguiria com uma recomendação plausível, mas poderia omitir gate, evidência, contrato, validação ou ação bloqueada.",
+        "generic_response_risk": "Pode responder de memória, sem fonte ou com informação vencida.",
+        "casulo_response": "Classificação: research_request. Risco: high. Gate: SOURCE_REVIEW_REQUIRED. Modo de saída: RESEARCH_PACKET. Resposta: Exige fonte, data, incerteza, lacunas e próximo teste. Próxima ação permitida: produzir o artefato intermediário antes da execução final.",
+        "next_allowed_action": "Produce RESEARCH_PACKET before final execution."
+      },
+      {
+        "id": "D07",
+        "title": "Diagnóstico",
+        "task_type": "diagnostic_request",
+        "demo_point": "Mostra separação entre sintoma, hipótese e evidência.",
+        "prompt": "Diagnostique por que esse fluxo falhou.",
+        "risk": "high",
+        "gate": "DIAGNOSTIC_REVIEW_REQUIRED",
+        "generic_response": "Resposta genérica provável: seguiria com uma recomendação plausível, mas poderia omitir gate, evidência, contrato, validação ou ação bloqueada.",
+        "generic_response_risk": "Pode inventar causa raiz sem evidência.",
+        "casulo_response": "Classificação: diagnostic_request. Risco: high. Gate: DIAGNOSTIC_REVIEW_REQUIRED. Modo de saída: DIAGNOSTIC_PACKET. Resposta: Separa sintoma, hipótese, evidência, risco e validação. Próxima ação permitida: produzir o artefato intermediário antes da execução final.",
+        "next_allowed_action": "Produce DIAGNOSTIC_PACKET before final execution."
+      },
+      {
+        "id": "D08",
+        "title": "Arquitetura/solução",
+        "task_type": "solution_design_request",
+        "demo_point": "Mostra blueprint com escopo, premissas, risco e validação.",
+        "prompt": "Desenhe uma arquitetura para essa solucao.",
+        "risk": "high",
+        "gate": "SOLUTION_REVIEW_REQUIRED",
+        "generic_response": "Resposta genérica provável: seguiria com uma recomendação plausível, mas poderia omitir gate, evidência, contrato, validação ou ação bloqueada.",
+        "generic_response_risk": "Pode desenhar arquitetura sem restrição real.",
+        "casulo_response": "Classificação: solution_design_request. Risco: high. Gate: SOLUTION_REVIEW_REQUIRED. Modo de saída: SOLUTION_BLUEPRINT. Resposta: Gera blueprint com escopo, premissas, riscos, validação e próximo passo. Próxima ação permitida: produzir o artefato intermediário antes da execução final.",
+        "next_allowed_action": "Produce SOLUTION_BLUEPRINT before final execution."
+      }
+    ],
+    "recommended_next_phase": "PROD-2301..2340 - Local Demo Chat Shell"
+  },
+  "checks": {
+    "engine_output_exists": true,
+    "prior_engine_pass": true,
+    "required_tag_present": true,
+    "scenario_count": 8,
+    "has_production": true,
+    "has_client": true,
+    "has_merge": true,
+    "has_parser": true,
+    "has_product": true,
+    "has_research": true,
+    "has_diagnostic": true,
+    "has_solution": true,
+    "runtime_ui_blocked": true,
+    "gpt_blocked": true,
+    "production_blocked": true,
+    "client_claim_blocked": true
+  },
+  "errors": [],
+  "blocked_actions": [
+    "gpt_call",
+    "codex_execution",
+    "automatic_merge",
+    "production_activation",
+    "client_facing_claim",
+    "runtime_chat_ui_implementation"
+  ]
+}

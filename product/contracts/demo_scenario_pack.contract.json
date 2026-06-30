@@ -1,0 +1,18 @@
+{
+  "phase": "PROD-2261..2300",
+  "required_prior_tag": "product-demo-chat-comparative-response-engine-v0.1",
+  "mode": "scenario_pack_only",
+  "runtime_chat_ui_allowed": false,
+  "gpt_call_allowed": false,
+  "production_activation_allowed": false,
+  "client_facing_claim_allowed": false,
+  "recommended_next_phase": "PROD-2301..2340 - Local Demo Chat Shell",
+  "blocked_actions": [
+    "gpt_call",
+    "codex_execution",
+    "automatic_merge",
+    "production_activation",
+    "client_facing_claim",
+    "runtime_chat_ui_implementation"
+  ]
+}
