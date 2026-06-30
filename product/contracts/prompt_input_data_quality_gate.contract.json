@@ -1,0 +1,17 @@
+{
+  "phase": "PROD-2781..2820",
+  "required_prior_tag": "product-exocortex-decision-policy-matrix-v0.1",
+  "mode": "prompt_input_data_quality_gate",
+  "quality_affects_hallucination": true,
+  "quality_affects_value_delta": true,
+  "blocked_actions": [
+    "implementation_execution_with_low_input_quality",
+    "value_delta_claim_with_low_input_quality",
+    "client_facing_claim",
+    "production_activation",
+    "validated_performance_claim",
+    "automatic_memory_delete",
+    "gpt_memory_api_execution"
+  ],
+  "recommended_next_phase": "PROD-2821..2860 - Exocortex Value Delta Engine Contract"
+}

@@ -1,0 +1,12 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "CASULO Prompt and Input Data Quality Gate",
+  "type": "object",
+  "required": [
+    "version",
+    "phase",
+    "metrics",
+    "outcomes",
+    "evaluations"
+  ]
+}
