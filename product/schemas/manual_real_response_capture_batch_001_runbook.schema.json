@@ -1,0 +1,17 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "CASULO Manual Real Response Capture Batch 001 Runbook",
+  "type": "object",
+  "required": ["status", "phase", "decision", "batch_001", "checks", "blocked_actions"],
+  "properties": {
+    "status": {"type": "string"},
+    "phase": {"type": "string"},
+    "decision": {"type": "string"},
+    "batch_001": {"type": "object"},
+    "checks": {"type": "object"},
+    "blocked_actions": {
+      "type": "array",
+      "items": {"type": "string"}
+    }
+  }
+}
