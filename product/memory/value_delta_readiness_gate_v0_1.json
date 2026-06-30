@@ -1,0 +1,173 @@
+{
+  "version": "value_delta_readiness_gate.v0.1",
+  "phase": "PROD-2941..2980",
+  "decision": "APPROVED_FOR_INTERNAL_SYNTHETIC_BENCHMARK_ONLY",
+  "scope": "internal synthetic benchmark only",
+  "allowed_actions": [
+    "internal_synthetic_value_delta_discussion",
+    "controlled_benchmark_planning",
+    "calibration_plan_design",
+    "expanded_test_matrix_design",
+    "hallucination_complexity_correlation_study_design"
+  ],
+  "blocked_actions": [
+    "real_world_profit_claim",
+    "validated_savings_claim",
+    "client_facing_value_claim",
+    "production_activation",
+    "automatic_memory_delete",
+    "gpt_memory_api_execution",
+    "value_delta_claim_with_low_input_quality",
+    "validated_hallucination_reduction_claim"
+  ],
+  "readiness_summary": {
+    "fixture_count": 12,
+    "freeze_allowed_count": 7,
+    "blocked_count": 1,
+    "provisional_count": 4,
+    "freezable_internal_synthetic_value": 2363.05,
+    "average_implementation_complexity_score": 50.0
+  },
+  "hallucination_index_correlation_extension": {
+    "required": true,
+    "name": "implementation_complexity_hallucination_correlation",
+    "metrics": [
+      "implementation_complexity_score",
+      "integration_difficulty_score",
+      "change_management_complexity",
+      "evidence_collection_effort",
+      "input_quality_outcome",
+      "confidence_score",
+      "hallucination_risk_avoided_value",
+      "claim_leakage_avoided_value",
+      "operational_risk_avoided_value",
+      "complexity_adjusted_net_value_delta"
+    ],
+    "rule": "High complexity plus weak input quality increases operational hallucination risk and lowers Value Delta confidence.",
+    "calibration_status": "planned_not_validated"
+  },
+  "correlation_preview": [
+    {
+      "id": "VDF-001",
+      "title": "clean_internal_task_value_freeze",
+      "input_quality_outcome": "INPUT_ACCEPTED",
+      "implementation_complexity_score": 50.0,
+      "confidence_score": 0.82,
+      "correlation_risk_score": 22.0,
+      "correlation_band": "LOW_CORRELATION_RISK",
+      "note": "Synthetic correlation preview only. Calibration required."
+    },
+    {
+      "id": "VDF-002",
+      "title": "long_context_snapshot_resume",
+      "input_quality_outcome": "INPUT_ACCEPTED",
+      "implementation_complexity_score": 50.0,
+      "confidence_score": 0.82,
+      "correlation_risk_score": 22.63,
+      "correlation_band": "LOW_CORRELATION_RISK",
+      "note": "Synthetic correlation preview only. Calibration required."
+    },
+    {
+      "id": "VDF-003",
+      "title": "context_waste_heavy_chat",
+      "input_quality_outcome": "INPUT_ACCEPTED",
+      "implementation_complexity_score": 50.0,
+      "confidence_score": 0.82,
+      "correlation_risk_score": 22.42,
+      "correlation_band": "LOW_CORRELATION_RISK",
+      "note": "Synthetic correlation preview only. Calibration required."
+    },
+    {
+      "id": "VDF-004",
+      "title": "parser_missing_schema",
+      "input_quality_outcome": "SCHEMA_REQUIRED",
+      "implementation_complexity_score": 50.0,
+      "confidence_score": 0.35,
+      "correlation_risk_score": 41.06,
+      "correlation_band": "LOW_CORRELATION_RISK",
+      "note": "Synthetic correlation preview only. Calibration required."
+    },
+    {
+      "id": "VDF-005",
+      "title": "client_claim_weak_evidence",
+      "input_quality_outcome": "EVIDENCE_REQUIRED",
+      "implementation_complexity_score": 50.0,
+      "confidence_score": 0.35,
+      "correlation_risk_score": 42.45,
+      "correlation_band": "LOW_CORRELATION_RISK",
+      "note": "Synthetic correlation preview only. Calibration required."
+    },
+    {
+      "id": "VDF-006",
+      "title": "ambiguous_architecture_prompt",
+      "input_quality_outcome": "CLARIFICATION_REQUIRED",
+      "implementation_complexity_score": 50.0,
+      "confidence_score": 0.45,
+      "correlation_risk_score": 36.18,
+      "correlation_band": "LOW_CORRELATION_RISK",
+      "note": "Synthetic correlation preview only. Calibration required."
+    },
+    {
+      "id": "VDF-007",
+      "title": "garbage_in_blocks_value_delta",
+      "input_quality_outcome": "BLOCK_EXECUTION",
+      "implementation_complexity_score": 50.0,
+      "confidence_score": 0.0,
+      "correlation_risk_score": 54.73,
+      "correlation_band": "MEDIUM_CORRELATION_RISK",
+      "note": "Synthetic correlation preview only. Calibration required."
+    },
+    {
+      "id": "VDF-008",
+      "title": "contradiction_hold_avoids_wrong_work",
+      "input_quality_outcome": "CLARIFICATION_REQUIRED",
+      "implementation_complexity_score": 50.0,
+      "confidence_score": 0.45,
+      "correlation_risk_score": 36.6,
+      "correlation_band": "LOW_CORRELATION_RISK",
+      "note": "Synthetic correlation preview only. Calibration required."
+    },
+    {
+      "id": "VDF-009",
+      "title": "stale_context_archived",
+      "input_quality_outcome": "INPUT_ACCEPTED",
+      "implementation_complexity_score": 50.0,
+      "confidence_score": 0.82,
+      "correlation_risk_score": 22.84,
+      "correlation_band": "LOW_CORRELATION_RISK",
+      "note": "Synthetic correlation preview only. Calibration required."
+    },
+    {
+      "id": "VDF-010",
+      "title": "protected_canonical_decision",
+      "input_quality_outcome": "INPUT_ACCEPTED",
+      "implementation_complexity_score": 50.0,
+      "confidence_score": 0.82,
+      "correlation_risk_score": 22.63,
+      "correlation_band": "LOW_CORRELATION_RISK",
+      "note": "Synthetic correlation preview only. Calibration required."
+    },
+    {
+      "id": "VDF-011",
+      "title": "high_rework_avoidance_task",
+      "input_quality_outcome": "INPUT_ACCEPTED",
+      "implementation_complexity_score": 50.0,
+      "confidence_score": 0.82,
+      "correlation_risk_score": 22.42,
+      "correlation_band": "LOW_CORRELATION_RISK",
+      "note": "Synthetic correlation preview only. Calibration required."
+    },
+    {
+      "id": "VDF-012",
+      "title": "time_saved_simple_operational_loop",
+      "input_quality_outcome": "INPUT_ACCEPTED",
+      "implementation_complexity_score": 50.0,
+      "confidence_score": 0.82,
+      "correlation_risk_score": 22.0,
+      "correlation_band": "LOW_CORRELATION_RISK",
+      "note": "Synthetic correlation preview only. Calibration required."
+    }
+  ],
+  "claim_boundary": "No real-world profit, savings, ROI or hallucination-reduction claim is allowed.",
+  "recommended_next_phase": "PROD-2981..3020 - Expanded Test Matrix Pack"
+}

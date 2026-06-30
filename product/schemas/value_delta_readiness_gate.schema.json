@@ -1,0 +1,12 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "CASULO Value Delta Readiness Gate",
+  "type": "object",
+  "required": [
+    "version",
+    "phase",
+    "decision",
+    "readiness_summary",
+    "hallucination_index_correlation_extension"
+  ]
+}

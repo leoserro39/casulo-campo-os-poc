@@ -1,0 +1,25 @@
+{
+  "phase": "PROD-2941..2980",
+  "required_prior_tag": "product-value-delta-evaluator-v0.1",
+  "mode": "value_delta_readiness_gate",
+  "readiness_decision": "APPROVED_FOR_INTERNAL_SYNTHETIC_BENCHMARK_ONLY",
+  "complexity_hallucination_correlation_required": true,
+  "blocked_actions": [
+    "real_world_profit_claim",
+    "validated_savings_claim",
+    "client_facing_value_claim",
+    "production_activation",
+    "automatic_memory_delete",
+    "gpt_memory_api_execution",
+    "value_delta_claim_with_low_input_quality",
+    "validated_hallucination_reduction_claim"
+  ],
+  "allowed_actions": [
+    "internal_synthetic_value_delta_discussion",
+    "controlled_benchmark_planning",
+    "calibration_plan_design",
+    "expanded_test_matrix_design",
+    "hallucination_complexity_correlation_study_design"
+  ],
+  "recommended_next_phase": "PROD-2981..3020 - Expanded Test Matrix Pack"
+}
