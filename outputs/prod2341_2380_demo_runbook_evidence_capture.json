@@ -1,0 +1,34 @@
+{
+  "status": "PASS",
+  "phase": "PROD-2341..2380",
+  "decision": "DEMO_RUNBOOK_EVIDENCE_CAPTURE_READY",
+  "generated_at": "2026-06-30T22:19:24.301040+00:00",
+  "runbook": "product/demo_chat/DEMO_EVIDENCE_RUNBOOK.md",
+  "template": "product/demo_chat/demo_evidence_capture_template.json",
+  "scenario_count": 8,
+  "recommended_next_phase": "PROD-2381..2420 - Demo Readiness Review Gate",
+  "checks": {
+    "required_tag_present": true,
+    "html_exists": true,
+    "scenario_pack_exists": true,
+    "scenario_count": 8,
+    "runbook_exists": true,
+    "template_exists": true,
+    "has_allowed_claims": true,
+    "has_prohibited_claims": true,
+    "template_has_all_scenarios": true,
+    "client_claim_blocked": true,
+    "production_claim_blocked": true,
+    "hallucination_claim_blocked": true
+  },
+  "errors": [],
+  "blocked_actions": [
+    "client_facing_validated_claim",
+    "real_world_hallucination_reduction_claim",
+    "production_activation",
+    "automatic_merge",
+    "codex_execution",
+    "gpt_call",
+    "external_api_call"
+  ]
+}

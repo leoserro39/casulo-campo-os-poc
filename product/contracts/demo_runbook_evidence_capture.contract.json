@@ -1,0 +1,29 @@
+{
+  "phase": "PROD-2341..2380",
+  "required_prior_tag": "product-local-demo-chat-shell-v0.1",
+  "mode": "demo_runbook_and_evidence_capture_only",
+  "allowed_claims": [
+    "static demo shell is working locally",
+    "scenario pack loads in local shell",
+    "demo shows generic-risk versus CASULO response comparison",
+    "all evidence remains internal and non-client-facing"
+  ],
+  "prohibited_claims": [
+    "validated hallucination reduction",
+    "production ready",
+    "client validated evidence",
+    "GPT integrated",
+    "Codex automated implementation approved",
+    "commercial performance validated"
+  ],
+  "recommended_next_phase": "PROD-2381..2420 - Demo Readiness Review Gate",
+  "blocked_actions": [
+    "client_facing_validated_claim",
+    "real_world_hallucination_reduction_claim",
+    "production_activation",
+    "automatic_merge",
+    "codex_execution",
+    "gpt_call",
+    "external_api_call"
+  ]
+}

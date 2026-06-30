@@ -1,0 +1,109 @@
+{
+  "session_id": "DEMO-SESSION-001",
+  "captured_by": "",
+  "captured_at_utc": "",
+  "demo_url": "http://127.0.0.1:4173/product/demo_chat/index.html",
+  "environment": {
+    "repo": "casulo-campo-os-poc",
+    "branch": "main",
+    "commit": "",
+    "server": "python3 -m http.server 4173"
+  },
+  "scenario_results": [
+    {
+      "scenario_id": "D01",
+      "title": "Pergunta simples / produção",
+      "task_type": "production_activation_request",
+      "loaded": null,
+      "prompt_visible": null,
+      "generic_response_visible": null,
+      "casulo_response_visible": null,
+      "next_action_visible": null,
+      "notes": ""
+    },
+    {
+      "scenario_id": "D02",
+      "title": "Claim cliente",
+      "task_type": "client_claim_request",
+      "loaded": null,
+      "prompt_visible": null,
+      "generic_response_visible": null,
+      "casulo_response_visible": null,
+      "next_action_visible": null,
+      "notes": ""
+    },
+    {
+      "scenario_id": "D03",
+      "title": "Merge/Codex",
+      "task_type": "codex_or_merge_request",
+      "loaded": null,
+      "prompt_visible": null,
+      "generic_response_visible": null,
+      "casulo_response_visible": null,
+      "next_action_visible": null,
+      "notes": ""
+    },
+    {
+      "scenario_id": "D04",
+      "title": "Parser/planilha",
+      "task_type": "parser_generation_request",
+      "loaded": null,
+      "prompt_visible": null,
+      "generic_response_visible": null,
+      "casulo_response_visible": null,
+      "next_action_visible": null,
+      "notes": ""
+    },
+    {
+      "scenario_id": "D05",
+      "title": "Produto/MVP",
+      "task_type": "product_generation_request",
+      "loaded": null,
+      "prompt_visible": null,
+      "generic_response_visible": null,
+      "casulo_response_visible": null,
+      "next_action_visible": null,
+      "notes": ""
+    },
+    {
+      "scenario_id": "D06",
+      "title": "Pesquisa/stack",
+      "task_type": "research_request",
+      "loaded": null,
+      "prompt_visible": null,
+      "generic_response_visible": null,
+      "casulo_response_visible": null,
+      "next_action_visible": null,
+      "notes": ""
+    },
+    {
+      "scenario_id": "D07",
+      "title": "Diagnóstico",
+      "task_type": "diagnostic_request",
+      "loaded": null,
+      "prompt_visible": null,
+      "generic_response_visible": null,
+      "casulo_response_visible": null,
+      "next_action_visible": null,
+      "notes": ""
+    },
+    {
+      "scenario_id": "D08",
+      "title": "Arquitetura/solução",
+      "task_type": "solution_design_request",
+      "loaded": null,
+      "prompt_visible": null,
+      "generic_response_visible": null,
+      "casulo_response_visible": null,
+      "next_action_visible": null,
+      "notes": ""
+    }
+  ],
+  "claims_boundary": {
+    "internal_demo_evidence_only": true,
+    "client_facing_claim_allowed": false,
+    "production_readiness_claim_allowed": false,
+    "real_world_hallucination_reduction_claim_allowed": false
+  },
+  "review_decision": "PENDING_HUMAN_REVIEW"
+}

@@ -1,0 +1,12 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "CASULO Demo Evidence Capture",
+  "type": "object",
+  "required": [
+    "session_id",
+    "captured_by",
+    "demo_url",
+    "scenario_results",
+    "claims_boundary"
+  ]
+}
