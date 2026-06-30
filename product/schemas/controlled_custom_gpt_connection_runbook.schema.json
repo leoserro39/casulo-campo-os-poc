@@ -1,0 +1,20 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "CASULO Controlled Custom GPT Connection Runbook",
+  "type": "object",
+  "required": ["status", "phase", "decision", "checks", "artifacts", "blocked_actions"],
+  "properties": {
+    "status": {"type": "string"},
+    "phase": {"type": "string"},
+    "decision": {"type": "string"},
+    "checks": {"type": "object"},
+    "artifacts": {
+      "type": "array",
+      "items": {"type": "string"}
+    },
+    "blocked_actions": {
+      "type": "array",
+      "items": {"type": "string"}
+    }
+  }
+}
