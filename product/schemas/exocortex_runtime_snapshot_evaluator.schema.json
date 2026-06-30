@@ -1,0 +1,10 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "CASULO Exocortex Runtime Snapshot Evaluator",
+  "type": "object",
+  "required": [
+    "version",
+    "phase",
+    "evaluations"
+  ]
+}

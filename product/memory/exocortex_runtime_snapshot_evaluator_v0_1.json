@@ -1,0 +1,103 @@
+{
+  "version": "exocortex_runtime_snapshot_evaluator.v0.1",
+  "phase": "PROD-2701..2740",
+  "input_pack": "product/memory/snapshots/exocortex_snapshot_runtime_fixture_pack_v0_1.json",
+  "scoring": {
+    "integrity_score": "state checksum, evidence, claim boundary, signals and blocked actions",
+    "boundary_score": "claim and production restrictions",
+    "risk_pressure": "risk level weight",
+    "action_readiness": "lifecycle action readiness",
+    "priority_score": "weighted operational priority"
+  },
+  "evaluations": [
+    {
+      "snapshot_id": "EXO-RUNTIME-001",
+      "title": "recent_pass_checkpoint",
+      "risk": "low",
+      "gate": "READINESS_GATE",
+      "lifecycle_action": "COMPRESS_TO_SNAPSHOT",
+      "response_mode": "SNAPSHOT",
+      "integrity_score": 100,
+      "boundary_score": 100,
+      "risk_pressure": 10,
+      "action_readiness": 90,
+      "priority_score": 65.0,
+      "verdict": "SNAPSHOT_READY"
+    },
+    {
+      "snapshot_id": "EXO-RUNTIME-002",
+      "title": "resolved_terminal_error",
+      "risk": "medium",
+      "gate": "STATE_REVIEW_REQUIRED",
+      "lifecycle_action": "DISCARD_EPHEMERAL",
+      "response_mode": "STATE_ANSWER",
+      "integrity_score": 100,
+      "boundary_score": 100,
+      "risk_pressure": 30,
+      "action_readiness": 75,
+      "priority_score": 66.75,
+      "verdict": "DISCARD_ALLOWED_AFTER_REVIEW"
+    },
+    {
+      "snapshot_id": "EXO-RUNTIME-003",
+      "title": "client_claim_blocked",
+      "risk": "critical",
+      "gate": "CLIENT_CLAIM_REVIEW_REQUIRED",
+      "lifecycle_action": "PROTECT_DO_NOT_DELETE",
+      "response_mode": "BLOCKED_ACTION_NOTICE",
+      "integrity_score": 100,
+      "boundary_score": 100,
+      "risk_pressure": 85,
+      "action_readiness": 100,
+      "priority_score": 94.75,
+      "verdict": "PROTECTED_STATE"
+    },
+    {
+      "snapshot_id": "EXO-RUNTIME-004",
+      "title": "stale_context_detected",
+      "risk": "high",
+      "gate": "HOLD_HUMAN_REVIEW",
+      "lifecycle_action": "ARCHIVE_TO_REPO",
+      "response_mode": "REVIEW_PACKET",
+      "integrity_score": 100,
+      "boundary_score": 100,
+      "risk_pressure": 60,
+      "action_readiness": 80,
+      "priority_score": 79.0,
+      "verdict": "ARCHIVE_READY"
+    },
+    {
+      "snapshot_id": "EXO-RUNTIME-005",
+      "title": "contradiction_hold",
+      "risk": "high",
+      "gate": "CONTRADICTION_HOLD",
+      "lifecycle_action": "HOLD_HUMAN_REVIEW",
+      "response_mode": "REVIEW_PACKET",
+      "integrity_score": 100,
+      "boundary_score": 100,
+      "risk_pressure": 60,
+      "action_readiness": 95,
+      "priority_score": 84.25,
+      "verdict": "HOLD_REVIEW_REQUIRED"
+    },
+    {
+      "snapshot_id": "EXO-RUNTIME-006",
+      "title": "protected_canonical_decision",
+      "risk": "critical",
+      "gate": "PROTECT_CANONICAL_DECISION",
+      "lifecycle_action": "PROTECT_DO_NOT_DELETE",
+      "response_mode": "SNAPSHOT",
+      "integrity_score": 100,
+      "boundary_score": 100,
+      "risk_pressure": 85,
+      "action_readiness": 100,
+      "priority_score": 94.75,
+      "verdict": "PROTECTED_STATE"
+    }
+  ],
+  "recommended_next_phase": "PROD-2741..2780 - Exocortex Decision Policy Matrix",
+  "future_phases": [
+    "PROD-2781..2820 - Prompt and Input Data Quality Gate",
+    "PROD-2821..2860 - Exocortex Value Delta Engine Contract"
+  ]
+}
