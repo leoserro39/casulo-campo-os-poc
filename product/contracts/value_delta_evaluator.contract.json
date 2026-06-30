@@ -1,0 +1,18 @@
+{
+  "phase": "PROD-2901..2940",
+  "required_prior_tag": "product-value-delta-synthetic-fixture-pack-v0.1",
+  "mode": "value_delta_evaluator",
+  "implementation_complexity_weighted": true,
+  "input_quality_weighted": true,
+  "claim_boundary_required": true,
+  "blocked_actions": [
+    "real_world_profit_claim",
+    "validated_savings_claim",
+    "client_facing_value_claim",
+    "production_activation",
+    "automatic_memory_delete",
+    "gpt_memory_api_execution",
+    "value_delta_claim_with_low_input_quality"
+  ],
+  "recommended_next_phase": "PROD-2941..2980 - Value Delta Readiness Gate"
+}

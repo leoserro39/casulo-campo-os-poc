@@ -1,0 +1,11 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "CASULO Value Delta Evaluator",
+  "type": "object",
+  "required": [
+    "version",
+    "phase",
+    "summary",
+    "evaluated_cases"
+  ]
+}
