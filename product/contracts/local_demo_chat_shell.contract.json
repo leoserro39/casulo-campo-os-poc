@@ -1,0 +1,20 @@
+{
+  "phase": "PROD-2301..2340",
+  "required_prior_tag": "product-demo-scenario-pack-v0.1",
+  "mode": "static_local_demo_shell",
+  "gpt_call_allowed": false,
+  "external_api_call_allowed": false,
+  "codex_execution_allowed": false,
+  "automatic_merge_allowed": false,
+  "production_activation_allowed": false,
+  "client_facing_claim_allowed": false,
+  "recommended_next_phase": "PROD-2341..2380 - Demo Runbook and Evidence Capture",
+  "blocked_actions": [
+    "gpt_call",
+    "external_api_call",
+    "codex_execution",
+    "automatic_merge",
+    "production_activation",
+    "client_facing_claim"
+  ]
+}

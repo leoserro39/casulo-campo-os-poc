@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>CASULO Demo Chat</title>
+<style>
+body{margin:0;font-family:Arial,Helvetica,sans-serif;background:#0b1020;color:#e8eefc}
+header{padding:22px 28px;border-bottom:1px solid #26365e;background:#101833}
+h1{margin:0;font-size:24px}.sub{color:#aab6d8;margin-top:6px}
+main{display:grid;grid-template-columns:340px 1fr;gap:18px;padding:18px}
+.panel{background:#121a35;border:1px solid #26365e;border-radius:14px;padding:16px}
+button{width:100%;text-align:left;margin:6px 0;padding:10px;border:1px solid #314673;border-radius:10px;background:#172347;color:#e8eefc;cursor:pointer}
+button:hover{background:#20315f}
+.badge{display:inline-block;padding:4px 8px;border-radius:999px;background:#263a72;margin-right:6px;font-size:12px}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.box{background:#0e1530;border:1px solid #26365e;border-radius:12px;padding:14px;margin-top:14px}
+.muted{color:#aab6d8}.small{font-size:13px;line-height:1.45}pre{white-space:pre-wrap;font-family:inherit}
+</style>
+</head>
+<body>
+<header>
+<h1>CASULO Demo Chat</h1>
+<div class="sub">Resposta genérica provável vs resposta CASULO state-grounded.</div>
+</header>
+<main>
+<section class="panel"><h2>Cenários</h2><div id="list"></div></section>
+<section class="panel"><div id="detail">Carregando...</div></section>
+</main>
+<script>
+async function loadPack(){
+  const res = await fetch("../chat/demo_scenario_pack_v0_1.json");
+  return await res.json();
+}
+function show(s){
+  document.getElementById("detail").innerHTML =
+    '<span class="badge">'+s.task_type+'</span>' +
+    '<span class="badge">'+s.risk+'</span>' +
+    '<span class="badge">'+s.gate+'</span>' +
+    '<h2>'+s.title+'</h2>' +
+    '<p class="muted">'+s.demo_point+'</p>' +
+    '<div class="box"><b>Pedido</b><pre>'+s.prompt+'</pre></div>' +
+    '<div class="grid">' +
+    '<div class="box"><h3>Resposta genérica provável</h3><p class="small">'+s.generic_response+'</p><h4>Risco</h4><p class="small">'+s.generic_response_risk+'</p></div>' +
+    '<div class="box"><h3>Resposta CASULO</h3><p class="small">'+s.casulo_response+'</p><h4>Próxima ação permitida</h4><p class="small">'+s.next_allowed_action+'</p></div>' +
+    '</div>';
+}
+loadPack().then(pack=>{
+  const list=document.getElementById("list");
+  pack.scenarios.forEach((s,i)=>{
+    const b=document.createElement("button");
+    b.innerHTML='<b>'+s.id+'</b> - '+s.title+'<br><span class="muted">'+s.task_type+'</span>';
+    b.onclick=()=>show(s);
+    list.appendChild(b);
+    if(i===0) show(s);
+  });
+}).catch(err=>{
+  document.getElementById("detail").innerText="Erro ao carregar cenário: "+err;
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,39 @@
+{
+  "status": "PASS",
+  "phase": "PROD-2301..2340",
+  "decision": "LOCAL_DEMO_CHAT_SHELL_READY",
+  "generated_at": "2026-06-30T22:11:08.410635+00:00",
+  "local_demo_chat_shell": {
+    "html": "product/demo_chat/index.html",
+    "runbook": "product/demo_chat/RUNBOOK.md",
+    "scenario_count": 8,
+    "local_url": "http://127.0.0.1:4173/product/demo_chat/index.html",
+    "recommended_next_phase": "PROD-2341..2380 - Demo Runbook and Evidence Capture",
+    "calibration_status": "NOT_CALIBRATED_STATIC_DEMO_SHELL_ONLY"
+  },
+  "checks": {
+    "pack_exists": true,
+    "scenario_count": 8,
+    "required_tag_present": true,
+    "html_exists": true,
+    "runbook_exists": true,
+    "html_loads_pack": true,
+    "html_has_generic": true,
+    "html_has_casulo": true,
+    "html_has_next_action": true,
+    "gpt_blocked": true,
+    "external_api_blocked": true,
+    "codex_blocked": true,
+    "production_blocked": true,
+    "client_claim_blocked": true
+  },
+  "errors": [],
+  "blocked_actions": [
+    "gpt_call",
+    "external_api_call",
+    "codex_execution",
+    "automatic_merge",
+    "production_activation",
+    "client_facing_claim"
+  ]
+}
