@@ -1,0 +1,28 @@
+{
+  "status": "PASS",
+  "audit": "Business Value Metrics Extension audit",
+  "value_proxy_points": 508,
+  "productivity_cases": 19,
+  "risk_containment_cases": 30,
+  "critical_control_cases": 1,
+  "external_execution_allowed": false,
+  "graph_write_allowed": false,
+  "neo4j_connection_allowed": false,
+  "automatic_threshold_mutation_allowed": false,
+  "auto_apply": false,
+  "readiness": "READY_FOR_DEMO_SURFACE_OPERATOR_READINESS_CHILD",
+  "blocked_actions": [
+    "client_facing_claim",
+    "automatic_nomination",
+    "implementation_execution",
+    "production_activation",
+    "automatic_merge",
+    "credential_handling",
+    "automatic_threshold_mutation",
+    "autonomous_external_execution",
+    "real_world_side_effect",
+    "unapproved_real_company_data",
+    "live_graph_database_write",
+    "neo4j_connection"
+  ]
+}

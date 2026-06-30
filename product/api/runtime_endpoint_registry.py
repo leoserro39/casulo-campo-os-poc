@@ -414,4 +414,14 @@ ENDPOINT_GROUPS = [
         ],
     },
 
+    {
+        "group": "umbrella_business_value_metrics",
+        "routes": [
+            {"path": "/api/casulo/umbrella/business-value/status", "file": "outputs/umbrella_prod-1101_1140_business_value_metrics_status.json", "key": "status"},
+            {"path": "/api/casulo/umbrella/business-value/main", "file": "outputs/umbrella_prod-1101_1140_business_value_metrics.json", "key": "main"},
+            {"path": "/api/casulo/umbrella/business-value/readiness", "file": "outputs/umbrella_prod-1101_1140_business_value_metrics_readiness.json", "key": "readiness"},
+            {"path": "/api/casulo/umbrella/business-value/audit", "file": "outputs/umbrella_prod-1101_1140_business_value_metrics_audit_report.json", "key": "audit"},
+        ],
+    },
+
 ]
