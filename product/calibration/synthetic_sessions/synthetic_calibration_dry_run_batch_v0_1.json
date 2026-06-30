@@ -1,0 +1,265 @@
+{
+  "version": "synthetic_calibration_dry_run_batch.v0.1",
+  "phase": "PROD-3261..3300",
+  "batch_id": "SYNTHETIC-CALIBRATION-DRY-RUN-001",
+  "batch_status": "SYNTHETIC_DRY_RUN_REVIEWED",
+  "real_data_captured": false,
+  "record_count": 8,
+  "records": [
+    {
+      "session_id": "SYN-CAL-001",
+      "capture_status": "HUMAN_REVIEWED",
+      "chat_platform": "SYNTHETIC_NO_REAL_PLATFORM",
+      "chat_layer": "ANALYSIS_CHAT",
+      "work_type": "diagnostic_analysis",
+      "baseline_chat_mode": "PURE_CHAT_BASELINE_SYNTHETIC",
+      "casulo_exocortex_mode": "CASULO_EXOCORTEX_ASSISTED_SYNTHETIC",
+      "input_quality_score": 88,
+      "implementation_complexity_score": 28,
+      "operational_cost_score": 35,
+      "apex_maturity_score": 82,
+      "hallucination_risk_index": 18,
+      "value_delta_estimate": 62,
+      "rework_count": 1,
+      "time_spent_minutes": 42,
+      "evidence_pointers": [
+        "synthetic://calibration_dry_run/SYN-CAL-001"
+      ],
+      "human_reviewer_notes": [
+        "Synthetic reviewer simulation only. No real data."
+      ],
+      "claim_boundary": "synthetic_dry_run_only_no_real_claim",
+      "decision_gate": "ACCEPT_SYNTHETIC_DRY_RUN",
+      "privacy_review_status": "not_applicable_synthetic",
+      "pii_redaction_status": "not_applicable_synthetic_no_pii",
+      "secret_scan_status": "not_applicable_synthetic_no_secrets",
+      "source_refs_only": true
+    },
+    {
+      "session_id": "SYN-CAL-002",
+      "capture_status": "HUMAN_REVIEWED",
+      "chat_platform": "SYNTHETIC_NO_REAL_PLATFORM",
+      "chat_layer": "PROJECT_CHAT",
+      "work_type": "project_design",
+      "baseline_chat_mode": "PURE_CHAT_BASELINE_SYNTHETIC",
+      "casulo_exocortex_mode": "CASULO_EXOCORTEX_ASSISTED_SYNTHETIC",
+      "input_quality_score": 72,
+      "implementation_complexity_score": 56,
+      "operational_cost_score": 54,
+      "apex_maturity_score": 68,
+      "hallucination_risk_index": 36,
+      "value_delta_estimate": 70,
+      "rework_count": 2,
+      "time_spent_minutes": 85,
+      "evidence_pointers": [
+        "synthetic://calibration_dry_run/SYN-CAL-002"
+      ],
+      "human_reviewer_notes": [
+        "Synthetic reviewer simulation only. No real data."
+      ],
+      "claim_boundary": "synthetic_dry_run_only_no_real_claim",
+      "decision_gate": "ACCEPT_SYNTHETIC_DRY_RUN",
+      "privacy_review_status": "not_applicable_synthetic",
+      "pii_redaction_status": "not_applicable_synthetic_no_pii",
+      "secret_scan_status": "not_applicable_synthetic_no_secrets",
+      "source_refs_only": true
+    },
+    {
+      "session_id": "SYN-CAL-003",
+      "capture_status": "HUMAN_REVIEWED",
+      "chat_platform": "SYNTHETIC_NO_REAL_PLATFORM",
+      "chat_layer": "IMPLEMENTATION_CHAT",
+      "work_type": "repo_implementation",
+      "baseline_chat_mode": "PURE_CHAT_BASELINE_SYNTHETIC",
+      "casulo_exocortex_mode": "CASULO_EXOCORTEX_ASSISTED_SYNTHETIC",
+      "input_quality_score": 64,
+      "implementation_complexity_score": 82,
+      "operational_cost_score": 77,
+      "apex_maturity_score": 55,
+      "hallucination_risk_index": 61,
+      "value_delta_estimate": 78,
+      "rework_count": 4,
+      "time_spent_minutes": 130,
+      "evidence_pointers": [
+        "synthetic://calibration_dry_run/SYN-CAL-003"
+      ],
+      "human_reviewer_notes": [
+        "Synthetic reviewer simulation only. No real data."
+      ],
+      "claim_boundary": "synthetic_dry_run_only_no_real_claim",
+      "decision_gate": "HOLD_SYNTHETIC_COMPLEXITY_REVIEW",
+      "privacy_review_status": "not_applicable_synthetic",
+      "pii_redaction_status": "not_applicable_synthetic_no_pii",
+      "secret_scan_status": "not_applicable_synthetic_no_secrets",
+      "source_refs_only": true
+    },
+    {
+      "session_id": "SYN-CAL-004",
+      "capture_status": "HUMAN_REVIEWED",
+      "chat_platform": "SYNTHETIC_NO_REAL_PLATFORM",
+      "chat_layer": "GOVERNANCE_CHAT",
+      "work_type": "governance_review",
+      "baseline_chat_mode": "PURE_CHAT_BASELINE_SYNTHETIC",
+      "casulo_exocortex_mode": "CASULO_EXOCORTEX_ASSISTED_SYNTHETIC",
+      "input_quality_score": 76,
+      "implementation_complexity_score": 62,
+      "operational_cost_score": 69,
+      "apex_maturity_score": 66,
+      "hallucination_risk_index": 42,
+      "value_delta_estimate": 73,
+      "rework_count": 2,
+      "time_spent_minutes": 95,
+      "evidence_pointers": [
+        "synthetic://calibration_dry_run/SYN-CAL-004"
+      ],
+      "human_reviewer_notes": [
+        "Synthetic reviewer simulation only. No real data."
+      ],
+      "claim_boundary": "synthetic_dry_run_only_no_real_claim",
+      "decision_gate": "HOLD_SYNTHETIC_EVIDENCE_REVIEW",
+      "privacy_review_status": "not_applicable_synthetic",
+      "pii_redaction_status": "not_applicable_synthetic_no_pii",
+      "secret_scan_status": "not_applicable_synthetic_no_secrets",
+      "source_refs_only": true
+    },
+    {
+      "session_id": "SYN-CAL-005",
+      "capture_status": "HUMAN_REVIEWED",
+      "chat_platform": "SYNTHETIC_NO_REAL_PLATFORM",
+      "chat_layer": "CALIBRATION_CHAT",
+      "work_type": "calibration_benchmark",
+      "baseline_chat_mode": "PURE_CHAT_BASELINE_SYNTHETIC",
+      "casulo_exocortex_mode": "CASULO_EXOCORTEX_ASSISTED_SYNTHETIC",
+      "input_quality_score": 58,
+      "implementation_complexity_score": 78,
+      "operational_cost_score": 74,
+      "apex_maturity_score": 52,
+      "hallucination_risk_index": 68,
+      "value_delta_estimate": 84,
+      "rework_count": 5,
+      "time_spent_minutes": 150,
+      "evidence_pointers": [
+        "synthetic://calibration_dry_run/SYN-CAL-005"
+      ],
+      "human_reviewer_notes": [
+        "Synthetic reviewer simulation only. No real data."
+      ],
+      "claim_boundary": "synthetic_dry_run_only_no_real_claim",
+      "decision_gate": "HOLD_SYNTHETIC_CALIBRATION_REVIEW",
+      "privacy_review_status": "not_applicable_synthetic",
+      "pii_redaction_status": "not_applicable_synthetic_no_pii",
+      "secret_scan_status": "not_applicable_synthetic_no_secrets",
+      "source_refs_only": true
+    },
+    {
+      "session_id": "SYN-CAL-006",
+      "capture_status": "HUMAN_REVIEWED",
+      "chat_platform": "SYNTHETIC_NO_REAL_PLATFORM",
+      "chat_layer": "OPERATIONS_CHAT",
+      "work_type": "operational_cockpit",
+      "baseline_chat_mode": "PURE_CHAT_BASELINE_SYNTHETIC",
+      "casulo_exocortex_mode": "CASULO_EXOCORTEX_ASSISTED_SYNTHETIC",
+      "input_quality_score": 80,
+      "implementation_complexity_score": 70,
+      "operational_cost_score": 71,
+      "apex_maturity_score": 72,
+      "hallucination_risk_index": 34,
+      "value_delta_estimate": 88,
+      "rework_count": 2,
+      "time_spent_minutes": 110,
+      "evidence_pointers": [
+        "synthetic://calibration_dry_run/SYN-CAL-006"
+      ],
+      "human_reviewer_notes": [
+        "Synthetic reviewer simulation only. No real data."
+      ],
+      "claim_boundary": "synthetic_dry_run_only_no_real_claim",
+      "decision_gate": "ACCEPT_SYNTHETIC_DRY_RUN",
+      "privacy_review_status": "not_applicable_synthetic",
+      "pii_redaction_status": "not_applicable_synthetic_no_pii",
+      "secret_scan_status": "not_applicable_synthetic_no_secrets",
+      "source_refs_only": true
+    },
+    {
+      "session_id": "SYN-CAL-007",
+      "capture_status": "HUMAN_REVIEWED",
+      "chat_platform": "SYNTHETIC_NO_REAL_PLATFORM",
+      "chat_layer": "INTEGRATION_CHAT",
+      "work_type": "system_integration",
+      "baseline_chat_mode": "PURE_CHAT_BASELINE_SYNTHETIC",
+      "casulo_exocortex_mode": "CASULO_EXOCORTEX_ASSISTED_SYNTHETIC",
+      "input_quality_score": 52,
+      "implementation_complexity_score": 90,
+      "operational_cost_score": 86,
+      "apex_maturity_score": 45,
+      "hallucination_risk_index": 76,
+      "value_delta_estimate": 91,
+      "rework_count": 6,
+      "time_spent_minutes": 180,
+      "evidence_pointers": [
+        "synthetic://calibration_dry_run/SYN-CAL-007"
+      ],
+      "human_reviewer_notes": [
+        "Synthetic reviewer simulation only. No real data."
+      ],
+      "claim_boundary": "synthetic_dry_run_only_no_real_claim",
+      "decision_gate": "BLOCK_SYNTHETIC_RISK_TOO_HIGH",
+      "privacy_review_status": "not_applicable_synthetic",
+      "pii_redaction_status": "not_applicable_synthetic_no_pii",
+      "secret_scan_status": "not_applicable_synthetic_no_secrets",
+      "source_refs_only": true
+    },
+    {
+      "session_id": "SYN-CAL-008",
+      "capture_status": "HUMAN_REVIEWED",
+      "chat_platform": "SYNTHETIC_NO_REAL_PLATFORM",
+      "chat_layer": "EVIDENCE_AUDIT_CHAT",
+      "work_type": "evidence_audit",
+      "baseline_chat_mode": "PURE_CHAT_BASELINE_SYNTHETIC",
+      "casulo_exocortex_mode": "CASULO_EXOCORTEX_ASSISTED_SYNTHETIC",
+      "input_quality_score": 84,
+      "implementation_complexity_score": 58,
+      "operational_cost_score": 66,
+      "apex_maturity_score": 74,
+      "hallucination_risk_index": 28,
+      "value_delta_estimate": 79,
+      "rework_count": 1,
+      "time_spent_minutes": 100,
+      "evidence_pointers": [
+        "synthetic://calibration_dry_run/SYN-CAL-008"
+      ],
+      "human_reviewer_notes": [
+        "Synthetic reviewer simulation only. No real data."
+      ],
+      "claim_boundary": "synthetic_dry_run_only_no_real_claim",
+      "decision_gate": "ACCEPT_SYNTHETIC_DRY_RUN",
+      "privacy_review_status": "not_applicable_synthetic",
+      "pii_redaction_status": "not_applicable_synthetic_no_pii",
+      "secret_scan_status": "not_applicable_synthetic_no_secrets",
+      "source_refs_only": true
+    }
+  ],
+  "summary": {
+    "accepted_count": 4,
+    "held_count": 3,
+    "blocked_count": 1,
+    "average_apex_maturity_score": 64.25,
+    "average_hallucination_risk_index": 45.38,
+    "average_operational_cost_score": 66.5,
+    "average_value_delta_estimate": 78.12
+  },
+  "claim_boundary": "synthetic calibration dry run only no real-world claim",
+  "blocked_actions": [
+    "real_session_data_capture",
+    "raw_private_data_storage",
+    "secret_or_credential_storage",
+    "unredacted_pii_storage",
+    "client_facing_value_claim",
+    "real_world_profit_claim",
+    "validated_savings_claim",
+    "validated_hallucination_reduction_claim",
+    "production_activation",
+    "automatic_memory_delete",
+    "gpt_memory_api_execution"
+  ]
+}

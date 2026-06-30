@@ -1,0 +1,38 @@
+{
+  "version": "synthetic_calibration_capture_dry_run.v0.1",
+  "phase": "PROD-3261..3300",
+  "purpose": "Run a synthetic dry run through the real-session capture schema without capturing real data.",
+  "real_data_captured": false,
+  "synthetic_record_count": 8,
+  "dry_run_batch": "product/calibration/synthetic_sessions/synthetic_calibration_dry_run_batch_v0_1.json",
+  "calibration_axes_tested": [
+    "value_delta_calibration",
+    "operational_hallucination_index_calibration",
+    "apex_maturity_calibration",
+    "input_quality_calibration",
+    "implementation_complexity_calibration",
+    "cost_decision_metric_calibration",
+    "work_type_package_fit_calibration"
+  ],
+  "allowed_actions": [
+    "synthetic_dry_run_capture",
+    "schema_field_validation",
+    "synthetic_batch_scoring",
+    "calibration_pipeline_dry_run",
+    "human_review_simulation"
+  ],
+  "blocked_actions": [
+    "real_session_data_capture",
+    "raw_private_data_storage",
+    "secret_or_credential_storage",
+    "unredacted_pii_storage",
+    "client_facing_value_claim",
+    "real_world_profit_claim",
+    "validated_savings_claim",
+    "validated_hallucination_reduction_claim",
+    "production_activation",
+    "automatic_memory_delete",
+    "gpt_memory_api_execution"
+  ],
+  "recommended_next_phase": "PROD-3301..3340 - Synthetic Calibration Dry Run Evaluator"
+}

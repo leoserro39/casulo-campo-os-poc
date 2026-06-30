@@ -1,0 +1,29 @@
+{
+  "phase": "PROD-3261..3300",
+  "required_prior_tag": "product-real-session-intake-validator-empty-batch-audit-v0.1",
+  "mode": "synthetic_calibration_capture_dry_run",
+  "real_data_captured": false,
+  "synthetic_only": true,
+  "schema_validation_required": true,
+  "blocked_actions": [
+    "real_session_data_capture",
+    "raw_private_data_storage",
+    "secret_or_credential_storage",
+    "unredacted_pii_storage",
+    "client_facing_value_claim",
+    "real_world_profit_claim",
+    "validated_savings_claim",
+    "validated_hallucination_reduction_claim",
+    "production_activation",
+    "automatic_memory_delete",
+    "gpt_memory_api_execution"
+  ],
+  "allowed_actions": [
+    "synthetic_dry_run_capture",
+    "schema_field_validation",
+    "synthetic_batch_scoring",
+    "calibration_pipeline_dry_run",
+    "human_review_simulation"
+  ],
+  "recommended_next_phase": "PROD-3301..3340 - Synthetic Calibration Dry Run Evaluator"
+}
