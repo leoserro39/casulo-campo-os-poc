@@ -1,0 +1,20 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "CASULO Telemetry Calibration Dataset",
+  "type": "object",
+  "required": ["status", "phase", "decision", "dataset", "checks", "blocked_actions"],
+  "properties": {
+    "status": {"type": "string"},
+    "phase": {"type": "string"},
+    "decision": {"type": "string"},
+    "dataset": {
+      "type": "object",
+      "required": ["case_count", "domains", "boundary_types"]
+    },
+    "checks": {"type": "object"},
+    "blocked_actions": {
+      "type": "array",
+      "items": {"type": "string"}
+    }
+  }
+}
