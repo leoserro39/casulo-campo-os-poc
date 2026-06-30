@@ -1,0 +1,37 @@
+{
+  "status": "PASS",
+  "decision": "CODEX_AS_REPO_IMPLEMENTATION_AGENT_NOT_RUNTIME_BUSINESS_EXECUTOR",
+  "runtime_business_decision_path": [
+    "Input",
+    "Preflight",
+    "Evidence retrieval / graph retrieval",
+    "Research LLM when external research is explicitly allowed",
+    "Diagnostic runtime LLM",
+    "Verifier/Critic LLM for high-risk cases",
+    "Cubo gate",
+    "Output mode",
+    "Human review when required",
+    "Tool executor only if allowlisted and approved"
+  ],
+  "codex_path": [
+    "Developer task",
+    "Repository patch",
+    "Tests/validation",
+    "Audit evidence",
+    "Human review/merge"
+  ],
+  "blocked_actions": [
+    "client_facing_claim",
+    "automatic_nomination",
+    "implementation_execution",
+    "production_activation",
+    "automatic_merge",
+    "credential_handling",
+    "automatic_threshold_mutation",
+    "autonomous_external_execution",
+    "real_world_side_effect",
+    "unapproved_real_company_data",
+    "live_graph_database_write",
+    "neo4j_connection_without_explicit_sandbox_flag"
+  ]
+}

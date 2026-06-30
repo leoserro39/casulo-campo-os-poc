@@ -1,0 +1,29 @@
+{
+  "status": "PASS",
+  "problem_found": "Umbrella train used mixed dependency filenames with and without hyphen after prod.",
+  "fix_applied_in_current_train": [
+    "umbrella_prod1021_1060_controlled_demo_evidence_readiness.json",
+    "umbrella_prod1061_1100_non_live_graph_import_readiness.json",
+    "umbrella_prod1101_1140_business_value_metrics_readiness.json"
+  ],
+  "next_train_policy": {
+    "machine_outputs": "prodNNNN_NNNN only, no hyphen",
+    "human_docs": "PROD-NNNN notation allowed",
+    "no_manual_alias_commits": true,
+    "dependency_manifest_required": true
+  },
+  "blocked_actions": [
+    "client_facing_claim",
+    "automatic_nomination",
+    "implementation_execution",
+    "production_activation",
+    "automatic_merge",
+    "credential_handling",
+    "automatic_threshold_mutation",
+    "autonomous_external_execution",
+    "real_world_side_effect",
+    "unapproved_real_company_data",
+    "live_graph_database_write",
+    "neo4j_connection_without_explicit_sandbox_flag"
+  ]
+}

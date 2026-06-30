@@ -1,0 +1,82 @@
+{
+  "status": "PASS",
+  "roles": {
+    "research_llm": {
+      "role": "search, compare, summarize sources and hypotheses",
+      "used_for": [
+        "technical research",
+        "market/stack comparison",
+        "documentation synthesis",
+        "hypothesis generation"
+      ],
+      "cannot": [
+        "execute business action",
+        "mutate thresholds",
+        "write production graph"
+      ]
+    },
+    "diagnostic_runtime_llm": {
+      "role": "reasoning inside Cubo gates",
+      "used_for": [
+        "diagnosis",
+        "recommendation",
+        "evidence request",
+        "human review packet"
+      ],
+      "must_obey": [
+        "gate",
+        "hallucination budget",
+        "readiness",
+        "blocked actions"
+      ]
+    },
+    "verifier_or_critic_llm": {
+      "role": "challenge outputs before release",
+      "used_for": [
+        "contradiction check",
+        "evidence gap check",
+        "unsafe claim check",
+        "business-risk review"
+      ]
+    },
+    "codex_or_coding_agent": {
+      "role": "implementation agent for repo changes",
+      "used_for": [
+        "write code",
+        "generate tests",
+        "refactor",
+        "prepare PR-like patches"
+      ],
+      "not_runtime_business_executor": true
+    },
+    "tool_executor": {
+      "role": "allowlisted operational runner",
+      "used_for": [
+        "run validation",
+        "read outputs",
+        "query sandbox graph",
+        "generate reports"
+      ],
+      "requires": [
+        "allowlist",
+        "audit log",
+        "human approval for side effects"
+      ]
+    }
+  },
+  "core_answer": "Codex should be the implementation/coding executor; runtime decisions should be orchestrator + retrieval/Neo4j + research LLM when allowed + diagnostic LLM + verifier LLM + Cubo gates + tool executor only when allowlisted.",
+  "blocked_actions": [
+    "client_facing_claim",
+    "automatic_nomination",
+    "implementation_execution",
+    "production_activation",
+    "automatic_merge",
+    "credential_handling",
+    "automatic_threshold_mutation",
+    "autonomous_external_execution",
+    "real_world_side_effect",
+    "unapproved_real_company_data",
+    "live_graph_database_write",
+    "neo4j_connection_without_explicit_sandbox_flag"
+  ]
+}
