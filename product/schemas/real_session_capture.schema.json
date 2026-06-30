@@ -1,0 +1,137 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "CASULO Real Session Capture",
+  "type": "object",
+  "required": [
+    "session_id",
+    "capture_status",
+    "chat_platform",
+    "chat_layer",
+    "work_type",
+    "baseline_chat_mode",
+    "casulo_exocortex_mode",
+    "input_quality_score",
+    "implementation_complexity_score",
+    "operational_cost_score",
+    "apex_maturity_score",
+    "hallucination_risk_index",
+    "value_delta_estimate",
+    "rework_count",
+    "time_spent_minutes",
+    "evidence_pointers",
+    "human_reviewer_notes",
+    "claim_boundary",
+    "decision_gate",
+    "privacy_review_status",
+    "pii_redaction_status",
+    "secret_scan_status",
+    "source_refs_only"
+  ],
+  "properties": {
+    "session_id": {
+      "type": "string"
+    },
+    "capture_status": {
+      "type": "string",
+      "enum": [
+        "EMPTY_TEMPLATE",
+        "SANITIZED_DRAFT",
+        "HUMAN_REVIEWED",
+        "REJECTED"
+      ]
+    },
+    "chat_platform": {
+      "type": "string"
+    },
+    "chat_layer": {
+      "type": "string"
+    },
+    "work_type": {
+      "type": "string"
+    },
+    "baseline_chat_mode": {
+      "type": "string"
+    },
+    "casulo_exocortex_mode": {
+      "type": "string"
+    },
+    "input_quality_score": {
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "implementation_complexity_score": {
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "operational_cost_score": {
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "apex_maturity_score": {
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "hallucination_risk_index": {
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "value_delta_estimate": {
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "rework_count": {
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "time_spent_minutes": {
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "evidence_pointers": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "human_reviewer_notes": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "claim_boundary": {
+      "type": "string"
+    },
+    "decision_gate": {
+      "type": "string"
+    },
+    "privacy_review_status": {
+      "type": "string"
+    },
+    "pii_redaction_status": {
+      "type": "string"
+    },
+    "secret_scan_status": {
+      "type": "string"
+    },
+    "source_refs_only": {
+      "type": "boolean"
+    }
+  }
+}

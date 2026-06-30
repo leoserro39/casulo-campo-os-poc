@@ -1,0 +1,65 @@
+{
+  "version": "real_session_capture_schema_empty_intake.v0.1",
+  "phase": "PROD-3141..3180",
+  "purpose": "Create the schema and empty intake template for future sanitized real-session calibration.",
+  "required_fields": [
+    "session_id",
+    "capture_status",
+    "chat_platform",
+    "chat_layer",
+    "work_type",
+    "baseline_chat_mode",
+    "casulo_exocortex_mode",
+    "input_quality_score",
+    "implementation_complexity_score",
+    "operational_cost_score",
+    "apex_maturity_score",
+    "hallucination_risk_index",
+    "value_delta_estimate",
+    "rework_count",
+    "time_spent_minutes",
+    "evidence_pointers",
+    "human_reviewer_notes",
+    "claim_boundary",
+    "decision_gate",
+    "privacy_review_status",
+    "pii_redaction_status",
+    "secret_scan_status",
+    "source_refs_only"
+  ],
+  "empty_intake": "product/calibration/real_sessions/real_session_empty_intake_v0_1.json",
+  "privacy_controls": [
+    "source_refs_only",
+    "pii_redaction_required_before_capture",
+    "secret_scan_required_before_capture",
+    "human_review_required_before_dataset_acceptance"
+  ],
+  "calibration_relations": [
+    "value_delta_calibration",
+    "operational_hallucination_index_calibration",
+    "apex_maturity_calibration",
+    "cost_decision_metric_calibration",
+    "work_type_package_fit_calibration"
+  ],
+  "claim_boundary": "Schema and empty intake only. No real session data captured in this phase.",
+  "allowed_actions": [
+    "empty_intake_creation",
+    "schema_definition",
+    "sanitized_manual_capture_preparation",
+    "human_review_protocol_preparation",
+    "calibration_dataset_structure_preparation"
+  ],
+  "blocked_actions": [
+    "real_session_data_capture_without_review",
+    "raw_private_data_storage",
+    "secret_or_credential_storage",
+    "client_facing_value_claim",
+    "real_world_profit_claim",
+    "validated_savings_claim",
+    "validated_hallucination_reduction_claim",
+    "production_activation",
+    "automatic_memory_delete",
+    "gpt_memory_api_execution"
+  ],
+  "recommended_next_phase": "PROD-3181..3220 - Real Session Manual Capture Runbook"
+}

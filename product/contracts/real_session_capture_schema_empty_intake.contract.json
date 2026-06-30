@@ -1,0 +1,28 @@
+{
+  "phase": "PROD-3141..3180",
+  "required_prior_tag": "product-calibration-plan-real-sessions-v0.1",
+  "mode": "real_session_capture_schema_empty_intake",
+  "real_data_captured": false,
+  "empty_intake_only": true,
+  "human_review_required_before_real_capture": true,
+  "blocked_actions": [
+    "real_session_data_capture_without_review",
+    "raw_private_data_storage",
+    "secret_or_credential_storage",
+    "client_facing_value_claim",
+    "real_world_profit_claim",
+    "validated_savings_claim",
+    "validated_hallucination_reduction_claim",
+    "production_activation",
+    "automatic_memory_delete",
+    "gpt_memory_api_execution"
+  ],
+  "allowed_actions": [
+    "empty_intake_creation",
+    "schema_definition",
+    "sanitized_manual_capture_preparation",
+    "human_review_protocol_preparation",
+    "calibration_dataset_structure_preparation"
+  ],
+  "recommended_next_phase": "PROD-3181..3220 - Real Session Manual Capture Runbook"
+}
