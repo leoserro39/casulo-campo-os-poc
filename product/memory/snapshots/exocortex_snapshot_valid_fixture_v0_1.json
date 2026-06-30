@@ -1,0 +1,47 @@
+{
+  "snapshot_id": "EXO-SNAPSHOT-FIXTURE-001",
+  "phase": "PROD-2621..2660",
+  "state_checksum": {
+    "commit": "1cbaa00",
+    "tag": "product-casulo-exocortex-manual-context-snapshot-policy-contract-v0.1",
+    "decision": "CASULO_EXOCORTEX_MANUAL_CONTEXT_SNAPSHOT_POLICY_READY",
+    "gate": "MANUAL_CONTEXT_SNAPSHOT_POLICY_CONTRACT",
+    "source_artifacts": [
+      "product/memory/casulo_exocortex_manual_context_snapshot_policy_v0_1.json",
+      "outputs/prod2581_2620_casulo_exocortex_manual_context_snapshot_policy.json"
+    ]
+  },
+  "evidence_pointers": [
+    "product/memory/casulo_exocortex_manual_context_snapshot_policy_v0_1.json",
+    "outputs/prod2581_2620_casulo_exocortex_manual_context_snapshot_policy.json"
+  ],
+  "claim_boundary": {
+    "client_facing_claim_allowed": false,
+    "production_activation_allowed": false,
+    "validated_performance_claim_allowed": false,
+    "real_world_token_savings_claim_allowed": false
+  },
+  "gate": "HOLD_HUMAN_REVIEW",
+  "response_mode": "SNAPSHOT",
+  "lifecycle_action": "COMPRESS_TO_SNAPSHOT",
+  "exocortex_signals": {
+    "context_pressure": "tracked",
+    "stale_context_risk": "tracked",
+    "state_grounding_score": "tracked",
+    "evidence_coverage": "tracked",
+    "gate_compliance": "tracked",
+    "decision_recall_accuracy": "tracked",
+    "snapshot_recovery_score": "tracked",
+    "claim_leakage_risk": "tracked",
+    "token_waste_ratio": "tracked"
+  },
+  "blocked_actions": [
+    "automatic_memory_delete",
+    "unreviewed_memory_mutation",
+    "validated_performance_claim",
+    "real_world_token_savings_claim",
+    "client_facing_claim",
+    "production_activation",
+    "gpt_memory_api_execution"
+  ]
+}

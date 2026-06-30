@@ -1,0 +1,53 @@
+{
+  "phase": "PROD-2621..2660",
+  "required_prior_tag": "product-casulo-exocortex-manual-context-snapshot-policy-contract-v0.1",
+  "mode": "snapshot_contract_validator",
+  "validator": {
+    "version": "exocortex_snapshot_contract_validator.v0.1",
+    "phase": "PROD-2621..2660",
+    "required_fields": [
+      "snapshot_id",
+      "phase",
+      "state_checksum",
+      "evidence_pointers",
+      "claim_boundary",
+      "gate",
+      "response_mode",
+      "lifecycle_action",
+      "exocortex_signals",
+      "blocked_actions"
+    ],
+    "required_state_checksum_fields": [
+      "commit",
+      "tag",
+      "decision",
+      "gate",
+      "source_artifacts"
+    ],
+    "required_claim_boundary_false": [
+      "client_facing_claim_allowed",
+      "production_activation_allowed",
+      "validated_performance_claim_allowed"
+    ],
+    "required_blocked_actions": [
+      "automatic_memory_delete",
+      "unreviewed_memory_mutation",
+      "validated_performance_claim",
+      "real_world_token_savings_claim",
+      "client_facing_claim",
+      "production_activation",
+      "gpt_memory_api_execution"
+    ],
+    "recommended_next_phase": "PROD-2661..2700 - Exocortex Snapshot Runtime Fixture Pack"
+  },
+  "blocked_actions": [
+    "automatic_memory_delete",
+    "unreviewed_memory_mutation",
+    "validated_performance_claim",
+    "real_world_token_savings_claim",
+    "client_facing_claim",
+    "production_activation",
+    "gpt_memory_api_execution"
+  ],
+  "recommended_next_phase": "PROD-2661..2700 - Exocortex Snapshot Runtime Fixture Pack"
+}

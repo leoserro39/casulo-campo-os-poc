@@ -1,0 +1,17 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "CASULO Exocortex Snapshot Contract",
+  "type": "object",
+  "required": [
+    "snapshot_id",
+    "phase",
+    "state_checksum",
+    "evidence_pointers",
+    "claim_boundary",
+    "gate",
+    "response_mode",
+    "lifecycle_action",
+    "exocortex_signals",
+    "blocked_actions"
+  ]
+}

@@ -1,0 +1,54 @@
+{
+  "status": "PASS",
+  "phase": "PROD-2621..2660",
+  "decision": "EXOCORTEX_SNAPSHOT_CONTRACT_VALIDATOR_READY",
+  "generated_at": "2026-06-30T22:45:27.164195+00:00",
+  "validator": "product/memory/exocortex_snapshot_contract_validator_v0_1.json",
+  "valid_fixture": "product/memory/snapshots/exocortex_snapshot_valid_fixture_v0_1.json",
+  "invalid_fixture": "product/memory/snapshots/exocortex_snapshot_invalid_missing_checksum_v0_1.json",
+  "valid_result": {
+    "status": "PASS",
+    "errors": []
+  },
+  "invalid_result": {
+    "status": "FAIL",
+    "errors": [
+      "missing field: state_checksum",
+      "missing state_checksum.commit",
+      "missing state_checksum.tag",
+      "missing state_checksum.decision",
+      "missing state_checksum.gate",
+      "missing state_checksum.source_artifacts"
+    ]
+  },
+  "recommended_next_phase": "PROD-2661..2700 - Exocortex Snapshot Runtime Fixture Pack",
+  "checks": {
+    "required_tag_present": true,
+    "policy_exists": true,
+    "policy_has_exocortex_signals": true,
+    "policy_has_lifecycle_actions": true,
+    "policy_has_response_modes": true,
+    "required_field_count": 10,
+    "valid_fixture_passes": true,
+    "invalid_fixture_fails": true,
+    "invalid_detects_missing_checksum": true,
+    "schema_exists": true,
+    "validator_exists": true,
+    "valid_fixture_exists": true,
+    "invalid_fixture_exists": true,
+    "automatic_delete_blocked": true,
+    "unreviewed_mutation_blocked": true,
+    "gpt_memory_api_blocked": true,
+    "performance_claim_blocked": true
+  },
+  "errors": [],
+  "blocked_actions": [
+    "automatic_memory_delete",
+    "unreviewed_memory_mutation",
+    "validated_performance_claim",
+    "real_world_token_savings_claim",
+    "client_facing_claim",
+    "production_activation",
+    "gpt_memory_api_execution"
+  ]
+}
