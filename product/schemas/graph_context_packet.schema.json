@@ -1,0 +1,16 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "CASULO Graph Context Packet",
+  "type": "object",
+  "required": ["status", "query", "mode", "context_packet", "blocked_actions"],
+  "properties": {
+    "status": {"type": "string"},
+    "query": {"type": "string"},
+    "mode": {"type": "string"},
+    "context_packet": {"type": "object"},
+    "blocked_actions": {
+      "type": "array",
+      "items": {"type": "string"}
+    }
+  }
+}
