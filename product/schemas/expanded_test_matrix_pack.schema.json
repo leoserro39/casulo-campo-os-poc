@@ -1,0 +1,13 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "CASULO Expanded Test Matrix Pack",
+  "type": "object",
+  "required": [
+    "version",
+    "phase",
+    "case_count",
+    "categories",
+    "cases",
+    "coverage_summary"
+  ]
+}
