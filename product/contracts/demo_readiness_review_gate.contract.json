@@ -1,0 +1,31 @@
+{
+  "phase": "PROD-2381..2420",
+  "required_prior_tag": "product-demo-runbook-evidence-capture-v0.1",
+  "mode": "demo_readiness_review_gate",
+  "review_decision": "APPROVED_FOR_INTERNAL_DEMO_RECORDING_ONLY",
+  "allowed_actions": [
+    "open_local_static_demo",
+    "record_internal_walkthrough",
+    "capture_internal_screenshots",
+    "use_demo_for_internal_review"
+  ],
+  "blocked_actions": [
+    "client_facing_claim",
+    "production_activation",
+    "validated_hallucination_reduction_claim",
+    "gpt_integration_claim",
+    "codex_execution",
+    "automatic_merge",
+    "external_api_call"
+  ],
+  "allowed_claim": "The local static demo shows prepared scenario comparisons between generic-risk output and CASULO state-grounded output.",
+  "prohibited_claims": [
+    "This proves real-world hallucination reduction.",
+    "This is production ready.",
+    "This is client-validated evidence.",
+    "This is integrated with GPT.",
+    "This can execute Codex or merge automatically.",
+    "This validates commercial performance."
+  ],
+  "recommended_next_phase": "PROD-2421..2460 - Context Lifecycle Telemetry and Memory State Governor Benchmark"
+}

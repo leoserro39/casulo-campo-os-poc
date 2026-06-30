@@ -1,0 +1,43 @@
+{
+  "status": "PASS",
+  "phase": "PROD-2381..2420",
+  "decision": "APPROVED_FOR_INTERNAL_DEMO_RECORDING_ONLY",
+  "generated_at": "2026-06-30T22:28:16.832407+00:00",
+  "local_url": "http://127.0.0.1:4173/product/demo_chat/index.html",
+  "scenario_count": 8,
+  "allowed_actions": [
+    "open_local_static_demo",
+    "record_internal_walkthrough",
+    "capture_internal_screenshots",
+    "use_demo_for_internal_review"
+  ],
+  "blocked_actions": [
+    "client_facing_claim",
+    "production_activation",
+    "validated_hallucination_reduction_claim",
+    "gpt_integration_claim",
+    "codex_execution",
+    "automatic_merge",
+    "external_api_call"
+  ],
+  "recommended_next_phase": "PROD-2421..2460 - Context Lifecycle Telemetry and Memory State Governor Benchmark",
+  "checks": {
+    "required_tag_present": true,
+    "shell_output_exists": true,
+    "shell_pass": true,
+    "evidence_output_exists": true,
+    "evidence_pass": true,
+    "html_exists": true,
+    "scenario_pack_exists": true,
+    "scenario_count": 8,
+    "gate_file_exists": true,
+    "approved_internal_only": true,
+    "client_claim_blocked": true,
+    "production_blocked": true,
+    "hallucination_claim_blocked": true,
+    "gpt_claim_blocked": true,
+    "codex_blocked": true,
+    "merge_blocked": true
+  },
+  "errors": []
+}

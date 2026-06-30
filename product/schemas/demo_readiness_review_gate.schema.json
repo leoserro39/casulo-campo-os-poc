@@ -1,0 +1,12 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "CASULO Demo Readiness Review Gate",
+  "type": "object",
+  "required": [
+    "status",
+    "phase",
+    "decision",
+    "checks",
+    "blocked_actions"
+  ]
+}
