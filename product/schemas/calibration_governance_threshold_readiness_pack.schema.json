@@ -1,0 +1,17 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "CASULO Calibration Governance and Threshold Readiness Pack",
+  "type": "object",
+  "required": ["status", "phase", "decision", "readiness", "checks", "blocked_actions"],
+  "properties": {
+    "status": {"type": "string"},
+    "phase": {"type": "string"},
+    "decision": {"type": "string"},
+    "readiness": {"type": "object"},
+    "checks": {"type": "object"},
+    "blocked_actions": {
+      "type": "array",
+      "items": {"type": "string"}
+    }
+  }
+}
