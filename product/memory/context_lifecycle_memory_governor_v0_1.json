@@ -1,0 +1,28 @@
+{
+  "version": "context_lifecycle_memory_governor.v0.1",
+  "state_types": [
+    "canonical_decision",
+    "current_phase_state",
+    "repo_pointer",
+    "evidence_pointer",
+    "ephemeral_log",
+    "resolved_error",
+    "obsolete_command",
+    "human_preference",
+    "gate_policy"
+  ],
+  "lifecycle_actions": [
+    "PROMOTE_TO_MEMORY",
+    "COMPRESS_TO_SNAPSHOT",
+    "ARCHIVE_TO_REPO",
+    "DISCARD_EPHEMERAL",
+    "HOLD_HUMAN_REVIEW",
+    "PROTECT_DO_NOT_DELETE"
+  ],
+  "memory_policy": {
+    "chat_memory": "anchors, decisions, preferences, current state and pointers",
+    "operational_cube": "living state, relations, gates and lifecycle decisions",
+    "repo_outputs": "auditable heavy evidence, logs, reports and generated artifacts",
+    "discardable": "resolved noise, failed attempts, obsolete commands and duplicate outputs"
+  }
+}

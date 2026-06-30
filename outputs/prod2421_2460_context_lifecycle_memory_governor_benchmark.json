@@ -1,0 +1,131 @@
+{
+  "status": "PASS",
+  "phase": "PROD-2421..2460",
+  "decision": "MEMORY_STATE_GOVERNOR_BENCHMARK_READY",
+  "generated_at": "2026-06-30T22:30:16.035911+00:00",
+  "benchmark": {
+    "phase": "PROD-2421..2460",
+    "required_prior_tag": "product-demo-readiness-review-gate-v0.1",
+    "mode": "benchmark_contract_only",
+    "thesis": "Memory is not storage. Memory is living state governed by evidence, gates and lifecycle.",
+    "hypothesis": "State-governed memory increases useful chat lifetime, reduces token waste, improves recall and reduces stale-context contamination.",
+    "baseline": "pure_chat_with_heavy_accumulated_context",
+    "casulo_stack": "snapshot_plus_gates_plus_operational_cube_repo_pointers",
+    "gates": [
+      "PROMOTE_TO_MEMORY",
+      "COMPRESS_TO_SNAPSHOT",
+      "ARCHIVE_TO_REPO",
+      "DISCARD_EPHEMERAL",
+      "HOLD_HUMAN_REVIEW",
+      "PROTECT_DO_NOT_DELETE"
+    ],
+    "metrics": [
+      "usable_turns_until_degradation",
+      "token_growth_rate",
+      "context_compression_ratio",
+      "state_retention_score",
+      "decision_recall_accuracy",
+      "stale_context_contamination_rate",
+      "recovery_time_from_snapshot",
+      "output_quality_under_load",
+      "rework_avoided",
+      "cost_per_valid_task",
+      "gate_violation_rate"
+    ],
+    "prompt_pairs": [
+      {
+        "id": "MEM-PAIR-001",
+        "theme": "long_task_history",
+        "pure_condition": "Chat keeps full logs, failed attempts, commands and outputs active.",
+        "casulo_condition": "Chat uses current state snapshot plus repo pointers.",
+        "expected_measure": "usable_turns_until_degradation"
+      },
+      {
+        "id": "MEM-PAIR-002",
+        "theme": "decision_recall",
+        "pure_condition": "Chat recalls commits, tags and decisions from heavy accumulated context.",
+        "casulo_condition": "Chat recalls compact state with commit, tag, decision and next gate.",
+        "expected_measure": "decision_recall_accuracy"
+      },
+      {
+        "id": "MEM-PAIR-003",
+        "theme": "stale_context",
+        "pure_condition": "Resolved errors and obsolete commands remain active.",
+        "casulo_condition": "Resolved noise is archived or discarded by gate.",
+        "expected_measure": "stale_context_contamination_rate"
+      },
+      {
+        "id": "MEM-PAIR-004",
+        "theme": "snapshot_recovery",
+        "pure_condition": "Chat resumes from long transcript.",
+        "casulo_condition": "Chat resumes from state snapshot and repo evidence.",
+        "expected_measure": "recovery_time_from_snapshot"
+      }
+    ],
+    "blocked_actions": [
+      "automatic_memory_delete",
+      "unreviewed_memory_mutation",
+      "production_activation",
+      "client_facing_claim",
+      "validated_performance_claim",
+      "gpt_memory_api_execution"
+    ],
+    "recommended_next_phase": "PROD-2461..2500 - Memory Governor Synthetic Benchmark Dataset"
+  },
+  "model": {
+    "version": "context_lifecycle_memory_governor.v0.1",
+    "state_types": [
+      "canonical_decision",
+      "current_phase_state",
+      "repo_pointer",
+      "evidence_pointer",
+      "ephemeral_log",
+      "resolved_error",
+      "obsolete_command",
+      "human_preference",
+      "gate_policy"
+    ],
+    "lifecycle_actions": [
+      "PROMOTE_TO_MEMORY",
+      "COMPRESS_TO_SNAPSHOT",
+      "ARCHIVE_TO_REPO",
+      "DISCARD_EPHEMERAL",
+      "HOLD_HUMAN_REVIEW",
+      "PROTECT_DO_NOT_DELETE"
+    ],
+    "memory_policy": {
+      "chat_memory": "anchors, decisions, preferences, current state and pointers",
+      "operational_cube": "living state, relations, gates and lifecycle decisions",
+      "repo_outputs": "auditable heavy evidence, logs, reports and generated artifacts",
+      "discardable": "resolved noise, failed attempts, obsolete commands and duplicate outputs"
+    }
+  },
+  "checks": {
+    "required_tag_present": true,
+    "gate_count": 6,
+    "metric_count": 11,
+    "prompt_pair_count": 4,
+    "has_promote": true,
+    "has_compress": true,
+    "has_archive": true,
+    "has_discard": true,
+    "has_hold_review": true,
+    "has_protect": true,
+    "has_token_metric": true,
+    "has_retention_metric": true,
+    "has_contamination_metric": true,
+    "has_recovery_metric": true,
+    "automatic_delete_blocked": true,
+    "unreviewed_mutation_blocked": true,
+    "performance_claim_blocked": true
+  },
+  "errors": [],
+  "blocked_actions": [
+    "automatic_memory_delete",
+    "unreviewed_memory_mutation",
+    "production_activation",
+    "client_facing_claim",
+    "validated_performance_claim",
+    "gpt_memory_api_execution"
+  ]
+}
