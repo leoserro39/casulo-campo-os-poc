@@ -1,0 +1,27 @@
+{
+  "template_version": "manual_real_response_intake_template.v0.1",
+  "phase": "PROD-1901..1940",
+  "calibration_status": "NOT_CALIBRATED_MANUAL_INTAKE_TEMPLATE_ONLY",
+  "intake_records": [
+    {
+      "capture_id": "REAL-GPT-CAPTURE-001",
+      "capture_mode": "MANUAL_PASTED_GPT_PURE",
+      "model_label": "fill_manually",
+      "capture_datetime_utc": "fill_manually",
+      "operator": "fill_manually",
+      "prompt_id": "fill_manually",
+      "prompt_text": "fill_manually",
+      "context_packet_used": false,
+      "context_packet_reference": null,
+      "raw_response": "paste_real_gpt_response_here",
+      "source_conversation_reference": "fill_manually_or_none",
+      "contains_client_data": false,
+      "contains_sensitive_data": false,
+      "anonymized": true,
+      "human_review_required": true,
+      "review_status": "PENDING_HUMAN_REVIEW",
+      "calibration_eligible": false,
+      "exclusion_reason": "pending_human_review"
+    }
+  ]
+}
