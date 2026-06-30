@@ -1,0 +1,49 @@
+{
+  "status": "PASS",
+  "read_only_queries": [
+    {
+      "id": "CYPHER-READ-001",
+      "name": "count_all_nodes",
+      "cypher": "MATCH (n) RETURN count(n) AS nodes"
+    },
+    {
+      "id": "CYPHER-READ-002",
+      "name": "count_all_relationships",
+      "cypher": "MATCH ()-[r]->() RETURN count(r) AS relationships"
+    },
+    {
+      "id": "CYPHER-READ-003",
+      "name": "case_to_gate_paths",
+      "cypher": "MATCH p=(c:Case)-[*1..4]->(g:Gate) RETURN c.id AS case_id, g.id AS gate_id, length(p) AS path_length LIMIT 50"
+    },
+    {
+      "id": "CYPHER-READ-004",
+      "name": "risk_to_output_trace",
+      "cypher": "MATCH p=(r:RiskSignal)-[*1..4]->(o:OutputMode) RETURN r.id AS risk_signal_id, o.id AS output_mode_id, length(p) AS path_length LIMIT 50"
+    },
+    {
+      "id": "CYPHER-READ-005",
+      "name": "blocked_cases",
+      "cypher": "MATCH (c:Case)-[*1..4]->(o:OutputMode {name:'BLOCKED'}) RETURN c.id AS case_id LIMIT 50"
+    }
+  ],
+  "write_queries_allowed_now": false,
+  "future_sandbox_write_templates": [
+    "MERGE node templates for JSONL import",
+    "MERGE relationship templates for JSONL import"
+  ],
+  "blocked_actions": [
+    "client_facing_claim",
+    "automatic_nomination",
+    "implementation_execution",
+    "production_activation",
+    "automatic_merge",
+    "credential_handling",
+    "automatic_threshold_mutation",
+    "autonomous_external_execution",
+    "real_world_side_effect",
+    "unapproved_real_company_data",
+    "live_graph_database_write",
+    "production_neo4j_connection"
+  ]
+}

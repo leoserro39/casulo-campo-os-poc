@@ -1,0 +1,33 @@
+{
+  "status": "PASS",
+  "phase": "Neo4j Sandbox Adapter Contract",
+  "generated_at": "2026-06-30T16:37:54+00:00",
+  "mode": "contract_only_no_connection",
+  "neo4j_uri_template": "bolt://localhost:7687",
+  "database_template": "neo4j",
+  "env_template": "product/config/neo4j_sandbox.env.example",
+  "source_nodes_jsonl": "outputs/prod941_980_graph_export_nodes.jsonl",
+  "source_relationships_jsonl": "outputs/prod941_980_graph_export_relationships.jsonl",
+  "source_node_count": 313,
+  "source_relationship_count": 350,
+  "connection_allowed_now": false,
+  "sandbox_connection_allowed_later": true,
+  "production_connection_allowed": false,
+  "credential_handling_allowed": false,
+  "requires_explicit_flag_for_future_connection": true,
+  "explicit_future_flag": "CASULO_NEO4J_SANDBOX_IMPORT_ENABLED=true",
+  "blocked_actions": [
+    "client_facing_claim",
+    "automatic_nomination",
+    "implementation_execution",
+    "production_activation",
+    "automatic_merge",
+    "credential_handling",
+    "automatic_threshold_mutation",
+    "autonomous_external_execution",
+    "real_world_side_effect",
+    "unapproved_real_company_data",
+    "live_graph_database_write",
+    "production_neo4j_connection"
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "contract": "casulo.neo4j_gain_test_contract.v0.1",
+  "scope": "Define baseline JSON retrieval versus Neo4j graph retrieval comparison.",
+  "connection_allowed_now": false,
+  "production_connection_allowed": false,
+  "blocked_actions": [
+    "client_facing_claim",
+    "automatic_nomination",
+    "implementation_execution",
+    "production_activation",
+    "automatic_merge",
+    "credential_handling",
+    "automatic_threshold_mutation",
+    "autonomous_external_execution",
+    "real_world_side_effect",
+    "unapproved_real_company_data",
+    "live_graph_database_write",
+    "production_neo4j_connection"
+  ]
+}

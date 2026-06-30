@@ -1,0 +1,40 @@
+{
+  "status": "PASS",
+  "phase": "JSONL to Neo4j Sandbox Import Plan",
+  "source": {
+    "nodes_jsonl": "outputs/prod941_980_graph_export_nodes.jsonl",
+    "relationships_jsonl": "outputs/prod941_980_graph_export_relationships.jsonl",
+    "node_count": 313,
+    "relationship_count": 350
+  },
+  "target": {
+    "mode": "sandbox_only",
+    "uri": "bolt://localhost:7687",
+    "database": "neo4j"
+  },
+  "steps": [
+    "verify Neo4j sandbox is running",
+    "verify credentials are local and not committed",
+    "create uniqueness constraints for id fields",
+    "import nodes from JSONL using MERGE",
+    "import relationships from JSONL using MATCH + MERGE",
+    "run read-only count checks",
+    "run path completeness checks",
+    "export gain metrics"
+  ],
+  "will_execute_now": false,
+  "blocked_actions": [
+    "client_facing_claim",
+    "automatic_nomination",
+    "implementation_execution",
+    "production_activation",
+    "automatic_merge",
+    "credential_handling",
+    "automatic_threshold_mutation",
+    "autonomous_external_execution",
+    "real_world_side_effect",
+    "unapproved_real_company_data",
+    "live_graph_database_write",
+    "production_neo4j_connection"
+  ]
+}

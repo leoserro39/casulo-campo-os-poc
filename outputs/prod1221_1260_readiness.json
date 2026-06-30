@@ -1,0 +1,31 @@
+{
+  "status": "PASS",
+  "decision": "READY_FOR_GRAPH_IMPORT_SANDBOX_DRY_RUN",
+  "ready_for": [
+    "Graph Import Sandbox Dry Run",
+    "Cypher generation from JSONL",
+    "local Neo4j sandbox setup",
+    "read-only graph inspection"
+  ],
+  "not_ready_for": [
+    "production Neo4j connection",
+    "production graph write",
+    "credential handling in repo",
+    "client-facing graph claims",
+    "automatic threshold mutation"
+  ],
+  "blocked_actions": [
+    "client_facing_claim",
+    "automatic_nomination",
+    "implementation_execution",
+    "production_activation",
+    "automatic_merge",
+    "credential_handling",
+    "automatic_threshold_mutation",
+    "autonomous_external_execution",
+    "real_world_side_effect",
+    "unapproved_real_company_data",
+    "live_graph_database_write",
+    "production_neo4j_connection"
+  ]
+}

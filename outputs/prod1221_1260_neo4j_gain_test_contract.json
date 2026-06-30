@@ -1,0 +1,35 @@
+{
+  "status": "PASS",
+  "baseline": "current JSON outputs and runner lookups",
+  "candidate": "Neo4j sandbox graph retrieval",
+  "metrics": [
+    "retrieval_hit_rate",
+    "path_completeness",
+    "evidence_to_gate_traceability",
+    "query_latency",
+    "explanation_quality",
+    "false_allow_delta",
+    "false_block_delta",
+    "human_review_packet_quality",
+    "audit_path_depth"
+  ],
+  "test_cases": [
+    "EXP50-045 productivity acceleration",
+    "EXP50-047 critical human review",
+    "EXP50-049 direct execution block sentinel"
+  ],
+  "blocked_actions": [
+    "client_facing_claim",
+    "automatic_nomination",
+    "implementation_execution",
+    "production_activation",
+    "automatic_merge",
+    "credential_handling",
+    "automatic_threshold_mutation",
+    "autonomous_external_execution",
+    "real_world_side_effect",
+    "unapproved_real_company_data",
+    "live_graph_database_write",
+    "production_neo4j_connection"
+  ]
+}

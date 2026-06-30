@@ -434,4 +434,16 @@ ENDPOINT_GROUPS = [
         ],
     },
 
+    {
+        "group": "neo4j_sandbox_adapter_contract",
+        "routes": [
+            {"path": "/api/casulo/neo4j/adapter-contract", "file": "outputs/prod1221_1260_neo4j_sandbox_adapter_contract.json", "key": "adapter_contract"},
+            {"path": "/api/casulo/neo4j/allowed-cypher", "file": "outputs/prod1221_1260_allowed_cypher_queries.json", "key": "allowed_cypher"},
+            {"path": "/api/casulo/neo4j/import-plan", "file": "outputs/prod1221_1260_neo4j_import_plan.json", "key": "import_plan"},
+            {"path": "/api/casulo/neo4j/gain-contract", "file": "outputs/prod1221_1260_neo4j_gain_test_contract.json", "key": "gain_contract"},
+            {"path": "/api/casulo/neo4j/readiness", "file": "outputs/prod1221_1260_readiness.json", "key": "readiness"},
+            {"path": "/api/casulo/neo4j/audit", "file": "outputs/prod1221_1260_audit_report.json", "key": "audit"}
+        ],
+    },
+
 ]
