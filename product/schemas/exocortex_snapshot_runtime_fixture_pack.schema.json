@@ -1,0 +1,12 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "CASULO Exocortex Snapshot Runtime Fixture Pack",
+  "type": "object",
+  "required": [
+    "version",
+    "phase",
+    "fixture_type",
+    "snapshots",
+    "validations"
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "phase": "PROD-2661..2700",
+  "required_prior_tag": "product-exocortex-snapshot-contract-validator-v0.1",
+  "mode": "runtime_fixture_pack_only",
+  "snapshot_count": 6,
+  "blocked_actions": [
+    "automatic_memory_delete",
+    "unreviewed_memory_mutation",
+    "validated_performance_claim",
+    "real_world_token_savings_claim",
+    "client_facing_claim",
+    "production_activation",
+    "gpt_memory_api_execution"
+  ],
+  "recommended_next_phase": "PROD-2701..2740 - Exocortex Runtime Snapshot Evaluator"
+}

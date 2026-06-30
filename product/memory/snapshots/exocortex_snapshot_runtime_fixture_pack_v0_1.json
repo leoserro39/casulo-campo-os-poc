@@ -1,0 +1,359 @@
+{
+  "version": "exocortex_snapshot_runtime_fixture_pack.v0.1",
+  "phase": "PROD-2661..2700",
+  "fixture_type": "runtime_simulated_snapshots",
+  "important_boundary": "Simulated runtime fixtures only. No real memory mutation.",
+  "snapshots": [
+    {
+      "snapshot_id": "EXO-RUNTIME-001",
+      "phase": "PROD-2661..2700",
+      "title": "recent_pass_checkpoint",
+      "summary": "Recent phase closed with PASS, commit, tag and next phase preserved.",
+      "risk": "low",
+      "state_checksum": {
+        "commit": "c2521ad",
+        "tag": "product-exocortex-snapshot-contract-validator-v0.1",
+        "decision": "EXOCORTEX_SNAPSHOT_CONTRACT_VALIDATOR_READY",
+        "gate": "READINESS_GATE",
+        "source_artifacts": [
+          "product/memory/exocortex_snapshot_contract_validator_v0_1.json",
+          "outputs/prod2621_2660_exocortex_snapshot_contract_validator.json"
+        ]
+      },
+      "evidence_pointers": [
+        "product/memory/exocortex_snapshot_contract_validator_v0_1.json",
+        "outputs/prod2621_2660_exocortex_snapshot_contract_validator.json"
+      ],
+      "claim_boundary": {
+        "client_facing_claim_allowed": false,
+        "production_activation_allowed": false,
+        "validated_performance_claim_allowed": false,
+        "real_world_token_savings_claim_allowed": false
+      },
+      "gate": "READINESS_GATE",
+      "response_mode": "SNAPSHOT",
+      "lifecycle_action": "COMPRESS_TO_SNAPSHOT",
+      "exocortex_signals": {
+        "context_pressure": "tracked",
+        "stale_context_risk": "tracked",
+        "state_grounding_score": "tracked",
+        "evidence_coverage": "tracked",
+        "gate_compliance": "tracked",
+        "decision_recall_accuracy": "tracked",
+        "snapshot_recovery_score": "tracked",
+        "claim_leakage_risk": "tracked",
+        "token_waste_ratio": "tracked"
+      },
+      "blocked_actions": [
+        "automatic_memory_delete",
+        "unreviewed_memory_mutation",
+        "validated_performance_claim",
+        "real_world_token_savings_claim",
+        "client_facing_claim",
+        "production_activation",
+        "gpt_memory_api_execution"
+      ]
+    },
+    {
+      "snapshot_id": "EXO-RUNTIME-002",
+      "phase": "PROD-2661..2700",
+      "title": "resolved_terminal_error",
+      "summary": "Broken command was fixed and should not contaminate next responses.",
+      "risk": "medium",
+      "state_checksum": {
+        "commit": "c2521ad",
+        "tag": "product-exocortex-snapshot-contract-validator-v0.1",
+        "decision": "EXOCORTEX_SNAPSHOT_CONTRACT_VALIDATOR_READY",
+        "gate": "STATE_REVIEW_REQUIRED",
+        "source_artifacts": [
+          "product/memory/exocortex_snapshot_contract_validator_v0_1.json",
+          "outputs/prod2621_2660_exocortex_snapshot_contract_validator.json"
+        ]
+      },
+      "evidence_pointers": [
+        "product/memory/exocortex_snapshot_contract_validator_v0_1.json",
+        "outputs/prod2621_2660_exocortex_snapshot_contract_validator.json"
+      ],
+      "claim_boundary": {
+        "client_facing_claim_allowed": false,
+        "production_activation_allowed": false,
+        "validated_performance_claim_allowed": false,
+        "real_world_token_savings_claim_allowed": false
+      },
+      "gate": "STATE_REVIEW_REQUIRED",
+      "response_mode": "STATE_ANSWER",
+      "lifecycle_action": "DISCARD_EPHEMERAL",
+      "exocortex_signals": {
+        "context_pressure": "tracked",
+        "stale_context_risk": "tracked",
+        "state_grounding_score": "tracked",
+        "evidence_coverage": "tracked",
+        "gate_compliance": "tracked",
+        "decision_recall_accuracy": "tracked",
+        "snapshot_recovery_score": "tracked",
+        "claim_leakage_risk": "tracked",
+        "token_waste_ratio": "tracked"
+      },
+      "blocked_actions": [
+        "automatic_memory_delete",
+        "unreviewed_memory_mutation",
+        "validated_performance_claim",
+        "real_world_token_savings_claim",
+        "client_facing_claim",
+        "production_activation",
+        "gpt_memory_api_execution"
+      ]
+    },
+    {
+      "snapshot_id": "EXO-RUNTIME-003",
+      "phase": "PROD-2661..2700",
+      "title": "client_claim_blocked",
+      "summary": "Synthetic/demo evidence must not become client-facing validated claim.",
+      "risk": "critical",
+      "state_checksum": {
+        "commit": "c2521ad",
+        "tag": "product-exocortex-snapshot-contract-validator-v0.1",
+        "decision": "EXOCORTEX_SNAPSHOT_CONTRACT_VALIDATOR_READY",
+        "gate": "CLIENT_CLAIM_REVIEW_REQUIRED",
+        "source_artifacts": [
+          "product/memory/exocortex_snapshot_contract_validator_v0_1.json",
+          "outputs/prod2621_2660_exocortex_snapshot_contract_validator.json"
+        ]
+      },
+      "evidence_pointers": [
+        "product/memory/exocortex_snapshot_contract_validator_v0_1.json",
+        "outputs/prod2621_2660_exocortex_snapshot_contract_validator.json"
+      ],
+      "claim_boundary": {
+        "client_facing_claim_allowed": false,
+        "production_activation_allowed": false,
+        "validated_performance_claim_allowed": false,
+        "real_world_token_savings_claim_allowed": false
+      },
+      "gate": "CLIENT_CLAIM_REVIEW_REQUIRED",
+      "response_mode": "BLOCKED_ACTION_NOTICE",
+      "lifecycle_action": "PROTECT_DO_NOT_DELETE",
+      "exocortex_signals": {
+        "context_pressure": "tracked",
+        "stale_context_risk": "tracked",
+        "state_grounding_score": "tracked",
+        "evidence_coverage": "tracked",
+        "gate_compliance": "tracked",
+        "decision_recall_accuracy": "tracked",
+        "snapshot_recovery_score": "tracked",
+        "claim_leakage_risk": "tracked",
+        "token_waste_ratio": "tracked"
+      },
+      "blocked_actions": [
+        "automatic_memory_delete",
+        "unreviewed_memory_mutation",
+        "validated_performance_claim",
+        "real_world_token_savings_claim",
+        "client_facing_claim",
+        "production_activation",
+        "gpt_memory_api_execution"
+      ]
+    },
+    {
+      "snapshot_id": "EXO-RUNTIME-004",
+      "phase": "PROD-2661..2700",
+      "title": "stale_context_detected",
+      "summary": "Old context conflicts with current state and needs review.",
+      "risk": "high",
+      "state_checksum": {
+        "commit": "c2521ad",
+        "tag": "product-exocortex-snapshot-contract-validator-v0.1",
+        "decision": "EXOCORTEX_SNAPSHOT_CONTRACT_VALIDATOR_READY",
+        "gate": "HOLD_HUMAN_REVIEW",
+        "source_artifacts": [
+          "product/memory/exocortex_snapshot_contract_validator_v0_1.json",
+          "outputs/prod2621_2660_exocortex_snapshot_contract_validator.json"
+        ]
+      },
+      "evidence_pointers": [
+        "product/memory/exocortex_snapshot_contract_validator_v0_1.json",
+        "outputs/prod2621_2660_exocortex_snapshot_contract_validator.json"
+      ],
+      "claim_boundary": {
+        "client_facing_claim_allowed": false,
+        "production_activation_allowed": false,
+        "validated_performance_claim_allowed": false,
+        "real_world_token_savings_claim_allowed": false
+      },
+      "gate": "HOLD_HUMAN_REVIEW",
+      "response_mode": "REVIEW_PACKET",
+      "lifecycle_action": "ARCHIVE_TO_REPO",
+      "exocortex_signals": {
+        "context_pressure": "tracked",
+        "stale_context_risk": "tracked",
+        "state_grounding_score": "tracked",
+        "evidence_coverage": "tracked",
+        "gate_compliance": "tracked",
+        "decision_recall_accuracy": "tracked",
+        "snapshot_recovery_score": "tracked",
+        "claim_leakage_risk": "tracked",
+        "token_waste_ratio": "tracked"
+      },
+      "blocked_actions": [
+        "automatic_memory_delete",
+        "unreviewed_memory_mutation",
+        "validated_performance_claim",
+        "real_world_token_savings_claim",
+        "client_facing_claim",
+        "production_activation",
+        "gpt_memory_api_execution"
+      ]
+    },
+    {
+      "snapshot_id": "EXO-RUNTIME-005",
+      "phase": "PROD-2661..2700",
+      "title": "contradiction_hold",
+      "summary": "Conflicting PASS/FAIL or gate state must stop progression.",
+      "risk": "high",
+      "state_checksum": {
+        "commit": "c2521ad",
+        "tag": "product-exocortex-snapshot-contract-validator-v0.1",
+        "decision": "EXOCORTEX_SNAPSHOT_CONTRACT_VALIDATOR_READY",
+        "gate": "CONTRADICTION_HOLD",
+        "source_artifacts": [
+          "product/memory/exocortex_snapshot_contract_validator_v0_1.json",
+          "outputs/prod2621_2660_exocortex_snapshot_contract_validator.json"
+        ]
+      },
+      "evidence_pointers": [
+        "product/memory/exocortex_snapshot_contract_validator_v0_1.json",
+        "outputs/prod2621_2660_exocortex_snapshot_contract_validator.json"
+      ],
+      "claim_boundary": {
+        "client_facing_claim_allowed": false,
+        "production_activation_allowed": false,
+        "validated_performance_claim_allowed": false,
+        "real_world_token_savings_claim_allowed": false
+      },
+      "gate": "CONTRADICTION_HOLD",
+      "response_mode": "REVIEW_PACKET",
+      "lifecycle_action": "HOLD_HUMAN_REVIEW",
+      "exocortex_signals": {
+        "context_pressure": "tracked",
+        "stale_context_risk": "tracked",
+        "state_grounding_score": "tracked",
+        "evidence_coverage": "tracked",
+        "gate_compliance": "tracked",
+        "decision_recall_accuracy": "tracked",
+        "snapshot_recovery_score": "tracked",
+        "claim_leakage_risk": "tracked",
+        "token_waste_ratio": "tracked"
+      },
+      "blocked_actions": [
+        "automatic_memory_delete",
+        "unreviewed_memory_mutation",
+        "validated_performance_claim",
+        "real_world_token_savings_claim",
+        "client_facing_claim",
+        "production_activation",
+        "gpt_memory_api_execution"
+      ]
+    },
+    {
+      "snapshot_id": "EXO-RUNTIME-006",
+      "phase": "PROD-2661..2700",
+      "title": "protected_canonical_decision",
+      "summary": "Canonical decision, gate or product rule must not be deleted automatically.",
+      "risk": "critical",
+      "state_checksum": {
+        "commit": "c2521ad",
+        "tag": "product-exocortex-snapshot-contract-validator-v0.1",
+        "decision": "EXOCORTEX_SNAPSHOT_CONTRACT_VALIDATOR_READY",
+        "gate": "PROTECT_CANONICAL_DECISION",
+        "source_artifacts": [
+          "product/memory/exocortex_snapshot_contract_validator_v0_1.json",
+          "outputs/prod2621_2660_exocortex_snapshot_contract_validator.json"
+        ]
+      },
+      "evidence_pointers": [
+        "product/memory/exocortex_snapshot_contract_validator_v0_1.json",
+        "outputs/prod2621_2660_exocortex_snapshot_contract_validator.json"
+      ],
+      "claim_boundary": {
+        "client_facing_claim_allowed": false,
+        "production_activation_allowed": false,
+        "validated_performance_claim_allowed": false,
+        "real_world_token_savings_claim_allowed": false
+      },
+      "gate": "PROTECT_CANONICAL_DECISION",
+      "response_mode": "SNAPSHOT",
+      "lifecycle_action": "PROTECT_DO_NOT_DELETE",
+      "exocortex_signals": {
+        "context_pressure": "tracked",
+        "stale_context_risk": "tracked",
+        "state_grounding_score": "tracked",
+        "evidence_coverage": "tracked",
+        "gate_compliance": "tracked",
+        "decision_recall_accuracy": "tracked",
+        "snapshot_recovery_score": "tracked",
+        "claim_leakage_risk": "tracked",
+        "token_waste_ratio": "tracked"
+      },
+      "blocked_actions": [
+        "automatic_memory_delete",
+        "unreviewed_memory_mutation",
+        "validated_performance_claim",
+        "real_world_token_savings_claim",
+        "client_facing_claim",
+        "production_activation",
+        "gpt_memory_api_execution"
+      ]
+    }
+  ],
+  "validations": [
+    {
+      "snapshot_id": "EXO-RUNTIME-001",
+      "title": "recent_pass_checkpoint",
+      "result": {
+        "status": "PASS",
+        "errors": []
+      }
+    },
+    {
+      "snapshot_id": "EXO-RUNTIME-002",
+      "title": "resolved_terminal_error",
+      "result": {
+        "status": "PASS",
+        "errors": []
+      }
+    },
+    {
+      "snapshot_id": "EXO-RUNTIME-003",
+      "title": "client_claim_blocked",
+      "result": {
+        "status": "PASS",
+        "errors": []
+      }
+    },
+    {
+      "snapshot_id": "EXO-RUNTIME-004",
+      "title": "stale_context_detected",
+      "result": {
+        "status": "PASS",
+        "errors": []
+      }
+    },
+    {
+      "snapshot_id": "EXO-RUNTIME-005",
+      "title": "contradiction_hold",
+      "result": {
+        "status": "PASS",
+        "errors": []
+      }
+    },
+    {
+      "snapshot_id": "EXO-RUNTIME-006",
+      "title": "protected_canonical_decision",
+      "result": {
+        "status": "PASS",
+        "errors": []
+      }
+    }
+  ],
+  "recommended_next_phase": "PROD-2701..2740 - Exocortex Runtime Snapshot Evaluator"
+}
