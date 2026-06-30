@@ -1,0 +1,43 @@
+{
+  "model_version": "operational_hallucination_dual_ranking_model.v0.1",
+  "phase": "PROD-2101..2140",
+  "status": "HEURISTIC_NOT_CALIBRATED",
+  "indexes": {
+    "ohri": {
+      "name": "Operational Hallucination Risk Index",
+      "purpose": "Rank operational danger if the failure mode reaches action."
+    },
+    "obpi": {
+      "name": "Operational Benchmark Priority Index",
+      "purpose": "Rank which benchmark should be built first based on measurability, recurrence, demonstration value and safety."
+    }
+  },
+  "ohri_weights": {
+    "prompt_ambiguity_score": 0.07,
+    "artifact_dependency_score": 0.09,
+    "schema_absence_score": 0.08,
+    "repo_state_dependency_score": 0.09,
+    "evidence_gap_score": 0.10,
+    "gate_absence_score": 0.11,
+    "external_side_effect_score": 0.10,
+    "client_claim_risk_score": 0.08,
+    "production_risk_score": 0.10,
+    "automation_execution_risk_score": 0.09,
+    "validation_gap_score": 0.07,
+    "context_contamination_risk_score": 0.02
+  },
+  "obpi_weights": {
+    "prompt_ambiguity_score": 0.10,
+    "artifact_dependency_score": 0.18,
+    "schema_absence_score": 0.18,
+    "repo_state_dependency_score": 0.07,
+    "evidence_gap_score": 0.10,
+    "gate_absence_score": 0.05,
+    "external_side_effect_score": 0.03,
+    "client_claim_risk_score": 0.02,
+    "production_risk_score": 0.03,
+    "automation_execution_risk_score": 0.04,
+    "validation_gap_score": 0.18,
+    "context_contamination_risk_score": 0.02
+  }
+}

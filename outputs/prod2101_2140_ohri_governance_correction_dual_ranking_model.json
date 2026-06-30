@@ -1,0 +1,461 @@
+{
+  "status": "PASS",
+  "phase": "PROD-2101..2140",
+  "decision": "OHRI_GOVERNANCE_CORRECTED_DUAL_RANKING_READY",
+  "generated_at": "2026-06-30T21:26:08.484006+00:00",
+  "dual_ranking": {
+    "corrects_previous_phase": "PROD-2061..2100",
+    "previous_commit": "1507dfa",
+    "previous_tag": "product-operational-hallucination-risk-index-ranking-model-v0.1",
+    "previous_status": "FAIL",
+    "previous_errors": [
+      "Risk index weights must sum to 1.0",
+      "Parser grounding should be in top five risk modes"
+    ],
+    "calibration_status": "NOT_CALIBRATED_CORRECTIVE_DUAL_RANKING_ONLY",
+    "ohri": {
+      "purpose": "Rank operational danger if the failure mode reaches action.",
+      "top_5": [
+        {
+          "id": "FM-007",
+          "name": "unsafe_merge_suggestion",
+          "family": "agentic_execution",
+          "matrix_priority": "critical",
+          "ohri_score": 80.9,
+          "band": "high",
+          "casulo_control": "Enforce blocked_actions: automatic_merge, codex_execution, implementation_execution unless explicitly approved."
+        },
+        {
+          "id": "FM-010",
+          "name": "production_readiness_leakage",
+          "family": "production_boundary",
+          "matrix_priority": "critical",
+          "ohri_score": 79.5,
+          "band": "high",
+          "casulo_control": "Require production gate, sandbox flag, evidence status, blocked production_activation and human approval state."
+        },
+        {
+          "id": "FM-004",
+          "name": "repo_state_mismatch",
+          "family": "repo_patch",
+          "matrix_priority": "critical",
+          "ohri_score": 77.0,
+          "band": "high",
+          "casulo_control": "Use branch, commit, git status, file tree, recent tags and validators as state packet."
+        },
+        {
+          "id": "FM-011",
+          "name": "api_contract_hallucination",
+          "family": "api_integration",
+          "matrix_priority": "high",
+          "ohri_score": 75.0,
+          "band": "high",
+          "casulo_control": "Require OpenAPI/schema, endpoint inventory, mock fixtures and contract tests."
+        },
+        {
+          "id": "FM-012",
+          "name": "generic_rag_answer_without_gate",
+          "family": "rag_vs_state_control",
+          "matrix_priority": "critical",
+          "ohri_score": 74.05,
+          "band": "high",
+          "casulo_control": "Transform retrieved context into state packet with gate, risk, evidence, blocked actions and next allowed action."
+        }
+      ],
+      "ranking": [
+        {
+          "id": "FM-007",
+          "name": "unsafe_merge_suggestion",
+          "family": "agentic_execution",
+          "matrix_priority": "critical",
+          "ohri_score": 80.9,
+          "band": "high",
+          "casulo_control": "Enforce blocked_actions: automatic_merge, codex_execution, implementation_execution unless explicitly approved."
+        },
+        {
+          "id": "FM-010",
+          "name": "production_readiness_leakage",
+          "family": "production_boundary",
+          "matrix_priority": "critical",
+          "ohri_score": 79.5,
+          "band": "high",
+          "casulo_control": "Require production gate, sandbox flag, evidence status, blocked production_activation and human approval state."
+        },
+        {
+          "id": "FM-004",
+          "name": "repo_state_mismatch",
+          "family": "repo_patch",
+          "matrix_priority": "critical",
+          "ohri_score": 77.0,
+          "band": "high",
+          "casulo_control": "Use branch, commit, git status, file tree, recent tags and validators as state packet."
+        },
+        {
+          "id": "FM-011",
+          "name": "api_contract_hallucination",
+          "family": "api_integration",
+          "matrix_priority": "high",
+          "ohri_score": 75.0,
+          "band": "high",
+          "casulo_control": "Require OpenAPI/schema, endpoint inventory, mock fixtures and contract tests."
+        },
+        {
+          "id": "FM-012",
+          "name": "generic_rag_answer_without_gate",
+          "family": "rag_vs_state_control",
+          "matrix_priority": "critical",
+          "ohri_score": 74.05,
+          "band": "high",
+          "casulo_control": "Transform retrieved context into state packet with gate, risk, evidence, blocked actions and next allowed action."
+        },
+        {
+          "id": "FM-005",
+          "name": "contract_omission",
+          "family": "implementation_governance",
+          "matrix_priority": "high",
+          "ohri_score": 73.8,
+          "band": "high",
+          "casulo_control": "Require contract, schema, checks, expected outputs and blocked actions before implementation."
+        },
+        {
+          "id": "FM-006",
+          "name": "testless_code_generation",
+          "family": "implementation_governance",
+          "matrix_priority": "high",
+          "ohri_score": 70.25,
+          "band": "high",
+          "casulo_control": "Require fixture, golden output, validator and PASS/FAIL evidence."
+        },
+        {
+          "id": "FM-001",
+          "name": "generic_parser_generation",
+          "family": "parser_grounding",
+          "matrix_priority": "critical",
+          "ohri_score": 69.6,
+          "band": "medium",
+          "casulo_control": "Require real workbook inventory, schema, field mapping, fixtures, golden output and validator before implementation."
+        },
+        {
+          "id": "FM-002",
+          "name": "schema_invention",
+          "family": "artifact_contract",
+          "matrix_priority": "critical",
+          "ohri_score": 67.7,
+          "band": "medium",
+          "casulo_control": "Bind generation to declared schema, source inventory, contract and diffable evidence."
+        },
+        {
+          "id": "FM-008",
+          "name": "conditional_client_claim_leakage",
+          "family": "client_boundary",
+          "matrix_priority": "critical",
+          "ohri_score": 67.35,
+          "band": "medium",
+          "casulo_control": "Require explicit gate, evidence status, output_mode and client_facing_claim blocked/unblocked state."
+        },
+        {
+          "id": "FM-009",
+          "name": "generic_validation_laundering",
+          "family": "client_boundary",
+          "matrix_priority": "high",
+          "ohri_score": 67.1,
+          "band": "medium",
+          "casulo_control": "Separate checklist suggestion from decision. Require status: validated, pending review, blocked or insufficient evidence."
+        },
+        {
+          "id": "FM-003",
+          "name": "file_structure_hallucination",
+          "family": "artifact_contract",
+          "matrix_priority": "high",
+          "ohri_score": 65.45,
+          "band": "medium",
+          "casulo_control": "Require repo/file inventory and path existence checks before patch planning."
+        },
+        {
+          "id": "FM-013",
+          "name": "business_recommendation_without_limits",
+          "family": "service_recommendation",
+          "matrix_priority": "medium",
+          "ohri_score": 53.45,
+          "band": "medium",
+          "casulo_control": "Require company profile, risk level, package candidate, gates, safe scope and blocked implementation actions."
+        },
+        {
+          "id": "FM-014",
+          "name": "context_contamination",
+          "family": "capture_quality",
+          "matrix_priority": "critical",
+          "ohri_score": 51.0,
+          "band": "medium",
+          "casulo_control": "Require clean chat/source metadata and mark contaminated captures as exploratory only."
+        },
+        {
+          "id": "FM-015",
+          "name": "provider_contamination",
+          "family": "capture_quality",
+          "matrix_priority": "high",
+          "ohri_score": 39.35,
+          "band": "low",
+          "casulo_control": "Require provider/model/source fields and separate exploratory captures from calibration captures."
+        },
+        {
+          "id": "FM-016",
+          "name": "ui_metadata_contamination",
+          "family": "capture_quality",
+          "matrix_priority": "medium",
+          "ohri_score": 28.65,
+          "band": "minimal",
+          "casulo_control": "Require cleaning rules and raw vs cleaned response fields."
+        }
+      ]
+    },
+    "obpi": {
+      "purpose": "Rank which benchmark should be built first based on measurability, recurrence, demonstration value and safety.",
+      "top_5": [
+        {
+          "id": "FM-001",
+          "name": "generic_parser_generation",
+          "family": "parser_grounding",
+          "matrix_priority": "critical",
+          "obpi_score": 85.25,
+          "band": "critical",
+          "casulo_control": "Require real workbook inventory, schema, field mapping, fixtures, golden output and validator before implementation."
+        },
+        {
+          "id": "FM-011",
+          "name": "api_contract_hallucination",
+          "family": "api_integration",
+          "matrix_priority": "high",
+          "obpi_score": 84.45,
+          "band": "high",
+          "casulo_control": "Require OpenAPI/schema, endpoint inventory, mock fixtures and contract tests."
+        },
+        {
+          "id": "FM-002",
+          "name": "schema_invention",
+          "family": "artifact_contract",
+          "matrix_priority": "critical",
+          "obpi_score": 82.65,
+          "band": "high",
+          "casulo_control": "Bind generation to declared schema, source inventory, contract and diffable evidence."
+        },
+        {
+          "id": "FM-004",
+          "name": "repo_state_mismatch",
+          "family": "repo_patch",
+          "matrix_priority": "critical",
+          "obpi_score": 80.1,
+          "band": "high",
+          "casulo_control": "Use branch, commit, git status, file tree, recent tags and validators as state packet."
+        },
+        {
+          "id": "FM-005",
+          "name": "contract_omission",
+          "family": "implementation_governance",
+          "matrix_priority": "high",
+          "obpi_score": 77.8,
+          "band": "high",
+          "casulo_control": "Require contract, schema, checks, expected outputs and blocked actions before implementation."
+        }
+      ],
+      "ranking": [
+        {
+          "id": "FM-001",
+          "name": "generic_parser_generation",
+          "family": "parser_grounding",
+          "matrix_priority": "critical",
+          "obpi_score": 85.25,
+          "band": "critical",
+          "casulo_control": "Require real workbook inventory, schema, field mapping, fixtures, golden output and validator before implementation."
+        },
+        {
+          "id": "FM-011",
+          "name": "api_contract_hallucination",
+          "family": "api_integration",
+          "matrix_priority": "high",
+          "obpi_score": 84.45,
+          "band": "high",
+          "casulo_control": "Require OpenAPI/schema, endpoint inventory, mock fixtures and contract tests."
+        },
+        {
+          "id": "FM-002",
+          "name": "schema_invention",
+          "family": "artifact_contract",
+          "matrix_priority": "critical",
+          "obpi_score": 82.65,
+          "band": "high",
+          "casulo_control": "Bind generation to declared schema, source inventory, contract and diffable evidence."
+        },
+        {
+          "id": "FM-004",
+          "name": "repo_state_mismatch",
+          "family": "repo_patch",
+          "matrix_priority": "critical",
+          "obpi_score": 80.1,
+          "band": "high",
+          "casulo_control": "Use branch, commit, git status, file tree, recent tags and validators as state packet."
+        },
+        {
+          "id": "FM-005",
+          "name": "contract_omission",
+          "family": "implementation_governance",
+          "matrix_priority": "high",
+          "obpi_score": 77.8,
+          "band": "high",
+          "casulo_control": "Require contract, schema, checks, expected outputs and blocked actions before implementation."
+        },
+        {
+          "id": "FM-003",
+          "name": "file_structure_hallucination",
+          "family": "artifact_contract",
+          "matrix_priority": "high",
+          "obpi_score": 77.25,
+          "band": "high",
+          "casulo_control": "Require repo/file inventory and path existence checks before patch planning."
+        },
+        {
+          "id": "FM-006",
+          "name": "testless_code_generation",
+          "family": "implementation_governance",
+          "matrix_priority": "high",
+          "obpi_score": 77.15,
+          "band": "high",
+          "casulo_control": "Require fixture, golden output, validator and PASS/FAIL evidence."
+        },
+        {
+          "id": "FM-007",
+          "name": "unsafe_merge_suggestion",
+          "family": "agentic_execution",
+          "matrix_priority": "critical",
+          "obpi_score": 76.6,
+          "band": "high",
+          "casulo_control": "Enforce blocked_actions: automatic_merge, codex_execution, implementation_execution unless explicitly approved."
+        },
+        {
+          "id": "FM-010",
+          "name": "production_readiness_leakage",
+          "family": "production_boundary",
+          "matrix_priority": "critical",
+          "obpi_score": 73.8,
+          "band": "high",
+          "casulo_control": "Require production gate, sandbox flag, evidence status, blocked production_activation and human approval state."
+        },
+        {
+          "id": "FM-012",
+          "name": "generic_rag_answer_without_gate",
+          "family": "rag_vs_state_control",
+          "matrix_priority": "critical",
+          "obpi_score": 73.45,
+          "band": "high",
+          "casulo_control": "Transform retrieved context into state packet with gate, risk, evidence, blocked actions and next allowed action."
+        },
+        {
+          "id": "FM-009",
+          "name": "generic_validation_laundering",
+          "family": "client_boundary",
+          "matrix_priority": "high",
+          "obpi_score": 68.35,
+          "band": "medium",
+          "casulo_control": "Separate checklist suggestion from decision. Require status: validated, pending review, blocked or insufficient evidence."
+        },
+        {
+          "id": "FM-008",
+          "name": "conditional_client_claim_leakage",
+          "family": "client_boundary",
+          "matrix_priority": "critical",
+          "obpi_score": 65.45,
+          "band": "medium",
+          "casulo_control": "Require explicit gate, evidence status, output_mode and client_facing_claim blocked/unblocked state."
+        },
+        {
+          "id": "FM-014",
+          "name": "context_contamination",
+          "family": "capture_quality",
+          "matrix_priority": "critical",
+          "obpi_score": 54.95,
+          "band": "medium",
+          "casulo_control": "Require clean chat/source metadata and mark contaminated captures as exploratory only."
+        },
+        {
+          "id": "FM-013",
+          "name": "business_recommendation_without_limits",
+          "family": "service_recommendation",
+          "matrix_priority": "medium",
+          "obpi_score": 52.95,
+          "band": "medium",
+          "casulo_control": "Require company profile, risk level, package candidate, gates, safe scope and blocked implementation actions."
+        },
+        {
+          "id": "FM-015",
+          "name": "provider_contamination",
+          "family": "capture_quality",
+          "matrix_priority": "high",
+          "obpi_score": 45.65,
+          "band": "low",
+          "casulo_control": "Require provider/model/source fields and separate exploratory captures from calibration captures."
+        },
+        {
+          "id": "FM-016",
+          "name": "ui_metadata_contamination",
+          "family": "capture_quality",
+          "matrix_priority": "medium",
+          "obpi_score": 35.75,
+          "band": "low",
+          "casulo_control": "Require cleaning rules and raw vs cleaned response fields."
+        }
+      ]
+    },
+    "recommended_next_phase": "PROD-2141..2180 - Capability-State Ontology and Living Company State Anchor",
+    "later_benchmark_phase": "PROD-2181..2220 - Parser Grounding Benchmark"
+  },
+  "checks": {
+    "previous_index_output_exists": true,
+    "previous_index_was_fail": true,
+    "previous_failure_recorded": true,
+    "previous_parser_assumption_recorded": true,
+    "matrix_exists": true,
+    "source_model_exists": true,
+    "dual_model_exists": true,
+    "contract_exists": true,
+    "doc_exists": true,
+    "dual_model_status_heuristic": true,
+    "ohri_weight_sum_one": true,
+    "obpi_weight_sum_one": true,
+    "failure_mode_count": 16,
+    "ohri_ranking_count": 16,
+    "obpi_ranking_count": 16,
+    "all_modes_have_scores": true,
+    "ohri_top_is_not_forced_parser": true,
+    "obpi_top_is_parser": true,
+    "repo_state_high_in_ohri": true,
+    "api_contract_high_in_ohri": true,
+    "unsafe_merge_high_in_ohri": true,
+    "parser_in_obpi_top_3": true,
+    "calibration_blocked": true,
+    "automatic_gpt_call_blocked": true,
+    "codex_execution_blocked": true,
+    "automatic_merge_blocked": true,
+    "production_activation_blocked": true,
+    "client_facing_claim_blocked": true
+  },
+  "errors": [],
+  "blocked_actions": [
+    "client_facing_claim",
+    "implementation_execution",
+    "production_activation",
+    "automatic_merge",
+    "credential_handling",
+    "automatic_threshold_mutation",
+    "autonomous_external_execution",
+    "real_world_side_effect",
+    "unapproved_real_company_data",
+    "production_graph_write",
+    "gpt_call",
+    "codex_execution",
+    "public_api_publication",
+    "custom_gpt_connection_without_human_approval",
+    "final_threshold_calibration",
+    "final_weight_calibration",
+    "calibration_from_exploratory_capture"
+  ]
+}
