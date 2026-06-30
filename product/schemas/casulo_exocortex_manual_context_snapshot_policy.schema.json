@@ -1,0 +1,13 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "CASULO Exocortex Manual Context Snapshot Policy",
+  "type": "object",
+  "required": [
+    "version",
+    "definition",
+    "exocortex_signals",
+    "control_layers",
+    "lifecycle_actions",
+    "snapshot_policy"
+  ]
+}

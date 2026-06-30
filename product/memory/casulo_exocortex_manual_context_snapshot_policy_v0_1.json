@@ -1,0 +1,94 @@
+{
+  "version": "casulo_exocortex_manual_context_snapshot_policy.v0.1",
+  "phase": "PROD-2581..2620",
+  "definition": "CASULO Exocortex is the operational exocortex of the chat/model. It preserves living state outside the active chat context, reduces context pressure, anchors answers in gates and evidence, and returns only the necessary state for allowed action.",
+  "metaphor_boundary": {
+    "preferred_terms": [
+      "exocortex",
+      "operational symbiont",
+      "state exoskeleton"
+    ],
+    "avoid_terms": [
+      "predatory parasite",
+      "uncontrolled obedience"
+    ],
+    "rule": "Maximize capability only for actions allowed by state, evidence and gates."
+  },
+  "exocortex_signals": [
+    "context_pressure",
+    "stale_context_risk",
+    "state_grounding_score",
+    "evidence_coverage",
+    "gate_compliance",
+    "decision_recall_accuracy",
+    "snapshot_recovery_score",
+    "claim_leakage_risk",
+    "token_waste_ratio"
+  ],
+  "control_layers": [
+    "state_checksum",
+    "evidence_pointer_required",
+    "claim_boundary_scanner",
+    "stale_context_detector",
+    "contradiction_gate",
+    "response_mode_governor"
+  ],
+  "lifecycle_actions": [
+    "PROMOTE_TO_MEMORY",
+    "COMPRESS_TO_SNAPSHOT",
+    "ARCHIVE_TO_REPO",
+    "DISCARD_EPHEMERAL",
+    "HOLD_HUMAN_REVIEW",
+    "PROTECT_DO_NOT_DELETE"
+  ],
+  "response_modes": [
+    "STATE_ANSWER",
+    "REVIEW_PACKET",
+    "IMPLEMENTATION_PACKET",
+    "RUNBOOK",
+    "EVIDENCE_CAPTURE",
+    "READINESS_GATE",
+    "SNAPSHOT",
+    "BLOCKED_ACTION_NOTICE"
+  ],
+  "snapshot_policy": {
+    "chat_memory_should_keep": [
+      "canonical_decisions",
+      "current_phase",
+      "commit_tag_decision_triplets",
+      "active_gates",
+      "next_allowed_action",
+      "stable_user_preferences"
+    ],
+    "operational_cube_should_keep": [
+      "living_state_graph",
+      "phase_relations",
+      "gate_history",
+      "state_transitions",
+      "evidence_pointers",
+      "contradiction_records"
+    ],
+    "repo_should_keep": [
+      "heavy_logs",
+      "outputs",
+      "reports",
+      "contracts",
+      "schemas",
+      "audit_evidence"
+    ],
+    "discard_candidates": [
+      "failed_commands_already_fixed",
+      "duplicate_outputs",
+      "obsolete_terminal_noise",
+      "resolved_intermediate_errors"
+    ],
+    "manual_review_required_for": [
+      "canonical_decision_deletion",
+      "gate_policy_change",
+      "conflicting_state",
+      "client_or_production_claim",
+      "memory_mutation"
+    ]
+  },
+  "recommended_next_phase": "PROD-2621..2660 - Exocortex Snapshot Contract Validator"
+}

@@ -1,0 +1,76 @@
+{
+  "status": "PASS",
+  "phase": "PROD-2581..2620",
+  "decision": "CASULO_EXOCORTEX_MANUAL_CONTEXT_SNAPSHOT_POLICY_READY",
+  "generated_at": "2026-06-30T22:43:53.654708+00:00",
+  "policy": "product/memory/casulo_exocortex_manual_context_snapshot_policy_v0_1.json",
+  "signals": [
+    "context_pressure",
+    "stale_context_risk",
+    "state_grounding_score",
+    "evidence_coverage",
+    "gate_compliance",
+    "decision_recall_accuracy",
+    "snapshot_recovery_score",
+    "claim_leakage_risk",
+    "token_waste_ratio"
+  ],
+  "control_layers": [
+    "state_checksum",
+    "evidence_pointer_required",
+    "claim_boundary_scanner",
+    "stale_context_detector",
+    "contradiction_gate",
+    "response_mode_governor"
+  ],
+  "lifecycle_actions": [
+    "PROMOTE_TO_MEMORY",
+    "COMPRESS_TO_SNAPSHOT",
+    "ARCHIVE_TO_REPO",
+    "DISCARD_EPHEMERAL",
+    "HOLD_HUMAN_REVIEW",
+    "PROTECT_DO_NOT_DELETE"
+  ],
+  "response_modes": [
+    "STATE_ANSWER",
+    "REVIEW_PACKET",
+    "IMPLEMENTATION_PACKET",
+    "RUNBOOK",
+    "EVIDENCE_CAPTURE",
+    "READINESS_GATE",
+    "SNAPSHOT",
+    "BLOCKED_ACTION_NOTICE"
+  ],
+  "recommended_next_phase": "PROD-2621..2660 - Exocortex Snapshot Contract Validator",
+  "checks": {
+    "required_tag_present": true,
+    "signal_count": 9,
+    "control_layer_count": 6,
+    "lifecycle_action_count": 6,
+    "response_mode_count": 8,
+    "has_context_pressure": true,
+    "has_stale_context": true,
+    "has_state_grounding": true,
+    "has_evidence_coverage": true,
+    "has_gate_compliance": true,
+    "has_claim_leakage": true,
+    "has_state_checksum": true,
+    "has_evidence_pointer": true,
+    "has_claim_scanner": true,
+    "has_contradiction_gate": true,
+    "has_response_mode_governor": true,
+    "has_protect": true,
+    "automatic_delete_blocked": true,
+    "gpt_memory_api_blocked": true,
+    "performance_claim_blocked": true
+  },
+  "errors": [],
+  "blocked_actions": [
+    "automatic_memory_delete",
+    "unreviewed_memory_mutation",
+    "validated_performance_claim",
+    "client_facing_claim",
+    "production_activation",
+    "gpt_memory_api_execution"
+  ]
+}

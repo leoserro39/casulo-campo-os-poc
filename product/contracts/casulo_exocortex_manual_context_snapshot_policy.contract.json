@@ -1,0 +1,44 @@
+{
+  "phase": "PROD-2581..2620",
+  "required_prior_tag": "product-memory-governor-readiness-gate-v0.1",
+  "mode": "manual_context_snapshot_policy_contract",
+  "exocortex_definition": "CASULO Exocortex is the operational exocortex of the chat/model. It preserves living state outside the active chat context, reduces context pressure, anchors answers in gates and evidence, and returns only the necessary state for allowed action.",
+  "anti_hallucination_role": true,
+  "token_optimization_role": true,
+  "control_layers": [
+    "state_checksum",
+    "evidence_pointer_required",
+    "claim_boundary_scanner",
+    "stale_context_detector",
+    "contradiction_gate",
+    "response_mode_governor"
+  ],
+  "signals": [
+    "context_pressure",
+    "stale_context_risk",
+    "state_grounding_score",
+    "evidence_coverage",
+    "gate_compliance",
+    "decision_recall_accuracy",
+    "snapshot_recovery_score",
+    "claim_leakage_risk",
+    "token_waste_ratio"
+  ],
+  "lifecycle_actions": [
+    "PROMOTE_TO_MEMORY",
+    "COMPRESS_TO_SNAPSHOT",
+    "ARCHIVE_TO_REPO",
+    "DISCARD_EPHEMERAL",
+    "HOLD_HUMAN_REVIEW",
+    "PROTECT_DO_NOT_DELETE"
+  ],
+  "blocked_actions": [
+    "automatic_memory_delete",
+    "unreviewed_memory_mutation",
+    "validated_performance_claim",
+    "client_facing_claim",
+    "production_activation",
+    "gpt_memory_api_execution"
+  ],
+  "recommended_next_phase": "PROD-2621..2660 - Exocortex Snapshot Contract Validator"
+}
