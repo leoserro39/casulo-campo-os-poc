@@ -1,0 +1,50 @@
+{
+  "contract_version": "operational_cube.gpt_response_boundary_pure_vs_stack_telemetry.v0.1",
+  "phase": "PROD-1541..1580",
+  "mode": "simulated_pure_vs_stack_response_telemetry_no_gpt_call",
+  "gpt_connection_allowed": false,
+  "gpt_call_allowed": false,
+  "codex_execution_allowed": false,
+  "production_connection_allowed": false,
+  "credential_handling_allowed": false,
+  "client_facing_claim_allowed": false,
+  "threshold_calibration_allowed": false,
+  "required_prior_phase": "product-controlled-custom-gpt-connection-runbook-v0.1",
+  "evaluation_targets": [
+    "pure_response_without_stack",
+    "stack_response_with_graph_context",
+    "comparative_boundary_telemetry",
+    "graph_context_behavior",
+    "hallucination_risk_delta"
+  ],
+  "required_response_boundaries": [
+    "state_context_not_final_truth",
+    "sandbox_boundary_disclosed",
+    "human_review_gate_respected",
+    "missing_evidence_disclosed",
+    "blocked_actions_preserved",
+    "no_client_facing_claim",
+    "no_codex_execution",
+    "no_production_readiness_claim"
+  ],
+  "blocked_actions": [
+    "client_facing_claim",
+    "automatic_nomination",
+    "implementation_execution",
+    "production_activation",
+    "automatic_merge",
+    "credential_handling",
+    "automatic_threshold_mutation",
+    "autonomous_external_execution",
+    "real_world_side_effect",
+    "unapproved_real_company_data",
+    "production_neo4j_connection",
+    "production_graph_write",
+    "final_answer_generation_without_boundary",
+    "gpt_call",
+    "codex_execution",
+    "public_api_publication",
+    "custom_gpt_connection_without_human_approval",
+    "final_threshold_calibration"
+  ]
+}
