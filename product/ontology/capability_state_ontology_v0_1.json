@@ -1,0 +1,157 @@
+{
+  "ontology_version": "capability_state_ontology.v0.1",
+  "name": "CASULO Capability-State Ontology",
+  "pt_name": "Ontologia de Capacidades e Estados CASULO",
+  "purpose": "Organize operations by computable capabilities, states, evidence, gates, automation and human intervention rather than traditional departments.",
+  "principles": [
+    {
+      "id": "P-001",
+      "name": "Capability before department",
+      "description": "Classify what must be done before classifying where it sits in an org chart."
+    },
+    {
+      "id": "P-002",
+      "name": "State before solution",
+      "description": "No solution should be created before the operational state is mapped."
+    },
+    {
+      "id": "P-003",
+      "name": "Evidence before claim",
+      "description": "No claim is valid without evidence state."
+    },
+    {
+      "id": "P-004",
+      "name": "Gate before action",
+      "description": "No execution, merge, production activation or external claim without gate clearance."
+    },
+    {
+      "id": "P-005",
+      "name": "Automation where safe",
+      "description": "Automate repeatable and governable work, keep humans for judgment, design and review."
+    },
+    {
+      "id": "P-006",
+      "name": "Response economy",
+      "description": "Responses must be precise, economical, state-grounded and action-oriented."
+    }
+  ],
+  "layers": [
+    {
+      "id": "L0",
+      "name": "Operating Principles",
+      "description": "Global rules for safety, economy, evidence and state-based decisions."
+    },
+    {
+      "id": "L1",
+      "name": "Universal Capabilities",
+      "description": "Core actions any domain can require."
+    },
+    {
+      "id": "L2",
+      "name": "Operational States",
+      "description": "Canonical state classes used before any output or action."
+    },
+    {
+      "id": "L3",
+      "name": "Evidence and Gates",
+      "description": "Controls that decide what can be claimed or executed."
+    },
+    {
+      "id": "L4",
+      "name": "Automation and Human Intervention",
+      "description": "Defines what can be automated and where human review is mandatory."
+    },
+    {
+      "id": "L5",
+      "name": "Delivery Modes",
+      "description": "Maps state into diagnosis, cockpit, solution, operation, training or monitoring."
+    },
+    {
+      "id": "L6",
+      "name": "Response Governor",
+      "description": "Controls answer style, precision, boundaries and next allowed action."
+    }
+  ],
+  "universal_capabilities": [
+    "collect",
+    "read",
+    "classify",
+    "map",
+    "validate",
+    "compare",
+    "decide",
+    "prioritize",
+    "execute",
+    "monitor",
+    "review",
+    "audit",
+    "explain",
+    "train",
+    "integrate",
+    "automate"
+  ],
+  "operational_states": [
+    "unknown",
+    "mapped",
+    "insufficient_evidence",
+    "schema_required",
+    "human_review_required",
+    "technical_review_required",
+    "business_review_required",
+    "blocked",
+    "ready_for_diagnosis",
+    "ready_for_automation_design",
+    "ready_for_controlled_execution",
+    "ready_for_monitoring",
+    "validated_internal_only",
+    "validated_for_external_claim",
+    "production_ready"
+  ],
+  "evidence_classes": [
+    "raw_input",
+    "source_document",
+    "schema",
+    "contract",
+    "fixture",
+    "golden_output",
+    "validator_result",
+    "human_review",
+    "decision_log",
+    "audit_trail",
+    "state_snapshot"
+  ],
+  "gate_classes": [
+    "NO_ACTION_ALLOWED",
+    "SCHEMA_REQUIRED",
+    "HUMAN_REVIEW_REQUIRED",
+    "TECHNICAL_REVIEW_REQUIRED",
+    "BUSINESS_REVIEW_REQUIRED",
+    "CHANGE_REVIEW_REQUIRED",
+    "COMPLIANCE_REVIEW_REQUIRED",
+    "CONTROLLED_EXECUTION_ALLOWED",
+    "CLIENT_CLAIM_ALLOWED",
+    "PRODUCTION_ACTIVATION_ALLOWED"
+  ],
+  "automation_levels": [
+    "manual_only",
+    "human_assisted",
+    "ai_assisted",
+    "semi_automated_with_review",
+    "automated_with_gate",
+    "fully_automated_low_risk"
+  ],
+  "delivery_modes": [
+    "diagnosis",
+    "state_map",
+    "cockpit",
+    "runbook",
+    "parser_contract",
+    "solution_blueprint",
+    "implementation_package",
+    "training",
+    "operation_assisted",
+    "monitoring_packet",
+    "business_plan_seed",
+    "marketing_outline"
+  ]
+}

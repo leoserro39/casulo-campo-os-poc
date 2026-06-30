@@ -1,0 +1,94 @@
+{
+  "anchor_version": "living_company_state_anchor.v0.1",
+  "name": "CASULO Living Company State",
+  "pt_name": "Empresa como Estado Vivo Computável",
+  "purpose": "Define the future company as a living operational graph governed by resources, artifacts, capabilities, evidence, gates, automation and human judgment.",
+  "company_thesis": "The company is not an organogram. It is a living computable state.",
+  "structural_layers": [
+    {
+      "id": "C0",
+      "name": "Strategic Cockpit",
+      "description": "Founder-level view of state, direction, decisions, risk, roadmap and company health."
+    },
+    {
+      "id": "C1",
+      "name": "Core Technical Cell",
+      "description": "Small high-capability team focused on product, method, ontology, quality, architecture and research."
+    },
+    {
+      "id": "C2",
+      "name": "Directive Governor",
+      "description": "Operational rule layer that enforces precision, economy, scope, evidence and gates."
+    },
+    {
+      "id": "C3",
+      "name": "Partner/Application Network",
+      "description": "Partner companies and trained application engineers/consultants applying the method."
+    },
+    {
+      "id": "C4",
+      "name": "Client and Domain Graphs",
+      "description": "Final operational graphs for companies, processes, domains and monitored operations."
+    },
+    {
+      "id": "C5",
+      "name": "Automation Fabric",
+      "description": "Safe automations, AI assistance, scripts, parsers, validators and state pipelines."
+    }
+  ],
+  "resource_types": [
+    "human_capability",
+    "ai_capability",
+    "automation",
+    "partner",
+    "consultant",
+    "application_engineer",
+    "artifact",
+    "method",
+    "contract",
+    "schema",
+    "dataset",
+    "validator",
+    "dashboard",
+    "capital",
+    "time",
+    "attention"
+  ],
+  "artifact_types": [
+    "context_packet",
+    "state_snapshot",
+    "ontology",
+    "contract",
+    "schema",
+    "runbook",
+    "evidence_pack",
+    "risk_index",
+    "benchmark",
+    "marketing_narrative",
+    "business_plan",
+    "client_state_graph"
+  ],
+  "company_behavior_rules": [
+    "Operate by state before action.",
+    "Keep the core team small and high-capability.",
+    "Automate what is safe and repeatable.",
+    "Humans focus on judgment, design, review and high-value delivery.",
+    "Do not scale headcount before scaling method, artifacts and automation.",
+    "Use partners as operational nodes, not uncontrolled execution channels.",
+    "Every output must have evidence, gate and allowed next action.",
+    "Every response should reduce time, money, attention waste and rework."
+  ],
+  "unsafe_claims": [
+    "The method is commercially validated in real clients.",
+    "The system reduces hallucination in production.",
+    "The system replaces human experts.",
+    "The company can fully automate all decisions.",
+    "The stack is production-ready."
+  ],
+  "safe_claims": [
+    "CASULO is developing a state-based methodology for operational diagnosis and safe automation.",
+    "CASULO organizes processes as computable states governed by evidence, gates and artifacts.",
+    "CASULO is building benchmarks to evaluate operational hallucination risk.",
+    "CASULO treats the company itself as a living operational graph."
+  ]
+}
