@@ -382,4 +382,16 @@ ENDPOINT_GROUPS = [
         ],
     },
 
+    {
+        "group": "business_diagnostic_report_pack",
+        "routes": [
+            {"path": "/api/casulo/business-diagnostic/report", "file": "outputs/prod981_1020_business_diagnostic_report_pack.json", "key": "report"},
+            {"path": "/api/casulo/business-diagnostic/cases", "file": "outputs/prod981_1020_diagnostic_case_reports.json", "key": "cases"},
+            {"path": "/api/casulo/business-diagnostic/graph-boundary", "file": "outputs/prod981_1020_graph_adapter_boundary.json", "key": "graph_boundary"},
+            {"path": "/api/casulo/business-diagnostic/recommendations", "file": "outputs/prod981_1020_business_diagnostic_recommendations.json", "key": "recommendations"},
+            {"path": "/api/casulo/business-diagnostic/readiness", "file": "outputs/prod981_1020_business_diagnostic_readiness.json", "key": "readiness"},
+            {"path": "/api/casulo/business-diagnostic/audit", "file": "outputs/prod981_1020_business_diagnostic_audit_report.json", "key": "audit"},
+        ],
+    },
+
 ]

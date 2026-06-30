@@ -1,0 +1,14 @@
+{
+  "task": "PROD-981..1020",
+  "status": "PASS",
+  "phase": "Business Diagnostic Report Pack and Graph Adapter Boundary",
+  "endpoints": [
+    "/api/casulo/business-diagnostic/report",
+    "/api/casulo/business-diagnostic/cases",
+    "/api/casulo/business-diagnostic/graph-boundary",
+    "/api/casulo/business-diagnostic/recommendations",
+    "/api/casulo/business-diagnostic/readiness",
+    "/api/casulo/business-diagnostic/audit"
+  ],
+  "next_recommended_bundle": "PROD-1021 Controlled Demo Evidence Pack and Non-Live Graph Import Review"
+}

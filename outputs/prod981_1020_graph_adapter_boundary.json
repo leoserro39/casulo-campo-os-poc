@@ -1,0 +1,64 @@
+{
+  "status": "PASS",
+  "adapter_boundary": {
+    "allowed": [
+      "read JSONL export stubs",
+      "validate node and relationship schemas",
+      "review mapping cardinality",
+      "prepare non-live import plan",
+      "document graph adapter interface"
+    ],
+    "requires_human_approval": [
+      "credential design",
+      "live connection design",
+      "database write policy",
+      "production activation"
+    ],
+    "graph_export_files": {
+      "nodes": "outputs/prod941_980_graph_export_nodes.jsonl",
+      "relationships": "outputs/prod941_980_graph_export_relationships.jsonl"
+    },
+    "node_label_distribution": {
+      "Case": 50,
+      "Domain": 12,
+      "Evidence": 50,
+      "Gate": 50,
+      "HallucinationBudget": 50,
+      "OutputMode": 50,
+      "ReadinessState": 1,
+      "RiskSignal": 50
+    },
+    "relationship_type_distribution": {
+      "ALLOWS": 50,
+      "BELONGS_TO": 50,
+      "CONTRIBUTES_TO": 50,
+      "HAS_BUDGET": 50,
+      "HAS_EVIDENCE": 50,
+      "REQUIRES": 50,
+      "TRIGGERS": 50
+    }
+  },
+  "not_allowed": [
+    "live Neo4j connection",
+    "live graph database write",
+    "credential handling",
+    "production activation",
+    "client-facing guarantee"
+  ],
+  "neo4j_connection_allowed": false,
+  "live_graph_database_write_allowed": false,
+  "blocked_actions": [
+    "client_facing_claim",
+    "automatic_nomination",
+    "implementation_execution",
+    "production_activation",
+    "automatic_merge",
+    "credential_handling",
+    "automatic_threshold_mutation",
+    "autonomous_external_execution",
+    "real_world_side_effect",
+    "unapproved_real_company_data",
+    "live_graph_database_write",
+    "neo4j_connection"
+  ]
+}

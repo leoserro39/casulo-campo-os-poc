@@ -1,0 +1,19 @@
+{
+  "contract": "casulo.business_diagnostic_report_pack.v0.1",
+  "purpose": "Generate business diagnostic pack from controlled 50-case dry-run outputs.",
+  "mode": "report_pack_no_client_claims",
+  "blocked_actions": [
+    "client_facing_claim",
+    "automatic_nomination",
+    "implementation_execution",
+    "production_activation",
+    "automatic_merge",
+    "credential_handling",
+    "automatic_threshold_mutation",
+    "autonomous_external_execution",
+    "real_world_side_effect",
+    "unapproved_real_company_data",
+    "live_graph_database_write",
+    "neo4j_connection"
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "graph_adapter_boundary.schema.json",
+  "type": "object",
+  "required": [
+    "status",
+    "adapter_boundary",
+    "not_allowed",
+    "blocked_actions"
+  ]
+}

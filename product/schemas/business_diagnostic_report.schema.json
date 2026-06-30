@@ -1,0 +1,11 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "business_diagnostic_report.schema.json",
+  "type": "object",
+  "required": [
+    "status",
+    "case_count",
+    "executive_summary",
+    "blocked_actions"
+  ]
+}

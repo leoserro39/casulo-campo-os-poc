@@ -1,0 +1,4 @@
+{
+  "contract": "casulo.diagnostic_case_report.v0.1",
+  "purpose": "Create case-level diagnostic summaries with risk, gate, evidence, telemetry and business recommendation."
+}
