@@ -1,0 +1,26 @@
+{
+  "phase": "PROD-3101..3140",
+  "required_prior_tag": "product-work-type-package-optimizer-cost-decision-v0.1",
+  "mode": "calibration_plan_real_sessions",
+  "real_session_capture_planned": true,
+  "human_review_required": true,
+  "cost_is_operational_decision_metric": true,
+  "blocked_actions": [
+    "real_world_profit_claim",
+    "validated_savings_claim",
+    "client_facing_value_claim",
+    "validated_hallucination_reduction_claim",
+    "production_activation",
+    "automatic_memory_delete",
+    "gpt_memory_api_execution",
+    "commercial_package_pricing_claim"
+  ],
+  "allowed_actions": [
+    "real_session_capture_plan",
+    "internal_controlled_calibration",
+    "human_review_protocol_design",
+    "baseline_vs_exocortex_comparison_design",
+    "calibration_dataset_schema_design"
+  ],
+  "recommended_next_phase": "PROD-3141..3180 - Real Session Capture Schema and Empty Intake"
+}

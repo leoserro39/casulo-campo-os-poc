@@ -1,0 +1,13 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "CASULO Calibration Plan for Real Sessions",
+  "type": "object",
+  "required": [
+    "version",
+    "phase",
+    "calibration_axes",
+    "session_capture_schema",
+    "comparison_modes",
+    "batches"
+  ]
+}
