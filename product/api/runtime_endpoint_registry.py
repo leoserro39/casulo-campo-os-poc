@@ -404,4 +404,14 @@ ENDPOINT_GROUPS = [
         ],
     },
 
+    {
+        "group": "umbrella_non_live_graph_import",
+        "routes": [
+            {"path": "/api/casulo/umbrella/graph-import-review/status", "file": "outputs/umbrella_prod-1061_1100_non_live_graph_import_status.json", "key": "status"},
+            {"path": "/api/casulo/umbrella/graph-import-review/main", "file": "outputs/umbrella_prod-1061_1100_non_live_graph_import.json", "key": "main"},
+            {"path": "/api/casulo/umbrella/graph-import-review/readiness", "file": "outputs/umbrella_prod-1061_1100_non_live_graph_import_readiness.json", "key": "readiness"},
+            {"path": "/api/casulo/umbrella/graph-import-review/audit", "file": "outputs/umbrella_prod-1061_1100_non_live_graph_import_audit_report.json", "key": "audit"},
+        ],
+    },
+
 ]
