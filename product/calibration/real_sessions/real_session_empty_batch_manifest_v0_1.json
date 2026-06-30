@@ -1,0 +1,28 @@
+{
+  "version": "real_session_empty_batch_manifest.v0.1",
+  "phase": "PROD-3221..3260",
+  "batch_id": "BATCH-000-EMPTY-NO-REAL-DATA",
+  "batch_status": "EMPTY_AUDITED",
+  "real_data_captured": false,
+  "record_count": 0,
+  "records": [],
+  "schema": "product/schemas/real_session_capture.schema.json",
+  "empty_intake_template": "product/calibration/real_sessions/real_session_empty_intake_v0_1.json",
+  "runbook": "product/calibration/real_sessions/manual_capture_runbook_v0_1.md",
+  "privacy_review_checklist": "product/calibration/real_sessions/manual_capture_privacy_review_checklist_v0_1.json",
+  "dataset_acceptance_gate": "HOLD_EMPTY_BATCH_NO_REAL_DATA",
+  "claim_boundary": "empty batch audit only no real session data",
+  "blocked_actions": [
+    "real_session_data_capture_without_review",
+    "raw_private_data_storage",
+    "secret_or_credential_storage",
+    "unredacted_pii_storage",
+    "client_facing_value_claim",
+    "real_world_profit_claim",
+    "validated_savings_claim",
+    "validated_hallucination_reduction_claim",
+    "production_activation",
+    "automatic_memory_delete",
+    "gpt_memory_api_execution"
+  ]
+}

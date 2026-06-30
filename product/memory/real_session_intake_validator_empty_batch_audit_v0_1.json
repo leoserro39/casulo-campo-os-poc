@@ -1,0 +1,37 @@
+{
+  "version": "real_session_intake_validator_empty_batch_audit.v0.1",
+  "phase": "PROD-3221..3260",
+  "purpose": "Validate empty real-session intake template and create an audited empty batch manifest.",
+  "real_data_captured": false,
+  "validator_rules": [
+    "All schema-required fields must exist in empty intake.",
+    "capture_status must be EMPTY_TEMPLATE.",
+    "source_refs_only must be true.",
+    "evidence_pointers and reviewer notes must be empty.",
+    "empty batch record_count must be zero.",
+    "dataset acceptance must remain held."
+  ],
+  "empty_intake_errors": [],
+  "empty_batch_manifest": "product/calibration/real_sessions/real_session_empty_batch_manifest_v0_1.json",
+  "allowed_actions": [
+    "empty_batch_manifest_creation",
+    "intake_validator_definition",
+    "empty_template_audit",
+    "privacy_control_audit",
+    "calibration_batch_structure_preparation"
+  ],
+  "blocked_actions": [
+    "real_session_data_capture_without_review",
+    "raw_private_data_storage",
+    "secret_or_credential_storage",
+    "unredacted_pii_storage",
+    "client_facing_value_claim",
+    "real_world_profit_claim",
+    "validated_savings_claim",
+    "validated_hallucination_reduction_claim",
+    "production_activation",
+    "automatic_memory_delete",
+    "gpt_memory_api_execution"
+  ],
+  "recommended_next_phase": "PROD-3261..3300 - Synthetic Calibration Capture Dry Run"
+}
