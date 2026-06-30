@@ -1,0 +1,16 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "CASULO Custom GPT Actions OpenAPI Review",
+  "type": "object",
+  "required": ["status", "phase", "openapi_file", "checks", "blocked_actions"],
+  "properties": {
+    "status": {"type": "string"},
+    "phase": {"type": "string"},
+    "openapi_file": {"type": "string"},
+    "checks": {"type": "object"},
+    "blocked_actions": {
+      "type": "array",
+      "items": {"type": "string"}
+    }
+  }
+}

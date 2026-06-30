@@ -1,0 +1,35 @@
+{
+  "status": "PASS",
+  "phase": "PROD-1421..1460",
+  "openapi_file": "product/api/openapi/graph_context_actions.openapi.json",
+  "checks": {
+    "openapi_version_present": true,
+    "info_present": true,
+    "placeholder_server_present": true,
+    "health_endpoint_present": true,
+    "context_endpoint_present": true,
+    "context_get_operation_present": true,
+    "operation_id_present": true,
+    "no_live_production_url": true,
+    "safety_language_present": true
+  },
+  "errors": [],
+  "blocked_actions": [
+    "client_facing_claim",
+    "automatic_nomination",
+    "implementation_execution",
+    "production_activation",
+    "automatic_merge",
+    "credential_handling",
+    "automatic_threshold_mutation",
+    "autonomous_external_execution",
+    "real_world_side_effect",
+    "unapproved_real_company_data",
+    "production_neo4j_connection",
+    "production_graph_write",
+    "final_answer_generation",
+    "gpt_call",
+    "codex_execution",
+    "public_api_publication"
+  ]
+}

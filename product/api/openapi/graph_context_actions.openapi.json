@@ -1,0 +1,190 @@
+{
+  "openapi": "3.1.0",
+  "info": {
+    "title": "CASULO Graph Context API",
+    "version": "0.1.0",
+    "description": "Read-only graph context retrieval API for controlled CASULO sandbox use. This contract retrieves context packets only. It does not generate final answers, call GPT, call Codex, mutate state, connect to production, or authorize client-facing claims."
+  },
+  "servers": [
+    {
+      "url": "https://REPLACE_WITH_CONTROLLED_GRAPH_CONTEXT_API_HOST",
+      "description": "Controlled development or review host. Do not use production unless explicitly approved."
+    }
+  ],
+  "paths": {
+    "/api/health": {
+      "get": {
+        "operationId": "getGraphContextHealth",
+        "summary": "Check CASULO Graph Context API health",
+        "description": "Returns health and safety boundary information for the graph context API.",
+        "responses": {
+          "200": {
+            "description": "Health response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HealthResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/graph/context": {
+      "get": {
+        "operationId": "getGraphContextPacket",
+        "summary": "Retrieve a read-only graph-backed CASULO context packet",
+        "description": "Retrieves operational context from the CASULO graph. This endpoint returns context only and must not be treated as a final answer or execution authorization.",
+        "parameters": [
+          {
+            "name": "query",
+            "in": "query",
+            "required": true,
+            "description": "Human query or operational intent used to retrieve matching graph context.",
+            "schema": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 240
+            }
+          },
+          {
+            "name": "limit",
+            "in": "query",
+            "required": false,
+            "description": "Maximum number of context records to return. The API may clamp this value.",
+            "schema": {
+              "type": "integer",
+              "minimum": 1,
+              "maximum": 25,
+              "default": 8
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Graph context packet response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GraphContextApiResponse"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Endpoint not found"
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "HealthResponse": {
+        "type": "object",
+        "required": ["status", "endpoint", "mode", "service", "blocked_actions"],
+        "properties": {
+          "status": {
+            "type": "string"
+          },
+          "endpoint": {
+            "type": "string"
+          },
+          "mode": {
+            "type": "string"
+          },
+          "service": {
+            "type": "string"
+          },
+          "blocked_actions": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      },
+      "GraphContextApiResponse": {
+        "type": "object",
+        "required": ["status", "endpoint", "mode", "query", "limit", "response", "blocked_actions"],
+        "properties": {
+          "status": {
+            "type": "string"
+          },
+          "endpoint": {
+            "type": "string"
+          },
+          "mode": {
+            "type": "string"
+          },
+          "query": {
+            "type": "string"
+          },
+          "limit": {
+            "type": "integer"
+          },
+          "response": {
+            "$ref": "#/components/schemas/GraphContextPacket"
+          },
+          "blocked_actions": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      },
+      "GraphContextPacket": {
+        "type": "object",
+        "required": ["status", "query", "mode", "context_packet", "blocked_actions"],
+        "properties": {
+          "status": {
+            "type": "string"
+          },
+          "query": {
+            "type": "string"
+          },
+          "mode": {
+            "type": "string"
+          },
+          "generated_at": {
+            "type": "string"
+          },
+          "context_packet": {
+            "type": "object",
+            "properties": {
+              "match_mode": {
+                "type": "string"
+              },
+              "terms": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "result_count": {
+                "type": "integer"
+              },
+              "cases": {
+                "type": "array",
+                "items": {
+                  "type": "object"
+                }
+              },
+              "retrieval_boundary": {
+                "type": "object"
+              }
+            }
+          },
+          "blocked_actions": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      }
+    }
+  }
+}
