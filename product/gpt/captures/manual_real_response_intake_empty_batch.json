@@ -1,0 +1,15 @@
+{
+  "batch_version": "manual_real_response_intake_batch.v0.1",
+  "phase": "PROD-1941..1980",
+  "batch_id": "EMPTY-MANUAL-REAL-GPT-BATCH-001",
+  "batch_status": "EMPTY_BATCH_READY_FOR_FUTURE_MANUAL_CAPTURE",
+  "capture_plan_reference": "outputs/prod1901_1940_real_response_capture_plan_manual_evidence_intake.json",
+  "record_count": 0,
+  "calibration_candidate_count": 0,
+  "human_review_required_count": 0,
+  "contains_client_data": false,
+  "contains_sensitive_data": false,
+  "anonymized": true,
+  "calibration_status": "NOT_CALIBRATED_EMPTY_BATCH_NO_REAL_RESPONSES",
+  "intake_records": []
+}
