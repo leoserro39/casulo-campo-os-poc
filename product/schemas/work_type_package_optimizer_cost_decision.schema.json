@@ -1,0 +1,14 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "CASULO Work Type Package Optimizer and Cost Decision Metric",
+  "type": "object",
+  "required": [
+    "version",
+    "phase",
+    "chat_layers",
+    "work_types",
+    "cost_metrics",
+    "package_classes",
+    "evaluations"
+  ]
+}

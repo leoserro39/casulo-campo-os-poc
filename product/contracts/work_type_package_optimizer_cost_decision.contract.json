@@ -1,0 +1,19 @@
+{
+  "phase": "PROD-3061..3100",
+  "required_prior_tag": "product-exocortex-apex-maturity-index-contract-v0.1",
+  "mode": "work_type_package_optimizer_cost_decision",
+  "cost_is_operational_decision_metric": true,
+  "chat_structure_coherence_required": true,
+  "real_pricing_blocked": true,
+  "blocked_actions": [
+    "real_price_claim",
+    "commercial_package_pricing_claim",
+    "client_facing_value_claim",
+    "validated_savings_claim",
+    "validated_hallucination_reduction_claim",
+    "production_activation",
+    "automatic_memory_delete",
+    "gpt_memory_api_execution"
+  ],
+  "recommended_next_phase": "PROD-3101..3140 - Calibration Plan for Real Sessions"
+}
