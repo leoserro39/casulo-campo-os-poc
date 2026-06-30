@@ -1,0 +1,13 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "CASULO Memory Governor Synthetic Benchmark Evaluator",
+  "type": "object",
+  "required": [
+    "status",
+    "phase",
+    "decision",
+    "evaluator",
+    "checks",
+    "blocked_actions"
+  ]
+}

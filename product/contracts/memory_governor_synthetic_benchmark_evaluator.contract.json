@@ -1,0 +1,27 @@
+{
+  "phase": "PROD-2501..2540",
+  "required_prior_tag": "product-memory-governor-synthetic-benchmark-dataset-v0.1",
+  "mode": "synthetic_evaluator_only",
+  "allowed_claims": [
+    "synthetic evaluator calculated fixture metrics",
+    "CASULO synthetic variant outperforms pure synthetic variant in the fixture",
+    "real-world validation is still required"
+  ],
+  "prohibited_claims": [
+    "validated token savings",
+    "validated longer chat lifetime",
+    "validated production performance",
+    "real memory cleanup performed",
+    "GPT memory integration performed"
+  ],
+  "blocked_actions": [
+    "validated_performance_claim",
+    "real_world_token_savings_claim",
+    "automatic_memory_delete",
+    "unreviewed_memory_mutation",
+    "gpt_memory_api_execution",
+    "production_activation",
+    "client_facing_claim"
+  ],
+  "recommended_next_phase": "PROD-2541..2580 - Memory Governor Readiness Gate"
+}

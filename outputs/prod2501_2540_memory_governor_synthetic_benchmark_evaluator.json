@@ -1,0 +1,188 @@
+{
+  "status": "PASS",
+  "phase": "PROD-2501..2540",
+  "decision": "MEMORY_GOVERNOR_SYNTHETIC_EVALUATOR_READY",
+  "generated_at": "2026-06-30T22:33:12.625920+00:00",
+  "evaluator": {
+    "version": "memory_governor_synthetic_benchmark_evaluator.v0.1",
+    "dataset": "product/memory/memory_governor_synthetic_benchmark_dataset_v0_1.json",
+    "interpretation": "All results are synthetic fixture calculations. They do not validate real performance.",
+    "higher_is_better": [
+      "usable_turns_until_degradation",
+      "context_compression_ratio",
+      "state_retention_score",
+      "decision_recall_accuracy",
+      "output_quality_under_load",
+      "rework_avoided"
+    ],
+    "lower_is_better": [
+      "token_growth_rate",
+      "stale_context_contamination_rate",
+      "recovery_time_from_snapshot",
+      "cost_per_valid_task",
+      "gate_violation_rate"
+    ],
+    "aggregate": {
+      "usable_turns_until_degradation": {
+        "pure_avg": 18.0,
+        "casulo_avg": 44.0,
+        "positive_delta_means_better": 26.0
+      },
+      "token_growth_rate": {
+        "pure_avg": 1.0,
+        "casulo_avg": 0.42,
+        "positive_delta_means_better": 0.5800000000000001
+      },
+      "context_compression_ratio": {
+        "pure_avg": 1.0,
+        "casulo_avg": 0.28,
+        "positive_delta_means_better": -0.72
+      },
+      "state_retention_score": {
+        "pure_avg": 0.62,
+        "casulo_avg": 0.91,
+        "positive_delta_means_better": 0.29000000000000004
+      },
+      "decision_recall_accuracy": {
+        "pure_avg": 0.58,
+        "casulo_avg": 0.93,
+        "positive_delta_means_better": 0.3500000000000001
+      },
+      "stale_context_contamination_rate": {
+        "pure_avg": 0.31,
+        "casulo_avg": 0.07,
+        "positive_delta_means_better": 0.24
+      },
+      "recovery_time_from_snapshot": {
+        "pure_avg": null,
+        "casulo_avg": 0.22,
+        "positive_delta_means_better": null
+      },
+      "output_quality_under_load": {
+        "pure_avg": 0.61,
+        "casulo_avg": 0.88,
+        "positive_delta_means_better": 0.27
+      },
+      "rework_avoided": {
+        "pure_avg": 0.0,
+        "casulo_avg": 0.36,
+        "positive_delta_means_better": 0.36
+      },
+      "cost_per_valid_task": {
+        "pure_avg": 1.0,
+        "casulo_avg": 0.54,
+        "positive_delta_means_better": 0.45999999999999996
+      },
+      "gate_violation_rate": {
+        "pure_avg": 0.18,
+        "casulo_avg": 0.04,
+        "positive_delta_means_better": 0.13999999999999999
+      }
+    },
+    "pair_results": [
+      {
+        "pair_id": "MEM-PAIR-001",
+        "metric_deltas_positive_means_better": {
+          "usable_turns_until_degradation": 26,
+          "token_growth_rate": 0.5800000000000001,
+          "context_compression_ratio": -0.72,
+          "state_retention_score": 0.29000000000000004,
+          "decision_recall_accuracy": 0.3500000000000001,
+          "stale_context_contamination_rate": 0.24,
+          "recovery_time_from_snapshot": null,
+          "output_quality_under_load": 0.27,
+          "rework_avoided": 0.36,
+          "cost_per_valid_task": 0.45999999999999996,
+          "gate_violation_rate": 0.13999999999999999
+        },
+        "improved_metric_count": 9,
+        "measured_metric_count": 10
+      },
+      {
+        "pair_id": "MEM-PAIR-002",
+        "metric_deltas_positive_means_better": {
+          "usable_turns_until_degradation": 26,
+          "token_growth_rate": 0.5800000000000001,
+          "context_compression_ratio": -0.72,
+          "state_retention_score": 0.29000000000000004,
+          "decision_recall_accuracy": 0.3500000000000001,
+          "stale_context_contamination_rate": 0.24,
+          "recovery_time_from_snapshot": null,
+          "output_quality_under_load": 0.27,
+          "rework_avoided": 0.36,
+          "cost_per_valid_task": 0.45999999999999996,
+          "gate_violation_rate": 0.13999999999999999
+        },
+        "improved_metric_count": 9,
+        "measured_metric_count": 10
+      },
+      {
+        "pair_id": "MEM-PAIR-003",
+        "metric_deltas_positive_means_better": {
+          "usable_turns_until_degradation": 26,
+          "token_growth_rate": 0.5800000000000001,
+          "context_compression_ratio": -0.72,
+          "state_retention_score": 0.29000000000000004,
+          "decision_recall_accuracy": 0.3500000000000001,
+          "stale_context_contamination_rate": 0.24,
+          "recovery_time_from_snapshot": null,
+          "output_quality_under_load": 0.27,
+          "rework_avoided": 0.36,
+          "cost_per_valid_task": 0.45999999999999996,
+          "gate_violation_rate": 0.13999999999999999
+        },
+        "improved_metric_count": 9,
+        "measured_metric_count": 10
+      },
+      {
+        "pair_id": "MEM-PAIR-004",
+        "metric_deltas_positive_means_better": {
+          "usable_turns_until_degradation": 26,
+          "token_growth_rate": 0.5800000000000001,
+          "context_compression_ratio": -0.72,
+          "state_retention_score": 0.29000000000000004,
+          "decision_recall_accuracy": 0.3500000000000001,
+          "stale_context_contamination_rate": 0.24,
+          "recovery_time_from_snapshot": null,
+          "output_quality_under_load": 0.27,
+          "rework_avoided": 0.36,
+          "cost_per_valid_task": 0.45999999999999996,
+          "gate_violation_rate": 0.13999999999999999
+        },
+        "improved_metric_count": 9,
+        "measured_metric_count": 10
+      }
+    ],
+    "recommended_next_phase": "PROD-2541..2580 - Memory Governor Readiness Gate"
+  },
+  "checks": {
+    "required_tag_present": true,
+    "dataset_exists": true,
+    "dataset_type_synthetic": true,
+    "record_count": 8,
+    "pure_count": 4,
+    "casulo_count": 4,
+    "metric_count": 11,
+    "pair_count": 4,
+    "aggregate_metric_count": 11,
+    "improved_metric_count": 9,
+    "has_token_growth": true,
+    "has_decision_recall": true,
+    "has_context_contamination": true,
+    "has_cost_per_task": true,
+    "validated_claim_blocked": true,
+    "token_claim_blocked": true,
+    "memory_delete_blocked": true,
+    "gpt_memory_api_blocked": true
+  },
+  "errors": [],
+  "blocked_actions": [
+    "validated_performance_claim",
+    "real_world_token_savings_claim",
+    "automatic_memory_delete",
+    "unreviewed_memory_mutation",
+    "gpt_memory_api_execution",
+    "production_activation",
+    "client_facing_claim"
+  ]
+}
