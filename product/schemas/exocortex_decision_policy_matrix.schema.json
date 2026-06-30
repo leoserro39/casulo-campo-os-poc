@@ -1,0 +1,11 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "CASULO Exocortex Decision Policy Matrix",
+  "type": "object",
+  "required": [
+    "version",
+    "phase",
+    "policies",
+    "runtime_decisions"
+  ]
+}

@@ -1,0 +1,274 @@
+{
+  "version": "exocortex_decision_policy_matrix.v0.1",
+  "phase": "PROD-2741..2780",
+  "purpose": "Map Exocortex runtime snapshot evaluator verdicts to governed operational decisions.",
+  "policies": [
+    {
+      "verdict": "SNAPSHOT_READY",
+      "decision": "ALLOW_MANUAL_SNAPSHOT_COMPRESSION",
+      "allowed_actions": [
+        "create_manual_snapshot",
+        "archive_heavy_context_pointer"
+      ],
+      "blocked_actions": [
+        "automatic_memory_delete",
+        "unreviewed_memory_mutation",
+        "validated_performance_claim",
+        "real_world_token_savings_claim",
+        "client_facing_claim",
+        "production_activation",
+        "gpt_memory_api_execution"
+      ],
+      "value_delta_effect": "positive_context_compression_candidate",
+      "input_quality_dependency": "medium"
+    },
+    {
+      "verdict": "ARCHIVE_READY",
+      "decision": "ALLOW_ARCHIVE_TO_REPO",
+      "allowed_actions": [
+        "archive_to_repo",
+        "preserve_evidence_pointer"
+      ],
+      "blocked_actions": [
+        "automatic_memory_delete",
+        "unreviewed_memory_mutation",
+        "validated_performance_claim",
+        "real_world_token_savings_claim",
+        "client_facing_claim",
+        "production_activation",
+        "gpt_memory_api_execution"
+      ],
+      "value_delta_effect": "positive_auditability_and_context_reduction_candidate",
+      "input_quality_dependency": "medium"
+    },
+    {
+      "verdict": "DISCARD_ALLOWED_AFTER_REVIEW",
+      "decision": "HOLD_BEFORE_DISCARD",
+      "allowed_actions": [
+        "manual_review",
+        "discard_ephemeral_after_review"
+      ],
+      "blocked_actions": [
+        "automatic_memory_delete",
+        "unreviewed_memory_mutation",
+        "validated_performance_claim",
+        "real_world_token_savings_claim",
+        "client_facing_claim",
+        "production_activation",
+        "gpt_memory_api_execution"
+      ],
+      "value_delta_effect": "possible_token_waste_reduction_after_review",
+      "input_quality_dependency": "high"
+    },
+    {
+      "verdict": "HOLD_REVIEW_REQUIRED",
+      "decision": "BLOCK_AND_REQUIRE_REVIEW",
+      "allowed_actions": [
+        "human_review",
+        "contradiction_resolution",
+        "state_reconciliation"
+      ],
+      "blocked_actions": [
+        "automatic_memory_delete",
+        "unreviewed_memory_mutation",
+        "validated_performance_claim",
+        "real_world_token_savings_claim",
+        "client_facing_claim",
+        "production_activation",
+        "gpt_memory_api_execution"
+      ],
+      "value_delta_effect": "risk_avoidance_candidate",
+      "input_quality_dependency": "high"
+    },
+    {
+      "verdict": "REVIEW_REQUIRED",
+      "decision": "BLOCK_AND_REQUIRE_REVIEW",
+      "allowed_actions": [
+        "human_review",
+        "state_reconciliation"
+      ],
+      "blocked_actions": [
+        "automatic_memory_delete",
+        "unreviewed_memory_mutation",
+        "validated_performance_claim",
+        "real_world_token_savings_claim",
+        "client_facing_claim",
+        "production_activation",
+        "gpt_memory_api_execution"
+      ],
+      "value_delta_effect": "risk_avoidance_candidate",
+      "input_quality_dependency": "high"
+    },
+    {
+      "verdict": "PROTECTED_STATE",
+      "decision": "PROTECT_DO_NOT_DELETE",
+      "allowed_actions": [
+        "protect_canonical_decision",
+        "preserve_state_pointer"
+      ],
+      "blocked_actions": [
+        "automatic_memory_delete",
+        "unreviewed_memory_mutation",
+        "validated_performance_claim",
+        "real_world_token_savings_claim",
+        "client_facing_claim",
+        "production_activation",
+        "gpt_memory_api_execution"
+      ],
+      "value_delta_effect": "decision_loss_avoidance_candidate",
+      "input_quality_dependency": "medium"
+    }
+  ],
+  "runtime_decisions": [
+    {
+      "snapshot_id": "EXO-RUNTIME-001",
+      "title": "recent_pass_checkpoint",
+      "verdict": "SNAPSHOT_READY",
+      "risk": "low",
+      "gate": "READINESS_GATE",
+      "priority_score": 65.0,
+      "policy_decision": "ALLOW_MANUAL_SNAPSHOT_COMPRESSION",
+      "allowed_actions": [
+        "create_manual_snapshot",
+        "archive_heavy_context_pointer"
+      ],
+      "blocked_actions": [
+        "automatic_memory_delete",
+        "unreviewed_memory_mutation",
+        "validated_performance_claim",
+        "real_world_token_savings_claim",
+        "client_facing_claim",
+        "production_activation",
+        "gpt_memory_api_execution"
+      ],
+      "value_delta_effect": "positive_context_compression_candidate",
+      "input_quality_dependency": "medium"
+    },
+    {
+      "snapshot_id": "EXO-RUNTIME-002",
+      "title": "resolved_terminal_error",
+      "verdict": "DISCARD_ALLOWED_AFTER_REVIEW",
+      "risk": "medium",
+      "gate": "STATE_REVIEW_REQUIRED",
+      "priority_score": 66.75,
+      "policy_decision": "HOLD_BEFORE_DISCARD",
+      "allowed_actions": [
+        "manual_review",
+        "discard_ephemeral_after_review"
+      ],
+      "blocked_actions": [
+        "automatic_memory_delete",
+        "unreviewed_memory_mutation",
+        "validated_performance_claim",
+        "real_world_token_savings_claim",
+        "client_facing_claim",
+        "production_activation",
+        "gpt_memory_api_execution"
+      ],
+      "value_delta_effect": "possible_token_waste_reduction_after_review",
+      "input_quality_dependency": "high"
+    },
+    {
+      "snapshot_id": "EXO-RUNTIME-003",
+      "title": "client_claim_blocked",
+      "verdict": "PROTECTED_STATE",
+      "risk": "critical",
+      "gate": "CLIENT_CLAIM_REVIEW_REQUIRED",
+      "priority_score": 94.75,
+      "policy_decision": "PROTECT_DO_NOT_DELETE",
+      "allowed_actions": [
+        "protect_canonical_decision",
+        "preserve_state_pointer"
+      ],
+      "blocked_actions": [
+        "automatic_memory_delete",
+        "unreviewed_memory_mutation",
+        "validated_performance_claim",
+        "real_world_token_savings_claim",
+        "client_facing_claim",
+        "production_activation",
+        "gpt_memory_api_execution"
+      ],
+      "value_delta_effect": "decision_loss_avoidance_candidate",
+      "input_quality_dependency": "medium"
+    },
+    {
+      "snapshot_id": "EXO-RUNTIME-004",
+      "title": "stale_context_detected",
+      "verdict": "ARCHIVE_READY",
+      "risk": "high",
+      "gate": "HOLD_HUMAN_REVIEW",
+      "priority_score": 79.0,
+      "policy_decision": "ALLOW_ARCHIVE_TO_REPO",
+      "allowed_actions": [
+        "archive_to_repo",
+        "preserve_evidence_pointer"
+      ],
+      "blocked_actions": [
+        "automatic_memory_delete",
+        "unreviewed_memory_mutation",
+        "validated_performance_claim",
+        "real_world_token_savings_claim",
+        "client_facing_claim",
+        "production_activation",
+        "gpt_memory_api_execution"
+      ],
+      "value_delta_effect": "positive_auditability_and_context_reduction_candidate",
+      "input_quality_dependency": "medium"
+    },
+    {
+      "snapshot_id": "EXO-RUNTIME-005",
+      "title": "contradiction_hold",
+      "verdict": "HOLD_REVIEW_REQUIRED",
+      "risk": "high",
+      "gate": "CONTRADICTION_HOLD",
+      "priority_score": 84.25,
+      "policy_decision": "BLOCK_AND_REQUIRE_REVIEW",
+      "allowed_actions": [
+        "human_review",
+        "contradiction_resolution",
+        "state_reconciliation"
+      ],
+      "blocked_actions": [
+        "automatic_memory_delete",
+        "unreviewed_memory_mutation",
+        "validated_performance_claim",
+        "real_world_token_savings_claim",
+        "client_facing_claim",
+        "production_activation",
+        "gpt_memory_api_execution"
+      ],
+      "value_delta_effect": "risk_avoidance_candidate",
+      "input_quality_dependency": "high"
+    },
+    {
+      "snapshot_id": "EXO-RUNTIME-006",
+      "title": "protected_canonical_decision",
+      "verdict": "PROTECTED_STATE",
+      "risk": "critical",
+      "gate": "PROTECT_CANONICAL_DECISION",
+      "priority_score": 94.75,
+      "policy_decision": "PROTECT_DO_NOT_DELETE",
+      "allowed_actions": [
+        "protect_canonical_decision",
+        "preserve_state_pointer"
+      ],
+      "blocked_actions": [
+        "automatic_memory_delete",
+        "unreviewed_memory_mutation",
+        "validated_performance_claim",
+        "real_world_token_savings_claim",
+        "client_facing_claim",
+        "production_activation",
+        "gpt_memory_api_execution"
+      ],
+      "value_delta_effect": "decision_loss_avoidance_candidate",
+      "input_quality_dependency": "medium"
+    }
+  ],
+  "future_phases": [
+    "PROD-2781..2820 - Prompt and Input Data Quality Gate",
+    "PROD-2821..2860 - Exocortex Value Delta Engine Contract"
+  ],
+  "recommended_next_phase": "PROD-2781..2820 - Prompt and Input Data Quality Gate"
+}
