@@ -1,0 +1,89 @@
+{
+  "status": "PASS",
+  "phase": "Controlled Demo Evidence Pack",
+  "demo_cases": [
+    {
+      "demo_case_id": "DEMO-001",
+      "source_case_id": "EXP50-045",
+      "business_domain": "fleet_maintenance_ops",
+      "gate": "ANSWER_ALLOWED",
+      "risk_band": "HIGH",
+      "business_weight": "productivity_acceleration",
+      "demo_story": {
+        "diagnosis": "The case is suitable for a controlled answer because the runner found enough grounding to respond without external execution.",
+        "recommendation": "Use as a productivity benchmark and measure time saved against manual triage. Do not execute external actions.",
+        "safe_message": "Controlled demo only. No client-facing claim, no production execution."
+      },
+      "evidence_items": [
+        "dry_run_telemetry",
+        "gate_decision",
+        "risk_band",
+        "business_recommendation",
+        "graph_trace_stub"
+      ],
+      "auto_apply": false
+    },
+    {
+      "demo_case_id": "DEMO-002",
+      "source_case_id": "EXP50-047",
+      "business_domain": "fleet_maintenance_ops",
+      "gate": "HUMAN_REVIEW_REQUIRED",
+      "risk_band": "CRITICAL",
+      "business_weight": "critical_risk_containment",
+      "demo_story": {
+        "diagnosis": "The case should not be converted into an operational decision without human review because risk, conflict, sensitivity or uncertainty is material.",
+        "recommendation": "Generate a human review packet with evidence gaps, conflict summary, business impact and approval owner.",
+        "safe_message": "Controlled demo only. No client-facing claim, no production execution."
+      },
+      "evidence_items": [
+        "dry_run_telemetry",
+        "gate_decision",
+        "risk_band",
+        "business_recommendation",
+        "graph_trace_stub"
+      ],
+      "auto_apply": false
+    },
+    {
+      "demo_case_id": "DEMO-003",
+      "source_case_id": "EXP50-049",
+      "business_domain": "ecommerce_order_ops",
+      "gate": "UNSUPPORTED_BLOCKED",
+      "risk_band": "CRITICAL",
+      "business_weight": "critical_control",
+      "demo_story": {
+        "diagnosis": "The case is blocked because it represents unsupported external execution or an action outside the approved scope.",
+        "recommendation": "Keep as sentinel regression case for external execution blocking.",
+        "safe_message": "Controlled demo only. No client-facing claim, no production execution."
+      },
+      "evidence_items": [
+        "dry_run_telemetry",
+        "gate_decision",
+        "risk_band",
+        "business_recommendation",
+        "graph_trace_stub"
+      ],
+      "auto_apply": false
+    }
+  ],
+  "demo_script": [
+    "summary",
+    "diagnostic cases",
+    "graph boundary",
+    "business value"
+  ],
+  "blocked_actions": [
+    "client_facing_claim",
+    "automatic_nomination",
+    "implementation_execution",
+    "production_activation",
+    "automatic_merge",
+    "credential_handling",
+    "automatic_threshold_mutation",
+    "autonomous_external_execution",
+    "real_world_side_effect",
+    "unapproved_real_company_data",
+    "live_graph_database_write",
+    "neo4j_connection"
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "status": "PASS",
+  "phase": "Controlled Demo Evidence Pack",
+  "generated_at": "2026-06-30T15:39:40+00:00",
+  "demo_case_count": 3,
+  "source_case_count": 50,
+  "external_execution_allowed": false,
+  "graph_write_allowed": false,
+  "neo4j_connection_allowed": false,
+  "automatic_threshold_mutation_allowed": false,
+  "auto_apply": false,
+  "blocked_actions": [
+    "client_facing_claim",
+    "automatic_nomination",
+    "implementation_execution",
+    "production_activation",
+    "automatic_merge",
+    "credential_handling",
+    "automatic_threshold_mutation",
+    "autonomous_external_execution",
+    "real_world_side_effect",
+    "unapproved_real_company_data",
+    "live_graph_database_write",
+    "neo4j_connection"
+  ]
+}

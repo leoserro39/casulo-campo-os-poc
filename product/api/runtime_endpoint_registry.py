@@ -394,4 +394,14 @@ ENDPOINT_GROUPS = [
         ],
     },
 
+    {
+        "group": "umbrella_controlled_demo_evidence",
+        "routes": [
+            {"path": "/api/casulo/umbrella/demo-evidence/status", "file": "outputs/umbrella_prod-1021_1060_controlled_demo_evidence_status.json", "key": "status"},
+            {"path": "/api/casulo/umbrella/demo-evidence/main", "file": "outputs/umbrella_prod-1021_1060_controlled_demo_evidence.json", "key": "main"},
+            {"path": "/api/casulo/umbrella/demo-evidence/readiness", "file": "outputs/umbrella_prod-1021_1060_controlled_demo_evidence_readiness.json", "key": "readiness"},
+            {"path": "/api/casulo/umbrella/demo-evidence/audit", "file": "outputs/umbrella_prod-1021_1060_controlled_demo_evidence_audit_report.json", "key": "audit"},
+        ],
+    },
+
 ]

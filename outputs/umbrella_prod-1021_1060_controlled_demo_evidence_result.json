@@ -1,0 +1,18 @@
+{
+  "status": "PASS",
+  "decision": "READY_FOR_NON_LIVE_GRAPH_IMPORT_REVIEW_CHILD",
+  "blocked_actions": [
+    "client_facing_claim",
+    "automatic_nomination",
+    "implementation_execution",
+    "production_activation",
+    "automatic_merge",
+    "credential_handling",
+    "automatic_threshold_mutation",
+    "autonomous_external_execution",
+    "real_world_side_effect",
+    "unapproved_real_company_data",
+    "live_graph_database_write",
+    "neo4j_connection"
+  ]
+}
