@@ -1,0 +1,42 @@
+{
+  "status": "PASS",
+  "phase": "PROD-2461..2500",
+  "decision": "MEMORY_GOVERNOR_SYNTHETIC_DATASET_READY",
+  "generated_at": "2026-06-30T22:32:07.663207+00:00",
+  "dataset": {
+    "path": "product/memory/memory_governor_synthetic_benchmark_dataset_v0_1.json",
+    "record_count": 8,
+    "prompt_pair_count": 4,
+    "metric_count": 11,
+    "recommended_next_phase": "PROD-2501..2540 - Memory Governor Synthetic Benchmark Evaluator",
+    "calibration_status": "SYNTHETIC_FIXTURE_NOT_REAL_WORLD_CALIBRATED"
+  },
+  "checks": {
+    "required_tag_present": true,
+    "prior_benchmark_pass": true,
+    "prompt_pair_count": 4,
+    "metric_count": 11,
+    "gate_count": 6,
+    "record_count": 8,
+    "has_pure_variant": true,
+    "has_casulo_variant": true,
+    "two_records_per_pair": true,
+    "all_pairs_represented": true,
+    "has_token_metric": true,
+    "has_recall_metric": true,
+    "has_contamination_metric": true,
+    "has_gate_metric": true,
+    "automatic_delete_blocked": true,
+    "performance_claim_blocked": true,
+    "gpt_memory_api_blocked": true
+  },
+  "errors": [],
+  "blocked_actions": [
+    "automatic_memory_delete",
+    "unreviewed_memory_mutation",
+    "validated_performance_claim",
+    "production_activation",
+    "client_facing_claim",
+    "gpt_memory_api_execution"
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "phase": "PROD-2461..2500",
+  "required_prior_tag": "product-context-lifecycle-memory-governor-benchmark-v0.1",
+  "mode": "synthetic_dataset_only",
+  "allowed_claims": [
+    "synthetic dataset created",
+    "benchmark variants represented",
+    "metrics are ready for evaluator testing"
+  ],
+  "prohibited_claims": [
+    "validated token reduction",
+    "validated chat lifetime improvement",
+    "validated performance improvement",
+    "real memory deletion performed",
+    "GPT memory integration performed"
+  ],
+  "blocked_actions": [
+    "automatic_memory_delete",
+    "unreviewed_memory_mutation",
+    "validated_performance_claim",
+    "production_activation",
+    "client_facing_claim",
+    "gpt_memory_api_execution"
+  ],
+  "recommended_next_phase": "PROD-2501..2540 - Memory Governor Synthetic Benchmark Evaluator"
+}

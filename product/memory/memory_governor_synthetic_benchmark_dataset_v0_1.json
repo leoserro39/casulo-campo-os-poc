@@ -1,0 +1,200 @@
+{
+  "version": "memory_governor_synthetic_benchmark_dataset.v0.1",
+  "phase": "PROD-2461..2500",
+  "dataset_type": "synthetic_controlled_fixture",
+  "important_boundary": "Synthetic dataset only. Does not prove real performance.",
+  "baseline_variant": "PURE_HEAVY_CHAT",
+  "casulo_variant": "CASULO_STATE_GOVERNED_MEMORY",
+  "metrics": [
+    "usable_turns_until_degradation",
+    "token_growth_rate",
+    "context_compression_ratio",
+    "state_retention_score",
+    "decision_recall_accuracy",
+    "stale_context_contamination_rate",
+    "recovery_time_from_snapshot",
+    "output_quality_under_load",
+    "rework_avoided",
+    "cost_per_valid_task",
+    "gate_violation_rate"
+  ],
+  "gates": [
+    "PROMOTE_TO_MEMORY",
+    "COMPRESS_TO_SNAPSHOT",
+    "ARCHIVE_TO_REPO",
+    "DISCARD_EPHEMERAL",
+    "HOLD_HUMAN_REVIEW",
+    "PROTECT_DO_NOT_DELETE"
+  ],
+  "records": [
+    {
+      "id": "MEM-PAIR-001-PURE",
+      "pair_id": "MEM-PAIR-001",
+      "variant": "PURE_HEAVY_CHAT",
+      "theme": "long_task_history",
+      "condition": "Chat keeps full logs, failed attempts, commands and outputs active.",
+      "expected_failure_mode": "context_bloat_or_stale_context_contamination",
+      "simulated_metrics": {
+        "usable_turns_until_degradation": 18,
+        "token_growth_rate": 1.0,
+        "context_compression_ratio": 1.0,
+        "state_retention_score": 0.62,
+        "decision_recall_accuracy": 0.58,
+        "stale_context_contamination_rate": 0.31,
+        "recovery_time_from_snapshot": null,
+        "output_quality_under_load": 0.61,
+        "rework_avoided": 0.0,
+        "cost_per_valid_task": 1.0,
+        "gate_violation_rate": 0.18
+      }
+    },
+    {
+      "id": "MEM-PAIR-001-CASULO",
+      "pair_id": "MEM-PAIR-001",
+      "variant": "CASULO_STATE_GOVERNED_MEMORY",
+      "theme": "long_task_history",
+      "condition": "Chat uses current state snapshot plus repo pointers.",
+      "expected_control": "snapshot_gates_operational_cube_repo_pointers",
+      "simulated_metrics": {
+        "usable_turns_until_degradation": 44,
+        "token_growth_rate": 0.42,
+        "context_compression_ratio": 0.28,
+        "state_retention_score": 0.91,
+        "decision_recall_accuracy": 0.93,
+        "stale_context_contamination_rate": 0.07,
+        "recovery_time_from_snapshot": 0.22,
+        "output_quality_under_load": 0.88,
+        "rework_avoided": 0.36,
+        "cost_per_valid_task": 0.54,
+        "gate_violation_rate": 0.04
+      }
+    },
+    {
+      "id": "MEM-PAIR-002-PURE",
+      "pair_id": "MEM-PAIR-002",
+      "variant": "PURE_HEAVY_CHAT",
+      "theme": "decision_recall",
+      "condition": "Chat recalls commits, tags and decisions from heavy accumulated context.",
+      "expected_failure_mode": "context_bloat_or_stale_context_contamination",
+      "simulated_metrics": {
+        "usable_turns_until_degradation": 18,
+        "token_growth_rate": 1.0,
+        "context_compression_ratio": 1.0,
+        "state_retention_score": 0.62,
+        "decision_recall_accuracy": 0.58,
+        "stale_context_contamination_rate": 0.31,
+        "recovery_time_from_snapshot": null,
+        "output_quality_under_load": 0.61,
+        "rework_avoided": 0.0,
+        "cost_per_valid_task": 1.0,
+        "gate_violation_rate": 0.18
+      }
+    },
+    {
+      "id": "MEM-PAIR-002-CASULO",
+      "pair_id": "MEM-PAIR-002",
+      "variant": "CASULO_STATE_GOVERNED_MEMORY",
+      "theme": "decision_recall",
+      "condition": "Chat recalls compact state with commit, tag, decision and next gate.",
+      "expected_control": "snapshot_gates_operational_cube_repo_pointers",
+      "simulated_metrics": {
+        "usable_turns_until_degradation": 44,
+        "token_growth_rate": 0.42,
+        "context_compression_ratio": 0.28,
+        "state_retention_score": 0.91,
+        "decision_recall_accuracy": 0.93,
+        "stale_context_contamination_rate": 0.07,
+        "recovery_time_from_snapshot": 0.22,
+        "output_quality_under_load": 0.88,
+        "rework_avoided": 0.36,
+        "cost_per_valid_task": 0.54,
+        "gate_violation_rate": 0.04
+      }
+    },
+    {
+      "id": "MEM-PAIR-003-PURE",
+      "pair_id": "MEM-PAIR-003",
+      "variant": "PURE_HEAVY_CHAT",
+      "theme": "stale_context",
+      "condition": "Resolved errors and obsolete commands remain active.",
+      "expected_failure_mode": "context_bloat_or_stale_context_contamination",
+      "simulated_metrics": {
+        "usable_turns_until_degradation": 18,
+        "token_growth_rate": 1.0,
+        "context_compression_ratio": 1.0,
+        "state_retention_score": 0.62,
+        "decision_recall_accuracy": 0.58,
+        "stale_context_contamination_rate": 0.31,
+        "recovery_time_from_snapshot": null,
+        "output_quality_under_load": 0.61,
+        "rework_avoided": 0.0,
+        "cost_per_valid_task": 1.0,
+        "gate_violation_rate": 0.18
+      }
+    },
+    {
+      "id": "MEM-PAIR-003-CASULO",
+      "pair_id": "MEM-PAIR-003",
+      "variant": "CASULO_STATE_GOVERNED_MEMORY",
+      "theme": "stale_context",
+      "condition": "Resolved noise is archived or discarded by gate.",
+      "expected_control": "snapshot_gates_operational_cube_repo_pointers",
+      "simulated_metrics": {
+        "usable_turns_until_degradation": 44,
+        "token_growth_rate": 0.42,
+        "context_compression_ratio": 0.28,
+        "state_retention_score": 0.91,
+        "decision_recall_accuracy": 0.93,
+        "stale_context_contamination_rate": 0.07,
+        "recovery_time_from_snapshot": 0.22,
+        "output_quality_under_load": 0.88,
+        "rework_avoided": 0.36,
+        "cost_per_valid_task": 0.54,
+        "gate_violation_rate": 0.04
+      }
+    },
+    {
+      "id": "MEM-PAIR-004-PURE",
+      "pair_id": "MEM-PAIR-004",
+      "variant": "PURE_HEAVY_CHAT",
+      "theme": "snapshot_recovery",
+      "condition": "Chat resumes from long transcript.",
+      "expected_failure_mode": "context_bloat_or_stale_context_contamination",
+      "simulated_metrics": {
+        "usable_turns_until_degradation": 18,
+        "token_growth_rate": 1.0,
+        "context_compression_ratio": 1.0,
+        "state_retention_score": 0.62,
+        "decision_recall_accuracy": 0.58,
+        "stale_context_contamination_rate": 0.31,
+        "recovery_time_from_snapshot": null,
+        "output_quality_under_load": 0.61,
+        "rework_avoided": 0.0,
+        "cost_per_valid_task": 1.0,
+        "gate_violation_rate": 0.18
+      }
+    },
+    {
+      "id": "MEM-PAIR-004-CASULO",
+      "pair_id": "MEM-PAIR-004",
+      "variant": "CASULO_STATE_GOVERNED_MEMORY",
+      "theme": "snapshot_recovery",
+      "condition": "Chat resumes from state snapshot and repo evidence.",
+      "expected_control": "snapshot_gates_operational_cube_repo_pointers",
+      "simulated_metrics": {
+        "usable_turns_until_degradation": 44,
+        "token_growth_rate": 0.42,
+        "context_compression_ratio": 0.28,
+        "state_retention_score": 0.91,
+        "decision_recall_accuracy": 0.93,
+        "stale_context_contamination_rate": 0.07,
+        "recovery_time_from_snapshot": 0.22,
+        "output_quality_under_load": 0.88,
+        "rework_avoided": 0.36,
+        "cost_per_valid_task": 0.54,
+        "gate_violation_rate": 0.04
+      }
+    }
+  ],
+  "recommended_next_phase": "PROD-2501..2540 - Memory Governor Synthetic Benchmark Evaluator"
+}
