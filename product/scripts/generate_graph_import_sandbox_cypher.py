@@ -49,17 +49,25 @@ def props_from(obj: Dict[str, Any]) -> Dict[str, Any]:
         return props
     return {k: v for k, v in obj.items() if k not in {"id", "label", "type", "from", "to", "source", "target", "start", "end", "start_id", "end_id"}}
 
+def cypher_value(value: Any) -> str:
+    if value is None:
+        return "null"
+    if isinstance(value, bool):
+        return "true" if value else "false"
+    if isinstance(value, (int, float)):
+        return str(value)
+    return json.dumps(str(value), ensure_ascii=False)
+
 def cypher_map(props: Dict[str, Any]) -> str:
-    clean = {}
+    pairs = []
     for k, v in props.items():
         key = re.sub(r"[^A-Za-z0-9_]", "_", str(k))
         if not key or key[0].isdigit():
             key = "p_" + key
-        if isinstance(v, (str, int, float, bool)) or v is None:
-            clean[key] = v
-        else:
-            clean[key] = json.dumps(v, ensure_ascii=False)
-    return json.dumps(clean, ensure_ascii=False)
+        if not isinstance(v, (str, int, float, bool)) and v is not None:
+            v = json.dumps(v, ensure_ascii=False)
+        pairs.append(f"{key}: {cypher_value(v)}")
+    return "{" + ", ".join(pairs) + "}"
 
 def main() -> int:
     parser = argparse.ArgumentParser()

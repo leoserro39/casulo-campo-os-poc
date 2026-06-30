@@ -1,7 +1,7 @@
 {
   "status": "PASS",
   "phase": "Graph Import Sandbox Dry Run",
-  "generated_at": "2026-06-30T16:55:04+00:00",
+  "generated_at": "2026-06-30T17:34:07+00:00",
   "mode": "offline_cypher_preview_no_connection",
   "source_nodes_jsonl": "outputs/prod941_980_graph_export_nodes.jsonl",
   "source_relationships_jsonl": "outputs/prod941_980_graph_export_relationships.jsonl",
