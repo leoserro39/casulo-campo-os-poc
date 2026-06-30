@@ -1,0 +1,16 @@
+{
+  "phase": "PROD-2861..2900",
+  "required_prior_tag": "product-exocortex-value-delta-engine-contract-v0.1",
+  "mode": "expanded_synthetic_fixture_pack",
+  "fixture_count": 12,
+  "blocked_actions": [
+    "real_world_profit_claim",
+    "validated_savings_claim",
+    "client_facing_value_claim",
+    "production_activation",
+    "automatic_memory_delete",
+    "gpt_memory_api_execution",
+    "value_delta_claim_with_low_input_quality"
+  ],
+  "recommended_next_phase": "PROD-2901..2940 - Value Delta Evaluator"
+}

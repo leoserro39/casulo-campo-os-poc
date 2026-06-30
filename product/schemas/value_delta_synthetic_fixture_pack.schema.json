@@ -1,0 +1,12 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "CASULO Value Delta Synthetic Fixture Pack",
+  "type": "object",
+  "required": [
+    "version",
+    "phase",
+    "fixture_count",
+    "fixtures",
+    "evaluated_preview"
+  ]
+}
