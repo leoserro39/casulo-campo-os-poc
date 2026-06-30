@@ -1,0 +1,17 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "CASULO Operational Hallucination Failure Mode Matrix",
+  "type": "object",
+  "required": ["status", "phase", "decision", "matrix", "checks", "blocked_actions"],
+  "properties": {
+    "status": {"type": "string"},
+    "phase": {"type": "string"},
+    "decision": {"type": "string"},
+    "matrix": {"type": "object"},
+    "checks": {"type": "object"},
+    "blocked_actions": {
+      "type": "array",
+      "items": {"type": "string"}
+    }
+  }
+}

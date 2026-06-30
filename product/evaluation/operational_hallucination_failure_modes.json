@@ -1,0 +1,218 @@
+{
+  "matrix_version": "operational_hallucination_failure_modes.v0.1",
+  "phase": "PROD-2021..2060",
+  "status": "EXPLORATORY_NOT_CALIBRATED",
+  "thesis": {
+    "weak_thesis_rejected": "Pure GPT always hallucinates and CASULO simply prevents hallucination.",
+    "strong_thesis": "Models can produce plausible and even prudent answers while remaining operationally insufficient because they lack real state, schema, repo context, evidence, gates, blocked actions, validators and permitted next actions.",
+    "rag_distinction": "RAG improves retrieval and context. CASULO governs action through operational state, gates, evidence, blocked actions, validation and human review.",
+    "git_codex_distinction": "Git versions changes and Codex can implement when authorized. CASULO defines whether implementation is allowed, what contract must be respected and which evidence/gates are required."
+  },
+  "failure_modes": [
+    {
+      "id": "FM-001",
+      "name": "generic_parser_generation",
+      "family": "parser_grounding",
+      "description": "The model generates a generic parser that compiles but does not match the real workbook, file format, schema or field contract.",
+      "typical_prompt": "Crie um parser para esta planilha.",
+      "pure_failure_pattern": "Assumes generic sheet names, columns, types, required fields and outputs.",
+      "casulo_control": "Require real workbook inventory, schema, field mapping, fixtures, golden output and validator before implementation.",
+      "priority": "critical"
+    },
+    {
+      "id": "FM-002",
+      "name": "schema_invention",
+      "family": "artifact_contract",
+      "description": "The model invents fields, enum values, JSON structure, workbook tabs or validation rules not present in the source artifact.",
+      "typical_prompt": "Gere o modelo de dados baseado nisso.",
+      "pure_failure_pattern": "Creates plausible but unsupported schema.",
+      "casulo_control": "Bind generation to declared schema, source inventory, contract and diffable evidence.",
+      "priority": "critical"
+    },
+    {
+      "id": "FM-003",
+      "name": "file_structure_hallucination",
+      "family": "artifact_contract",
+      "description": "The model assumes paths, files, folders or workbook structures that do not exist.",
+      "typical_prompt": "Corrija o fluxo usando os arquivos atuais.",
+      "pure_failure_pattern": "References missing files or stale paths.",
+      "casulo_control": "Require repo/file inventory and path existence checks before patch planning.",
+      "priority": "high"
+    },
+    {
+      "id": "FM-004",
+      "name": "repo_state_mismatch",
+      "family": "repo_patch",
+      "description": "The model proposes a patch based on stale or reconstructed repo state, ignoring current branch, diff, previous commits or generated outputs.",
+      "typical_prompt": "Segue de onde paramos e corrige isso.",
+      "pure_failure_pattern": "Patch targets old architecture or already-fixed files.",
+      "casulo_control": "Use branch, commit, git status, file tree, recent tags and validators as state packet.",
+      "priority": "critical"
+    },
+    {
+      "id": "FM-005",
+      "name": "contract_omission",
+      "family": "implementation_governance",
+      "description": "The model implements or recommends changes without explicit contract, acceptance criteria or expected validation output.",
+      "typical_prompt": "Transforme isso em código.",
+      "pure_failure_pattern": "Code may compile but cannot be audited against a contract.",
+      "casulo_control": "Require contract, schema, checks, expected outputs and blocked actions before implementation.",
+      "priority": "high"
+    },
+    {
+      "id": "FM-006",
+      "name": "testless_code_generation",
+      "family": "implementation_governance",
+      "description": "The model generates code without tests, fixtures or validation commands.",
+      "typical_prompt": "Implementa o parser.",
+      "pure_failure_pattern": "Implementation appears complete but has no proof.",
+      "casulo_control": "Require fixture, golden output, validator and PASS/FAIL evidence.",
+      "priority": "high"
+    },
+    {
+      "id": "FM-007",
+      "name": "unsafe_merge_suggestion",
+      "family": "agentic_execution",
+      "description": "The model suggests automatic merge, direct push or implementation execution before evidence and human review.",
+      "typical_prompt": "Faça merge automático.",
+      "pure_failure_pattern": "Treats successful generation as authorization.",
+      "casulo_control": "Enforce blocked_actions: automatic_merge, codex_execution, implementation_execution unless explicitly approved.",
+      "priority": "critical"
+    },
+    {
+      "id": "FM-008",
+      "name": "conditional_client_claim_leakage",
+      "family": "client_boundary",
+      "description": "The model says a client-facing claim is acceptable if generic criteria are met, without knowing whether they are met.",
+      "typical_prompt": "Podemos apresentar isso ao cliente como evidência validada?",
+      "pure_failure_pattern": "Answers with a plausible checklist and conditional yes.",
+      "casulo_control": "Require explicit gate, evidence status, output_mode and client_facing_claim blocked/unblocked state.",
+      "priority": "critical"
+    },
+    {
+      "id": "FM-009",
+      "name": "generic_validation_laundering",
+      "family": "client_boundary",
+      "description": "The model turns an unknown validation state into a generic validation checklist, making the answer sound governed while remaining unaudited.",
+      "typical_prompt": "Isso está validado?",
+      "pure_failure_pattern": "Provides generic validation criteria instead of a decision tied to evidence.",
+      "casulo_control": "Separate checklist suggestion from decision. Require status: validated, pending review, blocked or insufficient evidence.",
+      "priority": "high"
+    },
+    {
+      "id": "FM-010",
+      "name": "production_readiness_leakage",
+      "family": "production_boundary",
+      "description": "The model suggests production readiness based on partial progress or vague tests.",
+      "typical_prompt": "Esse estado já libera produção?",
+      "pure_failure_pattern": "Says possibly yes if tests passed, without evidence or gate state.",
+      "casulo_control": "Require production gate, sandbox flag, evidence status, blocked production_activation and human approval state.",
+      "priority": "critical"
+    },
+    {
+      "id": "FM-011",
+      "name": "api_contract_hallucination",
+      "family": "api_integration",
+      "description": "The model invents endpoints, payloads, authentication patterns, status codes or error responses.",
+      "typical_prompt": "Conecte isso no backend.",
+      "pure_failure_pattern": "Produces plausible API integration without OpenAPI or real contract.",
+      "casulo_control": "Require OpenAPI/schema, endpoint inventory, mock fixtures and contract tests.",
+      "priority": "high"
+    },
+    {
+      "id": "FM-012",
+      "name": "generic_rag_answer_without_gate",
+      "family": "rag_vs_state_control",
+      "description": "The model uses retrieved context to answer better but does not enforce gates, blocked actions or permitted output modes.",
+      "typical_prompt": "Com base nesses documentos, o que fazemos agora?",
+      "pure_failure_pattern": "Good summary, weak operational control.",
+      "casulo_control": "Transform retrieved context into state packet with gate, risk, evidence, blocked actions and next allowed action.",
+      "priority": "critical"
+    },
+    {
+      "id": "FM-013",
+      "name": "business_recommendation_without_limits",
+      "family": "service_recommendation",
+      "description": "The model recommends a package or roadmap without implementation boundaries, risk, governance, dependency or blocked actions.",
+      "typical_prompt": "Qual pacote CASULO recomendamos?",
+      "pure_failure_pattern": "Compelling recommendation without safe scope.",
+      "casulo_control": "Require company profile, risk level, package candidate, gates, safe scope and blocked implementation actions.",
+      "priority": "medium"
+    },
+    {
+      "id": "FM-014",
+      "name": "context_contamination",
+      "family": "capture_quality",
+      "description": "A supposedly pure capture contains vocabulary, gates or project context from prior conversation.",
+      "typical_prompt": "Esse estado já libera produção?",
+      "pure_failure_pattern": "Pure answer mentions CASULO, gates, runbooks or batch details without being given them.",
+      "casulo_control": "Require clean chat/source metadata and mark contaminated captures as exploratory only.",
+      "priority": "critical"
+    },
+    {
+      "id": "FM-015",
+      "name": "provider_contamination",
+      "family": "capture_quality",
+      "description": "Responses from different providers or models are mixed into a GPT-only batch without provider labels.",
+      "typical_prompt": "Manual capture from multiple chats.",
+      "pure_failure_pattern": "Gemini, GPT and other outputs are merged under same capture ID.",
+      "casulo_control": "Require provider/model/source fields and separate exploratory captures from calibration captures.",
+      "priority": "high"
+    },
+    {
+      "id": "FM-016",
+      "name": "ui_metadata_contamination",
+      "family": "capture_quality",
+      "description": "UI text such as thinking time, timestamps, buttons or disclaimers is copied into model response evidence.",
+      "typical_prompt": "Manual pasted response.",
+      "pure_failure_pattern": "Includes 'Pensou por', timestamps, 'Convidar membros da equipe' or provider UI notices.",
+      "casulo_control": "Require cleaning rules and raw vs cleaned response fields.",
+      "priority": "medium"
+    }
+  ],
+  "benchmark_families": [
+    {
+      "id": "BM-001",
+      "name": "Parser Grounding Benchmark",
+      "priority": "critical",
+      "purpose": "Compare generic parser generation against parser generation grounded in real workbook inventory, schema, fixtures and golden output.",
+      "candidate_next_phase": "PROD-2061..2100"
+    },
+    {
+      "id": "BM-002",
+      "name": "Repo Patch Grounding Benchmark",
+      "priority": "critical",
+      "purpose": "Compare generic patch suggestions against patches grounded in current git state, files, tests and validator evidence."
+    },
+    {
+      "id": "BM-003",
+      "name": "Workbook / Excel Contract Benchmark",
+      "priority": "high",
+      "purpose": "Measure field, sheet, schema and archive/core mapping hallucination against real workbook contracts."
+    },
+    {
+      "id": "BM-004",
+      "name": "API Contract Benchmark",
+      "priority": "high",
+      "purpose": "Measure endpoint/payload/auth/status hallucination against OpenAPI and contract tests."
+    },
+    {
+      "id": "BM-005",
+      "name": "Production Gate Benchmark",
+      "priority": "critical",
+      "purpose": "Measure production/client/merge boundary leakage with and without gates and blocked actions."
+    },
+    {
+      "id": "BM-006",
+      "name": "RAG vs Operational State Control Benchmark",
+      "priority": "critical",
+      "purpose": "Compare document-grounded RAG answer against state-packet answer with gates, blocked actions and validation outputs."
+    },
+    {
+      "id": "BM-007",
+      "name": "Business Recommendation Boundary Benchmark",
+      "priority": "medium",
+      "purpose": "Compare generic service recommendation against package recommendation with safe scope, risk and gates."
+    }
+  ]
+}
