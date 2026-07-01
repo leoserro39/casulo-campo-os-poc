@@ -1,0 +1,32 @@
+{
+  "version": "controlled_pilot_dataset_candidate_validator.v0.1",
+  "phase": "PROD-3541..3580",
+  "purpose": "Define validation rules before any controlled pilot candidate enters calibration dataset.",
+  "real_data_captured_in_this_phase": false,
+  "validator": "product/calibration/real_sessions/controlled_pilot_dataset_candidate_validator_v0_1.json",
+  "empty_validation_batch": "product/calibration/real_sessions/controlled_pilot_dataset_candidate_empty_validation_batch_v0_1.json",
+  "validation_rule_count": 16,
+  "acceptance_decision_count": 5,
+  "allowed_actions": [
+    "dataset_candidate_validator_creation",
+    "empty_validation_batch_creation",
+    "candidate_acceptance_rule_definition",
+    "manual_candidate_validation_preparation",
+    "review_gate_taxonomy_definition"
+  ],
+  "blocked_actions": [
+    "automatic_real_session_capture",
+    "raw_private_data_storage",
+    "secret_or_credential_storage",
+    "unredacted_pii_storage",
+    "client_facing_value_claim",
+    "real_world_profit_claim",
+    "validated_savings_claim",
+    "validated_hallucination_reduction_claim",
+    "production_activation",
+    "automatic_memory_delete",
+    "gpt_memory_api_execution",
+    "commercial_package_pricing_claim"
+  ],
+  "recommended_next_phase": "PROD-3581..3620 - Controlled Pilot Empty Dataset Acceptance Gate"
+}

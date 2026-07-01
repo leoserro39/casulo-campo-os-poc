@@ -1,0 +1,32 @@
+{
+  "phase": "PROD-3541..3580",
+  "required_prior_tag": "product-controlled-pilot-evidence-packet-reviewer-queue-v0.1",
+  "mode": "controlled_pilot_dataset_candidate_validator",
+  "real_data_captured_in_this_phase": false,
+  "validator_only": true,
+  "empty_validation_batch_only": true,
+  "manual_review_required": true,
+  "all_rules_required_for_acceptance": true,
+  "blocked_actions": [
+    "automatic_real_session_capture",
+    "raw_private_data_storage",
+    "secret_or_credential_storage",
+    "unredacted_pii_storage",
+    "client_facing_value_claim",
+    "real_world_profit_claim",
+    "validated_savings_claim",
+    "validated_hallucination_reduction_claim",
+    "production_activation",
+    "automatic_memory_delete",
+    "gpt_memory_api_execution",
+    "commercial_package_pricing_claim"
+  ],
+  "allowed_actions": [
+    "dataset_candidate_validator_creation",
+    "empty_validation_batch_creation",
+    "candidate_acceptance_rule_definition",
+    "manual_candidate_validation_preparation",
+    "review_gate_taxonomy_definition"
+  ],
+  "recommended_next_phase": "PROD-3581..3620 - Controlled Pilot Empty Dataset Acceptance Gate"
+}
