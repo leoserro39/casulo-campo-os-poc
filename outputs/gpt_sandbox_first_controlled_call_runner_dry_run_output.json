@@ -1,0 +1,33 @@
+{
+  "status": "PASS",
+  "mode": "DRY_RUN_ONLY",
+  "generated_at": "2026-07-01T13:44:16.901515+00:00",
+  "real_gpt_provider_call": false,
+  "openai_api_key_storage": false,
+  "gpt_memory_api_execution": false,
+  "live_gpt_call_execution": false,
+  "request_modes": [
+    "PURE_GPT",
+    "STACK_GPT",
+    "CASULO_EXOCORTEX_STACK"
+  ],
+  "expected_log_fields": [
+    "run_id",
+    "mode",
+    "provider",
+    "model_name",
+    "input_payload_hash",
+    "output_hash",
+    "latency_ms",
+    "estimated_cost",
+    "evidence_grounding_score",
+    "unsupported_claim_count",
+    "gate_violation_count",
+    "context_regression_count",
+    "roadmap_regression_count",
+    "human_review_required",
+    "human_reviewer_ref"
+  ],
+  "blocked_reason": "Live GPT call requires a future explicit readiness gate.",
+  "next_required_phase": "PROD-5341..5380 - GPT Sandbox First Controlled Call Runner Readiness Gate"
+}
