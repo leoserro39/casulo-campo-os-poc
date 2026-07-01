@@ -1,0 +1,29 @@
+{
+  "phase": "PROD-5661..5700",
+  "required_prior_tag": "product-stack-gpt-controlled-live-call-packet-v0.1",
+  "scope": "GPT_ONLY_OPENAI_ADAPTERS",
+  "execution_gate_only": true,
+  "stack_live_execution_not_performed_in_this_gate": true,
+  "future_stack_live_execution_allowed_only_by_explicit_operator_command": true,
+  "api_key_storage_blocked": true,
+  "gpt_memory_api_blocked": true,
+  "dataset_write_blocked": true,
+  "multi_vendor_llm_blocked_this_cycle": true,
+  "blocked_actions": [
+    "openai_api_key_storage",
+    "gpt_memory_api_execution",
+    "multi_vendor_llm_execution",
+    "claude_provider_call",
+    "gemini_provider_call",
+    "copilot_provider_call",
+    "real_candidate_insert",
+    "real_candidate_dataset_acceptance",
+    "dataset_acceptance_without_human_review",
+    "raw_private_data_storage",
+    "secret_or_credential_storage",
+    "unredacted_pii_storage",
+    "client_facing_value_claim",
+    "production_activation"
+  ],
+  "recommended_next_phase": "PROD-5701..5740 - STACK GPT Controlled Live Call Execution Run"
+}

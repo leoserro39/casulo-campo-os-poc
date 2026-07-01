@@ -38,5 +38,6 @@
 - `PROD-5501..5540` - GPT Sandbox First Controlled Live Call Execution Gate - **DONE**
 - `PROD-5541..5580` - GPT Sandbox First Controlled Live Call Execution Run - **DONE**
 - `PROD-5581..5620` - GPT Sandbox First Controlled Live Call Post-Call Review Gate - **DONE**
-- `PROD-5621..5660` - STACK GPT Controlled Live Call Packet - **CURRENT**
-- `PROD-5661..5700` - STACK GPT Controlled Live Call Execution Gate - **NEXT**
+- `PROD-5621..5660` - STACK GPT Controlled Live Call Packet - **DONE**
+- `PROD-5661..5700` - STACK GPT Controlled Live Call Execution Gate - **CURRENT**
+- `PROD-5701..5740` - STACK GPT Controlled Live Call Execution Run - **NEXT**

@@ -1,0 +1,19 @@
+STDOUT:
+{
+  "status": "PASS",
+  "mode": "STACK_GPT",
+  "dry_run": true,
+  "live_gpt_call_execution": false,
+  "real_gpt_provider_call": false,
+  "successful_live_gpt_response": false,
+  "openai_api_key_storage": false,
+  "gpt_memory_api_execution": false,
+  "reason": "Dry-run only. Use --apply only after explicit execution gate.",
+  "prompt_hash": "6be443bca5e5fa281b83b80aa3ac8f9aacefb7ecdc6aa913889e98cc1421f7d8",
+  "next_required_phase": "PROD-5501..5540 - GPT Sandbox First Controlled Live Call Execution Gate"
+}
+
+STDERR:
+
+RC:
+0

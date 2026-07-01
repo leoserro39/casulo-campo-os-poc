@@ -1,0 +1,12 @@
+{
+  "status": "FAIL",
+  "mode": "STACK_GPT",
+  "dry_run": false,
+  "live_gpt_call_execution": false,
+  "real_gpt_provider_call": false,
+  "successful_live_gpt_response": false,
+  "openai_api_key_storage": false,
+  "gpt_memory_api_execution": false,
+  "blocked_reason": "CASULO_GPT_LIVE_AUTH=YES is required.",
+  "prompt_hash": "6be443bca5e5fa281b83b80aa3ac8f9aacefb7ecdc6aa913889e98cc1421f7d8"
+}
