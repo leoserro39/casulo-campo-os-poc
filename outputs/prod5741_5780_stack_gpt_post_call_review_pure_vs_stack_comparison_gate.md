@@ -1,0 +1,23 @@
+# PROD-5741..5780 Result
+
+- Status: PASS
+- Decision: APPROVED_PURE_VS_STACK_GPT_COMPARISON_FOR_RECORD_ONLY_EXOCORTEX_STACK_PACKET_NEXT
+- Review checks: 188
+- PURE mode: PURE_GPT
+- PURE output: CASULO_GPT_SANDBOX_ACK
+- PURE latency ms: 4285
+- STACK mode: STACK_GPT
+- STACK output: CASULO_STACK_GPT_SANDBOX_ACK
+- STACK latency ms: 4001
+- Latency delta STACK minus PURE: -284
+- Unsupported claim count: 0
+- Gate violation count: 0
+- Dataset write count: 0
+- API key storage count: 0
+- GPT Memory API execution count: 0
+- Accepted for comparison record only: True
+- Accepted as dataset candidate: false
+- Accepted as client evidence: false
+- Accepted as production evidence: false
+- Exocortex used: false
+- Next: PROD-5781..5820 - CASULO Exocortex Stack Controlled Live Call Packet
