@@ -1,0 +1,31 @@
+{
+  "phase": "PROD-3341..3380",
+  "required_prior_tag": "product-synthetic-calibration-dry-run-evaluator-v0.1",
+  "mode": "synthetic_calibration_readiness_gate",
+  "real_data_captured": false,
+  "synthetic_only": true,
+  "pilot_preparation_only": true,
+  "real_capture_still_blocked": true,
+  "blocked_actions": [
+    "real_session_data_capture",
+    "raw_private_data_storage",
+    "secret_or_credential_storage",
+    "unredacted_pii_storage",
+    "client_facing_value_claim",
+    "real_world_profit_claim",
+    "validated_savings_claim",
+    "validated_hallucination_reduction_claim",
+    "production_activation",
+    "automatic_memory_delete",
+    "gpt_memory_api_execution",
+    "commercial_package_pricing_claim"
+  ],
+  "allowed_actions": [
+    "controlled_real_session_pilot_preparation",
+    "human_review_packet_preparation",
+    "sanitized_source_reference_protocol",
+    "pilot_acceptance_criteria_definition",
+    "calibration_evidence_protocol_definition"
+  ],
+  "recommended_next_phase": "PROD-3381..3420 - Controlled Real Session Pilot Packet"
+}

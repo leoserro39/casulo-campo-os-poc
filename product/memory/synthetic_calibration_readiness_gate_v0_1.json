@@ -1,0 +1,62 @@
+{
+  "version": "synthetic_calibration_readiness_gate.v0.1",
+  "phase": "PROD-3341..3380",
+  "decision": "APPROVED_FOR_CONTROLLED_REAL_SESSION_PILOT_PREPARATION_ONLY",
+  "scope": "Preparation only for controlled real-session pilot. No real session capture in this phase.",
+  "synthetic_readiness": {
+    "readiness_score": 100.0,
+    "readiness_band": "SYNTHETIC_READY_STRONG",
+    "record_count": 8,
+    "correlations": {
+      "apex_vs_hallucination": -0.9958,
+      "complexity_vs_hallucination": 0.8958,
+      "cost_vs_hallucination": 0.8217,
+      "input_quality_vs_hallucination": -0.9807,
+      "apex_vs_rework": -0.9686,
+      "value_delta_vs_operational_cost": 0.8827
+    }
+  },
+  "interpretation": {
+    "synthetic_result": "Pipeline signals are internally coherent under synthetic data.",
+    "not_evidence_of": [
+      "real_world_savings",
+      "real_world_profit",
+      "validated_hallucination_reduction",
+      "client_value",
+      "production_readiness"
+    ],
+    "next_allowed_step": "Prepare controlled real-session pilot packet with human review and privacy controls."
+  },
+  "pilot_exit_criteria": [
+    "privacy_review_passed",
+    "pii_redaction_passed",
+    "secret_scan_passed",
+    "source_refs_only_confirmed",
+    "human_reviewer_assigned",
+    "claim_boundary_confirmed",
+    "baseline_vs_exocortex_protocol_confirmed",
+    "dataset_acceptance_gate_defined"
+  ],
+  "allowed_actions": [
+    "controlled_real_session_pilot_preparation",
+    "human_review_packet_preparation",
+    "sanitized_source_reference_protocol",
+    "pilot_acceptance_criteria_definition",
+    "calibration_evidence_protocol_definition"
+  ],
+  "blocked_actions": [
+    "real_session_data_capture",
+    "raw_private_data_storage",
+    "secret_or_credential_storage",
+    "unredacted_pii_storage",
+    "client_facing_value_claim",
+    "real_world_profit_claim",
+    "validated_savings_claim",
+    "validated_hallucination_reduction_claim",
+    "production_activation",
+    "automatic_memory_delete",
+    "gpt_memory_api_execution",
+    "commercial_package_pricing_claim"
+  ],
+  "recommended_next_phase": "PROD-3381..3420 - Controlled Real Session Pilot Packet"
+}
