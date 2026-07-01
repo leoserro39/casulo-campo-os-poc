@@ -1,0 +1,570 @@
+{
+  "version": "controlled_pilot_manual_dry_run_session_execution_plan_checklist.v0.1",
+  "phase": "PROD-4621..4660",
+  "status": "CHECKLIST_TEMPLATE_ONLY_NO_SESSION_EXECUTION",
+  "real_data_captured_in_this_phase": false,
+  "real_candidate_inserted": false,
+  "real_candidate_accepted_to_dataset": false,
+  "checks": [
+    {
+      "id": "PLAN-001",
+      "name": "prior_operator_start_readiness_gate_passed",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "PLAN-002",
+      "name": "operator_start_packet_present",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "PLAN-003",
+      "name": "operator_start_template_present",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "PLAN-004",
+      "name": "operator_start_checklist_present",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "PLAN-005",
+      "name": "precheck_readiness_gate_present",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "PLAN-006",
+      "name": "precheck_packet_present",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "PLAN-007",
+      "name": "precheck_template_present",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "PLAN-008",
+      "name": "precheck_checklist_present",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "PLAN-009",
+      "name": "final_gate_readiness_gate_present",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "PLAN-010",
+      "name": "final_gate_packet_present",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "PLAN-011",
+      "name": "final_gate_template_present",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "PLAN-012",
+      "name": "final_gate_checklist_present",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "PLAN-013",
+      "name": "review_readiness_gate_present",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "PLAN-014",
+      "name": "review_packet_present",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "PLAN-015",
+      "name": "observation_readiness_gate_present",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "PLAN-016",
+      "name": "observation_packet_present",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "PLAN-017",
+      "name": "log_readiness_gate_present",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "PLAN-018",
+      "name": "log_shell_present",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "PLAN-019",
+      "name": "execution_gate_present",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "PLAN-020",
+      "name": "session_packet_present",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "PLAN-021",
+      "name": "session_checklist_present",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "PLAN-022",
+      "name": "session_runbook_present",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "PLAN-023",
+      "name": "execution_packet_present",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "PLAN-024",
+      "name": "dry_run_shell_present",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "PLAN-025",
+      "name": "dry_run_form_present",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "PLAN-026",
+      "name": "validator_present",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "PLAN-027",
+      "name": "schema_present",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "PLAN-028",
+      "name": "real_dataset_empty",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "PLAN-029",
+      "name": "reviewer_queue_empty",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "PLAN-030",
+      "name": "execution_plan_sections_present",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "PLAN-031",
+      "name": "execution_plan_fields_present",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "PLAN-032",
+      "name": "execution_plan_checks_present",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "PLAN-033",
+      "name": "execution_plan_template_fields_present",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "PLAN-034",
+      "name": "execution_plan_checklist_items_present",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "PLAN-035",
+      "name": "operator_start_refs_present",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "PLAN-036",
+      "name": "precheck_refs_present",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "PLAN-037",
+      "name": "final_gate_refs_present",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "PLAN-038",
+      "name": "review_refs_present",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "PLAN-039",
+      "name": "observation_refs_present",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "PLAN-040",
+      "name": "log_refs_present",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "PLAN-041",
+      "name": "session_refs_present",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "PLAN-042",
+      "name": "dry_run_refs_present",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "PLAN-043",
+      "name": "operator_ref_required",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "PLAN-044",
+      "name": "human_reviewer_ref_required",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "PLAN-045",
+      "name": "source_reference_refs_required",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "PLAN-046",
+      "name": "privacy_review_ref_required",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "PLAN-047",
+      "name": "pii_redaction_ref_required",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "PLAN-048",
+      "name": "secret_scan_ref_required",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "PLAN-049",
+      "name": "evidence_packet_ref_required",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "PLAN-050",
+      "name": "manual_observation_refs_required",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "PLAN-051",
+      "name": "reviewer_notes_ref_required",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "PLAN-052",
+      "name": "claim_boundary_review_required",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "PLAN-053",
+      "name": "dataset_hold_reason_required",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "PLAN-054",
+      "name": "blocked_action_review_required",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "PLAN-055",
+      "name": "abort_trigger_review_required",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "PLAN-056",
+      "name": "start_hold_status_ref_required",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "PLAN-057",
+      "name": "execution_plan_steps_ref_required",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "PLAN-058",
+      "name": "manual_stop_points_ref_required",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "PLAN-059",
+      "name": "execution_plan_decision_required",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "PLAN-060",
+      "name": "execution_plan_reason_required",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "PLAN-061",
+      "name": "stop_before_execution_confirmation_required",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "PLAN-062",
+      "name": "next_allowed_phase_required",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "PLAN-063",
+      "name": "reference_only_storage_required",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "PLAN-064",
+      "name": "sanitized_execution_plan_only",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "PLAN-065",
+      "name": "template_only_confirmed",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "PLAN-066",
+      "name": "checklist_template_only_confirmed",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "PLAN-067",
+      "name": "session_execution_not_performed",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "PLAN-068",
+      "name": "execution_plan_packet_only_confirmed",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "PLAN-069",
+      "name": "start_command_blocked",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "PLAN-070",
+      "name": "manual_session_execution_blocked",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "PLAN-071",
+      "name": "automatic_capture_blocked",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "PLAN-072",
+      "name": "real_candidate_insert_blocked",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "PLAN-073",
+      "name": "dataset_acceptance_blocked",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "PLAN-074",
+      "name": "raw_private_data_blocked",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "PLAN-075",
+      "name": "secrets_blocked",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "PLAN-076",
+      "name": "unredacted_pii_blocked",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "PLAN-077",
+      "name": "client_claim_blocked",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "PLAN-078",
+      "name": "production_activation_blocked",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "PLAN-079",
+      "name": "human_review_required",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "PLAN-080",
+      "name": "roadmap_updated",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "PLAN-081",
+      "name": "execution_plan_readiness_gate_preparation_only",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "PLAN-082",
+      "name": "no_real_value_claim",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "PLAN-083",
+      "name": "no_validated_hallucination_claim",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "PLAN-084",
+      "name": "no_commercial_pricing_claim",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "PLAN-085",
+      "name": "no_gpt_memory_api_execution",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "PLAN-086",
+      "name": "no_automatic_memory_delete",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "PLAN-087",
+      "name": "dataset_hold_before_real_intake",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "PLAN-088",
+      "name": "manual_only_path_confirmed",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "PLAN-089",
+      "name": "controlled_pilot_boundary_confirmed",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "PLAN-090",
+      "name": "execution_plan_review_before_session_required",
+      "required": true,
+      "status": "PENDING"
+    }
+  ],
+  "default_gate": "HOLD_EXECUTION_PLAN_PACKET_NO_SESSION_EXECUTION",
+  "blocked_actions": [
+    "start_command_execution",
+    "manual_session_execution",
+    "automatic_real_session_capture",
+    "real_candidate_insert",
+    "real_candidate_dataset_acceptance",
+    "dataset_acceptance_without_human_review",
+    "raw_private_data_storage",
+    "secret_or_credential_storage",
+    "unredacted_pii_storage",
+    "client_facing_value_claim",
+    "real_world_profit_claim",
+    "validated_savings_claim",
+    "validated_hallucination_reduction_claim",
+    "production_activation",
+    "automatic_memory_delete",
+    "gpt_memory_api_execution",
+    "commercial_package_pricing_claim"
+  ]
+}

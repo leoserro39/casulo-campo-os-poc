@@ -1,0 +1,27 @@
+# Controlled Pilot Manual Dry Run Session Roadmap
+
+- `PROD-4101..4140` - Manual Dry Run Session Execution Gate - **DONE**
+- `PROD-4141..4180` - Execution Log Shell - **DONE**
+- `PROD-4181..4220` - Execution Log Readiness Gate - **DONE**
+- `PROD-4221..4260` - Observation Packet - **DONE**
+- `PROD-4261..4300` - Observation Readiness Gate - **DONE**
+- `PROD-4301..4340` - Review Packet - **DONE**
+- `PROD-4341..4380` - Review Readiness Gate - **DONE**
+- `PROD-4381..4420` - Final Gate Packet - **DONE**
+- `PROD-4421..4460` - Final Gate Readiness Gate - **DONE**
+- `PROD-4461..4500` - Execution Precheck Packet - **DONE**
+- `PROD-4501..4540` - Execution Precheck Readiness Gate - **DONE**
+- `PROD-4541..4580` - Operator Start Packet - **DONE**
+- `PROD-4581..4620` - Operator Start Readiness Gate - **DONE**
+- `PROD-4621..4660` - Execution Plan Packet - **CURRENT**
+- `PROD-4661..4700` - Execution Plan Readiness Gate - **NEXT**
+- `PROD-4701..4740` - Manual Session Execution Hold Packet - **PLANNED**
+- `PROD-4741..4780` - Manual Session Execution Hold Readiness Gate - **PLANNED**
+
+## Current boundary
+- Current phase prepares the execution plan packet only.
+- No session execution.
+- No start command.
+- No real candidate insert.
+- No dataset acceptance.
+- No real-world/client-facing claim.
