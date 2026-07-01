@@ -1,0 +1,39 @@
+{
+  "version": "controlled_pilot_real_candidate_intake_dry_run_validator.v0.1",
+  "phase": "PROD-3861..3900",
+  "purpose": "Validate dry run shell/form before any real candidate insert.",
+  "real_data_captured_in_this_phase": false,
+  "real_candidate_inserted": false,
+  "real_candidate_accepted_to_dataset": false,
+  "validator_rule_count": 20,
+  "shell_section_count": 17,
+  "form_field_count": 16,
+  "preflight_check_count": 17,
+  "validator": "product/calibration/real_sessions/controlled_pilot_real_candidate_intake_dry_run_validator_v0_1.json",
+  "empty_validation_result": "product/calibration/real_sessions/controlled_pilot_real_candidate_intake_dry_run_empty_validation_result_v0_1.json",
+  "allowed_actions": [
+    "dry_run_shell_validation",
+    "dry_run_form_validation",
+    "empty_validation_result_generation",
+    "real_candidate_dry_run_readiness_preparation",
+    "manual_preflight_validator_definition"
+  ],
+  "blocked_actions": [
+    "automatic_real_session_capture",
+    "real_candidate_insert",
+    "real_candidate_dataset_acceptance",
+    "dataset_acceptance_without_human_review",
+    "raw_private_data_storage",
+    "secret_or_credential_storage",
+    "unredacted_pii_storage",
+    "client_facing_value_claim",
+    "real_world_profit_claim",
+    "validated_savings_claim",
+    "validated_hallucination_reduction_claim",
+    "production_activation",
+    "automatic_memory_delete",
+    "gpt_memory_api_execution",
+    "commercial_package_pricing_claim"
+  ],
+  "recommended_next_phase": "PROD-3901..3940 - Controlled Pilot Real Candidate Dry Run Readiness Gate"
+}
