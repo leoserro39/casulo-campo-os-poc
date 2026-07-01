@@ -1,0 +1,32 @@
+{
+  "phase": "PROD-3581..3620",
+  "required_prior_tag": "product-controlled-pilot-dataset-candidate-validator-v0.1",
+  "mode": "controlled_pilot_empty_dataset_acceptance_gate",
+  "real_data_captured_in_this_phase": false,
+  "empty_dataset_gate_only": true,
+  "manual_candidate_intake_preparation_only": true,
+  "dataset_acceptance_without_human_review_blocked": true,
+  "blocked_actions": [
+    "automatic_real_session_capture",
+    "raw_private_data_storage",
+    "secret_or_credential_storage",
+    "unredacted_pii_storage",
+    "client_facing_value_claim",
+    "real_world_profit_claim",
+    "validated_savings_claim",
+    "validated_hallucination_reduction_claim",
+    "production_activation",
+    "automatic_memory_delete",
+    "gpt_memory_api_execution",
+    "commercial_package_pricing_claim",
+    "dataset_acceptance_without_human_review"
+  ],
+  "allowed_actions": [
+    "manual_candidate_intake_preparation",
+    "empty_dataset_acceptance_gate_definition",
+    "reviewer_queue_preflight",
+    "candidate_template_preflight",
+    "evidence_packet_preflight"
+  ],
+  "recommended_next_phase": "PROD-3621..3660 - Controlled Pilot Manual Candidate Intake Shell"
+}
