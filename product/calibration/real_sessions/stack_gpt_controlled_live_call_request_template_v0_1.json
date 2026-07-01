@@ -1,0 +1,40 @@
+{
+  "version": "stack_gpt_controlled_live_call_request_template.v0.1",
+  "phase": "PROD-5621..5660",
+  "template_only": true,
+  "mode": "STACK_GPT",
+  "provider": "openai_gpt",
+  "api_key_source": "OPENAI_API_KEY_ENV_REFERENCE_ONLY_NOT_STORED",
+  "model_env": "OPENAI_MODEL_OPTIONAL_ENV_REFERENCE",
+  "prompt": "CASULO controlled STACK GPT sandbox test. Use the supplied CASULO state/evidence/gate context and return only: CASULO_STACK_GPT_SANDBOX_ACK.",
+  "stack_context_refs": {
+    "casulo_state_snapshot_ref": "TO_BE_BOUND_IN_EXECUTION_GATE",
+    "evidence_packet_ref": "TO_BE_BOUND_IN_EXECUTION_GATE",
+    "gate_packet_ref": "TO_BE_BOUND_IN_EXECUTION_GATE",
+    "claim_boundary_ref": "TO_BE_BOUND_IN_EXECUTION_GATE"
+  },
+  "blocked_actions": [
+    "openai_api_key_storage",
+    "gpt_memory_api_execution",
+    "multi_vendor_llm_execution",
+    "claude_provider_call",
+    "gemini_provider_call",
+    "copilot_provider_call",
+    "start_command_execution",
+    "manual_session_execution",
+    "automatic_real_session_capture",
+    "real_candidate_insert",
+    "real_candidate_dataset_acceptance",
+    "dataset_acceptance_without_human_review",
+    "raw_private_data_storage",
+    "secret_or_credential_storage",
+    "unredacted_pii_storage",
+    "client_facing_value_claim",
+    "real_world_profit_claim",
+    "validated_savings_claim",
+    "validated_hallucination_reduction_claim",
+    "production_activation",
+    "automatic_memory_delete",
+    "commercial_package_pricing_claim"
+  ]
+}

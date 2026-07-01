@@ -1,0 +1,51 @@
+{
+  "version": "pure_vs_stack_gpt_comparison_template.v0.1",
+  "phase": "PROD-5621..5660",
+  "template_only": true,
+  "baseline_mode": "PURE_GPT",
+  "comparison_mode": "STACK_GPT",
+  "metrics": [
+    "successful_live_gpt_response",
+    "output_ack_match",
+    "unsupported_claim_count",
+    "gate_violation_count",
+    "evidence_grounding_score",
+    "context_regression_count",
+    "latency_ms",
+    "api_key_storage",
+    "gpt_memory_api_execution",
+    "dataset_write"
+  ],
+  "baseline_reference": {
+    "mode": "PURE_GPT",
+    "model": "gpt-5.5-2026-04-23",
+    "output_preview": "CASULO_GPT_SANDBOX_ACK",
+    "prompt_hash": "a372439bdd2b1f3d4c30a48d9431f53a68a8ff9642add5a75e84899346997d8d",
+    "output_hash": "a8a50a59ff50000adcd55b0d1adf47b556c2bbd13333dc284e32f8c5fed61050",
+    "latency_ms": 4285
+  },
+  "blocked_actions": [
+    "openai_api_key_storage",
+    "gpt_memory_api_execution",
+    "multi_vendor_llm_execution",
+    "claude_provider_call",
+    "gemini_provider_call",
+    "copilot_provider_call",
+    "start_command_execution",
+    "manual_session_execution",
+    "automatic_real_session_capture",
+    "real_candidate_insert",
+    "real_candidate_dataset_acceptance",
+    "dataset_acceptance_without_human_review",
+    "raw_private_data_storage",
+    "secret_or_credential_storage",
+    "unredacted_pii_storage",
+    "client_facing_value_claim",
+    "real_world_profit_claim",
+    "validated_savings_claim",
+    "validated_hallucination_reduction_claim",
+    "production_activation",
+    "automatic_memory_delete",
+    "commercial_package_pricing_claim"
+  ]
+}

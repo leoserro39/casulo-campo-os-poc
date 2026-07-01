@@ -1,0 +1,23 @@
+{
+  "status": "PASS",
+  "phase": "PROD-5621..5660",
+  "decision": "STACK_GPT_CONTROLLED_LIVE_CALL_PACKET_READY",
+  "generated_at": "2026-07-01T14:43:54.946490+00:00",
+  "check_count": 148,
+  "gpt_only_scope": true,
+  "multi_vendor_llm_scope": false,
+  "stack_gpt_packet_only": true,
+  "stack_gpt_live_execution_allowed": false,
+  "real_gpt_provider_call_in_this_phase": false,
+  "successful_live_gpt_response_in_this_phase": false,
+  "openai_api_key_storage": false,
+  "gpt_memory_api_execution": false,
+  "baseline_mode": "PURE_GPT",
+  "baseline_model": "gpt-5.5-2026-04-23",
+  "baseline_output_preview": "CASULO_GPT_SANDBOX_ACK",
+  "real_candidate_inserted": false,
+  "real_candidate_accepted_to_dataset": false,
+  "real_data_captured_in_this_phase": false,
+  "recommended_next_phase": "PROD-5661..5700 - STACK GPT Controlled Live Call Execution Gate",
+  "errors": []
+}
