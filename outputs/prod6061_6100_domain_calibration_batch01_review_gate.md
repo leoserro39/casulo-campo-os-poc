@@ -1,0 +1,30 @@
+# PROD-6061..6100 Result
+
+- Status: PASS
+- Decision: DOMAIN_CALIBRATION_BATCH01_REVIEW_COMPLETED_WITH_CONTENT_CAPTURE_HOLD
+- Review checks: 272
+- Review gate only: true
+- Additional live call in this gate: false
+- Technical execution status: PASS
+- Executed count: 36
+- Real provider call count: 36
+- Successful live response count: 36
+- Domain count: 6
+- Scenario count: 12
+- Safety violations: 0
+- Empty output count: 27
+- Non-empty output count: 9
+- Full output present count: 0
+- JSON parseable from preview count: 0
+- Expected field full coverage count: 0
+- Content capture sufficient: False
+- Content capture hold: True
+- Behavioral review status: PARTIAL_BLOCKED_BY_CONTENT_CAPTURE
+- Domain validation completed: false
+- Accepted for behavioral calibration: False
+- Accepted as dataset candidate: false
+- Accepted as client evidence: false
+- Accepted as production evidence: false
+- Commercial claim: false
+- Rerun required: True
+- Next: PROD-6101..6140 - Domain Calibration Output Capture Hardening Packet

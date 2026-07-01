@@ -1,0 +1,41 @@
+{
+  "phase": "PROD-6061..6100",
+  "required_prior_tag": "product-domain-calibration-batch01-execution-run-v0.1",
+  "review_gate_only": true,
+  "additional_live_call_allowed": false,
+  "technical_execution_accepted": true,
+  "behavioral_calibration_acceptance_blocked": true,
+  "content_capture_hold": true,
+  "rerun_required_after_hardening": true,
+  "dataset_acceptance_blocked": true,
+  "client_claim_blocked": true,
+  "production_blocked": true,
+  "commercial_claim_blocked": true,
+  "blocked_actions": [
+    "additional_live_gpt_call_in_this_gate",
+    "openai_api_key_storage",
+    "gpt_memory_api_execution",
+    "real_memory_api_execution",
+    "persistent_memory_write",
+    "multi_vendor_llm_execution",
+    "dataset_acceptance",
+    "real_candidate_insert",
+    "real_candidate_dataset_acceptance",
+    "dataset_acceptance_without_human_review",
+    "client_facing_value_claim",
+    "production_activation",
+    "validated_business_claim",
+    "validated_hallucination_reduction_claim",
+    "commercial_claim",
+    "domain_validation_claim"
+  ],
+  "allowed_actions": [
+    "batch01_review_gate_creation",
+    "technical_execution_review",
+    "content_capture_gap_detection",
+    "behavioral_review_hold",
+    "output_capture_hardening_packet_next",
+    "roadmap_update"
+  ],
+  "recommended_next_phase": "PROD-6101..6140 - Domain Calibration Output Capture Hardening Packet"
+}
