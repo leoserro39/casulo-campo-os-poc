@@ -1,0 +1,14 @@
+{
+  "version": "casulo_delta_zero_human_review_export_manifest.v0.3",
+  "phase": "PROD-6541..6660",
+  "generated_at": "2026-07-01T19:16:08.804048+00:00",
+  "files_for_review": [
+    "product/evaluation/casulo_delta_zero_human_review_prepared_sheet_v0_3.csv",
+    "product/evaluation/casulo_delta_zero_human_review_prepared_sheet_v0_3.json",
+    "product/evaluation/casulo_delta_zero_human_review_instructions_v0_3.md",
+    "product/evaluation/casulo_delta_zero_external_evaluator_cases/",
+    "product/scripts/ingest_casulo_delta_zero_accepted_human_scores.py"
+  ],
+  "human_acceptance_required": true,
+  "ingestion_ready": false
+}

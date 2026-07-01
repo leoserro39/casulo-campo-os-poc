@@ -1,0 +1,9 @@
+{
+  "phase": "PROD-6541..6660",
+  "required_prior_tag": "product-casulo-delta-zero-assisted-scoring-draft-packet-v0.1",
+  "human_review_prep_only": true,
+  "ingestion_validator_scaffold_ready": true,
+  "accepted_scores_ingestion_executed": false,
+  "final_indices_ready": false,
+  "claims_blocked": true
+}

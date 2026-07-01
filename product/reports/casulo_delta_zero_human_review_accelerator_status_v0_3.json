@@ -1,0 +1,11 @@
+{
+  "status": "PASS",
+  "phase": "PROD-6541..6660",
+  "case_count": 36,
+  "prep_recommendation_counts": {
+    "REVIEW_REQUIRED": 26,
+    "CHECK_OVER_REVIEW": 3,
+    "CHECK_AND_ACCEPT_OR_ADJUST": 7
+  },
+  "final_indices_ready": false
+}

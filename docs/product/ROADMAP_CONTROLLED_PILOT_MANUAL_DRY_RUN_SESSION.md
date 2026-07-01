@@ -62,3 +62,5 @@
 - `PROD-6461..6500` - CASULO Delta Zero External Evaluator Workbench Packet - **DONE**
 - `PROD-6501..6540` - CASULO Delta Zero External Evaluator Manual Scoring Run - **DONE**
 - `PROD-6541..6580` - CASULO Delta Zero Human Score Acceptance and Ingestion Gate - **NEXT**
+- `PROD-6541..6660` - CASULO Delta Zero Human Review Accelerator Packet - **DONE**
+- `PROD-6661..6700` - CASULO Delta Zero Accepted Human Scores Ingestion Run - **NEXT**
