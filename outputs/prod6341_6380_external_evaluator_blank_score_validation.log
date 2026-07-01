@@ -1,0 +1,14 @@
+STDOUT:
+{
+  "status": "BLOCKED_MISSING_EXTERNAL_SCORES",
+  "case_count": 36,
+  "complete_external_score_count": 0,
+  "incomplete_external_score_count": 36,
+  "final_indices_ready": false,
+  "output": "/workspaces/casulo-campo-os-poc/outputs/prod6341_6380_external_evaluator_blank_score_validation.json"
+}
+
+STDERR:
+
+RC:
+2

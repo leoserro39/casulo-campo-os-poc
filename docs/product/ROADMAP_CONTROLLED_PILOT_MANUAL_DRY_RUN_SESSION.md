@@ -56,4 +56,5 @@
 - `PROD-6221..6260` - Domain Calibration Hardened Rerun Review Gate - **DONE**
 - `PROD-6261..6300` - Domain Calibration External Evaluator Packet - **DONE**
 - `PROD-6301..6340` - Domain Calibration External Evaluator Execution Gate - **DONE**
-- `PROD-6341..6380` - Domain Calibration External Evaluator Execution Gate with Ponto Zero Metrics - **NEXT**
+- `PROD-6341..6380` - Domain Calibration External Evaluator Execution Gate with Ponto Zero Metrics - **DONE**
+- `PROD-6381..6420` - Domain Calibration External Evaluator Scoring Run with Ponto Zero Metrics - **NEXT**

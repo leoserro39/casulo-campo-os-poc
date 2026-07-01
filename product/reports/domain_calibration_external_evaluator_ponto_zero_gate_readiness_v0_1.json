@@ -1,0 +1,18 @@
+{
+  "version": "domain_calibration_external_evaluator_ponto_zero_gate_readiness.v0.1",
+  "phase": "PROD-6341..6380",
+  "generated_at": "2026-07-01T17:45:34.009761+00:00",
+  "status": "PASS",
+  "execution_gate_only": true,
+  "additional_live_gpt_call_in_this_gate": false,
+  "score_template_ready": true,
+  "scorer_ready": true,
+  "blank_score_block_validation_passed": true,
+  "final_indices_ready": false,
+  "external_scores_required": true,
+  "manual_or_independent_evaluator_required": true,
+  "dataset_acceptance": false,
+  "client_evidence": false,
+  "production_evidence": false,
+  "commercial_claim": false
+}

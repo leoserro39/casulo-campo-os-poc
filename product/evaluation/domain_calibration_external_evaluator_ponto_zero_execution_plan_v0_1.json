@@ -1,0 +1,19 @@
+{
+  "version": "domain_calibration_external_evaluator_ponto_zero_execution_plan.v0.1",
+  "phase": "PROD-6341..6380",
+  "generated_at": "2026-07-01T17:45:34.009409+00:00",
+  "execution_mode": "manual_or_independent_external_scoring",
+  "case_count": 36,
+  "score_template_csv": "product/evaluation/domain_calibration_external_evaluator_ponto_zero_score_template_v0_1.csv",
+  "score_template_json": "product/evaluation/domain_calibration_external_evaluator_ponto_zero_score_template_v0_1.json",
+  "scorer_script": "product/scripts/score_domain_calibration_external_evaluator_ponto_zero.py",
+  "blank_score_validation_output": "outputs/prod6341_6380_external_evaluator_blank_score_validation.json",
+  "instructions": [
+    "Do not run additional GPT calls in this gate.",
+    "Fill the CSV manually or with an independently approved evaluator process.",
+    "All 36 rows must be completed before final OHRI/OQI/ZPI can be computed.",
+    "Run the scorer script after filling the template.",
+    "Final indices remain blocked until the scoring output passes."
+  ],
+  "next_phase": "PROD-6381..6420 - Domain Calibration External Evaluator Scoring Run with Ponto Zero Metrics"
+}

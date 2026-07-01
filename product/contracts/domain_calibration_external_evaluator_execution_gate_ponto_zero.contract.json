@@ -1,0 +1,40 @@
+{
+  "phase": "PROD-6341..6380",
+  "required_prior_tag": "product-ponto-zero-telemetry-operational-hallucination-measurement-packet-v0.1",
+  "execution_gate_only": true,
+  "additional_live_call_allowed": false,
+  "manual_or_independent_external_scores_required": true,
+  "final_indices_without_external_scores_blocked": true,
+  "validated_model_gain_claim_blocked": true,
+  "hallucination_reduction_claim_blocked": true,
+  "canonical_token_acceptance_blocked": true,
+  "dataset_acceptance_blocked": true,
+  "client_claim_blocked": true,
+  "production_blocked": true,
+  "commercial_claim_blocked": true,
+  "allowed_actions": [
+    "external_evaluator_execution_gate_creation",
+    "ponto_zero_score_template_creation",
+    "external_score_scorer_creation",
+    "blank_score_block_validation",
+    "manual_scoring_run_preparation",
+    "roadmap_update"
+  ],
+  "blocked_actions": [
+    "additional_live_gpt_call_in_this_gate",
+    "openai_api_key_storage",
+    "gpt_memory_api_execution",
+    "multi_vendor_llm_execution",
+    "dataset_acceptance",
+    "real_candidate_insert",
+    "client_facing_value_claim",
+    "production_activation",
+    "validated_business_claim",
+    "validated_hallucination_reduction_claim",
+    "commercial_claim",
+    "domain_validation_claim",
+    "final_indices_without_external_scores",
+    "canonical_token_acceptance_without_expansion_test"
+  ],
+  "recommended_next_phase": "PROD-6381..6420 - Domain Calibration External Evaluator Scoring Run with Ponto Zero Metrics"
+}

@@ -1,0 +1,742 @@
+{
+  "version": "domain_calibration_external_evaluator_ponto_zero_score_result.v0.1",
+  "generated_at": "2026-07-01T17:45:34.000092+00:00",
+  "status": "BLOCKED_MISSING_EXTERNAL_SCORES",
+  "input": "/workspaces/casulo-campo-os-poc/product/evaluation/domain_calibration_external_evaluator_ponto_zero_score_template_v0_1.csv",
+  "case_count": 36,
+  "complete_external_score_count": 0,
+  "incomplete_external_score_count": 36,
+  "final_indices_ready": false,
+  "external_evaluator_required": true,
+  "dataset_acceptance": false,
+  "client_evidence": false,
+  "production_evidence": false,
+  "commercial_claim": false,
+  "validated_model_gain_claim": false,
+  "validated_hallucination_reduction_claim": false,
+  "by_mode": {},
+  "by_domain": {},
+  "scored_rows": [],
+  "incomplete_cases": [
+    {
+      "case_id": "EXT-EVAL-B01H-001",
+      "mode": "PURE_GPT",
+      "domain": "TIC/SI / ITSM",
+      "missing": [
+        "external_evidence_grounding_score",
+        "external_gate_compliance_score",
+        "external_claim_boundary_score",
+        "external_state_completeness_score",
+        "external_next_action_quality_score",
+        "external_usefulness_score",
+        "external_false_memory_risk",
+        "external_over_review_flag",
+        "external_under_review_flag",
+        "external_hallucination_risk_flag",
+        "external_accept_for_calibration_signal",
+        "external_reviewer_notes"
+      ],
+      "invalid": []
+    },
+    {
+      "case_id": "EXT-EVAL-B01H-002",
+      "mode": "STACK_GPT",
+      "domain": "TIC/SI / ITSM",
+      "missing": [
+        "external_evidence_grounding_score",
+        "external_gate_compliance_score",
+        "external_claim_boundary_score",
+        "external_state_completeness_score",
+        "external_next_action_quality_score",
+        "external_usefulness_score",
+        "external_false_memory_risk",
+        "external_over_review_flag",
+        "external_under_review_flag",
+        "external_hallucination_risk_flag",
+        "external_accept_for_calibration_signal",
+        "external_reviewer_notes"
+      ],
+      "invalid": []
+    },
+    {
+      "case_id": "EXT-EVAL-B01H-003",
+      "mode": "CASULO_EXOCORTEX_STACK",
+      "domain": "TIC/SI / ITSM",
+      "missing": [
+        "external_evidence_grounding_score",
+        "external_gate_compliance_score",
+        "external_claim_boundary_score",
+        "external_state_completeness_score",
+        "external_next_action_quality_score",
+        "external_usefulness_score",
+        "external_false_memory_risk",
+        "external_over_review_flag",
+        "external_under_review_flag",
+        "external_hallucination_risk_flag",
+        "external_accept_for_calibration_signal",
+        "external_reviewer_notes"
+      ],
+      "invalid": []
+    },
+    {
+      "case_id": "EXT-EVAL-B01H-004",
+      "mode": "PURE_GPT",
+      "domain": "TIC/SI / ITSM",
+      "missing": [
+        "external_evidence_grounding_score",
+        "external_gate_compliance_score",
+        "external_claim_boundary_score",
+        "external_state_completeness_score",
+        "external_next_action_quality_score",
+        "external_usefulness_score",
+        "external_false_memory_risk",
+        "external_over_review_flag",
+        "external_under_review_flag",
+        "external_hallucination_risk_flag",
+        "external_accept_for_calibration_signal",
+        "external_reviewer_notes"
+      ],
+      "invalid": []
+    },
+    {
+      "case_id": "EXT-EVAL-B01H-005",
+      "mode": "STACK_GPT",
+      "domain": "TIC/SI / ITSM",
+      "missing": [
+        "external_evidence_grounding_score",
+        "external_gate_compliance_score",
+        "external_claim_boundary_score",
+        "external_state_completeness_score",
+        "external_next_action_quality_score",
+        "external_usefulness_score",
+        "external_false_memory_risk",
+        "external_over_review_flag",
+        "external_under_review_flag",
+        "external_hallucination_risk_flag",
+        "external_accept_for_calibration_signal",
+        "external_reviewer_notes"
+      ],
+      "invalid": []
+    },
+    {
+      "case_id": "EXT-EVAL-B01H-006",
+      "mode": "CASULO_EXOCORTEX_STACK",
+      "domain": "TIC/SI / ITSM",
+      "missing": [
+        "external_evidence_grounding_score",
+        "external_gate_compliance_score",
+        "external_claim_boundary_score",
+        "external_state_completeness_score",
+        "external_next_action_quality_score",
+        "external_usefulness_score",
+        "external_false_memory_risk",
+        "external_over_review_flag",
+        "external_under_review_flag",
+        "external_hallucination_risk_flag",
+        "external_accept_for_calibration_signal",
+        "external_reviewer_notes"
+      ],
+      "invalid": []
+    },
+    {
+      "case_id": "EXT-EVAL-B01H-007",
+      "mode": "PURE_GPT",
+      "domain": "VesselFlow / Operação marítima",
+      "missing": [
+        "external_evidence_grounding_score",
+        "external_gate_compliance_score",
+        "external_claim_boundary_score",
+        "external_state_completeness_score",
+        "external_next_action_quality_score",
+        "external_usefulness_score",
+        "external_false_memory_risk",
+        "external_over_review_flag",
+        "external_under_review_flag",
+        "external_hallucination_risk_flag",
+        "external_accept_for_calibration_signal",
+        "external_reviewer_notes"
+      ],
+      "invalid": []
+    },
+    {
+      "case_id": "EXT-EVAL-B01H-008",
+      "mode": "STACK_GPT",
+      "domain": "VesselFlow / Operação marítima",
+      "missing": [
+        "external_evidence_grounding_score",
+        "external_gate_compliance_score",
+        "external_claim_boundary_score",
+        "external_state_completeness_score",
+        "external_next_action_quality_score",
+        "external_usefulness_score",
+        "external_false_memory_risk",
+        "external_over_review_flag",
+        "external_under_review_flag",
+        "external_hallucination_risk_flag",
+        "external_accept_for_calibration_signal",
+        "external_reviewer_notes"
+      ],
+      "invalid": []
+    },
+    {
+      "case_id": "EXT-EVAL-B01H-009",
+      "mode": "CASULO_EXOCORTEX_STACK",
+      "domain": "VesselFlow / Operação marítima",
+      "missing": [
+        "external_evidence_grounding_score",
+        "external_gate_compliance_score",
+        "external_claim_boundary_score",
+        "external_state_completeness_score",
+        "external_next_action_quality_score",
+        "external_usefulness_score",
+        "external_false_memory_risk",
+        "external_over_review_flag",
+        "external_under_review_flag",
+        "external_hallucination_risk_flag",
+        "external_accept_for_calibration_signal",
+        "external_reviewer_notes"
+      ],
+      "invalid": []
+    },
+    {
+      "case_id": "EXT-EVAL-B01H-010",
+      "mode": "PURE_GPT",
+      "domain": "VesselFlow / Operação marítima",
+      "missing": [
+        "external_evidence_grounding_score",
+        "external_gate_compliance_score",
+        "external_claim_boundary_score",
+        "external_state_completeness_score",
+        "external_next_action_quality_score",
+        "external_usefulness_score",
+        "external_false_memory_risk",
+        "external_over_review_flag",
+        "external_under_review_flag",
+        "external_hallucination_risk_flag",
+        "external_accept_for_calibration_signal",
+        "external_reviewer_notes"
+      ],
+      "invalid": []
+    },
+    {
+      "case_id": "EXT-EVAL-B01H-011",
+      "mode": "STACK_GPT",
+      "domain": "VesselFlow / Operação marítima",
+      "missing": [
+        "external_evidence_grounding_score",
+        "external_gate_compliance_score",
+        "external_claim_boundary_score",
+        "external_state_completeness_score",
+        "external_next_action_quality_score",
+        "external_usefulness_score",
+        "external_false_memory_risk",
+        "external_over_review_flag",
+        "external_under_review_flag",
+        "external_hallucination_risk_flag",
+        "external_accept_for_calibration_signal",
+        "external_reviewer_notes"
+      ],
+      "invalid": []
+    },
+    {
+      "case_id": "EXT-EVAL-B01H-012",
+      "mode": "CASULO_EXOCORTEX_STACK",
+      "domain": "VesselFlow / Operação marítima",
+      "missing": [
+        "external_evidence_grounding_score",
+        "external_gate_compliance_score",
+        "external_claim_boundary_score",
+        "external_state_completeness_score",
+        "external_next_action_quality_score",
+        "external_usefulness_score",
+        "external_false_memory_risk",
+        "external_over_review_flag",
+        "external_under_review_flag",
+        "external_hallucination_risk_flag",
+        "external_accept_for_calibration_signal",
+        "external_reviewer_notes"
+      ],
+      "invalid": []
+    },
+    {
+      "case_id": "EXT-EVAL-B01H-013",
+      "mode": "PURE_GPT",
+      "domain": "Jurídico / Escritório",
+      "missing": [
+        "external_evidence_grounding_score",
+        "external_gate_compliance_score",
+        "external_claim_boundary_score",
+        "external_state_completeness_score",
+        "external_next_action_quality_score",
+        "external_usefulness_score",
+        "external_false_memory_risk",
+        "external_over_review_flag",
+        "external_under_review_flag",
+        "external_hallucination_risk_flag",
+        "external_accept_for_calibration_signal",
+        "external_reviewer_notes"
+      ],
+      "invalid": []
+    },
+    {
+      "case_id": "EXT-EVAL-B01H-014",
+      "mode": "STACK_GPT",
+      "domain": "Jurídico / Escritório",
+      "missing": [
+        "external_evidence_grounding_score",
+        "external_gate_compliance_score",
+        "external_claim_boundary_score",
+        "external_state_completeness_score",
+        "external_next_action_quality_score",
+        "external_usefulness_score",
+        "external_false_memory_risk",
+        "external_over_review_flag",
+        "external_under_review_flag",
+        "external_hallucination_risk_flag",
+        "external_accept_for_calibration_signal",
+        "external_reviewer_notes"
+      ],
+      "invalid": []
+    },
+    {
+      "case_id": "EXT-EVAL-B01H-015",
+      "mode": "CASULO_EXOCORTEX_STACK",
+      "domain": "Jurídico / Escritório",
+      "missing": [
+        "external_evidence_grounding_score",
+        "external_gate_compliance_score",
+        "external_claim_boundary_score",
+        "external_state_completeness_score",
+        "external_next_action_quality_score",
+        "external_usefulness_score",
+        "external_false_memory_risk",
+        "external_over_review_flag",
+        "external_under_review_flag",
+        "external_hallucination_risk_flag",
+        "external_accept_for_calibration_signal",
+        "external_reviewer_notes"
+      ],
+      "invalid": []
+    },
+    {
+      "case_id": "EXT-EVAL-B01H-016",
+      "mode": "PURE_GPT",
+      "domain": "Jurídico / Escritório",
+      "missing": [
+        "external_evidence_grounding_score",
+        "external_gate_compliance_score",
+        "external_claim_boundary_score",
+        "external_state_completeness_score",
+        "external_next_action_quality_score",
+        "external_usefulness_score",
+        "external_false_memory_risk",
+        "external_over_review_flag",
+        "external_under_review_flag",
+        "external_hallucination_risk_flag",
+        "external_accept_for_calibration_signal",
+        "external_reviewer_notes"
+      ],
+      "invalid": []
+    },
+    {
+      "case_id": "EXT-EVAL-B01H-017",
+      "mode": "STACK_GPT",
+      "domain": "Jurídico / Escritório",
+      "missing": [
+        "external_evidence_grounding_score",
+        "external_gate_compliance_score",
+        "external_claim_boundary_score",
+        "external_state_completeness_score",
+        "external_next_action_quality_score",
+        "external_usefulness_score",
+        "external_false_memory_risk",
+        "external_over_review_flag",
+        "external_under_review_flag",
+        "external_hallucination_risk_flag",
+        "external_accept_for_calibration_signal",
+        "external_reviewer_notes"
+      ],
+      "invalid": []
+    },
+    {
+      "case_id": "EXT-EVAL-B01H-018",
+      "mode": "CASULO_EXOCORTEX_STACK",
+      "domain": "Jurídico / Escritório",
+      "missing": [
+        "external_evidence_grounding_score",
+        "external_gate_compliance_score",
+        "external_claim_boundary_score",
+        "external_state_completeness_score",
+        "external_next_action_quality_score",
+        "external_usefulness_score",
+        "external_false_memory_risk",
+        "external_over_review_flag",
+        "external_under_review_flag",
+        "external_hallucination_risk_flag",
+        "external_accept_for_calibration_signal",
+        "external_reviewer_notes"
+      ],
+      "invalid": []
+    },
+    {
+      "case_id": "EXT-EVAL-B01H-019",
+      "mode": "PURE_GPT",
+      "domain": "Financeiro / Administrativo",
+      "missing": [
+        "external_evidence_grounding_score",
+        "external_gate_compliance_score",
+        "external_claim_boundary_score",
+        "external_state_completeness_score",
+        "external_next_action_quality_score",
+        "external_usefulness_score",
+        "external_false_memory_risk",
+        "external_over_review_flag",
+        "external_under_review_flag",
+        "external_hallucination_risk_flag",
+        "external_accept_for_calibration_signal",
+        "external_reviewer_notes"
+      ],
+      "invalid": []
+    },
+    {
+      "case_id": "EXT-EVAL-B01H-020",
+      "mode": "STACK_GPT",
+      "domain": "Financeiro / Administrativo",
+      "missing": [
+        "external_evidence_grounding_score",
+        "external_gate_compliance_score",
+        "external_claim_boundary_score",
+        "external_state_completeness_score",
+        "external_next_action_quality_score",
+        "external_usefulness_score",
+        "external_false_memory_risk",
+        "external_over_review_flag",
+        "external_under_review_flag",
+        "external_hallucination_risk_flag",
+        "external_accept_for_calibration_signal",
+        "external_reviewer_notes"
+      ],
+      "invalid": []
+    },
+    {
+      "case_id": "EXT-EVAL-B01H-021",
+      "mode": "CASULO_EXOCORTEX_STACK",
+      "domain": "Financeiro / Administrativo",
+      "missing": [
+        "external_evidence_grounding_score",
+        "external_gate_compliance_score",
+        "external_claim_boundary_score",
+        "external_state_completeness_score",
+        "external_next_action_quality_score",
+        "external_usefulness_score",
+        "external_false_memory_risk",
+        "external_over_review_flag",
+        "external_under_review_flag",
+        "external_hallucination_risk_flag",
+        "external_accept_for_calibration_signal",
+        "external_reviewer_notes"
+      ],
+      "invalid": []
+    },
+    {
+      "case_id": "EXT-EVAL-B01H-022",
+      "mode": "PURE_GPT",
+      "domain": "Financeiro / Administrativo",
+      "missing": [
+        "external_evidence_grounding_score",
+        "external_gate_compliance_score",
+        "external_claim_boundary_score",
+        "external_state_completeness_score",
+        "external_next_action_quality_score",
+        "external_usefulness_score",
+        "external_false_memory_risk",
+        "external_over_review_flag",
+        "external_under_review_flag",
+        "external_hallucination_risk_flag",
+        "external_accept_for_calibration_signal",
+        "external_reviewer_notes"
+      ],
+      "invalid": []
+    },
+    {
+      "case_id": "EXT-EVAL-B01H-023",
+      "mode": "STACK_GPT",
+      "domain": "Financeiro / Administrativo",
+      "missing": [
+        "external_evidence_grounding_score",
+        "external_gate_compliance_score",
+        "external_claim_boundary_score",
+        "external_state_completeness_score",
+        "external_next_action_quality_score",
+        "external_usefulness_score",
+        "external_false_memory_risk",
+        "external_over_review_flag",
+        "external_under_review_flag",
+        "external_hallucination_risk_flag",
+        "external_accept_for_calibration_signal",
+        "external_reviewer_notes"
+      ],
+      "invalid": []
+    },
+    {
+      "case_id": "EXT-EVAL-B01H-024",
+      "mode": "CASULO_EXOCORTEX_STACK",
+      "domain": "Financeiro / Administrativo",
+      "missing": [
+        "external_evidence_grounding_score",
+        "external_gate_compliance_score",
+        "external_claim_boundary_score",
+        "external_state_completeness_score",
+        "external_next_action_quality_score",
+        "external_usefulness_score",
+        "external_false_memory_risk",
+        "external_over_review_flag",
+        "external_under_review_flag",
+        "external_hallucination_risk_flag",
+        "external_accept_for_calibration_signal",
+        "external_reviewer_notes"
+      ],
+      "invalid": []
+    },
+    {
+      "case_id": "EXT-EVAL-B01H-025",
+      "mode": "PURE_GPT",
+      "domain": "Pequenos negócios de campo",
+      "missing": [
+        "external_evidence_grounding_score",
+        "external_gate_compliance_score",
+        "external_claim_boundary_score",
+        "external_state_completeness_score",
+        "external_next_action_quality_score",
+        "external_usefulness_score",
+        "external_false_memory_risk",
+        "external_over_review_flag",
+        "external_under_review_flag",
+        "external_hallucination_risk_flag",
+        "external_accept_for_calibration_signal",
+        "external_reviewer_notes"
+      ],
+      "invalid": []
+    },
+    {
+      "case_id": "EXT-EVAL-B01H-026",
+      "mode": "STACK_GPT",
+      "domain": "Pequenos negócios de campo",
+      "missing": [
+        "external_evidence_grounding_score",
+        "external_gate_compliance_score",
+        "external_claim_boundary_score",
+        "external_state_completeness_score",
+        "external_next_action_quality_score",
+        "external_usefulness_score",
+        "external_false_memory_risk",
+        "external_over_review_flag",
+        "external_under_review_flag",
+        "external_hallucination_risk_flag",
+        "external_accept_for_calibration_signal",
+        "external_reviewer_notes"
+      ],
+      "invalid": []
+    },
+    {
+      "case_id": "EXT-EVAL-B01H-027",
+      "mode": "CASULO_EXOCORTEX_STACK",
+      "domain": "Pequenos negócios de campo",
+      "missing": [
+        "external_evidence_grounding_score",
+        "external_gate_compliance_score",
+        "external_claim_boundary_score",
+        "external_state_completeness_score",
+        "external_next_action_quality_score",
+        "external_usefulness_score",
+        "external_false_memory_risk",
+        "external_over_review_flag",
+        "external_under_review_flag",
+        "external_hallucination_risk_flag",
+        "external_accept_for_calibration_signal",
+        "external_reviewer_notes"
+      ],
+      "invalid": []
+    },
+    {
+      "case_id": "EXT-EVAL-B01H-028",
+      "mode": "PURE_GPT",
+      "domain": "Pequenos negócios de campo",
+      "missing": [
+        "external_evidence_grounding_score",
+        "external_gate_compliance_score",
+        "external_claim_boundary_score",
+        "external_state_completeness_score",
+        "external_next_action_quality_score",
+        "external_usefulness_score",
+        "external_false_memory_risk",
+        "external_over_review_flag",
+        "external_under_review_flag",
+        "external_hallucination_risk_flag",
+        "external_accept_for_calibration_signal",
+        "external_reviewer_notes"
+      ],
+      "invalid": []
+    },
+    {
+      "case_id": "EXT-EVAL-B01H-029",
+      "mode": "STACK_GPT",
+      "domain": "Pequenos negócios de campo",
+      "missing": [
+        "external_evidence_grounding_score",
+        "external_gate_compliance_score",
+        "external_claim_boundary_score",
+        "external_state_completeness_score",
+        "external_next_action_quality_score",
+        "external_usefulness_score",
+        "external_false_memory_risk",
+        "external_over_review_flag",
+        "external_under_review_flag",
+        "external_hallucination_risk_flag",
+        "external_accept_for_calibration_signal",
+        "external_reviewer_notes"
+      ],
+      "invalid": []
+    },
+    {
+      "case_id": "EXT-EVAL-B01H-030",
+      "mode": "CASULO_EXOCORTEX_STACK",
+      "domain": "Pequenos negócios de campo",
+      "missing": [
+        "external_evidence_grounding_score",
+        "external_gate_compliance_score",
+        "external_claim_boundary_score",
+        "external_state_completeness_score",
+        "external_next_action_quality_score",
+        "external_usefulness_score",
+        "external_false_memory_risk",
+        "external_over_review_flag",
+        "external_under_review_flag",
+        "external_hallucination_risk_flag",
+        "external_accept_for_calibration_signal",
+        "external_reviewer_notes"
+      ],
+      "invalid": []
+    },
+    {
+      "case_id": "EXT-EVAL-B01H-031",
+      "mode": "PURE_GPT",
+      "domain": "Governança documental",
+      "missing": [
+        "external_evidence_grounding_score",
+        "external_gate_compliance_score",
+        "external_claim_boundary_score",
+        "external_state_completeness_score",
+        "external_next_action_quality_score",
+        "external_usefulness_score",
+        "external_false_memory_risk",
+        "external_over_review_flag",
+        "external_under_review_flag",
+        "external_hallucination_risk_flag",
+        "external_accept_for_calibration_signal",
+        "external_reviewer_notes"
+      ],
+      "invalid": []
+    },
+    {
+      "case_id": "EXT-EVAL-B01H-032",
+      "mode": "STACK_GPT",
+      "domain": "Governança documental",
+      "missing": [
+        "external_evidence_grounding_score",
+        "external_gate_compliance_score",
+        "external_claim_boundary_score",
+        "external_state_completeness_score",
+        "external_next_action_quality_score",
+        "external_usefulness_score",
+        "external_false_memory_risk",
+        "external_over_review_flag",
+        "external_under_review_flag",
+        "external_hallucination_risk_flag",
+        "external_accept_for_calibration_signal",
+        "external_reviewer_notes"
+      ],
+      "invalid": []
+    },
+    {
+      "case_id": "EXT-EVAL-B01H-033",
+      "mode": "CASULO_EXOCORTEX_STACK",
+      "domain": "Governança documental",
+      "missing": [
+        "external_evidence_grounding_score",
+        "external_gate_compliance_score",
+        "external_claim_boundary_score",
+        "external_state_completeness_score",
+        "external_next_action_quality_score",
+        "external_usefulness_score",
+        "external_false_memory_risk",
+        "external_over_review_flag",
+        "external_under_review_flag",
+        "external_hallucination_risk_flag",
+        "external_accept_for_calibration_signal",
+        "external_reviewer_notes"
+      ],
+      "invalid": []
+    },
+    {
+      "case_id": "EXT-EVAL-B01H-034",
+      "mode": "PURE_GPT",
+      "domain": "Governança documental",
+      "missing": [
+        "external_evidence_grounding_score",
+        "external_gate_compliance_score",
+        "external_claim_boundary_score",
+        "external_state_completeness_score",
+        "external_next_action_quality_score",
+        "external_usefulness_score",
+        "external_false_memory_risk",
+        "external_over_review_flag",
+        "external_under_review_flag",
+        "external_hallucination_risk_flag",
+        "external_accept_for_calibration_signal",
+        "external_reviewer_notes"
+      ],
+      "invalid": []
+    },
+    {
+      "case_id": "EXT-EVAL-B01H-035",
+      "mode": "STACK_GPT",
+      "domain": "Governança documental",
+      "missing": [
+        "external_evidence_grounding_score",
+        "external_gate_compliance_score",
+        "external_claim_boundary_score",
+        "external_state_completeness_score",
+        "external_next_action_quality_score",
+        "external_usefulness_score",
+        "external_false_memory_risk",
+        "external_over_review_flag",
+        "external_under_review_flag",
+        "external_hallucination_risk_flag",
+        "external_accept_for_calibration_signal",
+        "external_reviewer_notes"
+      ],
+      "invalid": []
+    },
+    {
+      "case_id": "EXT-EVAL-B01H-036",
+      "mode": "CASULO_EXOCORTEX_STACK",
+      "domain": "Governança documental",
+      "missing": [
+        "external_evidence_grounding_score",
+        "external_gate_compliance_score",
+        "external_claim_boundary_score",
+        "external_state_completeness_score",
+        "external_next_action_quality_score",
+        "external_usefulness_score",
+        "external_false_memory_risk",
+        "external_over_review_flag",
+        "external_under_review_flag",
+        "external_hallucination_risk_flag",
+        "external_accept_for_calibration_signal",
+        "external_reviewer_notes"
+      ],
+      "invalid": []
+    }
+  ]
+}
