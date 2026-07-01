@@ -1,0 +1,496 @@
+{
+  "version": "controlled_pilot_manual_dry_run_session_operator_start_checklist.v0.1",
+  "phase": "PROD-4541..4580",
+  "status": "CHECKLIST_TEMPLATE_ONLY_NO_SESSION_EXECUTION",
+  "real_data_captured_in_this_phase": false,
+  "real_candidate_inserted": false,
+  "real_candidate_accepted_to_dataset": false,
+  "checks": [
+    {
+      "id": "START-001",
+      "name": "prior_precheck_readiness_gate_passed",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "START-002",
+      "name": "precheck_packet_present",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "START-003",
+      "name": "precheck_template_present",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "START-004",
+      "name": "precheck_checklist_present",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "START-005",
+      "name": "final_gate_readiness_gate_present",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "START-006",
+      "name": "final_gate_packet_present",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "START-007",
+      "name": "final_gate_template_present",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "START-008",
+      "name": "final_gate_checklist_present",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "START-009",
+      "name": "review_readiness_gate_present",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "START-010",
+      "name": "review_packet_present",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "START-011",
+      "name": "review_template_present",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "START-012",
+      "name": "review_checklist_present",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "START-013",
+      "name": "observation_readiness_gate_present",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "START-014",
+      "name": "observation_packet_present",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "START-015",
+      "name": "observation_template_present",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "START-016",
+      "name": "observation_checklist_present",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "START-017",
+      "name": "log_readiness_gate_present",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "START-018",
+      "name": "log_shell_present",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "START-019",
+      "name": "log_template_present",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "START-020",
+      "name": "execution_gate_present",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "START-021",
+      "name": "session_packet_present",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "START-022",
+      "name": "session_checklist_present",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "START-023",
+      "name": "session_runbook_present",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "START-024",
+      "name": "execution_packet_present",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "START-025",
+      "name": "dry_run_shell_present",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "START-026",
+      "name": "dry_run_form_present",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "START-027",
+      "name": "validator_present",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "START-028",
+      "name": "schema_present",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "START-029",
+      "name": "real_dataset_empty",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "START-030",
+      "name": "reviewer_queue_empty",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "START-031",
+      "name": "operator_start_sections_present",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "START-032",
+      "name": "operator_start_fields_present",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "START-033",
+      "name": "operator_start_checks_present",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "START-034",
+      "name": "operator_start_template_fields_present",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "START-035",
+      "name": "operator_start_checklist_items_present",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "START-036",
+      "name": "prior_gate_chain_refs_present",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "START-037",
+      "name": "precheck_refs_present",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "START-038",
+      "name": "final_gate_refs_present",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "START-039",
+      "name": "review_refs_present",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "START-040",
+      "name": "observation_refs_present",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "START-041",
+      "name": "log_refs_present",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "START-042",
+      "name": "session_refs_present",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "START-043",
+      "name": "dry_run_refs_present",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "START-044",
+      "name": "operator_ref_required",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "START-045",
+      "name": "human_reviewer_ref_required",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "START-046",
+      "name": "source_reference_refs_required",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "START-047",
+      "name": "privacy_review_ref_required",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "START-048",
+      "name": "pii_redaction_ref_required",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "START-049",
+      "name": "secret_scan_ref_required",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "START-050",
+      "name": "evidence_packet_ref_required",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "START-051",
+      "name": "manual_observation_refs_required",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "START-052",
+      "name": "reviewer_notes_ref_required",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "START-053",
+      "name": "claim_boundary_review_required",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "START-054",
+      "name": "dataset_hold_reason_required",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "START-055",
+      "name": "blocked_action_review_required",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "START-056",
+      "name": "abort_trigger_review_required",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "START-057",
+      "name": "precheck_decision_ref_required",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "START-058",
+      "name": "operator_start_decision_required",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "START-059",
+      "name": "operator_start_reason_required",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "START-060",
+      "name": "start_hold_status_required",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "START-061",
+      "name": "stop_before_execution_confirmation_required",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "START-062",
+      "name": "next_allowed_phase_required",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "START-063",
+      "name": "reference_only_storage_required",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "START-064",
+      "name": "sanitized_operator_start_only",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "START-065",
+      "name": "template_only_confirmed",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "START-066",
+      "name": "checklist_template_only_confirmed",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "START-067",
+      "name": "session_execution_not_performed",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "START-068",
+      "name": "operator_start_packet_only_confirmed",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "START-069",
+      "name": "automatic_capture_blocked",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "START-070",
+      "name": "real_candidate_insert_blocked",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "START-071",
+      "name": "dataset_acceptance_blocked",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "START-072",
+      "name": "raw_private_data_blocked",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "START-073",
+      "name": "secrets_blocked",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "START-074",
+      "name": "unredacted_pii_blocked",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "START-075",
+      "name": "client_claim_blocked",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "START-076",
+      "name": "production_activation_blocked",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "START-077",
+      "name": "human_review_required",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "START-078",
+      "name": "session_execution_plan_preparation_only",
+      "required": true,
+      "status": "PENDING"
+    }
+  ],
+  "default_gate": "HOLD_OPERATOR_START_PACKET_NO_SESSION_EXECUTION",
+  "blocked_actions": [
+    "automatic_real_session_capture",
+    "real_candidate_insert",
+    "real_candidate_dataset_acceptance",
+    "dataset_acceptance_without_human_review",
+    "raw_private_data_storage",
+    "secret_or_credential_storage",
+    "unredacted_pii_storage",
+    "client_facing_value_claim",
+    "real_world_profit_claim",
+    "validated_savings_claim",
+    "validated_hallucination_reduction_claim",
+    "production_activation",
+    "automatic_memory_delete",
+    "gpt_memory_api_execution",
+    "commercial_package_pricing_claim"
+  ]
+}

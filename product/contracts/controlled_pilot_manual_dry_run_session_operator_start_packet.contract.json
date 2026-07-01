@@ -1,0 +1,37 @@
+{
+  "phase": "PROD-4541..4580",
+  "required_prior_tag": "product-controlled-pilot-manual-dry-run-session-execution-precheck-readiness-gate-v0.1",
+  "mode": "controlled_pilot_manual_dry_run_session_operator_start_packet",
+  "real_data_captured_in_this_phase": false,
+  "real_candidate_inserted": false,
+  "real_candidate_accepted_to_dataset": false,
+  "operator_start_packet_only": true,
+  "session_execution_not_performed": true,
+  "automatic_capture_blocked": true,
+  "dataset_acceptance_blocked": true,
+  "blocked_actions": [
+    "automatic_real_session_capture",
+    "real_candidate_insert",
+    "real_candidate_dataset_acceptance",
+    "dataset_acceptance_without_human_review",
+    "raw_private_data_storage",
+    "secret_or_credential_storage",
+    "unredacted_pii_storage",
+    "client_facing_value_claim",
+    "real_world_profit_claim",
+    "validated_savings_claim",
+    "validated_hallucination_reduction_claim",
+    "production_activation",
+    "automatic_memory_delete",
+    "gpt_memory_api_execution",
+    "commercial_package_pricing_claim"
+  ],
+  "allowed_actions": [
+    "operator_start_packet_creation",
+    "operator_start_template_creation",
+    "operator_start_checklist_creation",
+    "sanitized_operator_start_placeholder_creation",
+    "hold_before_actual_session_execution"
+  ],
+  "recommended_next_phase": "PROD-4581..4620 - Controlled Pilot Manual Dry Run Session Operator Start Readiness Gate"
+}
