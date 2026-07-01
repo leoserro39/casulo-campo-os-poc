@@ -1,0 +1,71 @@
+{
+  "version": "controlled_pilot_mock_dataset_gate.v0.1",
+  "phase": "PROD-3701..3740",
+  "decision": "APPROVED_FOR_REAL_CANDIDATE_BOUNDARY_REVIEW_PREPARATION_ONLY",
+  "purpose": "Confirm mock candidate path while preserving empty real dataset boundary.",
+  "mock_only": true,
+  "real_data_captured_in_this_phase": false,
+  "mock_candidate_count": 1,
+  "mock_candidate_accepted_to_real_dataset": false,
+  "real_dataset_state": {
+    "candidate_count": 0,
+    "accepted_count": 0,
+    "rejected_count": 0,
+    "held_count": 0,
+    "reviewer_queue_pending": 0
+  },
+  "gate_controls": [
+    "mock_candidate_present",
+    "mock_validation_result_pass",
+    "mock_evidence_refs_only",
+    "real_dataset_empty",
+    "reviewer_queue_empty",
+    "real_candidate_acceptance_blocked",
+    "raw_private_data_blocked",
+    "secrets_blocked",
+    "unredacted_pii_blocked",
+    "real_claims_blocked",
+    "human_review_required_for_future_real_candidate"
+  ],
+  "mock_path_result": {
+    "candidate": "product/calibration/real_sessions/controlled_pilot_mock_candidate_dry_run_v0_1.json",
+    "evidence": "product/calibration/real_sessions/controlled_pilot_mock_evidence_packet_dry_run_v0_1.json",
+    "validation_result": "product/calibration/real_sessions/controlled_pilot_mock_candidate_validation_result_v0_1.json",
+    "result": "MOCK_DRY_RUN_PASS_NOT_REAL_ACCEPTANCE"
+  },
+  "future_real_candidate_boundary": {
+    "manual_only": true,
+    "source_refs_only": true,
+    "privacy_review_required": true,
+    "pii_redaction_required": true,
+    "secret_scan_required": true,
+    "human_reviewer_required": true,
+    "dataset_acceptance_gate_required": true,
+    "client_claim_forbidden": true,
+    "production_activation_forbidden": true
+  },
+  "allowed_actions": [
+    "mock_dataset_gate_creation",
+    "mock_candidate_path_confirmation",
+    "mock_dataset_summary_generation",
+    "manual_real_candidate_readiness_preparation",
+    "real_candidate_boundary_review_preparation"
+  ],
+  "blocked_actions": [
+    "automatic_real_session_capture",
+    "real_candidate_dataset_acceptance",
+    "dataset_acceptance_without_human_review",
+    "raw_private_data_storage",
+    "secret_or_credential_storage",
+    "unredacted_pii_storage",
+    "client_facing_value_claim",
+    "real_world_profit_claim",
+    "validated_savings_claim",
+    "validated_hallucination_reduction_claim",
+    "production_activation",
+    "automatic_memory_delete",
+    "gpt_memory_api_execution",
+    "commercial_package_pricing_claim"
+  ],
+  "recommended_next_phase": "PROD-3741..3780 - Controlled Pilot Real Candidate Boundary Review Packet"
+}

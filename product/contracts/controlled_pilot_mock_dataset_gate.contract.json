@@ -1,0 +1,34 @@
+{
+  "phase": "PROD-3701..3740",
+  "required_prior_tag": "product-controlled-pilot-mock-candidate-intake-dry-run-v0.1",
+  "mode": "controlled_pilot_mock_dataset_gate",
+  "mock_only": true,
+  "real_data_captured_in_this_phase": false,
+  "mock_candidate_accepted_to_real_dataset": false,
+  "real_dataset_must_remain_empty": true,
+  "real_candidate_acceptance_blocked": true,
+  "blocked_actions": [
+    "automatic_real_session_capture",
+    "real_candidate_dataset_acceptance",
+    "dataset_acceptance_without_human_review",
+    "raw_private_data_storage",
+    "secret_or_credential_storage",
+    "unredacted_pii_storage",
+    "client_facing_value_claim",
+    "real_world_profit_claim",
+    "validated_savings_claim",
+    "validated_hallucination_reduction_claim",
+    "production_activation",
+    "automatic_memory_delete",
+    "gpt_memory_api_execution",
+    "commercial_package_pricing_claim"
+  ],
+  "allowed_actions": [
+    "mock_dataset_gate_creation",
+    "mock_candidate_path_confirmation",
+    "mock_dataset_summary_generation",
+    "manual_real_candidate_readiness_preparation",
+    "real_candidate_boundary_review_preparation"
+  ],
+  "recommended_next_phase": "PROD-3741..3780 - Controlled Pilot Real Candidate Boundary Review Packet"
+}
