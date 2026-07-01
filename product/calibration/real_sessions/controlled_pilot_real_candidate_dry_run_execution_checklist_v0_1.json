@@ -1,0 +1,133 @@
+{
+  "version": "controlled_pilot_real_candidate_dry_run_execution_checklist.v0.1",
+  "phase": "PROD-3941..3980",
+  "status": "CHECKLIST_TEMPLATE_ONLY_NO_EXECUTION",
+  "real_data_captured_in_this_phase": false,
+  "real_candidate_inserted": false,
+  "real_candidate_accepted_to_dataset": false,
+  "operator_checks": [
+    {
+      "id": "EXEC-001",
+      "name": "readiness_gate_passed",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "EXEC-002",
+      "name": "execution_packet_opened",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "EXEC-003",
+      "name": "reviewer_assigned",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "EXEC-004",
+      "name": "schema_confirmed",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "EXEC-005",
+      "name": "validator_confirmed",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "EXEC-006",
+      "name": "shell_confirmed",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "EXEC-007",
+      "name": "form_confirmed",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "EXEC-008",
+      "name": "boundary_packet_confirmed",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "EXEC-009",
+      "name": "boundary_checklist_confirmed",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "EXEC-010",
+      "name": "empty_dataset_confirmed",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "EXEC-011",
+      "name": "empty_queue_confirmed",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "EXEC-012",
+      "name": "source_refs_only_confirmed",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "EXEC-013",
+      "name": "privacy_review_required_confirmed",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "EXEC-014",
+      "name": "pii_redaction_required_confirmed",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "EXEC-015",
+      "name": "secret_scan_required_confirmed",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "EXEC-016",
+      "name": "claim_boundary_confirmed",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "EXEC-017",
+      "name": "dataset_hold_confirmed",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "EXEC-018",
+      "name": "abort_triggers_reviewed",
+      "required": true,
+      "status": "PENDING"
+    }
+  ],
+  "abort_triggers": [
+    "automatic_capture_attempted",
+    "raw_private_data_detected",
+    "secret_or_credential_detected",
+    "unredacted_pii_detected",
+    "client_facing_claim_detected",
+    "production_activation_attempted",
+    "real_candidate_insert_attempted",
+    "dataset_acceptance_attempted",
+    "human_reviewer_missing",
+    "privacy_review_missing",
+    "pii_redaction_missing",
+    "secret_scan_missing"
+  ],
+  "default_gate": "HOLD_EXECUTION_PACKET_NO_REAL_CANDIDATE"
+}
