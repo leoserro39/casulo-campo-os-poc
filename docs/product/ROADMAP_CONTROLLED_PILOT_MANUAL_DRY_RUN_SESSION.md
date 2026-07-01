@@ -46,5 +46,6 @@
 - `PROD-5821..5860` - CASULO Exocortex Stack Controlled Live Call Execution Gate - **DONE**
 - `PROD-5861..5900` - CASULO Exocortex Stack Controlled Live Call Execution Run - **DONE**
 - `PROD-5901..5940` - CASULO Exocortex Post-Call Review and PURE vs STACK vs EXOCORTEX Comparison Gate - **DONE**
-- `PROD-5941..5980` - Domain Calibration Matrix Controlled Test Packet - **CURRENT**
-- `PROD-5981..6020` - Domain Calibration Matrix Execution Gate - **NEXT**
+- `PROD-5941..5980` - Domain Calibration Matrix Controlled Test Packet - **DONE**
+- `PROD-5981..6020` - Domain Calibration Matrix Execution Gate - **CURRENT**
+- `PROD-6021..6060` - Domain Calibration Batch 01 Execution Run - **NEXT**

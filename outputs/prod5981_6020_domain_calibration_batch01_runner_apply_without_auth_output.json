@@ -1,0 +1,16 @@
+{
+  "status": "FAIL",
+  "blocked_reason": "CASULO_GPT_LIVE_AUTH=YES is required.",
+  "dry_run": false,
+  "apply": true,
+  "planned_execution_count": 36,
+  "executed_count": 0,
+  "real_provider_call_count": 0,
+  "successful_live_response_count": 0,
+  "openai_api_key_storage": false,
+  "gpt_memory_api_execution": false,
+  "dataset_write": false,
+  "client_evidence": false,
+  "production_evidence": false,
+  "generated_at": "2026-07-01T15:37:52.767575+00:00"
+}
