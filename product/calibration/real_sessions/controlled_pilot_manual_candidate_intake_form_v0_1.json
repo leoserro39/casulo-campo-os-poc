@@ -1,0 +1,185 @@
+{
+  "version": "controlled_pilot_manual_candidate_intake_form.v0.1",
+  "phase": "PROD-3621..3660",
+  "status": "FORM_TEMPLATE_ONLY_NO_REAL_CANDIDATE",
+  "real_data_captured_in_this_phase": false,
+  "candidate_inserted": false,
+  "fields": {
+    "session_id": {
+      "value": null,
+      "required": true,
+      "storage_rule": "reference_or_sanitized_value_only"
+    },
+    "chat_layer": {
+      "value": null,
+      "required": true,
+      "storage_rule": "reference_or_sanitized_value_only"
+    },
+    "work_type": {
+      "value": null,
+      "required": true,
+      "storage_rule": "reference_or_sanitized_value_only"
+    },
+    "source_reference_refs": {
+      "value": null,
+      "required": true,
+      "storage_rule": "reference_or_sanitized_value_only"
+    },
+    "baseline_output_ref": {
+      "value": null,
+      "required": true,
+      "storage_rule": "reference_or_sanitized_value_only"
+    },
+    "casulo_output_ref": {
+      "value": null,
+      "required": true,
+      "storage_rule": "reference_or_sanitized_value_only"
+    },
+    "input_quality_score": {
+      "value": null,
+      "required": true,
+      "storage_rule": "reference_or_sanitized_value_only"
+    },
+    "implementation_complexity_score": {
+      "value": null,
+      "required": true,
+      "storage_rule": "reference_or_sanitized_value_only"
+    },
+    "operational_cost_score": {
+      "value": null,
+      "required": true,
+      "storage_rule": "reference_or_sanitized_value_only"
+    },
+    "apex_maturity_score": {
+      "value": null,
+      "required": true,
+      "storage_rule": "reference_or_sanitized_value_only"
+    },
+    "hallucination_risk_index": {
+      "value": null,
+      "required": true,
+      "storage_rule": "reference_or_sanitized_value_only"
+    },
+    "value_delta_estimate": {
+      "value": null,
+      "required": true,
+      "storage_rule": "reference_or_sanitized_value_only"
+    },
+    "privacy_review_ref": {
+      "value": null,
+      "required": true,
+      "storage_rule": "reference_or_sanitized_value_only"
+    },
+    "pii_redaction_ref": {
+      "value": null,
+      "required": true,
+      "storage_rule": "reference_or_sanitized_value_only"
+    },
+    "secret_scan_ref": {
+      "value": null,
+      "required": true,
+      "storage_rule": "reference_or_sanitized_value_only"
+    },
+    "human_reviewer_notes_ref": {
+      "value": null,
+      "required": true,
+      "storage_rule": "reference_or_sanitized_value_only"
+    },
+    "claim_boundary": {
+      "value": null,
+      "required": true,
+      "storage_rule": "reference_or_sanitized_value_only"
+    },
+    "decision_gate": {
+      "value": null,
+      "required": true,
+      "storage_rule": "reference_or_sanitized_value_only"
+    }
+  },
+  "preflight_checks": [
+    {
+      "name": "manual_scope_confirmed",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "name": "reviewer_assigned",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "name": "schema_loaded",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "name": "candidate_template_loaded",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "name": "evidence_packet_template_loaded",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "name": "reviewer_queue_loaded",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "name": "validator_loaded",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "name": "empty_dataset_gate_confirmed",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "name": "source_refs_only_confirmed",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "name": "raw_private_data_not_present",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "name": "secrets_not_present",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "name": "unredacted_pii_not_present",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "name": "client_claim_not_present",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "name": "production_activation_not_present",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "name": "dataset_acceptance_without_review_blocked",
+      "required": true,
+      "status": "PENDING"
+    }
+  ],
+  "allowed_decisions": [
+    "ACCEPT_AS_CALIBRATION_CANDIDATE",
+    "REJECT_PRIVACY_OR_SECRET_RISK",
+    "HOLD_FOR_MISSING_EVIDENCE",
+    "HOLD_FOR_CLAIM_BOUNDARY_REVIEW",
+    "HOLD_FOR_SCHEMA_REPAIR"
+  ],
+  "default_decision": "HOLD_FOR_MISSING_EVIDENCE",
+  "claim_boundary": "form template only no real candidate"
+}

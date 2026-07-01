@@ -1,0 +1,35 @@
+{
+  "phase": "PROD-3621..3660",
+  "required_prior_tag": "product-controlled-pilot-empty-dataset-acceptance-gate-v0.1",
+  "mode": "controlled_pilot_manual_candidate_intake_shell",
+  "real_data_captured_in_this_phase": false,
+  "candidate_inserted": false,
+  "dataset_candidate_accepted": false,
+  "shell_only": true,
+  "manual_intake_only": true,
+  "automatic_capture_blocked": true,
+  "dataset_acceptance_without_human_review_blocked": true,
+  "blocked_actions": [
+    "automatic_real_session_capture",
+    "dataset_acceptance_without_human_review",
+    "raw_private_data_storage",
+    "secret_or_credential_storage",
+    "unredacted_pii_storage",
+    "client_facing_value_claim",
+    "real_world_profit_claim",
+    "validated_savings_claim",
+    "validated_hallucination_reduction_claim",
+    "production_activation",
+    "automatic_memory_delete",
+    "gpt_memory_api_execution",
+    "commercial_package_pricing_claim"
+  ],
+  "allowed_actions": [
+    "manual_candidate_intake_shell_creation",
+    "manual_candidate_intake_form_template_creation",
+    "manual_candidate_preflight_definition",
+    "source_reference_only_intake_preparation",
+    "reviewer_queue_intake_preparation"
+  ],
+  "recommended_next_phase": "PROD-3661..3700 - Controlled Pilot Mock Candidate Intake Dry Run"
+}

@@ -1,0 +1,37 @@
+{
+  "version": "controlled_pilot_manual_candidate_intake_shell.v0.1",
+  "phase": "PROD-3621..3660",
+  "purpose": "Prepare manual candidate intake shell after empty dataset gate.",
+  "real_data_captured_in_this_phase": false,
+  "candidate_inserted": false,
+  "dataset_candidate_accepted": false,
+  "intake_section_count": 15,
+  "required_manual_field_count": 18,
+  "preflight_check_count": 15,
+  "shell": "product/calibration/real_sessions/controlled_pilot_manual_candidate_intake_shell_v0_1.json",
+  "intake_form": "product/calibration/real_sessions/controlled_pilot_manual_candidate_intake_form_v0_1.json",
+  "runbook": "product/calibration/real_sessions/controlled_pilot_manual_candidate_intake_shell_v0_1.md",
+  "allowed_actions": [
+    "manual_candidate_intake_shell_creation",
+    "manual_candidate_intake_form_template_creation",
+    "manual_candidate_preflight_definition",
+    "source_reference_only_intake_preparation",
+    "reviewer_queue_intake_preparation"
+  ],
+  "blocked_actions": [
+    "automatic_real_session_capture",
+    "dataset_acceptance_without_human_review",
+    "raw_private_data_storage",
+    "secret_or_credential_storage",
+    "unredacted_pii_storage",
+    "client_facing_value_claim",
+    "real_world_profit_claim",
+    "validated_savings_claim",
+    "validated_hallucination_reduction_claim",
+    "production_activation",
+    "automatic_memory_delete",
+    "gpt_memory_api_execution",
+    "commercial_package_pricing_claim"
+  ],
+  "recommended_next_phase": "PROD-3661..3700 - Controlled Pilot Mock Candidate Intake Dry Run"
+}
