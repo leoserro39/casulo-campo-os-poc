@@ -1,0 +1,53 @@
+{
+  "version": "gpt_sandbox_first_controlled_call_request_template.v0.1",
+  "phase": "PROD-5141..5180",
+  "template_only": true,
+  "real_gpt_provider_call": false,
+  "openai_api_key_storage": false,
+  "provider": "openai_gpt",
+  "api_key_source": "ENV_REFERENCE_ONLY_NOT_READ_OR_STORED",
+  "model_policy": "GPT_MODEL_NAME_PLACEHOLDER_ONLY",
+  "request_modes": [
+    "PURE_GPT",
+    "STACK_GPT",
+    "CASULO_EXOCORTEX_STACK"
+  ],
+  "fields": {
+    "case_id": null,
+    "mode": null,
+    "sanitized_user_prompt": null,
+    "casulo_state_snapshot_ref": null,
+    "evidence_packet_ref": null,
+    "gate_packet_ref": null,
+    "expected_output_schema_ref": null,
+    "claim_boundary_ref": null,
+    "human_reviewer_ref": null
+  },
+  "blocked_actions": [
+    "real_gpt_provider_call",
+    "openai_api_key_storage",
+    "gpt_memory_api_execution",
+    "live_gpt_call_execution",
+    "live_gpt_benchmark_execution",
+    "multi_vendor_llm_execution",
+    "claude_provider_call",
+    "gemini_provider_call",
+    "copilot_provider_call",
+    "start_command_execution",
+    "manual_session_execution",
+    "automatic_real_session_capture",
+    "real_candidate_insert",
+    "real_candidate_dataset_acceptance",
+    "dataset_acceptance_without_human_review",
+    "raw_private_data_storage",
+    "secret_or_credential_storage",
+    "unredacted_pii_storage",
+    "client_facing_value_claim",
+    "real_world_profit_claim",
+    "validated_savings_claim",
+    "validated_hallucination_reduction_claim",
+    "production_activation",
+    "automatic_memory_delete",
+    "commercial_package_pricing_claim"
+  ]
+}

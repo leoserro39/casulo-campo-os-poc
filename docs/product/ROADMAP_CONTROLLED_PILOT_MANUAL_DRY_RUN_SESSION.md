@@ -25,18 +25,20 @@
 - `PROD-4981..5020` - GPT Boundary Readiness Gate - **DONE**
 - `PROD-5021..5060` - GPT Mock Adapter Harness - **DONE**
 - `PROD-5061..5100` - PURE GPT vs STACK GPT vs EXOCORTEX STACK Comparison Harness - **DONE**
-- `PROD-5101..5140` - GPT Sandbox Activation Gate - **CURRENT**
-- `PROD-5141..5180` - GPT Sandbox First Controlled Call Packet - **NEXT**
+- `PROD-5101..5140` - GPT Sandbox Activation Gate - **DONE**
+- `PROD-5141..5180` - GPT Sandbox First Controlled Call Packet - **CURRENT**
+- `PROD-5181..5220` - GPT Sandbox First Controlled Call Readiness Gate - **NEXT**
 
-## Corrected GPT-only LLM plan
-- PURE GPT: direct GPT baseline.
-- STACK GPT: GPT with CASULO state, evidence and gates.
-- CASULO Exocortex Stack: GPT with governed memory lifecycle, snapshots, arbitration and continuity.
-- Stack V3 Multi-Provider is deferred until the GPT-only baseline is measured.
+## GPT-only active plan
+- PURE GPT
+- STACK GPT
+- CASULO Exocortex Stack
+- Stack V3 Multi-Provider deferred until GPT-only baseline is measured.
 
 ## Active boundary
 - No real GPT call yet.
 - No API key storage.
+- No GPT Memory API.
 - No multi-vendor LLM in this cycle.
 - No session execution.
 - No real candidate insert.
