@@ -1,0 +1,570 @@
+{
+  "version": "controlled_pilot_manual_dry_run_session_manual_execution_hold_checklist.v0.1",
+  "phase": "PROD-4701..4740",
+  "status": "CHECKLIST_TEMPLATE_ONLY_NO_SESSION_EXECUTION",
+  "real_data_captured_in_this_phase": false,
+  "real_candidate_inserted": false,
+  "real_candidate_accepted_to_dataset": false,
+  "checks": [
+    {
+      "id": "HOLD-001",
+      "name": "prior_execution_plan_readiness_gate_passed",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "HOLD-002",
+      "name": "execution_plan_packet_present",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "HOLD-003",
+      "name": "execution_plan_template_present",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "HOLD-004",
+      "name": "execution_plan_checklist_present",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "HOLD-005",
+      "name": "roadmap_present",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "HOLD-006",
+      "name": "operator_start_readiness_gate_present",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "HOLD-007",
+      "name": "operator_start_packet_present",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "HOLD-008",
+      "name": "precheck_readiness_gate_present",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "HOLD-009",
+      "name": "precheck_packet_present",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "HOLD-010",
+      "name": "final_gate_readiness_gate_present",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "HOLD-011",
+      "name": "final_gate_packet_present",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "HOLD-012",
+      "name": "review_readiness_gate_present",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "HOLD-013",
+      "name": "review_packet_present",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "HOLD-014",
+      "name": "observation_readiness_gate_present",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "HOLD-015",
+      "name": "observation_packet_present",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "HOLD-016",
+      "name": "log_readiness_gate_present",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "HOLD-017",
+      "name": "log_shell_present",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "HOLD-018",
+      "name": "execution_gate_present",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "HOLD-019",
+      "name": "session_packet_present",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "HOLD-020",
+      "name": "session_runbook_present",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "HOLD-021",
+      "name": "execution_packet_present",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "HOLD-022",
+      "name": "dry_run_shell_present",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "HOLD-023",
+      "name": "dry_run_form_present",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "HOLD-024",
+      "name": "validator_present",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "HOLD-025",
+      "name": "schema_present",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "HOLD-026",
+      "name": "real_dataset_empty",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "HOLD-027",
+      "name": "reviewer_queue_empty",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "HOLD-028",
+      "name": "hold_sections_present",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "HOLD-029",
+      "name": "hold_fields_present",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "HOLD-030",
+      "name": "hold_checks_present",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "HOLD-031",
+      "name": "hold_template_fields_present",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "HOLD-032",
+      "name": "hold_checklist_items_present",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "HOLD-033",
+      "name": "execution_plan_refs_present",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "HOLD-034",
+      "name": "operator_start_refs_present",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "HOLD-035",
+      "name": "precheck_refs_present",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "HOLD-036",
+      "name": "final_gate_refs_present",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "HOLD-037",
+      "name": "review_refs_present",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "HOLD-038",
+      "name": "observation_refs_present",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "HOLD-039",
+      "name": "log_refs_present",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "HOLD-040",
+      "name": "session_refs_present",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "HOLD-041",
+      "name": "operator_ref_required",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "HOLD-042",
+      "name": "human_reviewer_ref_required",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "HOLD-043",
+      "name": "source_reference_refs_required",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "HOLD-044",
+      "name": "privacy_review_ref_required",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "HOLD-045",
+      "name": "pii_redaction_ref_required",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "HOLD-046",
+      "name": "secret_scan_ref_required",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "HOLD-047",
+      "name": "evidence_packet_ref_required",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "HOLD-048",
+      "name": "manual_observation_refs_required",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "HOLD-049",
+      "name": "reviewer_notes_ref_required",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "HOLD-050",
+      "name": "claim_boundary_review_required",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "HOLD-051",
+      "name": "dataset_hold_reason_required",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "HOLD-052",
+      "name": "blocked_action_review_required",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "HOLD-053",
+      "name": "abort_trigger_review_required",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "HOLD-054",
+      "name": "start_command_hold_reason_required",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "HOLD-055",
+      "name": "manual_execution_hold_reason_required",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "HOLD-056",
+      "name": "human_release_required_field_present",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "HOLD-057",
+      "name": "hold_decision_required",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "HOLD-058",
+      "name": "hold_reason_required",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "HOLD-059",
+      "name": "stop_before_execution_confirmation_required",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "HOLD-060",
+      "name": "next_allowed_phase_required",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "HOLD-061",
+      "name": "roadmap_ref_required",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "HOLD-062",
+      "name": "reference_only_storage_required",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "HOLD-063",
+      "name": "sanitized_hold_packet_only",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "HOLD-064",
+      "name": "template_only_confirmed",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "HOLD-065",
+      "name": "checklist_template_only_confirmed",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "HOLD-066",
+      "name": "session_execution_not_performed",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "HOLD-067",
+      "name": "hold_packet_only_confirmed",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "HOLD-068",
+      "name": "start_command_blocked",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "HOLD-069",
+      "name": "manual_session_execution_blocked",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "HOLD-070",
+      "name": "automatic_capture_blocked",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "HOLD-071",
+      "name": "real_candidate_insert_blocked",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "HOLD-072",
+      "name": "dataset_acceptance_blocked",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "HOLD-073",
+      "name": "raw_private_data_blocked",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "HOLD-074",
+      "name": "secrets_blocked",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "HOLD-075",
+      "name": "unredacted_pii_blocked",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "HOLD-076",
+      "name": "client_claim_blocked",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "HOLD-077",
+      "name": "production_activation_blocked",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "HOLD-078",
+      "name": "human_review_required",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "HOLD-079",
+      "name": "manual_release_required_before_execution",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "HOLD-080",
+      "name": "no_real_value_claim",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "HOLD-081",
+      "name": "no_validated_hallucination_claim",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "HOLD-082",
+      "name": "no_commercial_pricing_claim",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "HOLD-083",
+      "name": "no_gpt_memory_api_execution",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "HOLD-084",
+      "name": "no_automatic_memory_delete",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "HOLD-085",
+      "name": "dataset_hold_before_real_intake",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "HOLD-086",
+      "name": "controlled_pilot_boundary_confirmed",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "HOLD-087",
+      "name": "roadmap_updated",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "HOLD-088",
+      "name": "hold_readiness_gate_preparation_only",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "HOLD-089",
+      "name": "manual_execution_hold_review_before_release_required",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "HOLD-090",
+      "name": "human_release_gate_required_before_session",
+      "required": true,
+      "status": "PENDING"
+    }
+  ],
+  "default_gate": "HOLD_MANUAL_EXECUTION_NO_SESSION_EXECUTION",
+  "blocked_actions": [
+    "start_command_execution",
+    "manual_session_execution",
+    "automatic_real_session_capture",
+    "real_candidate_insert",
+    "real_candidate_dataset_acceptance",
+    "dataset_acceptance_without_human_review",
+    "raw_private_data_storage",
+    "secret_or_credential_storage",
+    "unredacted_pii_storage",
+    "client_facing_value_claim",
+    "real_world_profit_claim",
+    "validated_savings_claim",
+    "validated_hallucination_reduction_claim",
+    "production_activation",
+    "automatic_memory_delete",
+    "gpt_memory_api_execution",
+    "commercial_package_pricing_claim"
+  ]
+}

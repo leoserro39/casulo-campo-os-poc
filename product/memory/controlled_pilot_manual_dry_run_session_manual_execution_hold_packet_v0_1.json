@@ -1,0 +1,39 @@
+{
+  "version": "controlled_pilot_manual_dry_run_session_manual_execution_hold_packet.v0.1",
+  "phase": "PROD-4701..4740",
+  "purpose": "Create a hard hold packet before any controlled manual session execution.",
+  "hold_section_count": 26,
+  "hold_field_count": 36,
+  "hold_check_count": 90,
+  "roadmap_updated": true,
+  "real_data_captured_in_this_phase": false,
+  "real_candidate_inserted": false,
+  "real_candidate_accepted_to_dataset": false,
+  "allowed_actions": [
+    "manual_execution_hold_packet_creation",
+    "manual_execution_hold_template_creation",
+    "manual_execution_hold_checklist_creation",
+    "roadmap_update",
+    "hold_before_actual_session_execution"
+  ],
+  "blocked_actions": [
+    "start_command_execution",
+    "manual_session_execution",
+    "automatic_real_session_capture",
+    "real_candidate_insert",
+    "real_candidate_dataset_acceptance",
+    "dataset_acceptance_without_human_review",
+    "raw_private_data_storage",
+    "secret_or_credential_storage",
+    "unredacted_pii_storage",
+    "client_facing_value_claim",
+    "real_world_profit_claim",
+    "validated_savings_claim",
+    "validated_hallucination_reduction_claim",
+    "production_activation",
+    "automatic_memory_delete",
+    "gpt_memory_api_execution",
+    "commercial_package_pricing_claim"
+  ],
+  "recommended_next_phase": "PROD-4741..4780 - Controlled Pilot Manual Dry Run Session Manual Session Execution Hold Readiness Gate"
+}
