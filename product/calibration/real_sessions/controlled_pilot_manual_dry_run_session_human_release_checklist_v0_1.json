@@ -1,0 +1,660 @@
+{
+  "version": "controlled_pilot_manual_dry_run_session_human_release_checklist.v0.1",
+  "phase": "PROD-4781..4820",
+  "status": "CHECKLIST_TEMPLATE_ONLY_NO_SESSION_EXECUTION",
+  "real_data_captured_in_this_phase": false,
+  "real_candidate_inserted": false,
+  "real_candidate_accepted_to_dataset": false,
+  "checks": [
+    {
+      "id": "REL-001",
+      "name": "prior_hold_readiness_gate_passed",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "REL-002",
+      "name": "hold_readiness_gate_present",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "REL-003",
+      "name": "hold_packet_present",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "REL-004",
+      "name": "hold_template_present",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "REL-005",
+      "name": "hold_checklist_present",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "REL-006",
+      "name": "roadmap_doc_present",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "REL-007",
+      "name": "roadmap_json_present",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "REL-008",
+      "name": "execution_plan_readiness_gate_present",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "REL-009",
+      "name": "execution_plan_packet_present",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "REL-010",
+      "name": "operator_start_readiness_gate_present",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "REL-011",
+      "name": "operator_start_packet_present",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "REL-012",
+      "name": "precheck_readiness_gate_present",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "REL-013",
+      "name": "precheck_packet_present",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "REL-014",
+      "name": "final_gate_present",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "REL-015",
+      "name": "final_packet_present",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "REL-016",
+      "name": "review_gate_present",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "REL-017",
+      "name": "review_packet_present",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "REL-018",
+      "name": "observation_gate_present",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "REL-019",
+      "name": "observation_packet_present",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "REL-020",
+      "name": "log_gate_present",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "REL-021",
+      "name": "log_shell_present",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "REL-022",
+      "name": "execution_gate_present",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "REL-023",
+      "name": "session_packet_present",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "REL-024",
+      "name": "session_runbook_present",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "REL-025",
+      "name": "execution_packet_present",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "REL-026",
+      "name": "dry_run_shell_present",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "REL-027",
+      "name": "dry_run_form_present",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "REL-028",
+      "name": "validator_present",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "REL-029",
+      "name": "schema_present",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "REL-030",
+      "name": "real_dataset_empty",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "REL-031",
+      "name": "reviewer_queue_empty",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "REL-032",
+      "name": "release_sections_present",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "REL-033",
+      "name": "release_fields_present",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "REL-034",
+      "name": "release_checks_present",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "REL-035",
+      "name": "release_template_fields_present",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "REL-036",
+      "name": "release_checklist_items_present",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "REL-037",
+      "name": "hold_sections_present",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "REL-038",
+      "name": "hold_fields_present",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "REL-039",
+      "name": "hold_checks_present",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "REL-040",
+      "name": "roadmap_current_phase_done",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "REL-041",
+      "name": "roadmap_next_phase_current",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "REL-042",
+      "name": "roadmap_following_phase_next",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "REL-043",
+      "name": "operator_ref_required",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "REL-044",
+      "name": "human_reviewer_ref_required",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "REL-045",
+      "name": "second_reviewer_ref_required",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "REL-046",
+      "name": "source_reference_refs_required",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "REL-047",
+      "name": "privacy_review_ref_required",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "REL-048",
+      "name": "pii_redaction_ref_required",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "REL-049",
+      "name": "secret_scan_ref_required",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "REL-050",
+      "name": "evidence_packet_ref_required",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "REL-051",
+      "name": "manual_observation_refs_required",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "REL-052",
+      "name": "reviewer_notes_ref_required",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "REL-053",
+      "name": "claim_boundary_review_required",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "REL-054",
+      "name": "dataset_hold_reason_required",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "REL-055",
+      "name": "blocked_action_review_required",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "REL-056",
+      "name": "abort_trigger_review_required",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "REL-057",
+      "name": "start_command_release_scope_required",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "REL-058",
+      "name": "manual_execution_release_scope_required",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "REL-059",
+      "name": "human_acknowledgement_required",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "REL-060",
+      "name": "dual_review_acknowledgement_required",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "REL-061",
+      "name": "release_decision_required",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "REL-062",
+      "name": "release_reason_required",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "REL-063",
+      "name": "next_allowed_phase_required",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "REL-064",
+      "name": "stop_before_execution_confirmation_required",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "REL-065",
+      "name": "roadmap_ref_required",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "REL-066",
+      "name": "human_release_packet_only_confirmed",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "REL-067",
+      "name": "human_release_packet_is_not_execution",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "REL-068",
+      "name": "post_release_readiness_gate_required",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "REL-069",
+      "name": "start_command_still_blocked",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "REL-070",
+      "name": "manual_session_execution_still_blocked",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "REL-071",
+      "name": "automatic_capture_blocked",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "REL-072",
+      "name": "real_candidate_insert_blocked",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "REL-073",
+      "name": "dataset_acceptance_blocked",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "REL-074",
+      "name": "raw_private_data_blocked",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "REL-075",
+      "name": "secrets_blocked",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "REL-076",
+      "name": "unredacted_pii_blocked",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "REL-077",
+      "name": "client_claim_blocked",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "REL-078",
+      "name": "production_activation_blocked",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "REL-079",
+      "name": "human_review_required",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "REL-080",
+      "name": "dual_review_required",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "REL-081",
+      "name": "operator_acknowledgement_required",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "REL-082",
+      "name": "reviewer_acknowledgement_required",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "REL-083",
+      "name": "manual_release_is_conditional",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "REL-084",
+      "name": "release_does_not_override_data_boundary",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "REL-085",
+      "name": "release_does_not_override_claim_boundary",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "REL-086",
+      "name": "release_does_not_override_dataset_hold",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "REL-087",
+      "name": "release_does_not_override_privacy_hold",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "REL-088",
+      "name": "release_does_not_override_secret_hold",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "REL-089",
+      "name": "release_does_not_override_pii_hold",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "REL-090",
+      "name": "no_real_value_claim",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "REL-091",
+      "name": "no_validated_hallucination_claim",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "REL-092",
+      "name": "no_commercial_pricing_claim",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "REL-093",
+      "name": "no_gpt_memory_api_execution",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "REL-094",
+      "name": "no_automatic_memory_delete",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "REL-095",
+      "name": "controlled_pilot_boundary_confirmed",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "REL-096",
+      "name": "roadmap_updated",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "REL-097",
+      "name": "human_release_readiness_gate_preparation_only",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "REL-098",
+      "name": "execution_still_requires_next_gate",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "REL-099",
+      "name": "start_command_still_requires_next_gate",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "REL-100",
+      "name": "real_candidate_intake_still_requires_future_gate",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "REL-101",
+      "name": "dataset_acceptance_still_requires_future_gate",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "REL-102",
+      "name": "manual_execution_window_not_set",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "REL-103",
+      "name": "operator_identity_placeholder_only",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "REL-104",
+      "name": "reviewer_identity_placeholder_only",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "REL-105",
+      "name": "release_packet_sanitized_placeholders_only",
+      "required": true,
+      "status": "PENDING"
+    }
+  ],
+  "default_gate": "HOLD_HUMAN_RELEASE_NO_SESSION_EXECUTION",
+  "blocked_actions": [
+    "start_command_execution",
+    "manual_session_execution",
+    "automatic_real_session_capture",
+    "real_candidate_insert",
+    "real_candidate_dataset_acceptance",
+    "dataset_acceptance_without_human_review",
+    "raw_private_data_storage",
+    "secret_or_credential_storage",
+    "unredacted_pii_storage",
+    "client_facing_value_claim",
+    "real_world_profit_claim",
+    "validated_savings_claim",
+    "validated_hallucination_reduction_claim",
+    "production_activation",
+    "automatic_memory_delete",
+    "gpt_memory_api_execution",
+    "commercial_package_pricing_claim"
+  ]
+}
