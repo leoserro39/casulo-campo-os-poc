@@ -1,0 +1,194 @@
+{
+  "status": "PASS",
+  "phase": "PROD-6181..6220",
+  "decision": "DOMAIN_CALIBRATION_BATCH01_HARDENED_RERUN_EXECUTION_COMPLETED_PENDING_REVIEW",
+  "generated_at": "2026-07-01T16:36:16.377424+00:00",
+  "check_count": 304,
+  "gpt_only_scope": true,
+  "multi_vendor_llm_scope": false,
+  "execution_run": true,
+  "hardened_capture_enabled": true,
+  "technical_pass_behavioral_pass_separated": true,
+  "executed_count": 36,
+  "real_provider_call_count": 36,
+  "successful_live_response_count": 36,
+  "review_ready_count": 36,
+  "empty_output_count": 0,
+  "json_parse_failure_count": 0,
+  "missing_required_fields_count": 0,
+  "capture_status": "READY_FOR_BEHAVIORAL_REVIEW",
+  "capture_fully_ready": true,
+  "domain_count": 6,
+  "scenario_count": 12,
+  "mode_counts": {
+    "PURE_GPT": 12,
+    "STACK_GPT": 12,
+    "CASULO_EXOCORTEX_STACK": 12
+  },
+  "domain_counts": {
+    "TIC/SI / ITSM": 6,
+    "VesselFlow / Operação marítima": 6,
+    "Jurídico / Escritório": 6,
+    "Financeiro / Administrativo": 6,
+    "Pequenos negócios de campo": 6,
+    "Governança documental": 6
+  },
+  "technical_status_counts": {
+    "PASS": 36
+  },
+  "behavioral_capture_status_counts": {
+    "READY_FOR_REVIEW": 36
+  },
+  "json_parse_status_counts": {
+    "PARSE_OK": 36
+  },
+  "output_capture_status_counts": {
+    "CAPTURED_FULL_OUTPUT": 36
+  },
+  "review_ready_by_mode": {
+    "PURE_GPT": 12,
+    "STACK_GPT": 12,
+    "CASULO_EXOCORTEX_STACK": 12
+  },
+  "review_ready_by_domain": {
+    "TIC/SI / ITSM": 6,
+    "VesselFlow / Operação marítima": 6,
+    "Jurídico / Escritório": 6,
+    "Financeiro / Administrativo": 6,
+    "Pequenos negócios de campo": 6,
+    "Governança documental": 6
+  },
+  "empty_by_mode": {},
+  "empty_by_domain": {},
+  "parse_failure_by_mode": {},
+  "parse_failure_by_domain": {},
+  "missing_fields_by_mode": {},
+  "missing_fields_by_domain": {},
+  "latency_summary_by_mode": {
+    "PURE_GPT": {
+      "count": 12,
+      "min": 4840,
+      "max": 13571,
+      "avg": 8164.17
+    },
+    "STACK_GPT": {
+      "count": 12,
+      "min": 4004,
+      "max": 10259,
+      "avg": 7590.42
+    },
+    "CASULO_EXOCORTEX_STACK": {
+      "count": 12,
+      "min": 4216,
+      "max": 17283,
+      "avg": 8722.58
+    }
+  },
+  "latency_summary_by_domain": {
+    "TIC/SI / ITSM": {
+      "count": 6,
+      "min": 6303,
+      "max": 10422,
+      "avg": 8317.83
+    },
+    "VesselFlow / Operação marítima": {
+      "count": 6,
+      "min": 4943,
+      "max": 9546,
+      "avg": 7434.17
+    },
+    "Jurídico / Escritório": {
+      "count": 6,
+      "min": 5161,
+      "max": 13571,
+      "avg": 9292.17
+    },
+    "Financeiro / Administrativo": {
+      "count": 6,
+      "min": 4216,
+      "max": 10198,
+      "avg": 6740.33
+    },
+    "Pequenos negócios de campo": {
+      "count": 6,
+      "min": 8312,
+      "max": 9896,
+      "avg": 9015.33
+    },
+    "Governança documental": {
+      "count": 6,
+      "min": 4004,
+      "max": 17283,
+      "avg": 8154.5
+    }
+  },
+  "full_output_length_summary_by_mode": {
+    "PURE_GPT": {
+      "count": 12,
+      "min": 628,
+      "max": 856,
+      "avg": 730.67
+    },
+    "STACK_GPT": {
+      "count": 12,
+      "min": 609,
+      "max": 845,
+      "avg": 727.92
+    },
+    "CASULO_EXOCORTEX_STACK": {
+      "count": 12,
+      "min": 630,
+      "max": 811,
+      "avg": 686.08
+    }
+  },
+  "full_output_length_summary_by_domain": {
+    "TIC/SI / ITSM": {
+      "count": 6,
+      "min": 623,
+      "max": 705,
+      "avg": 663.5
+    },
+    "VesselFlow / Operação marítima": {
+      "count": 6,
+      "min": 609,
+      "max": 707,
+      "avg": 658.0
+    },
+    "Jurídico / Escritório": {
+      "count": 6,
+      "min": 670,
+      "max": 827,
+      "avg": 766.17
+    },
+    "Financeiro / Administrativo": {
+      "count": 6,
+      "min": 628,
+      "max": 845,
+      "avg": 713.83
+    },
+    "Pequenos negócios de campo": {
+      "count": 6,
+      "min": 682,
+      "max": 856,
+      "avg": 777.67
+    },
+    "Governança documental": {
+      "count": 6,
+      "min": 660,
+      "max": 767,
+      "avg": 710.17
+    }
+  },
+  "safety_violations": 0,
+  "openai_api_key_storage": false,
+  "gpt_memory_api_execution": false,
+  "dataset_write": false,
+  "dataset_acceptance": false,
+  "client_evidence": false,
+  "production_evidence": false,
+  "commercial_claim": false,
+  "post_call_review_required": true,
+  "recommended_next_phase": "PROD-6221..6260 - Domain Calibration Hardened Rerun Review Gate",
+  "errors": []
+}

@@ -1,0 +1,24 @@
+# PROD-6181..6220 Result
+
+- Status: PASS
+- Decision: DOMAIN_CALIBRATION_BATCH01_HARDENED_RERUN_EXECUTION_COMPLETED_PENDING_REVIEW
+- Checks: 304
+- Executed count: 36
+- Real provider call count: 36
+- Successful live response count: 36
+- Review ready count: 36
+- Empty output count: 0
+- JSON parse failure count: 0
+- Missing required fields count: 0
+- Capture status: READY_FOR_BEHAVIORAL_REVIEW
+- Capture fully ready: True
+- Domain count: 6
+- Scenario count: 12
+- Safety violations: 0
+- Dataset acceptance: false
+- Client evidence: false
+- Production evidence: false
+- Commercial claim: false
+- Domain validation completed: false
+- Post-call review required: true
+- Next: PROD-6221..6260 - Domain Calibration Hardened Rerun Review Gate
