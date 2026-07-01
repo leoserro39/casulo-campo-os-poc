@@ -1,0 +1,40 @@
+{
+  "phase": "PROD-6221..6260",
+  "required_prior_tag": "product-domain-calibration-batch01-hardened-rerun-execution-run-v0.1",
+  "review_gate_only": true,
+  "additional_live_call_allowed": false,
+  "self_reported_metrics_only": true,
+  "external_evaluator_required": true,
+  "domain_validation_completed": false,
+  "dataset_acceptance_blocked": true,
+  "client_claim_blocked": true,
+  "production_blocked": true,
+  "commercial_claim_blocked": true,
+  "blocked_actions": [
+    "additional_live_gpt_call_in_this_gate",
+    "openai_api_key_storage",
+    "gpt_memory_api_execution",
+    "real_memory_api_execution",
+    "persistent_memory_write",
+    "multi_vendor_llm_execution",
+    "dataset_acceptance",
+    "real_candidate_insert",
+    "real_candidate_dataset_acceptance",
+    "dataset_acceptance_without_human_review",
+    "client_facing_value_claim",
+    "production_activation",
+    "validated_business_claim",
+    "validated_hallucination_reduction_claim",
+    "commercial_claim",
+    "domain_validation_claim"
+  ],
+  "allowed_actions": [
+    "hardened_rerun_review_gate_creation",
+    "behavioral_metrics_aggregation",
+    "mode_comparison_record_creation",
+    "domain_findings_record_creation",
+    "external_evaluator_packet_next",
+    "roadmap_update"
+  ],
+  "recommended_next_phase": "PROD-6261..6300 - Domain Calibration External Evaluator Packet"
+}

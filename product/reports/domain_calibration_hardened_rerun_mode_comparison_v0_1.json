@@ -1,0 +1,166 @@
+{
+  "version": "domain_calibration_hardened_rerun_mode_comparison.v0.1",
+  "phase": "PROD-6221..6260",
+  "generated_at": "2026-07-01T16:48:02.529111+00:00",
+  "comparison_status": "SELF_REPORTED_METRICS_ONLY_EXTERNAL_EVALUATOR_REQUIRED",
+  "ranked_modes_by_self_reported_composite_signal": [
+    {
+      "mode": "STACK_GPT",
+      "self_reported_composite_signal": 2.8334,
+      "evidence_grounding_score_avg": 2.9167,
+      "state_completeness_score_avg": 1.25,
+      "unsupported_claim_count_total": 0,
+      "gate_violation_count_total": 0
+    },
+    {
+      "mode": "PURE_GPT",
+      "self_reported_composite_signal": 2.0833,
+      "evidence_grounding_score_avg": 2.8333,
+      "state_completeness_score_avg": 1.25,
+      "unsupported_claim_count_total": 0,
+      "gate_violation_count_total": 0
+    },
+    {
+      "mode": "CASULO_EXOCORTEX_STACK",
+      "self_reported_composite_signal": 1.6667,
+      "evidence_grounding_score_avg": 2.25,
+      "state_completeness_score_avg": 1.25,
+      "unsupported_claim_count_total": 0,
+      "gate_violation_count_total": 0
+    }
+  ],
+  "by_mode": {
+    "CASULO_EXOCORTEX_STACK": {
+      "execution_count": 12,
+      "review_ready_count": 12,
+      "evidence_grounding_score_avg": 2.25,
+      "state_completeness_score_avg": 1.25,
+      "unsupported_claim_count_total": 0,
+      "missing_evidence_claim_count_total": 22,
+      "gate_violation_count_total": 0,
+      "context_regression_count_total": 0,
+      "manual_arbitration_needed_count_total": 9,
+      "human_review_required_count": 11,
+      "blocked_actions_total": 38,
+      "gate_status_counts": {
+        "INSUFFICIENT_EVIDENCE": 8,
+        "BLOCKED": 1,
+        "HOLD_HUMAN_REVIEW": 3
+      },
+      "evidence_sufficiency_counts": {
+        "insufficient": 5,
+        "partial": 2,
+        "missing": 4,
+        "conflicting": 1
+      },
+      "false_memory_risk_counts": {
+        "HIGH": 6,
+        "MEDIUM": 5,
+        "LOW": 1
+      },
+      "latency_ms": {
+        "count": 12,
+        "min": 4216,
+        "max": 17283,
+        "avg": 8722.5833
+      },
+      "full_output_length": {
+        "count": 12,
+        "min": 630,
+        "max": 811,
+        "avg": 686.0833
+      },
+      "self_reported_composite_signal": 1.6667
+    },
+    "PURE_GPT": {
+      "execution_count": 12,
+      "review_ready_count": 12,
+      "evidence_grounding_score_avg": 2.8333,
+      "state_completeness_score_avg": 1.25,
+      "unsupported_claim_count_total": 0,
+      "missing_evidence_claim_count_total": 24,
+      "gate_violation_count_total": 0,
+      "context_regression_count_total": 0,
+      "manual_arbitration_needed_count_total": 11,
+      "human_review_required_count": 11,
+      "blocked_actions_total": 41,
+      "gate_status_counts": {
+        "INSUFFICIENT_EVIDENCE": 8,
+        "BLOCKED": 1,
+        "HOLD_HUMAN_REVIEW": 3
+      },
+      "evidence_sufficiency_counts": {
+        "insufficient": 6,
+        "partial": 2,
+        "missing": 3,
+        "conflicting": 1
+      },
+      "false_memory_risk_counts": {
+        "HIGH": 8,
+        "MEDIUM": 2,
+        "LOW": 2
+      },
+      "latency_ms": {
+        "count": 12,
+        "min": 4840,
+        "max": 13571,
+        "avg": 8164.1667
+      },
+      "full_output_length": {
+        "count": 12,
+        "min": 628,
+        "max": 856,
+        "avg": 730.6667
+      },
+      "self_reported_composite_signal": 2.0833
+    },
+    "STACK_GPT": {
+      "execution_count": 12,
+      "review_ready_count": 12,
+      "evidence_grounding_score_avg": 2.9167,
+      "state_completeness_score_avg": 1.25,
+      "unsupported_claim_count_total": 0,
+      "missing_evidence_claim_count_total": 16,
+      "gate_violation_count_total": 0,
+      "context_regression_count_total": 0,
+      "manual_arbitration_needed_count_total": 12,
+      "human_review_required_count": 12,
+      "blocked_actions_total": 38,
+      "gate_status_counts": {
+        "INSUFFICIENT_EVIDENCE": 7,
+        "HOLD_HUMAN_REVIEW": 4,
+        "BLOCKED": 1
+      },
+      "evidence_sufficiency_counts": {
+        "insufficient": 7,
+        "partial": 3,
+        "missing": 1,
+        "conflicting": 1
+      },
+      "false_memory_risk_counts": {
+        "HIGH": 6,
+        "MEDIUM": 6
+      },
+      "latency_ms": {
+        "count": 12,
+        "min": 4004,
+        "max": 10259,
+        "avg": 7590.4167
+      },
+      "full_output_length": {
+        "count": 12,
+        "min": 609,
+        "max": 845,
+        "avg": 727.9167
+      },
+      "self_reported_composite_signal": 2.8334
+    }
+  },
+  "interpretation_limits": [
+    "Metrics are derived from model self-reported structured outputs.",
+    "This is not an independent hallucination reduction claim.",
+    "This is not client evidence.",
+    "This is not production evidence.",
+    "External or human evaluator scoring is required before acceptance."
+  ]
+}

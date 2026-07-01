@@ -1,0 +1,300 @@
+{
+  "version": "domain_calibration_hardened_rerun_domain_findings.v0.1",
+  "phase": "PROD-6221..6260",
+  "generated_at": "2026-07-01T16:48:02.529116+00:00",
+  "findings_status": "SELF_REPORTED_DOMAIN_SIGNALS_READY_FOR_EXTERNAL_REVIEW",
+  "ranked_domains_for_attention": [
+    {
+      "domain": "Financeiro / Administrativo",
+      "unsupported_claim_count_total": 0,
+      "missing_evidence_claim_count_total": 15,
+      "gate_violation_count_total": 0,
+      "human_review_required_count": 6,
+      "manual_arbitration_needed_count_total": 6,
+      "self_reported_composite_signal": 0.3333
+    },
+    {
+      "domain": "TIC/SI / ITSM",
+      "unsupported_claim_count_total": 0,
+      "missing_evidence_claim_count_total": 13,
+      "gate_violation_count_total": 0,
+      "human_review_required_count": 6,
+      "manual_arbitration_needed_count_total": 6,
+      "self_reported_composite_signal": 1.5
+    },
+    {
+      "domain": "Jurídico / Escritório",
+      "unsupported_claim_count_total": 0,
+      "missing_evidence_claim_count_total": 12,
+      "gate_violation_count_total": 0,
+      "human_review_required_count": 5,
+      "manual_arbitration_needed_count_total": 4,
+      "self_reported_composite_signal": 3.0
+    },
+    {
+      "domain": "Pequenos negócios de campo",
+      "unsupported_claim_count_total": 0,
+      "missing_evidence_claim_count_total": 10,
+      "gate_violation_count_total": 0,
+      "human_review_required_count": 5,
+      "manual_arbitration_needed_count_total": 5,
+      "self_reported_composite_signal": 2.1666
+    },
+    {
+      "domain": "Governança documental",
+      "unsupported_claim_count_total": 0,
+      "missing_evidence_claim_count_total": 8,
+      "gate_violation_count_total": 0,
+      "human_review_required_count": 6,
+      "manual_arbitration_needed_count_total": 5,
+      "self_reported_composite_signal": 2.8334
+    },
+    {
+      "domain": "VesselFlow / Operação marítima",
+      "unsupported_claim_count_total": 0,
+      "missing_evidence_claim_count_total": 4,
+      "gate_violation_count_total": 0,
+      "human_review_required_count": 6,
+      "manual_arbitration_needed_count_total": 6,
+      "self_reported_composite_signal": 3.3333
+    }
+  ],
+  "by_domain": {
+    "Financeiro / Administrativo": {
+      "execution_count": 6,
+      "review_ready_count": 6,
+      "evidence_grounding_score_avg": 1.8333,
+      "state_completeness_score_avg": 1.0,
+      "unsupported_claim_count_total": 0,
+      "missing_evidence_claim_count_total": 15,
+      "gate_violation_count_total": 0,
+      "context_regression_count_total": 0,
+      "manual_arbitration_needed_count_total": 6,
+      "human_review_required_count": 6,
+      "blocked_actions_total": 22,
+      "gate_status_counts": {
+        "HOLD_HUMAN_REVIEW": 2,
+        "INSUFFICIENT_EVIDENCE": 4
+      },
+      "evidence_sufficiency_counts": {
+        "insufficient": 3,
+        "missing": 3
+      },
+      "false_memory_risk_counts": {
+        "LOW": 1,
+        "MEDIUM": 1,
+        "HIGH": 4
+      },
+      "latency_ms": {
+        "count": 6,
+        "min": 4216,
+        "max": 10198,
+        "avg": 6740.3333
+      },
+      "full_output_length": {
+        "count": 6,
+        "min": 628,
+        "max": 845,
+        "avg": 713.8333
+      },
+      "self_reported_composite_signal": 0.3333
+    },
+    "Governança documental": {
+      "execution_count": 6,
+      "review_ready_count": 6,
+      "evidence_grounding_score_avg": 2.6667,
+      "state_completeness_score_avg": 1.5,
+      "unsupported_claim_count_total": 0,
+      "missing_evidence_claim_count_total": 8,
+      "gate_violation_count_total": 0,
+      "context_regression_count_total": 0,
+      "manual_arbitration_needed_count_total": 5,
+      "human_review_required_count": 6,
+      "blocked_actions_total": 23,
+      "gate_status_counts": {
+        "INSUFFICIENT_EVIDENCE": 3,
+        "HOLD_HUMAN_REVIEW": 3
+      },
+      "evidence_sufficiency_counts": {
+        "missing": 3,
+        "conflicting": 3
+      },
+      "false_memory_risk_counts": {
+        "HIGH": 4,
+        "MEDIUM": 2
+      },
+      "latency_ms": {
+        "count": 6,
+        "min": 4004,
+        "max": 17283,
+        "avg": 8154.5
+      },
+      "full_output_length": {
+        "count": 6,
+        "min": 660,
+        "max": 767,
+        "avg": 710.1667
+      },
+      "self_reported_composite_signal": 2.8334
+    },
+    "Jurídico / Escritório": {
+      "execution_count": 6,
+      "review_ready_count": 6,
+      "evidence_grounding_score_avg": 3.5,
+      "state_completeness_score_avg": 1.5,
+      "unsupported_claim_count_total": 0,
+      "missing_evidence_claim_count_total": 12,
+      "gate_violation_count_total": 0,
+      "context_regression_count_total": 0,
+      "manual_arbitration_needed_count_total": 4,
+      "human_review_required_count": 5,
+      "blocked_actions_total": 20,
+      "gate_status_counts": {
+        "INSUFFICIENT_EVIDENCE": 5,
+        "HOLD_HUMAN_REVIEW": 1
+      },
+      "evidence_sufficiency_counts": {
+        "insufficient": 5,
+        "missing": 1
+      },
+      "false_memory_risk_counts": {
+        "LOW": 2,
+        "MEDIUM": 1,
+        "HIGH": 3
+      },
+      "latency_ms": {
+        "count": 6,
+        "min": 5161,
+        "max": 13571,
+        "avg": 9292.1667
+      },
+      "full_output_length": {
+        "count": 6,
+        "min": 670,
+        "max": 827,
+        "avg": 766.1667
+      },
+      "self_reported_composite_signal": 3.0
+    },
+    "Pequenos negócios de campo": {
+      "execution_count": 6,
+      "review_ready_count": 6,
+      "evidence_grounding_score_avg": 2.8333,
+      "state_completeness_score_avg": 1.0,
+      "unsupported_claim_count_total": 0,
+      "missing_evidence_claim_count_total": 10,
+      "gate_violation_count_total": 0,
+      "context_regression_count_total": 0,
+      "manual_arbitration_needed_count_total": 5,
+      "human_review_required_count": 5,
+      "blocked_actions_total": 20,
+      "gate_status_counts": {
+        "INSUFFICIENT_EVIDENCE": 6
+      },
+      "evidence_sufficiency_counts": {
+        "insufficient": 5,
+        "missing": 1
+      },
+      "false_memory_risk_counts": {
+        "HIGH": 5,
+        "MEDIUM": 1
+      },
+      "latency_ms": {
+        "count": 6,
+        "min": 8312,
+        "max": 9896,
+        "avg": 9015.3333
+      },
+      "full_output_length": {
+        "count": 6,
+        "min": 682,
+        "max": 856,
+        "avg": 777.6667
+      },
+      "self_reported_composite_signal": 2.1666
+    },
+    "TIC/SI / ITSM": {
+      "execution_count": 6,
+      "review_ready_count": 6,
+      "evidence_grounding_score_avg": 2.5,
+      "state_completeness_score_avg": 1.1667,
+      "unsupported_claim_count_total": 0,
+      "missing_evidence_claim_count_total": 13,
+      "gate_violation_count_total": 0,
+      "context_regression_count_total": 0,
+      "manual_arbitration_needed_count_total": 6,
+      "human_review_required_count": 6,
+      "blocked_actions_total": 23,
+      "gate_status_counts": {
+        "INSUFFICIENT_EVIDENCE": 3,
+        "BLOCKED": 2,
+        "HOLD_HUMAN_REVIEW": 1
+      },
+      "evidence_sufficiency_counts": {
+        "insufficient": 4,
+        "partial": 2
+      },
+      "false_memory_risk_counts": {
+        "HIGH": 3,
+        "MEDIUM": 3
+      },
+      "latency_ms": {
+        "count": 6,
+        "min": 6303,
+        "max": 10422,
+        "avg": 8317.8333
+      },
+      "full_output_length": {
+        "count": 6,
+        "min": 623,
+        "max": 705,
+        "avg": 663.5
+      },
+      "self_reported_composite_signal": 1.5
+    },
+    "VesselFlow / Operação marítima": {
+      "execution_count": 6,
+      "review_ready_count": 6,
+      "evidence_grounding_score_avg": 2.6667,
+      "state_completeness_score_avg": 1.3333,
+      "unsupported_claim_count_total": 0,
+      "missing_evidence_claim_count_total": 4,
+      "gate_violation_count_total": 0,
+      "context_regression_count_total": 0,
+      "manual_arbitration_needed_count_total": 6,
+      "human_review_required_count": 6,
+      "blocked_actions_total": 9,
+      "gate_status_counts": {
+        "INSUFFICIENT_EVIDENCE": 2,
+        "HOLD_HUMAN_REVIEW": 3,
+        "BLOCKED": 1
+      },
+      "evidence_sufficiency_counts": {
+        "insufficient": 1,
+        "partial": 5
+      },
+      "false_memory_risk_counts": {
+        "HIGH": 1,
+        "MEDIUM": 5
+      },
+      "latency_ms": {
+        "count": 6,
+        "min": 4943,
+        "max": 9546,
+        "avg": 7434.1667
+      },
+      "full_output_length": {
+        "count": 6,
+        "min": 609,
+        "max": 707,
+        "avg": 658.0
+      },
+      "self_reported_composite_signal": 3.3333
+    }
+  },
+  "interpretation_limits": [
+    "Domain findings are behavioral signals, not validated domain conclusions.",
+    "No production or client claim is authorized.",
+    "Use these findings to design the next evaluator packet."
+  ]
+}

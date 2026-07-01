@@ -1,0 +1,146 @@
+{
+  "status": "PASS",
+  "phase": "PROD-6221..6260",
+  "decision": "DOMAIN_CALIBRATION_HARDENED_RERUN_REVIEW_COMPLETED_SELF_REPORTED_METRICS_READY",
+  "generated_at": "2026-07-01T16:48:02.530160+00:00",
+  "review_check_count": 316,
+  "review_gate_only": true,
+  "additional_live_call_in_this_gate": false,
+  "gpt_only_scope": true,
+  "multi_vendor_llm_scope": false,
+  "technical_execution_status": "PASS",
+  "capture_status": "READY_FOR_BEHAVIORAL_REVIEW",
+  "behavioral_metrics_status": "SELF_REPORTED_METRICS_READY",
+  "external_evaluator_required": true,
+  "review_ready_count": 36,
+  "empty_output_count": 0,
+  "json_parse_failure_count": 0,
+  "missing_required_fields_count": 0,
+  "safety_violations": 0,
+  "domain_count": 6,
+  "scenario_count": 12,
+  "mode_counts": {
+    "PURE_GPT": 12,
+    "STACK_GPT": 12,
+    "CASULO_EXOCORTEX_STACK": 12
+  },
+  "domain_counts": {
+    "TIC/SI / ITSM": 6,
+    "VesselFlow / Operação marítima": 6,
+    "Jurídico / Escritório": 6,
+    "Financeiro / Administrativo": 6,
+    "Pequenos negócios de campo": 6,
+    "Governança documental": 6
+  },
+  "technical_status_counts": {
+    "PASS": 36
+  },
+  "behavioral_capture_status_counts": {
+    "READY_FOR_REVIEW": 36
+  },
+  "gate_status_counts": {
+    "INSUFFICIENT_EVIDENCE": 23,
+    "BLOCKED": 3,
+    "HOLD_HUMAN_REVIEW": 10
+  },
+  "evidence_sufficiency_counts": {
+    "insufficient": 18,
+    "partial": 7,
+    "missing": 8,
+    "conflicting": 3
+  },
+  "false_memory_risk_counts": {
+    "HIGH": 20,
+    "MEDIUM": 13,
+    "LOW": 3
+  },
+  "ranked_modes_by_self_reported_composite_signal": [
+    {
+      "mode": "STACK_GPT",
+      "self_reported_composite_signal": 2.8334,
+      "evidence_grounding_score_avg": 2.9167,
+      "state_completeness_score_avg": 1.25,
+      "unsupported_claim_count_total": 0,
+      "gate_violation_count_total": 0
+    },
+    {
+      "mode": "PURE_GPT",
+      "self_reported_composite_signal": 2.0833,
+      "evidence_grounding_score_avg": 2.8333,
+      "state_completeness_score_avg": 1.25,
+      "unsupported_claim_count_total": 0,
+      "gate_violation_count_total": 0
+    },
+    {
+      "mode": "CASULO_EXOCORTEX_STACK",
+      "self_reported_composite_signal": 1.6667,
+      "evidence_grounding_score_avg": 2.25,
+      "state_completeness_score_avg": 1.25,
+      "unsupported_claim_count_total": 0,
+      "gate_violation_count_total": 0
+    }
+  ],
+  "ranked_domains_for_attention": [
+    {
+      "domain": "Financeiro / Administrativo",
+      "unsupported_claim_count_total": 0,
+      "missing_evidence_claim_count_total": 15,
+      "gate_violation_count_total": 0,
+      "human_review_required_count": 6,
+      "manual_arbitration_needed_count_total": 6,
+      "self_reported_composite_signal": 0.3333
+    },
+    {
+      "domain": "TIC/SI / ITSM",
+      "unsupported_claim_count_total": 0,
+      "missing_evidence_claim_count_total": 13,
+      "gate_violation_count_total": 0,
+      "human_review_required_count": 6,
+      "manual_arbitration_needed_count_total": 6,
+      "self_reported_composite_signal": 1.5
+    },
+    {
+      "domain": "Jurídico / Escritório",
+      "unsupported_claim_count_total": 0,
+      "missing_evidence_claim_count_total": 12,
+      "gate_violation_count_total": 0,
+      "human_review_required_count": 5,
+      "manual_arbitration_needed_count_total": 4,
+      "self_reported_composite_signal": 3.0
+    },
+    {
+      "domain": "Pequenos negócios de campo",
+      "unsupported_claim_count_total": 0,
+      "missing_evidence_claim_count_total": 10,
+      "gate_violation_count_total": 0,
+      "human_review_required_count": 5,
+      "manual_arbitration_needed_count_total": 5,
+      "self_reported_composite_signal": 2.1666
+    },
+    {
+      "domain": "Governança documental",
+      "unsupported_claim_count_total": 0,
+      "missing_evidence_claim_count_total": 8,
+      "gate_violation_count_total": 0,
+      "human_review_required_count": 6,
+      "manual_arbitration_needed_count_total": 5,
+      "self_reported_composite_signal": 2.8334
+    },
+    {
+      "domain": "VesselFlow / Operação marítima",
+      "unsupported_claim_count_total": 0,
+      "missing_evidence_claim_count_total": 4,
+      "gate_violation_count_total": 0,
+      "human_review_required_count": 6,
+      "manual_arbitration_needed_count_total": 6,
+      "self_reported_composite_signal": 3.3333
+    }
+  ],
+  "domain_validation_completed": false,
+  "accepted_as_dataset_candidate": false,
+  "accepted_as_client_evidence": false,
+  "accepted_as_production_evidence": false,
+  "commercial_claim": false,
+  "recommended_next_phase": "PROD-6261..6300 - Domain Calibration External Evaluator Packet",
+  "errors": []
+}

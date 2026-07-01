@@ -1,0 +1,24 @@
+# PROD-6221..6260 Result
+
+- Status: PASS
+- Decision: DOMAIN_CALIBRATION_HARDENED_RERUN_REVIEW_COMPLETED_SELF_REPORTED_METRICS_READY
+- Review checks: 316
+- Review gate only: true
+- Additional live call in this gate: false
+- Technical execution status: PASS
+- Capture status: READY_FOR_BEHAVIORAL_REVIEW
+- Behavioral metrics status: SELF_REPORTED_METRICS_READY
+- External evaluator required: true
+- Review ready count: 36
+- Empty output count: 0
+- JSON parse failure count: 0
+- Missing required fields count: 0
+- Safety violations: 0
+- Domain count: 6
+- Scenario count: 12
+- Domain validation completed: false
+- Accepted as dataset candidate: false
+- Accepted as client evidence: false
+- Accepted as production evidence: false
+- Commercial claim: false
+- Next: PROD-6261..6300 - Domain Calibration External Evaluator Packet
