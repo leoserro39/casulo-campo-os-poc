@@ -1,0 +1,121 @@
+{
+  "version": "telemetry_value_extraction_report.v0.1",
+  "generated_at": "2026-07-01T15:05:33.279314+00:00",
+  "head": "db50811",
+  "source_reports": [
+    "outputs/gpt_stack_historical_value_report_v0_1.json",
+    "product/calibration/real_sessions/pure_vs_stack_gpt_post_call_review_comparison_v0_1.json",
+    "outputs/prod5741_5780_stack_gpt_post_call_review_pure_vs_stack_comparison_gate.json"
+  ],
+  "scope": "Technical-operational telemetry and value extraction. Controlled lab only.",
+  "baseline_summary": {
+    "pure_mode": "PURE_GPT",
+    "pure_latency_ms": 4285,
+    "pure_output_preview": "CASULO_GPT_SANDBOX_ACK",
+    "stack_mode": "STACK_GPT",
+    "stack_latency_ms": 4001,
+    "stack_output_preview": "CASULO_STACK_GPT_SANDBOX_ACK",
+    "latency_delta_ms_stack_minus_pure": -284
+  },
+  "confirmed_boundaries": {
+    "gpt_only_scope": true,
+    "multi_vendor_llm_scope": false,
+    "exocortex_used": false,
+    "openai_api_key_storage": false,
+    "gpt_memory_api_execution": false,
+    "dataset_write": false,
+    "real_candidate_inserted": false,
+    "real_candidate_accepted_to_dataset": false,
+    "accepted_as_client_evidence": false,
+    "accepted_as_production_evidence": false
+  },
+  "patterns": [
+    {
+      "pattern": "Gate antes de execução reduz risco operacional.",
+      "observed_evidence": "Execução real só ocorreu depois de packet, readiness gate e comando explícito.",
+      "telemetry_to_add": [
+        "gate_status",
+        "blocked_actions",
+        "operator_authorization_present"
+      ]
+    },
+    {
+      "pattern": "Dry-run separado de apply cria uma camada simples de segurança.",
+      "observed_evidence": "Apply sem autorização foi bloqueado e registrado.",
+      "telemetry_to_add": [
+        "dry_run",
+        "apply_requested",
+        "apply_blocked_reason"
+      ]
+    },
+    {
+      "pattern": "Erro externo precisa virar estado auditável.",
+      "observed_evidence": "Erro de quota/billing levou a patch para registrar falhas em JSON.",
+      "telemetry_to_add": [
+        "provider_error_type",
+        "provider_error_message",
+        "retry_allowed",
+        "retry_reason"
+      ]
+    },
+    {
+      "pattern": "Baseline preservado permite comparação incremental.",
+      "observed_evidence": "PURE foi preservado antes do STACK.",
+      "telemetry_to_add": [
+        "baseline_ref",
+        "candidate_ref",
+        "comparison_id"
+      ]
+    },
+    {
+      "pattern": "STACK não quebrou contrato mínimo.",
+      "observed_evidence": "STACK retornou ACK correto e preservou limites.",
+      "telemetry_to_add": [
+        "contract_match",
+        "output_expected",
+        "output_preview"
+      ]
+    },
+    {
+      "pattern": "Ainda não há prova de valor de domínio.",
+      "observed_evidence": "Os prompts foram ACK controlados, sem caso real de negócio.",
+      "telemetry_to_add": [
+        "domain",
+        "scenario_id",
+        "business_rule_count",
+        "evidence_coverage"
+      ]
+    }
+  ],
+  "telemetry_schema_ref": "product/telemetry/casulo_telemetry_schema_v0_1.json",
+  "domain_matrix_ref": "product/evaluation/domain_scenario_matrix_v0_1.json",
+  "recommendations": {
+    "evaluate_now": [
+      "Criar matriz de cenários por domínio antes de claim comercial.",
+      "Instrumentar telemetria de evidência, claim e gate.",
+      "Registrar custos, tokens e latência por modo.",
+      "Criar score de fragilidade operacional por cenário.",
+      "Criar relatório comparativo por domínio após n>=5 execuções por domínio."
+    ],
+    "evaluate_after_exocortex_packet": [
+      "Comparar PURE vs STACK vs EXOCORTEX com mesmo prompt e mesma evidência.",
+      "Medir se Exocortex melhora consistência de contexto.",
+      "Medir se Exocortex reduz regressão entre turnos/sessões.",
+      "Medir custo adicional de contexto persistido/simulado.",
+      "Medir risco de excesso de contexto ou falsa memória."
+    ],
+    "do_not_claim_yet": [
+      "Redução de alucinação validada.",
+      "Economia financeira.",
+      "Prontidão para cliente.",
+      "Prontidão para produção.",
+      "Melhor modelo ou melhor arquitetura em geral."
+    ]
+  },
+  "next_recommended_phase": "PROD-5781..5820 - CASULO Exocortex Stack Controlled Live Call Packet",
+  "business_value_interpretation": {
+    "current_value": "Governança, auditabilidade, comparabilidade e segurança operacional.",
+    "not_yet_value": "Valor comercial, produção, economia validada ou redução comprovada de alucinação.",
+    "main_thesis": "CASULO começa a se posicionar como método de estado operacional computável para controlar, medir e comparar uso de IA."
+  }
+}

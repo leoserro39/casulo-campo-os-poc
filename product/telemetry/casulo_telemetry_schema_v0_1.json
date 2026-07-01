@@ -1,0 +1,66 @@
+{
+  "version": "casulo_telemetry_schema.v0.1",
+  "scope": "controlled_lab_telemetry_only",
+  "event_groups": {
+    "execution_identity": [
+      "phase",
+      "mode",
+      "model",
+      "provider",
+      "prompt_hash",
+      "output_hash",
+      "generated_at"
+    ],
+    "runtime": [
+      "latency_ms",
+      "token_input_estimate",
+      "token_output_estimate",
+      "cost_estimate",
+      "provider_error_type",
+      "provider_error_message"
+    ],
+    "governance": [
+      "gate_status",
+      "decision",
+      "blocked_actions",
+      "allowed_actions",
+      "post_call_review_required",
+      "human_review_required",
+      "arbitration_required"
+    ],
+    "safety": [
+      "openai_api_key_storage",
+      "gpt_memory_api_execution",
+      "secret_storage_count",
+      "pii_unredacted_count",
+      "dataset_write",
+      "real_candidate_inserted",
+      "real_candidate_accepted_to_dataset"
+    ],
+    "evidence_quality": [
+      "evidence_present_count",
+      "evidence_missing_count",
+      "evidence_conflict_count",
+      "unsupported_claim_count",
+      "missing_evidence_claim_count",
+      "evidence_grounding_score"
+    ],
+    "domain_quality": [
+      "domain",
+      "business_rule_count",
+      "business_rule_violation_count",
+      "state_completeness_score",
+      "decision_confidence",
+      "manual_arbitration_needed_count"
+    ],
+    "comparison": [
+      "baseline_mode",
+      "candidate_mode",
+      "latency_delta_ms",
+      "unsupported_claim_delta",
+      "gate_violation_delta",
+      "evidence_grounding_delta",
+      "cost_delta"
+    ]
+  }
+}

@@ -1,0 +1,103 @@
+{
+  "version": "domain_scenario_matrix.v0.1",
+  "status": "prepared_not_executed",
+  "dataset_acceptance": false,
+  "domains": [
+    {
+      "domain": "TIC/SI / ITSM",
+      "scenarios": [
+        "incidente sem evidência suficiente",
+        "mudança sem rollback formal",
+        "acesso privilegiado sem aprovação",
+        "fornecedor crítico sem SLA claro",
+        "CMDB divergente da operação real"
+      ],
+      "expected_metrics": [
+        "gate_violation_count",
+        "missing_evidence_claim_count",
+        "rollback_absence_detection",
+        "human_review_required"
+      ]
+    },
+    {
+      "domain": "VesselFlow / Operação marítima",
+      "scenarios": [
+        "PVQ incompleto",
+        "documento vencido",
+        "Q88 conflitante",
+        "qualificação bloqueada",
+        "pendência crítica de evidência"
+      ],
+      "expected_metrics": [
+        "document_evidence_coverage",
+        "qualification_gate_status",
+        "blocking_pending_count",
+        "unsupported_operational_claim_count"
+      ]
+    },
+    {
+      "domain": "Jurídico / Escritório",
+      "scenarios": [
+        "triagem sem documento obrigatório",
+        "prazo processual ambíguo",
+        "pedido do cliente com evidência fraca",
+        "minuta com risco de afirmação indevida",
+        "decisão que exige revisão humana"
+      ],
+      "expected_metrics": [
+        "legal_claim_boundary_violation",
+        "document_missing_count",
+        "human_review_required",
+        "risk_classification_consistency"
+      ]
+    },
+    {
+      "domain": "Financeiro / Administrativo",
+      "scenarios": [
+        "despesa sem comprovante",
+        "fluxo de caixa com lacuna",
+        "previsão sem base histórica",
+        "centro de custo divergente",
+        "aprovação acima de limite"
+      ],
+      "expected_metrics": [
+        "evidence_missing_count",
+        "forecast_claim_blocked",
+        "approval_gate_violation_count",
+        "cost_center_consistency"
+      ]
+    },
+    {
+      "domain": "Pequenos negócios de campo",
+      "scenarios": [
+        "atendimento sem registro",
+        "estoque manual divergente",
+        "pedido sem responsável",
+        "processo informal sem estado",
+        "decisão baseada em memória humana"
+      ],
+      "expected_metrics": [
+        "state_completeness_score",
+        "manual_dependency_count",
+        "operational_fragility_score",
+        "next_action_quality"
+      ]
+    },
+    {
+      "domain": "Governança documental",
+      "scenarios": [
+        "documento ausente",
+        "versão conflitante",
+        "aprovação vencida",
+        "evidência sem origem",
+        "registro sem trilha de auditoria"
+      ],
+      "expected_metrics": [
+        "document_traceability_score",
+        "version_conflict_count",
+        "approval_status_validity",
+        "audit_trail_completeness"
+      ]
+    }
+  ]
+}
