@@ -1,0 +1,47 @@
+{
+  "phase": "PROD-5061..5100",
+  "title": "PURE GPT vs STACK GPT vs EXOCORTEX STACK Comparison Harness",
+  "required_scope": "GPT_ONLY_OPENAI_ADAPTERS",
+  "forbidden_scope": [
+    "MULTI_VENDOR_LLM_THIS_CYCLE",
+    "CLAUDE_THIS_CYCLE",
+    "GEMINI_THIS_CYCLE",
+    "COPILOT_THIS_CYCLE"
+  ],
+  "pure_gpt_allowed_as_mode": true,
+  "stack_gpt_allowed_as_mode": true,
+  "casulo_exocortex_stack_allowed_as_mode": true,
+  "stack_v3_multiprovider_deferred": true,
+  "real_gpt_call_blocked": true,
+  "api_key_storage_blocked": true,
+  "session_execution_blocked": true,
+  "dataset_acceptance_blocked": true,
+  "blocked_actions": [
+    "start_command_execution",
+    "manual_session_execution",
+    "automatic_real_session_capture",
+    "real_candidate_insert",
+    "real_candidate_dataset_acceptance",
+    "dataset_acceptance_without_human_review",
+    "raw_private_data_storage",
+    "secret_or_credential_storage",
+    "unredacted_pii_storage",
+    "client_facing_value_claim",
+    "real_world_profit_claim",
+    "validated_savings_claim",
+    "validated_hallucination_reduction_claim",
+    "production_activation",
+    "automatic_memory_delete",
+    "gpt_memory_api_execution",
+    "commercial_package_pricing_claim",
+    "real_gpt_provider_call",
+    "openai_api_key_storage",
+    "live_gpt_benchmark_execution"
+  ],
+  "allowed_actions": [
+    "pure_stack_exocortex_comparison_harness_creation",
+    "gpt_sandbox_activation_gate_preparation",
+    "roadmap_update"
+  ],
+  "recommended_next_phase": "PROD-5101..5140 - GPT Sandbox Activation Gate"
+}

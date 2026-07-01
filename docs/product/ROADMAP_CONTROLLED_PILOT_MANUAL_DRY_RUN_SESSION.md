@@ -21,18 +21,23 @@
 - `PROD-4821..4860` - Human Release Readiness Gate - **DONE**
 - `PROD-4861..4900` - Final Human Go No-Go Packet - **DONE**
 - `PROD-4901..4940` - Final Human Go No-Go Readiness Gate - **CURRENT**
-- `PROD-4941..4980` - LLM Boundary and Provider Contract Packet - **NEXT**
+- `PROD-4941..4980` - GPT Boundary and OpenAI Adapter Contract Packet - **DONE**
+- `PROD-4981..5020` - GPT Boundary Readiness Gate - **DONE**
+- `PROD-5021..5060` - GPT Mock Adapter Harness - **DONE**
+- `PROD-5061..5100` - PURE GPT vs STACK GPT vs EXOCORTEX STACK Comparison Harness - **DONE**
+- `PROD-5101..5140` - GPT Sandbox Activation Gate - **CURRENT**
+- `PROD-5141..5180` - GPT Sandbox First Controlled Call Packet - **NEXT**
 
-## Current boundary
-- Current phase validates final human go/no-go readiness only.
+## Corrected GPT-only LLM plan
+- PURE GPT: direct GPT baseline.
+- STACK GPT: GPT with CASULO state, evidence and gates.
+- CASULO Exocortex Stack: GPT with governed memory lifecycle, snapshots, arbitration and continuity.
+- Stack V3 Multi-Provider is deferred until the GPT-only baseline is measured.
+
+## Active boundary
+- No real GPT call yet.
+- No API key storage.
+- No multi-vendor LLM in this cycle.
 - No session execution.
-- No start command.
 - No real candidate insert.
 - No dataset acceptance.
-- No real LLM call.
-
-## LLM plan
-- Next: LLM Boundary and Provider Contract Packet.
-- Then: LLM Boundary Readiness Gate.
-- Then: Multi-LLM Mock Harness.
-- Then: PURE vs STACK vs CASULO Exocortex Stack Comparison Harness.
