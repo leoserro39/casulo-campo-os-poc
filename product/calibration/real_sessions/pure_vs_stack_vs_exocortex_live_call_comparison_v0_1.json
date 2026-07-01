@@ -1,0 +1,59 @@
+{
+  "version": "pure_vs_stack_vs_exocortex_live_call_comparison.v0.1",
+  "phase": "PROD-5861..5900",
+  "generated_at": "2026-07-01T15:29:22.696432+00:00",
+  "gpt_only_scope": true,
+  "multi_vendor_llm_scope": false,
+  "exocortex_context_type": "SIMULATED_OPERATIONAL_CONTEXT_ONLY",
+  "baseline": {
+    "pure": {
+      "mode": "PURE_GPT",
+      "model": "gpt-5.5-2026-04-23",
+      "output_preview": "CASULO_GPT_SANDBOX_ACK",
+      "latency_ms": 4285,
+      "prompt_hash": "a372439bdd2b1f3d4c30a48d9431f53a68a8ff9642add5a75e84899346997d8d",
+      "output_hash": "a8a50a59ff50000adcd55b0d1adf47b556c2bbd13333dc284e32f8c5fed61050"
+    },
+    "stack": {
+      "mode": "STACK_GPT",
+      "model": "gpt-5.5-2026-04-23",
+      "output_preview": "CASULO_STACK_GPT_SANDBOX_ACK",
+      "latency_ms": 4001,
+      "prompt_hash": "c3b2a4a9a891c27328c851390a37ad04649dc64a9520bd06a67b27084d3566d1",
+      "output_hash": "0a6bfbf89f64de06d4900ab9049c7514c2aed63ddb7a6cf51c57cef228e15ebe"
+    }
+  },
+  "exocortex": {
+    "mode": "CASULO_EXOCORTEX_STACK",
+    "model": "gpt-5.5-2026-04-23",
+    "output_preview": "CASULO_EXOCORTEX_STACK_SANDBOX_ACK",
+    "latency_ms": 4334,
+    "prompt_hash": "649266730dbb91f49bbfaf5234a1301f1e0f8fcbf3fba32745049381037674bf",
+    "output_hash": "d154d29431c3de20179ddc2db562775df63ceb0e920d3351ec55ac630130bbd3"
+  },
+  "metrics": {
+    "pure_ack_match": true,
+    "stack_ack_match": true,
+    "exocortex_ack_match": true,
+    "latency_delta_ms_stack_minus_pure": -284,
+    "latency_delta_ms_exocortex_minus_pure": 49,
+    "latency_delta_ms_exocortex_minus_stack": 333,
+    "unsupported_claim_count": 0,
+    "missing_evidence_claim_count": 0,
+    "gate_violation_count": 0,
+    "dataset_write_count": 0,
+    "api_key_storage_count": 0,
+    "gpt_memory_api_execution_count": 0,
+    "real_candidate_insert_count": 0,
+    "real_candidate_accept_count": 0,
+    "false_memory_risk": "NOT_EVALUATED_IN_ACK_ONLY_CALL",
+    "context_regression_count": "NOT_EVALUATED_IN_ACK_ONLY_CALL",
+    "evidence_grounding_score": "NOT_EVALUATED_IN_ACK_ONLY_CALL"
+  },
+  "accepted_for_comparison_record_only": true,
+  "accepted_as_dataset_candidate": false,
+  "accepted_as_client_evidence": false,
+  "accepted_as_production_evidence": false,
+  "post_call_review_required": true,
+  "recommended_next_phase": "PROD-5901..5940 - CASULO Exocortex Post-Call Review and PURE vs STACK vs EXOCORTEX Comparison Gate"
+}
