@@ -1,0 +1,346 @@
+{
+  "version": "controlled_pilot_manual_dry_run_session_final_gate_checklist.v0.1",
+  "phase": "PROD-4381..4420",
+  "status": "CHECKLIST_TEMPLATE_ONLY_NO_SESSION_EXECUTION",
+  "real_data_captured_in_this_phase": false,
+  "real_candidate_inserted": false,
+  "real_candidate_accepted_to_dataset": false,
+  "checks": [
+    {
+      "id": "FINAL-001",
+      "name": "prior_review_readiness_gate_passed",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "FINAL-002",
+      "name": "review_packet_present",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "FINAL-003",
+      "name": "review_template_present",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "FINAL-004",
+      "name": "review_checklist_present",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "FINAL-005",
+      "name": "observation_readiness_gate_present",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "FINAL-006",
+      "name": "observation_packet_present",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "FINAL-007",
+      "name": "observation_template_present",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "FINAL-008",
+      "name": "observation_checklist_present",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "FINAL-009",
+      "name": "log_readiness_gate_present",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "FINAL-010",
+      "name": "log_shell_present",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "FINAL-011",
+      "name": "log_template_present",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "FINAL-012",
+      "name": "execution_gate_present",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "FINAL-013",
+      "name": "session_packet_present",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "FINAL-014",
+      "name": "session_checklist_present",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "FINAL-015",
+      "name": "session_runbook_present",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "FINAL-016",
+      "name": "execution_packet_present",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "FINAL-017",
+      "name": "dry_run_shell_present",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "FINAL-018",
+      "name": "dry_run_form_present",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "FINAL-019",
+      "name": "validator_present",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "FINAL-020",
+      "name": "schema_present",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "FINAL-021",
+      "name": "real_dataset_empty",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "FINAL-022",
+      "name": "reviewer_queue_empty",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "FINAL-023",
+      "name": "final_gate_sections_present",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "FINAL-024",
+      "name": "final_gate_fields_present",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "FINAL-025",
+      "name": "final_gate_template_fields_present",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "FINAL-026",
+      "name": "final_gate_checklist_items_present",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "FINAL-027",
+      "name": "all_prior_refs_present",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "FINAL-028",
+      "name": "source_reference_refs_required",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "FINAL-029",
+      "name": "privacy_review_ref_required",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "FINAL-030",
+      "name": "pii_redaction_ref_required",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "FINAL-031",
+      "name": "secret_scan_ref_required",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "FINAL-032",
+      "name": "evidence_packet_ref_required",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "FINAL-033",
+      "name": "reviewer_notes_ref_required",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "FINAL-034",
+      "name": "claim_boundary_review_required",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "FINAL-035",
+      "name": "dataset_hold_reason_required",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "FINAL-036",
+      "name": "blocked_action_review_required",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "FINAL-037",
+      "name": "final_gate_decision_required",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "FINAL-038",
+      "name": "final_gate_reason_required",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "FINAL-039",
+      "name": "next_allowed_phase_required",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "FINAL-040",
+      "name": "reference_only_storage_required",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "FINAL-041",
+      "name": "sanitized_review_only",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "FINAL-042",
+      "name": "template_only_confirmed",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "FINAL-043",
+      "name": "checklist_template_only_confirmed",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "FINAL-044",
+      "name": "session_execution_not_performed",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "FINAL-045",
+      "name": "automatic_capture_blocked",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "FINAL-046",
+      "name": "real_candidate_insert_blocked",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "FINAL-047",
+      "name": "dataset_acceptance_blocked",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "FINAL-048",
+      "name": "raw_private_data_blocked",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "FINAL-049",
+      "name": "secrets_blocked",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "FINAL-050",
+      "name": "unredacted_pii_blocked",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "FINAL-051",
+      "name": "client_claim_blocked",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "FINAL-052",
+      "name": "production_activation_blocked",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "FINAL-053",
+      "name": "human_review_required",
+      "required": true,
+      "status": "PENDING"
+    }
+  ],
+  "default_gate": "HOLD_FINAL_GATE_PACKET_NO_SESSION_EXECUTION",
+  "blocked_actions": [
+    "automatic_real_session_capture",
+    "real_candidate_insert",
+    "real_candidate_dataset_acceptance",
+    "dataset_acceptance_without_human_review",
+    "raw_private_data_storage",
+    "secret_or_credential_storage",
+    "unredacted_pii_storage",
+    "client_facing_value_claim",
+    "real_world_profit_claim",
+    "validated_savings_claim",
+    "validated_hallucination_reduction_claim",
+    "production_activation",
+    "automatic_memory_delete",
+    "gpt_memory_api_execution",
+    "commercial_package_pricing_claim"
+  ]
+}
