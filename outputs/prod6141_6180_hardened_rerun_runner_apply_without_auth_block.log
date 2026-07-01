@@ -1,3 +1,4 @@
+STDOUT:
 {
   "status": "FAIL",
   "blocked_reason": "CASULO_GPT_LIVE_AUTH=YES is required.",
@@ -15,3 +16,8 @@
   "production_evidence": false,
   "generated_at": "2026-07-01T16:28:15.281156+00:00"
 }
+
+STDERR:
+
+RC:
+2

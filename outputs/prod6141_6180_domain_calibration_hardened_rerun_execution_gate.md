@@ -1,0 +1,26 @@
+# PROD-6141..6180 Result
+
+- Status: PASS
+- Decision: APPROVED_FOR_DOMAIN_CALIBRATION_HARDENED_RERUN_EXECUTION_WITH_EXPLICIT_OPERATOR_COMMAND_ONLY
+- Readiness checks: 292
+- Execution gate only: true
+- Live execution performed in this gate: false
+- Scenario count: 12
+- Planned execution count: 36
+- Hardened dry-run pass: True
+- Hardened dry-run provider calls: 0
+- Hardened dry-run successful responses: 0
+- Hardened dry-run review ready count: 0
+- Apply without auth blocked: True
+- Apply without auth provider calls: 0
+- Apply without auth successful responses: 0
+- Apply without auth review ready count: 0
+- Technical PASS separated from behavioral PASS: true
+- Empty output behavioral fail: true
+- Non-JSON output behavioral fail: true
+- Missing required fields behavioral fail: true
+- Dataset acceptance: false
+- Client evidence: false
+- Production evidence: false
+- Commercial claim: false
+- Next: PROD-6181..6220 - Domain Calibration Batch 01 Hardened Rerun Execution Run
