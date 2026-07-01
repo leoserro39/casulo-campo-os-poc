@@ -1,0 +1,14 @@
+{
+  "version": "evidence_source_map_template.v0.3",
+  "columns": [
+    "source_id",
+    "source_family",
+    "evidence_type",
+    "anchor_ref",
+    "trust_level",
+    "source_boundary",
+    "known_gap",
+    "usable_for_real_case",
+    "usable_for_client_claim"
+  ]
+}

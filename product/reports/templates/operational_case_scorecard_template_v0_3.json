@@ -1,0 +1,24 @@
+{
+  "version": "operational_case_scorecard_template.v0.3",
+  "score_fields_0_5": [
+    "evidence_grounding_score",
+    "gate_compliance_score",
+    "claim_boundary_score",
+    "source_boundary_score",
+    "schema_provenance_score",
+    "state_vector_reasonableness_score",
+    "delta_reasonableness_score",
+    "next_action_quality_score",
+    "recommendation_executability_score",
+    "monitoring_value_score"
+  ],
+  "flags": [
+    "hallucination_risk_flag",
+    "unsupported_claim_flag",
+    "unsafe_action_flag",
+    "over_review_flag",
+    "under_review_flag",
+    "pii_or_secret_risk_flag",
+    "production_side_effect_flag"
+  ]
+}

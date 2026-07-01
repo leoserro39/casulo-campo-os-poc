@@ -1,0 +1,141 @@
+{
+  "version": "correlation_analysis_matrix.v0.3",
+  "phase": "PROD-6821..6860",
+  "rows": [
+    {
+      "calibration_id": "CAL-001",
+      "dimension": "source_family",
+      "question": "Which source family generates more review requirements?",
+      "x_signal": "source_family",
+      "y_signal": "expected_gate",
+      "metric": "gate_rate_by_family",
+      "status": "TEMPLATE_PENDING_REAL_CASES"
+    },
+    {
+      "calibration_id": "CAL-002",
+      "dimension": "difficulty",
+      "question": "How difficulty changes hallucination and under-review risk?",
+      "x_signal": "difficulty",
+      "y_signal": "risk_flags",
+      "metric": "risk_rate_by_difficulty",
+      "status": "TEMPLATE_PENDING_REAL_CASES"
+    },
+    {
+      "calibration_id": "CAL-003",
+      "dimension": "evidence_type",
+      "question": "Which evidence types reduce unsupported claims?",
+      "x_signal": "evidence_type",
+      "y_signal": "unsupported_claim_count",
+      "metric": "mean_unsupported_claims",
+      "status": "TEMPLATE_PENDING_REAL_CASES"
+    },
+    {
+      "calibration_id": "CAL-004",
+      "dimension": "schema_presence",
+      "question": "Does structured schema improve next-action quality?",
+      "x_signal": "has_schema_or_context",
+      "y_signal": "next_action_quality_score",
+      "metric": "median_score_by_schema_presence",
+      "status": "TEMPLATE_PENDING_REAL_CASES"
+    },
+    {
+      "calibration_id": "CAL-005",
+      "dimension": "citation_anchor",
+      "question": "Does citation anchor reduce claim overreach?",
+      "x_signal": "citation_anchor_presence",
+      "y_signal": "claim_overreach_count",
+      "metric": "overreach_rate",
+      "status": "TEMPLATE_PENDING_REAL_CASES"
+    },
+    {
+      "calibration_id": "CAL-006",
+      "dimension": "blocked_action_explicitness",
+      "question": "Do explicit blocked actions improve gate compliance?",
+      "x_signal": "blocked_action_count",
+      "y_signal": "gate_compliance_score",
+      "metric": "score_delta",
+      "status": "TEMPLATE_PENDING_REAL_CASES"
+    },
+    {
+      "calibration_id": "CAL-007",
+      "dimension": "owner_clarity",
+      "question": "Does owner clarity improve recommendation executability?",
+      "x_signal": "owner_present",
+      "y_signal": "recommendation_executability_score",
+      "metric": "median_executability",
+      "status": "TEMPLATE_PENDING_REAL_CASES"
+    },
+    {
+      "calibration_id": "CAL-008",
+      "dimension": "process_variants",
+      "question": "Do process variants increase fragility?",
+      "x_signal": "process_variant_count",
+      "y_signal": "operational_fragility_score",
+      "metric": "correlation_candidate",
+      "status": "TEMPLATE_PENDING_REAL_CASES"
+    },
+    {
+      "calibration_id": "CAL-009",
+      "dimension": "evidence_gap",
+      "question": "Does evidence gap increase human review?",
+      "x_signal": "evidence_gap_count",
+      "y_signal": "human_review_required",
+      "metric": "review_rate",
+      "status": "TEMPLATE_PENDING_REAL_CASES"
+    },
+    {
+      "calibration_id": "CAL-010",
+      "dimension": "source_trust",
+      "question": "Does source trust alter accepted calibration signal?",
+      "x_signal": "source_trust_level",
+      "y_signal": "accepted_for_calibration",
+      "metric": "acceptance_rate",
+      "status": "TEMPLATE_PENDING_REAL_CASES"
+    },
+    {
+      "calibration_id": "CAL-011",
+      "dimension": "latency_tokens",
+      "question": "Does context richness increase cost/latency?",
+      "x_signal": "context_packet_size",
+      "y_signal": "latency_and_token_proxy",
+      "metric": "p50_p95_cost_proxy",
+      "status": "TEMPLATE_PENDING_REAL_CASES"
+    },
+    {
+      "calibration_id": "CAL-012",
+      "dimension": "false_memory",
+      "question": "Which source types trigger false memory risk?",
+      "x_signal": "source_family",
+      "y_signal": "false_memory_risk",
+      "metric": "risk_rate",
+      "status": "TEMPLATE_PENDING_REAL_CASES"
+    },
+    {
+      "calibration_id": "CAL-013",
+      "dimension": "over_review",
+      "question": "Where does the system over-escalate?",
+      "x_signal": "gate_expected_vs_model_gate",
+      "y_signal": "over_review_flag",
+      "metric": "over_review_rate",
+      "status": "TEMPLATE_PENDING_REAL_CASES"
+    },
+    {
+      "calibration_id": "CAL-014",
+      "dimension": "under_review",
+      "question": "Where does the system fail to escalate?",
+      "x_signal": "gate_expected_vs_model_gate",
+      "y_signal": "under_review_flag",
+      "metric": "under_review_rate",
+      "status": "TEMPLATE_PENDING_REAL_CASES"
+    },
+    {
+      "calibration_id": "CAL-015",
+      "dimension": "recommendation_quality",
+      "question": "What makes recommendations useful?",
+      "x_signal": "evidence_level_plus_owner_plus_gate",
+      "y_signal": "usefulness_score",
+      "metric": "feature_bucket_analysis",
+      "status": "TEMPLATE_PENDING_REAL_CASES"
+    }
+  ]
+}

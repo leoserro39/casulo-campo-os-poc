@@ -1,0 +1,106 @@
+{
+  "version": "recommendation_register.v0.3",
+  "phase": "PROD-6821..6860",
+  "rows": [
+    {
+      "recommendation_id": "REC-001",
+      "trigger": "evidence_level_below_L1",
+      "recommendation": "Do not run real test; request evidence anchor or source boundary.",
+      "priority": "P0",
+      "time_horizon": "immediate",
+      "allowed_action": "request_evidence",
+      "blocked_action": "execute_test",
+      "status": "TEMPLATE_PENDING_REAL_CASES"
+    },
+    {
+      "recommendation_id": "REC-002",
+      "trigger": "production_change_without_rollback",
+      "recommendation": "Block production action and require rollback plan plus human review.",
+      "priority": "P0",
+      "time_horizon": "immediate",
+      "allowed_action": "prepare_review_packet",
+      "blocked_action": "production_activation",
+      "status": "TEMPLATE_PENDING_REAL_CASES"
+    },
+    {
+      "recommendation_id": "REC-003",
+      "trigger": "process_owner_missing",
+      "recommendation": "Assign process owner before automation or AI recommendation.",
+      "priority": "P1",
+      "time_horizon": "7_days",
+      "allowed_action": "owner_assignment",
+      "blocked_action": "automated_decision",
+      "status": "TEMPLATE_PENDING_REAL_CASES"
+    },
+    {
+      "recommendation_id": "REC-004",
+      "trigger": "schema_missing_for_structured_data",
+      "recommendation": "Add schema/provenance before classifying database-like case.",
+      "priority": "P1",
+      "time_horizon": "7_days",
+      "allowed_action": "schema_review",
+      "blocked_action": "dataset_acceptance",
+      "status": "TEMPLATE_PENDING_REAL_CASES"
+    },
+    {
+      "recommendation_id": "REC-005",
+      "trigger": "recurrent_sla_breach",
+      "recommendation": "Create operational dashboard and weekly review ritual.",
+      "priority": "P2",
+      "time_horizon": "30_days",
+      "allowed_action": "monitoring_setup",
+      "blocked_action": "claim_root_cause_without_evidence",
+      "status": "TEMPLATE_PENDING_REAL_CASES"
+    },
+    {
+      "recommendation_id": "REC-006",
+      "trigger": "high_operational_hallucination_risk",
+      "recommendation": "Switch output mode to review packet and suppress autonomous recommendation.",
+      "priority": "P0",
+      "time_horizon": "immediate",
+      "allowed_action": "human_review_packet",
+      "blocked_action": "autonomous_recommendation",
+      "status": "TEMPLATE_PENDING_REAL_CASES"
+    },
+    {
+      "recommendation_id": "REC-007",
+      "trigger": "weak_source_with_high_impact",
+      "recommendation": "Use source trust gate and require primary anchor before recommending action.",
+      "priority": "P0",
+      "time_horizon": "immediate",
+      "allowed_action": "source_trust_review",
+      "blocked_action": "client_claim",
+      "status": "TEMPLATE_PENDING_REAL_CASES"
+    },
+    {
+      "recommendation_id": "REC-008",
+      "trigger": "complex_case_with_conflicting_evidence",
+      "recommendation": "Split case into subclaims and route to arbitration/review.",
+      "priority": "P1",
+      "time_horizon": "7_days",
+      "allowed_action": "arbitration_packet",
+      "blocked_action": "single_answer_claim",
+      "status": "TEMPLATE_PENDING_REAL_CASES"
+    },
+    {
+      "recommendation_id": "REC-009",
+      "trigger": "rework_loop_detected",
+      "recommendation": "Map process variant and identify owner, cause class and monitoring metric.",
+      "priority": "P2",
+      "time_horizon": "30_days",
+      "allowed_action": "process_mining_review",
+      "blocked_action": "automation_without_diagnosis",
+      "status": "TEMPLATE_PENDING_REAL_CASES"
+    },
+    {
+      "recommendation_id": "REC-010",
+      "trigger": "stable_repeated_pattern",
+      "recommendation": "Promote repeated validated pattern into monitored indicator.",
+      "priority": "P2",
+      "time_horizon": "60_days",
+      "allowed_action": "monitoring_indicator_creation",
+      "blocked_action": "one_off_report_only",
+      "status": "TEMPLATE_PENDING_REAL_CASES"
+    }
+  ]
+}

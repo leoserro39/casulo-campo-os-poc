@@ -1,0 +1,27 @@
+{
+  "version": "external_case_intake_policy.v0.3",
+  "phase": "PROD-6821..6860",
+  "generated_at": "2026-07-01T23:11:17.106085+00:00",
+  "minimum_real_case_requirements": [
+    "sanitized input",
+    "at least one L1 or stronger evidence anchor",
+    "source boundary",
+    "allowed actions",
+    "blocked actions",
+    "expected gate",
+    "PII/secrets check",
+    "human review rubric",
+    "stop criteria"
+  ],
+  "candidate_to_real_case_001_rules": [
+    "mock candidate cannot become real_case_001",
+    "candidate must have citation anchor or structured provenance",
+    "candidate must pass PII/secrets check",
+    "candidate must pass claim boundary check",
+    "candidate must not require production side effect",
+    "candidate must define what the model is not allowed to claim"
+  ],
+  "external_network_calls_allowed_now": false,
+  "live_fetch_allowed_now": false,
+  "real_case_001_freeze_allowed_now": false
+}

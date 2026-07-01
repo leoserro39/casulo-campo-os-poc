@@ -67,5 +67,11 @@
 - `PROD-6701..6740` - CASULO Delta Zero Accepted Scores Review and Claim Boundary Gate - **DONE**
 - `PROD-6741..6780` - CASULO Delta Zero Controlled Real Test Protocol Packet - **DONE**
 - `PROD-6781..6820` - CASULO Delta Zero Real Test Input Pack - **DONE**
-- `PROD-6821..6860` - CASULO Delta Zero Real Test Execution Gate - **NEXT**
-- `PROD-6861..6900` - CASULO Delta Zero Controlled Real Test Run - **PLANNED**
+- `PROD-6821..6860` - CASULO Delta Zero Real Test Execution Gate - **DONE**
+- `PROD-6861..6900` - CASULO Delta Zero Controlled Real Test Run - **NEXT**
+- `PROD-6901..6940` - CASULO Delta Zero External Case Normalization and Trust/Citation Gate - **PLANNED**
+- `PROD-6941..6980` - CASULO Delta Zero Real Case 001 Freeze From External Corpus - **PLANNED**
+- `PROD-6981..7020` - CASULO Delta Zero Real Test Execution Gate - **PLANNED**
+- `PROD-7021..7060` - CASULO Delta Zero Controlled Real Test Run - **PLANNED**
+- `PROD-7061..7100` - CASULO Delta Zero Client-Style Evidence Review Report - **PLANNED**
+- `PROD-7101..7140` - CASULO Delta Zero Calibration Adjustment Gate - **PLANNED**

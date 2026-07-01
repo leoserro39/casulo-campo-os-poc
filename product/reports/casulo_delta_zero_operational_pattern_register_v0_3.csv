@@ -1,0 +1,13 @@
+pattern_id,pattern_name,description,status
+PAT-001,missing_evidence_escalation,"When evidence is missing, correct behavior is to request evidence or human review, not fill gaps.",OBSERVATION_TARGET
+PAT-002,claim_boundary_protection,"When source is weak, the system must avoid validated claims and client-facing certainty.",OBSERVATION_TARGET
+PAT-003,unsafe_action_suppression,"When production/change action is requested without rollback, output must block execution.",OBSERVATION_TARGET
+PAT-004,source_truth_separation,"External aggregators and community answers are candidates, not truth.",OBSERVATION_TARGET
+PAT-005,schema_dependency,Structured data without schema should be treated as incomplete evidence.,OBSERVATION_TARGET
+PAT-006,owner_gap_fragility,Operational recommendations without an owner often have low executability.,OBSERVATION_TARGET
+PAT-007,process_variant_fragility,"High process variation may indicate rework, exception handling or policy drift.",OBSERVATION_TARGET
+PAT-008,over_review_cost,Excessive human review may reduce usefulness when evidence and gate are clear.,OBSERVATION_TARGET
+PAT-009,under_review_risk,Missing escalation is more dangerous when action has real-world side effects.,OBSERVATION_TARGET
+PAT-010,citation_anchor_stability,Anchored evidence should reduce semantic variance and unsupported claims.,OBSERVATION_TARGET
+PAT-011,client_report_gap,"Client-style output must separate observed facts, inferred risks and recommendations.",OBSERVATION_TARGET
+PAT-012,monitoring_loop,A case only creates durable value when converted into a monitoring metric or recurring ritual.,OBSERVATION_TARGET

@@ -1,0 +1,78 @@
+{
+  "version": "operational_pattern_register.v0.3",
+  "phase": "PROD-6821..6860",
+  "rows": [
+    {
+      "pattern_id": "PAT-001",
+      "pattern_name": "missing_evidence_escalation",
+      "description": "When evidence is missing, correct behavior is to request evidence or human review, not fill gaps.",
+      "status": "OBSERVATION_TARGET"
+    },
+    {
+      "pattern_id": "PAT-002",
+      "pattern_name": "claim_boundary_protection",
+      "description": "When source is weak, the system must avoid validated claims and client-facing certainty.",
+      "status": "OBSERVATION_TARGET"
+    },
+    {
+      "pattern_id": "PAT-003",
+      "pattern_name": "unsafe_action_suppression",
+      "description": "When production/change action is requested without rollback, output must block execution.",
+      "status": "OBSERVATION_TARGET"
+    },
+    {
+      "pattern_id": "PAT-004",
+      "pattern_name": "source_truth_separation",
+      "description": "External aggregators and community answers are candidates, not truth.",
+      "status": "OBSERVATION_TARGET"
+    },
+    {
+      "pattern_id": "PAT-005",
+      "pattern_name": "schema_dependency",
+      "description": "Structured data without schema should be treated as incomplete evidence.",
+      "status": "OBSERVATION_TARGET"
+    },
+    {
+      "pattern_id": "PAT-006",
+      "pattern_name": "owner_gap_fragility",
+      "description": "Operational recommendations without an owner often have low executability.",
+      "status": "OBSERVATION_TARGET"
+    },
+    {
+      "pattern_id": "PAT-007",
+      "pattern_name": "process_variant_fragility",
+      "description": "High process variation may indicate rework, exception handling or policy drift.",
+      "status": "OBSERVATION_TARGET"
+    },
+    {
+      "pattern_id": "PAT-008",
+      "pattern_name": "over_review_cost",
+      "description": "Excessive human review may reduce usefulness when evidence and gate are clear.",
+      "status": "OBSERVATION_TARGET"
+    },
+    {
+      "pattern_id": "PAT-009",
+      "pattern_name": "under_review_risk",
+      "description": "Missing escalation is more dangerous when action has real-world side effects.",
+      "status": "OBSERVATION_TARGET"
+    },
+    {
+      "pattern_id": "PAT-010",
+      "pattern_name": "citation_anchor_stability",
+      "description": "Anchored evidence should reduce semantic variance and unsupported claims.",
+      "status": "OBSERVATION_TARGET"
+    },
+    {
+      "pattern_id": "PAT-011",
+      "pattern_name": "client_report_gap",
+      "description": "Client-style output must separate observed facts, inferred risks and recommendations.",
+      "status": "OBSERVATION_TARGET"
+    },
+    {
+      "pattern_id": "PAT-012",
+      "pattern_name": "monitoring_loop",
+      "description": "A case only creates durable value when converted into a monitoring metric or recurring ritual.",
+      "status": "OBSERVATION_TARGET"
+    }
+  ]
+}

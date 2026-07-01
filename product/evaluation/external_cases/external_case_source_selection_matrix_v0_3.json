@@ -1,0 +1,119 @@
+{
+  "version": "external_case_source_selection_matrix.v0.3",
+  "phase": "PROD-6821..6860",
+  "generated_at": "2026-07-01T23:11:17.106069+00:00",
+  "selection_rule": "Select anchored, citeable, sanitized candidate cases across routine, medium and complex operational difficulty.",
+  "recommended_first_live_dry_run": [
+    "github_issues_public",
+    "business_process_event_logs",
+    "uci_public_datasets"
+  ],
+  "recommended_for_scale_after_gate": [
+    "huggingface_datasets_public",
+    "stackexchange_public",
+    "nasa_asrs_public",
+    "sanitized_db_snapshot",
+    "sanitized_document_upload"
+  ],
+  "providers": [
+    {
+      "provider_id": "mock_synthetic_cases",
+      "source_family": "offline_mock",
+      "case_class": "calibration_only",
+      "difficulty_coverage": "simple,medium,complex",
+      "evidence_types": "manual_observation|synthetic_public_issue|synthetic_dataset_row",
+      "network_call_allowed": false,
+      "credential_required": false,
+      "first_use": "schema_and_gate_testing_only",
+      "recommendation": "USE_NOW_FOR_OFFLINE_GATE_TEST"
+    },
+    {
+      "provider_id": "business_process_event_logs",
+      "source_family": "company_process_logs",
+      "case_class": "enterprise_operations",
+      "difficulty_coverage": "medium,complex",
+      "evidence_types": "event_log|case_id|activity|timestamp|resource|process_variant",
+      "network_call_allowed": false,
+      "credential_required": "later_source_dependent",
+      "first_use": "company_routine_process_cases",
+      "recommendation": "HIGH_VALUE_FOR_CLIENT_STYLE_REPORTS"
+    },
+    {
+      "provider_id": "github_issues_public",
+      "source_family": "software_tic_cases",
+      "case_class": "software_operations",
+      "difficulty_coverage": "simple,medium,complex",
+      "evidence_types": "public_issue_url|thread|labels|comments|repository_metadata",
+      "network_call_allowed": false,
+      "credential_required": "optional_later",
+      "first_use": "software_tic_cases",
+      "recommendation": "GOOD_NEXT_LIVE_DRY_RUN_SOURCE"
+    },
+    {
+      "provider_id": "stackexchange_public",
+      "source_family": "technical_troubleshooting_cases",
+      "case_class": "knowledge_support",
+      "difficulty_coverage": "simple,medium",
+      "evidence_types": "question_url|answers|tags|accepted_answer_if_present",
+      "network_call_allowed": false,
+      "credential_required": "optional_later",
+      "first_use": "technical_troubleshooting_cases",
+      "recommendation": "USE_AFTER_GITHUB_OR_AS_SECOND_SOURCE"
+    },
+    {
+      "provider_id": "huggingface_datasets_public",
+      "source_family": "public_dataset_cases",
+      "case_class": "dataset_operations",
+      "difficulty_coverage": "simple,medium,complex",
+      "evidence_types": "dataset_row|dataset_card|license|split|row_id",
+      "network_call_allowed": false,
+      "credential_required": "optional_later",
+      "first_use": "bulk_case_generation",
+      "recommendation": "USE_FOR_SCALE_AFTER_SMALL_LIVE_DRY_RUN"
+    },
+    {
+      "provider_id": "uci_public_datasets",
+      "source_family": "public_tabular_database_cases",
+      "case_class": "database_like_cases",
+      "difficulty_coverage": "simple,medium",
+      "evidence_types": "dataset_row|schema|feature_description|license_or_terms|row_id",
+      "network_call_allowed": false,
+      "credential_required": false,
+      "first_use": "routine_database_like_cases",
+      "recommendation": "GOOD_FOR_STRUCTURED_DATA_GATE_TEST"
+    },
+    {
+      "provider_id": "nasa_asrs_public",
+      "source_family": "safety_incident_cases",
+      "case_class": "incident_operations",
+      "difficulty_coverage": "medium,complex",
+      "evidence_types": "public_report|narrative|taxonomy|report_id_if_available",
+      "network_call_allowed": false,
+      "credential_required": false,
+      "first_use": "risk_and_incident_reasoning_cases",
+      "recommendation": "GOOD_FOR_SAFETY_GATE_STRESS_TEST"
+    },
+    {
+      "provider_id": "sanitized_document_upload",
+      "source_family": "document_boundary_cases",
+      "case_class": "document_operations",
+      "difficulty_coverage": "simple,medium,complex",
+      "evidence_types": "document_excerpt|page_ref|section_ref|redaction_log",
+      "network_call_allowed": false,
+      "credential_required": false,
+      "first_use": "document_boundary_cases",
+      "recommendation": "USE_WHEN_USER_HAS_SAFE_DOCUMENT"
+    },
+    {
+      "provider_id": "sanitized_db_snapshot",
+      "source_family": "structured_operations_cases",
+      "case_class": "database_like_cases",
+      "difficulty_coverage": "medium,complex",
+      "evidence_types": "csv_row|json_record|schema_ref|export_timestamp|redaction_log",
+      "network_call_allowed": false,
+      "credential_required": false,
+      "first_use": "database_like_operational_cases",
+      "recommendation": "USE_WHEN_USER_HAS_SAFE_NON_SECRET_EXPORT"
+    }
+  ]
+}

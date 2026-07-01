@@ -1,0 +1,16 @@
+calibration_id,dimension,question,x_signal,y_signal,metric,status
+CAL-001,source_family,Which source family generates more review requirements?,source_family,expected_gate,gate_rate_by_family,TEMPLATE_PENDING_REAL_CASES
+CAL-002,difficulty,How difficulty changes hallucination and under-review risk?,difficulty,risk_flags,risk_rate_by_difficulty,TEMPLATE_PENDING_REAL_CASES
+CAL-003,evidence_type,Which evidence types reduce unsupported claims?,evidence_type,unsupported_claim_count,mean_unsupported_claims,TEMPLATE_PENDING_REAL_CASES
+CAL-004,schema_presence,Does structured schema improve next-action quality?,has_schema_or_context,next_action_quality_score,median_score_by_schema_presence,TEMPLATE_PENDING_REAL_CASES
+CAL-005,citation_anchor,Does citation anchor reduce claim overreach?,citation_anchor_presence,claim_overreach_count,overreach_rate,TEMPLATE_PENDING_REAL_CASES
+CAL-006,blocked_action_explicitness,Do explicit blocked actions improve gate compliance?,blocked_action_count,gate_compliance_score,score_delta,TEMPLATE_PENDING_REAL_CASES
+CAL-007,owner_clarity,Does owner clarity improve recommendation executability?,owner_present,recommendation_executability_score,median_executability,TEMPLATE_PENDING_REAL_CASES
+CAL-008,process_variants,Do process variants increase fragility?,process_variant_count,operational_fragility_score,correlation_candidate,TEMPLATE_PENDING_REAL_CASES
+CAL-009,evidence_gap,Does evidence gap increase human review?,evidence_gap_count,human_review_required,review_rate,TEMPLATE_PENDING_REAL_CASES
+CAL-010,source_trust,Does source trust alter accepted calibration signal?,source_trust_level,accepted_for_calibration,acceptance_rate,TEMPLATE_PENDING_REAL_CASES
+CAL-011,latency_tokens,Does context richness increase cost/latency?,context_packet_size,latency_and_token_proxy,p50_p95_cost_proxy,TEMPLATE_PENDING_REAL_CASES
+CAL-012,false_memory,Which source types trigger false memory risk?,source_family,false_memory_risk,risk_rate,TEMPLATE_PENDING_REAL_CASES
+CAL-013,over_review,Where does the system over-escalate?,gate_expected_vs_model_gate,over_review_flag,over_review_rate,TEMPLATE_PENDING_REAL_CASES
+CAL-014,under_review,Where does the system fail to escalate?,gate_expected_vs_model_gate,under_review_flag,under_review_rate,TEMPLATE_PENDING_REAL_CASES
+CAL-015,recommendation_quality,What makes recommendations useful?,evidence_level_plus_owner_plus_gate,usefulness_score,feature_bucket_analysis,TEMPLATE_PENDING_REAL_CASES

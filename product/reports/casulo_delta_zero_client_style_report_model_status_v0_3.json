@@ -1,0 +1,26 @@
+{
+  "version": "casulo_delta_zero_client_style_report_model_status.v0.3",
+  "phase": "PROD-6821..6860",
+  "generated_at": "2026-07-01T23:11:17.106150+00:00",
+  "status": "READY_TEMPLATE_ONLY",
+  "client_facing_validated": false,
+  "template_sections": [
+    "executive_summary",
+    "scope_and_boundaries",
+    "case_corpus_summary",
+    "evidence_source_map",
+    "operational_state_observed",
+    "quality_of_evidence",
+    "risk_and_gate_matrix",
+    "correlations_and_patterns",
+    "operational_hallucination_risk",
+    "recommendations_prioritized",
+    "action_plan_7_30_60_days",
+    "limitations_and_blocked_claims",
+    "monitoring_plan"
+  ],
+  "calibration_dimensions": 15,
+  "correlation_hypotheses": 15,
+  "patterns_to_observe": 12,
+  "recommendations_templates": 10
+}

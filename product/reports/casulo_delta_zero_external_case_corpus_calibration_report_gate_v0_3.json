@@ -1,0 +1,22 @@
+{
+  "version": "casulo_delta_zero_external_case_corpus_calibration_report_gate.v0.3",
+  "phase": "PROD-6821..6860",
+  "generated_at": "2026-07-01T23:11:17.106140+00:00",
+  "status": "PASS",
+  "provider_count": 9,
+  "mock_candidate_count": 18,
+  "calibration_dimension_count": 15,
+  "pattern_count": 12,
+  "recommendation_count": 10,
+  "evidence_ladder_ready": true,
+  "source_selection_ready": true,
+  "offline_corpus_intake_ready": true,
+  "calibration_matrix_ready": true,
+  "client_style_report_model_ready": true,
+  "live_fetch_ready": false,
+  "real_case_001_ready": false,
+  "execution_gate_ready": false,
+  "ready_for_real_test_execution": false,
+  "recommended_next_phase": "PROD-6861..6900 - External Case Live Discovery Dry-Run Gate",
+  "errors": []
+}

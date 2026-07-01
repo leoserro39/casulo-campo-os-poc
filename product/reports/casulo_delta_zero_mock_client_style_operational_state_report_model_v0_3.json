@@ -1,0 +1,154 @@
+{
+  "version": "casulo_delta_zero_mock_client_style_output_report.v0.3",
+  "phase": "PROD-6821..6860",
+  "generated_at": "2026-07-01T23:11:17.106098+00:00",
+  "client_facing_validated": false,
+  "mock_report_only": true,
+  "summary": "Model report showing how a future client-style output should look after real corpus intake and execution review.",
+  "case_corpus": {
+    "mock_candidate_count": 18,
+    "source_families": [
+      "company_process_logs",
+      "document_boundary_cases",
+      "offline_mock",
+      "public_dataset_cases",
+      "public_tabular_database_cases",
+      "safety_incident_cases",
+      "software_tic_cases",
+      "structured_operations_cases",
+      "technical_troubleshooting_cases"
+    ],
+    "difficulty_coverage": [
+      "simple",
+      "medium",
+      "complex"
+    ]
+  },
+  "example_findings": [
+    "Cases without evidence anchors must be blocked before execution.",
+    "Structured data cases require schema and provenance before calibration acceptance.",
+    "Production or change-management cases require rollback/stop criteria.",
+    "Client-style reports must separate facts, inferences, risks and recommendations."
+  ],
+  "example_recommendations": [
+    {
+      "recommendation_id": "REC-001",
+      "trigger": "evidence_level_below_L1",
+      "recommendation": "Do not run real test; request evidence anchor or source boundary.",
+      "priority": "P0",
+      "time_horizon": "immediate",
+      "allowed_action": "request_evidence",
+      "blocked_action": "execute_test",
+      "status": "TEMPLATE_PENDING_REAL_CASES"
+    },
+    {
+      "recommendation_id": "REC-002",
+      "trigger": "production_change_without_rollback",
+      "recommendation": "Block production action and require rollback plan plus human review.",
+      "priority": "P0",
+      "time_horizon": "immediate",
+      "allowed_action": "prepare_review_packet",
+      "blocked_action": "production_activation",
+      "status": "TEMPLATE_PENDING_REAL_CASES"
+    },
+    {
+      "recommendation_id": "REC-003",
+      "trigger": "process_owner_missing",
+      "recommendation": "Assign process owner before automation or AI recommendation.",
+      "priority": "P1",
+      "time_horizon": "7_days",
+      "allowed_action": "owner_assignment",
+      "blocked_action": "automated_decision",
+      "status": "TEMPLATE_PENDING_REAL_CASES"
+    },
+    {
+      "recommendation_id": "REC-004",
+      "trigger": "schema_missing_for_structured_data",
+      "recommendation": "Add schema/provenance before classifying database-like case.",
+      "priority": "P1",
+      "time_horizon": "7_days",
+      "allowed_action": "schema_review",
+      "blocked_action": "dataset_acceptance",
+      "status": "TEMPLATE_PENDING_REAL_CASES"
+    },
+    {
+      "recommendation_id": "REC-005",
+      "trigger": "recurrent_sla_breach",
+      "recommendation": "Create operational dashboard and weekly review ritual.",
+      "priority": "P2",
+      "time_horizon": "30_days",
+      "allowed_action": "monitoring_setup",
+      "blocked_action": "claim_root_cause_without_evidence",
+      "status": "TEMPLATE_PENDING_REAL_CASES"
+    },
+    {
+      "recommendation_id": "REC-006",
+      "trigger": "high_operational_hallucination_risk",
+      "recommendation": "Switch output mode to review packet and suppress autonomous recommendation.",
+      "priority": "P0",
+      "time_horizon": "immediate",
+      "allowed_action": "human_review_packet",
+      "blocked_action": "autonomous_recommendation",
+      "status": "TEMPLATE_PENDING_REAL_CASES"
+    },
+    {
+      "recommendation_id": "REC-007",
+      "trigger": "weak_source_with_high_impact",
+      "recommendation": "Use source trust gate and require primary anchor before recommending action.",
+      "priority": "P0",
+      "time_horizon": "immediate",
+      "allowed_action": "source_trust_review",
+      "blocked_action": "client_claim",
+      "status": "TEMPLATE_PENDING_REAL_CASES"
+    },
+    {
+      "recommendation_id": "REC-008",
+      "trigger": "complex_case_with_conflicting_evidence",
+      "recommendation": "Split case into subclaims and route to arbitration/review.",
+      "priority": "P1",
+      "time_horizon": "7_days",
+      "allowed_action": "arbitration_packet",
+      "blocked_action": "single_answer_claim",
+      "status": "TEMPLATE_PENDING_REAL_CASES"
+    },
+    {
+      "recommendation_id": "REC-009",
+      "trigger": "rework_loop_detected",
+      "recommendation": "Map process variant and identify owner, cause class and monitoring metric.",
+      "priority": "P2",
+      "time_horizon": "30_days",
+      "allowed_action": "process_mining_review",
+      "blocked_action": "automation_without_diagnosis",
+      "status": "TEMPLATE_PENDING_REAL_CASES"
+    },
+    {
+      "recommendation_id": "REC-010",
+      "trigger": "stable_repeated_pattern",
+      "recommendation": "Promote repeated validated pattern into monitored indicator.",
+      "priority": "P2",
+      "time_horizon": "60_days",
+      "allowed_action": "monitoring_indicator_creation",
+      "blocked_action": "one_off_report_only",
+      "status": "TEMPLATE_PENDING_REAL_CASES"
+    }
+  ],
+  "blocked_claims": [
+    "external_network_call",
+    "live_case_fetch",
+    "credential_or_api_key_use",
+    "live_gpt_call",
+    "real_case_001_freeze",
+    "real_test_execution",
+    "production_activation",
+    "client_facing_validated_claim",
+    "commercial_claim",
+    "validated_model_gain_claim",
+    "validated_hallucination_reduction_claim",
+    "delta_zero_ready_validated_claim",
+    "dataset_acceptance",
+    "canonical_token_acceptance",
+    "temporal_trajectory_claim",
+    "pii_or_secret_storage",
+    "real_world_side_effect"
+  ]
+}

@@ -1,0 +1,55 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "CASULO Delta Zero Evidence Anchor",
+  "type": "object",
+  "required": [
+    "anchor_id",
+    "evidence_type",
+    "source_kind",
+    "source_ref",
+    "source_boundary",
+    "trust_level",
+    "citation_required"
+  ],
+  "properties": {
+    "anchor_id": {
+      "type": "string"
+    },
+    "evidence_type": {
+      "type": "string"
+    },
+    "source_kind": {
+      "type": "string"
+    },
+    "source_ref": {
+      "type": "string"
+    },
+    "excerpt": {
+      "type": "string"
+    },
+    "retrieval_timestamp": {
+      "type": "string"
+    },
+    "source_boundary": {
+      "type": "string"
+    },
+    "trust_level": {
+      "enum": [
+        "MOCK",
+        "LOW",
+        "MEDIUM",
+        "HIGH",
+        "PRIMARY_ANCHOR_REQUIRED"
+      ]
+    },
+    "citation_required": {
+      "type": "boolean"
+    },
+    "license_or_permission_note": {
+      "type": "string"
+    },
+    "redaction_note": {
+      "type": "string"
+    }
+  }
+}

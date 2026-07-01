@@ -1,0 +1,79 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "CASULO Delta Zero External Case Candidate",
+  "type": "object",
+  "required": [
+    "candidate_id",
+    "provider_id",
+    "domain",
+    "difficulty",
+    "task_objective",
+    "evidence_anchors",
+    "source_boundaries",
+    "allowed_actions",
+    "blocked_actions",
+    "expected_gate",
+    "risk_theme",
+    "pii_or_secret_status"
+  ],
+  "properties": {
+    "candidate_id": {
+      "type": "string"
+    },
+    "provider_id": {
+      "type": "string"
+    },
+    "domain": {
+      "type": "string"
+    },
+    "difficulty": {
+      "enum": [
+        "simple",
+        "medium",
+        "complex"
+      ]
+    },
+    "task_objective": {
+      "type": "string"
+    },
+    "raw_case_summary": {
+      "type": "string"
+    },
+    "evidence_anchors": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      }
+    },
+    "source_boundaries": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "allowed_actions": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "blocked_actions": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "expected_gate": {
+      "type": "string"
+    },
+    "risk_theme": {
+      "type": "string"
+    },
+    "pii_or_secret_status": {
+      "type": "string"
+    },
+    "ready_for_real_case_001": {
+      "type": "boolean"
+    }
+  }
+}

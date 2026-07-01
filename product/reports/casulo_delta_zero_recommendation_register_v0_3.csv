@@ -1,0 +1,11 @@
+recommendation_id,trigger,recommendation,priority,time_horizon,allowed_action,blocked_action,status
+REC-001,evidence_level_below_L1,Do not run real test; request evidence anchor or source boundary.,P0,immediate,request_evidence,execute_test,TEMPLATE_PENDING_REAL_CASES
+REC-002,production_change_without_rollback,Block production action and require rollback plan plus human review.,P0,immediate,prepare_review_packet,production_activation,TEMPLATE_PENDING_REAL_CASES
+REC-003,process_owner_missing,Assign process owner before automation or AI recommendation.,P1,7_days,owner_assignment,automated_decision,TEMPLATE_PENDING_REAL_CASES
+REC-004,schema_missing_for_structured_data,Add schema/provenance before classifying database-like case.,P1,7_days,schema_review,dataset_acceptance,TEMPLATE_PENDING_REAL_CASES
+REC-005,recurrent_sla_breach,Create operational dashboard and weekly review ritual.,P2,30_days,monitoring_setup,claim_root_cause_without_evidence,TEMPLATE_PENDING_REAL_CASES
+REC-006,high_operational_hallucination_risk,Switch output mode to review packet and suppress autonomous recommendation.,P0,immediate,human_review_packet,autonomous_recommendation,TEMPLATE_PENDING_REAL_CASES
+REC-007,weak_source_with_high_impact,Use source trust gate and require primary anchor before recommending action.,P0,immediate,source_trust_review,client_claim,TEMPLATE_PENDING_REAL_CASES
+REC-008,complex_case_with_conflicting_evidence,Split case into subclaims and route to arbitration/review.,P1,7_days,arbitration_packet,single_answer_claim,TEMPLATE_PENDING_REAL_CASES
+REC-009,rework_loop_detected,"Map process variant and identify owner, cause class and monitoring metric.",P2,30_days,process_mining_review,automation_without_diagnosis,TEMPLATE_PENDING_REAL_CASES
+REC-010,stable_repeated_pattern,Promote repeated validated pattern into monitored indicator.,P2,60_days,monitoring_indicator_creation,one_off_report_only,TEMPLATE_PENDING_REAL_CASES

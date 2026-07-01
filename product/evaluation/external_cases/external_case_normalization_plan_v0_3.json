@@ -1,0 +1,26 @@
+{
+  "version": "external_case_normalization_plan.v0.3",
+  "phase": "PROD-6821..6860",
+  "generated_at": "2026-07-01T23:11:17.106089+00:00",
+  "normalization_steps": [
+    "ingest candidate metadata",
+    "classify evidence type",
+    "map source boundary",
+    "assign difficulty",
+    "assign expected gate",
+    "map allowed and blocked actions",
+    "detect PII/secrets placeholders",
+    "compute candidate readiness",
+    "promote only one case to real_case_001 after gate"
+  ],
+  "target_real_case_packet_files": [
+    "real_case_001_sanitized_input.md",
+    "real_case_001_context_packet.json",
+    "real_case_001_evidence_packet.json",
+    "real_case_001_allowed_actions.json",
+    "real_case_001_blocked_actions.json",
+    "real_case_001_stop_criteria.json",
+    "real_case_001_claim_boundary_ack.json"
+  ],
+  "ready_to_normalize_live_cases": false
+}

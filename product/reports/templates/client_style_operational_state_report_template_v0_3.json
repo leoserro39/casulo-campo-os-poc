@@ -1,0 +1,28 @@
+{
+  "version": "client_style_operational_state_report_template.v0.3",
+  "phase": "PROD-6821..6860",
+  "generated_at": "2026-07-01T23:11:17.106093+00:00",
+  "client_facing_validated": false,
+  "template_only": true,
+  "sections": [
+    "executive_summary",
+    "scope_and_boundaries",
+    "case_corpus_summary",
+    "evidence_source_map",
+    "operational_state_observed",
+    "quality_of_evidence",
+    "risk_and_gate_matrix",
+    "correlations_and_patterns",
+    "operational_hallucination_risk",
+    "recommendations_prioritized",
+    "action_plan_7_30_60_days",
+    "limitations_and_blocked_claims",
+    "monitoring_plan"
+  ],
+  "mandatory_boundary": {
+    "no_validated_model_gain_claim": true,
+    "no_validated_hallucination_reduction_claim": true,
+    "no_production_claim": true,
+    "no_client_evidence_claim_until_review": true
+  }
+}

@@ -1,0 +1,48 @@
+{
+  "version": "casulo_delta_zero_evidence_requirement_ladder.v0.3",
+  "phase": "PROD-6821..6860",
+  "generated_at": "2026-07-01T23:11:17.106047+00:00",
+  "principle": "Every real test case needs evidence anchors, but evidence can be lightweight when source boundary and limitations are explicit.",
+  "levels": [
+    {
+      "level": "L0_PROMPT_ONLY",
+      "allowed_for_real_test": false,
+      "description": "Prompt without evidence anchor."
+    },
+    {
+      "level": "L1_PUBLIC_URL_OR_THREAD",
+      "allowed_for_real_test": true,
+      "description": "Public issue, Q&A, report or page URL with citation anchor."
+    },
+    {
+      "level": "L2_DOCUMENT_EXCERPT",
+      "allowed_for_real_test": true,
+      "description": "Sanitized document excerpt with page/section reference and redaction note."
+    },
+    {
+      "level": "L3_STRUCTURED_DATA_ROW",
+      "allowed_for_real_test": true,
+      "description": "CSV/JSON/dataset row with schema and provenance."
+    },
+    {
+      "level": "L4_DB_SNAPSHOT_SANITIZED",
+      "allowed_for_real_test": true,
+      "description": "Sanitized database/export snapshot with schema and timestamp."
+    },
+    {
+      "level": "L5_MULTI_SOURCE_PACKET",
+      "allowed_for_real_test": true,
+      "description": "Multiple independent anchors with explicit conflict/consistency note."
+    }
+  ],
+  "minimum_for_real_case_001": "L1_PUBLIC_URL_OR_THREAD or stronger",
+  "blocked_without": [
+    "source_boundary",
+    "evidence_anchor",
+    "allowed_actions",
+    "blocked_actions",
+    "human_review_rubric",
+    "stop_criteria",
+    "pii_secret_check"
+  ]
+}
