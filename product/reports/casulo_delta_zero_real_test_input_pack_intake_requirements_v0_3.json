@@ -1,0 +1,22 @@
+{
+  "version": "casulo_delta_zero_real_test_input_pack_intake_requirements.v0.3",
+  "phase": "PROD-6781..6820",
+  "generated_at": "2026-07-01T22:53:14.474124+00:00",
+  "required_user_supplied_items_next": [
+    "sanitized real case input",
+    "declared domain",
+    "declared task objective",
+    "evidence packet",
+    "source boundaries",
+    "expected gate",
+    "review notes if needed"
+  ],
+  "cannot_be_generated_by_script": [
+    "real case facts",
+    "real evidence content",
+    "user/client-specific confidential context",
+    "approval to execute live call"
+  ],
+  "ready_for_user_fill": true,
+  "ready_for_execution_gate": false
+}

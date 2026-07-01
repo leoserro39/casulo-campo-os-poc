@@ -1,0 +1,8 @@
+{
+  "version": "real_case_001_evidence_packet.template.v0.3",
+  "status": "TEMPLATE_ONLY_PENDING_EVIDENCE",
+  "evidence_items": [],
+  "missing_evidence_policy": "If evidence is missing, the model must not invent it and must keep claims bounded.",
+  "real_input_frozen": false,
+  "execution_allowed": false
+}

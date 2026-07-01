@@ -1,0 +1,14 @@
+{
+  "version": "real_case_001_stop_criteria.v0.3",
+  "status": "ACTIVE_FOR_INPUT_INTAKE",
+  "stop_if": [
+    "PII or secret appears in the input",
+    "source boundaries are missing",
+    "evidence packet is missing",
+    "blocked actions are missing",
+    "production side effect is requested",
+    "client-facing validated claim is requested",
+    "model-gain or hallucination-reduction claim is requested",
+    "human review rubric is missing"
+  ]
+}

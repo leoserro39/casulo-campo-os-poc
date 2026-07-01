@@ -1,0 +1,11 @@
+{
+  "version": "real_case_001_allowed_actions.v0.3",
+  "status": "TEMPLATE_DEFAULT_CAN_BE_EDITED_BEFORE_FREEZE",
+  "allowed_actions": [
+    "explain_operational_state",
+    "identify_gaps",
+    "map_evidence_to_state",
+    "recommend_safe_next_step",
+    "request_human_review_when_required"
+  ]
+}

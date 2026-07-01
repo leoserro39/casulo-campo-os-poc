@@ -1,0 +1,24 @@
+{
+  "version": "real_case_001_context_packet.template.v0.3",
+  "status": "TEMPLATE_ONLY_PENDING_USER_SANITIZED_INPUT",
+  "domain": "TBD",
+  "task_objective": "TBD",
+  "source_boundaries": {
+    "allowed_sources": [
+      "TBD"
+    ],
+    "forbidden_sources": [
+      "secrets",
+      "credentials",
+      "personal_data",
+      "client_confidential_data_without_sanitization",
+      "production_side_effects"
+    ]
+  },
+  "evidence_refs": [],
+  "expected_gate": "TBD",
+  "risk_theme": "TBD",
+  "human_review_required": true,
+  "real_input_frozen": false,
+  "execution_allowed": false
+}

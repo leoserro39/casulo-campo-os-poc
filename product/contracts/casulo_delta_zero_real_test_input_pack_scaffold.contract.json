@@ -1,0 +1,43 @@
+{
+  "phase": "PROD-6781..6820",
+  "input_pack_scaffold_only": true,
+  "real_input_frozen": false,
+  "sanitized_input_fabrication_blocked": true,
+  "live_gpt_call_allowed": false,
+  "real_test_execution_allowed": false,
+  "execution_gate_ready": false,
+  "client_claims_allowed": false,
+  "production_claims_allowed": false,
+  "commercial_claims_allowed": false,
+  "validated_model_gain_claim_blocked": true,
+  "hallucination_reduction_claim_blocked": true,
+  "delta_zero_ready_validated_claim_blocked": true,
+  "dataset_acceptance_blocked": true,
+  "pii_or_secret_storage_blocked": true,
+  "allowed_actions": [
+    "real_test_input_pack_scaffold_creation",
+    "real_case_intake_template_creation",
+    "sanitization_checklist_creation",
+    "allowed_blocked_actions_template_creation",
+    "claim_boundary_ack_template_creation",
+    "roadmap_update"
+  ],
+  "blocked_actions": [
+    "invent_real_case",
+    "freeze_sanitized_input_without_user_payload",
+    "live_gpt_call",
+    "real_test_execution",
+    "execution_gate_approval",
+    "production_activation",
+    "client_facing_validated_claim",
+    "commercial_claim",
+    "validated_model_gain_claim",
+    "validated_hallucination_reduction_claim",
+    "delta_zero_ready_validated_claim",
+    "dataset_acceptance",
+    "canonical_token_acceptance",
+    "temporal_trajectory_claim",
+    "pii_or_secret_storage",
+    "real_world_side_effect"
+  ]
+}
