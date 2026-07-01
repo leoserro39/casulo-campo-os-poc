@@ -1,0 +1,33 @@
+{
+  "phase": "PROD-3661..3700",
+  "required_prior_tag": "product-controlled-pilot-manual-candidate-intake-shell-v0.1-head-fix",
+  "mode": "controlled_pilot_mock_candidate_intake_dry_run",
+  "mock_only": true,
+  "real_data_captured_in_this_phase": false,
+  "dataset_candidate_accepted": false,
+  "automatic_capture_blocked": true,
+  "dataset_acceptance_without_human_review_blocked": true,
+  "blocked_actions": [
+    "automatic_real_session_capture",
+    "dataset_acceptance_without_human_review",
+    "raw_private_data_storage",
+    "secret_or_credential_storage",
+    "unredacted_pii_storage",
+    "client_facing_value_claim",
+    "real_world_profit_claim",
+    "validated_savings_claim",
+    "validated_hallucination_reduction_claim",
+    "production_activation",
+    "automatic_memory_delete",
+    "gpt_memory_api_execution",
+    "commercial_package_pricing_claim"
+  ],
+  "allowed_actions": [
+    "mock_candidate_intake_dry_run",
+    "mock_evidence_packet_validation",
+    "mock_validator_path_test",
+    "manual_intake_flow_test",
+    "dry_run_result_generation"
+  ],
+  "recommended_next_phase": "PROD-3701..3740 - Controlled Pilot Mock Dataset Gate"
+}

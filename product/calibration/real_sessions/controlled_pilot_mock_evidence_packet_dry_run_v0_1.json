@@ -1,0 +1,30 @@
+{
+  "version": "controlled_pilot_mock_evidence_packet_dry_run.v0.1",
+  "phase": "PROD-3661..3700",
+  "status": "MOCK_EVIDENCE_ONLY_NO_REAL_DATA",
+  "fields": {
+    "pilot_id": "MOCK-PILOT-001",
+    "session_id": "MOCK-CANDIDATE-DRY-RUN-001-NO-REAL-DATA",
+    "candidate_record_ref": "mock://candidate/MOCK-CANDIDATE-001",
+    "source_reference_refs": [
+      "mock://source-ref/001"
+    ],
+    "baseline_output_ref": "mock://baseline-output/001",
+    "casulo_output_ref": "mock://casulo-output/001",
+    "snapshot_or_state_ref": "mock://snapshot/001",
+    "evidence_pointer_refs": [
+      "mock://controlled-pilot/evidence/MOCK-CANDIDATE-001"
+    ],
+    "operator_checklist_ref": "mock://operator-checklist/001",
+    "privacy_review_ref": "mock://privacy-review/001",
+    "pii_redaction_ref": "mock://pii-redaction/001",
+    "secret_scan_ref": "mock://secret-scan/001",
+    "human_reviewer_notes_ref": "mock://reviewer-notes/001",
+    "decision_gate": "MOCK_ACCEPTABLE_NOT_DATASET_ACCEPTED",
+    "claim_boundary": "mock_candidate_dry_run_only_no_real_world_claim",
+    "dataset_acceptance_decision": "MOCK_HOLD_NOT_ACCEPTED_TO_REAL_DATASET"
+  },
+  "required_refs_only": true,
+  "real_data_captured": false,
+  "mock_only": true
+}

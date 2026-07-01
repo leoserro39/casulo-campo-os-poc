@@ -1,0 +1,31 @@
+{
+  "version": "controlled_pilot_mock_candidate_validation_result.v0.1",
+  "phase": "PROD-3661..3700",
+  "candidate_id": "MOCK-CANDIDATE-DRY-RUN-001-NO-REAL-DATA",
+  "mock_only": true,
+  "real_data_captured_in_this_phase": false,
+  "schema_required_fields_present": true,
+  "validation_rules_tested": [
+    "schema_required_fields_present",
+    "source_refs_only_true",
+    "no_raw_private_data",
+    "no_secret_or_credential",
+    "no_unredacted_pii",
+    "privacy_review_passed",
+    "pii_redaction_passed",
+    "secret_scan_passed",
+    "human_reviewer_notes_present",
+    "evidence_packet_refs_present",
+    "operator_checklist_passed",
+    "claim_boundary_confirmed",
+    "decision_gate_present",
+    "dataset_acceptance_decision_valid",
+    "client_claim_absent",
+    "production_activation_absent"
+  ],
+  "validation_rule_count": 16,
+  "acceptance_decision": "MOCK_HOLD_NOT_ACCEPTED_TO_REAL_DATASET",
+  "dataset_candidate_accepted": false,
+  "result": "MOCK_DRY_RUN_PASS_NOT_REAL_ACCEPTANCE",
+  "claim_boundary": "Mock dry run validates path only. No real candidate accepted."
+}
