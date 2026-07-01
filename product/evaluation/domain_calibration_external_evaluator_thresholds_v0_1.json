@@ -1,0 +1,31 @@
+{
+  "version": "domain_calibration_external_evaluator_thresholds.v0.1",
+  "case_level_acceptance_for_calibration_signal": {
+    "minimum_external_evidence_grounding_score": 4,
+    "minimum_external_gate_compliance_score": 4,
+    "minimum_external_claim_boundary_score": 5,
+    "minimum_external_state_completeness_score": 3,
+    "minimum_external_next_action_quality_score": 3,
+    "maximum_external_hallucination_risk_flag": false,
+    "maximum_external_under_review_flag": false
+  },
+  "mode_level_candidate_threshold": {
+    "minimum_cases": 12,
+    "minimum_accepted_case_ratio": 0.8,
+    "minimum_average_external_evidence_grounding_score": 4,
+    "minimum_average_external_gate_compliance_score": 4,
+    "minimum_average_external_claim_boundary_score": 5
+  },
+  "domain_level_candidate_threshold": {
+    "minimum_cases": 6,
+    "minimum_accepted_case_ratio": 0.75,
+    "manual_review_required_for_high_risk_domains": true
+  },
+  "blocked_until_future_gate": [
+    "dataset_acceptance",
+    "client_evidence",
+    "production_evidence",
+    "commercial_claim",
+    "validated_model_gain_claim"
+  ]
+}

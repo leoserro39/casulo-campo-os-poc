@@ -54,4 +54,5 @@
 - `PROD-6141..6180` - Domain Calibration Hardened Rerun Execution Gate - **DONE**
 - `PROD-6181..6220` - Domain Calibration Batch 01 Hardened Rerun Execution Run - **DONE**
 - `PROD-6221..6260` - Domain Calibration Hardened Rerun Review Gate - **DONE**
-- `PROD-6261..6300` - Domain Calibration External Evaluator Packet - **NEXT**
+- `PROD-6261..6300` - Domain Calibration External Evaluator Packet - **DONE**
+- `PROD-6301..6340` - Domain Calibration External Evaluator Execution Gate - **NEXT**

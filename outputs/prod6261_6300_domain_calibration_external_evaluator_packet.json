@@ -1,0 +1,61 @@
+{
+  "status": "PASS",
+  "phase": "PROD-6261..6300",
+  "decision": "DOMAIN_CALIBRATION_EXTERNAL_EVALUATOR_PACKET_READY_MINIMUM_PROCESS_VIEW_READY",
+  "generated_at": "2026-07-01T17:07:36.297065+00:00",
+  "check_count": 328,
+  "packet_only": true,
+  "additional_live_call_in_this_phase": false,
+  "gpt_only_scope": true,
+  "multi_vendor_llm_scope": false,
+  "external_evaluator_required": true,
+  "external_evaluator_case_count": 36,
+  "minimum_process_view_ready": true,
+  "mode_counts": {
+    "PURE_GPT": 12,
+    "STACK_GPT": 12,
+    "CASULO_EXOCORTEX_STACK": 12
+  },
+  "domain_counts": {
+    "TIC/SI / ITSM": 6,
+    "VesselFlow / Operação marítima": 6,
+    "Jurídico / Escritório": 6,
+    "Financeiro / Administrativo": 6,
+    "Pequenos negócios de campo": 6,
+    "Governança documental": 6
+  },
+  "scenario_counts": {
+    "tic_si_itsm_01": 3,
+    "tic_si_itsm_02": 3,
+    "vesselflow_operacao_maritima_01": 3,
+    "vesselflow_operacao_maritima_02": 3,
+    "juridico_escritorio_01": 3,
+    "juridico_escritorio_02": 3,
+    "financeiro_administrativo_01": 3,
+    "financeiro_administrativo_02": 3,
+    "pequenos_negocios_de_campo_01": 3,
+    "pequenos_negocios_de_campo_02": 3,
+    "governanca_documental_01": 3,
+    "governanca_documental_02": 3
+  },
+  "priority_flag_counts": {
+    "gate_attention": 36,
+    "human_review_required": 34,
+    "low_evidence_grounding": 21,
+    "low_state_completeness": 36,
+    "manual_arbitration_attention": 32,
+    "missing_evidence_attention": 10
+  },
+  "technical_pipeline_claim_allowed": true,
+  "capture_readiness_claim_allowed": true,
+  "self_reported_behavioral_signal_allowed": true,
+  "validated_model_gain_claim_allowed": false,
+  "hallucination_reduction_claim_allowed": false,
+  "domain_validation_completed": false,
+  "dataset_acceptance": false,
+  "client_evidence": false,
+  "production_evidence": false,
+  "commercial_claim": false,
+  "recommended_next_phase": "PROD-6301..6340 - Domain Calibration External Evaluator Execution Gate",
+  "errors": []
+}

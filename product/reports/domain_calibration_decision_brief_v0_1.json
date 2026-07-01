@@ -1,0 +1,19 @@
+{
+  "version": "domain_calibration_decision_brief.v0.1",
+  "phase": "PROD-6261..6300",
+  "decision_summary": "Proceed to external evaluator execution. Do not make model-gain, client, production, dataset or commercial claims yet.",
+  "go": [
+    "Proceed with external evaluator execution gate.",
+    "Use STACK_GPT as baseline candidate due to self-reported signal.",
+    "Use Financeiro / Administrativo as priority stress-test domain.",
+    "Continue comparing PURE_GPT, STACK_GPT and CASULO_EXOCORTEX_STACK using independent scoring."
+  ],
+  "hold": [
+    "Hold validated model-gain claim.",
+    "Hold hallucination reduction claim.",
+    "Hold dataset acceptance.",
+    "Hold client-facing evidence claim.",
+    "Hold production readiness claim."
+  ],
+  "decision": "MINIMUM_PROCESS_VIEW_READY_EXTERNAL_EVALUATOR_NEXT"
+}

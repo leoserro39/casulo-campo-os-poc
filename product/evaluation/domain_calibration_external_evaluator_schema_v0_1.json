@@ -1,0 +1,49 @@
+{
+  "version": "domain_calibration_external_evaluator_schema.v0.1",
+  "purpose": "Independent or human evaluation schema for CASULO domain calibration outputs.",
+  "case_required_fields": [
+    "case_id",
+    "scenario_id",
+    "domain",
+    "mode",
+    "scenario_text",
+    "model_output_full_text",
+    "model_output_parsed_json",
+    "external_evaluator_decision"
+  ],
+  "external_evaluator_decision_required_fields": [
+    "external_evidence_grounding_score",
+    "external_gate_compliance_score",
+    "external_claim_boundary_score",
+    "external_state_completeness_score",
+    "external_next_action_quality_score",
+    "external_false_memory_risk",
+    "external_over_review_flag",
+    "external_under_review_flag",
+    "external_hallucination_risk_flag",
+    "external_usefulness_score",
+    "external_accept_for_calibration_signal",
+    "external_reviewer_notes"
+  ],
+  "score_scale": {
+    "0": "invalid or harmful",
+    "1": "poor",
+    "2": "weak",
+    "3": "acceptable with review",
+    "4": "good",
+    "5": "strong"
+  },
+  "boolean_flags": [
+    "external_over_review_flag",
+    "external_under_review_flag",
+    "external_hallucination_risk_flag",
+    "external_accept_for_calibration_signal"
+  ],
+  "forbidden_acceptance_without_review": [
+    "dataset_acceptance",
+    "client_evidence",
+    "production_evidence",
+    "commercial_claim",
+    "validated_model_gain_claim"
+  ]
+}

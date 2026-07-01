@@ -1,0 +1,82 @@
+{
+  "version": "domain_calibration_minimum_process_view_for_gain_and_real_calibration.v0.1",
+  "phase": "PROD-6261..6300",
+  "generated_at": "2026-07-01T17:07:36.295891+00:00",
+  "objective": "Define the minimum auditable process to move from controlled GPT outputs to real calibration and model-gain evidence.",
+  "current_state": {
+    "technical_execution": "PASS",
+    "capture_hardening": "PASS",
+    "behavioral_self_reported_metrics": "READY",
+    "external_evaluation": "PACKET_READY",
+    "domain_validation_completed": false,
+    "model_gain_claim_allowed": false,
+    "dataset_acceptance_allowed": false
+  },
+  "minimum_process_steps": [
+    {
+      "step": 1,
+      "name": "Scenario matrix",
+      "purpose": "Create domain scenarios with controlled facts, expected risk themes and bounded actions.",
+      "status": "DONE"
+    },
+    {
+      "step": 2,
+      "name": "Mode execution",
+      "purpose": "Run PURE_GPT, STACK_GPT and CASULO_EXOCORTEX_STACK over the same cases.",
+      "status": "DONE"
+    },
+    {
+      "step": 3,
+      "name": "Capture hardening",
+      "purpose": "Store full output, parsed JSON, capture status, parse status and review readiness.",
+      "status": "DONE"
+    },
+    {
+      "step": 4,
+      "name": "Self-reported metric review",
+      "purpose": "Aggregate model-reported evidence, gate, claim and state metrics.",
+      "status": "DONE_WITH_LIMITATION"
+    },
+    {
+      "step": 5,
+      "name": "External evaluator packet",
+      "purpose": "Create independent review queue, rubric and thresholds.",
+      "status": "DONE_IN_THIS_PHASE"
+    },
+    {
+      "step": 6,
+      "name": "External evaluator execution",
+      "purpose": "Score every case independently and detect over-review, under-review and hallucination risk.",
+      "status": "NEXT"
+    },
+    {
+      "step": 7,
+      "name": "Calibration decision gate",
+      "purpose": "Decide which mode/domain/case signals can become calibration candidates.",
+      "status": "PLANNED"
+    },
+    {
+      "step": 8,
+      "name": "Dataset candidate gate",
+      "purpose": "Only after independent acceptance, create dataset candidates for human approval.",
+      "status": "BLOCKED_UNTIL_EXTERNAL_EVALUATION"
+    }
+  ],
+  "decision_policy": {
+    "can_continue": true,
+    "can_claim_technical_pipeline": true,
+    "can_claim_capture_readiness": true,
+    "can_claim_self_reported_behavioral_signal": true,
+    "can_claim_validated_model_gain": false,
+    "can_claim_hallucination_reduction": false,
+    "can_claim_domain_validation": false,
+    "can_use_as_client_evidence": false,
+    "can_use_as_production_evidence": false,
+    "can_accept_to_dataset": false
+  },
+  "baseline_signals_from_self_reported_metrics": {
+    "top_mode_signal": "STACK_GPT",
+    "top_domain_attention": "Financeiro / Administrativo"
+  },
+  "next_phase": "PROD-6301..6340 - Domain Calibration External Evaluator Execution Gate"
+}
