@@ -1,0 +1,31 @@
+# PROD-5901..5940 Result
+
+- Status: PASS
+- Decision: APPROVED_TRIAD_ACK_BASELINE_FOR_RECORD_ONLY_DOMAIN_CALIBRATION_MATRIX_PACKET_NEXT
+- Review checks: 236
+- Review gate only: true
+- Additional live call in this gate: false
+- PURE output: CASULO_GPT_SANDBOX_ACK
+- STACK output: CASULO_STACK_GPT_SANDBOX_ACK
+- EXOCORTEX output: CASULO_EXOCORTEX_STACK_SANDBOX_ACK
+- PURE latency ms: 4285
+- STACK latency ms: 4001
+- EXOCORTEX latency ms: 4334
+- STACK minus PURE latency ms: -284
+- EXOCORTEX minus PURE latency ms: 49
+- EXOCORTEX minus STACK latency ms: 333
+- Unsupported claim count: 0
+- Missing evidence claim count: 0
+- Gate violation count: 0
+- Dataset write count: 0
+- API key storage count: 0
+- GPT Memory API execution count: 0
+- Real memory API execution count: 0
+- Persistent memory write count: 0
+- Accepted as ACK baseline record only: True
+- Accepted for domain calibration start: True
+- Accepted as dataset candidate: false
+- Accepted as client evidence: false
+- Accepted as production evidence: false
+- Domain validation status: NOT_EVALUATED_ACK_ONLY
+- Next: PROD-5941..5980 - Domain Calibration Matrix Controlled Test Packet
