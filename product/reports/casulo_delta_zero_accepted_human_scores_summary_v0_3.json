@@ -1,0 +1,30 @@
+{
+  "version": "casulo_delta_zero_accepted_human_scores_summary.v0.3",
+  "phase": "PROD-6661..6700",
+  "generated_at": "2026-07-01T22:16:45.267588+00:00",
+  "case_count": 36,
+  "lot_counts": {
+    "D_NEGATIVE_CONTROL_NOT_CALIBRATION": 26,
+    "C_OVER_REVIEW_NOT_CALIBRATION": 3,
+    "B_ACCEPT_NOT_CALIBRATION": 2,
+    "A_CALIBRATION_TRUE": 5
+  },
+  "decision_counts": {
+    "ACCEPT": 36
+  },
+  "calibration_positive_count": 5,
+  "calibration_negative_or_control_count": 31,
+  "over_review_true_count": 26,
+  "ingest_status": "PASS",
+  "final_indices_ready": true,
+  "claims_remain_blocked": [
+    "validated_model_gain_claim",
+    "validated_hallucination_reduction_claim",
+    "delta_zero_ready_validated_claim",
+    "dataset_acceptance",
+    "client_evidence",
+    "production_activation",
+    "commercial_claim",
+    "automatic_external_scoring_claim"
+  ]
+}

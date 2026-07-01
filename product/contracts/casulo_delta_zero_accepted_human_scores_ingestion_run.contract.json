@@ -1,0 +1,17 @@
+{
+  "phase": "PROD-6661..6700",
+  "required_prior_tags": [
+    "product-casulo-delta-zero-assisted-scoring-draft-packet-v0.1",
+    "product-casulo-delta-zero-human-review-accelerator-packet-v0.1"
+  ],
+  "user_approved_all_recommendations": true,
+  "accepted_scores_ingestion_executed": true,
+  "final_indices_ready_after_human_acceptance": true,
+  "validated_model_gain_claim_blocked": true,
+  "hallucination_reduction_claim_blocked": true,
+  "delta_zero_ready_validated_claim_blocked": true,
+  "dataset_acceptance_blocked": true,
+  "client_claim_blocked": true,
+  "production_blocked": true,
+  "commercial_claim_blocked": true
+}
