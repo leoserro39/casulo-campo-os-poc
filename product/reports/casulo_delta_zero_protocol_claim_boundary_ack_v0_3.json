@@ -1,0 +1,27 @@
+{
+  "version": "casulo_delta_zero_protocol_claim_boundary_ack.v0.3",
+  "phase": "PROD-6741..6780",
+  "generated_at": "2026-07-01T22:47:47.978171+00:00",
+  "acknowledged": true,
+  "allowed_now": [
+    "internal evaluation artifact exists",
+    "protocol design completed",
+    "sandbox-only preparation can continue"
+  ],
+  "blocked_now": [
+    "live_gpt_call",
+    "real_test_execution",
+    "production_activation",
+    "client_facing_validated_claim",
+    "commercial_claim",
+    "validated_model_gain_claim",
+    "validated_hallucination_reduction_claim",
+    "delta_zero_ready_validated_claim",
+    "dataset_acceptance",
+    "canonical_token_acceptance",
+    "temporal_trajectory_claim",
+    "pii_or_secret_storage",
+    "real_world_side_effect"
+  ],
+  "real_test_execution_allowed": false
+}
