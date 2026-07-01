@@ -1,0 +1,99 @@
+{
+  "version": "controlled_pilot_real_candidate_boundary_review_packet.v0.1",
+  "phase": "PROD-3741..3780",
+  "purpose": "Prepare boundary review before any real controlled pilot candidate intake.",
+  "real_data_captured_in_this_phase": false,
+  "real_candidate_inserted": false,
+  "real_candidate_accepted_to_dataset": false,
+  "decision": "BOUNDARY_REVIEW_PACKET_READY_NO_REAL_CANDIDATE",
+  "boundary_controls": [
+    "manual_candidate_only",
+    "source_refs_only_required",
+    "raw_private_data_forbidden",
+    "secret_or_credential_forbidden",
+    "unredacted_pii_forbidden",
+    "privacy_review_required",
+    "pii_redaction_required",
+    "secret_scan_required",
+    "human_reviewer_required",
+    "evidence_packet_refs_required",
+    "operator_checklist_required",
+    "claim_boundary_required",
+    "decision_gate_required",
+    "dataset_acceptance_without_review_forbidden",
+    "client_facing_claim_forbidden",
+    "production_activation_forbidden"
+  ],
+  "review_checks": [
+    "reviewer_identity_confirmed",
+    "candidate_source_refs_only_confirmed",
+    "no_raw_private_data_confirmed",
+    "no_secret_or_credential_confirmed",
+    "no_unredacted_pii_confirmed",
+    "privacy_review_ref_present",
+    "pii_redaction_ref_present",
+    "secret_scan_ref_present",
+    "evidence_packet_ref_present",
+    "operator_checklist_ref_present",
+    "human_reviewer_notes_ref_present",
+    "claim_boundary_confirmed",
+    "decision_gate_confirmed",
+    "dataset_acceptance_decision_confirmed",
+    "client_claim_absent_confirmed",
+    "production_activation_absent_confirmed"
+  ],
+  "review_outcomes": [
+    "APPROVE_MANUAL_REAL_CANDIDATE_INTAKE_DRY_RUN_ONLY",
+    "HOLD_FOR_MISSING_BOUNDARY_EVIDENCE",
+    "HOLD_FOR_PRIVACY_OR_PII_REVIEW",
+    "REJECT_SECRET_OR_RAW_PRIVATE_DATA_RISK",
+    "REJECT_CLIENT_OR_PRODUCTION_CLAIM_RISK"
+  ],
+  "current_dataset_state": {
+    "candidate_count": 0,
+    "accepted_count": 0,
+    "reviewer_queue_pending": 0
+  },
+  "entry_boundary": {
+    "next_allowed_step": "manual real candidate intake dry run preparation only",
+    "automatic_capture_allowed": false,
+    "raw_private_data_allowed": false,
+    "secret_storage_allowed": false,
+    "unredacted_pii_allowed": false,
+    "dataset_acceptance_allowed_in_this_phase": false,
+    "client_claim_allowed": false,
+    "production_activation_allowed": false
+  },
+  "required_references": {
+    "schema": "product/schemas/real_session_capture.schema.json",
+    "validator": "product/calibration/real_sessions/controlled_pilot_dataset_candidate_validator_v0_1.json",
+    "evidence_packet_template": "product/calibration/real_sessions/controlled_pilot_evidence_packet_template_v0_1.json",
+    "candidate_template": "product/calibration/real_sessions/controlled_real_session_candidate_template_v0_1.json",
+    "reviewer_queue": "product/calibration/real_sessions/controlled_pilot_reviewer_queue_empty_v0_1.json"
+  },
+  "claim_boundary": "Boundary review packet only. No real candidate captured or accepted.",
+  "allowed_actions": [
+    "real_candidate_boundary_review_packet_creation",
+    "manual_boundary_review_preparation",
+    "review_checklist_creation",
+    "manual_real_candidate_intake_dry_run_preparation",
+    "source_reference_boundary_preparation"
+  ],
+  "blocked_actions": [
+    "automatic_real_session_capture",
+    "real_candidate_dataset_acceptance",
+    "dataset_acceptance_without_human_review",
+    "raw_private_data_storage",
+    "secret_or_credential_storage",
+    "unredacted_pii_storage",
+    "client_facing_value_claim",
+    "real_world_profit_claim",
+    "validated_savings_claim",
+    "validated_hallucination_reduction_claim",
+    "production_activation",
+    "automatic_memory_delete",
+    "gpt_memory_api_execution",
+    "commercial_package_pricing_claim"
+  ],
+  "recommended_next_phase": "PROD-3781..3820 - Controlled Pilot Real Candidate Intake Dry Run Gate"
+}

@@ -1,0 +1,128 @@
+{
+  "version": "controlled_pilot_real_candidate_boundary_review_checklist.v0.1",
+  "phase": "PROD-3741..3780",
+  "status": "CHECKLIST_TEMPLATE_ONLY_NO_REAL_CANDIDATE",
+  "real_data_captured_in_this_phase": false,
+  "checks": [
+    {
+      "id": "BR-001",
+      "name": "reviewer_identity_confirmed",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "BR-002",
+      "name": "candidate_source_refs_only_confirmed",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "BR-003",
+      "name": "no_raw_private_data_confirmed",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "BR-004",
+      "name": "no_secret_or_credential_confirmed",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "BR-005",
+      "name": "no_unredacted_pii_confirmed",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "BR-006",
+      "name": "privacy_review_ref_present",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "BR-007",
+      "name": "pii_redaction_ref_present",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "BR-008",
+      "name": "secret_scan_ref_present",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "BR-009",
+      "name": "evidence_packet_ref_present",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "BR-010",
+      "name": "operator_checklist_ref_present",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "BR-011",
+      "name": "human_reviewer_notes_ref_present",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "BR-012",
+      "name": "claim_boundary_confirmed",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "BR-013",
+      "name": "decision_gate_confirmed",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "BR-014",
+      "name": "dataset_acceptance_decision_confirmed",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "BR-015",
+      "name": "client_claim_absent_confirmed",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "BR-016",
+      "name": "production_activation_absent_confirmed",
+      "required": true,
+      "status": "PENDING"
+    }
+  ],
+  "review_outcomes": [
+    "APPROVE_MANUAL_REAL_CANDIDATE_INTAKE_DRY_RUN_ONLY",
+    "HOLD_FOR_MISSING_BOUNDARY_EVIDENCE",
+    "HOLD_FOR_PRIVACY_OR_PII_REVIEW",
+    "REJECT_SECRET_OR_RAW_PRIVATE_DATA_RISK",
+    "REJECT_CLIENT_OR_PRODUCTION_CLAIM_RISK"
+  ],
+  "default_outcome": "HOLD_FOR_MISSING_BOUNDARY_EVIDENCE",
+  "blocked_actions": [
+    "automatic_real_session_capture",
+    "real_candidate_dataset_acceptance",
+    "dataset_acceptance_without_human_review",
+    "raw_private_data_storage",
+    "secret_or_credential_storage",
+    "unredacted_pii_storage",
+    "client_facing_value_claim",
+    "real_world_profit_claim",
+    "validated_savings_claim",
+    "validated_hallucination_reduction_claim",
+    "production_activation",
+    "automatic_memory_delete",
+    "gpt_memory_api_execution",
+    "commercial_package_pricing_claim"
+  ]
+}
