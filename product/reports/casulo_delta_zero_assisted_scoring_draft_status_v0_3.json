@@ -1,0 +1,13 @@
+{
+  "version": "casulo_delta_zero_assisted_scoring_draft_status.v0.3",
+  "phase": "PROD-6501..6540",
+  "generated_at": "2026-07-01T19:00:48.090317+00:00",
+  "status": "PASS",
+  "assisted_draft_ready": true,
+  "case_count": 36,
+  "external_scores_completed": false,
+  "final_indices_ready": false,
+  "assistant_draft_only": true,
+  "human_acceptance_required": true,
+  "workbench_external_fields_remain_blank": true
+}

@@ -1,0 +1,470 @@
+{
+  "version": "casulo_delta_zero_assisted_scoring_review_priority.v0.3",
+  "phase": "PROD-6501..6540",
+  "generated_at": "2026-07-01T19:00:48.090241+00:00",
+  "priority_policy": "Review higher priority scores first: hard blocks, gate mismatch, high delta, hallucination/under-review flags.",
+  "top_10": [
+    {
+      "case_id": "EXT-EVAL-B01H-028",
+      "domain": "Pequenos negócios de campo",
+      "mode": "PURE_GPT",
+      "review_priority_score": 24.9301,
+      "hard_blocks": "blocked_state_or_production_block|thin_evidence",
+      "delta_score": "0.4767",
+      "delta_gate_mismatch": "0.5",
+      "suggestion_confidence": "LOW"
+    },
+    {
+      "case_id": "EXT-EVAL-B01H-016",
+      "domain": "Jurídico / Escritório",
+      "mode": "PURE_GPT",
+      "review_priority_score": 15.0504,
+      "hard_blocks": "thin_evidence",
+      "delta_score": "0.5168",
+      "delta_gate_mismatch": "0.5",
+      "suggestion_confidence": "LOW"
+    },
+    {
+      "case_id": "EXT-EVAL-B01H-032",
+      "domain": "Governança documental",
+      "mode": "STACK_GPT",
+      "review_priority_score": 14.9964,
+      "hard_blocks": "thin_evidence",
+      "delta_score": "0.4988",
+      "delta_gate_mismatch": "0.5",
+      "suggestion_confidence": "LOW"
+    },
+    {
+      "case_id": "EXT-EVAL-B01H-001",
+      "domain": "TIC/SI / ITSM",
+      "mode": "PURE_GPT",
+      "review_priority_score": 14.9769,
+      "hard_blocks": "thin_evidence",
+      "delta_score": "0.4923",
+      "delta_gate_mismatch": "0.5",
+      "suggestion_confidence": "LOW"
+    },
+    {
+      "case_id": "EXT-EVAL-B01H-003",
+      "domain": "TIC/SI / ITSM",
+      "mode": "CASULO_EXOCORTEX_STACK",
+      "review_priority_score": 14.9769,
+      "hard_blocks": "thin_evidence",
+      "delta_score": "0.4923",
+      "delta_gate_mismatch": "0.5",
+      "suggestion_confidence": "LOW"
+    },
+    {
+      "case_id": "EXT-EVAL-B01H-022",
+      "domain": "Financeiro / Administrativo",
+      "mode": "PURE_GPT",
+      "review_priority_score": 14.9469,
+      "hard_blocks": "thin_evidence",
+      "delta_score": "0.4823",
+      "delta_gate_mismatch": "0.5",
+      "suggestion_confidence": "LOW"
+    },
+    {
+      "case_id": "EXT-EVAL-B01H-023",
+      "domain": "Financeiro / Administrativo",
+      "mode": "STACK_GPT",
+      "review_priority_score": 14.94,
+      "hard_blocks": "thin_evidence",
+      "delta_score": "0.48",
+      "delta_gate_mismatch": "0.5",
+      "suggestion_confidence": "LOW"
+    },
+    {
+      "case_id": "EXT-EVAL-B01H-024",
+      "domain": "Financeiro / Administrativo",
+      "mode": "CASULO_EXOCORTEX_STACK",
+      "review_priority_score": 14.9397,
+      "hard_blocks": "thin_evidence",
+      "delta_score": "0.4799",
+      "delta_gate_mismatch": "0.5",
+      "suggestion_confidence": "LOW"
+    },
+    {
+      "case_id": "EXT-EVAL-B01H-030",
+      "domain": "Pequenos negócios de campo",
+      "mode": "CASULO_EXOCORTEX_STACK",
+      "review_priority_score": 14.922,
+      "hard_blocks": "thin_evidence",
+      "delta_score": "0.474",
+      "delta_gate_mismatch": "0.5",
+      "suggestion_confidence": "LOW"
+    },
+    {
+      "case_id": "EXT-EVAL-B01H-033",
+      "domain": "Governança documental",
+      "mode": "CASULO_EXOCORTEX_STACK",
+      "review_priority_score": 14.8644,
+      "hard_blocks": "thin_evidence",
+      "delta_score": "0.4548",
+      "delta_gate_mismatch": "0.5",
+      "suggestion_confidence": "LOW"
+    }
+  ],
+  "rows": [
+    {
+      "case_id": "EXT-EVAL-B01H-028",
+      "domain": "Pequenos negócios de campo",
+      "mode": "PURE_GPT",
+      "review_priority_score": 24.9301,
+      "hard_blocks": "blocked_state_or_production_block|thin_evidence",
+      "delta_score": "0.4767",
+      "delta_gate_mismatch": "0.5",
+      "suggestion_confidence": "LOW"
+    },
+    {
+      "case_id": "EXT-EVAL-B01H-016",
+      "domain": "Jurídico / Escritório",
+      "mode": "PURE_GPT",
+      "review_priority_score": 15.0504,
+      "hard_blocks": "thin_evidence",
+      "delta_score": "0.5168",
+      "delta_gate_mismatch": "0.5",
+      "suggestion_confidence": "LOW"
+    },
+    {
+      "case_id": "EXT-EVAL-B01H-032",
+      "domain": "Governança documental",
+      "mode": "STACK_GPT",
+      "review_priority_score": 14.9964,
+      "hard_blocks": "thin_evidence",
+      "delta_score": "0.4988",
+      "delta_gate_mismatch": "0.5",
+      "suggestion_confidence": "LOW"
+    },
+    {
+      "case_id": "EXT-EVAL-B01H-001",
+      "domain": "TIC/SI / ITSM",
+      "mode": "PURE_GPT",
+      "review_priority_score": 14.9769,
+      "hard_blocks": "thin_evidence",
+      "delta_score": "0.4923",
+      "delta_gate_mismatch": "0.5",
+      "suggestion_confidence": "LOW"
+    },
+    {
+      "case_id": "EXT-EVAL-B01H-003",
+      "domain": "TIC/SI / ITSM",
+      "mode": "CASULO_EXOCORTEX_STACK",
+      "review_priority_score": 14.9769,
+      "hard_blocks": "thin_evidence",
+      "delta_score": "0.4923",
+      "delta_gate_mismatch": "0.5",
+      "suggestion_confidence": "LOW"
+    },
+    {
+      "case_id": "EXT-EVAL-B01H-022",
+      "domain": "Financeiro / Administrativo",
+      "mode": "PURE_GPT",
+      "review_priority_score": 14.9469,
+      "hard_blocks": "thin_evidence",
+      "delta_score": "0.4823",
+      "delta_gate_mismatch": "0.5",
+      "suggestion_confidence": "LOW"
+    },
+    {
+      "case_id": "EXT-EVAL-B01H-023",
+      "domain": "Financeiro / Administrativo",
+      "mode": "STACK_GPT",
+      "review_priority_score": 14.94,
+      "hard_blocks": "thin_evidence",
+      "delta_score": "0.48",
+      "delta_gate_mismatch": "0.5",
+      "suggestion_confidence": "LOW"
+    },
+    {
+      "case_id": "EXT-EVAL-B01H-024",
+      "domain": "Financeiro / Administrativo",
+      "mode": "CASULO_EXOCORTEX_STACK",
+      "review_priority_score": 14.9397,
+      "hard_blocks": "thin_evidence",
+      "delta_score": "0.4799",
+      "delta_gate_mismatch": "0.5",
+      "suggestion_confidence": "LOW"
+    },
+    {
+      "case_id": "EXT-EVAL-B01H-030",
+      "domain": "Pequenos negócios de campo",
+      "mode": "CASULO_EXOCORTEX_STACK",
+      "review_priority_score": 14.922,
+      "hard_blocks": "thin_evidence",
+      "delta_score": "0.474",
+      "delta_gate_mismatch": "0.5",
+      "suggestion_confidence": "LOW"
+    },
+    {
+      "case_id": "EXT-EVAL-B01H-033",
+      "domain": "Governança documental",
+      "mode": "CASULO_EXOCORTEX_STACK",
+      "review_priority_score": 14.8644,
+      "hard_blocks": "thin_evidence",
+      "delta_score": "0.4548",
+      "delta_gate_mismatch": "0.5",
+      "suggestion_confidence": "LOW"
+    },
+    {
+      "case_id": "EXT-EVAL-B01H-031",
+      "domain": "Governança documental",
+      "mode": "PURE_GPT",
+      "review_priority_score": 14.8617,
+      "hard_blocks": "thin_evidence",
+      "delta_score": "0.4539",
+      "delta_gate_mismatch": "0.5",
+      "suggestion_confidence": "LOW"
+    },
+    {
+      "case_id": "EXT-EVAL-B01H-002",
+      "domain": "TIC/SI / ITSM",
+      "mode": "STACK_GPT",
+      "review_priority_score": 14.8317,
+      "hard_blocks": "thin_evidence",
+      "delta_score": "0.4439",
+      "delta_gate_mismatch": "0.5",
+      "suggestion_confidence": "LOW"
+    },
+    {
+      "case_id": "EXT-EVAL-B01H-021",
+      "domain": "Financeiro / Administrativo",
+      "mode": "CASULO_EXOCORTEX_STACK",
+      "review_priority_score": 14.8185,
+      "hard_blocks": "thin_evidence",
+      "delta_score": "0.4395",
+      "delta_gate_mismatch": "0.5",
+      "suggestion_confidence": "LOW"
+    },
+    {
+      "case_id": "EXT-EVAL-B01H-007",
+      "domain": "VesselFlow / Operação marítima",
+      "mode": "PURE_GPT",
+      "review_priority_score": 14.7576,
+      "hard_blocks": "thin_evidence",
+      "delta_score": "0.4192",
+      "delta_gate_mismatch": "0.5",
+      "suggestion_confidence": "LOW"
+    },
+    {
+      "case_id": "EXT-EVAL-B01H-026",
+      "domain": "Pequenos negócios de campo",
+      "mode": "STACK_GPT",
+      "review_priority_score": 14.7039,
+      "hard_blocks": "thin_evidence",
+      "delta_score": "0.4013",
+      "delta_gate_mismatch": "0.5",
+      "suggestion_confidence": "LOW"
+    },
+    {
+      "case_id": "EXT-EVAL-B01H-006",
+      "domain": "TIC/SI / ITSM",
+      "mode": "CASULO_EXOCORTEX_STACK",
+      "review_priority_score": 14.6598,
+      "hard_blocks": "thin_evidence",
+      "delta_score": "0.3866",
+      "delta_gate_mismatch": "0.5",
+      "suggestion_confidence": "LOW"
+    },
+    {
+      "case_id": "EXT-EVAL-B01H-027",
+      "domain": "Pequenos negócios de campo",
+      "mode": "CASULO_EXOCORTEX_STACK",
+      "review_priority_score": 14.6055,
+      "hard_blocks": "thin_evidence",
+      "delta_score": "0.3685",
+      "delta_gate_mismatch": "0.5",
+      "suggestion_confidence": "LOW"
+    },
+    {
+      "case_id": "EXT-EVAL-B01H-017",
+      "domain": "Jurídico / Escritório",
+      "mode": "STACK_GPT",
+      "review_priority_score": 14.5863,
+      "hard_blocks": "thin_evidence",
+      "delta_score": "0.3621",
+      "delta_gate_mismatch": "0.5",
+      "suggestion_confidence": "LOW"
+    },
+    {
+      "case_id": "EXT-EVAL-B01H-014",
+      "domain": "Jurídico / Escritório",
+      "mode": "STACK_GPT",
+      "review_priority_score": 14.5797,
+      "hard_blocks": "thin_evidence",
+      "delta_score": "0.3599",
+      "delta_gate_mismatch": "0.5",
+      "suggestion_confidence": "LOW"
+    },
+    {
+      "case_id": "EXT-EVAL-B01H-025",
+      "domain": "Pequenos negócios de campo",
+      "mode": "PURE_GPT",
+      "review_priority_score": 14.5218,
+      "hard_blocks": "thin_evidence",
+      "delta_score": "0.3406",
+      "delta_gate_mismatch": "0.5",
+      "suggestion_confidence": "LOW"
+    },
+    {
+      "case_id": "EXT-EVAL-B01H-029",
+      "domain": "Pequenos negócios de campo",
+      "mode": "STACK_GPT",
+      "review_priority_score": 14.4549,
+      "hard_blocks": "thin_evidence",
+      "delta_score": "0.3183",
+      "delta_gate_mismatch": "0.5",
+      "suggestion_confidence": "LOW"
+    },
+    {
+      "case_id": "EXT-EVAL-B01H-013",
+      "domain": "Jurídico / Escritório",
+      "mode": "PURE_GPT",
+      "review_priority_score": 14.4459,
+      "hard_blocks": "thin_evidence",
+      "delta_score": "0.3153",
+      "delta_gate_mismatch": "0.5",
+      "suggestion_confidence": "LOW"
+    },
+    {
+      "case_id": "EXT-EVAL-B01H-015",
+      "domain": "Jurídico / Escritório",
+      "mode": "CASULO_EXOCORTEX_STACK",
+      "review_priority_score": 14.4459,
+      "hard_blocks": "thin_evidence",
+      "delta_score": "0.3153",
+      "delta_gate_mismatch": "0.5",
+      "suggestion_confidence": "LOW"
+    },
+    {
+      "case_id": "EXT-EVAL-B01H-019",
+      "domain": "Financeiro / Administrativo",
+      "mode": "PURE_GPT",
+      "review_priority_score": 11.9322,
+      "hard_blocks": "thin_evidence",
+      "delta_score": "0.2274",
+      "delta_gate_mismatch": "0.25",
+      "suggestion_confidence": "LOW"
+    },
+    {
+      "case_id": "EXT-EVAL-B01H-018",
+      "domain": "Jurídico / Escritório",
+      "mode": "CASULO_EXOCORTEX_STACK",
+      "review_priority_score": 11.3332,
+      "hard_blocks": "thin_evidence",
+      "delta_score": "0.4444",
+      "delta_gate_mismatch": "0.0",
+      "suggestion_confidence": "LOW"
+    },
+    {
+      "case_id": "EXT-EVAL-B01H-020",
+      "domain": "Financeiro / Administrativo",
+      "mode": "STACK_GPT",
+      "review_priority_score": 10.9579,
+      "hard_blocks": "thin_evidence",
+      "delta_score": "0.3193",
+      "delta_gate_mismatch": "0.0",
+      "suggestion_confidence": "LOW"
+    },
+    {
+      "case_id": "EXT-EVAL-B01H-009",
+      "domain": "VesselFlow / Operação marítima",
+      "mode": "CASULO_EXOCORTEX_STACK",
+      "review_priority_score": 4.6091,
+      "hard_blocks": "",
+      "delta_score": "0.3697",
+      "delta_gate_mismatch": "0.5",
+      "suggestion_confidence": "LOW"
+    },
+    {
+      "case_id": "EXT-EVAL-B01H-004",
+      "domain": "TIC/SI / ITSM",
+      "mode": "PURE_GPT",
+      "review_priority_score": 4.5905,
+      "hard_blocks": "",
+      "delta_score": "0.3635",
+      "delta_gate_mismatch": "0.5",
+      "suggestion_confidence": "LOW"
+    },
+    {
+      "case_id": "EXT-EVAL-B01H-011",
+      "domain": "VesselFlow / Operação marítima",
+      "mode": "STACK_GPT",
+      "review_priority_score": 4.5536,
+      "hard_blocks": "",
+      "delta_score": "0.3512",
+      "delta_gate_mismatch": "0.5",
+      "suggestion_confidence": "LOW"
+    },
+    {
+      "case_id": "EXT-EVAL-B01H-008",
+      "domain": "VesselFlow / Operação marítima",
+      "mode": "STACK_GPT",
+      "review_priority_score": 2.1128,
+      "hard_blocks": "",
+      "delta_score": "0.2876",
+      "delta_gate_mismatch": "0.25",
+      "suggestion_confidence": "MEDIUM"
+    },
+    {
+      "case_id": "EXT-EVAL-B01H-010",
+      "domain": "VesselFlow / Operação marítima",
+      "mode": "PURE_GPT",
+      "review_priority_score": 2.0708,
+      "hard_blocks": "",
+      "delta_score": "0.2736",
+      "delta_gate_mismatch": "0.25",
+      "suggestion_confidence": "MEDIUM"
+    },
+    {
+      "case_id": "EXT-EVAL-B01H-005",
+      "domain": "TIC/SI / ITSM",
+      "mode": "STACK_GPT",
+      "review_priority_score": 2.0135,
+      "hard_blocks": "",
+      "delta_score": "0.2545",
+      "delta_gate_mismatch": "0.25",
+      "suggestion_confidence": "MEDIUM"
+    },
+    {
+      "case_id": "EXT-EVAL-B01H-034",
+      "domain": "Governança documental",
+      "mode": "PURE_GPT",
+      "review_priority_score": 1.9409,
+      "hard_blocks": "",
+      "delta_score": "0.2303",
+      "delta_gate_mismatch": "0.25",
+      "suggestion_confidence": "MEDIUM"
+    },
+    {
+      "case_id": "EXT-EVAL-B01H-012",
+      "domain": "VesselFlow / Operação marítima",
+      "mode": "CASULO_EXOCORTEX_STACK",
+      "review_priority_score": 1.9397,
+      "hard_blocks": "",
+      "delta_score": "0.2299",
+      "delta_gate_mismatch": "0.25",
+      "suggestion_confidence": "MEDIUM"
+    },
+    {
+      "case_id": "EXT-EVAL-B01H-036",
+      "domain": "Governança documental",
+      "mode": "CASULO_EXOCORTEX_STACK",
+      "review_priority_score": 1.9256,
+      "hard_blocks": "",
+      "delta_score": "0.2252",
+      "delta_gate_mismatch": "0.25",
+      "suggestion_confidence": "MEDIUM"
+    },
+    {
+      "case_id": "EXT-EVAL-B01H-035",
+      "domain": "Governança documental",
+      "mode": "STACK_GPT",
+      "review_priority_score": 1.8719,
+      "hard_blocks": "",
+      "delta_score": "0.2073",
+      "delta_gate_mismatch": "0.25",
+      "suggestion_confidence": "MEDIUM"
+    }
+  ]
+}

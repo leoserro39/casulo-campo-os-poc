@@ -1,0 +1,38 @@
+{
+  "phase": "PROD-6501..6540",
+  "required_prior_tag": "product-casulo-delta-zero-external-evaluator-workbench-packet-v0.1",
+  "packet_only": true,
+  "assisted_scores_are_external_scores": false,
+  "auto_copy_to_external_fields_blocked": true,
+  "human_acceptance_required": true,
+  "final_indices_without_accepted_scores_blocked": true,
+  "validated_model_gain_claim_blocked": true,
+  "hallucination_reduction_claim_blocked": true,
+  "delta_zero_ready_validated_claim_blocked": true,
+  "dataset_acceptance_blocked": true,
+  "client_claim_blocked": true,
+  "production_blocked": true,
+  "commercial_claim_blocked": true,
+  "allowed_actions": [
+    "assisted_internal_scoring_draft_creation",
+    "human_acceptance_sheet_creation",
+    "review_priority_report_creation",
+    "manual_review_acceleration",
+    "roadmap_update"
+  ],
+  "blocked_actions": [
+    "auto_filled_external_scores",
+    "final_indices_without_manual_acceptance",
+    "validated_model_gain_claim",
+    "validated_hallucination_reduction_claim",
+    "delta_zero_ready_validated_claim",
+    "dataset_acceptance",
+    "client_evidence",
+    "production_activation",
+    "commercial_claim",
+    "canonical_token_acceptance",
+    "velocity_claim_without_history",
+    "acceleration_claim_without_history"
+  ],
+  "recommended_next_phase": "PROD-6541..6580 - CASULO Delta Zero Human Score Acceptance and Ingestion Gate"
+}
