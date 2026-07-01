@@ -50,4 +50,5 @@
 - `PROD-5981..6020` - Domain Calibration Matrix Execution Gate - **DONE**
 - `PROD-6021..6060` - Domain Calibration Batch 01 Execution Run - **DONE**
 - `PROD-6061..6100` - Domain Calibration Batch 01 Review Gate - **DONE**
-- `PROD-6101..6140` - Domain Calibration Output Capture Hardening Packet - **NEXT**
+- `PROD-6101..6140` - Domain Calibration Output Capture Hardening Packet - **CURRENT**
+- `PROD-6141..6180` - Domain Calibration Hardened Rerun Execution Gate - **NEXT**

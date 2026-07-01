@@ -1,0 +1,32 @@
+{
+  "version": "domain_calibration_output_capture_hardening_requirements.v0.1",
+  "phase": "PROD-6101..6140",
+  "purpose": "Harden Batch 01 rerun capture so behavior can be reviewed instead of only technical execution.",
+  "requirements": [
+    "Store full_output_text for every execution.",
+    "Store output_preview only as a preview, not as the source of behavioral review.",
+    "Parse full_output_text as JSON.",
+    "Store parsed_output_json when parse succeeds.",
+    "Store json_parse_status.",
+    "Store output_capture_status.",
+    "Store expected_behavior_fields_present.",
+    "Store expected_behavior_fields_missing.",
+    "Store review_ready per execution.",
+    "Store technical_status separately from behavioral_capture_status.",
+    "Fail behavioral capture when full output is empty.",
+    "Fail behavioral capture when JSON parse fails.",
+    "Fail behavioral capture when required fields are missing.",
+    "Keep provider call status separate from behavioral score.",
+    "Keep dataset_acceptance false.",
+    "Keep client_evidence false.",
+    "Keep production_evidence false."
+  ],
+  "blocked_actions": [
+    "dataset_acceptance",
+    "client_evidence",
+    "production_evidence",
+    "commercial_claim",
+    "gpt_memory_api_execution",
+    "api_key_storage"
+  ]
+}

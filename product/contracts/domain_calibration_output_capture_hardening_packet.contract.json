@@ -1,0 +1,42 @@
+{
+  "phase": "PROD-6101..6140",
+  "required_prior_tag": "product-domain-calibration-batch01-review-gate-v0.1",
+  "packet_only": true,
+  "live_execution_allowed": false,
+  "future_hardened_rerun_requires_gate": true,
+  "technical_pass_behavioral_pass_separated": true,
+  "empty_output_behavioral_fail": true,
+  "non_json_output_behavioral_fail": true,
+  "missing_required_fields_behavioral_fail": true,
+  "dataset_acceptance_blocked": true,
+  "client_claim_blocked": true,
+  "production_blocked": true,
+  "commercial_claim_blocked": true,
+  "blocked_actions": [
+    "live_gpt_call_in_this_phase",
+    "openai_api_key_storage",
+    "gpt_memory_api_execution",
+    "real_memory_api_execution",
+    "persistent_memory_write",
+    "multi_vendor_llm_execution",
+    "dataset_acceptance",
+    "real_candidate_insert",
+    "real_candidate_dataset_acceptance",
+    "client_facing_value_claim",
+    "production_activation",
+    "validated_business_claim",
+    "validated_hallucination_reduction_claim",
+    "commercial_claim",
+    "domain_validation_claim"
+  ],
+  "allowed_actions": [
+    "output_capture_hardening_packet_creation",
+    "expected_response_schema_creation",
+    "hardened_runner_creation",
+    "hardened_runner_dry_run_validation",
+    "hardened_runner_apply_without_auth_block_validation",
+    "hardened_rerun_execution_gate_next",
+    "roadmap_update"
+  ],
+  "recommended_next_phase": "PROD-6141..6180 - Domain Calibration Hardened Rerun Execution Gate"
+}

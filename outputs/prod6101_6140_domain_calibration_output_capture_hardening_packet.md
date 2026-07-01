@@ -1,0 +1,25 @@
+# PROD-6101..6140 Result
+
+- Status: PASS
+- Decision: DOMAIN_CALIBRATION_OUTPUT_CAPTURE_HARDENING_PACKET_READY
+- Checks: 284
+- Packet only: true
+- Live execution allowed: false
+- Additional live call in this phase: false
+- Previous empty output count: 27
+- Previous full output present count: 0
+- Previous JSON parseable from preview count: 0
+- Hardened runner created: True
+- Hardened runner dry-run pass: True
+- Hardened runner dry-run provider calls: 0
+- Hardened runner apply without auth blocked: True
+- Hardened runner apply without auth provider calls: 0
+- Technical PASS separated from behavioral PASS: true
+- Empty output behavioral fail: true
+- Non-JSON output behavioral fail: true
+- Missing required fields behavioral fail: true
+- Dataset acceptance: false
+- Client evidence: false
+- Production evidence: false
+- Commercial claim: false
+- Next: PROD-6141..6180 - Domain Calibration Hardened Rerun Execution Gate
