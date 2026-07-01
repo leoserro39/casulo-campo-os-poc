@@ -1,0 +1,37 @@
+{
+  "version": "casulo_delta_zero_state_vector_schema.v0.3",
+  "dimensions": [
+    "risk_score",
+    "evidence_density",
+    "confidence_level",
+    "ambiguity_level",
+    "dependency_weight",
+    "impact_level",
+    "governance_requirement",
+    "reversibility_level",
+    "readiness_score",
+    "exposure_level"
+  ],
+  "value_range": [
+    0,
+    1
+  ],
+  "higher_is_better": [
+    "evidence_density",
+    "confidence_level",
+    "reversibility_level",
+    "readiness_score"
+  ],
+  "higher_is_riskier": [
+    "risk_score",
+    "ambiguity_level",
+    "dependency_weight",
+    "impact_level",
+    "governance_requirement",
+    "exposure_level"
+  ],
+  "source_policy": {
+    "initial_batch01_values": "derived_proxy_from_p0_matrix_t0",
+    "validated_values_require_external_evaluator": true
+  }
+}

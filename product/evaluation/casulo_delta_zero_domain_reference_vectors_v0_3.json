@@ -1,0 +1,77 @@
+{
+  "version": "casulo_delta_zero_domain_reference_vectors.v0.3",
+  "vectors": {
+    "TIC/SI / ITSM": {
+      "risk_score": 0.1,
+      "evidence_density": 0.85,
+      "confidence_level": 0.8,
+      "ambiguity_level": 0.1,
+      "dependency_weight": 0.25,
+      "impact_level": 0.4,
+      "governance_requirement": 0.5,
+      "reversibility_level": 0.85,
+      "readiness_score": 0.85,
+      "exposure_level": 0.05
+    },
+    "VesselFlow / Operação marítima": {
+      "risk_score": 0.08,
+      "evidence_density": 0.85,
+      "confidence_level": 0.8,
+      "ambiguity_level": 0.1,
+      "dependency_weight": 0.3,
+      "impact_level": 0.35,
+      "governance_requirement": 0.65,
+      "reversibility_level": 0.8,
+      "readiness_score": 0.85,
+      "exposure_level": 0.05
+    },
+    "Jurídico / Escritório": {
+      "risk_score": 0.1,
+      "evidence_density": 0.9,
+      "confidence_level": 0.85,
+      "ambiguity_level": 0.08,
+      "dependency_weight": 0.3,
+      "impact_level": 0.4,
+      "governance_requirement": 0.5,
+      "reversibility_level": 0.8,
+      "readiness_score": 0.85,
+      "exposure_level": 0.1
+    },
+    "Financeiro / Administrativo": {
+      "risk_score": 0.1,
+      "evidence_density": 0.88,
+      "confidence_level": 0.82,
+      "ambiguity_level": 0.1,
+      "dependency_weight": 0.3,
+      "impact_level": 0.45,
+      "governance_requirement": 0.5,
+      "reversibility_level": 0.8,
+      "readiness_score": 0.85,
+      "exposure_level": 0.1
+    },
+    "Pequenos negócios de campo": {
+      "risk_score": 0.1,
+      "evidence_density": 0.85,
+      "confidence_level": 0.8,
+      "ambiguity_level": 0.1,
+      "dependency_weight": 0.3,
+      "impact_level": 0.4,
+      "governance_requirement": 0.35,
+      "reversibility_level": 0.8,
+      "readiness_score": 0.75,
+      "exposure_level": 0.1
+    },
+    "Governança documental": {
+      "risk_score": 0.1,
+      "evidence_density": 0.92,
+      "confidence_level": 0.86,
+      "ambiguity_level": 0.08,
+      "dependency_weight": 0.3,
+      "impact_level": 0.4,
+      "governance_requirement": 0.7,
+      "reversibility_level": 0.8,
+      "readiness_score": 0.85,
+      "exposure_level": 0.1
+    }
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "version": "casulo_delta_zero_token_expansion_batch01_t0.v0.3",
+  "phase": "PROD-6381..6420",
+  "generated_at": "2026-07-01T18:39:29.444029+00:00",
+  "status": "CANDIDATE_ONLY_NOT_CANONICAL",
+  "candidate_token_counts_v0_3": {
+    "CHANGE_REVIEW_REQUIRED": 36,
+    "DELTA_MEDIUM": 28,
+    "EVIDENCE_THIN": 36,
+    "READ_ONLY_STATE": 26,
+    "TIC_MESH_LOCKED": 5,
+    "STATE_OBSERVATION": 8,
+    "PRODUCTION_BLOCKED": 1
+  },
+  "expansion_fidelity_ready": false,
+  "external_evaluator_required": true,
+  "canonical_token_acceptance": false
+}

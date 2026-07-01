@@ -1,0 +1,17 @@
+{
+  "version": "casulo_delta_zero_delta_matrix_schema.v0.3",
+  "delta_formula": "sqrt(sum(w_i * (V_obs_i - V_ref_i)^2) / sum(w_i))",
+  "normalization": "0_to_1",
+  "required_outputs": [
+    "state_vector",
+    "reference_vector",
+    "domain_weight_profile",
+    "delta_score",
+    "delta_band",
+    "computed_gate",
+    "delta_gate_mismatch",
+    "drd",
+    "dzr",
+    "delta_zero_ready"
+  ]
+}

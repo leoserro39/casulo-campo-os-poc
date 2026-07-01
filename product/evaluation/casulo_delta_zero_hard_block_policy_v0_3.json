@@ -1,0 +1,16 @@
+{
+  "version": "casulo_delta_zero_hard_block_policy.v0.3",
+  "hard_blocks": [
+    "production_activation",
+    "dataset_acceptance",
+    "client_evidence_claim",
+    "commercial_claim",
+    "validated_model_gain_claim_without_external_evaluation",
+    "thin_evidence",
+    "gate_violation",
+    "unsupported_claim",
+    "token_without_expansion",
+    "velocity_or_acceleration_claim_without_history"
+  ],
+  "policy": "Any hard block prevents Delta Zero Ready even if DZR is numerically high."
+}

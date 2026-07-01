@@ -1,0 +1,22 @@
+{
+  "version": "casulo_delta_zero_trajectory_memory_schema.v0.3",
+  "fields": [
+    "trajectory_status",
+    "snapshot_count",
+    "previous_snapshot_id",
+    "velocity_ready",
+    "acceleration_ready",
+    "drift_rate",
+    "risk_velocity",
+    "risk_acceleration",
+    "evidence_velocity",
+    "memory_recurrence_ready",
+    "memory_recurrence"
+  ],
+  "t0_policy": {
+    "velocity": null,
+    "acceleration": null,
+    "drift": null,
+    "reason": "A single snapshot cannot establish movement. Null means not measured, not zero."
+  }
+}

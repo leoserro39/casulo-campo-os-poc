@@ -1,0 +1,22 @@
+{
+  "version": "casulo_delta_zero_gate_alignment_batch01_t0.v0.3",
+  "phase": "PROD-6381..6420",
+  "generated_at": "2026-07-01T18:39:29.444005+00:00",
+  "status": "PASS",
+  "row_count": 36,
+  "model_gate_counts": {
+    "INSUFFICIENT_EVIDENCE": 23,
+    "BLOCKED": 3,
+    "HOLD_HUMAN_REVIEW": 10
+  },
+  "computed_gate_counts": {
+    "HUMAN_REVIEW_REQUIRED": 28,
+    "OBSERVATION_REQUIRED": 8
+  },
+  "delta_band_counts": {
+    "0.31-0.60": 28,
+    "0.11-0.30": 8
+  },
+  "average_delta_gate_mismatch": 0.4167,
+  "external_evaluator_required": true
+}

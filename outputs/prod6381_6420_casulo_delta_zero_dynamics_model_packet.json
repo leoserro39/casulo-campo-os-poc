@@ -1,0 +1,62 @@
+{
+  "status": "PASS",
+  "phase": "PROD-6381..6420",
+  "decision": "CASULO_DELTA_ZERO_DYNAMICS_MODEL_PACKET_READY",
+  "generated_at": "2026-07-01T18:39:29.444978+00:00",
+  "check_count": 368,
+  "packet_only": true,
+  "additional_live_gpt_call_in_this_phase": false,
+  "delta_zero_dynamics_model_ready": true,
+  "t0_vectorization_ready": true,
+  "delta_matrix_row_count": 36,
+  "delta_matrix_csv_created": true,
+  "mode_counts": {
+    "PURE_GPT": 12,
+    "STACK_GPT": 12,
+    "CASULO_EXOCORTEX_STACK": 12
+  },
+  "domain_counts": {
+    "TIC/SI / ITSM": 6,
+    "VesselFlow / Operação marítima": 6,
+    "Jurídico / Escritório": 6,
+    "Financeiro / Administrativo": 6,
+    "Pequenos negócios de campo": 6,
+    "Governança documental": 6
+  },
+  "model_gate_counts": {
+    "INSUFFICIENT_EVIDENCE": 23,
+    "BLOCKED": 3,
+    "HOLD_HUMAN_REVIEW": 10
+  },
+  "computed_gate_counts": {
+    "HUMAN_REVIEW_REQUIRED": 28,
+    "OBSERVATION_REQUIRED": 8
+  },
+  "delta_band_counts": {
+    "0.31-0.60": 28,
+    "0.11-0.30": 8
+  },
+  "candidate_token_counts_v0_3": {
+    "CHANGE_REVIEW_REQUIRED": 36,
+    "DELTA_MEDIUM": 28,
+    "EVIDENCE_THIN": 36,
+    "READ_ONLY_STATE": 26,
+    "TIC_MESH_LOCKED": 5,
+    "STATE_OBSERVATION": 8,
+    "PRODUCTION_BLOCKED": 1
+  },
+  "delta_zero_ready_count": 0,
+  "hard_block_case_count": 26,
+  "trajectory_status": "T0_ONLY",
+  "velocity_ready": false,
+  "acceleration_ready": false,
+  "candidate_tokens_canonical": false,
+  "external_evaluator_required": true,
+  "validated_model_gain_claim_allowed": false,
+  "dataset_acceptance": false,
+  "client_evidence": false,
+  "production_evidence": false,
+  "commercial_claim": false,
+  "recommended_next_phase": "PROD-6421..6460 - CASULO Delta Zero Batch 01 Vectorization Review Gate",
+  "errors": []
+}

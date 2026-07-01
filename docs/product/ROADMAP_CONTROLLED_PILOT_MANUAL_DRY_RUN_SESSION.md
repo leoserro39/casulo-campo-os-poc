@@ -57,4 +57,5 @@
 - `PROD-6261..6300` - Domain Calibration External Evaluator Packet - **DONE**
 - `PROD-6301..6340` - Domain Calibration External Evaluator Execution Gate - **DONE**
 - `PROD-6341..6380` - Domain Calibration External Evaluator Execution Gate with Ponto Zero Metrics - **DONE**
-- `PROD-6381..6420` - Domain Calibration External Evaluator Scoring Run with Ponto Zero Metrics - **NEXT**
+- `PROD-6381..6420` - Domain Calibration External Evaluator Scoring Run with Ponto Zero Metrics - **DONE**
+- `PROD-6421..6460` - CASULO Delta Zero Batch 01 Vectorization Review Gate - **NEXT**

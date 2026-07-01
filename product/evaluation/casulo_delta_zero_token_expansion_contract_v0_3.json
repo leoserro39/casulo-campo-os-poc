@@ -1,0 +1,11 @@
+{
+  "version": "casulo_delta_zero_token_expansion_contract.v0.3",
+  "canonical_status": "candidate_only_not_canonical",
+  "rule": "A zero point token is valid only if it expands to state vector, delta, memory, evidence, gate, allowed actions and blocked actions.",
+  "canonical_acceptance_blocked_until": [
+    "external_evaluator_confirms_expansion_fidelity",
+    "token_has_owner_version_and_activation_rule",
+    "token_recurrence_is_observed",
+    "hard_blocks_are_absent"
+  ]
+}

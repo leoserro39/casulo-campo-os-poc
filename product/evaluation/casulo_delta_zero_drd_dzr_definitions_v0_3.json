@@ -1,0 +1,15 @@
+{
+  "version": "casulo_delta_zero_drd_dzr_definitions.v0.3",
+  "DRD": {
+    "name": "Delta Residual Decisorio",
+    "direction": "lower_is_better",
+    "formula": "weighted_sum(delta_estado, delta_gate, delta_evidencia, delta_trajetoria, delta_token, delta_claim_boundary)",
+    "current_t0_policy": "delta_trajetoria excluded and weights renormalized until trajectory exists"
+  },
+  "DZR": {
+    "name": "Delta Zero Readiness",
+    "direction": "higher_is_better",
+    "formula": "DZR = 1 - DRD",
+    "delta_zero_ready_rule": "DRD <= 0.10 and DZR >= 0.90 and computed_gate in READY/OBSERVATION and no hard blocks"
+  }
+}
