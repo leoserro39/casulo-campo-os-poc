@@ -1,0 +1,37 @@
+{
+  "phase": "PROD-3981..4020",
+  "required_prior_tag": "product-controlled-pilot-real-candidate-dry-run-execution-packet-v0.1",
+  "mode": "controlled_pilot_real_candidate_dry_run_execution_readiness_gate",
+  "real_data_captured_in_this_phase": false,
+  "real_candidate_inserted": false,
+  "real_candidate_accepted_to_dataset": false,
+  "execution_readiness_gate_only": true,
+  "manual_session_preparation_only": true,
+  "automatic_capture_blocked": true,
+  "dataset_acceptance_blocked": true,
+  "blocked_actions": [
+    "automatic_real_session_capture",
+    "real_candidate_insert",
+    "real_candidate_dataset_acceptance",
+    "dataset_acceptance_without_human_review",
+    "raw_private_data_storage",
+    "secret_or_credential_storage",
+    "unredacted_pii_storage",
+    "client_facing_value_claim",
+    "real_world_profit_claim",
+    "validated_savings_claim",
+    "validated_hallucination_reduction_claim",
+    "production_activation",
+    "automatic_memory_delete",
+    "gpt_memory_api_execution",
+    "commercial_package_pricing_claim"
+  ],
+  "allowed_actions": [
+    "manual_execution_readiness_gate_creation",
+    "controlled_manual_dry_run_session_preparation",
+    "operator_session_preflight_creation",
+    "human_reviewer_preflight_creation",
+    "hold_before_real_candidate_insert"
+  ],
+  "recommended_next_phase": "PROD-4021..4060 - Controlled Pilot Manual Dry Run Session Packet"
+}
