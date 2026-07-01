@@ -1,0 +1,128 @@
+{
+  "version": "controlled_pilot_manual_dry_run_session_execution_log_template.v0.1",
+  "phase": "PROD-4141..4180",
+  "status": "LOG_TEMPLATE_ONLY_NO_SESSION_EXECUTION",
+  "real_data_captured_in_this_phase": false,
+  "real_candidate_inserted": false,
+  "real_candidate_accepted_to_dataset": false,
+  "fields": {
+    "session_log_id": {
+      "value": null,
+      "required": true,
+      "storage_rule": "reference_only_or_sanitized_placeholder"
+    },
+    "phase": {
+      "value": null,
+      "required": true,
+      "storage_rule": "reference_only_or_sanitized_placeholder"
+    },
+    "operator_ref": {
+      "value": null,
+      "required": true,
+      "storage_rule": "reference_only_or_sanitized_placeholder"
+    },
+    "human_reviewer_ref": {
+      "value": null,
+      "required": true,
+      "storage_rule": "reference_only_or_sanitized_placeholder"
+    },
+    "execution_gate_ref": {
+      "value": null,
+      "required": true,
+      "storage_rule": "reference_only_or_sanitized_placeholder"
+    },
+    "session_packet_ref": {
+      "value": null,
+      "required": true,
+      "storage_rule": "reference_only_or_sanitized_placeholder"
+    },
+    "session_checklist_ref": {
+      "value": null,
+      "required": true,
+      "storage_rule": "reference_only_or_sanitized_placeholder"
+    },
+    "session_runbook_ref": {
+      "value": null,
+      "required": true,
+      "storage_rule": "reference_only_or_sanitized_placeholder"
+    },
+    "source_reference_refs": {
+      "value": null,
+      "required": true,
+      "storage_rule": "reference_only_or_sanitized_placeholder"
+    },
+    "privacy_review_ref": {
+      "value": null,
+      "required": true,
+      "storage_rule": "reference_only_or_sanitized_placeholder"
+    },
+    "pii_redaction_ref": {
+      "value": null,
+      "required": true,
+      "storage_rule": "reference_only_or_sanitized_placeholder"
+    },
+    "secret_scan_ref": {
+      "value": null,
+      "required": true,
+      "storage_rule": "reference_only_or_sanitized_placeholder"
+    },
+    "evidence_packet_ref": {
+      "value": null,
+      "required": true,
+      "storage_rule": "reference_only_or_sanitized_placeholder"
+    },
+    "reviewer_notes_ref": {
+      "value": null,
+      "required": true,
+      "storage_rule": "reference_only_or_sanitized_placeholder"
+    },
+    "claim_boundary": {
+      "value": null,
+      "required": true,
+      "storage_rule": "reference_only_or_sanitized_placeholder"
+    },
+    "dataset_hold_reason": {
+      "value": null,
+      "required": true,
+      "storage_rule": "reference_only_or_sanitized_placeholder"
+    },
+    "abort_trigger_review": {
+      "value": null,
+      "required": true,
+      "storage_rule": "reference_only_or_sanitized_placeholder"
+    },
+    "operator_check_summary": {
+      "value": null,
+      "required": true,
+      "storage_rule": "reference_only_or_sanitized_placeholder"
+    },
+    "manual_observation_refs": {
+      "value": null,
+      "required": true,
+      "storage_rule": "reference_only_or_sanitized_placeholder"
+    },
+    "final_gate": {
+      "value": null,
+      "required": true,
+      "storage_rule": "reference_only_or_sanitized_placeholder"
+    }
+  },
+  "default_gate": "HOLD_LOG_SHELL_NO_SESSION_EXECUTION",
+  "blocked_actions": [
+    "automatic_real_session_capture",
+    "real_candidate_insert",
+    "real_candidate_dataset_acceptance",
+    "dataset_acceptance_without_human_review",
+    "raw_private_data_storage",
+    "secret_or_credential_storage",
+    "unredacted_pii_storage",
+    "client_facing_value_claim",
+    "real_world_profit_claim",
+    "validated_savings_claim",
+    "validated_hallucination_reduction_claim",
+    "production_activation",
+    "automatic_memory_delete",
+    "gpt_memory_api_execution",
+    "commercial_package_pricing_claim"
+  ]
+}

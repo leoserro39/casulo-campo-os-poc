@@ -1,0 +1,37 @@
+{
+  "version": "controlled_pilot_manual_dry_run_session_execution_log_shell.v0.1",
+  "phase": "PROD-4141..4180",
+  "purpose": "Prepare execution log shell for future controlled manual dry run session without executing the session.",
+  "real_data_captured_in_this_phase": false,
+  "real_candidate_inserted": false,
+  "real_candidate_accepted_to_dataset": false,
+  "log_section_count": 12,
+  "log_field_count": 20,
+  "log_shell": "product/calibration/real_sessions/controlled_pilot_manual_dry_run_session_execution_log_shell_v0_1.json",
+  "log_template": "product/calibration/real_sessions/controlled_pilot_manual_dry_run_session_execution_log_template_v0_1.json",
+  "allowed_actions": [
+    "execution_log_shell_creation",
+    "execution_log_template_creation",
+    "manual_log_preflight_creation",
+    "operator_observation_placeholder_creation",
+    "hold_before_actual_session_execution"
+  ],
+  "blocked_actions": [
+    "automatic_real_session_capture",
+    "real_candidate_insert",
+    "real_candidate_dataset_acceptance",
+    "dataset_acceptance_without_human_review",
+    "raw_private_data_storage",
+    "secret_or_credential_storage",
+    "unredacted_pii_storage",
+    "client_facing_value_claim",
+    "real_world_profit_claim",
+    "validated_savings_claim",
+    "validated_hallucination_reduction_claim",
+    "production_activation",
+    "automatic_memory_delete",
+    "gpt_memory_api_execution",
+    "commercial_package_pricing_claim"
+  ],
+  "recommended_next_phase": "PROD-4181..4220 - Controlled Pilot Manual Dry Run Session Execution Log Readiness Gate"
+}
