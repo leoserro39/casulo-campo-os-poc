@@ -1,0 +1,147 @@
+{
+  "version": "controlled_pilot_manual_dry_run_session_checklist.v0.1",
+  "phase": "PROD-4021..4060",
+  "status": "CHECKLIST_TEMPLATE_ONLY_NO_SESSION_EXECUTION",
+  "real_data_captured_in_this_phase": false,
+  "real_candidate_inserted": false,
+  "real_candidate_accepted_to_dataset": false,
+  "session_operator_checks": [
+    {
+      "id": "SESSION-001",
+      "name": "readiness_gate_confirmed",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "SESSION-002",
+      "name": "execution_packet_confirmed",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "SESSION-003",
+      "name": "execution_checklist_confirmed",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "SESSION-004",
+      "name": "runbook_confirmed",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "SESSION-005",
+      "name": "operator_confirmed",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "SESSION-006",
+      "name": "reviewer_confirmed",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "SESSION-007",
+      "name": "shell_confirmed",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "SESSION-008",
+      "name": "form_confirmed",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "SESSION-009",
+      "name": "validator_confirmed",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "SESSION-010",
+      "name": "schema_confirmed",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "SESSION-011",
+      "name": "empty_dataset_confirmed",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "SESSION-012",
+      "name": "empty_queue_confirmed",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "SESSION-013",
+      "name": "source_refs_only_confirmed",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "SESSION-014",
+      "name": "privacy_review_required_confirmed",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "SESSION-015",
+      "name": "pii_redaction_required_confirmed",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "SESSION-016",
+      "name": "secret_scan_required_confirmed",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "SESSION-017",
+      "name": "claim_boundary_confirmed",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "SESSION-018",
+      "name": "dataset_hold_confirmed",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "SESSION-019",
+      "name": "abort_triggers_confirmed",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "SESSION-020",
+      "name": "stop_before_insert_confirmed",
+      "required": true,
+      "status": "PENDING"
+    }
+  ],
+  "abort_triggers": [
+    "automatic_capture_attempted",
+    "real_candidate_insert_attempted",
+    "dataset_acceptance_attempted",
+    "raw_private_data_detected",
+    "secret_or_credential_detected",
+    "unredacted_pii_detected",
+    "client_facing_claim_detected",
+    "production_activation_attempted",
+    "commercial_pricing_claim_attempted",
+    "human_reviewer_missing",
+    "privacy_review_missing",
+    "pii_redaction_missing",
+    "secret_scan_missing",
+    "source_reference_missing"
+  ],
+  "default_gate": "HOLD_SESSION_PACKET_NO_REAL_CANDIDATE"
+}
