@@ -1,0 +1,37 @@
+{
+  "version": "controlled_pilot_evidence_packet_template.v0.1",
+  "phase": "PROD-3501..3540",
+  "status": "TEMPLATE_ONLY_NO_REAL_SESSION_DATA",
+  "real_data_captured_in_this_phase": false,
+  "fields": {
+    "pilot_id": null,
+    "session_id": null,
+    "candidate_record_ref": null,
+    "source_reference_refs": null,
+    "baseline_output_ref": null,
+    "casulo_output_ref": null,
+    "snapshot_or_state_ref": null,
+    "evidence_pointer_refs": null,
+    "operator_checklist_ref": null,
+    "privacy_review_ref": null,
+    "pii_redaction_ref": null,
+    "secret_scan_ref": null,
+    "human_reviewer_notes_ref": null,
+    "decision_gate": null,
+    "claim_boundary": null,
+    "dataset_acceptance_decision": null
+  },
+  "required_refs_only": true,
+  "raw_private_data_allowed": false,
+  "secret_storage_allowed": false,
+  "unredacted_pii_allowed": false,
+  "review_decisions": [
+    "ACCEPT_AS_CALIBRATION_CANDIDATE",
+    "REJECT_PRIVACY_OR_SECRET_RISK",
+    "HOLD_FOR_MISSING_EVIDENCE",
+    "HOLD_FOR_CLAIM_BOUNDARY_REVIEW",
+    "HOLD_FOR_SCHEMA_REPAIR"
+  ],
+  "default_decision_gate": "HOLD_TEMPLATE_NO_REAL_DATA",
+  "claim_boundary": "evidence packet template only no real-world claim"
+}

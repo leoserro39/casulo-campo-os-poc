@@ -1,0 +1,32 @@
+{
+  "phase": "PROD-3501..3540",
+  "required_prior_tag": "product-controlled-real-session-pilot-execution-runbook-v0.1",
+  "mode": "controlled_pilot_evidence_packet_reviewer_queue",
+  "real_data_captured_in_this_phase": false,
+  "template_only": true,
+  "reviewer_queue_empty": true,
+  "refs_only_required": true,
+  "human_review_required": true,
+  "blocked_actions": [
+    "automatic_real_session_capture",
+    "raw_private_data_storage",
+    "secret_or_credential_storage",
+    "unredacted_pii_storage",
+    "client_facing_value_claim",
+    "real_world_profit_claim",
+    "validated_savings_claim",
+    "validated_hallucination_reduction_claim",
+    "production_activation",
+    "automatic_memory_delete",
+    "gpt_memory_api_execution",
+    "commercial_package_pricing_claim"
+  ],
+  "allowed_actions": [
+    "evidence_packet_template_creation",
+    "empty_reviewer_queue_creation",
+    "review_decision_taxonomy_definition",
+    "manual_review_preparation",
+    "calibration_candidate_evidence_protocol"
+  ],
+  "recommended_next_phase": "PROD-3541..3580 - Controlled Pilot Dataset Candidate Validator"
+}

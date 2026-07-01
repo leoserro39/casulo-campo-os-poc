@@ -1,0 +1,21 @@
+{
+  "version": "controlled_pilot_reviewer_queue_empty.v0.1",
+  "phase": "PROD-3501..3540",
+  "queue_id": "REVIEWER-QUEUE-EMPTY-CONTROLLED-PILOT-V0-1",
+  "queue_status": "EMPTY_READY_FOR_MANUAL_REVIEW_PREPARATION",
+  "reviewer_assignment_status": "not_assigned_template_only",
+  "pending_count": 0,
+  "accepted_count": 0,
+  "rejected_count": 0,
+  "held_count": 0,
+  "items": [],
+  "review_decisions": [
+    "ACCEPT_AS_CALIBRATION_CANDIDATE",
+    "REJECT_PRIVACY_OR_SECRET_RISK",
+    "HOLD_FOR_MISSING_EVIDENCE",
+    "HOLD_FOR_CLAIM_BOUNDARY_REVIEW",
+    "HOLD_FOR_SCHEMA_REPAIR"
+  ],
+  "real_data_captured_in_this_phase": false,
+  "claim_boundary": "empty reviewer queue only no real session data"
+}
