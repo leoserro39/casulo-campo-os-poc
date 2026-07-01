@@ -1,0 +1,42 @@
+{
+  "phase": "PROD-5501..5540",
+  "required_prior_tag": "product-gpt-sandbox-first-controlled-live-call-packet-v0.1",
+  "scope": "GPT_ONLY_OPENAI_ADAPTERS",
+  "execution_gate_only": true,
+  "live_execution_not_performed_in_this_gate": true,
+  "future_live_execution_allowed_only_by_explicit_operator_command": true,
+  "api_key_storage_blocked": true,
+  "gpt_memory_api_blocked": true,
+  "multi_vendor_llm_blocked_this_cycle": true,
+  "blocked_actions": [
+    "openai_api_key_storage",
+    "gpt_memory_api_execution",
+    "multi_vendor_llm_execution",
+    "claude_provider_call",
+    "gemini_provider_call",
+    "copilot_provider_call",
+    "start_command_execution",
+    "manual_session_execution",
+    "automatic_real_session_capture",
+    "real_candidate_insert",
+    "real_candidate_dataset_acceptance",
+    "dataset_acceptance_without_human_review",
+    "raw_private_data_storage",
+    "secret_or_credential_storage",
+    "unredacted_pii_storage",
+    "client_facing_value_claim",
+    "real_world_profit_claim",
+    "validated_savings_claim",
+    "validated_hallucination_reduction_claim",
+    "production_activation",
+    "automatic_memory_delete",
+    "commercial_package_pricing_claim"
+  ],
+  "allowed_actions": [
+    "gpt_sandbox_first_controlled_live_call_execution_gate_creation",
+    "explicit_operator_live_call_execution_command_preparation",
+    "single_sandbox_live_call_after_operator_command",
+    "roadmap_update"
+  ],
+  "recommended_next_phase": "PROD-5541..5580 - GPT Sandbox First Controlled Live Call Execution Run"
+}
