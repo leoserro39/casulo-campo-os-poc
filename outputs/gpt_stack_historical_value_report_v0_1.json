@@ -1,0 +1,212 @@
+{
+  "version": "gpt_stack_historical_value_report.v0.1",
+  "generated_at": "2026-07-01T15:00:06.223317+00:00",
+  "head": "f821130",
+  "scope": "Controlled laboratory evidence only. Not client evidence, not production evidence, not commercial claim.",
+  "baseline": {
+    "pure_mode": "PURE_GPT",
+    "pure_model": "gpt-5.5-2026-04-23",
+    "pure_output_preview": "CASULO_GPT_SANDBOX_ACK",
+    "pure_latency_ms": 4285,
+    "stack_mode": "STACK_GPT",
+    "stack_model": "gpt-5.5-2026-04-23",
+    "stack_output_preview": "CASULO_STACK_GPT_SANDBOX_ACK",
+    "stack_latency_ms": 4001,
+    "latency_delta_ms_stack_minus_pure": -284
+  },
+  "confirmed_boundaries": {
+    "gpt_only_scope": true,
+    "multi_vendor_llm_scope": false,
+    "exocortex_used": false,
+    "openai_api_key_storage": false,
+    "gpt_memory_api_execution": false,
+    "dataset_write": false,
+    "real_candidate_inserted": false,
+    "real_candidate_accepted_to_dataset": false,
+    "accepted_as_client_evidence": false,
+    "accepted_as_production_evidence": false
+  },
+  "timeline": [
+    {
+      "area": "Boundary / Provider",
+      "finding": "O ciclo começou com fronteira GPT/OpenAI-only, sem multi-vendor.",
+      "value": "Reduziu escopo, risco e ruído comparativo antes de medir CASULO.",
+      "risk": "Não permite ainda comparar fornecedores externos."
+    },
+    {
+      "area": "Governança / Gates",
+      "finding": "O padrão packet -> readiness gate -> execution run -> post-call review foi repetido com sucesso.",
+      "value": "Cria trilha auditável e reduz execução acidental.",
+      "risk": "Aumenta custo operacional e número de artefatos."
+    },
+    {
+      "area": "Segurança / API",
+      "finding": "A chave ficou somente no ambiente; não houve armazenamento de API key.",
+      "value": "Preserva segurança e separa autorização humana de execução.",
+      "risk": "Ainda depende de disciplina operacional no terminal."
+    },
+    {
+      "area": "Provider Failure Handling",
+      "finding": "O erro de quota/billing foi detectado antes de resposta real e depois o runner foi corrigido para registrar falhas em JSON.",
+      "value": "Transformou falha externa em evidência operacional rastreável.",
+      "risk": "Necessário manter padrão de erro estruturado para todos os próximos runners."
+    },
+    {
+      "area": "PURE_GPT Baseline",
+      "finding": "Primeira chamada real PURE_GPT retornou ACK controlado.",
+      "value": "Estabeleceu linha de base mínima de provider, latência e contrato de resposta.",
+      "risk": "n=1; não sustenta conclusão estatística."
+    },
+    {
+      "area": "STACK_GPT",
+      "finding": "STACK_GPT também retornou ACK controlado e preservou os limites.",
+      "value": "Mostrou que a camada CASULO state/evidence/gates pode ser acoplada sem quebrar o contrato básico.",
+      "risk": "Ainda não testou prompts ricos, múltiplos domínios ou cenários com ambiguidade real."
+    },
+    {
+      "area": "Comparação",
+      "finding": "STACK_GPT foi 284 ms mais rápido que PURE_GPT neste único teste.",
+      "value": "Indica que adicionar estrutura CASULO não causou penalidade observável neste ensaio mínimo.",
+      "risk": "Não concluir performance; amostra única."
+    },
+    {
+      "area": "Dataset / Evidência",
+      "finding": "Nenhuma saída foi aceita como dataset, evidência de cliente ou evidência de produção.",
+      "value": "Maturidade de governança: mede sem contaminar base real.",
+      "risk": "Ainda falta processo de promoção futura de evidência após múltiplos ensaios."
+    }
+  ],
+  "area_analysis": {
+    "governance_and_gates": {
+      "pattern": "Quanto mais explícito o gate, menor a chance de execução fora de fase.",
+      "evidence": [
+        "dry-run separado de apply",
+        "apply sem autorização bloqueado",
+        "post-call review obrigatório",
+        "tags e commits por fase"
+      ],
+      "business_value": "Permite vender CASULO como método de controle operacional, não apenas automação.",
+      "next_metrics": [
+        "gate_violation_count",
+        "blocked_action_detection_rate",
+        "manual_review_required_rate",
+        "phase_regression_count"
+      ]
+    },
+    "safety_and_secrets": {
+      "pattern": "Segredo só em variável de ambiente reduziu risco de vazamento no repo.",
+      "evidence": [
+        "openai_api_key_storage=false",
+        "secret_or_credential_storage bloqueado",
+        "runner não persiste chave"
+      ],
+      "business_value": "Pré-condição para usar CASULO em ambientes corporativos sensíveis.",
+      "next_metrics": [
+        "secret_scan_pass",
+        "api_key_storage_count",
+        "secret_print_count",
+        "redaction_coverage"
+      ]
+    },
+    "provider_reliability": {
+      "pattern": "Falhas de billing/quota viram estado operacional se o runner registra erro estruturado.",
+      "evidence": [
+        "insufficient_quota detectado",
+        "patch para JSON de falha",
+        "sem sobrescrever sucesso com dry-run antigo"
+      ],
+      "business_value": "Diferencia falha de IA, falha de infraestrutura e falha de governança.",
+      "next_metrics": [
+        "provider_error_type_count",
+        "retry_needed_count",
+        "quota_block_count",
+        "model_access_error_count"
+      ]
+    },
+    "pure_vs_stack": {
+      "pattern": "STACK manteve contrato de resposta com camada operacional adicional.",
+      "evidence": [
+        "PURE output=CASULO_GPT_SANDBOX_ACK",
+        "STACK output=CASULO_STACK_GPT_SANDBOX_ACK",
+        "PURE latency=4285",
+        "STACK latency=4001",
+        "delta=-284"
+      ],
+      "business_value": "Justifica avançar para Exocortex porque a camada intermediária não quebrou o baseline.",
+      "next_metrics": [
+        "unsupported_claim_count",
+        "evidence_grounding_score",
+        "context_regression_count",
+        "latency_delta_distribution",
+        "cost_delta_distribution"
+      ]
+    },
+    "business_domains": {
+      "pattern": "Até aqui, o teste é de mecanismo, não de domínio de negócio real.",
+      "evidence": [
+        "prompts ACK controlados",
+        "sem caso jurídico real",
+        "sem caso VesselFlow real",
+        "sem caso TIC/SI real",
+        "sem dados privados"
+      ],
+      "business_value": "A base operacional está pronta para começar cenários por domínio sem misturar validação técnica com claim comercial.",
+      "next_metrics": [
+        "domain_state_completeness",
+        "domain_evidence_coverage",
+        "business_rule_violation_count",
+        "human_arbitration_needed_count",
+        "decision_confidence_by_domain"
+      ]
+    }
+  },
+  "correlation_patterns": [
+    "Gates explícitos correlacionam com bloqueio correto de ações fora de fase.",
+    "Dry-run/apply correlaciona com menor risco de chamada real acidental.",
+    "Post-call review correlaciona com proteção contra transformar teste em claim.",
+    "Erro estruturado correlaciona com melhor recuperação operacional.",
+    "Baseline preservado correlaciona com comparabilidade futura entre modos.",
+    "Camada STACK não gerou regressão no contrato mínimo de ACK neste ensaio.",
+    "Amostra única não sustenta conclusão estatística de performance ou valor comercial."
+  ],
+  "business_value_hypotheses": [
+    "CASULO pode funcionar como sistema de governança de IA operacional, não só como prompt stack.",
+    "A estrutura de gates pode virar diferencial para auditoria, segurança e implantação corporativa.",
+    "A separação PURE/STACK/EXOCORTEX cria trilha clara para medir ganho incremental.",
+    "A conversão de falhas externas em estados auditáveis pode ser valor para TIC/SI e operações críticas.",
+    "A camada STACK pode reduzir risco de alucinação operacional quando os prompts deixarem de ser ACK e passarem a carregar evidência real."
+  ],
+  "recommended_evaluations": [
+    {
+      "phase": "now",
+      "name": "Historical Value Report",
+      "recommendation": "Fazer agora, antes do Exocortex, para preservar baseline PURE vs STACK.",
+      "allowed": true
+    },
+    {
+      "phase": "next",
+      "name": "CASULO_EXOCORTEX_STACK packet",
+      "recommendation": "Avançar depois do relatório histórico, mantendo GPT/OpenAI-only.",
+      "allowed": true
+    },
+    {
+      "phase": "next",
+      "name": "Small scenario matrix",
+      "recommendation": "Preparar 5 a 10 cenários por domínio, mas ainda sem aceitar dataset.",
+      "allowed": true
+    },
+    {
+      "phase": "not_yet",
+      "name": "Commercial/cliente claims",
+      "recommendation": "Não afirmar economia, redução de alucinação ou valor de produção ainda.",
+      "allowed": false
+    },
+    {
+      "phase": "not_yet",
+      "name": "Dataset acceptance",
+      "recommendation": "Ainda não aceitar outputs em dataset real; primeiro repetir ensaios com review.",
+      "allowed": false
+    }
+  ],
+  "next_recommended_phase": "PROD-5781..5820 - CASULO Exocortex Stack Controlled Live Call Packet"
+}
