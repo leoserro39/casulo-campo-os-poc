@@ -1,0 +1,65 @@
+{
+  "version": "gpt_sandbox_first_controlled_call_payload_template.v0.1",
+  "phase": "PROD-5221..5260",
+  "template_only": true,
+  "real_gpt_provider_call": false,
+  "openai_api_key_storage": false,
+  "provider": "openai_gpt",
+  "request_modes": [
+    "PURE_GPT",
+    "STACK_GPT",
+    "CASULO_EXOCORTEX_STACK"
+  ],
+  "payloads": {
+    "PURE_GPT": {
+      "system": "PURE_GPT_SYSTEM_PROMPT_PLACEHOLDER",
+      "user": "SANITIZED_USER_PROMPT_PLACEHOLDER",
+      "state": null,
+      "evidence": null,
+      "gate": null
+    },
+    "STACK_GPT": {
+      "system": "STACK_GPT_SYSTEM_PROMPT_WITH_CASULO_BOUNDARY_PLACEHOLDER",
+      "user": "SANITIZED_USER_PROMPT_PLACEHOLDER",
+      "state_snapshot_ref": "CASULO_STATE_SNAPSHOT_REF_PLACEHOLDER",
+      "evidence_packet_ref": "EVIDENCE_PACKET_REF_PLACEHOLDER",
+      "gate_packet_ref": "GATE_PACKET_REF_PLACEHOLDER"
+    },
+    "CASULO_EXOCORTEX_STACK": {
+      "system": "EXOCORTEX_STACK_SYSTEM_PROMPT_WITH_MEMORY_LIFECYCLE_PLACEHOLDER",
+      "user": "SANITIZED_USER_PROMPT_PLACEHOLDER",
+      "state_snapshot_ref": "CASULO_STATE_SNAPSHOT_REF_PLACEHOLDER",
+      "exocortex_snapshot_ref": "EXOCORTEX_SNAPSHOT_REF_PLACEHOLDER",
+      "evidence_packet_ref": "EVIDENCE_PACKET_REF_PLACEHOLDER",
+      "gate_packet_ref": "GATE_PACKET_REF_PLACEHOLDER",
+      "arbitration_policy_ref": "ARBITRATION_POLICY_REF_PLACEHOLDER"
+    }
+  },
+  "blocked_actions": [
+    "real_gpt_provider_call",
+    "openai_api_key_storage",
+    "gpt_memory_api_execution",
+    "live_gpt_call_execution",
+    "live_gpt_benchmark_execution",
+    "multi_vendor_llm_execution",
+    "claude_provider_call",
+    "gemini_provider_call",
+    "copilot_provider_call",
+    "start_command_execution",
+    "manual_session_execution",
+    "automatic_real_session_capture",
+    "real_candidate_insert",
+    "real_candidate_dataset_acceptance",
+    "dataset_acceptance_without_human_review",
+    "raw_private_data_storage",
+    "secret_or_credential_storage",
+    "unredacted_pii_storage",
+    "client_facing_value_claim",
+    "real_world_profit_claim",
+    "validated_savings_claim",
+    "validated_hallucination_reduction_claim",
+    "production_activation",
+    "automatic_memory_delete",
+    "commercial_package_pricing_claim"
+  ]
+}
