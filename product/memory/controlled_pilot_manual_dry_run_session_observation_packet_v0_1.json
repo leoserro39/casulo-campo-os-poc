@@ -1,0 +1,39 @@
+{
+  "version": "controlled_pilot_manual_dry_run_session_observation_packet.v0.1",
+  "phase": "PROD-4221..4260",
+  "purpose": "Prepare controlled manual dry run session observation packet without executing a session.",
+  "real_data_captured_in_this_phase": false,
+  "real_candidate_inserted": false,
+  "real_candidate_accepted_to_dataset": false,
+  "observation_section_count": 15,
+  "observation_field_count": 20,
+  "observation_check_count": 24,
+  "observation_packet": "product/calibration/real_sessions/controlled_pilot_manual_dry_run_session_observation_packet_v0_1.json",
+  "observation_template": "product/calibration/real_sessions/controlled_pilot_manual_dry_run_session_observation_template_v0_1.json",
+  "observation_checklist": "product/calibration/real_sessions/controlled_pilot_manual_dry_run_session_observation_checklist_v0_1.json",
+  "allowed_actions": [
+    "observation_packet_creation",
+    "observation_template_creation",
+    "observation_checklist_creation",
+    "sanitized_manual_observation_placeholder_creation",
+    "hold_before_actual_session_execution"
+  ],
+  "blocked_actions": [
+    "automatic_real_session_capture",
+    "real_candidate_insert",
+    "real_candidate_dataset_acceptance",
+    "dataset_acceptance_without_human_review",
+    "raw_private_data_storage",
+    "secret_or_credential_storage",
+    "unredacted_pii_storage",
+    "client_facing_value_claim",
+    "real_world_profit_claim",
+    "validated_savings_claim",
+    "validated_hallucination_reduction_claim",
+    "production_activation",
+    "automatic_memory_delete",
+    "gpt_memory_api_execution",
+    "commercial_package_pricing_claim"
+  ],
+  "recommended_next_phase": "PROD-4261..4300 - Controlled Pilot Manual Dry Run Session Observation Readiness Gate"
+}

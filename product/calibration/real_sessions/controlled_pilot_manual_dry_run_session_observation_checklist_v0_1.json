@@ -1,0 +1,172 @@
+{
+  "version": "controlled_pilot_manual_dry_run_session_observation_checklist.v0.1",
+  "phase": "PROD-4221..4260",
+  "status": "CHECKLIST_TEMPLATE_ONLY_NO_SESSION_EXECUTION",
+  "real_data_captured_in_this_phase": false,
+  "real_candidate_inserted": false,
+  "real_candidate_accepted_to_dataset": false,
+  "checks": [
+    {
+      "id": "OBS-001",
+      "name": "prior_log_readiness_gate_passed",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "OBS-002",
+      "name": "log_shell_present",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "OBS-003",
+      "name": "log_template_present",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "OBS-004",
+      "name": "execution_gate_present",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "OBS-005",
+      "name": "session_packet_present",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "OBS-006",
+      "name": "session_checklist_present",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "OBS-007",
+      "name": "session_runbook_present",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "OBS-008",
+      "name": "execution_packet_present",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "OBS-009",
+      "name": "dry_run_shell_present",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "OBS-010",
+      "name": "dry_run_form_present",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "OBS-011",
+      "name": "validator_present",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "OBS-012",
+      "name": "schema_present",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "OBS-013",
+      "name": "real_dataset_empty",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "OBS-014",
+      "name": "reviewer_queue_empty",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "OBS-015",
+      "name": "observation_sections_present",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "OBS-016",
+      "name": "observation_fields_present",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "OBS-017",
+      "name": "reference_only_storage_required",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "OBS-018",
+      "name": "sanitized_observation_only",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "OBS-019",
+      "name": "privacy_review_required",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "OBS-020",
+      "name": "pii_redaction_required",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "OBS-021",
+      "name": "secret_scan_required",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "OBS-022",
+      "name": "claim_boundary_required",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "OBS-023",
+      "name": "dataset_hold_required",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "OBS-024",
+      "name": "human_review_required",
+      "required": true,
+      "status": "PENDING"
+    }
+  ],
+  "default_gate": "HOLD_OBSERVATION_PACKET_NO_SESSION_EXECUTION",
+  "blocked_actions": [
+    "automatic_real_session_capture",
+    "real_candidate_insert",
+    "real_candidate_dataset_acceptance",
+    "dataset_acceptance_without_human_review",
+    "raw_private_data_storage",
+    "secret_or_credential_storage",
+    "unredacted_pii_storage",
+    "client_facing_value_claim",
+    "real_world_profit_claim",
+    "validated_savings_claim",
+    "validated_hallucination_reduction_claim",
+    "production_activation",
+    "automatic_memory_delete",
+    "gpt_memory_api_execution",
+    "commercial_package_pricing_claim"
+  ]
+}
