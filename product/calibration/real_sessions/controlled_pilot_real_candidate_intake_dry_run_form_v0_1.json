@@ -1,0 +1,180 @@
+{
+  "version": "controlled_pilot_real_candidate_intake_dry_run_form.v0.1",
+  "phase": "PROD-3821..3860",
+  "status": "FORM_TEMPLATE_ONLY_NO_REAL_CANDIDATE",
+  "real_data_captured_in_this_phase": false,
+  "real_candidate_inserted": false,
+  "real_candidate_accepted_to_dataset": false,
+  "fields": {
+    "dry_run_id": {
+      "value": null,
+      "required": true,
+      "storage_rule": "reference_only_or_sanitized_placeholder"
+    },
+    "real_candidate_placeholder_id": {
+      "value": null,
+      "required": true,
+      "storage_rule": "reference_only_or_sanitized_placeholder"
+    },
+    "operator_id_ref": {
+      "value": null,
+      "required": true,
+      "storage_rule": "reference_only_or_sanitized_placeholder"
+    },
+    "human_reviewer_ref": {
+      "value": null,
+      "required": true,
+      "storage_rule": "reference_only_or_sanitized_placeholder"
+    },
+    "source_reference_refs": {
+      "value": null,
+      "required": true,
+      "storage_rule": "reference_only_or_sanitized_placeholder"
+    },
+    "baseline_output_ref": {
+      "value": null,
+      "required": true,
+      "storage_rule": "reference_only_or_sanitized_placeholder"
+    },
+    "casulo_output_ref": {
+      "value": null,
+      "required": true,
+      "storage_rule": "reference_only_or_sanitized_placeholder"
+    },
+    "privacy_review_ref": {
+      "value": null,
+      "required": true,
+      "storage_rule": "reference_only_or_sanitized_placeholder"
+    },
+    "pii_redaction_ref": {
+      "value": null,
+      "required": true,
+      "storage_rule": "reference_only_or_sanitized_placeholder"
+    },
+    "secret_scan_ref": {
+      "value": null,
+      "required": true,
+      "storage_rule": "reference_only_or_sanitized_placeholder"
+    },
+    "evidence_packet_ref": {
+      "value": null,
+      "required": true,
+      "storage_rule": "reference_only_or_sanitized_placeholder"
+    },
+    "boundary_checklist_ref": {
+      "value": null,
+      "required": true,
+      "storage_rule": "reference_only_or_sanitized_placeholder"
+    },
+    "human_reviewer_notes_ref": {
+      "value": null,
+      "required": true,
+      "storage_rule": "reference_only_or_sanitized_placeholder"
+    },
+    "claim_boundary": {
+      "value": null,
+      "required": true,
+      "storage_rule": "reference_only_or_sanitized_placeholder"
+    },
+    "decision_gate": {
+      "value": null,
+      "required": true,
+      "storage_rule": "reference_only_or_sanitized_placeholder"
+    },
+    "dataset_acceptance_hold_reason": {
+      "value": null,
+      "required": true,
+      "storage_rule": "reference_only_or_sanitized_placeholder"
+    }
+  },
+  "preflight_checks": [
+    {
+      "name": "prior_gate_passed",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "name": "boundary_packet_present",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "name": "boundary_checklist_present",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "name": "validator_present",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "name": "schema_present",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "name": "candidate_template_present",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "name": "evidence_packet_template_present",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "name": "empty_real_dataset_confirmed",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "name": "empty_reviewer_queue_confirmed",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "name": "manual_dry_run_only_confirmed",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "name": "source_refs_only_confirmed",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "name": "raw_private_data_absent_confirmed",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "name": "secrets_absent_confirmed",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "name": "unredacted_pii_absent_confirmed",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "name": "client_claim_absent_confirmed",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "name": "production_activation_absent_confirmed",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "name": "dataset_acceptance_blocked_confirmed",
+      "required": true,
+      "status": "PENDING"
+    }
+  ],
+  "dataset_acceptance_allowed": false,
+  "automatic_capture_allowed": false,
+  "claim_boundary": "form template only no real candidate"
+}

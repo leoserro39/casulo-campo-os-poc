@@ -1,0 +1,39 @@
+{
+  "version": "controlled_pilot_real_candidate_intake_dry_run_shell.v0.1",
+  "phase": "PROD-3821..3860",
+  "purpose": "Prepare a manual dry run shell for real candidate intake without inserting a real candidate.",
+  "real_data_captured_in_this_phase": false,
+  "real_candidate_inserted": false,
+  "real_candidate_accepted_to_dataset": false,
+  "shell_section_count": 17,
+  "form_field_count": 16,
+  "preflight_check_count": 17,
+  "shell": "product/calibration/real_sessions/controlled_pilot_real_candidate_intake_dry_run_shell_v0_1.json",
+  "form": "product/calibration/real_sessions/controlled_pilot_real_candidate_intake_dry_run_form_v0_1.json",
+  "runbook": "product/calibration/real_sessions/controlled_pilot_real_candidate_intake_dry_run_shell_v0_1.md",
+  "allowed_actions": [
+    "real_candidate_intake_dry_run_shell_creation",
+    "real_candidate_dry_run_form_template_creation",
+    "manual_preflight_shell_creation",
+    "source_reference_placeholder_preparation",
+    "dataset_acceptance_hold_preparation"
+  ],
+  "blocked_actions": [
+    "automatic_real_session_capture",
+    "real_candidate_insert",
+    "real_candidate_dataset_acceptance",
+    "dataset_acceptance_without_human_review",
+    "raw_private_data_storage",
+    "secret_or_credential_storage",
+    "unredacted_pii_storage",
+    "client_facing_value_claim",
+    "real_world_profit_claim",
+    "validated_savings_claim",
+    "validated_hallucination_reduction_claim",
+    "production_activation",
+    "automatic_memory_delete",
+    "gpt_memory_api_execution",
+    "commercial_package_pricing_claim"
+  ],
+  "recommended_next_phase": "PROD-3861..3900 - Controlled Pilot Real Candidate Intake Dry Run Validator"
+}
