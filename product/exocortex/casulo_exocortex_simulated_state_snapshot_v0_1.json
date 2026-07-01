@@ -1,0 +1,62 @@
+{
+  "version": "casulo_exocortex_simulated_state_snapshot.v0.1",
+  "phase": "PROD-5781..5820",
+  "snapshot_type": "SIMULATED_OPERATIONAL_CONTEXT_ONLY",
+  "gpt_memory_api_execution": false,
+  "real_memory_api_execution": false,
+  "persistent_memory_write": false,
+  "dataset_write": false,
+  "contains_raw_private_data": false,
+  "contains_secret_or_credential": false,
+  "contains_unredacted_pii": false,
+  "purpose": "Provide bounded simulated operational context for the future CASULO_EXOCORTEX_STACK controlled live call.",
+  "state_layers": {
+    "execution_history": {
+      "pure_gpt_baseline_ack": "CASULO_GPT_SANDBOX_ACK",
+      "stack_gpt_baseline_ack": "CASULO_STACK_GPT_SANDBOX_ACK",
+      "comparison_delta_ms_stack_minus_pure": -284
+    },
+    "governance_state": {
+      "client_evidence": false,
+      "production_evidence": false,
+      "dataset_candidate": false,
+      "commercial_claim": false,
+      "post_call_review_required": true,
+      "human_review_required_for_domain_claims": true
+    },
+    "telemetry_state": {
+      "schema_ref": "product/telemetry/casulo_telemetry_schema_v0_1.json",
+      "domain_matrix_ref": "product/evaluation/domain_scenario_matrix_v0_1.json",
+      "required_metrics": [
+        "unsupported_claim_count",
+        "missing_evidence_claim_count",
+        "evidence_grounding_score",
+        "gate_violation_count",
+        "blocked_action_detection_rate",
+        "state_completeness_score",
+        "manual_arbitration_needed_count",
+        "context_regression_count",
+        "false_memory_risk",
+        "latency_ms",
+        "cost_estimate",
+        "token_input_estimate",
+        "token_output_estimate"
+      ]
+    },
+    "claim_boundary": {
+      "allowed": [
+        "controlled_lab_observation",
+        "technical_operational_hypothesis",
+        "telemetry_recommendation",
+        "next_phase_recommendation"
+      ],
+      "blocked": [
+        "client_validated_claim",
+        "production_readiness_claim",
+        "cost_savings_claim",
+        "hallucination_reduction_claim",
+        "dataset_acceptance_claim"
+      ]
+    }
+  }
+}

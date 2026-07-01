@@ -1,0 +1,53 @@
+{
+  "phase": "PROD-5781..5820",
+  "required_prior_tags": [
+    "product-stack-gpt-post-call-review-pure-vs-stack-comparison-gate-v0.1",
+    "product-gpt-stack-historical-value-report-v0.1",
+    "product-telemetry-value-extraction-report-v0.1"
+  ],
+  "scope": "GPT_ONLY_OPENAI_ADAPTERS",
+  "packet_only": true,
+  "live_execution_allowed": false,
+  "live_execution_requires_next_gate": true,
+  "exocortex_context_type": "SIMULATED_OPERATIONAL_CONTEXT_ONLY",
+  "gpt_memory_api_blocked": true,
+  "real_memory_api_blocked": true,
+  "api_key_storage_blocked": true,
+  "dataset_write_blocked": true,
+  "multi_vendor_llm_blocked_this_cycle": true,
+  "client_claim_blocked": true,
+  "production_blocked": true,
+  "blocked_actions": [
+    "openai_api_key_storage",
+    "gpt_memory_api_execution",
+    "real_memory_api_execution",
+    "memory_create",
+    "memory_update",
+    "memory_delete",
+    "multi_vendor_llm_execution",
+    "claude_provider_call",
+    "gemini_provider_call",
+    "copilot_provider_call",
+    "live_gpt_call_in_this_phase",
+    "real_gpt_provider_call_in_this_phase",
+    "real_candidate_insert",
+    "real_candidate_dataset_acceptance",
+    "dataset_acceptance_without_human_review",
+    "raw_private_data_storage",
+    "secret_or_credential_storage",
+    "unredacted_pii_storage",
+    "client_facing_value_claim",
+    "production_activation",
+    "validated_business_claim",
+    "validated_hallucination_reduction_claim",
+    "commercial_package_pricing_claim"
+  ],
+  "allowed_actions": [
+    "casulo_exocortex_stack_packet_creation",
+    "simulated_exocortex_state_snapshot_creation",
+    "pure_stack_exocortex_comparison_template_creation",
+    "exocortex_execution_gate_preparation",
+    "roadmap_update"
+  ],
+  "recommended_next_phase": "PROD-5821..5860 - CASULO Exocortex Stack Controlled Live Call Execution Gate"
+}

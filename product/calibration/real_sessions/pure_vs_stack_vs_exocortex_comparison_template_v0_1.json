@@ -1,0 +1,52 @@
+{
+  "version": "pure_vs_stack_vs_exocortex_comparison_template.v0.1",
+  "phase": "PROD-5781..5820",
+  "template_only": true,
+  "modes": [
+    "PURE_GPT",
+    "STACK_GPT",
+    "CASULO_EXOCORTEX_STACK"
+  ],
+  "baseline": {
+    "pure": {
+      "mode": "PURE_GPT",
+      "model": "gpt-5.5-2026-04-23",
+      "output_preview": "CASULO_GPT_SANDBOX_ACK",
+      "latency_ms": 4285,
+      "prompt_hash": "a372439bdd2b1f3d4c30a48d9431f53a68a8ff9642add5a75e84899346997d8d",
+      "output_hash": "a8a50a59ff50000adcd55b0d1adf47b556c2bbd13333dc284e32f8c5fed61050"
+    },
+    "stack": {
+      "mode": "STACK_GPT",
+      "model": "gpt-5.5-2026-04-23",
+      "output_preview": "CASULO_STACK_GPT_SANDBOX_ACK",
+      "latency_ms": 4001,
+      "prompt_hash": "c3b2a4a9a891c27328c851390a37ad04649dc64a9520bd06a67b27084d3566d1",
+      "output_hash": "0a6bfbf89f64de06d4900ab9049c7514c2aed63ddb7a6cf51c57cef228e15ebe"
+    },
+    "latency_delta_ms_stack_minus_pure": -284
+  },
+  "candidate_mode": "CASULO_EXOCORTEX_STACK",
+  "metrics": [
+    "successful_live_gpt_response",
+    "output_ack_match",
+    "unsupported_claim_count",
+    "missing_evidence_claim_count",
+    "gate_violation_count",
+    "evidence_grounding_score",
+    "context_regression_count",
+    "false_memory_risk",
+    "latency_ms",
+    "latency_delta_ms_exocortex_minus_stack",
+    "latency_delta_ms_exocortex_minus_pure",
+    "cost_estimate",
+    "token_input_estimate",
+    "token_output_estimate",
+    "api_key_storage",
+    "gpt_memory_api_execution",
+    "dataset_write"
+  ],
+  "accepted_as_dataset_candidate": false,
+  "accepted_as_client_evidence": false,
+  "accepted_as_production_evidence": false
+}

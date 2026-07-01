@@ -1,0 +1,42 @@
+{
+  "version": "casulo_exocortex_stack_controlled_live_call_request_template.v0.1",
+  "phase": "PROD-5781..5820",
+  "template_only": true,
+  "mode": "CASULO_EXOCORTEX_STACK",
+  "provider": "openai_gpt",
+  "api_key_source": "OPENAI_API_KEY_ENV_REFERENCE_ONLY_NOT_STORED",
+  "model_env": "OPENAI_MODEL_OPTIONAL_ENV_REFERENCE",
+  "prompt": "CASULO controlled EXOCORTEX sandbox test. Use the supplied simulated operational state, telemetry schema, domain matrix and claim boundaries. Return only: CASULO_EXOCORTEX_STACK_SANDBOX_ACK.",
+  "exocortex_context_refs": {
+    "simulated_state_snapshot_ref": "product/exocortex/casulo_exocortex_simulated_state_snapshot_v0_1.json",
+    "telemetry_schema_ref": "product/telemetry/casulo_telemetry_schema_v0_1.json",
+    "domain_matrix_ref": "product/evaluation/domain_scenario_matrix_v0_1.json",
+    "pure_stack_comparison_ref": "product/calibration/real_sessions/pure_vs_stack_gpt_post_call_review_comparison_v0_1.json"
+  },
+  "blocked_actions": [
+    "openai_api_key_storage",
+    "gpt_memory_api_execution",
+    "real_memory_api_execution",
+    "memory_create",
+    "memory_update",
+    "memory_delete",
+    "multi_vendor_llm_execution",
+    "claude_provider_call",
+    "gemini_provider_call",
+    "copilot_provider_call",
+    "live_gpt_call_in_this_phase",
+    "real_gpt_provider_call_in_this_phase",
+    "real_candidate_insert",
+    "real_candidate_dataset_acceptance",
+    "dataset_acceptance_without_human_review",
+    "raw_private_data_storage",
+    "secret_or_credential_storage",
+    "unredacted_pii_storage",
+    "client_facing_value_claim",
+    "production_activation",
+    "validated_business_claim",
+    "validated_hallucination_reduction_claim",
+    "commercial_package_pricing_claim"
+  ],
+  "post_call_review_required": true
+}
