@@ -1,0 +1,57 @@
+{
+  "version": "synthetic_calibration_dry_run_evaluator.v0.1",
+  "phase": "PROD-3301..3340",
+  "purpose": "Evaluate synthetic calibration dry run before any real session capture.",
+  "real_data_captured": false,
+  "record_count": 8,
+  "summary": {
+    "accepted_count": 4,
+    "held_count": 3,
+    "blocked_count": 1,
+    "average_apex_maturity_score": 64.25,
+    "average_hallucination_risk_index": 45.38,
+    "average_operational_cost_score": 66.5,
+    "average_value_delta_estimate": 78.12,
+    "correlation_quality_score": 100,
+    "gate_quality_score": 100,
+    "field_quality_score": 100,
+    "synthetic_calibration_readiness_score": 100.0,
+    "synthetic_calibration_readiness_band": "SYNTHETIC_READY_STRONG"
+  },
+  "correlations": {
+    "apex_vs_hallucination": -0.9958,
+    "complexity_vs_hallucination": 0.8958,
+    "cost_vs_hallucination": 0.8217,
+    "input_quality_vs_hallucination": -0.9807,
+    "apex_vs_rework": -0.9686,
+    "value_delta_vs_operational_cost": 0.8827
+  },
+  "interpretation": {
+    "apex_hallucination_rule": "Expected negative correlation in synthetic dry run.",
+    "complexity_hallucination_rule": "Expected positive correlation in synthetic dry run.",
+    "cost_hallucination_rule": "Expected positive correlation in synthetic dry run.",
+    "input_hallucination_rule": "Expected negative correlation in synthetic dry run.",
+    "claim_boundary": "Synthetic evaluation only. Correlations are not real-world evidence."
+  },
+  "allowed_actions": [
+    "synthetic_dry_run_evaluation",
+    "synthetic_correlation_analysis",
+    "gate_distribution_analysis",
+    "calibration_readiness_scoring",
+    "next_gate_preparation"
+  ],
+  "blocked_actions": [
+    "real_session_data_capture",
+    "raw_private_data_storage",
+    "secret_or_credential_storage",
+    "unredacted_pii_storage",
+    "client_facing_value_claim",
+    "real_world_profit_claim",
+    "validated_savings_claim",
+    "validated_hallucination_reduction_claim",
+    "production_activation",
+    "automatic_memory_delete",
+    "gpt_memory_api_execution"
+  ],
+  "recommended_next_phase": "PROD-3341..3380 - Synthetic Calibration Readiness Gate"
+}

@@ -1,0 +1,28 @@
+{
+  "phase": "PROD-3301..3340",
+  "required_prior_tag": "product-synthetic-calibration-capture-dry-run-v0.1",
+  "mode": "synthetic_calibration_dry_run_evaluator",
+  "real_data_captured": false,
+  "correlation_analysis_synthetic_only": true,
+  "blocked_actions": [
+    "real_session_data_capture",
+    "raw_private_data_storage",
+    "secret_or_credential_storage",
+    "unredacted_pii_storage",
+    "client_facing_value_claim",
+    "real_world_profit_claim",
+    "validated_savings_claim",
+    "validated_hallucination_reduction_claim",
+    "production_activation",
+    "automatic_memory_delete",
+    "gpt_memory_api_execution"
+  ],
+  "allowed_actions": [
+    "synthetic_dry_run_evaluation",
+    "synthetic_correlation_analysis",
+    "gate_distribution_analysis",
+    "calibration_readiness_scoring",
+    "next_gate_preparation"
+  ],
+  "recommended_next_phase": "PROD-3341..3380 - Synthetic Calibration Readiness Gate"
+}
