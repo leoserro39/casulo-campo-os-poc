@@ -1,0 +1,29 @@
+{
+  "phase": "PROD-5701..5740",
+  "required_prior_tag": "product-stack-gpt-controlled-live-call-execution-gate-v0.1",
+  "scope": "GPT_ONLY_OPENAI_ADAPTERS",
+  "stack_live_execution_run": true,
+  "exocortex_used": false,
+  "api_key_storage_blocked": true,
+  "gpt_memory_api_blocked": true,
+  "dataset_write_blocked": true,
+  "post_call_review_required": true,
+  "blocked_actions": [
+    "openai_api_key_storage",
+    "gpt_memory_api_execution",
+    "multi_vendor_llm_execution",
+    "claude_provider_call",
+    "gemini_provider_call",
+    "copilot_provider_call",
+    "real_candidate_insert",
+    "real_candidate_dataset_acceptance",
+    "dataset_acceptance_without_human_review",
+    "raw_private_data_storage",
+    "secret_or_credential_storage",
+    "unredacted_pii_storage",
+    "client_facing_value_claim",
+    "production_activation",
+    "validated_business_claim"
+  ],
+  "recommended_next_phase": "PROD-5741..5780 - STACK GPT Post-Call Review and PURE vs STACK Comparison Gate"
+}

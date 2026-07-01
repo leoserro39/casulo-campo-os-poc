@@ -1,0 +1,34 @@
+{
+  "version": "pure_vs_stack_gpt_live_call_comparison.v0.1",
+  "phase": "PROD-5701..5740",
+  "baseline": {
+    "mode": "PURE_GPT",
+    "model": "gpt-5.5-2026-04-23",
+    "output_preview": "CASULO_GPT_SANDBOX_ACK",
+    "latency_ms": 4285,
+    "prompt_hash": "a372439bdd2b1f3d4c30a48d9431f53a68a8ff9642add5a75e84899346997d8d",
+    "output_hash": "a8a50a59ff50000adcd55b0d1adf47b556c2bbd13333dc284e32f8c5fed61050"
+  },
+  "stack": {
+    "mode": "STACK_GPT",
+    "model": "gpt-5.5-2026-04-23",
+    "output_preview": "CASULO_STACK_GPT_SANDBOX_ACK",
+    "latency_ms": 4001,
+    "prompt_hash": "c3b2a4a9a891c27328c851390a37ad04649dc64a9520bd06a67b27084d3566d1",
+    "output_hash": "0a6bfbf89f64de06d4900ab9049c7514c2aed63ddb7a6cf51c57cef228e15ebe"
+  },
+  "metrics": {
+    "pure_ack_match": true,
+    "stack_ack_match": true,
+    "unsupported_claim_count": 0,
+    "gate_violation_count": 0,
+    "dataset_write_count": 0,
+    "api_key_storage_count": 0,
+    "gpt_memory_api_execution_count": 0,
+    "latency_delta_ms_stack_minus_pure": -284
+  },
+  "accepted_as_dataset_candidate": false,
+  "accepted_as_client_evidence": false,
+  "accepted_as_production_evidence": false,
+  "post_call_review_required": true
+}
