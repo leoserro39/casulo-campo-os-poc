@@ -1,0 +1,21 @@
+{
+  "version": "casulo_delta_zero_controlled_real_test_requirements.v0.3",
+  "phase": "PROD-6701..6740",
+  "generated_at": "2026-07-01T22:27:24.398342+00:00",
+  "next_phase": "PROD-6741..6780 - Controlled Real Test Protocol Packet",
+  "required_before_real_test_execution": [
+    "one sanitized real case input",
+    "declared domain and task objective",
+    "evidence packet with source boundaries",
+    "blocked actions list",
+    "allowed actions list",
+    "human reviewer rubric",
+    "PII/secrets scan",
+    "no production side effects",
+    "rollback/stop criteria",
+    "audit log target",
+    "claim boundary acknowledgement"
+  ],
+  "real_test_execution_allowed_now": false,
+  "protocol_design_allowed_now": true
+}

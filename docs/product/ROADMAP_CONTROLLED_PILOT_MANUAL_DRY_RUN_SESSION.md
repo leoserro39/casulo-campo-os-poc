@@ -64,4 +64,5 @@
 - `PROD-6541..6580` - CASULO Delta Zero Human Score Acceptance and Ingestion Gate - **NEXT**
 - `PROD-6541..6660` - CASULO Delta Zero Human Review Accelerator Packet - **DONE**
 - `PROD-6661..6700` - CASULO Delta Zero Accepted Human Scores Ingestion Run - **DONE**
-- `PROD-6701..6740` - CASULO Delta Zero Accepted Scores Review and Claim Boundary Gate - **NEXT**
+- `PROD-6701..6740` - CASULO Delta Zero Accepted Scores Review and Claim Boundary Gate - **DONE**
+- `PROD-6741..6780` - CASULO Delta Zero Controlled Real Test Protocol Packet - **NEXT**

@@ -1,0 +1,89 @@
+{
+  "version": "casulo_delta_zero_claim_boundary_register.v0.3",
+  "phase": "PROD-6701..6740",
+  "generated_at": "2026-07-01T22:27:24.398324+00:00",
+  "allowed_claim_count": 4,
+  "blocked_claim_count": 7,
+  "allowed_claims": [
+    {
+      "claim_id": "CBG-ALLOW-001",
+      "claim": "Internal Delta Zero evaluation artifact set exists",
+      "status": "ALLOWED_INTERNAL_ONLY",
+      "note": "repo/internal audit only"
+    },
+    {
+      "claim_id": "CBG-ALLOW-002",
+      "claim": "36 cases were processed and accepted through human-assisted review",
+      "status": "ALLOWED_INTERNAL_ONLY",
+      "note": "does not imply model superiority"
+    },
+    {
+      "claim_id": "CBG-ALLOW-003",
+      "claim": "Accepted scores are ready for controlled real-test protocol design",
+      "status": "ALLOWED_INTERNAL_ONLY",
+      "note": "real test execution still pending"
+    },
+    {
+      "claim_id": "CBG-ALLOW-004",
+      "claim": "5 internal calibration-positive cases and 31 negative/control/not-positive cases are recorded",
+      "status": "ALLOWED_INTERNAL_ONLY",
+      "note": "bookkeeping only"
+    }
+  ],
+  "blocked_claims": [
+    {
+      "claim_id": "CBG-BLOCK-001",
+      "claim": "CASULO Delta Zero reduces hallucination",
+      "status": "BLOCKED",
+      "note": "requires controlled real test and comparative evidence"
+    },
+    {
+      "claim_id": "CBG-BLOCK-002",
+      "claim": "A mode is superior to another mode",
+      "status": "BLOCKED",
+      "note": "requires statistical/comparative review"
+    },
+    {
+      "claim_id": "CBG-BLOCK-003",
+      "claim": "Delta Zero is validated for production",
+      "status": "BLOCKED",
+      "note": "requires sandbox real test, safety and production gate"
+    },
+    {
+      "claim_id": "CBG-BLOCK-004",
+      "claim": "Results are client-facing validated evidence",
+      "status": "BLOCKED",
+      "note": "requires client claim review"
+    },
+    {
+      "claim_id": "CBG-BLOCK-005",
+      "claim": "Accepted cases form a validated production dataset",
+      "status": "BLOCKED",
+      "note": "requires dataset governance gate"
+    },
+    {
+      "claim_id": "CBG-BLOCK-006",
+      "claim": "The method is commercially proven",
+      "status": "BLOCKED",
+      "note": "requires commercial validation"
+    },
+    {
+      "claim_id": "CBG-BLOCK-007",
+      "claim": "Velocity, acceleration or trajectory stability are measured",
+      "status": "BLOCKED",
+      "note": "current evidence is T0-only"
+    }
+  ],
+  "claim_boundary": {
+    "internal_evaluation_claims_allowed": true,
+    "controlled_real_test_protocol_allowed": true,
+    "real_test_execution_allowed": false,
+    "client_claims_allowed": false,
+    "production_claims_allowed": false,
+    "commercial_claims_allowed": false,
+    "validated_model_gain_claim_allowed": false,
+    "validated_hallucination_reduction_claim_allowed": false,
+    "delta_zero_ready_validated_claim_allowed": false,
+    "temporal_trajectory_claim_allowed": false
+  }
+}

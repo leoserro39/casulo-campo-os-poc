@@ -1,0 +1,15 @@
+{
+  "phase": "PROD-6701..6740",
+  "claim_boundary_gate": true,
+  "internal_claims_allowed": true,
+  "real_test_protocol_design_allowed": true,
+  "real_test_execution_allowed": false,
+  "client_claims_allowed": false,
+  "production_claims_allowed": false,
+  "commercial_claims_allowed": false,
+  "validated_model_gain_claim_blocked": true,
+  "hallucination_reduction_claim_blocked": true,
+  "delta_zero_ready_validated_claim_blocked": true,
+  "dataset_acceptance_blocked": true,
+  "temporal_trajectory_claim_blocked": true
+}

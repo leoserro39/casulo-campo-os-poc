@@ -1,0 +1,12 @@
+claim_id,claim,status,note
+CBG-ALLOW-001,Internal Delta Zero evaluation artifact set exists,ALLOWED_INTERNAL_ONLY,repo/internal audit only
+CBG-ALLOW-002,36 cases were processed and accepted through human-assisted review,ALLOWED_INTERNAL_ONLY,does not imply model superiority
+CBG-ALLOW-003,Accepted scores are ready for controlled real-test protocol design,ALLOWED_INTERNAL_ONLY,real test execution still pending
+CBG-ALLOW-004,5 internal calibration-positive cases and 31 negative/control/not-positive cases are recorded,ALLOWED_INTERNAL_ONLY,bookkeeping only
+CBG-BLOCK-001,CASULO Delta Zero reduces hallucination,BLOCKED,requires controlled real test and comparative evidence
+CBG-BLOCK-002,A mode is superior to another mode,BLOCKED,requires statistical/comparative review
+CBG-BLOCK-003,Delta Zero is validated for production,BLOCKED,"requires sandbox real test, safety and production gate"
+CBG-BLOCK-004,Results are client-facing validated evidence,BLOCKED,requires client claim review
+CBG-BLOCK-005,Accepted cases form a validated production dataset,BLOCKED,requires dataset governance gate
+CBG-BLOCK-006,The method is commercially proven,BLOCKED,requires commercial validation
+CBG-BLOCK-007,"Velocity, acceleration or trajectory stability are measured",BLOCKED,current evidence is T0-only
