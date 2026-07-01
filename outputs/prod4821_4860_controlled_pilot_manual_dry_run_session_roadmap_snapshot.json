@@ -1,0 +1,131 @@
+{
+  "version": "controlled_pilot_manual_dry_run_session_roadmap.v0.6",
+  "phase": "PROD-4821..4860",
+  "generated_at": "2026-07-01T12:45:27.158290+00:00",
+  "roadmap_items": [
+    {
+      "phase": "PROD-4101..4140",
+      "name": "Manual Dry Run Session Execution Gate",
+      "status": "DONE"
+    },
+    {
+      "phase": "PROD-4141..4180",
+      "name": "Execution Log Shell",
+      "status": "DONE"
+    },
+    {
+      "phase": "PROD-4181..4220",
+      "name": "Execution Log Readiness Gate",
+      "status": "DONE"
+    },
+    {
+      "phase": "PROD-4221..4260",
+      "name": "Observation Packet",
+      "status": "DONE"
+    },
+    {
+      "phase": "PROD-4261..4300",
+      "name": "Observation Readiness Gate",
+      "status": "DONE"
+    },
+    {
+      "phase": "PROD-4301..4340",
+      "name": "Review Packet",
+      "status": "DONE"
+    },
+    {
+      "phase": "PROD-4341..4380",
+      "name": "Review Readiness Gate",
+      "status": "DONE"
+    },
+    {
+      "phase": "PROD-4381..4420",
+      "name": "Final Gate Packet",
+      "status": "DONE"
+    },
+    {
+      "phase": "PROD-4421..4460",
+      "name": "Final Gate Readiness Gate",
+      "status": "DONE"
+    },
+    {
+      "phase": "PROD-4461..4500",
+      "name": "Execution Precheck Packet",
+      "status": "DONE"
+    },
+    {
+      "phase": "PROD-4501..4540",
+      "name": "Execution Precheck Readiness Gate",
+      "status": "DONE"
+    },
+    {
+      "phase": "PROD-4541..4580",
+      "name": "Operator Start Packet",
+      "status": "DONE"
+    },
+    {
+      "phase": "PROD-4581..4620",
+      "name": "Operator Start Readiness Gate",
+      "status": "DONE"
+    },
+    {
+      "phase": "PROD-4621..4660",
+      "name": "Execution Plan Packet",
+      "status": "DONE"
+    },
+    {
+      "phase": "PROD-4661..4700",
+      "name": "Execution Plan Readiness Gate",
+      "status": "DONE"
+    },
+    {
+      "phase": "PROD-4701..4740",
+      "name": "Manual Session Execution Hold Packet",
+      "status": "DONE"
+    },
+    {
+      "phase": "PROD-4741..4780",
+      "name": "Manual Session Execution Hold Readiness Gate",
+      "status": "DONE"
+    },
+    {
+      "phase": "PROD-4781..4820",
+      "name": "Human Release Packet",
+      "status": "DONE"
+    },
+    {
+      "phase": "PROD-4821..4860",
+      "name": "Human Release Readiness Gate",
+      "status": "CURRENT"
+    },
+    {
+      "phase": "PROD-4861..4900",
+      "name": "Final Human Go No-Go Packet",
+      "status": "NEXT"
+    }
+  ],
+  "current_phase": "PROD-4821..4860 - Controlled Pilot Manual Dry Run Session Human Release Readiness Gate",
+  "next_phase": "PROD-4861..4900 - Controlled Pilot Manual Dry Run Session Final Human Go No-Go Packet",
+  "real_data_captured_in_this_phase": false,
+  "real_candidate_inserted": false,
+  "real_candidate_accepted_to_dataset": false,
+  "blocked_actions": [
+    "start_command_execution",
+    "manual_session_execution",
+    "automatic_real_session_capture",
+    "real_candidate_insert",
+    "real_candidate_dataset_acceptance",
+    "dataset_acceptance_without_human_review",
+    "raw_private_data_storage",
+    "secret_or_credential_storage",
+    "unredacted_pii_storage",
+    "client_facing_value_claim",
+    "real_world_profit_claim",
+    "validated_savings_claim",
+    "validated_hallucination_reduction_claim",
+    "production_activation",
+    "automatic_memory_delete",
+    "gpt_memory_api_execution",
+    "commercial_package_pricing_claim"
+  ]
+}

@@ -1,0 +1,15 @@
+status: PASS
+phase: PROD-4821..4860
+decision: APPROVED_FOR_CONTROLLED_MANUAL_DRY_RUN_SESSION_FINAL_GO_NO_GO_PACKET_PREPARATION_ONLY
+readiness_checks: 122
+release_sections: 30
+release_fields: 43
+release_checks: 105
+roadmap_updated: True
+final_go_no_go_packet_preparation_only: True
+final_go_no_go_packet_is_not_execution: True
+real_candidate_inserted: False
+real_candidate_accepted_to_dataset: False
+real_data_captured_in_this_phase: False
+next: PROD-4861..4900 - Controlled Pilot Manual Dry Run Session Final Human Go No-Go Packet
+errors: []
