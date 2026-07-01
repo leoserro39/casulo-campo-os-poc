@@ -1,0 +1,8 @@
+{
+  "version": "casulo_delta_zero_live_discovery_provider_decision.v0.3",
+  "phase": "PROD-6861..6900",
+  "generated_at": "2026-07-01T23:37:33.641466+00:00",
+  "selected_provider": "github_issues_public",
+  "selection_status": "APPROVED_FOR_CONTROLLED_LIVE_DISCOVERY_DRY_RUN_PREP",
+  "network_call_executed": false
+}

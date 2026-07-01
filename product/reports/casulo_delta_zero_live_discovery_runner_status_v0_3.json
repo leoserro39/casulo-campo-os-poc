@@ -1,0 +1,11 @@
+{
+  "version": "casulo_delta_zero_live_discovery_runner_status.v0.3",
+  "phase": "PROD-6861..6900",
+  "generated_at": "2026-07-01T23:37:33.641469+00:00",
+  "runner_created": true,
+  "runner_path": "product/scripts/discover_github_issues_public_cases.py",
+  "default_mode": "dry_run_no_network",
+  "network_requires_explicit_allow_network": true,
+  "network_call_executed_by_patcher": false,
+  "live_candidates_created_in_this_phase": false
+}

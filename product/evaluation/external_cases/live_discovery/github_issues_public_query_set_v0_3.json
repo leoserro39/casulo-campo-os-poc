@@ -1,0 +1,23 @@
+{
+  "version": "github_issues_public_query_set.v0.3",
+  "phase": "PROD-6861..6900",
+  "generated_at": "2026-07-01T23:37:33.641429+00:00",
+  "provider_id": "github_issues_public",
+  "network_call_executed_by_patcher": false,
+  "runner_requires_explicit_allow_network": true,
+  "github_repositories": [
+    "microsoft/vscode",
+    "pandas-dev/pandas",
+    "kubernetes/kubernetes",
+    "fastapi/fastapi",
+    "apache/airflow"
+  ],
+  "candidate_filters": [
+    "exclude pull_request items",
+    "prefer open issues with title, body and labels",
+    "prefer issues with comments or reproducibility signals",
+    "exclude issues with obvious personal data in title/body if detected by basic scan"
+  ],
+  "maximum_initial_candidates": 10,
+  "next_gate_required": "PROD-6901..6940 - External Case Normalization and Trust/Citation Gate"
+}

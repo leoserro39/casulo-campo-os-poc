@@ -1,0 +1,32 @@
+{
+  "version": "casulo_delta_zero_live_discovery_intake_to_report_mapping.v0.3",
+  "phase": "PROD-6861..6900",
+  "generated_at": "2026-07-01T23:37:33.641461+00:00",
+  "mapping": [
+    {
+      "candidate_field": "source_url",
+      "report_section": "Evidence Source Map"
+    },
+    {
+      "candidate_field": "difficulty",
+      "report_section": "Case Corpus Summary"
+    },
+    {
+      "candidate_field": "risk_theme",
+      "report_section": "Risk and Gate Matrix"
+    },
+    {
+      "candidate_field": "expected_gate",
+      "report_section": "Risk and Gate Matrix"
+    },
+    {
+      "candidate_field": "body_excerpt",
+      "report_section": "Operational State Observed"
+    },
+    {
+      "candidate_field": "labels",
+      "report_section": "Correlations and Patterns"
+    }
+  ],
+  "client_style_report_ready_after": "normalization and evidence review, not after discovery alone"
+}

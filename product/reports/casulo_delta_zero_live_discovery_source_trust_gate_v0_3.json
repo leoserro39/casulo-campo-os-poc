@@ -1,0 +1,15 @@
+{
+  "version": "casulo_delta_zero_live_discovery_source_trust_gate.v0.3",
+  "phase": "PROD-6861..6900",
+  "generated_at": "2026-07-01T23:37:33.641450+00:00",
+  "selected_source": "github_issues_public",
+  "source_trust_level": "PUBLIC_THREAD_CANDIDATE_NOT_PRIMARY_TRUTH",
+  "rules": [
+    "Public issue URL is an evidence anchor, not a validated truth source.",
+    "Repository issue data can support source boundary and context, but cannot support production/client/commercial claims.",
+    "Pull requests returned by issue endpoints must be excluded for initial case selection.",
+    "Candidate must pass citation gate and PII/secrets scan before promotion."
+  ],
+  "passes_for_live_discovery_dry_run": true,
+  "passes_for_real_case_001_freeze": false
+}

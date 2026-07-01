@@ -1,0 +1,17 @@
+{
+  "version": "casulo_delta_zero_live_discovery_expected_metrics.v0.3",
+  "phase": "PROD-6861..6900",
+  "generated_at": "2026-07-01T23:37:33.641457+00:00",
+  "metrics_to_compute_after_live_discovery": [
+    "candidate_count",
+    "candidate_count_by_repository",
+    "candidate_count_by_difficulty",
+    "candidate_count_by_expected_gate",
+    "candidate_count_by_risk_theme",
+    "anchor_completeness_rate",
+    "excerpt_presence_rate",
+    "pii_secret_basic_scan_flag_count",
+    "ready_for_normalization_count",
+    "blocked_candidate_count"
+  ]
+}

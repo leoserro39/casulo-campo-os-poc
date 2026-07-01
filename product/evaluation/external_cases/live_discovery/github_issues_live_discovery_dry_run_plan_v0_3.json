@@ -1,0 +1,29 @@
+{
+  "version": "github_issues_live_discovery_dry_run_plan.v0.3",
+  "phase": "PROD-6861..6900",
+  "generated_at": "2026-07-01T23:37:33.641444+00:00",
+  "selected_primary_source": "github_issues_public",
+  "secondary_sources_planned_later": [
+    "uci_public_datasets",
+    "business_process_event_logs",
+    "huggingface_datasets_public",
+    "nasa_asrs_public",
+    "sanitized_document_upload",
+    "sanitized_db_snapshot"
+  ],
+  "why_github_first": [
+    "public candidate cases have stable URLs",
+    "repository issues provide source anchors and metadata",
+    "software/TIC issues naturally test missing evidence, unsafe change, rollback and review gates"
+  ],
+  "patcher_network_call_executed": false,
+  "runner_network_call_default": "dry_run_no_network",
+  "runner_live_call_requires": [
+    "--allow-network",
+    "public source only",
+    "no credentials",
+    "candidate limit",
+    "no GPT call",
+    "no real_case_001 freeze"
+  ]
+}

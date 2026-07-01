@@ -1,0 +1,21 @@
+{
+  "version": "casulo_delta_zero_live_discovery_citation_gate.v0.3",
+  "phase": "PROD-6861..6900",
+  "generated_at": "2026-07-01T23:37:33.641454+00:00",
+  "minimum_candidate_requirements": [
+    "source_url",
+    "citation_anchor",
+    "title",
+    "repository/source identifier",
+    "evidence boundary note"
+  ],
+  "blocked_if_missing": [
+    "source_url",
+    "citation_anchor",
+    "provider_id",
+    "expected_gate",
+    "blocked actions"
+  ],
+  "passes_for_live_discovery_dry_run": true,
+  "passes_for_real_case_001_freeze": false
+}

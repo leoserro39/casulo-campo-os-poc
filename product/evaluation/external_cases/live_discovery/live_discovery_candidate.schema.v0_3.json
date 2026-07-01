@@ -1,0 +1,18 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "CASULO Delta Zero Live Discovery Candidate",
+  "type": "object",
+  "required": [
+    "candidate_id",
+    "provider_id",
+    "source_family",
+    "domain",
+    "difficulty",
+    "evidence_type",
+    "source_url",
+    "citation_anchor",
+    "risk_theme",
+    "expected_gate",
+    "ready_for_real_case_001"
+  ]
+}

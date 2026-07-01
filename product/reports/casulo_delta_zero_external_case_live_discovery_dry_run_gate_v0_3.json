@@ -1,0 +1,20 @@
+{
+  "version": "casulo_delta_zero_external_case_live_discovery_dry_run_gate.v0.3",
+  "phase": "PROD-6861..6900",
+  "generated_at": "2026-07-01T23:37:33.642008+00:00",
+  "status": "PASS",
+  "selected_primary_source": "github_issues_public",
+  "check_count": 580,
+  "query_set_ready": true,
+  "runner_scaffold_ready": true,
+  "source_trust_gate_ready": true,
+  "citation_gate_ready": true,
+  "expected_metrics_ready": true,
+  "patcher_network_call_executed": false,
+  "live_candidates_fetched": false,
+  "ready_for_normalization_gate": false,
+  "ready_for_real_case_001": false,
+  "ready_for_real_test_execution": false,
+  "recommended_next_phase": "PROD-6901..6940 - External Case Normalization and Trust/Citation Gate",
+  "errors": []
+}
