@@ -2,7 +2,7 @@
   "status": "PASS",
   "phase": "PROD-4701..4740",
   "decision": "CONTROLLED_PILOT_MANUAL_DRY_RUN_SESSION_MANUAL_EXECUTION_HOLD_PACKET_READY",
-  "generated_at": "2026-07-01T02:05:38.852255+00:00",
+  "generated_at": "2026-07-01T12:32:13.406408+00:00",
   "hold_section_count": 26,
   "hold_field_count": 36,
   "hold_check_count": 90,
