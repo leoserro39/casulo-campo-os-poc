@@ -1,0 +1,96 @@
+normalized_case_id,candidate_id,provider_id,source_family,domain,difficulty,evidence_level,evidence_type,source_repo,source_url,citation_anchor,title,body_excerpt,labels,comments,created_at,updated_at,risk_theme,expected_gate,source_trust_level,citation_gate_passed_for_candidate,source_trust_gate_passed_for_candidate,pii_or_secret_status,candidate_readiness_score,freeze_status,ready_for_real_case_001,allowed_next_action,blocked_action
+NORM-GITHUB-ISSUE-pandas-dev-pandas-66104,GITHUB-ISSUE-pandas-dev-pandas-66104,github_issues_public,software_tic_cases,software_tic,medium,L1_PUBLIC_URL_OR_THREAD,public_issue_url,pandas-dev/pandas,https://github.com/pandas-dev/pandas/issues/66104,pandas-dev/pandas#66104,BUG: date_range crashes python process,"### Pandas version checks
+
+- [x] I have checked that this issue has not already been reported.
+
+- [x] I have confirmed this bug exists on the [latest version](https://pandas.pydata.org/docs/whatsnew/index.html) of pandas.
+
+- [ ] I have confirmed this bug exists on the [main branch](https://pandas.pydata.org/docs/dev/getting_started/install.html#installing-the-development-version-of-pandas) of pandas.
+
+
+### Reproducible Example
+
+```python
+for idx, response in enumerate(responses.json()):
+  forecast = response[""hourly""]
+  forecast_start = datetime.strptime(forecast['time'][0], ""%Y-%m-%dT%H:%M"")
+  forecast_end = datetime.strptime(forecast['time'][-1], ""%Y-%m-%dT%H:%M"")
+
+  ts_data = {param: values for param, values in forecast.items() if param != ""time""}
+  ts_data[""timestamp""] = pd.date_range( # noqa
+    start=pd.to_datetime(forecast_start),
+    end=pd.to_datetime(forecast_end),
+    freq=""h"",
+    inclusive=""both""
+  )
+```
+
+### Issue Description
+
+I updated the version from 3.0.3 to 3.0.4 cau",Bug|Needs Triage,1,2026-06-30T14:19:54Z,2026-06-30T14:21:27Z,bug_with_partial_evidence,HUMAN_REVIEW_REQUIRED,PUBLIC_THREAD_CANDIDATE_NOT_PRIMARY_TRUTH,True,True,NOT_DETECTED_BY_BASIC_PUBLIC_METADATA_SCAN,1.0,PROMISING_CANDIDATE_REQUIRES_HUMAN_SELECTION,False,human_review_shortlist_selection,automatic_real_case_001_freeze
+NORM-GITHUB-ISSUE-pandas-dev-pandas-66100,GITHUB-ISSUE-pandas-dev-pandas-66100,github_issues_public,software_tic_cases,software_tic,medium,L1_PUBLIC_URL_OR_THREAD,public_issue_url,pandas-dev/pandas,https://github.com/pandas-dev/pandas/issues/66100,pandas-dev/pandas#66100,BUG: Assignment on negative slice gives error,"### Pandas version checks
+
+- [x] I have checked that this issue has not already been reported.
+
+- [x] I have confirmed this bug exists on the [latest version](https://pandas.pydata.org/docs/whatsnew/index.html) of pandas.
+
+- [x] I have confirmed this bug exists on the [main branch](https://pandas.pydata.org/docs/dev/getting_started/install.html#installing-the-development-version-of-pandas) of pandas.
+
+
+### Reproducible Example
+
+```python
+import pandas as pd
+s=pd.Series([2, 13, 7, 9, 3], index=['a', 'b', 'c', 'd', 'e'])
+
+s.iloc[::-2]= [11, 5, 15]
+print(s)
+```
+
+### Issue Description
+
+The negative slice has 3 elements and should be assigned three values but it gives 
+ValueError: cannot set using a slice indexer with a different length than the value
+
+Either the error message should be changed that ""this feature is currently not supported"" as the current error message is clearly wrong or this feature should be included as it is intutively correct
+
+### Expected Behavior
+
+a    15
+b    13
+c  ",Bug|Needs Triage,1,2026-06-30T03:35:08Z,2026-06-30T04:12:58Z,bug_with_partial_evidence,HUMAN_REVIEW_REQUIRED,PUBLIC_THREAD_CANDIDATE_NOT_PRIMARY_TRUTH,True,True,NOT_DETECTED_BY_BASIC_PUBLIC_METADATA_SCAN,1.0,PROMISING_CANDIDATE_REQUIRES_HUMAN_SELECTION,False,human_review_shortlist_selection,automatic_real_case_001_freeze
+NORM-GITHUB-ISSUE-microsoft-vscode-323962,GITHUB-ISSUE-microsoft-vscode-323962,github_issues_public,software_tic_cases,software_tic,medium,L1_PUBLIC_URL_OR_THREAD,public_issue_url,microsoft/vscode,https://github.com/microsoft/vscode/issues/323962,microsoft/vscode#323962,Copilot completion feedback,"
+Type: <b>Bug</b>
+
+## Copilot Completion Feedback
+### Describe the issue, feedback, or steps to reproduce it:
+
+
+### Completion text:
+```
+            nav
+```
+
+<details>
+<summary>Diagnostics</summary>
+
+## Copilot Extension
+
+- Version: 0.55.0
+- Editor: vscode 1.127.0
+
+
+</details>
+
+
+VS Code version: Code 1.127.0 (4fe60c8b1cdac1c4c174f2fb180d0d758272d713, 2026-06-30T10:52:33+02:00)
+OS version: Windows_NT x64 10.0.19045
+Modes:
+
+<details>
+<summary>System Info</summary>
+
+|Item|Value|
+|---|---|
+|CPUs|Intel(R) Core(TM) i7-6600U CPU @ 2.60GHz (4 x 2808)|
+|GPU Status|2d_canvas: enabled<br>GPU0: VENDOR= 0x8086, DEVICE=0x1916 [Intel(R) HD Graphics 520], DRIVER_VENDOR=Intel, DRIVER_VERSION=30.0.101.1338 *ACTIVE*<br>GPU1: VENDOR= 0x1414, DEVICE=0x008c [Microsoft Basic Render Driver], DRIVER_VERSION=10.0.19041.5794<br>Machine model name: <br>Machine model version: <br>direct_rendering_display_compositor: disabled_off_ok<br>gpu_compositing: enabled<br>multiple_raster_threads: enabled_on<br>opengl: enabl",info-needed|new release,1,2026-07-01T23:02:54Z,2026-07-01T23:16:00Z,bug_with_partial_evidence,HUMAN_REVIEW_REQUIRED,PUBLIC_THREAD_CANDIDATE_NOT_PRIMARY_TRUTH,True,True,NOT_DETECTED_BY_BASIC_PUBLIC_METADATA_SCAN,0.95,PROMISING_CANDIDATE_REQUIRES_HUMAN_SELECTION,False,human_review_shortlist_selection,automatic_real_case_001_freeze

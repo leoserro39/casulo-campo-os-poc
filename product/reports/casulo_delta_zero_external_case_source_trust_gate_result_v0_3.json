@@ -1,0 +1,17 @@
+{
+  "version": "casulo_delta_zero_external_case_source_trust_gate_result.v0.3",
+  "phase": "PROD-6901..6940",
+  "generated_at": "2026-07-01T23:45:34.819696+00:00",
+  "status": "PASS",
+  "source_trust_level": "PUBLIC_THREAD_CANDIDATE_NOT_PRIMARY_TRUTH",
+  "candidate_count": 7,
+  "source_trust_pass_count": 7,
+  "source_trust_gate_passed_for_normalization": true,
+  "source_trust_gate_passed_for_client_claim": false,
+  "source_trust_gate_passed_for_production": false,
+  "rules": [
+    "Public issue URL is an evidence anchor, not validated truth.",
+    "Issue metadata can support normalization and review, not client or production claims.",
+    "Community/user reports remain candidate evidence until human review."
+  ]
+}

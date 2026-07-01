@@ -69,8 +69,8 @@
 - `PROD-6781..6820` - CASULO Delta Zero Real Test Input Pack - **DONE**
 - `PROD-6821..6860` - CASULO Delta Zero Real Test Execution Gate - **DONE**
 - `PROD-6861..6900` - CASULO Delta Zero Controlled Real Test Run - **DONE**
-- `PROD-6901..6940` - CASULO Delta Zero External Case Normalization and Trust/Citation Gate - **NEXT**
-- `PROD-6941..6980` - CASULO Delta Zero Real Case 001 Freeze From External Corpus - **PLANNED**
+- `PROD-6901..6940` - CASULO Delta Zero External Case Normalization and Trust/Citation Gate - **DONE**
+- `PROD-6941..6980` - CASULO Delta Zero Real Case 001 Freeze From External Corpus - **NEXT**
 - `PROD-6981..7020` - CASULO Delta Zero Real Test Execution Gate - **PLANNED**
 - `PROD-7021..7060` - CASULO Delta Zero Controlled Real Test Run - **PLANNED**
 - `PROD-7061..7100` - CASULO Delta Zero Client-Style Evidence Review Report - **PLANNED**

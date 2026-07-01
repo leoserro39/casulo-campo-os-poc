@@ -1,0 +1,41 @@
+{
+  "phase": "PROD-6901..6940",
+  "normalization_trust_citation_gate": true,
+  "consumes_live_discovery_outputs": true,
+  "live_gpt_call_allowed": false,
+  "real_case_001_freeze_allowed": false,
+  "real_test_execution_allowed": false,
+  "client_claims_allowed": false,
+  "production_claims_allowed": false,
+  "commercial_claims_allowed": false,
+  "validated_model_gain_claim_blocked": true,
+  "hallucination_reduction_claim_blocked": true,
+  "delta_zero_ready_validated_claim_blocked": true,
+  "dataset_acceptance_blocked": true,
+  "allowed_actions": [
+    "normalize_live_candidate_cases",
+    "evaluate_source_trust_gate",
+    "evaluate_citation_gate",
+    "rank_real_case_001_candidates",
+    "produce_client_style_preview",
+    "produce_freeze_readiness_gap",
+    "roadmap_update"
+  ],
+  "blocked_actions": [
+    "live_gpt_call",
+    "real_case_001_freeze",
+    "real_test_execution",
+    "production_activation",
+    "client_facing_validated_claim",
+    "commercial_claim",
+    "validated_model_gain_claim",
+    "validated_hallucination_reduction_claim",
+    "delta_zero_ready_validated_claim",
+    "dataset_acceptance",
+    "canonical_token_acceptance",
+    "temporal_trajectory_claim",
+    "pii_or_secret_storage",
+    "real_world_side_effect",
+    "automatic_merge_or_patch_execution"
+  ]
+}

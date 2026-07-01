@@ -1,0 +1,19 @@
+{
+  "version": "casulo_delta_zero_github_issues_live_discovery_run.v0.3",
+  "generated_at": "2026-07-01T23:38:07.494786+00:00",
+  "status": "PASS_WITH_CANDIDATES",
+  "allow_network": true,
+  "candidate_count": 7,
+  "repos_planned": [
+    "microsoft/vscode",
+    "pandas-dev/pandas",
+    "kubernetes/kubernetes",
+    "fastapi/fastapi",
+    "apache/airflow"
+  ],
+  "output_json": "product/evaluation/external_cases/live_discovery/github_issues_live_candidates_v0_3.json",
+  "output_csv": "product/evaluation/external_cases/live_discovery/github_issues_live_candidates_v0_3.csv",
+  "ready_for_real_case_001": false,
+  "requires_next_gate": "PROD-6901..6940 - External Case Normalization and Trust/Citation Gate",
+  "errors": []
+}

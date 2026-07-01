@@ -1,0 +1,12 @@
+{
+  "version": "casulo_delta_zero_external_case_citation_gate_result.v0.3",
+  "phase": "PROD-6901..6940",
+  "generated_at": "2026-07-01T23:45:34.819711+00:00",
+  "status": "PASS",
+  "candidate_count": 7,
+  "citation_pass_count": 7,
+  "citation_pass_rate": 1.0,
+  "passed_for_normalization": true,
+  "passed_for_real_case_freeze": false,
+  "missing_citation_candidates": []
+}
