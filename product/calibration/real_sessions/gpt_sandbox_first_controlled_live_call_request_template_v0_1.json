@@ -1,0 +1,39 @@
+{
+  "version": "gpt_sandbox_first_controlled_live_call_request_template.v0.1",
+  "phase": "PROD-5461..5500",
+  "template_only": true,
+  "provider": "openai_gpt",
+  "api_key_source": "OPENAI_API_KEY_ENV_REFERENCE_ONLY_NOT_STORED",
+  "model_env": "OPENAI_MODEL_OPTIONAL_ENV_REFERENCE",
+  "modes": [
+    "PURE_GPT",
+    "STACK_GPT",
+    "CASULO_EXOCORTEX_STACK"
+  ],
+  "default_prompt": "CASULO controlled sandbox test. Return a concise acknowledgement.",
+  "prompt_storage_rule": "hash_only_for_logs",
+  "blocked_actions": [
+    "openai_api_key_storage",
+    "gpt_memory_api_execution",
+    "multi_vendor_llm_execution",
+    "claude_provider_call",
+    "gemini_provider_call",
+    "copilot_provider_call",
+    "start_command_execution",
+    "manual_session_execution",
+    "automatic_real_session_capture",
+    "real_candidate_insert",
+    "real_candidate_dataset_acceptance",
+    "dataset_acceptance_without_human_review",
+    "raw_private_data_storage",
+    "secret_or_credential_storage",
+    "unredacted_pii_storage",
+    "client_facing_value_claim",
+    "real_world_profit_claim",
+    "validated_savings_claim",
+    "validated_hallucination_reduction_claim",
+    "production_activation",
+    "automatic_memory_delete",
+    "commercial_package_pricing_claim"
+  ]
+}

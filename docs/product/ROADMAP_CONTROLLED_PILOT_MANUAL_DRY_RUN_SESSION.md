@@ -33,8 +33,9 @@
 - `PROD-5301..5340` - GPT Sandbox First Controlled Call Runner Packet - **DONE**
 - `PROD-5341..5380` - GPT Sandbox First Controlled Call Runner Readiness Gate - **DONE**
 - `PROD-5381..5420` - GPT Sandbox First Controlled Call Live Authorization Packet - **DONE**
-- `PROD-5421..5460` - GPT Sandbox First Controlled Call Live Authorization Readiness Gate - **CURRENT**
-- `PROD-5461..5500` - GPT Sandbox First Controlled Live Call Packet - **NEXT**
+- `PROD-5421..5460` - GPT Sandbox First Controlled Call Live Authorization Readiness Gate - **DONE**
+- `PROD-5461..5500` - GPT Sandbox First Controlled Live Call Packet - **CURRENT**
+- `PROD-5501..5540` - GPT Sandbox First Controlled Live Call Execution Gate - **NEXT**
 
 ## GPT-only active plan
 - PURE GPT
@@ -43,7 +44,7 @@
 - Stack V3 Multi-Provider deferred until GPT-only baseline is measured.
 
 ## Active boundary
-- No real GPT call yet.
+- Live-ready runner prepared, but no live GPT call yet.
 - No API key value storage.
 - No GPT Memory API.
 - No multi-vendor LLM in this cycle.
