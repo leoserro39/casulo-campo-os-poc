@@ -29,8 +29,9 @@
 - `PROD-5141..5180` - GPT Sandbox First Controlled Call Packet - **DONE**
 - `PROD-5181..5220` - GPT Sandbox First Controlled Call Readiness Gate - **DONE**
 - `PROD-5221..5260` - GPT Sandbox First Controlled Call Execution Packet - **DONE**
-- `PROD-5261..5300` - GPT Sandbox First Controlled Call Execution Readiness Gate - **CURRENT**
-- `PROD-5301..5340` - GPT Sandbox First Controlled Call Runner Packet - **NEXT**
+- `PROD-5261..5300` - GPT Sandbox First Controlled Call Execution Readiness Gate - **DONE**
+- `PROD-5301..5340` - GPT Sandbox First Controlled Call Runner Packet - **CURRENT**
+- `PROD-5341..5380` - GPT Sandbox First Controlled Call Runner Readiness Gate - **NEXT**
 
 ## GPT-only active plan
 - PURE GPT
