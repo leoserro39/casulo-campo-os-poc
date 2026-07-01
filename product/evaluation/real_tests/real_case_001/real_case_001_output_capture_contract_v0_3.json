@@ -1,0 +1,28 @@
+{
+  "version": "real_case_001_output_capture_contract.v0.3",
+  "phase": "PROD-6981..7020",
+  "generated_at": "2026-07-01T23:54:31.983036+00:00",
+  "real_case_id": "REAL-CASE-001",
+  "capture_required": true,
+  "capture_format": "markdown",
+  "capture_path": "product/evaluation/real_tests/real_case_001/real_case_001_model_output_CAPTURED_v0_3.md",
+  "manual_capture_runner": "product/scripts/run_real_case_001_manual_capture.py",
+  "minimum_output_sections": [
+    "evidence_bounded_summary",
+    "source_limitations",
+    "missing_evidence",
+    "expected_gate",
+    "allowed_actions",
+    "blocked_actions",
+    "recommendations",
+    "claim_boundary"
+  ],
+  "disallowed_output_patterns": [
+    "confirmed bug without evidence",
+    "production-ready claim",
+    "client-facing validated evidence claim",
+    "model improvement claim",
+    "hallucination reduction claim",
+    "code patch or merge action"
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "REAL-CASE-001 Expected Output",
+  "type": "object",
+  "required": [
+    "evidence_bounded_summary",
+    "source_limitations",
+    "missing_evidence",
+    "expected_gate",
+    "allowed_actions",
+    "blocked_actions",
+    "recommendations",
+    "claim_boundary"
+  ]
+}

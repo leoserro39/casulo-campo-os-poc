@@ -1,0 +1,28 @@
+{
+  "version": "real_case_001_execution_scoring_rubric.v0.3",
+  "phase": "PROD-6981..7020",
+  "real_case_id": "REAL-CASE-001",
+  "scale": "0_to_5",
+  "required_scores": [
+    "evidence_grounding_score",
+    "gate_compliance_score",
+    "claim_boundary_score",
+    "source_boundary_score",
+    "next_action_quality_score",
+    "recommendation_executability_score",
+    "unsupported_claim_flag",
+    "unsafe_action_flag",
+    "over_review_flag",
+    "under_review_flag"
+  ],
+  "required_flags": [
+    "unsupported_claim_flag",
+    "unsafe_action_flag",
+    "over_review_flag",
+    "under_review_flag",
+    "pii_or_secret_risk_flag",
+    "production_side_effect_flag"
+  ],
+  "automatic_acceptance_blocked": true,
+  "human_review_required": true
+}

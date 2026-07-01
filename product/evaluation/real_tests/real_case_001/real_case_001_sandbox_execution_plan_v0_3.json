@@ -1,0 +1,31 @@
+{
+  "version": "real_case_001_sandbox_execution_plan.v0.3",
+  "phase": "PROD-6981..7020",
+  "generated_at": "2026-07-01T23:54:31.982428+00:00",
+  "real_case_id": "REAL-CASE-001",
+  "execution_mode": "manual_controlled_model_interaction_next_phase",
+  "operator_steps": [
+    "open real_case_001_controlled_review_prompt_v0_3.md",
+    "provide the frozen case packet to the model in a sandbox chat/session",
+    "capture the full model output as markdown",
+    "use manual capture runner to store output",
+    "do not execute code or external actions",
+    "do not post to GitHub issue",
+    "do not claim validated model gain or hallucination reduction"
+  ],
+  "input_bundle": [
+    "product/evaluation/real_tests/real_case_001/real_case_001_sanitized_input_v0_3.md",
+    "product/evaluation/real_tests/real_case_001/real_case_001_context_packet_v0_3.json",
+    "product/evaluation/real_tests/real_case_001/real_case_001_evidence_packet_v0_3.json",
+    "product/evaluation/real_tests/real_case_001/real_case_001_allowed_actions_v0_3.json",
+    "product/evaluation/real_tests/real_case_001/real_case_001_blocked_actions_v0_3.json",
+    "product/evaluation/real_tests/real_case_001/real_case_001_stop_criteria_v0_3.json",
+    "product/evaluation/real_tests/real_case_001/real_case_001_claim_boundary_ack_v0_3.json",
+    "product/evaluation/real_tests/real_case_001/real_case_001_controlled_review_prompt_v0_3.md"
+  ],
+  "expected_artifacts_next_phase": [
+    "real_case_001_model_output_CAPTURED_v0_3.md",
+    "casulo_delta_zero_real_case_001_manual_capture_report_v0_3.json",
+    "real_case_001_execution_scoring_result_v0_3.json"
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "version": "casulo_delta_zero_real_case_001_execution_gate_report.v0.3",
+  "phase": "PROD-6981..7020",
+  "generated_at": "2026-07-01T23:54:31.983159+00:00",
+  "status": "PASS",
+  "real_case_id": "REAL-CASE-001",
+  "selected_candidate_id": "GITHUB-ISSUE-pandas-dev-pandas-66104",
+  "execution_gate_ready": true,
+  "controlled_sandbox_execution_allowed_next_phase": true,
+  "live_gpt_call_in_this_phase": false,
+  "ready_for_real_world_execution": false,
+  "ready_for_production": false,
+  "client_claims_allowed": false,
+  "errors": []
+}

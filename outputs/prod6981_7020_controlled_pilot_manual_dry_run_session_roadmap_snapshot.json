@@ -1,0 +1,412 @@
+{
+  "version": "controlled_pilot_manual_dry_run_session_roadmap.v0.3",
+  "phase": "PROD-6981..7020",
+  "generated_at": "2026-07-01T23:54:31.984435+00:00",
+  "current_phase": "PROD-6981..7020 - Real Test Execution Gate",
+  "next_phase": "PROD-7021..7060 - Controlled Real Test Run and Output Capture Review",
+  "roadmap_items": [
+    {
+      "phase": "PROD-4101..4140",
+      "name": "Manual Dry Run Session Execution Gate",
+      "status": "DONE"
+    },
+    {
+      "phase": "PROD-4141..4180",
+      "name": "Execution Log Shell",
+      "status": "DONE"
+    },
+    {
+      "phase": "PROD-4181..4220",
+      "name": "Execution Log Readiness Gate",
+      "status": "DONE"
+    },
+    {
+      "phase": "PROD-4221..4260",
+      "name": "Observation Packet",
+      "status": "DONE"
+    },
+    {
+      "phase": "PROD-4261..4300",
+      "name": "Observation Readiness Gate",
+      "status": "DONE"
+    },
+    {
+      "phase": "PROD-4301..4340",
+      "name": "Review Packet",
+      "status": "DONE"
+    },
+    {
+      "phase": "PROD-4341..4380",
+      "name": "Review Readiness Gate",
+      "status": "DONE"
+    },
+    {
+      "phase": "PROD-4381..4420",
+      "name": "Final Gate Packet",
+      "status": "DONE"
+    },
+    {
+      "phase": "PROD-4421..4460",
+      "name": "Final Gate Readiness Gate",
+      "status": "DONE"
+    },
+    {
+      "phase": "PROD-4461..4500",
+      "name": "Execution Precheck Packet",
+      "status": "DONE"
+    },
+    {
+      "phase": "PROD-4501..4540",
+      "name": "Execution Precheck Readiness Gate",
+      "status": "DONE"
+    },
+    {
+      "phase": "PROD-4541..4580",
+      "name": "Operator Start Packet",
+      "status": "DONE"
+    },
+    {
+      "phase": "PROD-4581..4620",
+      "name": "Operator Start Readiness Gate",
+      "status": "DONE"
+    },
+    {
+      "phase": "PROD-4621..4660",
+      "name": "Execution Plan Packet",
+      "status": "DONE"
+    },
+    {
+      "phase": "PROD-4661..4700",
+      "name": "Execution Plan Readiness Gate",
+      "status": "DONE"
+    },
+    {
+      "phase": "PROD-4701..4740",
+      "name": "Manual Session Execution Hold Packet",
+      "status": "DONE"
+    },
+    {
+      "phase": "PROD-4741..4780",
+      "name": "Manual Session Execution Hold Readiness Gate",
+      "status": "DONE"
+    },
+    {
+      "phase": "PROD-4781..4820",
+      "name": "Human Release Packet",
+      "status": "DONE"
+    },
+    {
+      "phase": "PROD-4821..4860",
+      "name": "Human Release Readiness Gate",
+      "status": "DONE"
+    },
+    {
+      "phase": "PROD-4861..4900",
+      "name": "Final Human Go No-Go Packet",
+      "status": "DONE"
+    },
+    {
+      "phase": "PROD-4901..4940",
+      "name": "Final Human Go No-Go Readiness Gate",
+      "status": "CURRENT"
+    },
+    {
+      "phase": "PROD-4941..4980",
+      "name": "GPT Boundary and OpenAI Adapter Contract Packet",
+      "status": "DONE"
+    },
+    {
+      "phase": "PROD-4981..5020",
+      "name": "GPT Boundary Readiness Gate",
+      "status": "DONE"
+    },
+    {
+      "phase": "PROD-5021..5060",
+      "name": "GPT Mock Adapter Harness",
+      "status": "DONE"
+    },
+    {
+      "phase": "PROD-5061..5100",
+      "name": "PURE GPT vs STACK GPT vs EXOCORTEX STACK Comparison Harness",
+      "status": "DONE"
+    },
+    {
+      "phase": "PROD-5101..5140",
+      "name": "GPT Sandbox Activation Gate",
+      "status": "DONE"
+    },
+    {
+      "phase": "PROD-5141..5180",
+      "name": "GPT Sandbox First Controlled Call Packet",
+      "status": "DONE"
+    },
+    {
+      "phase": "PROD-5181..5220",
+      "name": "GPT Sandbox First Controlled Call Readiness Gate",
+      "status": "DONE"
+    },
+    {
+      "phase": "PROD-5221..5260",
+      "name": "GPT Sandbox First Controlled Call Execution Packet",
+      "status": "DONE"
+    },
+    {
+      "phase": "PROD-5261..5300",
+      "name": "GPT Sandbox First Controlled Call Execution Readiness Gate",
+      "status": "DONE"
+    },
+    {
+      "phase": "PROD-5301..5340",
+      "name": "GPT Sandbox First Controlled Call Runner Packet",
+      "status": "DONE"
+    },
+    {
+      "phase": "PROD-5341..5380",
+      "name": "GPT Sandbox First Controlled Call Runner Readiness Gate",
+      "status": "DONE"
+    },
+    {
+      "phase": "PROD-5381..5420",
+      "name": "GPT Sandbox First Controlled Call Live Authorization Packet",
+      "status": "DONE"
+    },
+    {
+      "phase": "PROD-5421..5460",
+      "name": "GPT Sandbox First Controlled Call Live Authorization Readiness Gate",
+      "status": "DONE"
+    },
+    {
+      "phase": "PROD-5461..5500",
+      "name": "GPT Sandbox First Controlled Live Call Packet",
+      "status": "DONE"
+    },
+    {
+      "phase": "PROD-5501..5540",
+      "name": "GPT Sandbox First Controlled Live Call Execution Gate",
+      "status": "DONE"
+    },
+    {
+      "phase": "PROD-5541..5580",
+      "name": "GPT Sandbox First Controlled Live Call Execution Run",
+      "status": "DONE"
+    },
+    {
+      "phase": "PROD-5581..5620",
+      "name": "GPT Sandbox First Controlled Live Call Post-Call Review Gate",
+      "status": "DONE"
+    },
+    {
+      "phase": "PROD-5621..5660",
+      "name": "STACK GPT Controlled Live Call Packet",
+      "status": "DONE"
+    },
+    {
+      "phase": "PROD-5661..5700",
+      "name": "STACK GPT Controlled Live Call Execution Gate",
+      "status": "DONE"
+    },
+    {
+      "phase": "PROD-5701..5740",
+      "name": "STACK GPT Controlled Live Call Execution Run",
+      "status": "DONE"
+    },
+    {
+      "phase": "PROD-5741..5780",
+      "name": "STACK GPT Post-Call Review and PURE vs STACK Comparison Gate",
+      "status": "DONE"
+    },
+    {
+      "phase": "PROD-5781..5820",
+      "name": "CASULO Exocortex Stack Controlled Live Call Packet",
+      "status": "DONE"
+    },
+    {
+      "phase": "PROD-5821..5860",
+      "name": "CASULO Exocortex Stack Controlled Live Call Execution Gate",
+      "status": "DONE"
+    },
+    {
+      "phase": "PROD-5861..5900",
+      "name": "CASULO Exocortex Stack Controlled Live Call Execution Run",
+      "status": "DONE"
+    },
+    {
+      "phase": "PROD-5901..5940",
+      "name": "CASULO Exocortex Post-Call Review and PURE vs STACK vs EXOCORTEX Comparison Gate",
+      "status": "DONE"
+    },
+    {
+      "phase": "PROD-5941..5980",
+      "name": "Domain Calibration Matrix Controlled Test Packet",
+      "status": "DONE"
+    },
+    {
+      "phase": "PROD-5981..6020",
+      "name": "Domain Calibration Matrix Execution Gate",
+      "status": "DONE"
+    },
+    {
+      "phase": "PROD-6021..6060",
+      "name": "Domain Calibration Batch 01 Execution Run",
+      "status": "DONE"
+    },
+    {
+      "phase": "PROD-6061..6100",
+      "name": "Domain Calibration Batch 01 Review Gate",
+      "status": "DONE"
+    },
+    {
+      "phase": "PROD-6101..6140",
+      "name": "Domain Calibration Output Capture Hardening Packet",
+      "status": "DONE"
+    },
+    {
+      "phase": "PROD-6141..6180",
+      "name": "Domain Calibration Hardened Rerun Execution Gate",
+      "status": "DONE"
+    },
+    {
+      "phase": "PROD-6181..6220",
+      "name": "Domain Calibration Batch 01 Hardened Rerun Execution Run",
+      "status": "DONE"
+    },
+    {
+      "phase": "PROD-6221..6260",
+      "name": "Domain Calibration Hardened Rerun Review Gate",
+      "status": "DONE"
+    },
+    {
+      "phase": "PROD-6261..6300",
+      "name": "Domain Calibration External Evaluator Packet",
+      "status": "DONE"
+    },
+    {
+      "phase": "PROD-6301..6340",
+      "name": "Domain Calibration External Evaluator Execution Gate",
+      "status": "DONE"
+    },
+    {
+      "phase": "PROD-6341..6380",
+      "name": "Domain Calibration External Evaluator Execution Gate with Ponto Zero Metrics",
+      "status": "DONE"
+    },
+    {
+      "phase": "PROD-6381..6420",
+      "name": "Domain Calibration External Evaluator Scoring Run with Ponto Zero Metrics",
+      "status": "DONE"
+    },
+    {
+      "phase": "PROD-6421..6460",
+      "name": "CASULO Delta Zero Batch 01 Vectorization Review Gate",
+      "status": "DONE"
+    },
+    {
+      "phase": "PROD-6461..6500",
+      "name": "CASULO Delta Zero External Evaluator Workbench Packet",
+      "status": "DONE"
+    },
+    {
+      "phase": "PROD-6501..6540",
+      "name": "CASULO Delta Zero External Evaluator Manual Scoring Run",
+      "status": "DONE"
+    },
+    {
+      "phase": "PROD-6541..6580",
+      "name": "CASULO Delta Zero Human Score Acceptance and Ingestion Gate",
+      "status": "NEXT"
+    },
+    {
+      "phase": "PROD-6541..6660",
+      "name": "CASULO Delta Zero Human Review Accelerator Packet",
+      "status": "DONE"
+    },
+    {
+      "phase": "PROD-6661..6700",
+      "name": "CASULO Delta Zero Accepted Human Scores Ingestion Run",
+      "status": "DONE"
+    },
+    {
+      "phase": "PROD-6701..6740",
+      "name": "CASULO Delta Zero Accepted Scores Review and Claim Boundary Gate",
+      "status": "DONE"
+    },
+    {
+      "phase": "PROD-6741..6780",
+      "name": "CASULO Delta Zero Controlled Real Test Protocol Packet",
+      "status": "DONE"
+    },
+    {
+      "phase": "PROD-6781..6820",
+      "name": "CASULO Delta Zero Real Test Input Pack",
+      "status": "DONE"
+    },
+    {
+      "phase": "PROD-6821..6860",
+      "name": "CASULO Delta Zero Real Test Execution Gate",
+      "status": "DONE"
+    },
+    {
+      "phase": "PROD-6861..6900",
+      "name": "CASULO Delta Zero Controlled Real Test Run",
+      "status": "DONE"
+    },
+    {
+      "phase": "PROD-6901..6940",
+      "name": "CASULO Delta Zero External Case Normalization and Trust/Citation Gate",
+      "status": "DONE"
+    },
+    {
+      "phase": "PROD-6941..6980",
+      "name": "CASULO Delta Zero Real Case 001 Freeze From External Corpus",
+      "status": "DONE"
+    },
+    {
+      "phase": "PROD-6981..7020",
+      "name": "CASULO Delta Zero Real Test Execution Gate",
+      "status": "DONE"
+    },
+    {
+      "phase": "PROD-7021..7060",
+      "name": "CASULO Delta Zero Controlled Real Test Run",
+      "status": "NEXT"
+    },
+    {
+      "phase": "PROD-7061..7100",
+      "name": "CASULO Delta Zero Client-Style Evidence Review Report",
+      "status": "PLANNED"
+    },
+    {
+      "phase": "PROD-7101..7140",
+      "name": "CASULO Delta Zero Calibration Adjustment Gate",
+      "status": "PLANNED"
+    },
+    {
+      "phase": "PROD-7141..7180",
+      "name": "CASULO Delta Zero Repeat Case Batch Expansion",
+      "status": "PLANNED"
+    }
+  ],
+  "execution_gate_ready": true,
+  "controlled_sandbox_execution_allowed_next_phase": true,
+  "ready_for_real_world_execution": false,
+  "blocked_actions": [
+    "live_gpt_call_in_this_phase",
+    "automatic_gpt_execution",
+    "external_network_call",
+    "production_activation",
+    "client_facing_validated_claim",
+    "commercial_claim",
+    "validated_model_gain_claim",
+    "validated_hallucination_reduction_claim",
+    "delta_zero_ready_validated_claim",
+    "dataset_acceptance",
+    "canonical_token_acceptance",
+    "temporal_trajectory_claim",
+    "pii_or_secret_storage",
+    "real_world_side_effect",
+    "automatic_code_patch",
+    "automatic_merge",
+    "automatic_issue_comment",
+    "claim_external_issue_is_confirmed_truth"
+  ]
+}

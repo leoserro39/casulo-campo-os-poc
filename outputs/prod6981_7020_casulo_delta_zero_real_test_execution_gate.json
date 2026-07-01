@@ -1,0 +1,22 @@
+{
+  "status": "PASS",
+  "phase": "PROD-6981..7020",
+  "decision": "CASULO_DELTA_ZERO_REAL_TEST_EXECUTION_GATE_READY_FOR_CONTROLLED_SANDBOX_RUN",
+  "generated_at": "2026-07-01T23:54:31.984446+00:00",
+  "check_count": 700,
+  "real_case_id": "REAL-CASE-001",
+  "selected_candidate_id": "GITHUB-ISSUE-pandas-dev-pandas-66104",
+  "execution_gate_ready": true,
+  "controlled_sandbox_execution_allowed_next_phase": true,
+  "manual_capture_runner_ready": true,
+  "scoring_rubric_ready": true,
+  "output_capture_contract_ready": true,
+  "ready_for_real_world_execution": false,
+  "ready_for_production": false,
+  "live_gpt_call_in_this_phase": false,
+  "next": "PROD-7021..7060 - Controlled Real Test Run and Output Capture Review",
+  "errors": [],
+  "wrote_files": true,
+  "zip_created": false,
+  "zip_path": null
+}
