@@ -1,0 +1,25 @@
+{
+  "version": "casulo_delta_zero_external_evaluator_workbench.v0.3",
+  "phase": "PROD-6461..6500",
+  "generated_at": "2026-07-01T18:51:27.601197+00:00",
+  "status": "READY_FOR_MANUAL_EXTERNAL_SCORING",
+  "case_count": 36,
+  "mode_counts": {
+    "PURE_GPT": 12,
+    "STACK_GPT": 12,
+    "CASULO_EXOCORTEX_STACK": 12
+  },
+  "domain_counts": {
+    "TIC/SI / ITSM": 6,
+    "VesselFlow / Operação marítima": 6,
+    "Jurídico / Escritório": 6,
+    "Financeiro / Administrativo": 6,
+    "Pequenos negócios de campo": 6,
+    "Governança documental": 6
+  },
+  "workbench_csv": "product/evaluation/casulo_delta_zero_external_evaluator_workbench_v0_3.csv",
+  "case_dir": "product/evaluation/casulo_delta_zero_external_evaluator_cases",
+  "scorer": "product/scripts/score_casulo_delta_zero_external_evaluator.py",
+  "external_scores_completed": false,
+  "final_indices_ready": false
+}

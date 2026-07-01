@@ -1,0 +1,13 @@
+{
+  "version": "casulo_delta_zero_external_evaluator_workbench_status.v0.3",
+  "phase": "PROD-6461..6500",
+  "generated_at": "2026-07-01T18:51:27.667254+00:00",
+  "status": "PASS",
+  "workbench_ready": true,
+  "case_count": 36,
+  "case_packet_count": 36,
+  "blank_score_validation_blocked": true,
+  "external_scores_completed": false,
+  "final_indices_ready": false,
+  "manual_or_independent_evaluator_required": true
+}

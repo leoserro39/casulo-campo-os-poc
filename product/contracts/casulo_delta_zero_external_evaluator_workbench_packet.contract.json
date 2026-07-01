@@ -1,0 +1,36 @@
+{
+  "phase": "PROD-6461..6500",
+  "required_prior_tag": "product-casulo-delta-zero-batch01-vectorization-review-gate-v0.1",
+  "packet_only": true,
+  "auto_filled_external_scores_blocked": true,
+  "manual_or_independent_evaluator_required": true,
+  "final_indices_without_external_scores_blocked": true,
+  "validated_model_gain_claim_blocked": true,
+  "hallucination_reduction_claim_blocked": true,
+  "delta_zero_ready_validated_claim_blocked": true,
+  "dataset_acceptance_blocked": true,
+  "client_claim_blocked": true,
+  "production_blocked": true,
+  "commercial_claim_blocked": true,
+  "allowed_actions": [
+    "external_evaluator_workbench_creation",
+    "case_packet_creation",
+    "blank_score_block_validation",
+    "review_guide_creation",
+    "manual_scoring_preparation",
+    "roadmap_update"
+  ],
+  "blocked_actions": [
+    "additional_live_gpt_call_in_this_phase",
+    "auto_filled_external_scores",
+    "dataset_acceptance",
+    "client_facing_value_claim",
+    "production_activation",
+    "validated_model_gain_claim",
+    "validated_hallucination_reduction_claim",
+    "delta_zero_ready_validated_claim",
+    "commercial_claim",
+    "canonical_token_acceptance"
+  ],
+  "recommended_next_phase": "PROD-6501..6540 - CASULO Delta Zero External Evaluator Manual Scoring Run"
+}
