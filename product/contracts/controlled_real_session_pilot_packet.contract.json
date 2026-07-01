@@ -1,0 +1,33 @@
+{
+  "phase": "PROD-3381..3420",
+  "required_prior_tag": "product-synthetic-calibration-readiness-gate-v0.1",
+  "mode": "controlled_real_session_pilot_packet_preparation",
+  "real_data_captured": false,
+  "pilot_preparation_only": true,
+  "human_review_required": true,
+  "privacy_controls_required": true,
+  "real_capture_still_blocked": true,
+  "blocked_actions": [
+    "real_session_data_capture",
+    "raw_private_data_storage",
+    "secret_or_credential_storage",
+    "unredacted_pii_storage",
+    "client_facing_value_claim",
+    "real_world_profit_claim",
+    "validated_savings_claim",
+    "validated_hallucination_reduction_claim",
+    "production_activation",
+    "automatic_memory_delete",
+    "gpt_memory_api_execution",
+    "commercial_package_pricing_claim"
+  ],
+  "allowed_actions": [
+    "controlled_real_session_pilot_packet_creation",
+    "pilot_scope_definition",
+    "human_reviewer_assignment_template",
+    "privacy_protocol_preparation",
+    "source_reference_protocol_preparation",
+    "pilot_acceptance_criteria_preparation"
+  ],
+  "recommended_next_phase": "PROD-3421..3460 - Controlled Real Session Pilot Readiness Gate"
+}

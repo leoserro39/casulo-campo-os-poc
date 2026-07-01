@@ -1,0 +1,98 @@
+{
+  "version": "controlled_real_session_pilot_packet.v0.1",
+  "phase": "PROD-3381..3420",
+  "purpose": "Prepare the first controlled real-session pilot packet without capturing real data.",
+  "real_data_captured": false,
+  "pilot_scope": {
+    "pilot_id": "PILOT-001-CONTROLLED-REAL-SESSION-PREPARATION",
+    "status": "PREPARATION_ONLY_NO_REAL_CAPTURE",
+    "target_session_count": 10,
+    "minimum_accepted_sessions": 5,
+    "allowed_chat_layers": [
+      "ANALYSIS_CHAT",
+      "PROJECT_CHAT",
+      "GOVERNANCE_CHAT",
+      "CALIBRATION_CHAT",
+      "EVIDENCE_AUDIT_CHAT"
+    ],
+    "excluded_chat_layers": [
+      "PRODUCTION_ACTIVATION_CHAT",
+      "CLIENT_CLAIM_CHAT",
+      "SECRET_HANDLING_CHAT"
+    ],
+    "comparison_modes": [
+      "PURE_CHAT_BASELINE",
+      "CASULO_EXOCORTEX_ASSISTED"
+    ]
+  },
+  "required_exit_criteria": [
+    "privacy_review_passed",
+    "pii_redaction_passed",
+    "secret_scan_passed",
+    "source_refs_only_confirmed",
+    "human_reviewer_assigned",
+    "claim_boundary_confirmed",
+    "baseline_vs_exocortex_protocol_confirmed",
+    "dataset_acceptance_gate_defined",
+    "no_client_facing_claim_confirmed",
+    "no_production_activation_confirmed"
+  ],
+  "human_review": {
+    "required": true,
+    "reviewer_status": "not_assigned_template_only",
+    "reviewer_must_confirm": [
+      "source references only",
+      "PII redaction",
+      "secret scan",
+      "claim boundary",
+      "decision gate",
+      "dataset acceptance or rejection"
+    ]
+  },
+  "privacy_protocol": {
+    "source_refs_only": true,
+    "raw_private_data_allowed": false,
+    "secrets_allowed": false,
+    "unredacted_pii_allowed": false
+  },
+  "dataset_acceptance": {
+    "default_gate": "HOLD_PILOT_PREPARATION_NO_REAL_CAPTURE",
+    "acceptance_requires": [
+      "privacy_review_passed",
+      "pii_redaction_passed",
+      "secret_scan_passed",
+      "source_refs_only_confirmed",
+      "human_reviewer_assigned",
+      "claim_boundary_confirmed",
+      "baseline_vs_exocortex_protocol_confirmed",
+      "dataset_acceptance_gate_defined",
+      "no_client_facing_claim_confirmed",
+      "no_production_activation_confirmed"
+    ],
+    "record_count": 0
+  },
+  "claim_boundary": "Pilot packet preparation only. No real session data captured. No real-world or client-facing claim.",
+  "allowed_actions": [
+    "controlled_real_session_pilot_packet_creation",
+    "pilot_scope_definition",
+    "human_reviewer_assignment_template",
+    "privacy_protocol_preparation",
+    "source_reference_protocol_preparation",
+    "pilot_acceptance_criteria_preparation"
+  ],
+  "blocked_actions": [
+    "real_session_data_capture",
+    "raw_private_data_storage",
+    "secret_or_credential_storage",
+    "unredacted_pii_storage",
+    "client_facing_value_claim",
+    "real_world_profit_claim",
+    "validated_savings_claim",
+    "validated_hallucination_reduction_claim",
+    "production_activation",
+    "automatic_memory_delete",
+    "gpt_memory_api_execution",
+    "commercial_package_pricing_claim"
+  ],
+  "recommended_next_phase": "PROD-3421..3460 - Controlled Real Session Pilot Readiness Gate"
+}
