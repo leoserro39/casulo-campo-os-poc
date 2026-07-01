@@ -1,0 +1,30 @@
+{
+  "version": "ponto_zero_measurement_readiness_report.v0.1",
+  "phase": "PROD-6301..6340",
+  "generated_at": "2026-07-01T17:36:32.363369+00:00",
+  "status": "PASS",
+  "measurement_layer_ready": true,
+  "pre_external_telemetry_ready": true,
+  "external_indices_ready": false,
+  "ohri_defined": true,
+  "oqi_defined": true,
+  "zpi_defined": true,
+  "state_payload_schema_ready": true,
+  "candidate_tokens_ready": true,
+  "candidate_tokens_canonical": false,
+  "anti_overreach_policy_ready": true,
+  "telemetry_matrix_row_count": 36,
+  "telemetry_matrix_csv": "product/reports/ponto_zero_telemetry_matrix_batch01_hardened_v0_1.csv",
+  "telemetry_matrix_json": "product/reports/ponto_zero_telemetry_matrix_batch01_hardened_v0_1.json",
+  "requires_next_external_evaluation": true,
+  "blocked_until_external_evaluation": [
+    "validated_model_gain_claim",
+    "validated_hallucination_reduction_claim",
+    "domain_validation_claim",
+    "dataset_acceptance",
+    "client_evidence",
+    "production_evidence",
+    "commercial_claim",
+    "canonical_token_acceptance"
+  ]
+}

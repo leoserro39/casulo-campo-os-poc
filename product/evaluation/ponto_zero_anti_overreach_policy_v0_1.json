@@ -1,0 +1,22 @@
+{
+  "version": "ponto_zero_anti_overreach_policy.v0.1",
+  "purpose": "Prevent evidence gaps, uncertain states or model language from becoming unauthorized claims or actions.",
+  "hard_rules": [
+    "If evidence is thin, no strong claim.",
+    "If rollback is absent, no production activation.",
+    "If gate status is BLOCKED or HOLD_HUMAN_REVIEW, no real-world side effect.",
+    "If output claims dataset acceptance, client evidence, production readiness or commercial value, block.",
+    "If state payload lacks provenance, mark audit incomplete.",
+    "If token cannot expand to state, evidence and gate, token remains non-canonical.",
+    "If evaluator has not scored the case, model gain claim remains blocked."
+  ],
+  "blocked_claims_until_future_gate": [
+    "validated_model_gain",
+    "validated_hallucination_reduction",
+    "domain_validation",
+    "dataset_acceptance",
+    "client_evidence",
+    "production_evidence",
+    "commercial_value"
+  ]
+}

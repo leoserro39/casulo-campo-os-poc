@@ -1,0 +1,29 @@
+{
+  "version": "ponto_zero_minimum_process_decision_update.v0.1",
+  "phase": "PROD-6301..6340",
+  "decision": "INSERT_PONTO_ZERO_MEASUREMENT_LAYER_BEFORE_EXTERNAL_EVALUATOR_EXECUTION",
+  "rationale": [
+    "External evaluator should score cases against telemetry and hallucination dimensions, not only generic quality dimensions.",
+    "The P0 telemetry matrix provides OHRI, OQI and ZPI definitions before external scoring.",
+    "Candidate tokens remain non-canonical until expansion fidelity and external evaluation are completed.",
+    "This improves the minimum process for real calibration without creating premature claims."
+  ],
+  "roadmap_change": {
+    "previous_next_phase": "PROD-6301..6340 - Domain Calibration External Evaluator Execution Gate",
+    "inserted_phase": "PROD-6301..6340 - Ponto Zero Telemetry and Operational Hallucination Measurement Packet",
+    "new_next_phase": "PROD-6341..6380 - Domain Calibration External Evaluator Execution Gate with Ponto Zero Metrics"
+  },
+  "claims_allowed": {
+    "technical_pipeline": true,
+    "capture_readiness": true,
+    "self_reported_behavioral_signal": true,
+    "pre_external_p0_telemetry_ready": true,
+    "validated_model_gain": false,
+    "validated_hallucination_reduction": false,
+    "canonical_token_acceptance": false,
+    "dataset_acceptance": false,
+    "client_evidence": false,
+    "production_evidence": false,
+    "commercial_claim": false
+  }
+}

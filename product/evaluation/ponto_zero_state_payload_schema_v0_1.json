@@ -1,0 +1,29 @@
+{
+  "version": "ponto_zero_state_payload_schema.v0.1",
+  "purpose": "Canonical minimum operational state payload before natural-language explanation.",
+  "required_fields": [
+    "state_payload_id",
+    "case_id",
+    "execution_id",
+    "scenario_id",
+    "domain",
+    "mode",
+    "risk_level",
+    "evidence_level",
+    "gate",
+    "allowed_actions",
+    "blocked_actions",
+    "required_review",
+    "provenance_refs",
+    "p0_candidate_tokens",
+    "expansion_required",
+    "claim_boundary"
+  ],
+  "policy": {
+    "payload_is_not_a_claim": true,
+    "payload_is_not_dataset_acceptance": true,
+    "payload_is_not_client_evidence": true,
+    "payload_is_not_production_evidence": true,
+    "payload_requires_external_evaluation_for_gain_claim": true
+  }
+}

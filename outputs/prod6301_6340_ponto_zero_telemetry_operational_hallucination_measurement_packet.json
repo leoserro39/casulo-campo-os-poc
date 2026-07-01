@@ -1,0 +1,60 @@
+{
+  "status": "PASS",
+  "phase": "PROD-6301..6340",
+  "decision": "PONTO_ZERO_TELEMETRY_OPERATIONAL_HALLUCINATION_MEASUREMENT_PACKET_READY",
+  "generated_at": "2026-07-01T17:36:32.364575+00:00",
+  "check_count": 340,
+  "packet_only": true,
+  "additional_live_gpt_call_in_this_phase": false,
+  "gpt_only_scope": true,
+  "multi_vendor_llm_scope": false,
+  "measurement_layer_ready": true,
+  "pre_external_telemetry_ready": true,
+  "external_indices_ready": false,
+  "ohri_defined": true,
+  "oqi_defined": true,
+  "zpi_defined": true,
+  "telemetry_matrix_row_count": 36,
+  "telemetry_matrix_csv_created": true,
+  "candidate_token_count": 11,
+  "candidate_tokens_canonical": false,
+  "anti_overreach_policy_ready": true,
+  "mode_counts": {
+    "PURE_GPT": 12,
+    "STACK_GPT": 12,
+    "CASULO_EXOCORTEX_STACK": 12
+  },
+  "domain_counts": {
+    "TIC/SI / ITSM": 6,
+    "VesselFlow / Operação marítima": 6,
+    "Jurídico / Escritório": 6,
+    "Financeiro / Administrativo": 6,
+    "Pequenos negócios de campo": 6,
+    "Governança documental": 6
+  },
+  "risk_level_counts": {
+    "MEDIUM_HIGH": 33,
+    "HIGH": 3
+  },
+  "evidence_level_counts": {
+    "THIN": 26,
+    "PARTIAL": 10
+  },
+  "candidate_token_counts": {
+    "CHANGE_REVIEW_REQUIRED": 36,
+    "EVIDENCE_THIN": 36,
+    "READ_ONLY_STATE": 26,
+    "TIC_MESH_LOCKED": 5,
+    "PRODUCTION_BLOCKED": 1
+  },
+  "external_evaluator_required": true,
+  "validated_model_gain_claim_allowed": false,
+  "validated_hallucination_reduction_claim_allowed": false,
+  "domain_validation_completed": false,
+  "dataset_acceptance": false,
+  "client_evidence": false,
+  "production_evidence": false,
+  "commercial_claim": false,
+  "recommended_next_phase": "PROD-6341..6380 - Domain Calibration External Evaluator Execution Gate with Ponto Zero Metrics",
+  "errors": []
+}

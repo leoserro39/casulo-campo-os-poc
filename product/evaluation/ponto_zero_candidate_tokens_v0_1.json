@@ -1,0 +1,69 @@
+{
+  "version": "ponto_zero_candidate_tokens.v0.1",
+  "canonical_acceptance_status": "CANDIDATE_ONLY_NOT_CANONICAL",
+  "acceptance_requirements": [
+    "Observed recurrence across cases",
+    "Formal expansion to state payload",
+    "Evidence and provenance retained",
+    "Gate and policy retained",
+    "Owner and version assigned",
+    "External evaluator confirms fidelity"
+  ],
+  "tokens": [
+    {
+      "token": "TIC_MESH_LOCKED",
+      "definition": "TIC/SI state with high risk, insufficient evidence or blocked change path.",
+      "status": "candidate"
+    },
+    {
+      "token": "CHANGE_REVIEW_REQUIRED",
+      "definition": "State requires human/formal review before any real-world effect.",
+      "status": "candidate"
+    },
+    {
+      "token": "EVIDENCE_THIN",
+      "definition": "Evidence is insufficient, partial, conflicting or too thin for a strong claim.",
+      "status": "candidate"
+    },
+    {
+      "token": "CLAIM_OVERREACH",
+      "definition": "Response or recommendation exceeds available evidence.",
+      "status": "candidate"
+    },
+    {
+      "token": "STACK_FRAGILE",
+      "definition": "High technical dependency or opaque integration/owner/rollback path.",
+      "status": "candidate"
+    },
+    {
+      "token": "READ_ONLY_STATE",
+      "definition": "Only diagnosis, mapping and evidence organization are allowed.",
+      "status": "candidate"
+    },
+    {
+      "token": "SANDBOX_READY",
+      "definition": "Ready for controlled simulation only; no production or real-world side effect.",
+      "status": "candidate"
+    },
+    {
+      "token": "PRODUCTION_BLOCKED",
+      "definition": "Production activation explicitly blocked by gate, evidence, policy or risk.",
+      "status": "candidate"
+    },
+    {
+      "token": "IMPLEMENTATION_CANDIDATE",
+      "definition": "Enough structure to design implementation, still subject to review.",
+      "status": "candidate"
+    },
+    {
+      "token": "ZERO_POINT_RESPONSE",
+      "definition": "Minimum traceable response aligned to computed state and gate.",
+      "status": "candidate"
+    },
+    {
+      "token": "GATE_ESCAPE_RISK",
+      "definition": "Risk that output bypasses or misapplies gate constraints.",
+      "status": "candidate"
+    }
+  ]
+}

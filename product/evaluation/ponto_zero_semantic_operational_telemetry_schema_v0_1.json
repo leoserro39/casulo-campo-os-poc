@@ -1,0 +1,33 @@
+{
+  "version": "ponto_zero_semantic_operational_telemetry_schema.v0.1",
+  "purpose": "Telemetry table for semantic-operational measurement, hallucination risk, operational quality and zero-point readiness.",
+  "row_level": "one row per model execution",
+  "dimensions": [
+    "evidence_density",
+    "inference_load",
+    "semantic_ambiguity",
+    "operational_risk",
+    "rollback_absence_risk",
+    "owner_clarity",
+    "stack_dependency",
+    "gate_alignment",
+    "claim_overreach",
+    "unsafe_action_risk",
+    "false_memory_risk",
+    "over_review_signal",
+    "under_review_signal",
+    "audit_completeness",
+    "semantic_variance_group_key",
+    "compressibility",
+    "expansion_fidelity",
+    "energy_proxy",
+    "operational_hallucination_risk_index",
+    "operational_quality_index",
+    "zero_point_index"
+  ],
+  "source_policy": {
+    "pre_external_proxy_fields": "Derived from structured model outputs and execution telemetry. Signal only.",
+    "external_fields": "Filled after external/human evaluation.",
+    "final_indices": "Only accepted after external evaluator execution and review gate."
+  }
+}
