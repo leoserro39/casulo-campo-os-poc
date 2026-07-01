@@ -1,0 +1,260 @@
+{
+  "version": "controlled_pilot_manual_dry_run_session_final_human_go_no_go_template.v0.1",
+  "phase": "PROD-4861..4900",
+  "status": "FINAL_HUMAN_GO_NO_GO_TEMPLATE_ONLY_NO_SESSION_EXECUTION",
+  "real_data_captured_in_this_phase": false,
+  "real_candidate_inserted": false,
+  "real_candidate_accepted_to_dataset": false,
+  "fields": {
+    "final_go_no_go_packet_id": {
+      "value": null,
+      "required": true,
+      "storage_rule": "reference_only_or_sanitized_placeholder"
+    },
+    "phase": {
+      "value": null,
+      "required": true,
+      "storage_rule": "reference_only_or_sanitized_placeholder"
+    },
+    "human_release_readiness_gate_ref": {
+      "value": null,
+      "required": true,
+      "storage_rule": "reference_only_or_sanitized_placeholder"
+    },
+    "human_release_packet_ref": {
+      "value": null,
+      "required": true,
+      "storage_rule": "reference_only_or_sanitized_placeholder"
+    },
+    "human_release_template_ref": {
+      "value": null,
+      "required": true,
+      "storage_rule": "reference_only_or_sanitized_placeholder"
+    },
+    "human_release_checklist_ref": {
+      "value": null,
+      "required": true,
+      "storage_rule": "reference_only_or_sanitized_placeholder"
+    },
+    "hold_readiness_gate_ref": {
+      "value": null,
+      "required": true,
+      "storage_rule": "reference_only_or_sanitized_placeholder"
+    },
+    "hold_packet_ref": {
+      "value": null,
+      "required": true,
+      "storage_rule": "reference_only_or_sanitized_placeholder"
+    },
+    "execution_plan_readiness_gate_ref": {
+      "value": null,
+      "required": true,
+      "storage_rule": "reference_only_or_sanitized_placeholder"
+    },
+    "execution_plan_packet_ref": {
+      "value": null,
+      "required": true,
+      "storage_rule": "reference_only_or_sanitized_placeholder"
+    },
+    "operator_start_readiness_gate_ref": {
+      "value": null,
+      "required": true,
+      "storage_rule": "reference_only_or_sanitized_placeholder"
+    },
+    "operator_start_packet_ref": {
+      "value": null,
+      "required": true,
+      "storage_rule": "reference_only_or_sanitized_placeholder"
+    },
+    "precheck_readiness_gate_ref": {
+      "value": null,
+      "required": true,
+      "storage_rule": "reference_only_or_sanitized_placeholder"
+    },
+    "precheck_packet_ref": {
+      "value": null,
+      "required": true,
+      "storage_rule": "reference_only_or_sanitized_placeholder"
+    },
+    "final_gate_ref": {
+      "value": null,
+      "required": true,
+      "storage_rule": "reference_only_or_sanitized_placeholder"
+    },
+    "review_packet_ref": {
+      "value": null,
+      "required": true,
+      "storage_rule": "reference_only_or_sanitized_placeholder"
+    },
+    "observation_packet_ref": {
+      "value": null,
+      "required": true,
+      "storage_rule": "reference_only_or_sanitized_placeholder"
+    },
+    "execution_log_shell_ref": {
+      "value": null,
+      "required": true,
+      "storage_rule": "reference_only_or_sanitized_placeholder"
+    },
+    "session_packet_ref": {
+      "value": null,
+      "required": true,
+      "storage_rule": "reference_only_or_sanitized_placeholder"
+    },
+    "session_runbook_ref": {
+      "value": null,
+      "required": true,
+      "storage_rule": "reference_only_or_sanitized_placeholder"
+    },
+    "dry_run_shell_ref": {
+      "value": null,
+      "required": true,
+      "storage_rule": "reference_only_or_sanitized_placeholder"
+    },
+    "dry_run_form_ref": {
+      "value": null,
+      "required": true,
+      "storage_rule": "reference_only_or_sanitized_placeholder"
+    },
+    "operator_ref": {
+      "value": null,
+      "required": true,
+      "storage_rule": "reference_only_or_sanitized_placeholder"
+    },
+    "human_reviewer_ref": {
+      "value": null,
+      "required": true,
+      "storage_rule": "reference_only_or_sanitized_placeholder"
+    },
+    "second_reviewer_ref": {
+      "value": null,
+      "required": true,
+      "storage_rule": "reference_only_or_sanitized_placeholder"
+    },
+    "source_reference_refs": {
+      "value": null,
+      "required": true,
+      "storage_rule": "reference_only_or_sanitized_placeholder"
+    },
+    "privacy_review_ref": {
+      "value": null,
+      "required": true,
+      "storage_rule": "reference_only_or_sanitized_placeholder"
+    },
+    "pii_redaction_ref": {
+      "value": null,
+      "required": true,
+      "storage_rule": "reference_only_or_sanitized_placeholder"
+    },
+    "secret_scan_ref": {
+      "value": null,
+      "required": true,
+      "storage_rule": "reference_only_or_sanitized_placeholder"
+    },
+    "evidence_packet_ref": {
+      "value": null,
+      "required": true,
+      "storage_rule": "reference_only_or_sanitized_placeholder"
+    },
+    "manual_observation_refs": {
+      "value": null,
+      "required": true,
+      "storage_rule": "reference_only_or_sanitized_placeholder"
+    },
+    "reviewer_notes_ref": {
+      "value": null,
+      "required": true,
+      "storage_rule": "reference_only_or_sanitized_placeholder"
+    },
+    "claim_boundary_review": {
+      "value": null,
+      "required": true,
+      "storage_rule": "reference_only_or_sanitized_placeholder"
+    },
+    "dataset_hold_reason": {
+      "value": null,
+      "required": true,
+      "storage_rule": "reference_only_or_sanitized_placeholder"
+    },
+    "blocked_action_review": {
+      "value": null,
+      "required": true,
+      "storage_rule": "reference_only_or_sanitized_placeholder"
+    },
+    "abort_trigger_review": {
+      "value": null,
+      "required": true,
+      "storage_rule": "reference_only_or_sanitized_placeholder"
+    },
+    "start_command_scope": {
+      "value": null,
+      "required": true,
+      "storage_rule": "reference_only_or_sanitized_placeholder"
+    },
+    "manual_execution_scope": {
+      "value": null,
+      "required": true,
+      "storage_rule": "reference_only_or_sanitized_placeholder"
+    },
+    "go_no_go_decision": {
+      "value": null,
+      "required": true,
+      "storage_rule": "reference_only_or_sanitized_placeholder"
+    },
+    "go_no_go_reason": {
+      "value": null,
+      "required": true,
+      "storage_rule": "reference_only_or_sanitized_placeholder"
+    },
+    "conditional_release_constraints": {
+      "value": null,
+      "required": true,
+      "storage_rule": "reference_only_or_sanitized_placeholder"
+    },
+    "post_go_no_go_readiness_gate_required": {
+      "value": null,
+      "required": true,
+      "storage_rule": "reference_only_or_sanitized_placeholder"
+    },
+    "next_allowed_phase": {
+      "value": null,
+      "required": true,
+      "storage_rule": "reference_only_or_sanitized_placeholder"
+    },
+    "stop_before_execution_confirmation": {
+      "value": null,
+      "required": true,
+      "storage_rule": "reference_only_or_sanitized_placeholder"
+    },
+    "roadmap_ref": {
+      "value": null,
+      "required": true,
+      "storage_rule": "reference_only_or_sanitized_placeholder"
+    },
+    "signature_placeholder": {
+      "value": null,
+      "required": true,
+      "storage_rule": "reference_only_or_sanitized_placeholder"
+    }
+  },
+  "default_gate": "HOLD_FINAL_HUMAN_GO_NO_GO_NO_SESSION_EXECUTION",
+  "blocked_actions": [
+    "start_command_execution",
+    "manual_session_execution",
+    "automatic_real_session_capture",
+    "real_candidate_insert",
+    "real_candidate_dataset_acceptance",
+    "dataset_acceptance_without_human_review",
+    "raw_private_data_storage",
+    "secret_or_credential_storage",
+    "unredacted_pii_storage",
+    "client_facing_value_claim",
+    "real_world_profit_claim",
+    "validated_savings_claim",
+    "validated_hallucination_reduction_claim",
+    "production_activation",
+    "automatic_memory_delete",
+    "gpt_memory_api_execution",
+    "commercial_package_pricing_claim"
+  ]
+}

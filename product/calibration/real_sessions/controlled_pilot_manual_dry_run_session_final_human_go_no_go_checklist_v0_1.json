@@ -1,0 +1,816 @@
+{
+  "version": "controlled_pilot_manual_dry_run_session_final_human_go_no_go_checklist.v0.1",
+  "phase": "PROD-4861..4900",
+  "status": "CHECKLIST_TEMPLATE_ONLY_NO_SESSION_EXECUTION",
+  "real_data_captured_in_this_phase": false,
+  "real_candidate_inserted": false,
+  "real_candidate_accepted_to_dataset": false,
+  "checks": [
+    {
+      "id": "GNG-001",
+      "name": "prior_human_release_readiness_gate_passed",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "GNG-002",
+      "name": "human_release_readiness_gate_present",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "GNG-003",
+      "name": "human_release_packet_present",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "GNG-004",
+      "name": "human_release_template_present",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "GNG-005",
+      "name": "human_release_checklist_present",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "GNG-006",
+      "name": "roadmap_doc_present",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "GNG-007",
+      "name": "roadmap_json_present",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "GNG-008",
+      "name": "hold_readiness_gate_present",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "GNG-009",
+      "name": "hold_packet_present",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "GNG-010",
+      "name": "execution_plan_readiness_gate_present",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "GNG-011",
+      "name": "execution_plan_packet_present",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "GNG-012",
+      "name": "operator_start_readiness_gate_present",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "GNG-013",
+      "name": "operator_start_packet_present",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "GNG-014",
+      "name": "precheck_readiness_gate_present",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "GNG-015",
+      "name": "precheck_packet_present",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "GNG-016",
+      "name": "final_gate_present",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "GNG-017",
+      "name": "final_packet_present",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "GNG-018",
+      "name": "review_gate_present",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "GNG-019",
+      "name": "review_packet_present",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "GNG-020",
+      "name": "observation_gate_present",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "GNG-021",
+      "name": "observation_packet_present",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "GNG-022",
+      "name": "log_gate_present",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "GNG-023",
+      "name": "log_shell_present",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "GNG-024",
+      "name": "execution_gate_present",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "GNG-025",
+      "name": "session_packet_present",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "GNG-026",
+      "name": "session_runbook_present",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "GNG-027",
+      "name": "dry_run_shell_present",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "GNG-028",
+      "name": "dry_run_form_present",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "GNG-029",
+      "name": "validator_present",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "GNG-030",
+      "name": "schema_present",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "GNG-031",
+      "name": "real_dataset_empty",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "GNG-032",
+      "name": "reviewer_queue_empty",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "GNG-033",
+      "name": "go_no_go_sections_present",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "GNG-034",
+      "name": "go_no_go_fields_present",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "GNG-035",
+      "name": "go_no_go_checks_present",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "GNG-036",
+      "name": "go_no_go_template_fields_present",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "GNG-037",
+      "name": "go_no_go_checklist_items_present",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "GNG-038",
+      "name": "release_sections_present",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "GNG-039",
+      "name": "release_fields_present",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "GNG-040",
+      "name": "release_checks_present",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "GNG-041",
+      "name": "roadmap_current_phase_done",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "GNG-042",
+      "name": "roadmap_next_phase_current",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "GNG-043",
+      "name": "roadmap_following_phase_next",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "GNG-044",
+      "name": "operator_ref_required",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "GNG-045",
+      "name": "human_reviewer_ref_required",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "GNG-046",
+      "name": "second_reviewer_ref_required",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "GNG-047",
+      "name": "source_reference_refs_required",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "GNG-048",
+      "name": "privacy_review_ref_required",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "GNG-049",
+      "name": "pii_redaction_ref_required",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "GNG-050",
+      "name": "secret_scan_ref_required",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "GNG-051",
+      "name": "evidence_packet_ref_required",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "GNG-052",
+      "name": "manual_observation_refs_required",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "GNG-053",
+      "name": "reviewer_notes_ref_required",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "GNG-054",
+      "name": "claim_boundary_review_required",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "GNG-055",
+      "name": "dataset_hold_reason_required",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "GNG-056",
+      "name": "blocked_action_review_required",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "GNG-057",
+      "name": "abort_trigger_review_required",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "GNG-058",
+      "name": "start_command_scope_required",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "GNG-059",
+      "name": "manual_execution_scope_required",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "GNG-060",
+      "name": "go_no_go_decision_required",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "GNG-061",
+      "name": "go_no_go_reason_required",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "GNG-062",
+      "name": "conditional_release_constraints_required",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "GNG-063",
+      "name": "post_go_no_go_readiness_gate_required",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "GNG-064",
+      "name": "next_allowed_phase_required",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "GNG-065",
+      "name": "stop_before_execution_confirmation_required",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "GNG-066",
+      "name": "roadmap_ref_required",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "GNG-067",
+      "name": "signature_placeholder_required",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "GNG-068",
+      "name": "final_go_no_go_packet_only_confirmed",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "GNG-069",
+      "name": "final_go_no_go_packet_is_not_execution",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "GNG-070",
+      "name": "post_go_no_go_readiness_gate_required_before_execution",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "GNG-071",
+      "name": "start_command_still_blocked",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "GNG-072",
+      "name": "manual_session_execution_still_blocked",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "GNG-073",
+      "name": "automatic_capture_blocked",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "GNG-074",
+      "name": "real_candidate_insert_blocked",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "GNG-075",
+      "name": "dataset_acceptance_blocked",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "GNG-076",
+      "name": "raw_private_data_blocked",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "GNG-077",
+      "name": "secrets_blocked",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "GNG-078",
+      "name": "unredacted_pii_blocked",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "GNG-079",
+      "name": "client_claim_blocked",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "GNG-080",
+      "name": "production_activation_blocked",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "GNG-081",
+      "name": "human_review_required",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "GNG-082",
+      "name": "dual_review_required",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "GNG-083",
+      "name": "operator_acknowledgement_required",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "GNG-084",
+      "name": "reviewer_acknowledgement_required",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "GNG-085",
+      "name": "go_decision_is_placeholder_only",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "GNG-086",
+      "name": "no_go_decision_is_placeholder_only",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "GNG-087",
+      "name": "conditional_go_is_placeholder_only",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "GNG-088",
+      "name": "go_no_go_does_not_override_data_boundary",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "GNG-089",
+      "name": "go_no_go_does_not_override_claim_boundary",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "GNG-090",
+      "name": "go_no_go_does_not_override_dataset_hold",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "GNG-091",
+      "name": "go_no_go_does_not_override_privacy_hold",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "GNG-092",
+      "name": "go_no_go_does_not_override_secret_hold",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "GNG-093",
+      "name": "go_no_go_does_not_override_pii_hold",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "GNG-094",
+      "name": "no_real_value_claim",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "GNG-095",
+      "name": "no_validated_hallucination_claim",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "GNG-096",
+      "name": "no_commercial_pricing_claim",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "GNG-097",
+      "name": "no_gpt_memory_api_execution",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "GNG-098",
+      "name": "no_automatic_memory_delete",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "GNG-099",
+      "name": "controlled_pilot_boundary_confirmed",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "GNG-100",
+      "name": "roadmap_updated",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "GNG-101",
+      "name": "go_no_go_readiness_gate_preparation_only",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "GNG-102",
+      "name": "execution_still_requires_future_gate",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "GNG-103",
+      "name": "start_command_still_requires_future_gate",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "GNG-104",
+      "name": "real_candidate_intake_still_requires_future_gate",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "GNG-105",
+      "name": "dataset_acceptance_still_requires_future_gate",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "GNG-106",
+      "name": "manual_execution_window_not_set",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "GNG-107",
+      "name": "operator_identity_placeholder_only",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "GNG-108",
+      "name": "reviewer_identity_placeholder_only",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "GNG-109",
+      "name": "go_no_go_packet_sanitized_placeholders_only",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "GNG-110",
+      "name": "final_decision_packet_does_not_capture_data",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "GNG-111",
+      "name": "final_decision_packet_does_not_insert_candidate",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "GNG-112",
+      "name": "final_decision_packet_does_not_accept_dataset",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "GNG-113",
+      "name": "final_decision_packet_does_not_start_session",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "GNG-114",
+      "name": "final_decision_packet_does_not_execute_command",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "GNG-115",
+      "name": "final_decision_packet_requires_next_readiness_gate",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "GNG-116",
+      "name": "go_no_go_packet_has_explicit_blocked_actions",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "GNG-117",
+      "name": "go_no_go_packet_has_allowed_actions",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "GNG-118",
+      "name": "go_no_go_packet_has_boundary_claim",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "GNG-119",
+      "name": "go_no_go_packet_has_dataset_state",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "GNG-120",
+      "name": "go_no_go_packet_has_next_phase",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "GNG-121",
+      "name": "go_no_go_packet_has_stop_before_execution",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "GNG-122",
+      "name": "go_no_go_packet_has_signature_placeholder",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "GNG-123",
+      "name": "go_no_go_packet_has_dual_reviewer_requirement",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "GNG-124",
+      "name": "go_no_go_packet_has_abort_trigger_review",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "GNG-125",
+      "name": "go_no_go_packet_has_privacy_review",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "GNG-126",
+      "name": "go_no_go_packet_has_secret_scan",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "GNG-127",
+      "name": "go_no_go_packet_has_pii_redaction",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "GNG-128",
+      "name": "go_no_go_packet_has_source_reference",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "GNG-129",
+      "name": "go_no_go_packet_has_evidence_reference",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "GNG-130",
+      "name": "go_no_go_packet_has_claim_boundary_review",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "GNG-131",
+      "name": "go_no_go_packet_has_conditional_constraints",
+      "required": true,
+      "status": "PENDING"
+    }
+  ],
+  "default_gate": "HOLD_FINAL_HUMAN_GO_NO_GO_NO_SESSION_EXECUTION",
+  "blocked_actions": [
+    "start_command_execution",
+    "manual_session_execution",
+    "automatic_real_session_capture",
+    "real_candidate_insert",
+    "real_candidate_dataset_acceptance",
+    "dataset_acceptance_without_human_review",
+    "raw_private_data_storage",
+    "secret_or_credential_storage",
+    "unredacted_pii_storage",
+    "client_facing_value_claim",
+    "real_world_profit_claim",
+    "validated_savings_claim",
+    "validated_hallucination_reduction_claim",
+    "production_activation",
+    "automatic_memory_delete",
+    "gpt_memory_api_execution",
+    "commercial_package_pricing_claim"
+  ]
+}
