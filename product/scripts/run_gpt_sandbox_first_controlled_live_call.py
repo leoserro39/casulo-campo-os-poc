@@ -1,28 +1,8 @@
 #!/usr/bin/env python3
-"""
-CASULO GPT sandbox first controlled live call runner.
-
-This runner is live-ready but blocked by default.
-
-It requires all of the following for a future controlled live call:
-- --apply
-- CASULO_GPT_LIVE_AUTH=YES
-- OPENAI_API_KEY available in environment
-- explicit mode: PURE_GPT, STACK_GPT, or CASULO_EXOCORTEX_STACK
-
-This runner does NOT:
-- store API keys
-- print secrets
-- call GPT Memory API
-- write to dataset
-- insert real candidates
-- activate production
-"""
 import argparse
 import hashlib
 import json
 import os
-import sys
 import time
 from pathlib import Path
 from datetime import datetime, timezone
@@ -47,7 +27,7 @@ def sha256_text(value):
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("--mode", required=True, choices=sorted(ALLOWED_MODES))
-    parser.add_argument("--prompt", default="CASULO controlled sandbox test. Return a concise acknowledgement.")
+    parser.add_argument("--prompt", default="CASULO controlled sandbox test. Return only: CASULO_GPT_SANDBOX_ACK.")
     parser.add_argument("--apply", action="store_true", default=False)
     args = parser.parse_args()
 
@@ -58,9 +38,10 @@ def main():
             "dry_run": True,
             "live_gpt_call_execution": False,
             "real_gpt_provider_call": False,
+            "successful_live_gpt_response": False,
             "openai_api_key_storage": False,
             "gpt_memory_api_execution": False,
-            "reason": "Dry-run only. Use --apply only after explicit future gate.",
+            "reason": "Dry-run only. Use --apply only after explicit execution gate.",
             "prompt_hash": sha256_text(args.prompt),
             "next_required_phase": "PROD-5501..5540 - GPT Sandbox First Controlled Live Call Execution Gate"
         }
@@ -69,61 +50,121 @@ def main():
         return 0
 
     if os.environ.get("CASULO_GPT_LIVE_AUTH") != "YES":
-        raise SystemExit("BLOCKED: CASULO_GPT_LIVE_AUTH=YES is required by future execution gate.")
+        result = {
+            "status": "FAIL",
+            "mode": args.mode,
+            "dry_run": False,
+            "live_gpt_call_execution": False,
+            "real_gpt_provider_call": False,
+            "successful_live_gpt_response": False,
+            "openai_api_key_storage": False,
+            "gpt_memory_api_execution": False,
+            "blocked_reason": "CASULO_GPT_LIVE_AUTH=YES is required.",
+            "prompt_hash": sha256_text(args.prompt)
+        }
+        write_json(LIVE_LOG, result)
+        print(json.dumps(result, indent=2, ensure_ascii=False))
+        return 1
 
     api_key = os.environ.get("OPENAI_API_KEY")
     if not api_key:
-        raise SystemExit("BLOCKED: OPENAI_API_KEY must be present in environment for future live call. It will not be stored.")
+        result = {
+            "status": "FAIL",
+            "mode": args.mode,
+            "dry_run": False,
+            "live_gpt_call_execution": False,
+            "real_gpt_provider_call": False,
+            "successful_live_gpt_response": False,
+            "openai_api_key_storage": False,
+            "gpt_memory_api_execution": False,
+            "blocked_reason": "OPENAI_API_KEY missing in environment. It will not be stored.",
+            "prompt_hash": sha256_text(args.prompt)
+        }
+        write_json(LIVE_LOG, result)
+        print(json.dumps(result, indent=2, ensure_ascii=False))
+        return 1
 
     payload_template = read_json(PAYLOAD_TEMPLATE)
+    model = os.environ.get("OPENAI_MODEL", "gpt-5.5-2026-04-23")
     started = time.time()
 
     try:
         from openai import OpenAI
+
+        client = OpenAI(api_key=api_key)
+        messages = [
+            {
+                "role": "system",
+                "content": "You are running a CASULO controlled sandbox test. Return only the requested acknowledgement. Do not store memory."
+            },
+            {
+                "role": "user",
+                "content": args.prompt
+            }
+        ]
+
+        response = client.responses.create(
+            model=model,
+            input=messages,
+            max_output_tokens=160,
+        )
+
+        elapsed_ms = int((time.time() - started) * 1000)
+        output_text = getattr(response, "output_text", "")
+
+        result = {
+            "status": "PASS",
+            "mode": args.mode,
+            "dry_run": False,
+            "live_gpt_call_execution": True,
+            "real_gpt_provider_call": True,
+            "successful_live_gpt_response": True,
+            "openai_api_key_storage": False,
+            "gpt_memory_api_execution": False,
+            "provider": "openai_gpt",
+            "model": model,
+            "prompt_hash": sha256_text(args.prompt),
+            "output_hash": sha256_text(output_text),
+            "output_preview": output_text[:500],
+            "latency_ms": elapsed_ms,
+            "dataset_write": False,
+            "real_candidate_inserted": False,
+            "real_candidate_accepted_to_dataset": False,
+            "payload_template_version": payload_template.get("version"),
+            "post_call_review_required": True,
+            "generated_at": datetime.now(timezone.utc).isoformat()
+        }
+
+        write_json(LIVE_LOG, result)
+        print(json.dumps(result, indent=2, ensure_ascii=False))
+        return 0
+
     except Exception as exc:
-        raise SystemExit("BLOCKED: openai package is not available or import failed: " + str(exc))
-
-    client = OpenAI(api_key=api_key)
-    model = os.environ.get("OPENAI_MODEL", "gpt-4.1-mini")
-
-    messages = [
-        {"role": "system", "content": "You are running a CASULO controlled sandbox test. Do not make external claims. Do not store memory."},
-        {"role": "user", "content": args.prompt},
-    ]
-
-    response = client.responses.create(
-        model=model,
-        input=messages,
-        max_output_tokens=160,
-    )
-
-    elapsed_ms = int((time.time() - started) * 1000)
-    output_text = getattr(response, "output_text", "")
-
-    result = {
-        "status": "PASS",
-        "mode": args.mode,
-        "dry_run": False,
-        "live_gpt_call_execution": True,
-        "real_gpt_provider_call": True,
-        "openai_api_key_storage": False,
-        "gpt_memory_api_execution": False,
-        "provider": "openai_gpt",
-        "model": model,
-        "prompt_hash": sha256_text(args.prompt),
-        "output_hash": sha256_text(output_text),
-        "output_preview": output_text[:500],
-        "latency_ms": elapsed_ms,
-        "dataset_write": False,
-        "real_candidate_inserted": False,
-        "real_candidate_accepted_to_dataset": False,
-        "payload_template_version": payload_template.get("version"),
-        "post_call_review_required": True,
-    }
-
-    write_json(LIVE_LOG, result)
-    print(json.dumps(result, indent=2, ensure_ascii=False))
-    return 0
+        elapsed_ms = int((time.time() - started) * 1000)
+        result = {
+            "status": "FAIL",
+            "mode": args.mode,
+            "dry_run": False,
+            "live_gpt_call_execution": True,
+            "real_gpt_provider_call": True,
+            "successful_live_gpt_response": False,
+            "openai_api_key_storage": False,
+            "gpt_memory_api_execution": False,
+            "provider": "openai_gpt",
+            "model": model,
+            "prompt_hash": sha256_text(args.prompt),
+            "provider_error_type": type(exc).__name__,
+            "provider_error_message": str(exc)[:1000],
+            "latency_ms": elapsed_ms,
+            "dataset_write": False,
+            "real_candidate_inserted": False,
+            "real_candidate_accepted_to_dataset": False,
+            "post_call_review_required": True,
+            "generated_at": datetime.now(timezone.utc).isoformat()
+        }
+        write_json(LIVE_LOG, result)
+        print(json.dumps(result, indent=2, ensure_ascii=False))
+        return 1
 
 if __name__ == "__main__":
     raise SystemExit(main())

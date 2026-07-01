@@ -1,0 +1,21 @@
+{
+  "status": "PASS",
+  "phase": "PROD-5541..5580",
+  "decision": "GPT_SANDBOX_FIRST_CONTROLLED_LIVE_CALL_EXECUTION_RUN_COMPLETED_PENDING_POST_CALL_REVIEW",
+  "generated_at": "2026-07-01T14:39:09.739412+00:00",
+  "gpt_only_scope": true,
+  "multi_vendor_llm_scope": false,
+  "mode": "PURE_GPT",
+  "model": "gpt-5.5-2026-04-23",
+  "live_gpt_call_execution": true,
+  "real_gpt_provider_call": true,
+  "successful_live_gpt_response": true,
+  "openai_api_key_storage": false,
+  "gpt_memory_api_execution": false,
+  "dataset_write": false,
+  "real_candidate_inserted": false,
+  "real_candidate_accepted_to_dataset": false,
+  "post_call_review_required": true,
+  "recommended_next_phase": "PROD-5581..5620 - GPT Sandbox First Controlled Live Call Post-Call Review Gate",
+  "errors": []
+}
