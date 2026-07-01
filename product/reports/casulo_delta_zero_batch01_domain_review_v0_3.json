@@ -1,0 +1,105 @@
+{
+  "version": "casulo_delta_zero_batch01_domain_review.v0.3",
+  "phase": "PROD-6421..6460",
+  "generated_at": "2026-07-01T18:43:47.393390+00:00",
+  "domains": {
+    "Financeiro / Administrativo": {
+      "case_count": 6,
+      "avg_delta_score": 0.4047,
+      "avg_drd": 0.3826,
+      "avg_dzr": 0.6174,
+      "avg_delta_gate_mismatch": 0.375,
+      "hard_block_count": 6,
+      "delta_zero_ready_count": 0,
+      "computed_gate_counts": {
+        "OBSERVATION_REQUIRED": 1,
+        "HUMAN_REVIEW_REQUIRED": 5
+      },
+      "delta_band_counts": {
+        "0.11-0.30": 1,
+        "0.31-0.60": 5
+      }
+    },
+    "Governança documental": {
+      "case_count": 6,
+      "avg_delta_score": 0.3451,
+      "avg_drd": 0.3337,
+      "avg_dzr": 0.6663,
+      "avg_delta_gate_mismatch": 0.375,
+      "hard_block_count": 3,
+      "delta_zero_ready_count": 0,
+      "computed_gate_counts": {
+        "HUMAN_REVIEW_REQUIRED": 3,
+        "OBSERVATION_REQUIRED": 3
+      },
+      "delta_band_counts": {
+        "0.31-0.60": 3,
+        "0.11-0.30": 3
+      }
+    },
+    "Jurídico / Escritório": {
+      "case_count": 6,
+      "avg_delta_score": 0.3856,
+      "avg_drd": 0.3592,
+      "avg_dzr": 0.6409,
+      "avg_delta_gate_mismatch": 0.4167,
+      "hard_block_count": 6,
+      "delta_zero_ready_count": 0,
+      "computed_gate_counts": {
+        "HUMAN_REVIEW_REQUIRED": 6
+      },
+      "delta_band_counts": {
+        "0.31-0.60": 6
+      }
+    },
+    "Pequenos negócios de campo": {
+      "case_count": 6,
+      "avg_delta_score": 0.3966,
+      "avg_drd": 0.3932,
+      "avg_dzr": 0.6068,
+      "avg_delta_gate_mismatch": 0.5,
+      "hard_block_count": 6,
+      "delta_zero_ready_count": 0,
+      "computed_gate_counts": {
+        "HUMAN_REVIEW_REQUIRED": 6
+      },
+      "delta_band_counts": {
+        "0.31-0.60": 6
+      }
+    },
+    "TIC/SI / ITSM": {
+      "case_count": 6,
+      "avg_delta_score": 0.4055,
+      "avg_drd": 0.3821,
+      "avg_dzr": 0.6179,
+      "avg_delta_gate_mismatch": 0.4583,
+      "hard_block_count": 4,
+      "delta_zero_ready_count": 0,
+      "computed_gate_counts": {
+        "HUMAN_REVIEW_REQUIRED": 5,
+        "OBSERVATION_REQUIRED": 1
+      },
+      "delta_band_counts": {
+        "0.31-0.60": 5,
+        "0.11-0.30": 1
+      }
+    },
+    "VesselFlow / Operação marítima": {
+      "case_count": 6,
+      "avg_delta_score": 0.3219,
+      "avg_drd": 0.3158,
+      "avg_dzr": 0.6842,
+      "avg_delta_gate_mismatch": 0.375,
+      "hard_block_count": 1,
+      "delta_zero_ready_count": 0,
+      "computed_gate_counts": {
+        "HUMAN_REVIEW_REQUIRED": 3,
+        "OBSERVATION_REQUIRED": 3
+      },
+      "delta_band_counts": {
+        "0.31-0.60": 3,
+        "0.11-0.30": 3
+      }
+    }
+  }
+}

@@ -1,0 +1,1002 @@
+{
+  "version": "casulo_delta_zero_batch01_vectorization_review.v0.3",
+  "phase": "PROD-6421..6460",
+  "generated_at": "2026-07-01T18:43:47.393722+00:00",
+  "status": "PASS",
+  "row_count": 36,
+  "delta_zero_ready_count": 0,
+  "hard_block_case_count": 26,
+  "external_evaluator_required_count": 36,
+  "average_delta_gate_mismatch": 0.4167,
+  "trajectory_status": "T0_ONLY",
+  "velocity_ready": false,
+  "acceleration_ready": false,
+  "candidate_tokens_canonical": false,
+  "review_rows": [
+    {
+      "case_id": "EXT-EVAL-B01H-001",
+      "execution_id": "tic_si_itsm_01__pure_gpt",
+      "domain": "TIC/SI / ITSM",
+      "mode": "PURE_GPT",
+      "model_gate": "INSUFFICIENT_EVIDENCE",
+      "computed_gate": "HUMAN_REVIEW_REQUIRED",
+      "delta_score": 0.4923,
+      "delta_band": "0.31-0.60",
+      "delta_gate_mismatch": 0.5,
+      "drd": 0.4561,
+      "dzr": 0.5439,
+      "delta_zero_ready": false,
+      "hard_block_count": 1,
+      "hard_blocks": [
+        "thin_evidence"
+      ],
+      "trajectory_status": "T0_ONLY",
+      "velocity_ready": false,
+      "acceleration_ready": false,
+      "candidate_tokens_v0_3": [
+        "CHANGE_REVIEW_REQUIRED",
+        "DELTA_MEDIUM",
+        "EVIDENCE_THIN",
+        "READ_ONLY_STATE",
+        "TIC_MESH_LOCKED"
+      ],
+      "review_status": "HARD_BLOCK_REVIEW_REQUIRED"
+    },
+    {
+      "case_id": "EXT-EVAL-B01H-002",
+      "execution_id": "tic_si_itsm_01__stack_gpt",
+      "domain": "TIC/SI / ITSM",
+      "mode": "STACK_GPT",
+      "model_gate": "INSUFFICIENT_EVIDENCE",
+      "computed_gate": "HUMAN_REVIEW_REQUIRED",
+      "delta_score": 0.4439,
+      "delta_band": "0.31-0.60",
+      "delta_gate_mismatch": 0.5,
+      "drd": 0.439,
+      "dzr": 0.561,
+      "delta_zero_ready": false,
+      "hard_block_count": 1,
+      "hard_blocks": [
+        "thin_evidence"
+      ],
+      "trajectory_status": "T0_ONLY",
+      "velocity_ready": false,
+      "acceleration_ready": false,
+      "candidate_tokens_v0_3": [
+        "CHANGE_REVIEW_REQUIRED",
+        "DELTA_MEDIUM",
+        "EVIDENCE_THIN",
+        "READ_ONLY_STATE"
+      ],
+      "review_status": "HARD_BLOCK_REVIEW_REQUIRED"
+    },
+    {
+      "case_id": "EXT-EVAL-B01H-003",
+      "execution_id": "tic_si_itsm_01__casulo_exocortex_stack",
+      "domain": "TIC/SI / ITSM",
+      "mode": "CASULO_EXOCORTEX_STACK",
+      "model_gate": "INSUFFICIENT_EVIDENCE",
+      "computed_gate": "HUMAN_REVIEW_REQUIRED",
+      "delta_score": 0.4923,
+      "delta_band": "0.31-0.60",
+      "delta_gate_mismatch": 0.5,
+      "drd": 0.4561,
+      "dzr": 0.5439,
+      "delta_zero_ready": false,
+      "hard_block_count": 1,
+      "hard_blocks": [
+        "thin_evidence"
+      ],
+      "trajectory_status": "T0_ONLY",
+      "velocity_ready": false,
+      "acceleration_ready": false,
+      "candidate_tokens_v0_3": [
+        "CHANGE_REVIEW_REQUIRED",
+        "DELTA_MEDIUM",
+        "EVIDENCE_THIN",
+        "READ_ONLY_STATE",
+        "TIC_MESH_LOCKED"
+      ],
+      "review_status": "HARD_BLOCK_REVIEW_REQUIRED"
+    },
+    {
+      "case_id": "EXT-EVAL-B01H-004",
+      "execution_id": "tic_si_itsm_02__pure_gpt",
+      "domain": "TIC/SI / ITSM",
+      "mode": "PURE_GPT",
+      "model_gate": "BLOCKED",
+      "computed_gate": "HUMAN_REVIEW_REQUIRED",
+      "delta_score": 0.3635,
+      "delta_band": "0.31-0.60",
+      "delta_gate_mismatch": 0.5,
+      "drd": 0.3339,
+      "dzr": 0.6661,
+      "delta_zero_ready": false,
+      "hard_block_count": 0,
+      "hard_blocks": [],
+      "trajectory_status": "T0_ONLY",
+      "velocity_ready": false,
+      "acceleration_ready": false,
+      "candidate_tokens_v0_3": [
+        "CHANGE_REVIEW_REQUIRED",
+        "DELTA_MEDIUM",
+        "EVIDENCE_THIN",
+        "READ_ONLY_STATE",
+        "TIC_MESH_LOCKED"
+      ],
+      "review_status": "REVIEW_REQUIRED"
+    },
+    {
+      "case_id": "EXT-EVAL-B01H-005",
+      "execution_id": "tic_si_itsm_02__stack_gpt",
+      "domain": "TIC/SI / ITSM",
+      "mode": "STACK_GPT",
+      "model_gate": "HOLD_HUMAN_REVIEW",
+      "computed_gate": "OBSERVATION_REQUIRED",
+      "delta_score": 0.2545,
+      "delta_band": "0.11-0.30",
+      "delta_gate_mismatch": 0.25,
+      "drd": 0.2366,
+      "dzr": 0.7634,
+      "delta_zero_ready": false,
+      "hard_block_count": 0,
+      "hard_blocks": [],
+      "trajectory_status": "T0_ONLY",
+      "velocity_ready": false,
+      "acceleration_ready": false,
+      "candidate_tokens_v0_3": [
+        "CHANGE_REVIEW_REQUIRED",
+        "EVIDENCE_THIN",
+        "STATE_OBSERVATION",
+        "TIC_MESH_LOCKED"
+      ],
+      "review_status": "LOWER_DELTA_BUT_STILL_EXTERNAL_REVIEW_REQUIRED"
+    },
+    {
+      "case_id": "EXT-EVAL-B01H-006",
+      "execution_id": "tic_si_itsm_02__casulo_exocortex_stack",
+      "domain": "TIC/SI / ITSM",
+      "mode": "CASULO_EXOCORTEX_STACK",
+      "model_gate": "BLOCKED",
+      "computed_gate": "HUMAN_REVIEW_REQUIRED",
+      "delta_score": 0.3866,
+      "delta_band": "0.31-0.60",
+      "delta_gate_mismatch": 0.5,
+      "drd": 0.3712,
+      "dzr": 0.6288,
+      "delta_zero_ready": false,
+      "hard_block_count": 1,
+      "hard_blocks": [
+        "thin_evidence"
+      ],
+      "trajectory_status": "T0_ONLY",
+      "velocity_ready": false,
+      "acceleration_ready": false,
+      "candidate_tokens_v0_3": [
+        "CHANGE_REVIEW_REQUIRED",
+        "DELTA_MEDIUM",
+        "EVIDENCE_THIN",
+        "READ_ONLY_STATE",
+        "TIC_MESH_LOCKED"
+      ],
+      "review_status": "HARD_BLOCK_REVIEW_REQUIRED"
+    },
+    {
+      "case_id": "EXT-EVAL-B01H-007",
+      "execution_id": "vesselflow_operacao_maritima_01__pure_gpt",
+      "domain": "VesselFlow / Operação marítima",
+      "mode": "PURE_GPT",
+      "model_gate": "INSUFFICIENT_EVIDENCE",
+      "computed_gate": "HUMAN_REVIEW_REQUIRED",
+      "delta_score": 0.4192,
+      "delta_band": "0.31-0.60",
+      "delta_gate_mismatch": 0.5,
+      "drd": 0.4144,
+      "dzr": 0.5856,
+      "delta_zero_ready": false,
+      "hard_block_count": 1,
+      "hard_blocks": [
+        "thin_evidence"
+      ],
+      "trajectory_status": "T0_ONLY",
+      "velocity_ready": false,
+      "acceleration_ready": false,
+      "candidate_tokens_v0_3": [
+        "CHANGE_REVIEW_REQUIRED",
+        "DELTA_MEDIUM",
+        "EVIDENCE_THIN",
+        "READ_ONLY_STATE"
+      ],
+      "review_status": "HARD_BLOCK_REVIEW_REQUIRED"
+    },
+    {
+      "case_id": "EXT-EVAL-B01H-008",
+      "execution_id": "vesselflow_operacao_maritima_01__stack_gpt",
+      "domain": "VesselFlow / Operação marítima",
+      "mode": "STACK_GPT",
+      "model_gate": "HOLD_HUMAN_REVIEW",
+      "computed_gate": "OBSERVATION_REQUIRED",
+      "delta_score": 0.2876,
+      "delta_band": "0.11-0.30",
+      "delta_gate_mismatch": 0.25,
+      "drd": 0.28,
+      "dzr": 0.72,
+      "delta_zero_ready": false,
+      "hard_block_count": 0,
+      "hard_blocks": [],
+      "trajectory_status": "T0_ONLY",
+      "velocity_ready": false,
+      "acceleration_ready": false,
+      "candidate_tokens_v0_3": [
+        "CHANGE_REVIEW_REQUIRED",
+        "EVIDENCE_THIN",
+        "STATE_OBSERVATION"
+      ],
+      "review_status": "LOWER_DELTA_BUT_STILL_EXTERNAL_REVIEW_REQUIRED"
+    },
+    {
+      "case_id": "EXT-EVAL-B01H-009",
+      "execution_id": "vesselflow_operacao_maritima_01__casulo_exocortex_stack",
+      "domain": "VesselFlow / Operação marítima",
+      "mode": "CASULO_EXOCORTEX_STACK",
+      "model_gate": "INSUFFICIENT_EVIDENCE",
+      "computed_gate": "HUMAN_REVIEW_REQUIRED",
+      "delta_score": 0.3697,
+      "delta_band": "0.31-0.60",
+      "delta_gate_mismatch": 0.5,
+      "drd": 0.3678,
+      "dzr": 0.6322,
+      "delta_zero_ready": false,
+      "hard_block_count": 0,
+      "hard_blocks": [],
+      "trajectory_status": "T0_ONLY",
+      "velocity_ready": false,
+      "acceleration_ready": false,
+      "candidate_tokens_v0_3": [
+        "CHANGE_REVIEW_REQUIRED",
+        "DELTA_MEDIUM",
+        "EVIDENCE_THIN",
+        "READ_ONLY_STATE"
+      ],
+      "review_status": "REVIEW_REQUIRED"
+    },
+    {
+      "case_id": "EXT-EVAL-B01H-010",
+      "execution_id": "vesselflow_operacao_maritima_02__pure_gpt",
+      "domain": "VesselFlow / Operação marítima",
+      "mode": "PURE_GPT",
+      "model_gate": "HOLD_HUMAN_REVIEW",
+      "computed_gate": "OBSERVATION_REQUIRED",
+      "delta_score": 0.2736,
+      "delta_band": "0.11-0.30",
+      "delta_gate_mismatch": 0.25,
+      "drd": 0.2751,
+      "dzr": 0.7249,
+      "delta_zero_ready": false,
+      "hard_block_count": 0,
+      "hard_blocks": [],
+      "trajectory_status": "T0_ONLY",
+      "velocity_ready": false,
+      "acceleration_ready": false,
+      "candidate_tokens_v0_3": [
+        "CHANGE_REVIEW_REQUIRED",
+        "EVIDENCE_THIN",
+        "STATE_OBSERVATION"
+      ],
+      "review_status": "LOWER_DELTA_BUT_STILL_EXTERNAL_REVIEW_REQUIRED"
+    },
+    {
+      "case_id": "EXT-EVAL-B01H-011",
+      "execution_id": "vesselflow_operacao_maritima_02__stack_gpt",
+      "domain": "VesselFlow / Operação marítima",
+      "mode": "STACK_GPT",
+      "model_gate": "BLOCKED",
+      "computed_gate": "HUMAN_REVIEW_REQUIRED",
+      "delta_score": 0.3512,
+      "delta_band": "0.31-0.60",
+      "delta_gate_mismatch": 0.5,
+      "drd": 0.3295,
+      "dzr": 0.6705,
+      "delta_zero_ready": false,
+      "hard_block_count": 0,
+      "hard_blocks": [],
+      "trajectory_status": "T0_ONLY",
+      "velocity_ready": false,
+      "acceleration_ready": false,
+      "candidate_tokens_v0_3": [
+        "CHANGE_REVIEW_REQUIRED",
+        "DELTA_MEDIUM",
+        "EVIDENCE_THIN",
+        "READ_ONLY_STATE"
+      ],
+      "review_status": "REVIEW_REQUIRED"
+    },
+    {
+      "case_id": "EXT-EVAL-B01H-012",
+      "execution_id": "vesselflow_operacao_maritima_02__casulo_exocortex_stack",
+      "domain": "VesselFlow / Operação marítima",
+      "mode": "CASULO_EXOCORTEX_STACK",
+      "model_gate": "HOLD_HUMAN_REVIEW",
+      "computed_gate": "OBSERVATION_REQUIRED",
+      "delta_score": 0.2299,
+      "delta_band": "0.11-0.30",
+      "delta_gate_mismatch": 0.25,
+      "drd": 0.2279,
+      "dzr": 0.7721,
+      "delta_zero_ready": false,
+      "hard_block_count": 0,
+      "hard_blocks": [],
+      "trajectory_status": "T0_ONLY",
+      "velocity_ready": false,
+      "acceleration_ready": false,
+      "candidate_tokens_v0_3": [
+        "CHANGE_REVIEW_REQUIRED",
+        "EVIDENCE_THIN",
+        "STATE_OBSERVATION"
+      ],
+      "review_status": "LOWER_DELTA_BUT_STILL_EXTERNAL_REVIEW_REQUIRED"
+    },
+    {
+      "case_id": "EXT-EVAL-B01H-013",
+      "execution_id": "juridico_escritorio_01__pure_gpt",
+      "domain": "Jurídico / Escritório",
+      "mode": "PURE_GPT",
+      "model_gate": "INSUFFICIENT_EVIDENCE",
+      "computed_gate": "HUMAN_REVIEW_REQUIRED",
+      "delta_score": 0.3153,
+      "delta_band": "0.31-0.60",
+      "delta_gate_mismatch": 0.5,
+      "drd": 0.3301,
+      "dzr": 0.6699,
+      "delta_zero_ready": false,
+      "hard_block_count": 1,
+      "hard_blocks": [
+        "thin_evidence"
+      ],
+      "trajectory_status": "T0_ONLY",
+      "velocity_ready": false,
+      "acceleration_ready": false,
+      "candidate_tokens_v0_3": [
+        "CHANGE_REVIEW_REQUIRED",
+        "DELTA_MEDIUM",
+        "EVIDENCE_THIN",
+        "READ_ONLY_STATE"
+      ],
+      "review_status": "HARD_BLOCK_REVIEW_REQUIRED"
+    },
+    {
+      "case_id": "EXT-EVAL-B01H-014",
+      "execution_id": "juridico_escritorio_01__stack_gpt",
+      "domain": "Jurídico / Escritório",
+      "mode": "STACK_GPT",
+      "model_gate": "INSUFFICIENT_EVIDENCE",
+      "computed_gate": "HUMAN_REVIEW_REQUIRED",
+      "delta_score": 0.3599,
+      "delta_band": "0.31-0.60",
+      "delta_gate_mismatch": 0.5,
+      "drd": 0.3617,
+      "dzr": 0.6383,
+      "delta_zero_ready": false,
+      "hard_block_count": 1,
+      "hard_blocks": [
+        "thin_evidence"
+      ],
+      "trajectory_status": "T0_ONLY",
+      "velocity_ready": false,
+      "acceleration_ready": false,
+      "candidate_tokens_v0_3": [
+        "CHANGE_REVIEW_REQUIRED",
+        "DELTA_MEDIUM",
+        "EVIDENCE_THIN",
+        "READ_ONLY_STATE"
+      ],
+      "review_status": "HARD_BLOCK_REVIEW_REQUIRED"
+    },
+    {
+      "case_id": "EXT-EVAL-B01H-015",
+      "execution_id": "juridico_escritorio_01__casulo_exocortex_stack",
+      "domain": "Jurídico / Escritório",
+      "mode": "CASULO_EXOCORTEX_STACK",
+      "model_gate": "INSUFFICIENT_EVIDENCE",
+      "computed_gate": "HUMAN_REVIEW_REQUIRED",
+      "delta_score": 0.3153,
+      "delta_band": "0.31-0.60",
+      "delta_gate_mismatch": 0.5,
+      "drd": 0.3301,
+      "dzr": 0.6699,
+      "delta_zero_ready": false,
+      "hard_block_count": 1,
+      "hard_blocks": [
+        "thin_evidence"
+      ],
+      "trajectory_status": "T0_ONLY",
+      "velocity_ready": false,
+      "acceleration_ready": false,
+      "candidate_tokens_v0_3": [
+        "CHANGE_REVIEW_REQUIRED",
+        "DELTA_MEDIUM",
+        "EVIDENCE_THIN",
+        "READ_ONLY_STATE"
+      ],
+      "review_status": "HARD_BLOCK_REVIEW_REQUIRED"
+    },
+    {
+      "case_id": "EXT-EVAL-B01H-016",
+      "execution_id": "juridico_escritorio_02__pure_gpt",
+      "domain": "Jurídico / Escritório",
+      "mode": "PURE_GPT",
+      "model_gate": "INSUFFICIENT_EVIDENCE",
+      "computed_gate": "HUMAN_REVIEW_REQUIRED",
+      "delta_score": 0.5168,
+      "delta_band": "0.31-0.60",
+      "delta_gate_mismatch": 0.5,
+      "drd": 0.4648,
+      "dzr": 0.5352,
+      "delta_zero_ready": false,
+      "hard_block_count": 1,
+      "hard_blocks": [
+        "thin_evidence"
+      ],
+      "trajectory_status": "T0_ONLY",
+      "velocity_ready": false,
+      "acceleration_ready": false,
+      "candidate_tokens_v0_3": [
+        "CHANGE_REVIEW_REQUIRED",
+        "DELTA_MEDIUM",
+        "EVIDENCE_THIN",
+        "READ_ONLY_STATE"
+      ],
+      "review_status": "HARD_BLOCK_REVIEW_REQUIRED"
+    },
+    {
+      "case_id": "EXT-EVAL-B01H-017",
+      "execution_id": "juridico_escritorio_02__stack_gpt",
+      "domain": "Jurídico / Escritório",
+      "mode": "STACK_GPT",
+      "model_gate": "INSUFFICIENT_EVIDENCE",
+      "computed_gate": "HUMAN_REVIEW_REQUIRED",
+      "delta_score": 0.3621,
+      "delta_band": "0.31-0.60",
+      "delta_gate_mismatch": 0.5,
+      "drd": 0.3466,
+      "dzr": 0.6534,
+      "delta_zero_ready": false,
+      "hard_block_count": 1,
+      "hard_blocks": [
+        "thin_evidence"
+      ],
+      "trajectory_status": "T0_ONLY",
+      "velocity_ready": false,
+      "acceleration_ready": false,
+      "candidate_tokens_v0_3": [
+        "CHANGE_REVIEW_REQUIRED",
+        "DELTA_MEDIUM",
+        "EVIDENCE_THIN",
+        "READ_ONLY_STATE"
+      ],
+      "review_status": "HARD_BLOCK_REVIEW_REQUIRED"
+    },
+    {
+      "case_id": "EXT-EVAL-B01H-018",
+      "execution_id": "juridico_escritorio_02__casulo_exocortex_stack",
+      "domain": "Jurídico / Escritório",
+      "mode": "CASULO_EXOCORTEX_STACK",
+      "model_gate": "HOLD_HUMAN_REVIEW",
+      "computed_gate": "HUMAN_REVIEW_REQUIRED",
+      "delta_score": 0.4444,
+      "delta_band": "0.31-0.60",
+      "delta_gate_mismatch": 0.0,
+      "drd": 0.3216,
+      "dzr": 0.6784,
+      "delta_zero_ready": false,
+      "hard_block_count": 1,
+      "hard_blocks": [
+        "thin_evidence"
+      ],
+      "trajectory_status": "T0_ONLY",
+      "velocity_ready": false,
+      "acceleration_ready": false,
+      "candidate_tokens_v0_3": [
+        "CHANGE_REVIEW_REQUIRED",
+        "DELTA_MEDIUM",
+        "EVIDENCE_THIN"
+      ],
+      "review_status": "HARD_BLOCK_REVIEW_REQUIRED"
+    },
+    {
+      "case_id": "EXT-EVAL-B01H-019",
+      "execution_id": "financeiro_administrativo_01__pure_gpt",
+      "domain": "Financeiro / Administrativo",
+      "mode": "PURE_GPT",
+      "model_gate": "HOLD_HUMAN_REVIEW",
+      "computed_gate": "OBSERVATION_REQUIRED",
+      "delta_score": 0.2274,
+      "delta_band": "0.11-0.30",
+      "delta_gate_mismatch": 0.25,
+      "drd": 0.2403,
+      "dzr": 0.7597,
+      "delta_zero_ready": false,
+      "hard_block_count": 1,
+      "hard_blocks": [
+        "thin_evidence"
+      ],
+      "trajectory_status": "T0_ONLY",
+      "velocity_ready": false,
+      "acceleration_ready": false,
+      "candidate_tokens_v0_3": [
+        "CHANGE_REVIEW_REQUIRED",
+        "EVIDENCE_THIN",
+        "STATE_OBSERVATION"
+      ],
+      "review_status": "HARD_BLOCK_REVIEW_REQUIRED"
+    },
+    {
+      "case_id": "EXT-EVAL-B01H-020",
+      "execution_id": "financeiro_administrativo_01__stack_gpt",
+      "domain": "Financeiro / Administrativo",
+      "mode": "STACK_GPT",
+      "model_gate": "HOLD_HUMAN_REVIEW",
+      "computed_gate": "HUMAN_REVIEW_REQUIRED",
+      "delta_score": 0.3193,
+      "delta_band": "0.31-0.60",
+      "delta_gate_mismatch": 0.0,
+      "drd": 0.2615,
+      "dzr": 0.7385,
+      "delta_zero_ready": false,
+      "hard_block_count": 1,
+      "hard_blocks": [
+        "thin_evidence"
+      ],
+      "trajectory_status": "T0_ONLY",
+      "velocity_ready": false,
+      "acceleration_ready": false,
+      "candidate_tokens_v0_3": [
+        "CHANGE_REVIEW_REQUIRED",
+        "DELTA_MEDIUM",
+        "EVIDENCE_THIN"
+      ],
+      "review_status": "HARD_BLOCK_REVIEW_REQUIRED"
+    },
+    {
+      "case_id": "EXT-EVAL-B01H-021",
+      "execution_id": "financeiro_administrativo_01__casulo_exocortex_stack",
+      "domain": "Financeiro / Administrativo",
+      "mode": "CASULO_EXOCORTEX_STACK",
+      "model_gate": "INSUFFICIENT_EVIDENCE",
+      "computed_gate": "HUMAN_REVIEW_REQUIRED",
+      "delta_score": 0.4395,
+      "delta_band": "0.31-0.60",
+      "delta_gate_mismatch": 0.5,
+      "drd": 0.4375,
+      "dzr": 0.5625,
+      "delta_zero_ready": false,
+      "hard_block_count": 1,
+      "hard_blocks": [
+        "thin_evidence"
+      ],
+      "trajectory_status": "T0_ONLY",
+      "velocity_ready": false,
+      "acceleration_ready": false,
+      "candidate_tokens_v0_3": [
+        "CHANGE_REVIEW_REQUIRED",
+        "DELTA_MEDIUM",
+        "EVIDENCE_THIN",
+        "READ_ONLY_STATE"
+      ],
+      "review_status": "HARD_BLOCK_REVIEW_REQUIRED"
+    },
+    {
+      "case_id": "EXT-EVAL-B01H-022",
+      "execution_id": "financeiro_administrativo_02__pure_gpt",
+      "domain": "Financeiro / Administrativo",
+      "mode": "PURE_GPT",
+      "model_gate": "INSUFFICIENT_EVIDENCE",
+      "computed_gate": "HUMAN_REVIEW_REQUIRED",
+      "delta_score": 0.4823,
+      "delta_band": "0.31-0.60",
+      "delta_gate_mismatch": 0.5,
+      "drd": 0.4526,
+      "dzr": 0.5474,
+      "delta_zero_ready": false,
+      "hard_block_count": 1,
+      "hard_blocks": [
+        "thin_evidence"
+      ],
+      "trajectory_status": "T0_ONLY",
+      "velocity_ready": false,
+      "acceleration_ready": false,
+      "candidate_tokens_v0_3": [
+        "CHANGE_REVIEW_REQUIRED",
+        "DELTA_MEDIUM",
+        "EVIDENCE_THIN",
+        "READ_ONLY_STATE"
+      ],
+      "review_status": "HARD_BLOCK_REVIEW_REQUIRED"
+    },
+    {
+      "case_id": "EXT-EVAL-B01H-023",
+      "execution_id": "financeiro_administrativo_02__stack_gpt",
+      "domain": "Financeiro / Administrativo",
+      "mode": "STACK_GPT",
+      "model_gate": "INSUFFICIENT_EVIDENCE",
+      "computed_gate": "HUMAN_REVIEW_REQUIRED",
+      "delta_score": 0.48,
+      "delta_band": "0.31-0.60",
+      "delta_gate_mismatch": 0.5,
+      "drd": 0.4518,
+      "dzr": 0.5482,
+      "delta_zero_ready": false,
+      "hard_block_count": 1,
+      "hard_blocks": [
+        "thin_evidence"
+      ],
+      "trajectory_status": "T0_ONLY",
+      "velocity_ready": false,
+      "acceleration_ready": false,
+      "candidate_tokens_v0_3": [
+        "CHANGE_REVIEW_REQUIRED",
+        "DELTA_MEDIUM",
+        "EVIDENCE_THIN",
+        "READ_ONLY_STATE"
+      ],
+      "review_status": "HARD_BLOCK_REVIEW_REQUIRED"
+    },
+    {
+      "case_id": "EXT-EVAL-B01H-024",
+      "execution_id": "financeiro_administrativo_02__casulo_exocortex_stack",
+      "domain": "Financeiro / Administrativo",
+      "mode": "CASULO_EXOCORTEX_STACK",
+      "model_gate": "INSUFFICIENT_EVIDENCE",
+      "computed_gate": "HUMAN_REVIEW_REQUIRED",
+      "delta_score": 0.4799,
+      "delta_band": "0.31-0.60",
+      "delta_gate_mismatch": 0.5,
+      "drd": 0.4517,
+      "dzr": 0.5483,
+      "delta_zero_ready": false,
+      "hard_block_count": 1,
+      "hard_blocks": [
+        "thin_evidence"
+      ],
+      "trajectory_status": "T0_ONLY",
+      "velocity_ready": false,
+      "acceleration_ready": false,
+      "candidate_tokens_v0_3": [
+        "CHANGE_REVIEW_REQUIRED",
+        "DELTA_MEDIUM",
+        "EVIDENCE_THIN",
+        "READ_ONLY_STATE"
+      ],
+      "review_status": "HARD_BLOCK_REVIEW_REQUIRED"
+    },
+    {
+      "case_id": "EXT-EVAL-B01H-025",
+      "execution_id": "pequenos_negocios_de_campo_01__pure_gpt",
+      "domain": "Pequenos negócios de campo",
+      "mode": "PURE_GPT",
+      "model_gate": "INSUFFICIENT_EVIDENCE",
+      "computed_gate": "HUMAN_REVIEW_REQUIRED",
+      "delta_score": 0.3406,
+      "delta_band": "0.31-0.60",
+      "delta_gate_mismatch": 0.5,
+      "drd": 0.339,
+      "dzr": 0.661,
+      "delta_zero_ready": false,
+      "hard_block_count": 1,
+      "hard_blocks": [
+        "thin_evidence"
+      ],
+      "trajectory_status": "T0_ONLY",
+      "velocity_ready": false,
+      "acceleration_ready": false,
+      "candidate_tokens_v0_3": [
+        "CHANGE_REVIEW_REQUIRED",
+        "DELTA_MEDIUM",
+        "EVIDENCE_THIN",
+        "READ_ONLY_STATE"
+      ],
+      "review_status": "HARD_BLOCK_REVIEW_REQUIRED"
+    },
+    {
+      "case_id": "EXT-EVAL-B01H-026",
+      "execution_id": "pequenos_negocios_de_campo_01__stack_gpt",
+      "domain": "Pequenos negócios de campo",
+      "mode": "STACK_GPT",
+      "model_gate": "INSUFFICIENT_EVIDENCE",
+      "computed_gate": "HUMAN_REVIEW_REQUIRED",
+      "delta_score": 0.4013,
+      "delta_band": "0.31-0.60",
+      "delta_gate_mismatch": 0.5,
+      "drd": 0.4081,
+      "dzr": 0.5919,
+      "delta_zero_ready": false,
+      "hard_block_count": 1,
+      "hard_blocks": [
+        "thin_evidence"
+      ],
+      "trajectory_status": "T0_ONLY",
+      "velocity_ready": false,
+      "acceleration_ready": false,
+      "candidate_tokens_v0_3": [
+        "CHANGE_REVIEW_REQUIRED",
+        "DELTA_MEDIUM",
+        "EVIDENCE_THIN",
+        "READ_ONLY_STATE"
+      ],
+      "review_status": "HARD_BLOCK_REVIEW_REQUIRED"
+    },
+    {
+      "case_id": "EXT-EVAL-B01H-027",
+      "execution_id": "pequenos_negocios_de_campo_01__casulo_exocortex_stack",
+      "domain": "Pequenos negócios de campo",
+      "mode": "CASULO_EXOCORTEX_STACK",
+      "model_gate": "INSUFFICIENT_EVIDENCE",
+      "computed_gate": "HUMAN_REVIEW_REQUIRED",
+      "delta_score": 0.3685,
+      "delta_band": "0.31-0.60",
+      "delta_gate_mismatch": 0.5,
+      "drd": 0.3965,
+      "dzr": 0.6035,
+      "delta_zero_ready": false,
+      "hard_block_count": 1,
+      "hard_blocks": [
+        "thin_evidence"
+      ],
+      "trajectory_status": "T0_ONLY",
+      "velocity_ready": false,
+      "acceleration_ready": false,
+      "candidate_tokens_v0_3": [
+        "CHANGE_REVIEW_REQUIRED",
+        "DELTA_MEDIUM",
+        "EVIDENCE_THIN",
+        "READ_ONLY_STATE"
+      ],
+      "review_status": "HARD_BLOCK_REVIEW_REQUIRED"
+    },
+    {
+      "case_id": "EXT-EVAL-B01H-028",
+      "execution_id": "pequenos_negocios_de_campo_02__pure_gpt",
+      "domain": "Pequenos negócios de campo",
+      "mode": "PURE_GPT",
+      "model_gate": "INSUFFICIENT_EVIDENCE",
+      "computed_gate": "HUMAN_REVIEW_REQUIRED",
+      "delta_score": 0.4767,
+      "delta_band": "0.31-0.60",
+      "delta_gate_mismatch": 0.5,
+      "drd": 0.4347,
+      "dzr": 0.5653,
+      "delta_zero_ready": false,
+      "hard_block_count": 2,
+      "hard_blocks": [
+        "blocked_state_or_production_block",
+        "thin_evidence"
+      ],
+      "trajectory_status": "T0_ONLY",
+      "velocity_ready": false,
+      "acceleration_ready": false,
+      "candidate_tokens_v0_3": [
+        "CHANGE_REVIEW_REQUIRED",
+        "DELTA_MEDIUM",
+        "EVIDENCE_THIN",
+        "PRODUCTION_BLOCKED",
+        "READ_ONLY_STATE"
+      ],
+      "review_status": "HARD_BLOCK_REVIEW_REQUIRED"
+    },
+    {
+      "case_id": "EXT-EVAL-B01H-029",
+      "execution_id": "pequenos_negocios_de_campo_02__stack_gpt",
+      "domain": "Pequenos negócios de campo",
+      "mode": "STACK_GPT",
+      "model_gate": "INSUFFICIENT_EVIDENCE",
+      "computed_gate": "HUMAN_REVIEW_REQUIRED",
+      "delta_score": 0.3183,
+      "delta_band": "0.31-0.60",
+      "delta_gate_mismatch": 0.5,
+      "drd": 0.3312,
+      "dzr": 0.6688,
+      "delta_zero_ready": false,
+      "hard_block_count": 1,
+      "hard_blocks": [
+        "thin_evidence"
+      ],
+      "trajectory_status": "T0_ONLY",
+      "velocity_ready": false,
+      "acceleration_ready": false,
+      "candidate_tokens_v0_3": [
+        "CHANGE_REVIEW_REQUIRED",
+        "DELTA_MEDIUM",
+        "EVIDENCE_THIN",
+        "READ_ONLY_STATE"
+      ],
+      "review_status": "HARD_BLOCK_REVIEW_REQUIRED"
+    },
+    {
+      "case_id": "EXT-EVAL-B01H-030",
+      "execution_id": "pequenos_negocios_de_campo_02__casulo_exocortex_stack",
+      "domain": "Pequenos negócios de campo",
+      "mode": "CASULO_EXOCORTEX_STACK",
+      "model_gate": "INSUFFICIENT_EVIDENCE",
+      "computed_gate": "HUMAN_REVIEW_REQUIRED",
+      "delta_score": 0.474,
+      "delta_band": "0.31-0.60",
+      "delta_gate_mismatch": 0.5,
+      "drd": 0.4496,
+      "dzr": 0.5504,
+      "delta_zero_ready": false,
+      "hard_block_count": 1,
+      "hard_blocks": [
+        "thin_evidence"
+      ],
+      "trajectory_status": "T0_ONLY",
+      "velocity_ready": false,
+      "acceleration_ready": false,
+      "candidate_tokens_v0_3": [
+        "CHANGE_REVIEW_REQUIRED",
+        "DELTA_MEDIUM",
+        "EVIDENCE_THIN",
+        "READ_ONLY_STATE"
+      ],
+      "review_status": "HARD_BLOCK_REVIEW_REQUIRED"
+    },
+    {
+      "case_id": "EXT-EVAL-B01H-031",
+      "execution_id": "governanca_documental_01__pure_gpt",
+      "domain": "Governança documental",
+      "mode": "PURE_GPT",
+      "model_gate": "INSUFFICIENT_EVIDENCE",
+      "computed_gate": "HUMAN_REVIEW_REQUIRED",
+      "delta_score": 0.4539,
+      "delta_band": "0.31-0.60",
+      "delta_gate_mismatch": 0.5,
+      "drd": 0.4426,
+      "dzr": 0.5574,
+      "delta_zero_ready": false,
+      "hard_block_count": 1,
+      "hard_blocks": [
+        "thin_evidence"
+      ],
+      "trajectory_status": "T0_ONLY",
+      "velocity_ready": false,
+      "acceleration_ready": false,
+      "candidate_tokens_v0_3": [
+        "CHANGE_REVIEW_REQUIRED",
+        "DELTA_MEDIUM",
+        "EVIDENCE_THIN",
+        "READ_ONLY_STATE"
+      ],
+      "review_status": "HARD_BLOCK_REVIEW_REQUIRED"
+    },
+    {
+      "case_id": "EXT-EVAL-B01H-032",
+      "execution_id": "governanca_documental_01__stack_gpt",
+      "domain": "Governança documental",
+      "mode": "STACK_GPT",
+      "model_gate": "INSUFFICIENT_EVIDENCE",
+      "computed_gate": "HUMAN_REVIEW_REQUIRED",
+      "delta_score": 0.4988,
+      "delta_band": "0.31-0.60",
+      "delta_gate_mismatch": 0.5,
+      "drd": 0.4584,
+      "dzr": 0.5416,
+      "delta_zero_ready": false,
+      "hard_block_count": 1,
+      "hard_blocks": [
+        "thin_evidence"
+      ],
+      "trajectory_status": "T0_ONLY",
+      "velocity_ready": false,
+      "acceleration_ready": false,
+      "candidate_tokens_v0_3": [
+        "CHANGE_REVIEW_REQUIRED",
+        "DELTA_MEDIUM",
+        "EVIDENCE_THIN",
+        "READ_ONLY_STATE"
+      ],
+      "review_status": "HARD_BLOCK_REVIEW_REQUIRED"
+    },
+    {
+      "case_id": "EXT-EVAL-B01H-033",
+      "execution_id": "governanca_documental_01__casulo_exocortex_stack",
+      "domain": "Governança documental",
+      "mode": "CASULO_EXOCORTEX_STACK",
+      "model_gate": "INSUFFICIENT_EVIDENCE",
+      "computed_gate": "HUMAN_REVIEW_REQUIRED",
+      "delta_score": 0.4548,
+      "delta_band": "0.31-0.60",
+      "delta_gate_mismatch": 0.5,
+      "drd": 0.4429,
+      "dzr": 0.5571,
+      "delta_zero_ready": false,
+      "hard_block_count": 1,
+      "hard_blocks": [
+        "thin_evidence"
+      ],
+      "trajectory_status": "T0_ONLY",
+      "velocity_ready": false,
+      "acceleration_ready": false,
+      "candidate_tokens_v0_3": [
+        "CHANGE_REVIEW_REQUIRED",
+        "DELTA_MEDIUM",
+        "EVIDENCE_THIN",
+        "READ_ONLY_STATE"
+      ],
+      "review_status": "HARD_BLOCK_REVIEW_REQUIRED"
+    },
+    {
+      "case_id": "EXT-EVAL-B01H-034",
+      "execution_id": "governanca_documental_02__pure_gpt",
+      "domain": "Governança documental",
+      "mode": "PURE_GPT",
+      "model_gate": "HOLD_HUMAN_REVIEW",
+      "computed_gate": "OBSERVATION_REQUIRED",
+      "delta_score": 0.2303,
+      "delta_band": "0.11-0.30",
+      "delta_gate_mismatch": 0.25,
+      "drd": 0.2122,
+      "dzr": 0.7878,
+      "delta_zero_ready": false,
+      "hard_block_count": 0,
+      "hard_blocks": [],
+      "trajectory_status": "T0_ONLY",
+      "velocity_ready": false,
+      "acceleration_ready": false,
+      "candidate_tokens_v0_3": [
+        "CHANGE_REVIEW_REQUIRED",
+        "EVIDENCE_THIN",
+        "STATE_OBSERVATION"
+      ],
+      "review_status": "LOWER_DELTA_BUT_STILL_EXTERNAL_REVIEW_REQUIRED"
+    },
+    {
+      "case_id": "EXT-EVAL-B01H-035",
+      "execution_id": "governanca_documental_02__stack_gpt",
+      "domain": "Governança documental",
+      "mode": "STACK_GPT",
+      "model_gate": "HOLD_HUMAN_REVIEW",
+      "computed_gate": "OBSERVATION_REQUIRED",
+      "delta_score": 0.2073,
+      "delta_band": "0.11-0.30",
+      "delta_gate_mismatch": 0.25,
+      "drd": 0.2199,
+      "dzr": 0.7801,
+      "delta_zero_ready": false,
+      "hard_block_count": 0,
+      "hard_blocks": [],
+      "trajectory_status": "T0_ONLY",
+      "velocity_ready": false,
+      "acceleration_ready": false,
+      "candidate_tokens_v0_3": [
+        "CHANGE_REVIEW_REQUIRED",
+        "EVIDENCE_THIN",
+        "STATE_OBSERVATION"
+      ],
+      "review_status": "LOWER_DELTA_BUT_STILL_EXTERNAL_REVIEW_REQUIRED"
+    },
+    {
+      "case_id": "EXT-EVAL-B01H-036",
+      "execution_id": "governanca_documental_02__casulo_exocortex_stack",
+      "domain": "Governança documental",
+      "mode": "CASULO_EXOCORTEX_STACK",
+      "model_gate": "HOLD_HUMAN_REVIEW",
+      "computed_gate": "OBSERVATION_REQUIRED",
+      "delta_score": 0.2252,
+      "delta_band": "0.11-0.30",
+      "delta_gate_mismatch": 0.25,
+      "drd": 0.2262,
+      "dzr": 0.7738,
+      "delta_zero_ready": false,
+      "hard_block_count": 0,
+      "hard_blocks": [],
+      "trajectory_status": "T0_ONLY",
+      "velocity_ready": false,
+      "acceleration_ready": false,
+      "candidate_tokens_v0_3": [
+        "CHANGE_REVIEW_REQUIRED",
+        "EVIDENCE_THIN",
+        "STATE_OBSERVATION"
+      ],
+      "review_status": "LOWER_DELTA_BUT_STILL_EXTERNAL_REVIEW_REQUIRED"
+    }
+  ]
+}

@@ -1,0 +1,43 @@
+{
+  "phase": "PROD-6421..6460",
+  "required_prior_tag": "product-casulo-delta-zero-dynamics-model-packet-v0.1",
+  "review_gate_only": true,
+  "additional_live_call_allowed": false,
+  "delta_zero_ready_claim_blocked_until_external_review": true,
+  "trajectory_claim_blocked_until_multiple_snapshots": true,
+  "candidate_tokens_canonical": false,
+  "external_evaluator_required": true,
+  "validated_model_gain_claim_blocked": true,
+  "dataset_acceptance_blocked": true,
+  "client_claim_blocked": true,
+  "production_blocked": true,
+  "commercial_claim_blocked": true,
+  "allowed_actions": [
+    "delta_zero_vectorization_review_gate_creation",
+    "t0_delta_matrix_review",
+    "gate_alignment_review",
+    "domain_mode_summary_creation",
+    "external_evaluator_requirements_update",
+    "roadmap_update"
+  ],
+  "blocked_actions": [
+    "additional_live_gpt_call_in_this_phase",
+    "openai_api_key_storage",
+    "gpt_memory_api_execution",
+    "multi_vendor_llm_execution",
+    "dataset_acceptance",
+    "real_candidate_insert",
+    "client_facing_value_claim",
+    "production_activation",
+    "validated_business_claim",
+    "validated_hallucination_reduction_claim",
+    "commercial_claim",
+    "domain_validation_claim",
+    "final_indices_without_external_scores",
+    "canonical_token_acceptance_without_expansion_test",
+    "velocity_claim_without_history",
+    "acceleration_claim_without_history",
+    "delta_zero_ready_claim_without_external_review"
+  ],
+  "recommended_next_phase": "PROD-6461..6500 - CASULO Delta Zero External Evaluator Workbench Packet"
+}

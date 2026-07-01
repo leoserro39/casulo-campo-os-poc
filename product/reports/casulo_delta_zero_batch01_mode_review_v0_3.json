@@ -1,0 +1,58 @@
+{
+  "version": "casulo_delta_zero_batch01_mode_review.v0.3",
+  "phase": "PROD-6421..6460",
+  "generated_at": "2026-07-01T18:43:47.393628+00:00",
+  "modes": {
+    "CASULO_EXOCORTEX_STACK": {
+      "case_count": 12,
+      "avg_delta_score": 0.39,
+      "avg_drd": 0.3733,
+      "avg_dzr": 0.6267,
+      "avg_delta_gate_mismatch": 0.4167,
+      "hard_block_count": 9,
+      "delta_zero_ready_count": 0,
+      "computed_gate_counts": {
+        "HUMAN_REVIEW_REQUIRED": 10,
+        "OBSERVATION_REQUIRED": 2
+      },
+      "delta_band_counts": {
+        "0.31-0.60": 10,
+        "0.11-0.30": 2
+      }
+    },
+    "PURE_GPT": {
+      "case_count": 12,
+      "avg_delta_score": 0.3827,
+      "avg_drd": 0.3663,
+      "avg_dzr": 0.6337,
+      "avg_delta_gate_mismatch": 0.4375,
+      "hard_block_count": 9,
+      "delta_zero_ready_count": 0,
+      "computed_gate_counts": {
+        "HUMAN_REVIEW_REQUIRED": 9,
+        "OBSERVATION_REQUIRED": 3
+      },
+      "delta_band_counts": {
+        "0.31-0.60": 9,
+        "0.11-0.30": 3
+      }
+    },
+    "STACK_GPT": {
+      "case_count": 12,
+      "avg_delta_score": 0.357,
+      "avg_drd": 0.3437,
+      "avg_dzr": 0.6563,
+      "avg_delta_gate_mismatch": 0.3958,
+      "hard_block_count": 8,
+      "delta_zero_ready_count": 0,
+      "computed_gate_counts": {
+        "HUMAN_REVIEW_REQUIRED": 9,
+        "OBSERVATION_REQUIRED": 3
+      },
+      "delta_band_counts": {
+        "0.31-0.60": 9,
+        "0.11-0.30": 3
+      }
+    }
+  }
+}
