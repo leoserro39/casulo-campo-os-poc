@@ -2,7 +2,7 @@
   "status": "PASS",
   "phase": "PROD-3621..3660",
   "decision": "CONTROLLED_PILOT_MANUAL_CANDIDATE_INTAKE_SHELL_READY",
-  "generated_at": "2026-07-01T00:49:26.185101+00:00",
+  "generated_at": "2026-07-01T00:49:55.379030+00:00",
   "shell": "product/calibration/real_sessions/controlled_pilot_manual_candidate_intake_shell_v0_1.json",
   "intake_form": "product/calibration/real_sessions/controlled_pilot_manual_candidate_intake_form_v0_1.json",
   "intake_section_count": 15,
