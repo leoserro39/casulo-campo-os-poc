@@ -1,0 +1,388 @@
+{
+  "version": "controlled_pilot_manual_dry_run_session_execution_precheck_checklist.v0.1",
+  "phase": "PROD-4461..4500",
+  "status": "CHECKLIST_TEMPLATE_ONLY_NO_SESSION_EXECUTION",
+  "real_data_captured_in_this_phase": false,
+  "real_candidate_inserted": false,
+  "real_candidate_accepted_to_dataset": false,
+  "checks": [
+    {
+      "id": "PRECHECK-001",
+      "name": "prior_final_gate_readiness_gate_passed",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "PRECHECK-002",
+      "name": "final_gate_packet_present",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "PRECHECK-003",
+      "name": "final_gate_template_present",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "PRECHECK-004",
+      "name": "final_gate_checklist_present",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "PRECHECK-005",
+      "name": "review_readiness_gate_present",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "PRECHECK-006",
+      "name": "review_packet_present",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "PRECHECK-007",
+      "name": "review_template_present",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "PRECHECK-008",
+      "name": "review_checklist_present",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "PRECHECK-009",
+      "name": "observation_readiness_gate_present",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "PRECHECK-010",
+      "name": "observation_packet_present",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "PRECHECK-011",
+      "name": "observation_template_present",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "PRECHECK-012",
+      "name": "observation_checklist_present",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "PRECHECK-013",
+      "name": "log_readiness_gate_present",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "PRECHECK-014",
+      "name": "log_shell_present",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "PRECHECK-015",
+      "name": "log_template_present",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "PRECHECK-016",
+      "name": "execution_gate_present",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "PRECHECK-017",
+      "name": "session_packet_present",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "PRECHECK-018",
+      "name": "session_checklist_present",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "PRECHECK-019",
+      "name": "session_runbook_present",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "PRECHECK-020",
+      "name": "execution_packet_present",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "PRECHECK-021",
+      "name": "dry_run_shell_present",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "PRECHECK-022",
+      "name": "dry_run_form_present",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "PRECHECK-023",
+      "name": "validator_present",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "PRECHECK-024",
+      "name": "schema_present",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "PRECHECK-025",
+      "name": "real_dataset_empty",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "PRECHECK-026",
+      "name": "reviewer_queue_empty",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "PRECHECK-027",
+      "name": "precheck_sections_present",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "PRECHECK-028",
+      "name": "precheck_fields_present",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "PRECHECK-029",
+      "name": "precheck_template_fields_present",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "PRECHECK-030",
+      "name": "precheck_checklist_items_present",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "PRECHECK-031",
+      "name": "operator_ref_required",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "PRECHECK-032",
+      "name": "human_reviewer_ref_required",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "PRECHECK-033",
+      "name": "source_reference_refs_required",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "PRECHECK-034",
+      "name": "privacy_review_ref_required",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "PRECHECK-035",
+      "name": "pii_redaction_ref_required",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "PRECHECK-036",
+      "name": "secret_scan_ref_required",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "PRECHECK-037",
+      "name": "evidence_packet_ref_required",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "PRECHECK-038",
+      "name": "manual_observation_refs_required",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "PRECHECK-039",
+      "name": "reviewer_notes_ref_required",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "PRECHECK-040",
+      "name": "claim_boundary_review_required",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "PRECHECK-041",
+      "name": "dataset_hold_reason_required",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "PRECHECK-042",
+      "name": "blocked_action_review_required",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "PRECHECK-043",
+      "name": "abort_trigger_review_required",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "PRECHECK-044",
+      "name": "precheck_decision_required",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "PRECHECK-045",
+      "name": "precheck_reason_required",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "PRECHECK-046",
+      "name": "next_allowed_phase_required",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "PRECHECK-047",
+      "name": "reference_only_storage_required",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "PRECHECK-048",
+      "name": "sanitized_precheck_only",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "PRECHECK-049",
+      "name": "template_only_confirmed",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "PRECHECK-050",
+      "name": "checklist_template_only_confirmed",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "PRECHECK-051",
+      "name": "session_execution_not_performed",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "PRECHECK-052",
+      "name": "precheck_packet_only_confirmed",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "PRECHECK-053",
+      "name": "automatic_capture_blocked",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "PRECHECK-054",
+      "name": "real_candidate_insert_blocked",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "PRECHECK-055",
+      "name": "dataset_acceptance_blocked",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "PRECHECK-056",
+      "name": "raw_private_data_blocked",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "PRECHECK-057",
+      "name": "secrets_blocked",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "PRECHECK-058",
+      "name": "unredacted_pii_blocked",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "PRECHECK-059",
+      "name": "client_claim_blocked",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "PRECHECK-060",
+      "name": "production_activation_blocked",
+      "required": true,
+      "status": "PENDING"
+    }
+  ],
+  "default_gate": "HOLD_EXECUTION_PRECHECK_PACKET_NO_SESSION_EXECUTION",
+  "blocked_actions": [
+    "automatic_real_session_capture",
+    "real_candidate_insert",
+    "real_candidate_dataset_acceptance",
+    "dataset_acceptance_without_human_review",
+    "raw_private_data_storage",
+    "secret_or_credential_storage",
+    "unredacted_pii_storage",
+    "client_facing_value_claim",
+    "real_world_profit_claim",
+    "validated_savings_claim",
+    "validated_hallucination_reduction_claim",
+    "production_activation",
+    "automatic_memory_delete",
+    "gpt_memory_api_execution",
+    "commercial_package_pricing_claim"
+  ]
+}
