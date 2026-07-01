@@ -1,0 +1,74 @@
+{
+  "version": "controlled_real_session_pilot_readiness_gate.v0.1",
+  "phase": "PROD-3421..3460",
+  "decision": "APPROVED_FOR_MANUAL_CONTROLLED_REAL_SESSION_PILOT_EXECUTION_ONLY",
+  "scope": "Manual controlled pilot execution only. This gate does not capture data.",
+  "real_data_captured_in_this_phase": false,
+  "pilot_scope": {
+    "pilot_id": "PILOT-001-CONTROLLED-REAL-SESSION-PREPARATION",
+    "status": "PREPARATION_ONLY_NO_REAL_CAPTURE",
+    "target_session_count": 10,
+    "minimum_accepted_sessions": 5,
+    "allowed_chat_layers": [
+      "ANALYSIS_CHAT",
+      "PROJECT_CHAT",
+      "GOVERNANCE_CHAT",
+      "CALIBRATION_CHAT",
+      "EVIDENCE_AUDIT_CHAT"
+    ],
+    "excluded_chat_layers": [
+      "PRODUCTION_ACTIVATION_CHAT",
+      "CLIENT_CLAIM_CHAT",
+      "SECRET_HANDLING_CHAT"
+    ],
+    "comparison_modes": [
+      "PURE_CHAT_BASELINE",
+      "CASULO_EXOCORTEX_ASSISTED"
+    ]
+  },
+  "required_controls": [
+    "source_refs_only",
+    "privacy_review_required",
+    "pii_redaction_required",
+    "secret_scan_required",
+    "human_reviewer_required",
+    "claim_boundary_required",
+    "dataset_acceptance_gate_required",
+    "no_raw_private_data",
+    "no_client_facing_claim",
+    "no_production_activation"
+  ],
+  "allowed_actions": [
+    "manual_controlled_pilot_execution_preparation",
+    "manual_sanitized_source_reference_capture",
+    "human_reviewed_pilot_session_creation",
+    "privacy_reviewed_dataset_candidate_creation",
+    "pilot_evidence_packet_preparation"
+  ],
+  "blocked_actions": [
+    "automatic_real_session_capture",
+    "raw_private_data_storage",
+    "secret_or_credential_storage",
+    "unredacted_pii_storage",
+    "client_facing_value_claim",
+    "real_world_profit_claim",
+    "validated_savings_claim",
+    "validated_hallucination_reduction_claim",
+    "production_activation",
+    "automatic_memory_delete",
+    "gpt_memory_api_execution",
+    "commercial_package_pricing_claim"
+  ],
+  "execution_boundary": {
+    "automatic_capture_allowed": false,
+    "raw_private_data_allowed": false,
+    "secret_storage_allowed": false,
+    "unredacted_pii_allowed": false,
+    "client_facing_claim_allowed": false,
+    "production_activation_allowed": false,
+    "manual_sanitized_source_reference_capture_allowed": true,
+    "human_review_required": true
+  },
+  "acceptance_rule": "A pilot record may become a dataset candidate only after source_refs_only, privacy review, PII redaction, secret scan, human reviewer notes, claim boundary and decision gate are all present.",
+  "recommended_next_phase": "PROD-3461..3500 - Controlled Real Session Pilot Execution Runbook"
+}

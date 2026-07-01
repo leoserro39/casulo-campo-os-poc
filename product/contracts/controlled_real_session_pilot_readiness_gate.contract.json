@@ -1,0 +1,32 @@
+{
+  "phase": "PROD-3421..3460",
+  "required_prior_tag": "product-controlled-real-session-pilot-packet-v0.1",
+  "mode": "controlled_real_session_pilot_readiness_gate",
+  "manual_controlled_execution_only": true,
+  "real_data_captured_in_this_phase": false,
+  "automatic_capture_blocked": true,
+  "human_review_required": true,
+  "privacy_controls_required": true,
+  "blocked_actions": [
+    "automatic_real_session_capture",
+    "raw_private_data_storage",
+    "secret_or_credential_storage",
+    "unredacted_pii_storage",
+    "client_facing_value_claim",
+    "real_world_profit_claim",
+    "validated_savings_claim",
+    "validated_hallucination_reduction_claim",
+    "production_activation",
+    "automatic_memory_delete",
+    "gpt_memory_api_execution",
+    "commercial_package_pricing_claim"
+  ],
+  "allowed_actions": [
+    "manual_controlled_pilot_execution_preparation",
+    "manual_sanitized_source_reference_capture",
+    "human_reviewed_pilot_session_creation",
+    "privacy_reviewed_dataset_candidate_creation",
+    "pilot_evidence_packet_preparation"
+  ],
+  "recommended_next_phase": "PROD-3461..3500 - Controlled Real Session Pilot Execution Runbook"
+}
