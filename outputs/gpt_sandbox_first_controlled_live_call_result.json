@@ -9,14 +9,14 @@
   "gpt_memory_api_execution": false,
   "provider": "openai_gpt",
   "model": "gpt-5.5-2026-04-23",
-  "prompt_hash": "649266730dbb91f49bbfaf5234a1301f1e0f8fcbf3fba32745049381037674bf",
-  "output_hash": "d154d29431c3de20179ddc2db562775df63ceb0e920d3351ec55ac630130bbd3",
-  "output_preview": "CASULO_EXOCORTEX_STACK_SANDBOX_ACK",
-  "latency_ms": 4334,
+  "prompt_hash": "455b75157bb413ce04fed5b67664ecb48b7bc249c68625879f6900873b0c3134",
+  "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "output_preview": "",
+  "latency_ms": 4545,
   "dataset_write": false,
   "real_candidate_inserted": false,
   "real_candidate_accepted_to_dataset": false,
   "payload_template_version": "gpt_sandbox_first_controlled_call_payload_template.v0.1",
   "post_call_review_required": true,
-  "generated_at": "2026-07-01T15:29:21.883985+00:00"
+  "generated_at": "2026-07-01T15:47:16.443909+00:00"
 }

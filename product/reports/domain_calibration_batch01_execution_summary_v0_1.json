@@ -1,0 +1,95 @@
+{
+  "version": "domain_calibration_batch01_execution_summary.v0.1",
+  "phase": "PROD-6021..6060",
+  "generated_at": "2026-07-01T15:47:16.967707+00:00",
+  "status": "PASS",
+  "scope": "controlled_lab_domain_calibration_outputs_only",
+  "domain_validation_completed": false,
+  "review_required": true,
+  "scenario_count": 12,
+  "planned_execution_count": 36,
+  "executed_count": 36,
+  "real_provider_call_count": 36,
+  "successful_live_response_count": 36,
+  "mode_counts": {
+    "PURE_GPT": 12,
+    "STACK_GPT": 12,
+    "CASULO_EXOCORTEX_STACK": 12
+  },
+  "domain_counts": {
+    "TIC/SI / ITSM": 6,
+    "VesselFlow / Operação marítima": 6,
+    "Jurídico / Escritório": 6,
+    "Financeiro / Administrativo": 6,
+    "Pequenos negócios de campo": 6,
+    "Governança documental": 6
+  },
+  "status_counts": {
+    "PASS": 36
+  },
+  "latency_summary_by_mode": {
+    "PURE_GPT": {
+      "count": 12,
+      "min": 3921,
+      "max": 6364,
+      "avg": 4819.67
+    },
+    "STACK_GPT": {
+      "count": 12,
+      "min": 4177,
+      "max": 5827,
+      "avg": 4728.25
+    },
+    "CASULO_EXOCORTEX_STACK": {
+      "count": 12,
+      "min": 4127,
+      "max": 6199,
+      "avg": 4726.67
+    }
+  },
+  "latency_summary_by_domain": {
+    "TIC/SI / ITSM": {
+      "count": 6,
+      "min": 4616,
+      "max": 6364,
+      "avg": 5105.33
+    },
+    "VesselFlow / Operação marítima": {
+      "count": 6,
+      "min": 4127,
+      "max": 5196,
+      "avg": 4651.17
+    },
+    "Jurídico / Escritório": {
+      "count": 6,
+      "min": 4177,
+      "max": 6199,
+      "avg": 5016.33
+    },
+    "Financeiro / Administrativo": {
+      "count": 6,
+      "min": 3921,
+      "max": 5827,
+      "avg": 4643.5
+    },
+    "Pequenos negócios de campo": {
+      "count": 6,
+      "min": 4249,
+      "max": 4927,
+      "avg": 4568.67
+    },
+    "Governança documental": {
+      "count": 6,
+      "min": 4169,
+      "max": 4812,
+      "avg": 4564.17
+    }
+  },
+  "unique_output_hash_count": 10,
+  "safety_violations": 0,
+  "dataset_acceptance": false,
+  "client_evidence": false,
+  "production_evidence": false,
+  "commercial_claim": false,
+  "recommended_next_phase": "PROD-6061..6100 - Domain Calibration Batch 01 Review Gate"
+}
