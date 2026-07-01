@@ -1,0 +1,211 @@
+{
+  "version": "gpt_sandbox_first_controlled_call_live_authorization_template.v0.1",
+  "phase": "PROD-5381..5420",
+  "template_only": true,
+  "live_call_allowed": false,
+  "fields": {
+    "authorization_id": {
+      "value": null,
+      "required": true,
+      "storage_rule": "reference_only_or_sanitized_placeholder"
+    },
+    "phase": {
+      "value": null,
+      "required": true,
+      "storage_rule": "reference_only_or_sanitized_placeholder"
+    },
+    "operator_ref": {
+      "value": null,
+      "required": true,
+      "storage_rule": "reference_only_or_sanitized_placeholder"
+    },
+    "human_reviewer_ref": {
+      "value": null,
+      "required": true,
+      "storage_rule": "reference_only_or_sanitized_placeholder"
+    },
+    "second_reviewer_ref": {
+      "value": null,
+      "required": true,
+      "storage_rule": "reference_only_or_sanitized_placeholder"
+    },
+    "authorization_decision": {
+      "value": null,
+      "required": true,
+      "storage_rule": "reference_only_or_sanitized_placeholder"
+    },
+    "authorization_reason": {
+      "value": null,
+      "required": true,
+      "storage_rule": "reference_only_or_sanitized_placeholder"
+    },
+    "approved_modes": {
+      "value": null,
+      "required": true,
+      "storage_rule": "reference_only_or_sanitized_placeholder"
+    },
+    "provider_scope": {
+      "value": null,
+      "required": true,
+      "storage_rule": "reference_only_or_sanitized_placeholder"
+    },
+    "model_name_ref": {
+      "value": null,
+      "required": true,
+      "storage_rule": "reference_only_or_sanitized_placeholder"
+    },
+    "api_key_source_ref": {
+      "value": null,
+      "required": true,
+      "storage_rule": "reference_only_or_sanitized_placeholder"
+    },
+    "api_key_storage_confirmation": {
+      "value": null,
+      "required": true,
+      "storage_rule": "reference_only_or_sanitized_placeholder"
+    },
+    "prompt_sanitization_confirmation": {
+      "value": null,
+      "required": true,
+      "storage_rule": "reference_only_or_sanitized_placeholder"
+    },
+    "payload_template_ref": {
+      "value": null,
+      "required": true,
+      "storage_rule": "reference_only_or_sanitized_placeholder"
+    },
+    "expected_log_template_ref": {
+      "value": null,
+      "required": true,
+      "storage_rule": "reference_only_or_sanitized_placeholder"
+    },
+    "runner_script_ref": {
+      "value": null,
+      "required": true,
+      "storage_rule": "reference_only_or_sanitized_placeholder"
+    },
+    "runner_dry_run_output_ref": {
+      "value": null,
+      "required": true,
+      "storage_rule": "reference_only_or_sanitized_placeholder"
+    },
+    "runner_apply_block_ref": {
+      "value": null,
+      "required": true,
+      "storage_rule": "reference_only_or_sanitized_placeholder"
+    },
+    "evidence_packet_ref": {
+      "value": null,
+      "required": true,
+      "storage_rule": "reference_only_or_sanitized_placeholder"
+    },
+    "state_snapshot_ref": {
+      "value": null,
+      "required": true,
+      "storage_rule": "reference_only_or_sanitized_placeholder"
+    },
+    "exocortex_snapshot_ref": {
+      "value": null,
+      "required": true,
+      "storage_rule": "reference_only_or_sanitized_placeholder"
+    },
+    "gate_packet_ref": {
+      "value": null,
+      "required": true,
+      "storage_rule": "reference_only_or_sanitized_placeholder"
+    },
+    "claim_boundary_ref": {
+      "value": null,
+      "required": true,
+      "storage_rule": "reference_only_or_sanitized_placeholder"
+    },
+    "dataset_boundary_ref": {
+      "value": null,
+      "required": true,
+      "storage_rule": "reference_only_or_sanitized_placeholder"
+    },
+    "privacy_boundary_ref": {
+      "value": null,
+      "required": true,
+      "storage_rule": "reference_only_or_sanitized_placeholder"
+    },
+    "pii_boundary_ref": {
+      "value": null,
+      "required": true,
+      "storage_rule": "reference_only_or_sanitized_placeholder"
+    },
+    "secret_boundary_ref": {
+      "value": null,
+      "required": true,
+      "storage_rule": "reference_only_or_sanitized_placeholder"
+    },
+    "cost_limit_ref": {
+      "value": null,
+      "required": true,
+      "storage_rule": "reference_only_or_sanitized_placeholder"
+    },
+    "latency_limit_ref": {
+      "value": null,
+      "required": true,
+      "storage_rule": "reference_only_or_sanitized_placeholder"
+    },
+    "abort_trigger_ref": {
+      "value": null,
+      "required": true,
+      "storage_rule": "reference_only_or_sanitized_placeholder"
+    },
+    "rollback_plan_ref": {
+      "value": null,
+      "required": true,
+      "storage_rule": "reference_only_or_sanitized_placeholder"
+    },
+    "human_observation_ref": {
+      "value": null,
+      "required": true,
+      "storage_rule": "reference_only_or_sanitized_placeholder"
+    },
+    "post_call_review_required": {
+      "value": null,
+      "required": true,
+      "storage_rule": "reference_only_or_sanitized_placeholder"
+    },
+    "live_execution_gate_required": {
+      "value": null,
+      "required": true,
+      "storage_rule": "reference_only_or_sanitized_placeholder"
+    },
+    "signature_placeholder": {
+      "value": null,
+      "required": true,
+      "storage_rule": "reference_only_or_sanitized_placeholder"
+    }
+  },
+  "default_decision": "HOLD_LIVE_GPT_CALL_PENDING_READINESS_GATE",
+  "blocked_actions": [
+    "real_gpt_provider_call",
+    "openai_api_key_storage",
+    "gpt_memory_api_execution",
+    "live_gpt_call_execution",
+    "live_gpt_benchmark_execution",
+    "multi_vendor_llm_execution",
+    "claude_provider_call",
+    "gemini_provider_call",
+    "copilot_provider_call",
+    "start_command_execution",
+    "manual_session_execution",
+    "automatic_real_session_capture",
+    "real_candidate_insert",
+    "real_candidate_dataset_acceptance",
+    "dataset_acceptance_without_human_review",
+    "raw_private_data_storage",
+    "secret_or_credential_storage",
+    "unredacted_pii_storage",
+    "client_facing_value_claim",
+    "real_world_profit_claim",
+    "validated_savings_claim",
+    "validated_hallucination_reduction_claim",
+    "production_activation",
+    "automatic_memory_delete",
+    "commercial_package_pricing_claim"
+  ]
+}

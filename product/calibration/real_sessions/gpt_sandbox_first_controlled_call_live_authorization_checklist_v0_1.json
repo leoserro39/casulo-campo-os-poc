@@ -1,0 +1,1068 @@
+{
+  "version": "gpt_sandbox_first_controlled_call_live_authorization_checklist.v0.1",
+  "phase": "PROD-5381..5420",
+  "template_only": true,
+  "live_call_allowed": false,
+  "checks": [
+    {
+      "id": "LIVE-AUTH-001",
+      "name": "runner_readiness_gate_passed",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "LIVE-AUTH-002",
+      "name": "runner_packet_present",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "LIVE-AUTH-003",
+      "name": "runner_spec_present",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "LIVE-AUTH-004",
+      "name": "runner_script_present",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "LIVE-AUTH-005",
+      "name": "runner_dry_run_output_present",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "LIVE-AUTH-006",
+      "name": "runner_dry_run_output_passed",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "LIVE-AUTH-007",
+      "name": "apply_mode_blocked",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "LIVE-AUTH-008",
+      "name": "forbidden_source_tokens_empty",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "LIVE-AUTH-009",
+      "name": "gpt_only_scope_confirmed",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "LIVE-AUTH-010",
+      "name": "openai_gpt_provider_scope_confirmed",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "LIVE-AUTH-011",
+      "name": "multi_vendor_llm_scope_false",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "LIVE-AUTH-012",
+      "name": "pure_gpt_mode_present",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "LIVE-AUTH-013",
+      "name": "stack_gpt_mode_present",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "LIVE-AUTH-014",
+      "name": "casulo_exocortex_stack_mode_present",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "LIVE-AUTH-015",
+      "name": "stack_v3_multiprovider_deferred",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "LIVE-AUTH-016",
+      "name": "live_authorization_packet_only",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "LIVE-AUTH-017",
+      "name": "live_call_not_executed",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "LIVE-AUTH-018",
+      "name": "real_gpt_call_still_blocked",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "LIVE-AUTH-019",
+      "name": "api_key_storage_still_blocked",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "LIVE-AUTH-020",
+      "name": "gpt_memory_api_still_blocked",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "LIVE-AUTH-021",
+      "name": "live_benchmark_still_blocked",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "LIVE-AUTH-022",
+      "name": "human_authorization_required",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "LIVE-AUTH-023",
+      "name": "dual_review_required",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "LIVE-AUTH-024",
+      "name": "operator_acknowledgement_required",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "LIVE-AUTH-025",
+      "name": "api_key_env_reference_only",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "LIVE-AUTH-026",
+      "name": "no_api_key_value_storage",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "LIVE-AUTH-027",
+      "name": "no_api_key_file",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "LIVE-AUTH-028",
+      "name": "no_secret_print",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "LIVE-AUTH-029",
+      "name": "prompt_sanitization_required",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "LIVE-AUTH-030",
+      "name": "payload_template_required",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "LIVE-AUTH-031",
+      "name": "expected_log_template_required",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "LIVE-AUTH-032",
+      "name": "state_snapshot_required_for_stack",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "LIVE-AUTH-033",
+      "name": "exocortex_snapshot_required_for_exocortex_stack",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "LIVE-AUTH-034",
+      "name": "evidence_packet_required",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "LIVE-AUTH-035",
+      "name": "gate_packet_required",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "LIVE-AUTH-036",
+      "name": "claim_boundary_required",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "LIVE-AUTH-037",
+      "name": "dataset_boundary_required",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "LIVE-AUTH-038",
+      "name": "privacy_boundary_required",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "LIVE-AUTH-039",
+      "name": "pii_boundary_required",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "LIVE-AUTH-040",
+      "name": "secret_boundary_required",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "LIVE-AUTH-041",
+      "name": "cost_limit_required",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "LIVE-AUTH-042",
+      "name": "latency_limit_required",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "LIVE-AUTH-043",
+      "name": "abort_trigger_required",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "LIVE-AUTH-044",
+      "name": "rollback_plan_required",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "LIVE-AUTH-045",
+      "name": "post_call_review_required",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "LIVE-AUTH-046",
+      "name": "live_execution_gate_required",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "LIVE-AUTH-047",
+      "name": "no_session_execution",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "LIVE-AUTH-048",
+      "name": "no_start_command",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "LIVE-AUTH-049",
+      "name": "no_real_candidate_insert",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "LIVE-AUTH-050",
+      "name": "no_dataset_acceptance",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "LIVE-AUTH-051",
+      "name": "no_raw_private_data",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "LIVE-AUTH-052",
+      "name": "no_unredacted_pii",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "LIVE-AUTH-053",
+      "name": "no_secret_storage",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "LIVE-AUTH-054",
+      "name": "no_client_claim",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "LIVE-AUTH-055",
+      "name": "no_production_activation",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "LIVE-AUTH-056",
+      "name": "roadmap_updated",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "LIVE-AUTH-057",
+      "name": "gpt_first_controlled_call_live_authorization_packet_control_057",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "LIVE-AUTH-058",
+      "name": "gpt_first_controlled_call_live_authorization_packet_control_058",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "LIVE-AUTH-059",
+      "name": "gpt_first_controlled_call_live_authorization_packet_control_059",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "LIVE-AUTH-060",
+      "name": "gpt_first_controlled_call_live_authorization_packet_control_060",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "LIVE-AUTH-061",
+      "name": "gpt_first_controlled_call_live_authorization_packet_control_061",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "LIVE-AUTH-062",
+      "name": "gpt_first_controlled_call_live_authorization_packet_control_062",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "LIVE-AUTH-063",
+      "name": "gpt_first_controlled_call_live_authorization_packet_control_063",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "LIVE-AUTH-064",
+      "name": "gpt_first_controlled_call_live_authorization_packet_control_064",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "LIVE-AUTH-065",
+      "name": "gpt_first_controlled_call_live_authorization_packet_control_065",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "LIVE-AUTH-066",
+      "name": "gpt_first_controlled_call_live_authorization_packet_control_066",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "LIVE-AUTH-067",
+      "name": "gpt_first_controlled_call_live_authorization_packet_control_067",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "LIVE-AUTH-068",
+      "name": "gpt_first_controlled_call_live_authorization_packet_control_068",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "LIVE-AUTH-069",
+      "name": "gpt_first_controlled_call_live_authorization_packet_control_069",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "LIVE-AUTH-070",
+      "name": "gpt_first_controlled_call_live_authorization_packet_control_070",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "LIVE-AUTH-071",
+      "name": "gpt_first_controlled_call_live_authorization_packet_control_071",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "LIVE-AUTH-072",
+      "name": "gpt_first_controlled_call_live_authorization_packet_control_072",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "LIVE-AUTH-073",
+      "name": "gpt_first_controlled_call_live_authorization_packet_control_073",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "LIVE-AUTH-074",
+      "name": "gpt_first_controlled_call_live_authorization_packet_control_074",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "LIVE-AUTH-075",
+      "name": "gpt_first_controlled_call_live_authorization_packet_control_075",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "LIVE-AUTH-076",
+      "name": "gpt_first_controlled_call_live_authorization_packet_control_076",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "LIVE-AUTH-077",
+      "name": "gpt_first_controlled_call_live_authorization_packet_control_077",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "LIVE-AUTH-078",
+      "name": "gpt_first_controlled_call_live_authorization_packet_control_078",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "LIVE-AUTH-079",
+      "name": "gpt_first_controlled_call_live_authorization_packet_control_079",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "LIVE-AUTH-080",
+      "name": "gpt_first_controlled_call_live_authorization_packet_control_080",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "LIVE-AUTH-081",
+      "name": "gpt_first_controlled_call_live_authorization_packet_control_081",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "LIVE-AUTH-082",
+      "name": "gpt_first_controlled_call_live_authorization_packet_control_082",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "LIVE-AUTH-083",
+      "name": "gpt_first_controlled_call_live_authorization_packet_control_083",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "LIVE-AUTH-084",
+      "name": "gpt_first_controlled_call_live_authorization_packet_control_084",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "LIVE-AUTH-085",
+      "name": "gpt_first_controlled_call_live_authorization_packet_control_085",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "LIVE-AUTH-086",
+      "name": "gpt_first_controlled_call_live_authorization_packet_control_086",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "LIVE-AUTH-087",
+      "name": "gpt_first_controlled_call_live_authorization_packet_control_087",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "LIVE-AUTH-088",
+      "name": "gpt_first_controlled_call_live_authorization_packet_control_088",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "LIVE-AUTH-089",
+      "name": "gpt_first_controlled_call_live_authorization_packet_control_089",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "LIVE-AUTH-090",
+      "name": "gpt_first_controlled_call_live_authorization_packet_control_090",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "LIVE-AUTH-091",
+      "name": "gpt_first_controlled_call_live_authorization_packet_control_091",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "LIVE-AUTH-092",
+      "name": "gpt_first_controlled_call_live_authorization_packet_control_092",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "LIVE-AUTH-093",
+      "name": "gpt_first_controlled_call_live_authorization_packet_control_093",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "LIVE-AUTH-094",
+      "name": "gpt_first_controlled_call_live_authorization_packet_control_094",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "LIVE-AUTH-095",
+      "name": "gpt_first_controlled_call_live_authorization_packet_control_095",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "LIVE-AUTH-096",
+      "name": "gpt_first_controlled_call_live_authorization_packet_control_096",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "LIVE-AUTH-097",
+      "name": "gpt_first_controlled_call_live_authorization_packet_control_097",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "LIVE-AUTH-098",
+      "name": "gpt_first_controlled_call_live_authorization_packet_control_098",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "LIVE-AUTH-099",
+      "name": "gpt_first_controlled_call_live_authorization_packet_control_099",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "LIVE-AUTH-100",
+      "name": "gpt_first_controlled_call_live_authorization_packet_control_100",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "LIVE-AUTH-101",
+      "name": "gpt_first_controlled_call_live_authorization_packet_control_101",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "LIVE-AUTH-102",
+      "name": "gpt_first_controlled_call_live_authorization_packet_control_102",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "LIVE-AUTH-103",
+      "name": "gpt_first_controlled_call_live_authorization_packet_control_103",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "LIVE-AUTH-104",
+      "name": "gpt_first_controlled_call_live_authorization_packet_control_104",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "LIVE-AUTH-105",
+      "name": "gpt_first_controlled_call_live_authorization_packet_control_105",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "LIVE-AUTH-106",
+      "name": "gpt_first_controlled_call_live_authorization_packet_control_106",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "LIVE-AUTH-107",
+      "name": "gpt_first_controlled_call_live_authorization_packet_control_107",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "LIVE-AUTH-108",
+      "name": "gpt_first_controlled_call_live_authorization_packet_control_108",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "LIVE-AUTH-109",
+      "name": "gpt_first_controlled_call_live_authorization_packet_control_109",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "LIVE-AUTH-110",
+      "name": "gpt_first_controlled_call_live_authorization_packet_control_110",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "LIVE-AUTH-111",
+      "name": "gpt_first_controlled_call_live_authorization_packet_control_111",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "LIVE-AUTH-112",
+      "name": "gpt_first_controlled_call_live_authorization_packet_control_112",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "LIVE-AUTH-113",
+      "name": "gpt_first_controlled_call_live_authorization_packet_control_113",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "LIVE-AUTH-114",
+      "name": "gpt_first_controlled_call_live_authorization_packet_control_114",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "LIVE-AUTH-115",
+      "name": "gpt_first_controlled_call_live_authorization_packet_control_115",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "LIVE-AUTH-116",
+      "name": "gpt_first_controlled_call_live_authorization_packet_control_116",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "LIVE-AUTH-117",
+      "name": "gpt_first_controlled_call_live_authorization_packet_control_117",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "LIVE-AUTH-118",
+      "name": "gpt_first_controlled_call_live_authorization_packet_control_118",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "LIVE-AUTH-119",
+      "name": "gpt_first_controlled_call_live_authorization_packet_control_119",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "LIVE-AUTH-120",
+      "name": "gpt_first_controlled_call_live_authorization_packet_control_120",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "LIVE-AUTH-121",
+      "name": "gpt_first_controlled_call_live_authorization_packet_control_121",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "LIVE-AUTH-122",
+      "name": "gpt_first_controlled_call_live_authorization_packet_control_122",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "LIVE-AUTH-123",
+      "name": "gpt_first_controlled_call_live_authorization_packet_control_123",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "LIVE-AUTH-124",
+      "name": "gpt_first_controlled_call_live_authorization_packet_control_124",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "LIVE-AUTH-125",
+      "name": "gpt_first_controlled_call_live_authorization_packet_control_125",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "LIVE-AUTH-126",
+      "name": "gpt_first_controlled_call_live_authorization_packet_control_126",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "LIVE-AUTH-127",
+      "name": "gpt_first_controlled_call_live_authorization_packet_control_127",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "LIVE-AUTH-128",
+      "name": "gpt_first_controlled_call_live_authorization_packet_control_128",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "LIVE-AUTH-129",
+      "name": "gpt_first_controlled_call_live_authorization_packet_control_129",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "LIVE-AUTH-130",
+      "name": "gpt_first_controlled_call_live_authorization_packet_control_130",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "LIVE-AUTH-131",
+      "name": "gpt_first_controlled_call_live_authorization_packet_control_131",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "LIVE-AUTH-132",
+      "name": "gpt_first_controlled_call_live_authorization_packet_control_132",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "LIVE-AUTH-133",
+      "name": "gpt_first_controlled_call_live_authorization_packet_control_133",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "LIVE-AUTH-134",
+      "name": "gpt_first_controlled_call_live_authorization_packet_control_134",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "LIVE-AUTH-135",
+      "name": "gpt_first_controlled_call_live_authorization_packet_control_135",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "LIVE-AUTH-136",
+      "name": "gpt_first_controlled_call_live_authorization_packet_control_136",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "LIVE-AUTH-137",
+      "name": "gpt_first_controlled_call_live_authorization_packet_control_137",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "LIVE-AUTH-138",
+      "name": "gpt_first_controlled_call_live_authorization_packet_control_138",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "LIVE-AUTH-139",
+      "name": "gpt_first_controlled_call_live_authorization_packet_control_139",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "LIVE-AUTH-140",
+      "name": "gpt_first_controlled_call_live_authorization_packet_control_140",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "LIVE-AUTH-141",
+      "name": "gpt_first_controlled_call_live_authorization_packet_control_141",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "LIVE-AUTH-142",
+      "name": "gpt_first_controlled_call_live_authorization_packet_control_142",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "LIVE-AUTH-143",
+      "name": "gpt_first_controlled_call_live_authorization_packet_control_143",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "LIVE-AUTH-144",
+      "name": "gpt_first_controlled_call_live_authorization_packet_control_144",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "LIVE-AUTH-145",
+      "name": "gpt_first_controlled_call_live_authorization_packet_control_145",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "LIVE-AUTH-146",
+      "name": "gpt_first_controlled_call_live_authorization_packet_control_146",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "LIVE-AUTH-147",
+      "name": "gpt_first_controlled_call_live_authorization_packet_control_147",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "LIVE-AUTH-148",
+      "name": "gpt_first_controlled_call_live_authorization_packet_control_148",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "LIVE-AUTH-149",
+      "name": "gpt_first_controlled_call_live_authorization_packet_control_149",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "LIVE-AUTH-150",
+      "name": "gpt_first_controlled_call_live_authorization_packet_control_150",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "LIVE-AUTH-151",
+      "name": "gpt_first_controlled_call_live_authorization_packet_control_151",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "LIVE-AUTH-152",
+      "name": "gpt_first_controlled_call_live_authorization_packet_control_152",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "LIVE-AUTH-153",
+      "name": "gpt_first_controlled_call_live_authorization_packet_control_153",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "LIVE-AUTH-154",
+      "name": "gpt_first_controlled_call_live_authorization_packet_control_154",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "LIVE-AUTH-155",
+      "name": "gpt_first_controlled_call_live_authorization_packet_control_155",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "LIVE-AUTH-156",
+      "name": "gpt_first_controlled_call_live_authorization_packet_control_156",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "LIVE-AUTH-157",
+      "name": "gpt_first_controlled_call_live_authorization_packet_control_157",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "LIVE-AUTH-158",
+      "name": "gpt_first_controlled_call_live_authorization_packet_control_158",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "LIVE-AUTH-159",
+      "name": "gpt_first_controlled_call_live_authorization_packet_control_159",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "LIVE-AUTH-160",
+      "name": "gpt_first_controlled_call_live_authorization_packet_control_160",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "LIVE-AUTH-161",
+      "name": "gpt_first_controlled_call_live_authorization_packet_control_161",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "LIVE-AUTH-162",
+      "name": "gpt_first_controlled_call_live_authorization_packet_control_162",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "LIVE-AUTH-163",
+      "name": "gpt_first_controlled_call_live_authorization_packet_control_163",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "LIVE-AUTH-164",
+      "name": "gpt_first_controlled_call_live_authorization_packet_control_164",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "LIVE-AUTH-165",
+      "name": "gpt_first_controlled_call_live_authorization_packet_control_165",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "LIVE-AUTH-166",
+      "name": "gpt_first_controlled_call_live_authorization_packet_control_166",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "LIVE-AUTH-167",
+      "name": "gpt_first_controlled_call_live_authorization_packet_control_167",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "LIVE-AUTH-168",
+      "name": "gpt_first_controlled_call_live_authorization_packet_control_168",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "LIVE-AUTH-169",
+      "name": "gpt_first_controlled_call_live_authorization_packet_control_169",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "LIVE-AUTH-170",
+      "name": "gpt_first_controlled_call_live_authorization_packet_control_170",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "LIVE-AUTH-171",
+      "name": "gpt_first_controlled_call_live_authorization_packet_control_171",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "LIVE-AUTH-172",
+      "name": "gpt_first_controlled_call_live_authorization_packet_control_172",
+      "required": true,
+      "status": "PENDING"
+    }
+  ],
+  "default_decision": "HOLD_LIVE_GPT_CALL_PENDING_READINESS_GATE",
+  "blocked_actions": [
+    "real_gpt_provider_call",
+    "openai_api_key_storage",
+    "gpt_memory_api_execution",
+    "live_gpt_call_execution",
+    "live_gpt_benchmark_execution",
+    "multi_vendor_llm_execution",
+    "claude_provider_call",
+    "gemini_provider_call",
+    "copilot_provider_call",
+    "start_command_execution",
+    "manual_session_execution",
+    "automatic_real_session_capture",
+    "real_candidate_insert",
+    "real_candidate_dataset_acceptance",
+    "dataset_acceptance_without_human_review",
+    "raw_private_data_storage",
+    "secret_or_credential_storage",
+    "unredacted_pii_storage",
+    "client_facing_value_claim",
+    "real_world_profit_claim",
+    "validated_savings_claim",
+    "validated_hallucination_reduction_claim",
+    "production_activation",
+    "automatic_memory_delete",
+    "commercial_package_pricing_claim"
+  ]
+}
