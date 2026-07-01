@@ -1,0 +1,33 @@
+{
+  "phase": "PROD-3461..3500",
+  "required_prior_tag": "product-controlled-real-session-pilot-readiness-gate-v0.1",
+  "mode": "controlled_real_session_pilot_execution_runbook",
+  "real_data_captured_in_this_phase": false,
+  "manual_execution_only": true,
+  "automatic_capture_blocked": true,
+  "human_review_required": true,
+  "source_refs_only_required": true,
+  "abort_triggers_required": true,
+  "blocked_actions": [
+    "automatic_real_session_capture",
+    "raw_private_data_storage",
+    "secret_or_credential_storage",
+    "unredacted_pii_storage",
+    "client_facing_value_claim",
+    "real_world_profit_claim",
+    "validated_savings_claim",
+    "validated_hallucination_reduction_claim",
+    "production_activation",
+    "automatic_memory_delete",
+    "gpt_memory_api_execution",
+    "commercial_package_pricing_claim"
+  ],
+  "allowed_actions": [
+    "controlled_pilot_execution_runbook_creation",
+    "candidate_template_creation",
+    "operator_checklist_creation",
+    "manual_source_reference_protocol",
+    "human_review_queue_preparation"
+  ],
+  "recommended_next_phase": "PROD-3501..3540 - Controlled Pilot Evidence Packet and Reviewer Queue"
+}
