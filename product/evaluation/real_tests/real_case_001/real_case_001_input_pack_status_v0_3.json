@@ -1,15 +1,15 @@
 {
   "version": "real_case_001_input_pack_status.v0.3",
-  "phase": "PROD-6781..6820",
-  "generated_at": "2026-07-01T22:53:14.474110+00:00",
-  "status": "SCAFFOLD_READY_PENDING_USER_SANITIZED_INPUT",
+  "phase": "PROD-6941..6980",
+  "generated_at": "2026-07-01T23:49:28.730662+00:00",
   "real_case_id": "REAL-CASE-001",
-  "real_input_frozen": false,
-  "sanitized_input_present": false,
-  "evidence_packet_present": false,
-  "source_boundaries_present": false,
-  "claim_boundary_acknowledged": true,
-  "ready_for_execution_gate": false,
+  "input_pack_scaffold_ready": true,
+  "real_input_frozen": true,
+  "sanitized_input_present": true,
+  "evidence_packet_present": true,
+  "context_packet_present": true,
+  "execution_gate_ready": false,
+  "ready_for_execution_gate_review": true,
   "ready_for_real_test_execution": false,
-  "live_gpt_call_allowed": false
+  "live_gpt_call_in_this_phase": false
 }

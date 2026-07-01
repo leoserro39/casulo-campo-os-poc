@@ -1,0 +1,23 @@
+{
+  "version": "casulo_delta_zero_real_case_001_client_style_preview.v0.3",
+  "phase": "PROD-6941..6980",
+  "generated_at": "2026-07-01T23:49:28.730676+00:00",
+  "client_facing_validated": false,
+  "real_case_id": "REAL-CASE-001",
+  "selected_candidate_id": "GITHUB-ISSUE-pandas-dev-pandas-66104",
+  "executive_summary_preview": "A public GitHub issue was frozen as an internal controlled test case for evidence-bounded operational review.",
+  "evidence_summary": {
+    "evidence_level": "L1_PUBLIC_URL_OR_THREAD",
+    "source_url": "https://github.com/pandas-dev/pandas/issues/66104",
+    "citation_anchor": "pandas-dev/pandas#66104",
+    "source_boundary": "candidate evidence only"
+  },
+  "expected_recommendation_mode": "human review packet, no automatic implementation",
+  "blocked_claims": [
+    "validated client evidence",
+    "production readiness",
+    "model gain",
+    "hallucination reduction",
+    "Delta Zero validated readiness"
+  ]
+}

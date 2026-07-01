@@ -1,0 +1,22 @@
+{
+  "version": "real_case_001_context_packet.v0.3",
+  "phase": "PROD-6941..6980",
+  "generated_at": "2026-07-01T23:49:28.730649+00:00",
+  "real_case_id": "REAL-CASE-001",
+  "selected_candidate_id": "GITHUB-ISSUE-pandas-dev-pandas-66104",
+  "provider_id": "github_issues_public",
+  "domain": "software_tic",
+  "difficulty": "medium",
+  "risk_theme": "bug_with_partial_evidence",
+  "expected_gate": "HUMAN_REVIEW_REQUIRED",
+  "source_trust_level": "PUBLIC_THREAD_CANDIDATE_NOT_PRIMARY_TRUTH",
+  "citation_gate_passed": true,
+  "source_trust_gate_passed": true,
+  "candidate_readiness_score": 1.0,
+  "input_mode": "CONTROLLED_REVIEW_PACKET",
+  "output_mode": "HUMAN_REVIEW_PACKET",
+  "sandbox_only": true,
+  "live_gpt_call_allowed_now": false,
+  "ready_for_execution_gate": true,
+  "ready_for_real_test_execution": false
+}

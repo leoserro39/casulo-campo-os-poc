@@ -1,0 +1,31 @@
+{
+  "version": "real_case_001_evidence_packet.v0.3",
+  "phase": "PROD-6941..6980",
+  "generated_at": "2026-07-01T23:49:28.730641+00:00",
+  "real_case_id": "REAL-CASE-001",
+  "source_family": "software_tic_cases",
+  "evidence_level": "L1_PUBLIC_URL_OR_THREAD",
+  "evidence_anchors": [
+    {
+      "anchor_id": "REAL-CASE-001-EVIDENCE-001",
+      "evidence_type": "public_issue_url",
+      "source_kind": "github_issue",
+      "source_repo": "pandas-dev/pandas",
+      "source_ref": "https://github.com/pandas-dev/pandas/issues/66104",
+      "citation_anchor": "pandas-dev/pandas#66104",
+      "title": "BUG: date_range crashes python process",
+      "excerpt": "### Pandas version checks\n\n- [x] I have checked that this issue has not already been reported.\n\n- [x] I have confirmed this bug exists on the [latest version](https://pandas.pydata.org/docs/whatsnew/index.html) of pandas.\n\n- [ ] I have confirmed this bug exists on the [main branch](https://pandas.pydata.org/docs/dev/getting_started/install.html#installing-the-development-version-of-pandas) of pandas.\n\n\n### Reproducible Example\n\n```python\nfor idx, response in enumerate(responses.json()):\n  forecast = response[\"hourly\"]\n  forecast_start = datetime.strptime(forecast['time'][0], \"%Y-%m-%dT%H:%M\")\n  forecast_end = datetime.strptime(forecast['time'][-1], \"%Y-%m-%dT%H:%M\")\n\n  ts_data = {param: values for param, values in forecast.items() if param != \"time\"}\n  ts_data[\"timestamp\"] = pd.date_range( # noqa\n    start=pd.to_datetime(forecast_start),\n    end=pd.to_datetime(forecast_end),\n    freq=\"h\",\n    inclusive=\"both\"\n  )\n```\n\n### Issue Description\n\nI updated the version from 3.0.3 to 3.0.4 cau",
+      "created_at": "2026-06-30T14:19:54Z",
+      "updated_at": "2026-06-30T14:21:27Z",
+      "labels": "Bug|Needs Triage",
+      "comments": 1,
+      "source_boundary": "Public GitHub issue is candidate evidence, not validated truth.",
+      "trust_level": "MEDIUM_FOR_CANDIDATE_INTAKE_LOW_FOR_VALIDATED_CLAIM",
+      "citation_required": true
+    }
+  ],
+  "pii_or_secret_status": "NOT_DETECTED_BY_BASIC_PUBLIC_METADATA_SCAN",
+  "usable_for_real_case_001": true,
+  "usable_for_client_claim": false,
+  "usable_for_production_claim": false
+}

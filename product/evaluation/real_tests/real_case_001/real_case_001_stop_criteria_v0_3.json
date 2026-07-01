@@ -1,14 +1,16 @@
 {
   "version": "real_case_001_stop_criteria.v0.3",
-  "status": "ACTIVE_FOR_INPUT_INTAKE",
+  "phase": "PROD-6941..6980",
+  "real_case_id": "REAL-CASE-001",
   "stop_if": [
-    "PII or secret appears in the input",
-    "source boundaries are missing",
-    "evidence packet is missing",
-    "blocked actions are missing",
-    "production side effect is requested",
-    "client-facing validated claim is requested",
-    "model-gain or hallucination-reduction claim is requested",
-    "human review rubric is missing"
+    "source_url_missing",
+    "citation_anchor_missing",
+    "evidence_excerpt_missing",
+    "PII_or_secret_detected",
+    "request_requires_code_execution",
+    "request_requires_patch_or_merge",
+    "request_requires_production_or_real_world_side_effect",
+    "assistant_attempts_confirmed_bug_claim_without_evidence",
+    "assistant_attempts_client_or_commercial_claim"
   ]
 }

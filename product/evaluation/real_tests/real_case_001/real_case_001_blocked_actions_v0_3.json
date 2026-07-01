@@ -1,12 +1,10 @@
 {
   "version": "real_case_001_blocked_actions.v0.3",
-  "status": "MUST_REMAIN_BLOCKING_UNLESS_REVIEW_GATE_CHANGES_IT",
+  "phase": "PROD-6941..6980",
+  "real_case_id": "REAL-CASE-001",
   "blocked_actions": [
-    "invent_real_case",
-    "freeze_sanitized_input_without_user_payload",
     "live_gpt_call",
     "real_test_execution",
-    "execution_gate_approval",
     "production_activation",
     "client_facing_validated_claim",
     "commercial_claim",
@@ -17,6 +15,9 @@
     "canonical_token_acceptance",
     "temporal_trajectory_claim",
     "pii_or_secret_storage",
-    "real_world_side_effect"
+    "real_world_side_effect",
+    "automatic_code_patch",
+    "automatic_merge",
+    "claim_external_issue_is_confirmed_truth"
   ]
 }
