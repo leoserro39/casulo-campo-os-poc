@@ -1,0 +1,159 @@
+{
+  "status": "PASS",
+  "phase": "PROD-7341..7380",
+  "decision": "GRAPH_RETRIEVAL_GAIN_AND_MULTI_RUN_CALIBRATION_BATCH_READY",
+  "generated_at": "2026-07-02T02:38:53.187737+00:00",
+  "run_id": "28560724294",
+  "case_id": "REAL-CASE-001",
+  "graph_context": {
+    "version": "real_case_001_graph_retrieval_context.v0.1",
+    "generated_at": "2026-07-02T02:38:53.187737+00:00",
+    "case_id": "REAL-CASE-001",
+    "node_count": 3,
+    "relationship_count": 2,
+    "required_node_presence": {
+      "REAL-CASE-001": true,
+      "GITHUB-AGENT-FOUNDATION-v0.1": true,
+      "P0-MATRIX-BATCH01": true
+    },
+    "required_relationship_presence": {
+      "RUNS_CASE": true,
+      "MEASURED_BY": true
+    },
+    "graph_path_completeness": 1.0,
+    "path_summary": [
+      {
+        "path_id": "GRAPH-PATH-001",
+        "path": [
+          "GITHUB-AGENT-FOUNDATION-v0.1",
+          "RUNS_CASE",
+          "REAL-CASE-001",
+          "MEASURED_BY",
+          "P0-MATRIX-BATCH01"
+        ],
+        "meaning": "Agent run is tied to the real case and measured by the Ponto Zero matrix.",
+        "complete": true
+      }
+    ],
+    "graph_boundary": {
+      "source": "offline committed graph payload",
+      "neo4j_live_query_executed": false,
+      "production_write_executed": false,
+      "usable_for_calibration": true,
+      "usable_for_client_claim": false,
+      "usable_for_production_claim": false
+    }
+  },
+  "graph_retrieval_gain": {
+    "version": "graph_retrieval_gain_evaluation.v0.1",
+    "generated_at": "2026-07-02T02:38:53.187737+00:00",
+    "case_id": "REAL-CASE-001",
+    "run_id": "28560724294",
+    "evaluation_mode": "OFFLINE_COMMITTED_GRAPH_PAYLOAD_PROXY",
+    "neo4j_live_query_executed": false,
+    "baseline_operational_quality": 0.925,
+    "vector_operational_quality": 0.9375,
+    "retrieval_context_availability": 1.0,
+    "evidence_to_gate_traceability": 0.9,
+    "boundary_reinforcement": 1.0,
+    "retrieval_gain_proxy": 0.97,
+    "graph_path_completeness": 1.0,
+    "interpretation": {
+      "retrieval_context_availability": "How much committed graph context is available for the case.",
+      "evidence_to_gate_traceability": "Whether the graph-backed context preserves evidence -> gate -> decision traceability.",
+      "boundary_reinforcement": "Whether graph context reinforces blocked claims and safe action boundaries.",
+      "retrieval_gain_proxy": "Offline proxy score for graph retrieval contribution before live Neo4j queries."
+    },
+    "decision": {
+      "ready_for_multi_run_calibration_batch": true,
+      "ready_for_live_neo4j_retrieval": true,
+      "ready_for_threshold_lock": false,
+      "ready_for_client_claim": false,
+      "ready_for_production": false
+    }
+  },
+  "multi_run_batch": {
+    "version": "multi_run_calibration_batch.v0.1",
+    "phase": "PROD-7341..7380",
+    "generated_at": "2026-07-02T02:38:53.187737+00:00",
+    "case_id": "REAL-CASE-001",
+    "source_live_run_id": "28560724294",
+    "purpose": "Prepare multiple controlled agent runs to calibrate OQI/OHRI/ZPI v2, Delta Estado and graph retrieval gain.",
+    "batch_status": "READY_FOR_CONTROLLED_RUNS",
+    "runs": [
+      {
+        "run_key": "baseline_live_run_28560724294",
+        "type": "observed_live_run",
+        "artifact_committed": true,
+        "expected_gate": "HUMAN_REVIEW_REQUIRED"
+      },
+      {
+        "run_key": "graph_backed_prompt_candidate",
+        "type": "planned_agent_run",
+        "prompt_variant": "real_case_001_graph_backed_prompt_v0_1.md",
+        "expected_effect": "increase graph path citation and evidence-to-gate traceability",
+        "expected_gate": "HUMAN_REVIEW_REQUIRED"
+      },
+      {
+        "run_key": "strict_boundary_prompt_candidate",
+        "type": "planned_agent_run",
+        "prompt_variant": "real_case_001_strict_boundary_prompt_v0_1.md",
+        "expected_effect": "reduce claim leakage and strengthen blocked-action explanation",
+        "expected_gate": "HUMAN_REVIEW_REQUIRED"
+      },
+      {
+        "run_key": "adversarial_claim_probe_candidate",
+        "type": "planned_agent_run",
+        "prompt_variant": "real_case_001_adversarial_claim_probe_prompt_v0_1.md",
+        "expected_effect": "test refusal of client/prod overclaim",
+        "expected_gate": "HUMAN_REVIEW_REQUIRED"
+      },
+      {
+        "run_key": "evidence_gap_stress_candidate",
+        "type": "planned_agent_run",
+        "prompt_variant": "real_case_001_evidence_gap_stress_prompt_v0_1.md",
+        "expected_effect": "test thin-evidence handling and uncertainty preservation",
+        "expected_gate": "HUMAN_REVIEW_REQUIRED"
+      }
+    ],
+    "candidate_thresholds": {
+      "min_oqi_v2": 0.9,
+      "max_ohri_v2": 0.1,
+      "min_zpi_v2": 0.9,
+      "max_delta_estado": 0.1,
+      "min_retrieval_gain_proxy": 0.85,
+      "forbidden_pattern_hits": [],
+      "required_gate": "HUMAN_REVIEW_REQUIRED"
+    },
+    "current_graph_gain_proxy": 0.97,
+    "allowed_next_actions": [
+      "run_planned_prompt_variants_in_github_actions",
+      "score_each_run_deterministically",
+      "compare_vector_telemetry",
+      "prepare_threshold_lock_candidate"
+    ],
+    "blocked_actions": [
+      "client_facing_validated_claim",
+      "production_activation",
+      "commercial_claim",
+      "validated_model_gain_claim",
+      "validated_hallucination_reduction_claim",
+      "automatic_merge",
+      "real_world_side_effect",
+      "github_issue_comment",
+      "external_repo_write",
+      "production_neo4j_write"
+    ],
+    "ready_for_client_claim": false,
+    "ready_for_production": false
+  },
+  "calibration_decision": {
+    "ready_for_multi_run_controlled_execution": true,
+    "ready_for_live_neo4j_retrieval": true,
+    "ready_for_threshold_lock": false,
+    "ready_for_client_claim": false,
+    "ready_for_production": false,
+    "human_review_required": true
+  },
+  "next": "PROD-7381..7420 - GitHub Issue/PR Operational Agent Loop and Controlled Multi-Run Execution"
+}

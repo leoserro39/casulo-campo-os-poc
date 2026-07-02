@@ -1,0 +1,36 @@
+{
+  "contract": "graph_retrieval_gain_multirun_calibration.contract.v0.1",
+  "phase": "PROD-7341..7380",
+  "requires": [
+    "product/agent_runs/real_case_001/live_run_28560724294/agent_run.json",
+    "product/agent_runs/real_case_001/live_run_28560724294/delta_zero_score.json",
+    "product/agent_runs/real_case_001/live_run_28560724294/model_output.md",
+    "product/agent_runs/real_case_001/live_run_28560724294/prompt.md",
+    "product/calibration/agent_runs/prod7261_7300_live_run_28560724294_calibration_prep.json",
+    "product/telemetry/ponto_zero/agent_runs/prod7301_7340_live_run_28560724294_vector_telemetry.json",
+    "product/graph/neo4j_payloads/real_case_001_nodes_v0_1.json",
+    "product/graph/neo4j_payloads/real_case_001_relationships_v0_1.json",
+    "product/graph/neo4j_payloads/real_case_001_preview_v0_1.cypher"
+  ],
+  "must_produce": [
+    "graph_retrieval_context",
+    "graph_retrieval_gain_evaluation",
+    "multi_run_calibration_batch",
+    "prompt_variants",
+    "output_report"
+  ],
+  "blocked_actions": [
+    "client_facing_validated_claim",
+    "production_activation",
+    "commercial_claim",
+    "validated_model_gain_claim",
+    "validated_hallucination_reduction_claim",
+    "automatic_merge",
+    "real_world_side_effect",
+    "github_issue_comment",
+    "external_repo_write",
+    "production_neo4j_write"
+  ],
+  "ready_for_client_claim": false,
+  "ready_for_production": false
+}

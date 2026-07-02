@@ -1,0 +1,28 @@
+{
+  "version": "graph_retrieval_gain_evaluation.v0.1",
+  "generated_at": "2026-07-02T02:38:53.187737+00:00",
+  "case_id": "REAL-CASE-001",
+  "run_id": "28560724294",
+  "evaluation_mode": "OFFLINE_COMMITTED_GRAPH_PAYLOAD_PROXY",
+  "neo4j_live_query_executed": false,
+  "baseline_operational_quality": 0.925,
+  "vector_operational_quality": 0.9375,
+  "retrieval_context_availability": 1.0,
+  "evidence_to_gate_traceability": 0.9,
+  "boundary_reinforcement": 1.0,
+  "retrieval_gain_proxy": 0.97,
+  "graph_path_completeness": 1.0,
+  "interpretation": {
+    "retrieval_context_availability": "How much committed graph context is available for the case.",
+    "evidence_to_gate_traceability": "Whether the graph-backed context preserves evidence -> gate -> decision traceability.",
+    "boundary_reinforcement": "Whether graph context reinforces blocked claims and safe action boundaries.",
+    "retrieval_gain_proxy": "Offline proxy score for graph retrieval contribution before live Neo4j queries."
+  },
+  "decision": {
+    "ready_for_multi_run_calibration_batch": true,
+    "ready_for_live_neo4j_retrieval": true,
+    "ready_for_threshold_lock": false,
+    "ready_for_client_claim": false,
+    "ready_for_production": false
+  }
+}
