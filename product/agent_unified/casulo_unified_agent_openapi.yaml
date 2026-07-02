@@ -1,0 +1,186 @@
+openapi: 3.1.0
+info:
+  title: CASULO Unified Agent API with Material Admission
+  version: 0.7.0
+  description: Internal sandbox API for CASULO Agent using material-first admission, context rebuild, services and calibration loop. No production or client claim.
+servers:
+  - url: https://REPLACE_WITH_PUBLIC_ACTION_SERVER
+paths:
+  /health:
+    get:
+      operationId: getUnifiedAgentHealth
+      summary: Check unified agent API health
+      responses:
+        '200':
+          description: Health
+  /openapi.json:
+    get:
+      operationId: getUnifiedAgentOpenAPI
+      summary: Get OpenAPI JSON
+      responses:
+        '200':
+          description: OpenAPI schema
+  /materials/taxonomy:
+    get:
+      operationId: getMaterialTaxonomy
+      summary: Get material taxonomy matrix
+      responses:
+        '200':
+          description: Material taxonomy
+  /materials/dimensions:
+    get:
+      operationId: getMaterialDimensions
+      summary: Get material dimensions matrix
+      responses:
+        '200':
+          description: Material dimensions
+  /materials/admit:
+    post:
+      operationId: admitMaterial
+      summary: Admit a raw material signal
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                message: {type: string}
+                raw: {type: string}
+                source_type: {type: string}
+                domain_candidate: {type: string}
+      responses:
+        '200':
+          description: Material admission packet
+  /materials/profile:
+    post:
+      operationId: profileMaterials
+      summary: Profile batch of material signals
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                items:
+                  type: array
+                  items: {type: object}
+      responses:
+        '200':
+          description: Material profile batch
+  /materials/gate:
+    post:
+      operationId: gateMaterial
+      summary: Gate a raw material signal
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                message: {type: string}
+                raw: {type: string}
+                source_type: {type: string}
+                domain_candidate: {type: string}
+      responses:
+        '200':
+          description: Material gate
+  /agent/diagnostic:
+    post:
+      operationId: createMaterialFirstDiagnostic
+      summary: Create material-first Agent diagnostic
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                message: {type: string}
+                case_id: {type: string}
+                domain_candidate: {type: string}
+      responses:
+        '200':
+          description: Material-first diagnostic
+  /agent/monitoring:
+    post:
+      operationId: createMaterialFirstMonitoring
+      summary: Create material-first Agent monitoring summary
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                message: {type: string}
+                case_id: {type: string}
+                domain_candidate: {type: string}
+      responses:
+        '200':
+          description: Material-first monitoring
+  /agent/solutions:
+    post:
+      operationId: createMaterialFirstSolutions
+      summary: Create material-first Agent solution options
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                message: {type: string}
+                case_id: {type: string}
+                domain_candidate: {type: string}
+      responses:
+        '200':
+          description: Material-first solutions
+  /agent/calibration:
+    post:
+      operationId: createMaterialFirstCalibration
+      summary: Create material-first Agent calibration review
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                message: {type: string}
+                case_id: {type: string}
+                domain_candidate: {type: string}
+      responses:
+        '200':
+          description: Material-first calibration
+  /calibration-loop/cases:
+    get:
+      operationId: listControlledBusinessCases
+      summary: List controlled business cases
+      responses:
+        '200':
+          description: Cases
+  /calibration-loop/run:
+    post:
+      operationId: runControlledCalibrationLoop
+      summary: Run controlled calibration loop
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                max_cases: {type: integer}
+      responses:
+        '200':
+          description: Calibration loop result
+  /graph/mermaid:
+    get:
+      operationId: getDiagnosticGraphMermaid
+      summary: Get graph view lite as Mermaid
+      responses:
+        '200':
+          description: Mermaid graph

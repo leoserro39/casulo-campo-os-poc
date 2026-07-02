@@ -1,0 +1,83 @@
+{
+  "version": "casulo_unified_agent_action_test_suite.v0.7",
+  "phase": "PROD-8541..8580",
+  "tests": [
+    {
+      "id": "UACT-001",
+      "endpoint": "GET /health",
+      "expected": [
+        "writes_allowed=false",
+        "live_chatgpt_agent_configured_now=false"
+      ]
+    },
+    {
+      "id": "UACT-002",
+      "endpoint": "POST /materials/admit",
+      "payload": {
+        "message": "Empresa com dados espalhados e sistemas sem integração."
+      },
+      "expected": [
+        "raw_signal_treated_as_truth=false"
+      ]
+    },
+    {
+      "id": "UACT-003",
+      "endpoint": "POST /agent/diagnostic",
+      "payload": {
+        "message": "Empresa com rollback ausente e proposta de automatizar.",
+        "domain_candidate": "TIC_SI"
+      },
+      "expected": [
+        "material_first_then_context_then_service",
+        "ready_for_production=false"
+      ]
+    },
+    {
+      "id": "UACT-004",
+      "endpoint": "POST /agent/monitoring",
+      "payload": {
+        "message": "Caso com pouca evidência e pressão executiva."
+      },
+      "expected": [
+        "INTERNAL_AGENT_SANDBOX_DRAFT"
+      ]
+    },
+    {
+      "id": "UACT-005",
+      "endpoint": "POST /agent/solutions",
+      "payload": {
+        "message": "Empresa precisa reduzir retrabalho e mapear dados."
+      },
+      "expected": [
+        "ready_for_client_claim=false"
+      ]
+    },
+    {
+      "id": "UACT-006",
+      "endpoint": "POST /agent/calibration",
+      "payload": {
+        "message": "Calibrar matriz para empresa com dados espalhados."
+      },
+      "expected": [
+        "threshold_lock_ready=false"
+      ]
+    },
+    {
+      "id": "UACT-007",
+      "endpoint": "POST /calibration-loop/run",
+      "payload": {
+        "max_cases": 3
+      },
+      "expected": [
+        "threshold_lock_ready=false"
+      ]
+    },
+    {
+      "id": "UACT-008",
+      "endpoint": "GET /graph/mermaid",
+      "expected": [
+        "format=mermaid"
+      ]
+    }
+  ]
+}
