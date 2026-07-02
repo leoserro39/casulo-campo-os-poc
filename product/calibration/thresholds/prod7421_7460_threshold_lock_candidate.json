@@ -1,0 +1,36 @@
+{
+  "candidate_thresholds": {
+    "min_oqi_v2": 0.9,
+    "max_ohri_v2": 0.1,
+    "min_zpi_v2": 0.9,
+    "max_delta_estado": 0.1,
+    "forbidden_pattern_hits": [],
+    "required_gate": "HUMAN_REVIEW_REQUIRED"
+  },
+  "observed_metrics": {
+    "runs_total": 4,
+    "runs_captured": 4,
+    "runs_llm_executed": 4,
+    "all_required_sections_present": true,
+    "raw_forbidden_hit_count": 5,
+    "contextual_false_positive_forbidden_hit_count": 5,
+    "mean_oqi_v2": 0.4333,
+    "max_ohri_v2": 0.7167,
+    "mean_zpi_v2": 0.5967,
+    "max_delta_estado": 0.4997
+  },
+  "candidate_result": {
+    "ready_for_threshold_lock": false,
+    "reason": [
+      "controlled runs captured successfully",
+      "client and production claims stayed blocked",
+      "raw forbidden detector produced contextual false positives in blocked/refusal language",
+      "vector score v2 is too strict for prompt-variant outputs and requires scorer hardening before lock"
+    ],
+    "score_hardening_required": true,
+    "contextual_forbidden_detector_required": true,
+    "rerun_after_score_hardening_required": true,
+    "ready_for_client_claim": false,
+    "ready_for_production": false
+  }
+}

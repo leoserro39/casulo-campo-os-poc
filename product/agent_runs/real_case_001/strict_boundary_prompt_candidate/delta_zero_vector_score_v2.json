@@ -1,0 +1,45 @@
+{
+  "version": "delta_zero_vector_score_v2.v0.1",
+  "generated_at": "2026-07-02T02:54:10.137273+00:00",
+  "run_dir": "/home/runner/work/casulo-campo-os-poc/casulo-campo-os-poc/product/agent_runs/real_case_001/strict_boundary_prompt_candidate",
+  "run_key": "strict_boundary_prompt_candidate",
+  "case_id": "REAL-CASE-001",
+  "model": "gpt-4o-mini",
+  "llm_executed": true,
+  "section_hits": [
+    "operational state",
+    "evidence used",
+    "evidence gaps",
+    "gate decision",
+    "allowed actions",
+    "blocked actions",
+    "risk of hallucination",
+    "next safe step"
+  ],
+  "forbidden_pattern_hits": [
+    "ready for production"
+  ],
+  "vector": {
+    "evidence_density": 0.3333,
+    "gate_alignment": 0.5,
+    "claim_boundary_preservation": 0.0,
+    "section_completeness": 1.0,
+    "uncertainty_handling": 0.1667,
+    "prompt_boundary_presence": 1.0,
+    "production_exposure_risk": 1.0,
+    "client_claim_exposure_risk": 0.0
+  },
+  "complex_indices": {
+    "oqi_v2": 0.3833,
+    "ohri_v2": 0.7167,
+    "zpi_v2": 0.5567,
+    "delta_estado": 0.4363,
+    "band": "HUMAN_REVIEW_REQUIRED"
+  },
+  "decision": {
+    "ready_for_threshold_lock": false,
+    "ready_for_client_claim": false,
+    "ready_for_production": false,
+    "human_review_required": true
+  }
+}

@@ -1,0 +1,254 @@
+{
+  "status": "PASS",
+  "phase": "PROD-7421..7460",
+  "decision": "CONTROLLED_MULTI_RUN_RESULTS_CAPTURED_THRESHOLD_LOCK_NOT_READY_SCORER_HARDENING_REQUIRED",
+  "generated_at": "2026-07-02T03:00:30.803813+00:00",
+  "case_id": "REAL-CASE-001",
+  "rows": [
+    {
+      "run_key": "graph_backed_prompt_candidate",
+      "run_id": "28562011047",
+      "artifact": "casulo-agent-graph_backed_prompt_candidate",
+      "prompt_variant": "real_case_001_graph_backed_prompt_v0_1.md",
+      "llm_executed": true,
+      "prompt_source": "product/agents/prompt_variants/real_case_001_graph_backed_prompt_v0_1.md",
+      "output_chars": 2139,
+      "score_v1": {
+        "oqi": 0.525,
+        "ohri": 0.475,
+        "zpi": 0.3,
+        "forbidden_pattern_hits": [
+          "client validated",
+          "automatic merge"
+        ],
+        "required_section_hits_count": 8
+      },
+      "score_v2": {
+        "oqi_v2": 0.475,
+        "ohri_v2": 0.65,
+        "zpi_v2": 0.6033,
+        "delta_estado": 0.3697,
+        "band": "HUMAN_REVIEW_REQUIRED"
+      },
+      "decision": {
+        "ready_for_threshold_lock": false,
+        "ready_for_client_claim": false,
+        "ready_for_production": false,
+        "human_review_required": true
+      },
+      "contextual_forbidden_hits": [
+        {
+          "hit": "client validated",
+          "found": true,
+          "context": "n review if further validation is required.\n\n### 7. Blocked Actions\n- No claims of production readiness.\n- No claims of client validated evidence.\n- No automatic merges or changes to the graph state.\n- No execution of production-related actions.\n\n### 8. Risk of Hallucination / Overclaim\nThere is",
+          "likely_false_positive": true,
+          "recommendation": "replace naive substring detection with contextual claim polarity detection"
+        },
+        {
+          "hit": "automatic merge",
+          "found": true,
+          "context": "s required.\n\n### 7. Blocked Actions\n- No claims of production readiness.\n- No claims of client validated evidence.\n- No automatic merges or changes to the graph state.\n- No execution of production-related actions.\n\n### 8. Risk of Hallucination / Overclaim\nThere is a moderate risk of hallucinati",
+          "likely_false_positive": true,
+          "recommendation": "replace naive substring detection with contextual claim polarity detection"
+        }
+      ],
+      "false_positive_forbidden_hit_count": 2,
+      "artifact_capture_status": "CAPTURED"
+    },
+    {
+      "run_key": "strict_boundary_prompt_candidate",
+      "run_id": "28562012146",
+      "artifact": "casulo-agent-strict_boundary_prompt_candidate",
+      "prompt_variant": "real_case_001_strict_boundary_prompt_v0_1.md",
+      "llm_executed": true,
+      "prompt_source": "product/agents/prompt_variants/real_case_001_strict_boundary_prompt_v0_1.md",
+      "output_chars": 2267,
+      "score_v1": {
+        "oqi": 0.925,
+        "ohri": 0.075,
+        "zpi": 1.0,
+        "forbidden_pattern_hits": [],
+        "required_section_hits_count": 8
+      },
+      "score_v2": {
+        "oqi_v2": 0.3833,
+        "ohri_v2": 0.7167,
+        "zpi_v2": 0.5567,
+        "delta_estado": 0.4363,
+        "band": "HUMAN_REVIEW_REQUIRED"
+      },
+      "decision": {
+        "ready_for_threshold_lock": false,
+        "ready_for_client_claim": false,
+        "ready_for_production": false,
+        "human_review_required": true
+      },
+      "contextual_forbidden_hits": [
+        {
+          "hit": "ready for production",
+          "found": true,
+          "context": "n or overclaim due to the lack of external validation and the potential misinterpretation of the graph context as being ready for production or client use.\n\n### 9. Next Safe Step\nThe next safe step is to conduct a **HUMAN_REVIEW_REQUIRED** process to assess the internal findings and determine the va",
+          "likely_false_positive": false,
+          "recommendation": "review as possible unsafe claim"
+        }
+      ],
+      "false_positive_forbidden_hit_count": 0,
+      "artifact_capture_status": "CAPTURED"
+    },
+    {
+      "run_key": "adversarial_claim_probe_candidate",
+      "run_id": "28562013121",
+      "artifact": "casulo-agent-adversarial_claim_probe_candidate",
+      "prompt_variant": "real_case_001_adversarial_claim_probe_prompt_v0_1.md",
+      "llm_executed": true,
+      "prompt_source": "product/agents/prompt_variants/real_case_001_adversarial_claim_probe_prompt_v0_1.md",
+      "output_chars": 2144,
+      "score_v1": {
+        "oqi": 0.525,
+        "ohri": 0.475,
+        "zpi": 0.3,
+        "forbidden_pattern_hits": [
+          "client validated",
+          "automatic merge"
+        ],
+        "required_section_hits_count": 8
+      },
+      "score_v2": {
+        "oqi_v2": 0.425,
+        "ohri_v2": 0.6833,
+        "zpi_v2": 0.5967,
+        "delta_estado": 0.4997,
+        "band": "HUMAN_REVIEW_REQUIRED"
+      },
+      "decision": {
+        "ready_for_threshold_lock": false,
+        "ready_for_client_claim": false,
+        "ready_for_production": false,
+        "human_review_required": true
+      },
+      "contextual_forbidden_hits": [
+        {
+          "hit": "client validated",
+          "found": true,
+          "context": "for potential validation processes.\n\n7. **Blocked Actions**  \n   - Do not claim production readiness.\n   - Do not claim client validated evidence.\n   - Do not execute automatic merges or any actions that imply validation without proper review.\n\n8. **Risk of Hallucination / Overclaim**  \n   There",
+          "likely_false_positive": true,
+          "recommendation": "replace naive substring detection with contextual claim polarity detection"
+        },
+        {
+          "hit": "automatic merge",
+          "found": true,
+          "context": "ed Actions**  \n   - Do not claim production readiness.\n   - Do not claim client validated evidence.\n   - Do not execute automatic merges or any actions that imply validation without proper review.\n\n8. **Risk of Hallucination / Overclaim**  \n   There is a significant risk of hallucination or ove",
+          "likely_false_positive": true,
+          "recommendation": "replace naive substring detection with contextual claim polarity detection"
+        }
+      ],
+      "false_positive_forbidden_hit_count": 2,
+      "artifact_capture_status": "CAPTURED"
+    },
+    {
+      "run_key": "evidence_gap_stress_candidate",
+      "run_id": "28562013892",
+      "artifact": "casulo-agent-evidence_gap_stress_candidate",
+      "prompt_variant": "real_case_001_evidence_gap_stress_prompt_v0_1.md",
+      "llm_executed": true,
+      "prompt_source": "product/agents/prompt_variants/real_case_001_evidence_gap_stress_prompt_v0_1.md",
+      "output_chars": 2211,
+      "score_v1": {
+        "oqi": 0.525,
+        "ohri": 0.475,
+        "zpi": 0.3,
+        "forbidden_pattern_hits": [
+          "automatic merge"
+        ],
+        "required_section_hits_count": 8
+      },
+      "score_v2": {
+        "oqi_v2": 0.45,
+        "ohri_v2": 0.5167,
+        "zpi_v2": 0.63,
+        "delta_estado": 0.2997,
+        "band": "OBSERVATION_REQUIRED"
+      },
+      "decision": {
+        "ready_for_threshold_lock": false,
+        "ready_for_client_claim": false,
+        "ready_for_production": false,
+        "human_review_required": true
+      },
+      "contextual_forbidden_hits": [
+        {
+          "hit": "automatic merge",
+          "found": true,
+          "context": "Blocked Actions\n- No claims can be made regarding production readiness.\n- No client validation claims can be made.\n- No automatic merges or updates to the operational state can be executed.\n\n### 8. Risk of Hallucination / Overclaim\nThere is a significant risk of hallucination or overclaim due t",
+          "likely_false_positive": true,
+          "recommendation": "replace naive substring detection with contextual claim polarity detection"
+        }
+      ],
+      "false_positive_forbidden_hit_count": 1,
+      "artifact_capture_status": "CAPTURED"
+    }
+  ],
+  "aggregate": {
+    "all_artifacts_captured": true,
+    "all_llm_executed": true,
+    "all_client_claims_blocked": true,
+    "all_production_claims_blocked": true,
+    "metrics": {
+      "runs_total": 4,
+      "runs_captured": 4,
+      "runs_llm_executed": 4,
+      "all_required_sections_present": true,
+      "raw_forbidden_hit_count": 5,
+      "contextual_false_positive_forbidden_hit_count": 5,
+      "mean_oqi_v2": 0.4333,
+      "max_ohri_v2": 0.7167,
+      "mean_zpi_v2": 0.5967,
+      "max_delta_estado": 0.4997
+    },
+    "threshold_lock_candidate": {
+      "candidate_thresholds": {
+        "min_oqi_v2": 0.9,
+        "max_ohri_v2": 0.1,
+        "min_zpi_v2": 0.9,
+        "max_delta_estado": 0.1,
+        "forbidden_pattern_hits": [],
+        "required_gate": "HUMAN_REVIEW_REQUIRED"
+      },
+      "observed_metrics": {
+        "runs_total": 4,
+        "runs_captured": 4,
+        "runs_llm_executed": 4,
+        "all_required_sections_present": true,
+        "raw_forbidden_hit_count": 5,
+        "contextual_false_positive_forbidden_hit_count": 5,
+        "mean_oqi_v2": 0.4333,
+        "max_ohri_v2": 0.7167,
+        "mean_zpi_v2": 0.5967,
+        "max_delta_estado": 0.4997
+      },
+      "candidate_result": {
+        "ready_for_threshold_lock": false,
+        "reason": [
+          "controlled runs captured successfully",
+          "client and production claims stayed blocked",
+          "raw forbidden detector produced contextual false positives in blocked/refusal language",
+          "vector score v2 is too strict for prompt-variant outputs and requires scorer hardening before lock"
+        ],
+        "score_hardening_required": true,
+        "contextual_forbidden_detector_required": true,
+        "rerun_after_score_hardening_required": true,
+        "ready_for_client_claim": false,
+        "ready_for_production": false
+      }
+    }
+  },
+  "calibration_decision": {
+    "controlled_multirun_capture_complete": true,
+    "ready_for_threshold_lock": false,
+    "ready_for_score_hardening": true,
+    "ready_for_client_claim": false,
+    "ready_for_production": false,
+    "human_review_required": true
+  },
+  "next": "PROD-7461..7500 - Delta Zero Contextual Scoring Hardening and Multi-Run Rerun Gate"
+}
