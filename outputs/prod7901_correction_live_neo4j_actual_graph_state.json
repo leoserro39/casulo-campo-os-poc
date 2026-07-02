@@ -1,0 +1,47 @@
+{
+  "status": "PASS",
+  "phase": "PROD-7901-CORRECTION",
+  "decision": "LIVE_NEO4J_SANDBOX_PRESERVED_7901_TARGET_QUERY_STALE_REQUIRES_REAL_GRAPH_ALIGNMENT",
+  "case_id": "EXP50_GRAPH_SET",
+  "neo4j_container": "casulo-neo4j-sandbox",
+  "neo4j_browser_port": 7474,
+  "neo4j_bolt_port": 7687,
+  "real_data_volume": "config_casulo_neo4j_data",
+  "created_tmp_volume_unused": "tmp_casulo_neo4j_data",
+  "observed_live_graph": {
+    "node_count": 313,
+    "relationship_count": 350,
+    "case_id_pattern": "case:EXP50-*",
+    "sample_cases": [
+      "case:EXP50-001",
+      "case:EXP50-002",
+      "case:EXP50-003",
+      "case:EXP50-004",
+      "case:EXP50-005"
+    ],
+    "relationship_types_observed": [
+      "BELONGS_TO",
+      "HAS_BUDGET",
+      "HAS_EVIDENCE",
+      "REQUIRES",
+      "TRIGGERS",
+      "CONTRIBUTES_TO",
+      "ALLOWS"
+    ]
+  },
+  "correction": {
+    "prod7901_query_target": "REAL-CASE-001 -> GITHUB-AGENT-FOUNDATION-v0.1 -> P0-MATRIX-BATCH01",
+    "prod7901_query_status": "STALE_TARGET_FOR_CURRENT_PERSISTED_NEO4J_GRAPH",
+    "correct_live_graph_target": "EXP50 persisted graph",
+    "action": "Supersede 7901 target query before 7941 ingestion."
+  },
+  "boundary": {
+    "production_write_executed": false,
+    "delete_executed": false,
+    "reimport_executed": false,
+    "client_claim_allowed": false,
+    "production_allowed": false,
+    "commercial_claim_allowed": false
+  },
+  "next": "PROD-7941..7980 - Live Neo4j Actual Graph Evidence Ingestion and Alignment Evaluation"
+}
