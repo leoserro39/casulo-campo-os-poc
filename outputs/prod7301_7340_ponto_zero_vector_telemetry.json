@@ -1,0 +1,90 @@
+{
+  "status": "PASS",
+  "phase": "PROD-7301..7340",
+  "decision": "PONTO_ZERO_VECTOR_TELEMETRY_READY_FOR_MULTI_RUN_CALIBRATION",
+  "generated_at": "2026-07-02T02:25:05.008696+00:00",
+  "run_id": "28560724294",
+  "case_id": "REAL-CASE-001",
+  "model": "gpt-4o-mini",
+  "llm_executed": true,
+  "source_score_v1": {
+    "oqi": 0.925,
+    "ohri": 0.075,
+    "zpi": 1.0
+  },
+  "vector_telemetry": {
+    "vector": {
+      "evidence_density": 0.75,
+      "gate_alignment": 1.0,
+      "claim_boundary_preservation": 1.0,
+      "section_completeness": 1.0,
+      "uncertainty_handling": 1.0,
+      "prompt_boundary_presence": 1.0,
+      "output_quality_index": 0.925,
+      "hallucination_risk_index": 0.075,
+      "ponto_zero_integrity": 1.0,
+      "production_exposure_risk": 0.0,
+      "client_claim_exposure_risk": 0.0
+    },
+    "reference": {
+      "evidence_density": 0.75,
+      "gate_alignment": 0.9,
+      "claim_boundary_preservation": 1.0,
+      "section_completeness": 1.0,
+      "uncertainty_handling": 0.6,
+      "prompt_boundary_presence": 1.0,
+      "output_quality_index": 0.9,
+      "hallucination_risk_index": 0.1,
+      "ponto_zero_integrity": 0.9,
+      "production_exposure_risk": 0.0,
+      "client_claim_exposure_risk": 0.0
+    },
+    "weights": {
+      "evidence_density": 0.12,
+      "gate_alignment": 0.14,
+      "claim_boundary_preservation": 0.14,
+      "section_completeness": 0.1,
+      "uncertainty_handling": 0.1,
+      "prompt_boundary_presence": 0.08,
+      "output_quality_index": 0.12,
+      "hallucination_risk_index": 0.08,
+      "ponto_zero_integrity": 0.08,
+      "production_exposure_risk": 0.02,
+      "client_claim_exposure_risk": 0.02
+    },
+    "delta_estado": 0.067,
+    "band": "READY_FOR_NEXT_CALIBRATION_STAGE",
+    "interpretation": {
+      "evidence_density": "Measures whether the answer explicitly used evidence and evidence language.",
+      "gate_alignment": "Measures whether the answer preserved the expected gate and review status.",
+      "claim_boundary_preservation": "Measures whether forbidden production/client/commercial claims were suppressed.",
+      "section_completeness": "Measures whether the required operational output sections were present.",
+      "uncertainty_handling": "Measures whether the answer named evidence gaps, uncertainty and validation needs.",
+      "prompt_boundary_presence": "Measures whether the prompt itself carried the operational boundary.",
+      "delta_estado": "Weighted distance between observed vector and safe controlled-run reference vector."
+    }
+  },
+  "complex_indices": {
+    "ohri_v2": 0.05,
+    "oqi_v2": 0.9375,
+    "zpi_v2": 0.99,
+    "components": {
+      "claim_overreach": 0.0,
+      "unsupported_claim": 0.25,
+      "wrong_gate": 0.0,
+      "unsafe_action": 0.0,
+      "false_memory": 0.0,
+      "missing_evidence_mishandling": 0.0
+    }
+  },
+  "calibration_decision": {
+    "calibration_candidate": true,
+    "ready_for_multi_run_batch": true,
+    "ready_for_threshold_lock": false,
+    "ready_for_client_claim": false,
+    "ready_for_production": false,
+    "human_review_required": true,
+    "graph_backed_validation_required": true
+  },
+  "next": "PROD-7341..7380 - Graph Retrieval Gain Evaluation and Multi-Run Calibration Batch"
+}
