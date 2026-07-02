@@ -1,0 +1,142 @@
+openapi: 3.1.0
+info:
+  title: CASULO Agent Unified Action API
+  version: 0.5.0
+  description: Manual ChatGPT Agent Actions integration pack for CASULO. Internal draft only; no production or client claim.
+servers:
+  - url: https://REPLACE_WITH_PUBLIC_ACTION_SERVER
+paths:
+  /health:
+    get:
+      operationId: getCasuloHealth
+      summary: Check CASULO unified API health
+      responses:
+        '200':
+          description: Health status
+  /exocortex/context/rebuild:
+    post:
+      operationId: rebuildExocortexContext
+      summary: Rebuild governed context from chat/business signal
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                message:
+                  type: string
+                case_id:
+                  type: string
+              required:
+                - message
+      responses:
+        '200':
+          description: Governed context packet
+  /diagnostic/draft:
+    post:
+      operationId: createDiagnosticDraft
+      summary: Create context-level diagnostic draft
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                message:
+                  type: string
+                case_id:
+                  type: string
+              required:
+                - message
+      responses:
+        '200':
+          description: Diagnostic draft
+  /services/diagnostic:
+    post:
+      operationId: createOperationalDiagnostic
+      summary: Create internal operational diagnostic
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                message:
+                  type: string
+                case_id:
+                  type: string
+              required:
+                - message
+      responses:
+        '200':
+          description: Operational diagnostic
+  /services/monitoring:
+    post:
+      operationId: createOperationalMonitoring
+      summary: Create internal monitoring summary
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                message:
+                  type: string
+                case_id:
+                  type: string
+              required:
+                - message
+      responses:
+        '200':
+          description: Monitoring summary
+  /services/solutions:
+    post:
+      operationId: createOperationalSolutions
+      summary: Create internal solution options
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                message:
+                  type: string
+                case_id:
+                  type: string
+              required:
+                - message
+      responses:
+        '200':
+          description: Solution options
+  /services/calibration:
+    post:
+      operationId: createOperationalCalibration
+      summary: Create internal calibration review
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                message:
+                  type: string
+                case_id:
+                  type: string
+              required:
+                - message
+      responses:
+        '200':
+          description: Calibration review
+  /graph/mermaid:
+    get:
+      operationId: getDiagnosticGraphMermaid
+      summary: Get diagnostic graph view lite as Mermaid
+      responses:
+        '200':
+          description: Mermaid graph

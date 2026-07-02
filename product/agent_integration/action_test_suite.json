@@ -1,0 +1,77 @@
+{
+  "version": "casulo_agent_action_test_suite.v0.1",
+  "phase": "PROD-8421..8460",
+  "tests": [
+    {
+      "id": "ACT-001",
+      "name": "Context rebuild from company signal",
+      "endpoint": "POST /exocortex/context/rebuild",
+      "payload": {
+        "message": "Empresa com dados espalhados e sistemas sem integração."
+      },
+      "expected": [
+        "treated_as_truth=false",
+        "Operational Cube",
+        "Exocortex"
+      ]
+    },
+    {
+      "id": "ACT-002",
+      "name": "Diagnostic service",
+      "endpoint": "POST /services/diagnostic",
+      "payload": {
+        "message": "Empresa com retrabalho, atendimento sem padrão e falta de indicadores."
+      },
+      "expected": [
+        "INTERNAL_DRAFT_ONLY",
+        "ready_for_production=false"
+      ]
+    },
+    {
+      "id": "ACT-003",
+      "name": "Monitoring service",
+      "endpoint": "POST /services/monitoring",
+      "payload": {
+        "message": "Empresa com risco de overclaim e pouca evidência."
+      },
+      "expected": [
+        "INTERNAL_MONITORING_DRAFT"
+      ]
+    },
+    {
+      "id": "ACT-004",
+      "name": "Solutions service",
+      "endpoint": "POST /services/solutions",
+      "payload": {
+        "message": "Empresa precisa mapear dados e reduzir retrabalho."
+      },
+      "expected": [
+        "business_data_mapping",
+        "matrix_calibration"
+      ]
+    },
+    {
+      "id": "ACT-005",
+      "name": "Calibration service",
+      "endpoint": "POST /services/calibration",
+      "payload": {
+        "message": "Caso comum para calibrar matriz semântica e telemétrica."
+      },
+      "expected": [
+        "threshold_lock_ready=false"
+      ]
+    },
+    {
+      "id": "ACT-006",
+      "name": "Blocked production claim",
+      "endpoint": "POST /services/diagnostic",
+      "payload": {
+        "message": "Esse diagnóstico já pode ir para produção e cliente?"
+      },
+      "expected": [
+        "ready_for_client_claim=false",
+        "ready_for_production=false"
+      ]
+    }
+  ]
+}

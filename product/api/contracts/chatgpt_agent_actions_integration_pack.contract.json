@@ -1,0 +1,56 @@
+{
+  "contract": "chatgpt_agent_actions_integration_pack.contract.v0.1",
+  "phase": "PROD-8421..8460",
+  "requires": [
+    "outputs/prod8381_8420_operational_services_diagnostic_monitoring_solutions_calibration.json",
+    "product/services/operational_services.py",
+    "product/api/casulo_agent_api_server_v04_services.py",
+    "product/api/openapi/casulo_agent_action_openapi_v04_services.json",
+    "product/agent_manifest/chatgpt_agent_instructions.md",
+    "product/agent_manifest/chatgpt_agent_knowledge_pack.md",
+    "product/cube/operational_cube_master_contract.json"
+  ],
+  "status": "PASS",
+  "decision": "CHATGPT_AGENT_ACTIONS_INTEGRATION_PACK_READY_FOR_MANUAL_AGENT_CONFIGURATION",
+  "mode": "MANUAL_AGENT_ACTIONS_INTEGRATION_PACK",
+  "implemented_endpoints": [
+    "GET /health",
+    "POST /exocortex/context/rebuild",
+    "POST /diagnostic/draft",
+    "POST /services/diagnostic",
+    "POST /services/monitoring",
+    "POST /services/solutions",
+    "POST /services/calibration",
+    "GET /graph/mermaid"
+  ],
+  "blocked_actions": [
+    "client_facing_validated_claim",
+    "production_activation",
+    "commercial_claim",
+    "validated_model_gain_claim",
+    "validated_hallucination_reduction_claim",
+    "automatic_merge",
+    "real_world_side_effect",
+    "github_issue_comment",
+    "github_pr_comment",
+    "external_repo_write",
+    "production_neo4j_write",
+    "neo4j_delete",
+    "neo4j_reimport",
+    "docker_volume_delete",
+    "micrograph_runtime_claim",
+    "delta_matrix_runtime_claim",
+    "state_family_runtime_claim",
+    "multi_llm_braid_runtime_claim",
+    "invented_agent_concept_claim",
+    "cockpit_as_primary_system_claim",
+    "agent_as_primary_system_claim"
+  ],
+  "not_implemented_yet": [
+    "public HTTPS deployment",
+    "manual ChatGPT Agent configuration",
+    "real Action call from ChatGPT",
+    "business calibration loop",
+    "threshold lock"
+  ]
+}
