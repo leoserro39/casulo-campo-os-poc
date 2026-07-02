@@ -1,0 +1,61 @@
+{
+  "contract": "vector_weight_calibration_prompt_boundary_refinement.contract.v0.1",
+  "phase": "PROD-7541..7580",
+  "requires": [
+    "outputs/prod7501_7540_controlled_multirun_rerun_threshold_lock_eval.json",
+    "product/calibration/batches/prod7501_7540_controlled_contextual_rerun_capture.json",
+    "product/calibration/thresholds/prod7501_7540_threshold_lock_evaluation.json",
+    "product/scripts/score_agent_run_vector_v2.py",
+    "product/scripts/score_agent_output_delta_zero.py",
+    ".github/workflows/casulo_agent_multirun_calibration.yml",
+    "product/agents/prompt_variants/real_case_001_graph_backed_prompt_v0_1.md",
+    "product/agents/prompt_variants/real_case_001_strict_boundary_prompt_v0_1.md",
+    "product/agents/prompt_variants/real_case_001_adversarial_claim_probe_prompt_v0_1.md",
+    "product/agents/prompt_variants/real_case_001_evidence_gap_stress_prompt_v0_1.md",
+    "product/agent_runs/real_case_001/graph_backed_prompt_candidate_rerun_contextual/agent_run.json",
+    "product/agent_runs/real_case_001/graph_backed_prompt_candidate_rerun_contextual/model_output.md",
+    "product/agent_runs/real_case_001/graph_backed_prompt_candidate_rerun_contextual/prompt.md",
+    "product/agent_runs/real_case_001/graph_backed_prompt_candidate_rerun_contextual/delta_zero_score.json",
+    "product/agent_runs/real_case_001/graph_backed_prompt_candidate_rerun_contextual/delta_zero_vector_score_v2.json",
+    "product/agent_runs/real_case_001/strict_boundary_prompt_candidate_rerun_contextual/agent_run.json",
+    "product/agent_runs/real_case_001/strict_boundary_prompt_candidate_rerun_contextual/model_output.md",
+    "product/agent_runs/real_case_001/strict_boundary_prompt_candidate_rerun_contextual/prompt.md",
+    "product/agent_runs/real_case_001/strict_boundary_prompt_candidate_rerun_contextual/delta_zero_score.json",
+    "product/agent_runs/real_case_001/strict_boundary_prompt_candidate_rerun_contextual/delta_zero_vector_score_v2.json",
+    "product/agent_runs/real_case_001/adversarial_claim_probe_candidate_rerun_contextual/agent_run.json",
+    "product/agent_runs/real_case_001/adversarial_claim_probe_candidate_rerun_contextual/model_output.md",
+    "product/agent_runs/real_case_001/adversarial_claim_probe_candidate_rerun_contextual/prompt.md",
+    "product/agent_runs/real_case_001/adversarial_claim_probe_candidate_rerun_contextual/delta_zero_score.json",
+    "product/agent_runs/real_case_001/adversarial_claim_probe_candidate_rerun_contextual/delta_zero_vector_score_v2.json",
+    "product/agent_runs/real_case_001/evidence_gap_stress_candidate_rerun_contextual/agent_run.json",
+    "product/agent_runs/real_case_001/evidence_gap_stress_candidate_rerun_contextual/model_output.md",
+    "product/agent_runs/real_case_001/evidence_gap_stress_candidate_rerun_contextual/prompt.md",
+    "product/agent_runs/real_case_001/evidence_gap_stress_candidate_rerun_contextual/delta_zero_score.json",
+    "product/agent_runs/real_case_001/evidence_gap_stress_candidate_rerun_contextual/delta_zero_vector_score_v2.json"
+  ],
+  "updates": [
+    "product/scripts/score_agent_run_vector_v2.py"
+  ],
+  "creates_prompt_variants": [
+    "real_case_001_graph_backed_prompt_calibrated_v0_2.md",
+    "real_case_001_strict_boundary_prompt_calibrated_v0_2.md",
+    "real_case_001_adversarial_claim_probe_calibrated_v0_2.md",
+    "real_case_001_evidence_gap_stress_calibrated_v0_2.md"
+  ],
+  "threshold_lock_allowed": false,
+  "client_claim_allowed": false,
+  "production_allowed": false,
+  "blocked_actions": [
+    "client_facing_validated_claim",
+    "production_activation",
+    "commercial_claim",
+    "validated_model_gain_claim",
+    "validated_hallucination_reduction_claim",
+    "automatic_merge",
+    "real_world_side_effect",
+    "github_issue_comment",
+    "github_pr_comment",
+    "external_repo_write",
+    "production_neo4j_write"
+  ]
+}

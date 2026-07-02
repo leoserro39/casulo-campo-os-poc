@@ -1,0 +1,49 @@
+{
+  "version": "calibrated_prompt_rerun_gate.v0.1",
+  "phase": "PROD-7541..7580",
+  "generated_at": "2026-07-02T03:19:11.049404+00:00",
+  "ready_for_calibrated_prompt_rerun": true,
+  "workflow": ".github/workflows/casulo_agent_multirun_calibration.yml",
+  "rerun_targets": [
+    {
+      "run_key": "graph_backed_prompt_candidate_calibrated_v0_2",
+      "prompt_variant": "real_case_001_graph_backed_prompt_calibrated_v0_2.md",
+      "allow_llm": true,
+      "model": "gpt-4o-mini"
+    },
+    {
+      "run_key": "strict_boundary_prompt_candidate_calibrated_v0_2",
+      "prompt_variant": "real_case_001_strict_boundary_prompt_calibrated_v0_2.md",
+      "allow_llm": true,
+      "model": "gpt-4o-mini"
+    },
+    {
+      "run_key": "adversarial_claim_probe_candidate_calibrated_v0_2",
+      "prompt_variant": "real_case_001_adversarial_claim_probe_calibrated_v0_2.md",
+      "allow_llm": true,
+      "model": "gpt-4o-mini"
+    },
+    {
+      "run_key": "evidence_gap_stress_candidate_calibrated_v0_2",
+      "prompt_variant": "real_case_001_evidence_gap_stress_calibrated_v0_2.md",
+      "allow_llm": true,
+      "model": "gpt-4o-mini"
+    }
+  ],
+  "threshold_lock_allowed_now": false,
+  "client_claim_allowed": false,
+  "production_allowed": false,
+  "blocked_actions": [
+    "client_facing_validated_claim",
+    "production_activation",
+    "commercial_claim",
+    "validated_model_gain_claim",
+    "validated_hallucination_reduction_claim",
+    "automatic_merge",
+    "real_world_side_effect",
+    "github_issue_comment",
+    "github_pr_comment",
+    "external_repo_write",
+    "production_neo4j_write"
+  ]
+}
