@@ -1,0 +1,8 @@
+{
+  "version": "casulo_github_native_agent_run.v0.1",
+  "generated_at": "2026-07-02T02:17:37.316403+00:00",
+  "case_id": "REAL-CASE-001",
+  "model": "gpt-4o-mini",
+  "llm_executed": true,
+  "ready_for_delta_zero_scoring": true
+}

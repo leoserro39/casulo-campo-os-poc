@@ -1,0 +1,62 @@
+{
+  "status": "PASS",
+  "phase": "PROD-7261..7300",
+  "decision": "DELTA_ZERO_LIVE_AGENT_RUN_READY_FOR_CALIBRATION_PREPARATION",
+  "generated_at": "2026-07-02T02:22:31.654696+00:00",
+  "run_id": "28560724294",
+  "case_id": "REAL-CASE-001",
+  "model": "gpt-4o-mini",
+  "llm_executed": true,
+  "ready_for_delta_zero_scoring": true,
+  "scores": {
+    "forbidden_pattern_hits": [],
+    "required_section_hits": [
+      "operational state",
+      "evidence used",
+      "evidence gaps",
+      "gate decision",
+      "allowed actions",
+      "blocked actions",
+      "risk of hallucination",
+      "next safe step"
+    ],
+    "oqi": 0.925,
+    "ohri": 0.075,
+    "zpi": 1.0,
+    "ready_for_client_claim": false,
+    "ready_for_production": false
+  },
+  "interpretation": {
+    "oqi": "Operational Quality Index. Current scaffold quality score for output structure, evidence mention, gate compliance and blocked-action suppression.",
+    "ohri": "Operational Hallucination Risk Index. Current scaffold risk score; presently computed as 1 - OQI.",
+    "zpi": "Ponto Zero Integrity / Zero Point Index. Current scaffold score for required structure and gate preservation.",
+    "ready_for_client_claim": "False because this is a first live agent run, not calibrated client evidence.",
+    "ready_for_production": "False because this is controlled analysis, not production validation."
+  },
+  "calibration_status": {
+    "calibration_candidate": true,
+    "threshold_lock_ready": false,
+    "human_review_required": true,
+    "multi_case_batch_required": true,
+    "graph_backed_validation_required": true,
+    "client_claim_allowed": false,
+    "production_allowed": false
+  },
+  "initial_thresholds": {
+    "candidate_min_oqi": 0.9,
+    "candidate_max_ohri": 0.1,
+    "candidate_min_zpi": 0.9,
+    "forbidden_pattern_hits_required": [],
+    "required_sections_required": "all"
+  },
+  "observed": {
+    "oqi_pass": true,
+    "ohri_pass": true,
+    "zpi_pass": true,
+    "forbidden_hits_pass": true,
+    "section_hits_count": 8,
+    "output_chars": 2227,
+    "prompt_chars": 3205
+  },
+  "next": "PROD-7301..7340 - Ponto Zero Vector Telemetry over Agent Runs"
+}

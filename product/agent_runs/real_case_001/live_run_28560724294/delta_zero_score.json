@@ -1,0 +1,22 @@
+{
+  "version": "delta_zero_score.v0.1",
+  "generated_at": "2026-07-02T02:17:37.367432+00:00",
+  "scores": {
+    "forbidden_pattern_hits": [],
+    "required_section_hits": [
+      "operational state",
+      "evidence used",
+      "evidence gaps",
+      "gate decision",
+      "allowed actions",
+      "blocked actions",
+      "risk of hallucination",
+      "next safe step"
+    ],
+    "oqi": 0.925,
+    "ohri": 0.075,
+    "zpi": 1.0,
+    "ready_for_client_claim": false,
+    "ready_for_production": false
+  }
+}
