@@ -1,0 +1,149 @@
+{
+  "status": "PASS",
+  "phase": "PROD-7861..7900",
+  "decision": "CLAIM_BOUNDARY_REASSESSED_CLIENT_PRODUCTION_REMAIN_BLOCKED_LIVE_GRAPH_NOT_CONFIRMED",
+  "generated_at": "2026-07-02T03:52:42.609782+00:00",
+  "case_id": "REAL-CASE-001",
+  "claim_boundary_reassessment": {
+    "version": "client_production_claim_boundary_reassessment.v0.1",
+    "phase": "PROD-7861..7900",
+    "generated_at": "2026-07-02T03:52:42.609782+00:00",
+    "case_id": "REAL-CASE-001",
+    "assessment": {
+      "internal_basis": {
+        "internal_threshold_lock_active": true,
+        "regression_guard_active": true,
+        "internal_threshold_smoke_test_pass": true,
+        "monitoring_snapshot_ready": true,
+        "operator_review_packet_ready": true,
+        "offline_graph_payload_complete": true,
+        "live_graph_retrieval_gate_executed": true,
+        "live_graph_retrieval_confirmed": false
+      },
+      "external_claim_conditions": {
+        "requires_internal_lock": true,
+        "requires_regression_guard": true,
+        "requires_operator_packet": true,
+        "requires_live_graph_retrieval_confirmed": false,
+        "requires_future_human_review": true,
+        "requires_explicit_release_boundary_reassessment": true
+      },
+      "allowed_internal_statements": [
+        "Internal threshold lock is active for REAL-CASE-001.",
+        "Regression guard is active.",
+        "Internal smoke test passed.",
+        "Operator evidence packet is ready for internal audit.",
+        "Offline committed graph payload is complete.",
+        "Live graph retrieval gate was executed.",
+        "Live graph retrieval is not confirmed unless a valid live evidence file is committed."
+      ],
+      "blocked_external_claims": [
+        "client validated evidence",
+        "production readiness",
+        "commercial validation",
+        "validated hallucination reduction",
+        "validated model gain",
+        "live Neo4j retrieval confirmation as a public/client claim"
+      ],
+      "client_claim_allowed": false,
+      "production_allowed": false,
+      "commercial_claim_allowed": false,
+      "validated_hallucination_reduction_claim_allowed": false,
+      "validated_model_gain_claim_allowed": false,
+      "ready_for_scope_expansion": false,
+      "ready_for_live_graph_evidence_followup": true,
+      "reason": "Live graph retrieval is not confirmed; external client, production and commercial claims remain blocked."
+    },
+    "decision_matrix": {
+      "internal_status_reporting": {
+        "allowed": true,
+        "scope": "INTERNAL_ONLY",
+        "statements": [
+          "Internal threshold lock is active for REAL-CASE-001.",
+          "Regression guard is active.",
+          "Internal smoke test passed.",
+          "Operator evidence packet is ready for internal audit.",
+          "Offline committed graph payload is complete.",
+          "Live graph retrieval gate was executed.",
+          "Live graph retrieval is not confirmed unless a valid live evidence file is committed."
+        ]
+      },
+      "client_facing_claims": {
+        "allowed": false,
+        "reason": "Live graph retrieval is not confirmed; external client, production and commercial claims remain blocked."
+      },
+      "production_activation": {
+        "allowed": false,
+        "reason": "Production activation was not tested or authorized in this sequence."
+      },
+      "commercial_claims": {
+        "allowed": false,
+        "reason": "Commercial validation is outside this evidence packet."
+      },
+      "validated_hallucination_reduction": {
+        "allowed": false,
+        "reason": "This sequence calibrates internal Delta Zero boundaries; it does not validate public hallucination reduction claims."
+      }
+    },
+    "blocked_actions": [
+      "client_facing_validated_claim",
+      "production_activation",
+      "commercial_claim",
+      "validated_model_gain_claim",
+      "validated_hallucination_reduction_claim",
+      "automatic_merge",
+      "real_world_side_effect",
+      "github_issue_comment",
+      "github_pr_comment",
+      "external_repo_write",
+      "production_neo4j_write",
+      "threshold_scope_expansion_without_future_human_review"
+    ]
+  },
+  "release_boundary": {
+    "version": "client_production_release_boundary.v0.1",
+    "phase": "PROD-7861..7900",
+    "generated_at": "2026-07-02T03:52:42.609782+00:00",
+    "case_id": "REAL-CASE-001",
+    "release_scope": "INTERNAL_ONLY_CONTINUE_LIVE_GRAPH_EVIDENCE_FOLLOWUP",
+    "allowed": [
+      "internal status reporting",
+      "internal audit review",
+      "live graph evidence follow-up",
+      "controlled sandbox/read-only graph retrieval evidence capture",
+      "future claim boundary reassessment after new evidence"
+    ],
+    "blocked": [
+      "client_facing_validated_claim",
+      "production_activation",
+      "commercial_claim",
+      "validated_model_gain_claim",
+      "validated_hallucination_reduction_claim",
+      "automatic_merge",
+      "real_world_side_effect",
+      "github_issue_comment",
+      "github_pr_comment",
+      "external_repo_write",
+      "production_neo4j_write",
+      "threshold_scope_expansion_without_future_human_review"
+    ],
+    "requires_before_any_external_claim": [
+      "live graph retrieval confirmation evidence",
+      "future human review",
+      "new release boundary reassessment",
+      "explicit approval for client-facing scope",
+      "explicit approval for production scope if production is ever considered"
+    ]
+  },
+  "calibration_decision": {
+    "claim_boundary_reassessment_complete": true,
+    "internal_status_reporting_allowed": true,
+    "ready_for_live_graph_evidence_followup": true,
+    "ready_for_scope_expansion": false,
+    "ready_for_client_claim": false,
+    "ready_for_production": false,
+    "commercial_claim_allowed": false,
+    "human_review_required_for_scope_expansion": true
+  },
+  "next": "PROD-7901..7940 - Live Graph Evidence Follow-up and Controlled Sandbox Retrieval Run"
+}

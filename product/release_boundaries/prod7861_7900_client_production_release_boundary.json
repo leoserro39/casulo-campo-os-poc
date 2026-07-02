@@ -1,0 +1,35 @@
+{
+  "version": "client_production_release_boundary.v0.1",
+  "phase": "PROD-7861..7900",
+  "generated_at": "2026-07-02T03:52:42.609782+00:00",
+  "case_id": "REAL-CASE-001",
+  "release_scope": "INTERNAL_ONLY_CONTINUE_LIVE_GRAPH_EVIDENCE_FOLLOWUP",
+  "allowed": [
+    "internal status reporting",
+    "internal audit review",
+    "live graph evidence follow-up",
+    "controlled sandbox/read-only graph retrieval evidence capture",
+    "future claim boundary reassessment after new evidence"
+  ],
+  "blocked": [
+    "client_facing_validated_claim",
+    "production_activation",
+    "commercial_claim",
+    "validated_model_gain_claim",
+    "validated_hallucination_reduction_claim",
+    "automatic_merge",
+    "real_world_side_effect",
+    "github_issue_comment",
+    "github_pr_comment",
+    "external_repo_write",
+    "production_neo4j_write",
+    "threshold_scope_expansion_without_future_human_review"
+  ],
+  "requires_before_any_external_claim": [
+    "live graph retrieval confirmation evidence",
+    "future human review",
+    "new release boundary reassessment",
+    "explicit approval for client-facing scope",
+    "explicit approval for production scope if production is ever considered"
+  ]
+}
