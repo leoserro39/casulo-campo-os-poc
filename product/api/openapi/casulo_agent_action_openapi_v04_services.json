@@ -1,0 +1,143 @@
+{
+  "openapi": "3.1.0",
+  "info": {
+    "title": "CASULO Agent Action API v0.4 Operational Services",
+    "version": "0.4.0",
+    "description": "Diagnostic, monitoring, solutions and calibration internal services."
+  },
+  "servers": [
+    {
+      "url": "https://REPLACE_WITH_PUBLIC_ACTION_SERVER"
+    }
+  ],
+  "paths": {
+    "/services/diagnostic": {
+      "post": {
+        "operationId": "createDiagnostic",
+        "summary": "Create internal diagnostic draft",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "message": {
+                    "type": "string"
+                  },
+                  "case_id": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "message"
+                ]
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Diagnostic draft"
+          }
+        }
+      }
+    },
+    "/services/monitoring": {
+      "post": {
+        "operationId": "createMonitoring",
+        "summary": "Create internal monitoring summary",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "message": {
+                    "type": "string"
+                  },
+                  "case_id": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "message"
+                ]
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Monitoring summary"
+          }
+        }
+      }
+    },
+    "/services/solutions": {
+      "post": {
+        "operationId": "createSolutions",
+        "summary": "Create internal solution options",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "message": {
+                    "type": "string"
+                  },
+                  "case_id": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "message"
+                ]
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Solution options"
+          }
+        }
+      }
+    },
+    "/services/calibration": {
+      "post": {
+        "operationId": "createCalibration",
+        "summary": "Create internal calibration review",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "message": {
+                    "type": "string"
+                  },
+                  "case_id": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "message"
+                ]
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Calibration review"
+          }
+        }
+      }
+    }
+  }
+}

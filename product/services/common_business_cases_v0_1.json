@@ -1,0 +1,21 @@
+{
+  "version": "common_business_cases.v0.1",
+  "phase": "PROD-8381..8420",
+  "cases": [
+    {
+      "case_id": "COMMON-COMPANY-001",
+      "title": "Dados espalhados e retrabalho",
+      "message": "Empresa com dados espalhados em planilhas, sistema financeiro separado, atendimento sem padrão, retrabalho e ausência de indicadores confiáveis."
+    },
+    {
+      "case_id": "COMMON-COMPANY-002",
+      "title": "Mudanças sem rollback",
+      "message": "Empresa média com sistemas críticos, integrações pouco mapeadas, mudanças manuais e ausência de rollback formal."
+    },
+    {
+      "case_id": "COMMON-COMPANY-003",
+      "title": "Atendimento e operação sem estado",
+      "message": "Empresa com atendimento em múltiplos canais, registros inconsistentes, falta de dono por processo e decisões baseadas em memória informal."
+    }
+  ]
+}

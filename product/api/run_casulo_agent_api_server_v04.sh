@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+set -euo pipefail
+cd "$(dirname "$0")/../.." || exit 1
+python3 product/api/casulo_agent_api_server_v04_services.py --host 0.0.0.0 --port "${CASULO_AGENT_SERVICES_API_PORT:-8381}"

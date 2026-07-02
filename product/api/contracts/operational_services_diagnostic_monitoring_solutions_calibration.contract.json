@@ -1,0 +1,51 @@
+{
+  "contract": "operational_services_diagnostic_monitoring_solutions_calibration.contract.v0.1",
+  "phase": "PROD-8381..8420",
+  "requires": [
+    "outputs/prod8341_8380_exocortex_context_rebuild_runtime.json",
+    "product/exocortex/context_rebuild_runtime.py",
+    "product/api/casulo_agent_api_server_v03_context.py",
+    "product/cube/operational_cube_master_contract.json",
+    "product/calibration/casulo_kpi_vector_telemetry_inventory.json",
+    "product/adapters/read_only/evidence_trace_adapter.py"
+  ],
+  "status": "PASS",
+  "decision": "OPERATIONAL_SERVICES_DIAGNOSTIC_MONITORING_SOLUTIONS_CALIBRATION_READY",
+  "mode": "INTERNAL_OPERATIONAL_SERVICES",
+  "implemented_endpoints": [
+    "POST /services/diagnostic",
+    "POST /services/monitoring",
+    "POST /services/solutions",
+    "POST /services/calibration"
+  ],
+  "blocked_actions": [
+    "client_facing_validated_claim",
+    "production_activation",
+    "commercial_claim",
+    "validated_model_gain_claim",
+    "validated_hallucination_reduction_claim",
+    "automatic_merge",
+    "real_world_side_effect",
+    "github_issue_comment",
+    "github_pr_comment",
+    "external_repo_write",
+    "production_neo4j_write",
+    "neo4j_delete",
+    "neo4j_reimport",
+    "docker_volume_delete",
+    "micrograph_runtime_claim",
+    "delta_matrix_runtime_claim",
+    "state_family_runtime_claim",
+    "multi_llm_braid_runtime_claim",
+    "invented_agent_concept_claim",
+    "cockpit_as_primary_system_claim",
+    "agent_as_primary_system_claim"
+  ],
+  "not_implemented_yet": [
+    "public ChatGPT Action deployment",
+    "live customer diagnostic",
+    "threshold lock",
+    "validated model gain claim",
+    "validated hallucination reduction claim"
+  ]
+}

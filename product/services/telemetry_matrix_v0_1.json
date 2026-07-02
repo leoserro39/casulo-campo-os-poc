@@ -1,0 +1,21 @@
+{
+  "version": "telemetry_matrix.v0.1",
+  "phase": "PROD-8381..8420",
+  "metrics": {
+    "OQI": "Operational Quality Index",
+    "OHRI": "Operational Hallucination Risk Index",
+    "ZPI": "Zero Point Integrity",
+    "Delta Estado": "Distance from safe governed operational state",
+    "evidence_density": "Evidence concentration in answer/context",
+    "semantic_ambiguity": "Ambiguity pressure in signal/context",
+    "gate_alignment": "Whether output preserved correct gate",
+    "claim_boundary_preservation": "Whether forbidden claims stayed blocked"
+  },
+  "threshold_candidates": {
+    "min_oqi_for_strong_internal_diagnostic": 0.75,
+    "max_ohri_for_strong_internal_diagnostic": 0.25,
+    "min_zpi_for_zero_point_integrity": 0.8,
+    "max_delta_estado_for_low_delta": 0.2
+  },
+  "threshold_lock_ready": false
+}
