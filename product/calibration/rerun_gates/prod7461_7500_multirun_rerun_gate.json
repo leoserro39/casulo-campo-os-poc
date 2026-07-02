@@ -1,0 +1,36 @@
+{
+  "version": "multirun_rerun_gate.v0.1",
+  "phase": "PROD-7461..7500",
+  "generated_at": "2026-07-02T03:05:52.402167+00:00",
+  "reason": "Scorer hardened to separate raw forbidden strings from contextual false positives and unsafe claims.",
+  "ready_for_controlled_multirun_rerun": true,
+  "rerun_required": true,
+  "rerun_targets": [
+    "graph_backed_prompt_candidate",
+    "strict_boundary_prompt_candidate",
+    "adversarial_claim_probe_candidate",
+    "evidence_gap_stress_candidate"
+  ],
+  "workflow": ".github/workflows/casulo_agent_multirun_calibration.yml",
+  "expected_effect": [
+    "fewer false forbidden hits for blocked/refusal language",
+    "more accurate OQI/OHRI/ZPI v2",
+    "clearer threshold lock candidate after rerun"
+  ],
+  "threshold_lock_allowed_now": false,
+  "client_claim_allowed": false,
+  "production_allowed": false,
+  "blocked_actions": [
+    "client_facing_validated_claim",
+    "production_activation",
+    "commercial_claim",
+    "validated_model_gain_claim",
+    "validated_hallucination_reduction_claim",
+    "automatic_merge",
+    "real_world_side_effect",
+    "github_issue_comment",
+    "github_pr_comment",
+    "external_repo_write",
+    "production_neo4j_write"
+  ]
+}

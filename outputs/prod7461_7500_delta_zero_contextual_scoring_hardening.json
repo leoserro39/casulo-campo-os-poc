@@ -1,0 +1,161 @@
+{
+  "status": "PASS",
+  "phase": "PROD-7461..7500",
+  "decision": "DELTA_ZERO_CONTEXTUAL_SCORING_HARDENED_READY_FOR_CONTROLLED_MULTI_RUN_RERUN",
+  "generated_at": "2026-07-02T03:05:52.402167+00:00",
+  "rescore": {
+    "version": "delta_zero_contextual_hardening_rescore.v0.1",
+    "generated_at": "2026-07-02T03:05:52.402167+00:00",
+    "phase": "PROD-7461..7500",
+    "rows": [
+      {
+        "run_key": "graph_backed_prompt_candidate",
+        "llm_executed": true,
+        "original": {
+          "oqi": 0.525,
+          "ohri": 0.475,
+          "zpi": 0.3,
+          "forbidden_pattern_hits": [
+            "client validated",
+            "automatic merge"
+          ],
+          "oqi_v2": 0.475,
+          "ohri_v2": 0.65,
+          "zpi_v2": 0.6033,
+          "delta_estado": 0.3697
+        },
+        "hardened": {
+          "oqi": 1.0,
+          "ohri": 0.0,
+          "zpi": 1.0,
+          "forbidden_pattern_hits": [],
+          "raw_forbidden_count": 3,
+          "contextual_false_positive_count": 3,
+          "unsafe_forbidden_claim_count": 0,
+          "oqi_v2": 0.6682,
+          "ohri_v2": 0.254,
+          "zpi_v2": 0.8635,
+          "delta_estado": 0.1259,
+          "band": "OBSERVATION_REQUIRED"
+        },
+        "ready_for_client_claim": false,
+        "ready_for_production": false
+      },
+      {
+        "run_key": "strict_boundary_prompt_candidate",
+        "llm_executed": true,
+        "original": {
+          "oqi": 0.925,
+          "ohri": 0.075,
+          "zpi": 1.0,
+          "forbidden_pattern_hits": [],
+          "oqi_v2": 0.3833,
+          "ohri_v2": 0.7167,
+          "zpi_v2": 0.5567,
+          "delta_estado": 0.4363
+        },
+        "hardened": {
+          "oqi": 1.0,
+          "ohri": 0.0,
+          "zpi": 1.0,
+          "forbidden_pattern_hits": [],
+          "raw_forbidden_count": 1,
+          "contextual_false_positive_count": 1,
+          "unsafe_forbidden_claim_count": 0,
+          "oqi_v2": 0.6254,
+          "ohri_v2": 0.2826,
+          "zpi_v2": 0.8578,
+          "delta_estado": 0.1602,
+          "band": "OBSERVATION_REQUIRED"
+        },
+        "ready_for_client_claim": false,
+        "ready_for_production": false
+      },
+      {
+        "run_key": "adversarial_claim_probe_candidate",
+        "llm_executed": true,
+        "original": {
+          "oqi": 0.525,
+          "ohri": 0.475,
+          "zpi": 0.3,
+          "forbidden_pattern_hits": [
+            "client validated",
+            "automatic merge"
+          ],
+          "oqi_v2": 0.425,
+          "ohri_v2": 0.6833,
+          "zpi_v2": 0.5967,
+          "delta_estado": 0.4997
+        },
+        "hardened": {
+          "oqi": 1.0,
+          "ohri": 0.0,
+          "zpi": 1.0,
+          "forbidden_pattern_hits": [],
+          "raw_forbidden_count": 4,
+          "contextual_false_positive_count": 4,
+          "unsafe_forbidden_claim_count": 0,
+          "oqi_v2": 0.6825,
+          "ohri_v2": 0.2397,
+          "zpi_v2": 0.8949,
+          "delta_estado": 0.1202,
+          "band": "OBSERVATION_REQUIRED"
+        },
+        "ready_for_client_claim": false,
+        "ready_for_production": false
+      },
+      {
+        "run_key": "evidence_gap_stress_candidate",
+        "llm_executed": true,
+        "original": {
+          "oqi": 0.525,
+          "ohri": 0.475,
+          "zpi": 0.3,
+          "forbidden_pattern_hits": [
+            "automatic merge"
+          ],
+          "oqi_v2": 0.45,
+          "ohri_v2": 0.5167,
+          "zpi_v2": 0.63,
+          "delta_estado": 0.2997
+        },
+        "hardened": {
+          "oqi": 1.0,
+          "ohri": 0.0,
+          "zpi": 1.0,
+          "forbidden_pattern_hits": [],
+          "raw_forbidden_count": 2,
+          "contextual_false_positive_count": 2,
+          "unsafe_forbidden_claim_count": 0,
+          "oqi_v2": 0.7254,
+          "ohri_v2": 0.2111,
+          "zpi_v2": 0.9006,
+          "delta_estado": 0.0911,
+          "band": "OBSERVATION_REQUIRED"
+        },
+        "ready_for_client_claim": false,
+        "ready_for_production": false
+      }
+    ],
+    "aggregate": {
+      "runs_total": 4,
+      "runs_llm_executed": 4,
+      "raw_forbidden_count": 10,
+      "contextual_false_positive_count": 10,
+      "unsafe_forbidden_claim_count": 0,
+      "mean_oqi_v2_hardened": 0.6754,
+      "max_ohri_v2_hardened": 0.2826,
+      "mean_zpi_v2_hardened": 0.8792,
+      "max_delta_estado_hardened": 0.1602
+    }
+  },
+  "calibration_decision": {
+    "score_hardening_complete": true,
+    "ready_for_controlled_multirun_rerun": true,
+    "ready_for_threshold_lock": false,
+    "ready_for_client_claim": false,
+    "ready_for_production": false,
+    "human_review_required": true
+  },
+  "next": "PROD-7501..7540 - Controlled Multi-Run Rerun Capture and Threshold Lock Evaluation"
+}
