@@ -1,0 +1,32 @@
+{
+  "contract": "internal_monitoring_snapshot_release_boundary_packet.contract.v0.1",
+  "phase": "PROD-7741..7780",
+  "requires": [
+    "outputs/prod7701_7740_internal_threshold_lock_smoke_test_regression_guard.json",
+    "product/calibration/smoke_tests/prod7701_7740_internal_threshold_lock_smoke_test.json",
+    "product/calibration/regression_guards/prod7701_7740_threshold_regression_guard.json",
+    "product/contracts/internal_threshold_lock_smoke_test_regression_guard.contract.json",
+    "outputs/prod7661_7700_human_decision_internal_threshold_lock_contract.json",
+    "outputs/prod7621_7660_human_review_graph_threshold_lock_proposal.json",
+    "outputs/prod7581_7620_calibrated_prompt_multirun_threshold_candidate_capture.json"
+  ],
+  "internal_threshold_monitoring_snapshot_ready": true,
+  "release_boundary_packet_created": true,
+  "release_scope": "INTERNAL_THRESHOLD_LOCK_MONITORING_ONLY",
+  "client_claim_allowed": false,
+  "production_allowed": false,
+  "blocked_actions": [
+    "client_facing_validated_claim",
+    "production_activation",
+    "commercial_claim",
+    "validated_model_gain_claim",
+    "validated_hallucination_reduction_claim",
+    "automatic_merge",
+    "real_world_side_effect",
+    "github_issue_comment",
+    "github_pr_comment",
+    "external_repo_write",
+    "production_neo4j_write",
+    "threshold_scope_expansion_without_future_human_review"
+  ]
+}

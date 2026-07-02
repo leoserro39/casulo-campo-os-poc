@@ -1,0 +1,40 @@
+{
+  "version": "release_boundary_packet.v0.1",
+  "phase": "PROD-7741..7780",
+  "generated_at": "2026-07-02T03:41:07.974442+00:00",
+  "case_id": "REAL-CASE-001",
+  "release_scope": "INTERNAL_THRESHOLD_LOCK_MONITORING_ONLY",
+  "allowed": [
+    "internal threshold smoke/regression monitoring",
+    "operator review packet generation",
+    "evidence export for internal audit",
+    "live graph retrieval confirmation planning"
+  ],
+  "blocked": [
+    "client_facing_validated_claim",
+    "production_activation",
+    "commercial_claim",
+    "validated_model_gain_claim",
+    "validated_hallucination_reduction_claim",
+    "automatic_merge",
+    "real_world_side_effect",
+    "github_issue_comment",
+    "github_pr_comment",
+    "external_repo_write",
+    "production_neo4j_write",
+    "threshold_scope_expansion_without_future_human_review"
+  ],
+  "explicit_non_claims": {
+    "client_validated_evidence": false,
+    "production_ready": false,
+    "commercially_validated": false,
+    "validated_hallucination_reduction": false,
+    "live_neo4j_retrieval_confirmed": false
+  },
+  "required_before_scope_expansion": [
+    "future human review",
+    "live graph retrieval confirmation",
+    "new evidence packet",
+    "explicit release boundary reassessment"
+  ]
+}
