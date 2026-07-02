@@ -1,0 +1,231 @@
+{
+  "version": "operator_review_packet.v0.1",
+  "phase": "PROD-7781..7820",
+  "generated_at": "2026-07-02T03:45:18.486882+00:00",
+  "case_id": "REAL-CASE-001",
+  "review_status": "READY_FOR_OPERATOR_REVIEW",
+  "purpose": "internal audit/operator review of CASULO Delta Zero internal threshold lock evidence",
+  "operator_summary": {
+    "internal_threshold_lock": "ACTIVE_INTERNAL_ONLY",
+    "regression_guard": "ACTIVE",
+    "release_scope": "INTERNAL_THRESHOLD_LOCK_MONITORING_ONLY",
+    "client_claim": "BLOCKED",
+    "production": "BLOCKED",
+    "commercial_claim": "BLOCKED",
+    "live_graph_retrieval": "NOT_YET_CONFIRMED"
+  },
+  "evidence_export": {
+    "case_id": "REAL-CASE-001",
+    "export_generated_at": "2026-07-02T03:45:18.486882+00:00",
+    "evidence_chain": [
+      {
+        "path": "outputs/prod7461_7500_delta_zero_contextual_scoring_hardening.json",
+        "status": "PASS",
+        "phase": "PROD-7461..7500",
+        "decision": "DELTA_ZERO_CONTEXTUAL_SCORING_HARDENED_READY_FOR_CONTROLLED_MULTI_RUN_RERUN",
+        "next": "PROD-7501..7540 - Controlled Multi-Run Rerun Capture and Threshold Lock Evaluation"
+      },
+      {
+        "path": "outputs/prod7501_7540_controlled_multirun_rerun_threshold_lock_eval.json",
+        "status": "PASS",
+        "phase": "PROD-7501..7540",
+        "decision": "CONTROLLED_RERUN_CAPTURED_THRESHOLD_LOCK_NOT_READY_VECTOR_CALIBRATION_REQUIRED",
+        "next": "PROD-7541..7580 - Vector Weight Calibration and Prompt Boundary Refinement"
+      },
+      {
+        "path": "outputs/prod7541_7580_vector_weight_calibration_prompt_boundary_refinement.json",
+        "status": "PASS",
+        "phase": "PROD-7541..7580",
+        "decision": "VECTOR_WEIGHT_CALIBRATED_PROMPT_BOUNDARY_REFINED_READY_FOR_CONTROLLED_CALIBRATED_RERUN",
+        "next": "PROD-7581..7620 - Calibrated Prompt Multi-Run Execution and Threshold Candidate Capture"
+      },
+      {
+        "path": "outputs/prod7581_7620_calibrated_prompt_multirun_threshold_candidate_capture.json",
+        "status": "PASS",
+        "phase": "PROD-7581..7620",
+        "decision": "CALIBRATED_PROMPT_MULTIRUN_CAPTURED_STRICT_THRESHOLD_CANDIDATE_READY_HUMAN_REVIEW_REQUIRED",
+        "next": "PROD-7621..7660 - Human Review Packet and Graph-Backed Threshold Lock Proposal"
+      },
+      {
+        "path": "outputs/prod7621_7660_human_review_graph_threshold_lock_proposal.json",
+        "status": "PASS",
+        "phase": "PROD-7621..7660",
+        "decision": "HUMAN_REVIEW_PACKET_READY_GRAPH_BACKED_THRESHOLD_LOCK_PROPOSAL_READY_INTERNAL_ONLY",
+        "next": "PROD-7661..7700 - Human Decision Record and Internal Threshold Lock Contract"
+      },
+      {
+        "path": "outputs/prod7661_7700_human_decision_internal_threshold_lock_contract.json",
+        "status": "PASS",
+        "phase": "PROD-7661..7700",
+        "decision": "HUMAN_DECISION_APPROVED_INTERNAL_THRESHOLD_LOCK_CONTRACT_CREATED",
+        "next": "PROD-7701..7740 - Internal Threshold Lock Smoke Test and Regression Guard"
+      },
+      {
+        "path": "outputs/prod7701_7740_internal_threshold_lock_smoke_test_regression_guard.json",
+        "status": "PASS",
+        "phase": "PROD-7701..7740",
+        "decision": "INTERNAL_THRESHOLD_LOCK_SMOKE_TEST_PASS_REGRESSION_GUARD_ACTIVE",
+        "next": "PROD-7741..7780 - Internal Threshold Monitoring Snapshot and Release Boundary Packet"
+      },
+      {
+        "path": "outputs/prod7741_7780_internal_monitoring_snapshot_release_boundary_packet.json",
+        "status": "PASS",
+        "phase": "PROD-7741..7780",
+        "decision": "INTERNAL_THRESHOLD_MONITORING_SNAPSHOT_READY_RELEASE_BOUNDARY_PACKET_CREATED",
+        "next": "PROD-7781..7820 - Evidence Export and Operator Review Packet"
+      }
+    ],
+    "key_metrics": {
+      "runs_captured": 4,
+      "runs_total": 4,
+      "runs_llm_executed": 4,
+      "all_required_sections_present": true,
+      "unsafe_forbidden_claim_count": 0,
+      "min_oqi_v2": 0.9917,
+      "max_ohri_v2": 0.0714,
+      "min_zpi_v2": 1.0,
+      "max_delta_estado": 0.0268,
+      "smoke_total_cases": 9,
+      "smoke_expectations_passed": 9,
+      "smoke_all_expectations_passed": true
+    },
+    "internal_lock": {
+      "active": true,
+      "scope": "INTERNAL_ONLY",
+      "approved_by": "Leonardo Serro",
+      "approved_decision": "APPROVE_THRESHOLD_LOCK_INTERNAL_ONLY",
+      "human_reviewer": "Leonardo Serro",
+      "human_decision": "APPROVE_THRESHOLD_LOCK_INTERNAL_ONLY",
+      "ready_for_internal_threshold_smoke_test": true
+    },
+    "monitoring_snapshot": {
+      "state": {
+        "internal_threshold_lock_active": true,
+        "regression_guard_active": true,
+        "internal_threshold_lock_smoke_test_pass": true,
+        "ready_for_internal_monitoring_snapshot": true,
+        "ready_for_client_claim": false,
+        "ready_for_production": false,
+        "human_review_required_for_scope_expansion": true
+      },
+      "threshold": {
+        "min_oqi_v2": 0.85,
+        "max_ohri_v2": 0.15,
+        "min_zpi_v2": 0.9,
+        "max_delta_estado": 0.12,
+        "unsafe_forbidden_claim_hits": 0,
+        "required_gate": "HUMAN_REVIEW_REQUIRED"
+      },
+      "graph_binding": {
+        "mode": "OFFLINE_COMMITTED_GRAPH_PAYLOAD",
+        "node_count": 3,
+        "relationship_count": 2,
+        "neo4j_live_query_executed": false,
+        "production_write_executed": false
+      },
+      "monitoring_signals": [
+        "threshold contract remains internal-only",
+        "regression guard remains active",
+        "client claim remains blocked",
+        "production activation remains blocked",
+        "scope expansion requires future human review"
+      ]
+    },
+    "graph_evidence": {
+      "mode": "OFFLINE_COMMITTED_GRAPH_PAYLOAD",
+      "node_count": 3,
+      "relationship_count": 2,
+      "neo4j_live_query_executed": false,
+      "production_write_executed": false,
+      "graph_path_claim": "GITHUB-AGENT-FOUNDATION-v0.1 -> RUNS_CASE -> REAL-CASE-001 -> MEASURED_BY -> P0-MATRIX-BATCH01"
+    },
+    "release_boundary": {
+      "release_scope": "INTERNAL_THRESHOLD_LOCK_MONITORING_ONLY",
+      "allowed": [
+        "internal threshold smoke/regression monitoring",
+        "operator review packet generation",
+        "evidence export for internal audit",
+        "live graph retrieval confirmation planning"
+      ],
+      "blocked": [
+        "client_facing_validated_claim",
+        "production_activation",
+        "commercial_claim",
+        "validated_model_gain_claim",
+        "validated_hallucination_reduction_claim",
+        "automatic_merge",
+        "real_world_side_effect",
+        "github_issue_comment",
+        "github_pr_comment",
+        "external_repo_write",
+        "production_neo4j_write",
+        "threshold_scope_expansion_without_future_human_review"
+      ],
+      "explicit_non_claims": {
+        "client_validated_evidence": false,
+        "production_ready": false,
+        "commercially_validated": false,
+        "validated_hallucination_reduction": false,
+        "live_neo4j_retrieval_confirmed": false
+      },
+      "required_before_scope_expansion": [
+        "future human review",
+        "live graph retrieval confirmation",
+        "new evidence packet",
+        "explicit release boundary reassessment"
+      ]
+    },
+    "source_outputs": {
+      "prod7461": "DELTA_ZERO_CONTEXTUAL_SCORING_HARDENED_READY_FOR_CONTROLLED_MULTI_RUN_RERUN",
+      "prod7501": "CONTROLLED_RERUN_CAPTURED_THRESHOLD_LOCK_NOT_READY_VECTOR_CALIBRATION_REQUIRED",
+      "prod7541": "VECTOR_WEIGHT_CALIBRATED_PROMPT_BOUNDARY_REFINED_READY_FOR_CONTROLLED_CALIBRATED_RERUN",
+      "prod7581": "CALIBRATED_PROMPT_MULTIRUN_CAPTURED_STRICT_THRESHOLD_CANDIDATE_READY_HUMAN_REVIEW_REQUIRED",
+      "prod7621": "HUMAN_REVIEW_PACKET_READY_GRAPH_BACKED_THRESHOLD_LOCK_PROPOSAL_READY_INTERNAL_ONLY",
+      "prod7661": "HUMAN_DECISION_APPROVED_INTERNAL_THRESHOLD_LOCK_CONTRACT_CREATED",
+      "prod7701": "INTERNAL_THRESHOLD_LOCK_SMOKE_TEST_PASS_REGRESSION_GUARD_ACTIVE",
+      "prod7741": "INTERNAL_THRESHOLD_MONITORING_SNAPSHOT_READY_RELEASE_BOUNDARY_PACKET_CREATED"
+    }
+  },
+  "review_readiness": {
+    "checks": {
+      "all_runs_captured": true,
+      "all_runs_llm_executed": true,
+      "unsafe_forbidden_claim_zero": true,
+      "smoke_all_expectations_passed": true,
+      "internal_lock_active": true,
+      "internal_scope_only": true,
+      "release_scope_internal_monitoring_only": true,
+      "client_nonclaim": true,
+      "production_nonclaim": true,
+      "commercial_nonclaim": true,
+      "live_neo4j_not_yet_confirmed": true,
+      "production_write_not_executed": true
+    },
+    "operator_review_packet_ready": true,
+    "audit_export_ready": true,
+    "ready_for_live_graph_retrieval_confirmation_gate": true,
+    "ready_for_client_claim": false,
+    "ready_for_production": false,
+    "human_review_required_for_scope_expansion": true
+  },
+  "operator_questions": [
+    "Does the evidence chain support internal-only threshold monitoring?",
+    "Are client, production and commercial claims still blocked?",
+    "Should live graph retrieval confirmation be executed next?",
+    "Is any additional evidence needed before a future scope reassessment?"
+  ],
+  "blocked_actions": [
+    "client_facing_validated_claim",
+    "production_activation",
+    "commercial_claim",
+    "validated_model_gain_claim",
+    "validated_hallucination_reduction_claim",
+    "automatic_merge",
+    "real_world_side_effect",
+    "github_issue_comment",
+    "github_pr_comment",
+    "external_repo_write",
+    "production_neo4j_write",
+    "threshold_scope_expansion_without_future_human_review"
+  ]
+}
