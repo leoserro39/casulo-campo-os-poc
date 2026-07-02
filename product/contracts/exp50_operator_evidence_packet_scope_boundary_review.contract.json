@@ -1,0 +1,39 @@
+{
+  "contract": "exp50_operator_evidence_packet_scope_boundary_review.contract.v0.1",
+  "phase": "PROD-8061..8100",
+  "requires": [
+    "outputs/prod8021_8060_exp50_read_only_retrieval_result_ingestion_confirmation_gate.json",
+    "product/graph/live_retrieval/prod7981_8020_exp50_aligned_read_only_result.txt",
+    "outputs/prod7981_8020_actual_graph_aligned_retrieval_query_gate_exp50_packet.json",
+    "outputs/prod7941_7980_live_neo4j_actual_graph_evidence_ingestion_alignment.json",
+    "outputs/prod7901_correction_live_neo4j_actual_graph_state.json"
+  ],
+  "status": "PASS",
+  "decision": "EXP50_OPERATOR_EVIDENCE_PACKET_READY_SCOPE_BOUNDARY_REVIEW_REQUIRED",
+  "operator_evidence_packet_ready": true,
+  "scope_boundary_review_required": true,
+  "ready_for_internal_demo_review": true,
+  "ready_for_agent_instruction_pack": true,
+  "ready_for_codex_casulo_comparison_pack": true,
+  "ready_for_multi_area_dashboard_planning": true,
+  "client_claim_allowed": false,
+  "production_allowed": false,
+  "commercial_claim_allowed": false,
+  "blocked_actions": [
+    "client_facing_validated_claim",
+    "production_activation",
+    "commercial_claim",
+    "validated_model_gain_claim",
+    "validated_hallucination_reduction_claim",
+    "automatic_merge",
+    "real_world_side_effect",
+    "github_issue_comment",
+    "github_pr_comment",
+    "external_repo_write",
+    "production_neo4j_write",
+    "neo4j_delete",
+    "neo4j_reimport",
+    "docker_volume_delete",
+    "threshold_scope_expansion_without_future_human_review"
+  ]
+}

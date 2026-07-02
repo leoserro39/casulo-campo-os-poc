@@ -1,0 +1,65 @@
+{
+  "version": "exp50_operator_evidence_packet.v0.1",
+  "phase": "PROD-8061..8100",
+  "generated_at": "2026-07-02T12:24:25.220676+00:00",
+  "title": "EXP50 Operator Evidence Packet",
+  "summary": {
+    "what_was_confirmed": [
+      "Neo4j sandbox was confirmed live in previous phases.",
+      "EXP50 persisted graph was confirmed as the actual graph family.",
+      "Read-only retrieval result for case:EXP50-001 was confirmed.",
+      "The confirmed path contains 8 nodes and 7 relationships."
+    ],
+    "what_this_allows": [
+      "Internal operator review.",
+      "Internal demonstration preparation.",
+      "Agent instruction pack preparation.",
+      "Codex/CASULO comparison planning.",
+      "Multi-area dashboard planning.",
+      "Solution Factory contract planning."
+    ],
+    "what_this_does_not_allow": [
+      "Client-facing validated claim.",
+      "Production activation.",
+      "Commercial validation claim.",
+      "Validated hallucination-reduction claim.",
+      "Validated model-gain claim.",
+      "Autonomous real-world execution."
+    ]
+  },
+  "evidence_sources": {
+    "read_only_retrieval_result": "product/graph/live_retrieval/prod7981_8020_exp50_aligned_read_only_result.txt",
+    "8021_confirmation": "outputs/prod8021_8060_exp50_read_only_retrieval_result_ingestion_confirmation_gate.json",
+    "7981_query_gate": "outputs/prod7981_8020_actual_graph_aligned_retrieval_query_gate_exp50_packet.json",
+    "7941_graph_alignment": "outputs/prod7941_7980_live_neo4j_actual_graph_evidence_ingestion_alignment.json",
+    "7901_correction": "outputs/prod7901_correction_live_neo4j_actual_graph_state.json"
+  },
+  "observed_graph": {
+    "family": "EXP50",
+    "sample_case": "case:EXP50-001",
+    "sandbox_node_count": 313,
+    "sandbox_relationship_count": 350,
+    "observed_nodes_in_path": 8,
+    "observed_relationships_in_path": 7,
+    "confirmed_query_mode": "READ_ONLY"
+  },
+  "review_questions": [
+    "Can this evidence be used for internal demo preparation?",
+    "Which claims remain blocked?",
+    "What additional cases are required before external pilot review?",
+    "Which operator-facing surface should be built first: evidence packet, dashboard, or solution factory contract?",
+    "What memory/exocortex controls must be shown in the demo?"
+  ],
+  "recommended_next_steps": [
+    "Create Internal Demo Script and Agent Instruction Pack.",
+    "Create Codex without CASULO vs with CASULO comparison demo.",
+    "Create multi-area operational state dashboard contract.",
+    "Prepare Solution Factory contract for diagnostic-to-application flow."
+  ],
+  "boundary": {
+    "ready_for_client_claim": false,
+    "ready_for_production": false,
+    "commercial_claim_allowed": false,
+    "human_review_required_for_scope_expansion": true
+  }
+}

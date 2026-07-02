@@ -1,0 +1,114 @@
+{
+  "version": "exocortex_foundation_statement.v0.1",
+  "phase": "PROD-8061A",
+  "generated_at": "2026-07-02T14:39:48.651992+00:00",
+  "status": "PASS",
+  "decision": "EXOCORTEX_FOUNDATION_ACTIVE_MEMORY_MESH_DOMAIN_MODEL_READY_FOR_AGENT_INSTRUCTION_PACK",
+  "definition": {
+    "canonical": "Exocortex CASULO is the live operational memory and state governance layer that stores decisions, evidence, limits, concepts, gates, deltas and trajectory in the graph and reconstructs the minimum correct context for GPT/Codex/agents.",
+    "short": "The Exocortex is the living mesh that prevents the agent from forgetting, inventing, or acting above supported state."
+  },
+  "what_is_already_present_in_current_poc": {
+    "memory_as_versioned_artifacts": true,
+    "state_as_live_graph": true,
+    "exp50_read_only_retrieval_confirmed": true,
+    "evidence_bound_to_state": true,
+    "claim_boundary_active": true,
+    "operator_packet_local_8061_present": true
+  },
+  "what_is_not_implemented_yet": {
+    "runtime_exocortex_module_complete": false,
+    "automatic_memory_governor": false,
+    "runtime_context_packet_builder": false,
+    "graph_memory_ingestion_policy": false,
+    "graph_memory_retrieval_policy": false,
+    "stale_memory_blocking_runtime": false,
+    "micrographs_implemented": false,
+    "delta_matrix_implemented": false,
+    "state_family_implemented": false,
+    "multi_llm_braid_implemented": false,
+    "solution_factory_implemented": false,
+    "dashboard_multi_area_implemented": false
+  },
+  "memory_domain_model": {
+    "mode": "FAMILY_OF_DOMAINS_UNDER_GPT_MEMORY_MESH_DOMAIN",
+    "root_domain": "GPT_MEMORY_MESH_DOMAIN",
+    "domains": [
+      {
+        "domain": "GPT_MEMORY_MESH_DOMAIN",
+        "type": "ROOT_DOMAIN",
+        "purpose": "Root domain for GPT/Codex/agent memory as governed operational mesh."
+      },
+      {
+        "domain": "SESSION_CONTEXT_DOMAIN",
+        "type": "SUBDOMAIN",
+        "purpose": "Current session context; useful but not canonical unless triaged."
+      },
+      {
+        "domain": "PROJECT_CANONICAL_MEMORY_DOMAIN",
+        "type": "SUBDOMAIN",
+        "purpose": "Frozen definitions, accepted decisions and current project state."
+      },
+      {
+        "domain": "USER_OPERATIONAL_PREFERENCE_DOMAIN",
+        "type": "SUBDOMAIN",
+        "purpose": "Operator workflow preferences and execution style."
+      },
+      {
+        "domain": "EVIDENCE_MEMORY_DOMAIN",
+        "type": "SUBDOMAIN",
+        "purpose": "Memory backed by artifacts, outputs, commits, tags and reports."
+      },
+      {
+        "domain": "CLAIM_BOUNDARY_MEMORY_DOMAIN",
+        "type": "SUBDOMAIN",
+        "purpose": "Allowed and blocked claims, especially client/production/commercial limits."
+      },
+      {
+        "domain": "ROADMAP_MEMORY_DOMAIN",
+        "type": "SUBDOMAIN",
+        "purpose": "Current phase, next phase, roadmap dependencies and allowed progression."
+      },
+      {
+        "domain": "CODE_EXECUTION_MEMORY_DOMAIN",
+        "type": "SUBDOMAIN",
+        "purpose": "Commands, patchers, checks, apply results, commits, tags and validation outputs."
+      },
+      {
+        "domain": "GRAPH_STATE_MEMORY_DOMAIN",
+        "type": "SUBDOMAIN",
+        "purpose": "Neo4j-backed live operational state: cases, domains, evidence, gates, outputs and relationships."
+      },
+      {
+        "domain": "CONCEPT_ONTOLOGY_MEMORY_DOMAIN",
+        "type": "SUBDOMAIN",
+        "purpose": "Canonical definitions: Exocortex, state, memory, evidence, cache, gate, delta, point zero."
+      },
+      {
+        "domain": "CACHE_TRANSIENT_DOMAIN",
+        "type": "SUBDOMAIN",
+        "purpose": "Temporary context useful for execution but not canonical source of truth."
+      },
+      {
+        "domain": "STALE_OR_SUPERSEDED_MEMORY_DOMAIN",
+        "type": "SUBDOMAIN",
+        "purpose": "Outdated, corrected or superseded memory retained for audit but not injected as current truth."
+      },
+      {
+        "domain": "RUNTIME_CONTEXT_PACKET_DOMAIN",
+        "type": "SUBDOMAIN",
+        "purpose": "Clean minimum context packet delivered to GPT/Codex/agent for a specific task."
+      }
+    ]
+  },
+  "boundaries": {
+    "ready_for_client_claim": false,
+    "ready_for_production": false,
+    "commercial_claim_allowed": false,
+    "micrograph_runtime_claim_allowed": false,
+    "delta_matrix_runtime_claim_allowed": false,
+    "state_family_runtime_claim_allowed": false,
+    "multi_llm_braid_runtime_claim_allowed": false
+  },
+  "next": "PROD-8101..8140 - Internal Demo Script and Agent Instruction Pack"
+}

@@ -1,0 +1,41 @@
+{
+  "contract": "exocortex_memory_mesh_foundation.contract.v0.1",
+  "phase": "PROD-8061A",
+  "requires": [
+    "outputs/prod8021_8060_exp50_read_only_retrieval_result_ingestion_confirmation_gate.json"
+  ],
+  "optional_expected": [
+    "outputs/prod8061_8100_exp50_operator_evidence_packet_scope_boundary_review.json",
+    "product/reviews/operator_packets/prod8061_8100_exp50_operator_evidence_packet.json",
+    "product/release_boundaries/prod8061_8100_scope_boundary_review.json"
+  ],
+  "status": "PASS",
+  "decision": "EXOCORTEX_FOUNDATION_ACTIVE_MEMORY_MESH_DOMAIN_MODEL_READY_FOR_AGENT_INSTRUCTION_PACK",
+  "exocortex_foundation_active": true,
+  "memory_as_mesh": true,
+  "gpt_memory_as_family_of_domains": true,
+  "runtime_exocortex_module_complete": false,
+  "micrographs_implemented": false,
+  "delta_matrix_implemented": false,
+  "state_family_implemented": false,
+  "blocked_actions": [
+    "client_facing_validated_claim",
+    "production_activation",
+    "commercial_claim",
+    "validated_model_gain_claim",
+    "validated_hallucination_reduction_claim",
+    "automatic_merge",
+    "real_world_side_effect",
+    "github_issue_comment",
+    "github_pr_comment",
+    "external_repo_write",
+    "production_neo4j_write",
+    "neo4j_delete",
+    "neo4j_reimport",
+    "docker_volume_delete",
+    "micrograph_runtime_claim",
+    "delta_matrix_runtime_claim",
+    "state_family_runtime_claim",
+    "multi_llm_braid_runtime_claim"
+  ]
+}

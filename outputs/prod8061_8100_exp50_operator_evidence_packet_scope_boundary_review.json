@@ -1,0 +1,136 @@
+{
+  "status": "PASS",
+  "phase": "PROD-8061..8100",
+  "decision": "EXP50_OPERATOR_EVIDENCE_PACKET_READY_SCOPE_BOUNDARY_REVIEW_REQUIRED",
+  "generated_at": "2026-07-02T12:24:25.220676+00:00",
+  "case_id": "case:EXP50-001",
+  "operator_evidence_packet": {
+    "version": "exp50_operator_evidence_packet.v0.1",
+    "phase": "PROD-8061..8100",
+    "generated_at": "2026-07-02T12:24:25.220676+00:00",
+    "title": "EXP50 Operator Evidence Packet",
+    "summary": {
+      "what_was_confirmed": [
+        "Neo4j sandbox was confirmed live in previous phases.",
+        "EXP50 persisted graph was confirmed as the actual graph family.",
+        "Read-only retrieval result for case:EXP50-001 was confirmed.",
+        "The confirmed path contains 8 nodes and 7 relationships."
+      ],
+      "what_this_allows": [
+        "Internal operator review.",
+        "Internal demonstration preparation.",
+        "Agent instruction pack preparation.",
+        "Codex/CASULO comparison planning.",
+        "Multi-area dashboard planning.",
+        "Solution Factory contract planning."
+      ],
+      "what_this_does_not_allow": [
+        "Client-facing validated claim.",
+        "Production activation.",
+        "Commercial validation claim.",
+        "Validated hallucination-reduction claim.",
+        "Validated model-gain claim.",
+        "Autonomous real-world execution."
+      ]
+    },
+    "evidence_sources": {
+      "read_only_retrieval_result": "product/graph/live_retrieval/prod7981_8020_exp50_aligned_read_only_result.txt",
+      "8021_confirmation": "outputs/prod8021_8060_exp50_read_only_retrieval_result_ingestion_confirmation_gate.json",
+      "7981_query_gate": "outputs/prod7981_8020_actual_graph_aligned_retrieval_query_gate_exp50_packet.json",
+      "7941_graph_alignment": "outputs/prod7941_7980_live_neo4j_actual_graph_evidence_ingestion_alignment.json",
+      "7901_correction": "outputs/prod7901_correction_live_neo4j_actual_graph_state.json"
+    },
+    "observed_graph": {
+      "family": "EXP50",
+      "sample_case": "case:EXP50-001",
+      "sandbox_node_count": 313,
+      "sandbox_relationship_count": 350,
+      "observed_nodes_in_path": 8,
+      "observed_relationships_in_path": 7,
+      "confirmed_query_mode": "READ_ONLY"
+    },
+    "review_questions": [
+      "Can this evidence be used for internal demo preparation?",
+      "Which claims remain blocked?",
+      "What additional cases are required before external pilot review?",
+      "Which operator-facing surface should be built first: evidence packet, dashboard, or solution factory contract?",
+      "What memory/exocortex controls must be shown in the demo?"
+    ],
+    "recommended_next_steps": [
+      "Create Internal Demo Script and Agent Instruction Pack.",
+      "Create Codex without CASULO vs with CASULO comparison demo.",
+      "Create multi-area operational state dashboard contract.",
+      "Prepare Solution Factory contract for diagnostic-to-application flow."
+    ],
+    "boundary": {
+      "ready_for_client_claim": false,
+      "ready_for_production": false,
+      "commercial_claim_allowed": false,
+      "human_review_required_for_scope_expansion": true
+    }
+  },
+  "scope_boundary_review": {
+    "version": "exp50_scope_boundary_review.v0.1",
+    "phase": "PROD-8061..8100",
+    "generated_at": "2026-07-02T12:24:25.220676+00:00",
+    "decision": "INTERNAL_DEMO_REVIEW_ALLOWED_EXTERNAL_CLAIMS_BLOCKED",
+    "allowed_internal_uses": [
+      "internal_operator_review",
+      "internal_demo_preparation",
+      "sandbox_evidence_explanation",
+      "agent_instruction_pack_preparation",
+      "codex_casulo_comparison_planning",
+      "multi_area_dashboard_planning",
+      "solution_factory_contract_planning"
+    ],
+    "blocked_external_claims": [
+      "validated_client_result",
+      "production_ready",
+      "commercially_validated",
+      "validated_hallucination_reduction",
+      "validated_model_gain",
+      "autonomous_real_world_execution",
+      "production_neo4j_write_confirmed"
+    ],
+    "boundary_state": {
+      "client_claim_allowed": false,
+      "production_allowed": false,
+      "commercial_claim_allowed": false,
+      "validated_hallucination_reduction_claim_allowed": false,
+      "validated_model_gain_claim_allowed": false,
+      "production_write_executed": false,
+      "delete_executed": false,
+      "reimport_executed": false,
+      "threshold_scope_expansion_requires_future_human_review": true
+    },
+    "demo_positioning_allowed": [
+      "controlled technical POC",
+      "sandbox read-only retrieval confirmed",
+      "operational state graph evidence demo",
+      "CASULO + Codex comparison concept",
+      "operator evidence review workflow",
+      "multi-area operational state dashboard planning"
+    ],
+    "demo_positioning_blocked": [
+      "production ready",
+      "client validated",
+      "commercially validated",
+      "autonomous production execution",
+      "validated hallucination reduction",
+      "validated model gain"
+    ]
+  },
+  "calibration_decision": {
+    "operator_evidence_packet_ready": true,
+    "scope_boundary_review_required": true,
+    "ready_for_internal_demo_review": true,
+    "ready_for_agent_instruction_pack": true,
+    "ready_for_codex_casulo_comparison_pack": true,
+    "ready_for_multi_area_dashboard_planning": true,
+    "ready_for_client_claim": false,
+    "ready_for_production": false,
+    "commercial_claim_allowed": false,
+    "human_review_required_for_scope_expansion": true
+  },
+  "next": "PROD-8101..8140 - Internal Demo Script and Agent Instruction Pack"
+}
