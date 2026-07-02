@@ -1,0 +1,159 @@
+{
+  "status": "PASS",
+  "phase": "PROD-8221..8260",
+  "decision": "OPERATIONAL_CUBE_MASTER_CONTRACT_AND_CHATGPT_AGENT_READINESS_AUDIT_READY",
+  "generated_at": "2026-07-02T16:15:37.405062+00:00",
+  "calibration_decision": {
+    "operational_cube_master_contract_ready": true,
+    "chatgpt_agent_manifest_ready": true,
+    "chat_memory_boundary_contract_ready": true,
+    "telemetry_inventory_ready": true,
+    "repo_timeline_audit_ready": true,
+    "wrong_8221_local_cleanup_requested": true,
+    "micrograph_runtime_current_poc": false,
+    "micrographs_future_epic_only": true,
+    "inference_gate_prompt_current_filter_layer": true,
+    "delta_matrix_full_runtime_implemented": false,
+    "delta_matrix_partial_telemetry_present": true,
+    "chatgpt_agent_functional_now": false,
+    "casulo_action_api_implemented": false,
+    "neo4j_readonly_action_adapter_implemented": false,
+    "github_readonly_action_adapter_implemented": false,
+    "client_claim_allowed": false,
+    "production_allowed": false,
+    "commercial_claim_allowed": false
+  },
+  "artifact_classification": {
+    "macro_foundation": {
+      "present": true,
+      "status": "PASS",
+      "decision": "CASULO_MACRO_FOUNDATION_READY_FOR_AGENT_INTEGRATION",
+      "blocked_actions": [
+        "client_facing_validated_claim",
+        "production_activation",
+        "commercial_claim",
+        "validated_model_gain_claim",
+        "validated_hallucination_reduction_claim",
+        "automatic_merge",
+        "production_neo4j_write",
+        "real_world_side_effect"
+      ],
+      "classification": "ARTIFACT_READY"
+    },
+    "ponto_zero_vector_telemetry": {
+      "present": true,
+      "status": "PASS",
+      "decision": "PONTO_ZERO_VECTOR_TELEMETRY_READY_FOR_MULTI_RUN_CALIBRATION",
+      "llm_executed": true,
+      "delta_estado": 0.067,
+      "oqi_v2": 0.9375,
+      "ohri_v2": 0.05,
+      "zpi_v2": 0.99,
+      "ready_for_threshold_lock": false,
+      "classification": "SANDBOX_TESTED_SINGLE_RUN"
+    },
+    "graph_retrieval_gain": {
+      "present": true,
+      "status": "PASS",
+      "decision": "GRAPH_RETRIEVAL_GAIN_AND_MULTI_RUN_CALIBRATION_BATCH_READY",
+      "evaluation_mode": "OFFLINE_COMMITTED_GRAPH_PAYLOAD_PROXY",
+      "neo4j_live_query_executed": false,
+      "retrieval_gain_proxy": 0.97,
+      "ready_for_live_neo4j_retrieval": true,
+      "classification": "OFFLINE_GRAPH_PROXY_READY"
+    },
+    "exocortex_foundation": {
+      "present": true,
+      "status": "PASS",
+      "decision": "EXOCORTEX_FOUNDATION_ACTIVE_MEMORY_MESH_DOMAIN_MODEL_READY_FOR_AGENT_INSTRUCTION_PACK",
+      "what_is_not_implemented_yet": {
+        "runtime_exocortex_module_complete": false,
+        "automatic_memory_governor": false,
+        "runtime_context_packet_builder": false,
+        "graph_memory_ingestion_policy": false,
+        "graph_memory_retrieval_policy": false,
+        "stale_memory_blocking_runtime": false,
+        "micrographs_implemented": false,
+        "delta_matrix_implemented": false,
+        "state_family_implemented": false,
+        "multi_llm_braid_implemented": false,
+        "solution_factory_implemented": false,
+        "dashboard_multi_area_implemented": false
+      },
+      "classification": "FOUNDATION_ARTIFACT_READY_NOT_FULL_RUNTIME"
+    },
+    "agent_instruction_pack": {
+      "present": true,
+      "status": "PASS",
+      "decision": "AGENT_INSTRUCTION_PACK_RUNTIME_CONTEXT_PACKET_READY_FOR_DEMO_READINESS_AND_COCKPIT_CHAT_SCAFFOLD",
+      "diagnostic_report_model_ready": true,
+      "monitoring_summary_model_ready": true,
+      "simple_solution_recommendation_model_ready": true,
+      "classification": "CHAT_BEHAVIOR_SCAFFOLD_READY"
+    },
+    "cockpit_static": {
+      "present": true,
+      "status": "PASS",
+      "decision": "COCKPIT_CHAT_SCAFFOLD_DIAGNOSTIC_MONITOR_READY_FOR_LOCAL_STATIC_RUNTIME_VALIDATION",
+      "live_gpt_integrated": false,
+      "neo4j_write_integrated": false,
+      "classification": "SURFACE_ONLY_DEFERRED"
+    }
+  },
+  "readiness_matrix": {
+    "operational_cube": {
+      "role": "PRIMARY_GOVERNANCE_CORE",
+      "status_after_patch": "MASTER_CONTRACT_CREATED",
+      "current_scope": "governance, state triage, gate, allowed/blocked actions",
+      "not_a_module": true
+    },
+    "exocortex": {
+      "role": "MEMORY_STATE_CONTEXT_RECONSTRUCTION_LAYER",
+      "status_from_repo": "FOUNDATION_ARTIFACT_READY_NOT_FULL_RUNTIME",
+      "full_runtime_complete": false
+    },
+    "casulo_agent_chatgpt": {
+      "role": "SUBORDINATE_CONVERSATIONAL_OPERATIONAL_MODULE",
+      "status": "MANIFEST_READY_AFTER_PATCH_API_NOT_IMPLEMENTED",
+      "requires_next": [
+        "CASULO Action/API server",
+        "Neo4j read-only adapter",
+        "GitHub read-only adapter",
+        "Context rebuild endpoint",
+        "Telemetry/calibration endpoint"
+      ]
+    },
+    "codex": {
+      "role": "TECHNICAL_EXECUTOR_UNDER_GATE",
+      "status": "NOT_ENABLED_FOR_AUTONOMOUS_EXECUTION",
+      "automatic_merge_allowed": false
+    },
+    "cockpit": {
+      "role": "OPTIONAL_SURFACE_DEFERRED",
+      "status_from_repo": "SURFACE_ONLY_DEFERRED",
+      "priority_now": "DEFERRED"
+    },
+    "inference_gate": {
+      "role": "CURRENT_FILTERING_LAYER",
+      "current_implementation": "PROMPT_LAYER_V0_1",
+      "schema_runtime_required_next": true
+    },
+    "micrographs": {
+      "role": "FUTURE_EPIC_NOT_CURRENT_SCOPE",
+      "current_runtime_implemented": false,
+      "current_poc_allowed": "conceptual references and future roadmap only"
+    },
+    "delta_matrix": {
+      "role": "CALIBRATION_AND_DECISION_DISTANCE_LAYER",
+      "current_state": "partial via vector telemetry, Ponto Zero, Delta Estado and graph retrieval proxy",
+      "full_runtime_implemented": false
+    },
+    "telemetry_and_kpis": {
+      "role": "MEASUREMENT_LAYER",
+      "current_state": "T1-T7 registered; OQI/OHRI/ZPI and vector telemetry present; multi-run threshold lock incomplete",
+      "ready_for_client_claim": false
+    }
+  },
+  "next": "PROD-8261..8300 - CASULO Agent API Server and Action Scaffold",
+  "then": "PROD-8301..8340 - Neo4j and GitHub Read-Only Action Adapters"
+}

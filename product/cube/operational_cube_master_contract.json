@@ -1,0 +1,114 @@
+{
+  "version": "operational_cube_master_contract.v0.1",
+  "phase": "PROD-8221..8260",
+  "generated_at": "2026-07-02T16:15:37.405062+00:00",
+  "decision": "OPERATIONAL_CUBE_MASTER_CONTRACT_AND_CHATGPT_AGENT_READINESS_AUDIT_READY",
+  "canonical_hierarchy": {
+    "casulo_campo_os": "SYSTEM",
+    "operational_cube": "PRIMARY_GOVERNANCE_CORE",
+    "exocortex": "MEMORY_STATE_CONTEXT_RECONSTRUCTION_LAYER",
+    "casulo_agent": "SUBORDINATE_CONVERSATIONAL_OPERATIONAL_MODULE",
+    "codex": "TECHNICAL_EXECUTOR_UNDER_GATE",
+    "cockpit": "OPTIONAL_SURFACE_DEFERRED"
+  },
+  "non_negotiable_rules": [
+    "Operational Cube governs state formation, inference triage, gates and allowed/blocked actions.",
+    "Exocortex reconstructs clean context and governs memory/state, but does not override the Cube.",
+    "CASULO Agent is not the system core; it is a subordinate operator module inside ChatGPT/Agents.",
+    "Codex is not a judge; Codex may only execute technical changes under explicit gate.",
+    "Cockpit is not the priority now; cockpit is a future surface.",
+    "No invented agent concept may be introduced in this project.",
+    "Micrograph runtime is not in current POC scope; it is future epic only.",
+    "Current filtering layer is Inference Gate prompt/schema direction, not micrograph runtime.",
+    "Chat memory is not truth. Chat memory must be rebuilt through Exocortex and approved by the Cube."
+  ],
+  "current_scope": {
+    "focus": "ChatGPT Agent readiness and state-governed conversation/testing/calibration",
+    "current_filter_layer": "Inference Gate Prompt v0.1",
+    "micrographs_current_scope": "EPIC_FUTURE_ONLY_NOT_CURRENT_IMPLEMENTATION",
+    "delta_matrix_current_scope": "PARTIAL_CALIBRATION_TELEMETRY_NOT_FULL_RUNTIME",
+    "neo4j_current_scope": "sandbox/offline/read-only evidence and future read-only adapter",
+    "github_current_scope": "existing GitHub Native Agent scaffold and actions; ChatGPT Action integration still missing"
+  },
+  "blocked_actions": [
+    "client_facing_validated_claim",
+    "production_activation",
+    "commercial_claim",
+    "validated_model_gain_claim",
+    "validated_hallucination_reduction_claim",
+    "automatic_merge",
+    "real_world_side_effect",
+    "github_issue_comment",
+    "github_pr_comment",
+    "external_repo_write",
+    "production_neo4j_write",
+    "neo4j_delete",
+    "neo4j_reimport",
+    "docker_volume_delete",
+    "micrograph_runtime_claim",
+    "delta_matrix_runtime_claim",
+    "state_family_runtime_claim",
+    "multi_llm_braid_runtime_claim",
+    "invented_agent_concept_claim",
+    "cockpit_as_primary_system_claim",
+    "agent_as_primary_system_claim"
+  ],
+  "readiness_matrix": {
+    "operational_cube": {
+      "role": "PRIMARY_GOVERNANCE_CORE",
+      "status_after_patch": "MASTER_CONTRACT_CREATED",
+      "current_scope": "governance, state triage, gate, allowed/blocked actions",
+      "not_a_module": true
+    },
+    "exocortex": {
+      "role": "MEMORY_STATE_CONTEXT_RECONSTRUCTION_LAYER",
+      "status_from_repo": "FOUNDATION_ARTIFACT_READY_NOT_FULL_RUNTIME",
+      "full_runtime_complete": false
+    },
+    "casulo_agent_chatgpt": {
+      "role": "SUBORDINATE_CONVERSATIONAL_OPERATIONAL_MODULE",
+      "status": "MANIFEST_READY_AFTER_PATCH_API_NOT_IMPLEMENTED",
+      "requires_next": [
+        "CASULO Action/API server",
+        "Neo4j read-only adapter",
+        "GitHub read-only adapter",
+        "Context rebuild endpoint",
+        "Telemetry/calibration endpoint"
+      ]
+    },
+    "codex": {
+      "role": "TECHNICAL_EXECUTOR_UNDER_GATE",
+      "status": "NOT_ENABLED_FOR_AUTONOMOUS_EXECUTION",
+      "automatic_merge_allowed": false
+    },
+    "cockpit": {
+      "role": "OPTIONAL_SURFACE_DEFERRED",
+      "status_from_repo": "SURFACE_ONLY_DEFERRED",
+      "priority_now": "DEFERRED"
+    },
+    "inference_gate": {
+      "role": "CURRENT_FILTERING_LAYER",
+      "current_implementation": "PROMPT_LAYER_V0_1",
+      "schema_runtime_required_next": true
+    },
+    "micrographs": {
+      "role": "FUTURE_EPIC_NOT_CURRENT_SCOPE",
+      "current_runtime_implemented": false,
+      "current_poc_allowed": "conceptual references and future roadmap only"
+    },
+    "delta_matrix": {
+      "role": "CALIBRATION_AND_DECISION_DISTANCE_LAYER",
+      "current_state": "partial via vector telemetry, Ponto Zero, Delta Estado and graph retrieval proxy",
+      "full_runtime_implemented": false
+    },
+    "telemetry_and_kpis": {
+      "role": "MEASUREMENT_LAYER",
+      "current_state": "T1-T7 registered; OQI/OHRI/ZPI and vector telemetry present; multi-run threshold lock incomplete",
+      "ready_for_client_claim": false
+    }
+  },
+  "audit_refs": {
+    "timeline_audit": "product/audits/prod8221_8260_integrated_repo_timeline_audit.json",
+    "output": "outputs/prod8221_8260_operational_cube_master_contract_agent_readiness_audit.json"
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "version": "wrong_agent_core_runtime_supersession.v0.1",
+  "phase": "PROD-8221..8260",
+  "generated_at": "2026-07-02T16:15:37.405062+00:00",
+  "superseded_name": "Agent Core Runtime and Telemetry Harness",
+  "reason": "It wrongly framed the agent module as core and did not place it explicitly under the Operational Cube.",
+  "correct_name": "Operational Cube Master Contract and ChatGPT Agent Readiness Audit",
+  "invented_agent_concept_exists": false,
+  "micrograph_runtime_current_poc": false,
+  "cleanup": {
+    "removed_untracked_wrong_8221": [],
+    "skipped_tracked": [],
+    "not_present": [
+      "apply_prod8221_8260_agent_core_runtime_telemetry_harness.py",
+      "product/agent_runtime",
+      "outputs/prod8221_8260_agent_core_runtime_telemetry_harness.json",
+      "outputs/prod8221_8260_agent_core_runtime_telemetry_harness.md",
+      "docs/product/822_AGENT_CORE_RUNTIME_TELEMETRY_HARNESS.md"
+    ]
+  }
+}

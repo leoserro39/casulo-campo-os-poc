@@ -1,0 +1,72 @@
+# CASULO ChatGPT Action Requirements v0.1
+
+{
+  "version": "casulo_chatgpt_action_requirements.v0.1",
+  "phase": "PROD-8221..8260",
+  "status": "REQUIREMENTS_READY_API_NOT_IMPLEMENTED",
+  "server_required": true,
+  "read_only_default": true,
+  "endpoints_required": [
+    {
+      "endpoint": "GET /health",
+      "purpose": "Check CASULO API health."
+    },
+    {
+      "endpoint": "GET /state/current",
+      "purpose": "Return master governed state and current gate."
+    },
+    {
+      "endpoint": "POST /context/rebuild",
+      "purpose": "Rebuild clean context from chat request plus repo/graph/evidence."
+    },
+    {
+      "endpoint": "GET /repo/timeline",
+      "purpose": "Return repository timeline/audit state."
+    },
+    {
+      "endpoint": "GET /graph/summary",
+      "purpose": "Return Neo4j or offline graph summary in read-only mode."
+    },
+    {
+      "endpoint": "POST /diagnostic",
+      "purpose": "Generate governed diagnostic report."
+    },
+    {
+      "endpoint": "POST /monitoring",
+      "purpose": "Generate monitoring summary."
+    },
+    {
+      "endpoint": "POST /solutions",
+      "purpose": "Generate simple solution options under gate."
+    },
+    {
+      "endpoint": "POST /calibration",
+      "purpose": "Evaluate telemetry, vector scores and boundaries."
+    }
+  ],
+  "writes_blocked_by_default": true,
+  "blocked_actions": [
+    "client_facing_validated_claim",
+    "production_activation",
+    "commercial_claim",
+    "validated_model_gain_claim",
+    "validated_hallucination_reduction_claim",
+    "automatic_merge",
+    "real_world_side_effect",
+    "github_issue_comment",
+    "github_pr_comment",
+    "external_repo_write",
+    "production_neo4j_write",
+    "neo4j_delete",
+    "neo4j_reimport",
+    "docker_volume_delete",
+    "micrograph_runtime_claim",
+    "delta_matrix_runtime_claim",
+    "state_family_runtime_claim",
+    "multi_llm_braid_runtime_claim",
+    "invented_agent_concept_claim",
+    "cockpit_as_primary_system_claim",
+    "agent_as_primary_system_claim"
+  ],
+  "next_phase": "PROD-8261..8300 - CASULO Agent API Server and Action Scaffold"
+}

@@ -1,0 +1,143 @@
+{
+  "version": "casulo_kpi_vector_telemetry_inventory.v0.1",
+  "phase": "PROD-8221..8260",
+  "generated_at": "2026-07-02T16:15:37.405062+00:00",
+  "telemetry_families_registered": {
+    "T1_exocortex_lifecycle": [
+      "integrity_score",
+      "boundary_score",
+      "risk_pressure",
+      "action_readiness",
+      "priority_score",
+      "verdict",
+      "lifecycle_action"
+    ],
+    "T2_input_prompt_quality": [
+      "prompt_quality_score",
+      "input_data_quality_score",
+      "requirement_completeness",
+      "ambiguity_risk",
+      "evidence_quality",
+      "schema_fit",
+      "missing_context_rate",
+      "garbage_in_risk"
+    ],
+    "T3_value_delta": [
+      "time_saved",
+      "rework_avoided",
+      "context_waste_reduction",
+      "memory_state_preservation",
+      "hallucination_risk_avoided",
+      "claim_leakage_avoided",
+      "operational_risk_avoided"
+    ],
+    "T4_ponto_zero": [
+      "OHRI",
+      "OQI",
+      "ZPI",
+      "evidence_density",
+      "inference_load",
+      "semantic_ambiguity",
+      "gate_alignment",
+      "claim_overreach",
+      "unsafe_action_risk",
+      "compressibility",
+      "expansion_fidelity"
+    ],
+    "T5_vector_kinematics": [
+      "risk",
+      "evidence",
+      "confidence",
+      "ambiguity",
+      "dependency",
+      "impact",
+      "governance",
+      "reversibility",
+      "readiness",
+      "exposure",
+      "Delta_estado"
+    ],
+    "T6_delta_zero_output": [
+      "unsupported_claim",
+      "missing_evidence_claim",
+      "gate_violation",
+      "scope_leak",
+      "invented_action",
+      "unsafe_action",
+      "production_leak",
+      "client_claim_leak"
+    ],
+    "T7_neo4j_graph_retrieval": [
+      "retrieval_hit_rate",
+      "path_completeness",
+      "evidence_to_gate_traceability",
+      "query_latency",
+      "false_allow_delta",
+      "false_block_delta"
+    ]
+  },
+  "observed_ponto_zero_vector": {
+    "evidence_density": 0.75,
+    "gate_alignment": 1.0,
+    "claim_boundary_preservation": 1.0,
+    "section_completeness": 1.0,
+    "uncertainty_handling": 1.0,
+    "prompt_boundary_presence": 1.0,
+    "output_quality_index": 0.925,
+    "hallucination_risk_index": 0.075,
+    "ponto_zero_integrity": 1.0,
+    "production_exposure_risk": 0.0,
+    "client_claim_exposure_risk": 0.0
+  },
+  "observed_complex_indices": {
+    "ohri_v2": 0.05,
+    "oqi_v2": 0.9375,
+    "zpi_v2": 0.99,
+    "components": {
+      "claim_overreach": 0.0,
+      "unsupported_claim": 0.25,
+      "wrong_gate": 0.0,
+      "unsafe_action": 0.0,
+      "false_memory": 0.0,
+      "missing_evidence_mishandling": 0.0
+    }
+  },
+  "observed_delta_estado": 0.067,
+  "observed_graph_retrieval_proxy": {
+    "version": "graph_retrieval_gain_evaluation.v0.1",
+    "generated_at": "2026-07-02T02:38:53.187737+00:00",
+    "case_id": "REAL-CASE-001",
+    "run_id": "28560724294",
+    "evaluation_mode": "OFFLINE_COMMITTED_GRAPH_PAYLOAD_PROXY",
+    "neo4j_live_query_executed": false,
+    "baseline_operational_quality": 0.925,
+    "vector_operational_quality": 0.9375,
+    "retrieval_context_availability": 1.0,
+    "evidence_to_gate_traceability": 0.9,
+    "boundary_reinforcement": 1.0,
+    "retrieval_gain_proxy": 0.97,
+    "graph_path_completeness": 1.0,
+    "interpretation": {
+      "retrieval_context_availability": "How much committed graph context is available for the case.",
+      "evidence_to_gate_traceability": "Whether the graph-backed context preserves evidence -> gate -> decision traceability.",
+      "boundary_reinforcement": "Whether graph context reinforces blocked claims and safe action boundaries.",
+      "retrieval_gain_proxy": "Offline proxy score for graph retrieval contribution before live Neo4j queries."
+    },
+    "decision": {
+      "ready_for_multi_run_calibration_batch": true,
+      "ready_for_live_neo4j_retrieval": true,
+      "ready_for_threshold_lock": false,
+      "ready_for_client_claim": false,
+      "ready_for_production": false
+    }
+  },
+  "calibration_status": {
+    "single_live_run_vector_scored": true,
+    "multi_run_batch_prepared": true,
+    "threshold_lock_ready": false,
+    "client_claim_allowed": false,
+    "production_allowed": false,
+    "commercial_claim_allowed": false
+  },
+  "gap": "Telemetry exists as artifacts and partial calibration; it is not yet a ChatGPT Agent runtime calibration service."
+}

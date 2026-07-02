@@ -1,0 +1,32 @@
+{
+  "contract": "chat_memory_boundary_context_rebuild_gate.contract.v0.1",
+  "phase": "PROD-8221..8260",
+  "purpose": "Prevent ChatGPT conversation memory from becoming operational truth without Cube/Exocortex validation.",
+  "rules": [
+    "Chat text is raw signal, not state.",
+    "Assistant memory is raw signal, not evidence.",
+    "Every remembered claim must be classified as fact, inference, preference, decision, hypothesis, superseded state or discard.",
+    "Repo artifacts, tags, outputs and graph state outrank chat memory.",
+    "If chat memory conflicts with repo/graph/evidence, the Cube must mark contradiction and block action.",
+    "Runtime Context Packet must be rebuilt from evidence, not copied from chat."
+  ],
+  "classes": [
+    "SUPPORTED_FACT",
+    "USER_PREFERENCE",
+    "CANONICAL_DECISION",
+    "VALID_INFERENCE",
+    "WEAK_INFERENCE",
+    "STALE_MEMORY",
+    "CONTRADICTION",
+    "DISCARD",
+    "HUMAN_REVIEW_REQUIRED"
+  ],
+  "outputs": [
+    "clean_context_packet",
+    "memory_delta",
+    "contradiction_report",
+    "blocked_claims",
+    "next_safe_action"
+  ],
+  "current_status": "CONTRACT_READY_RUNTIME_NOT_IMPLEMENTED"
+}
