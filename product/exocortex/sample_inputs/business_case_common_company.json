@@ -1,0 +1,6 @@
+{
+  "case_id": "COMMON-COMPANY-001",
+  "message": "Empresa com dados espalhados em planilhas, sistema financeiro separado, atendimento sem padrão, retrabalho e ausência de indicadores confiáveis. Precisa diagnóstico, monitoramento, soluções simples e calibração da matriz semântica e telemétrica.",
+  "input_is_truth": false,
+  "purpose": "First common-company scenario for context rebuild and diagnostic draft tests."
+}

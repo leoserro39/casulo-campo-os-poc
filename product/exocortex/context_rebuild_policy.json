@@ -1,0 +1,43 @@
+{
+  "version": "context_rebuild_policy.v0.1",
+  "phase": "PROD-8341..8380",
+  "rules": [
+    "Chat/business input is raw signal, not truth.",
+    "Operational Cube governs state and gates.",
+    "Exocortex rebuilds clean context from signal plus repo/graph/telemetry.",
+    "Inference Gate Prompt remains current filtering layer.",
+    "Micrograph runtime remains future epic only.",
+    "Diagnostic graph view lite uses Mermaid/report output, not interactive Neo4j Browser."
+  ],
+  "classes": [
+    "supported_facts",
+    "valid_inferences",
+    "weak_inferences",
+    "gaps",
+    "risks",
+    "contradictions"
+  ],
+  "blocked_actions": [
+    "client_facing_validated_claim",
+    "production_activation",
+    "commercial_claim",
+    "validated_model_gain_claim",
+    "validated_hallucination_reduction_claim",
+    "automatic_merge",
+    "real_world_side_effect",
+    "github_issue_comment",
+    "github_pr_comment",
+    "external_repo_write",
+    "production_neo4j_write",
+    "neo4j_delete",
+    "neo4j_reimport",
+    "docker_volume_delete",
+    "micrograph_runtime_claim",
+    "delta_matrix_runtime_claim",
+    "state_family_runtime_claim",
+    "multi_llm_braid_runtime_claim",
+    "invented_agent_concept_claim",
+    "cockpit_as_primary_system_claim",
+    "agent_as_primary_system_claim"
+  ]
+}

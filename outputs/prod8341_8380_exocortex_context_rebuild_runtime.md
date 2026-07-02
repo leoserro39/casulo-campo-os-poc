@@ -1,0 +1,36 @@
+# PROD-8341..8380 - Exocortex Context Rebuild Runtime + Diagnostic Graph View Lite
+
+Status: PASS  
+Decision: `EXOCORTEX_CONTEXT_REBUILD_RUNTIME_DIAGNOSTIC_GRAPH_VIEW_LITE_READY`
+
+```json
+{
+  "exocortex_context_rebuild_runtime_ready": true,
+  "chat_signal_treated_as_raw_signal": true,
+  "clean_context_packet_ready": true,
+  "diagnostic_report_draft_ready": true,
+  "graph_view_lite_mermaid_ready": true,
+  "api_v03_context_endpoints_ready": true,
+  "telemetry_inventory_available": true,
+  "interactive_neo4j_browser_required_now": false,
+  "live_neo4j_connection_executed": false,
+  "production_neo4j_write_allowed": false,
+  "github_write_allowed": false,
+  "client_claim_allowed": false,
+  "production_allowed": false,
+  "commercial_claim_allowed": false,
+  "micrograph_runtime_current_poc": false,
+  "micrographs_future_epic_only": true,
+  "cockpit_priority": "DEFERRED"
+}
+```
+
+## Endpoints
+
+- `POST /exocortex/context/rebuild`
+- `POST /diagnostic/draft`
+- `GET /graph/mermaid`
+
+## Next
+
+`PROD-8381..8420 - Operational Services: Diagnostic Monitoring Solutions Calibration`

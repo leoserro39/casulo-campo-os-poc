@@ -1,0 +1,90 @@
+{
+  "openapi": "3.1.0",
+  "info": {
+    "title": "CASULO Agent Action API v0.3 Context Runtime",
+    "version": "0.3.0",
+    "description": "Exocortex context rebuild and diagnostic graph view lite endpoints."
+  },
+  "servers": [
+    {
+      "url": "https://REPLACE_WITH_PUBLIC_ACTION_SERVER"
+    }
+  ],
+  "paths": {
+    "/exocortex/context/rebuild": {
+      "post": {
+        "operationId": "rebuildExocortexContext",
+        "summary": "Rebuild governed context from chat/business signal",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "message": {
+                    "type": "string"
+                  },
+                  "case_id": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "message"
+                ]
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Context rebuild packet"
+          }
+        }
+      }
+    },
+    "/diagnostic/draft": {
+      "post": {
+        "operationId": "createDiagnosticDraft",
+        "summary": "Create internal diagnostic draft with graph view lite",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "message": {
+                    "type": "string"
+                  },
+                  "case_id": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "message"
+                ]
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Diagnostic draft"
+          }
+        }
+      }
+    },
+    "/graph/mermaid": {
+      "get": {
+        "operationId": "getGraphMermaid",
+        "summary": "Get graph view lite as Mermaid",
+        "responses": {
+          "200": {
+            "description": "Mermaid graph"
+          }
+        }
+      }
+    }
+  }
+}

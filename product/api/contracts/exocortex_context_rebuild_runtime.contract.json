@@ -1,0 +1,53 @@
+{
+  "contract": "exocortex_context_rebuild_runtime.contract.v0.1",
+  "phase": "PROD-8341..8380",
+  "requires": [
+    "outputs/prod8301_8340_readonly_adapters_git_repo_outputs_neo4j.json",
+    "product/adapters/read_only/git_repo_adapter.py",
+    "product/adapters/read_only/output_artifact_indexer.py",
+    "product/adapters/read_only/neo4j_readonly_adapter_scaffold.py",
+    "product/adapters/read_only/evidence_trace_adapter.py",
+    "product/cube/operational_cube_master_contract.json",
+    "product/calibration/casulo_kpi_vector_telemetry_inventory.json"
+  ],
+  "status": "PASS",
+  "decision": "EXOCORTEX_CONTEXT_REBUILD_RUNTIME_DIAGNOSTIC_GRAPH_VIEW_LITE_READY",
+  "mode": "CONTEXT_REBUILD_AND_DIAGNOSTIC_GRAPH_VIEW_LITE",
+  "blocked_actions": [
+    "client_facing_validated_claim",
+    "production_activation",
+    "commercial_claim",
+    "validated_model_gain_claim",
+    "validated_hallucination_reduction_claim",
+    "automatic_merge",
+    "real_world_side_effect",
+    "github_issue_comment",
+    "github_pr_comment",
+    "external_repo_write",
+    "production_neo4j_write",
+    "neo4j_delete",
+    "neo4j_reimport",
+    "docker_volume_delete",
+    "micrograph_runtime_claim",
+    "delta_matrix_runtime_claim",
+    "state_family_runtime_claim",
+    "multi_llm_braid_runtime_claim",
+    "invented_agent_concept_claim",
+    "cockpit_as_primary_system_claim",
+    "agent_as_primary_system_claim"
+  ],
+  "implemented_endpoints": [
+    "POST /exocortex/context/rebuild",
+    "POST /diagnostic/draft",
+    "GET /graph/mermaid"
+  ],
+  "not_implemented_yet": [
+    "final diagnostic service",
+    "monitoring service",
+    "solutions service",
+    "calibration service",
+    "business-case input repository",
+    "public ChatGPT Action deployment",
+    "interactive graph viewer"
+  ]
+}
