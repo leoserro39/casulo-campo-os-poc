@@ -1,0 +1,9 @@
+{
+  "status": "SCAFFOLD_READY",
+  "expected_checks": [
+    "node_count",
+    "relationship_count",
+    "read_only_case_query"
+  ],
+  "production_write_allowed": false
+}

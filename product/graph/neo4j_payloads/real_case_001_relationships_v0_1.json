@@ -1,0 +1,12 @@
+[
+  {
+    "start": "GITHUB-AGENT-FOUNDATION-v0.1",
+    "type": "RUNS_CASE",
+    "end": "REAL-CASE-001"
+  },
+  {
+    "start": "REAL-CASE-001",
+    "type": "MEASURED_BY",
+    "end": "P0-MATRIX-BATCH01"
+  }
+]

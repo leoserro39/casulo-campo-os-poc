@@ -1,0 +1,21 @@
+{
+  "contract": "casulo_macro_foundation.v0.1",
+  "requires": [
+    "outputs/prod7021_7060_casulo_delta_zero_controlled_real_test_run_capture_review.json",
+    "product/reports/ponto_zero_telemetry_matrix_batch01_hardened_v0_1.json",
+    "outputs/prod1221_1260_neo4j_sandbox_adapter_contract.json",
+    "outputs/prod1261_1300_graph_import_sandbox_dry_run.json",
+    "product/evaluation/real_tests/real_case_001/real_case_001_context_packet_v0_3.json",
+    "product/evaluation/real_tests/real_case_001/real_case_001_evidence_packet_v0_3.json"
+  ],
+  "blocked_actions": [
+    "client_facing_validated_claim",
+    "production_activation",
+    "commercial_claim",
+    "validated_model_gain_claim",
+    "validated_hallucination_reduction_claim",
+    "automatic_merge",
+    "production_neo4j_write",
+    "real_world_side_effect"
+  ]
+}

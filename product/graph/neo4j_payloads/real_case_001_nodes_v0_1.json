@@ -1,0 +1,21 @@
+[
+  {
+    "id": "REAL-CASE-001",
+    "labels": [
+      "Case",
+      "RealCase"
+    ]
+  },
+  {
+    "id": "GITHUB-AGENT-FOUNDATION-v0.1",
+    "labels": [
+      "Agent"
+    ]
+  },
+  {
+    "id": "P0-MATRIX-BATCH01",
+    "labels": [
+      "TelemetryMatrix"
+    ]
+  }
+]

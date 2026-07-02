@@ -1,0 +1,30 @@
+name: CASULO Agent REAL-CASE-001
+on:
+  workflow_dispatch:
+    inputs:
+      allow_llm:
+        required: true
+        default: "false"
+      model:
+        required: true
+        default: "gpt-4o-mini"
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      actions: read
+    steps:
+      - uses: actions/checkout@v4
+      - name: Agent
+        env:
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          OPENAI_MODEL: ${{ inputs.model }}
+        run: |
+          if [ "${{ inputs.allow_llm }}" = "true" ]; then python3 product/agents/casulo_github_native_agent.py --allow-llm --model "${{ inputs.model }}"; else python3 product/agents/casulo_github_native_agent.py --model "${{ inputs.model }}"; fi
+      - name: Score
+        run: python3 product/scripts/score_agent_output_delta_zero.py
+      - uses: actions/upload-artifact@v4
+        with:
+          name: casulo-agent-real-case-001
+          path: product/agent_runs/real_case_001/
