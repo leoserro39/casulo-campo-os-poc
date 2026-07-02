@@ -1,0 +1,37 @@
+{
+  "contract": "live_neo4j_actual_graph_evidence_ingestion_alignment.contract.v0.1",
+  "phase": "PROD-7941..7980",
+  "requires": [
+    "outputs/prod7901_correction_live_neo4j_actual_graph_state.json",
+    "product/graph/live_retrieval/prod7901_7940_real_live_graph_probe.txt",
+    "product/graph/live_retrieval/safety/prod7901_correction_live_neo4j_preservation_evidence.txt",
+    "outputs/prod7901_7940_live_graph_evidence_followup_controlled_sandbox_retrieval.json",
+    "outputs/prod7861_7900_client_production_claim_boundary_reassessment.json"
+  ],
+  "live_neo4j_sandbox_confirmed": true,
+  "actual_graph_family_confirmed": "EXP50",
+  "actual_node_count": 313,
+  "actual_relationship_count": 350,
+  "prod7901_stale_target_query_superseded": true,
+  "ready_for_actual_graph_aligned_retrieval_gate": true,
+  "client_claim_allowed": false,
+  "production_allowed": false,
+  "commercial_claim_allowed": false,
+  "blocked_actions": [
+    "client_facing_validated_claim",
+    "production_activation",
+    "commercial_claim",
+    "validated_model_gain_claim",
+    "validated_hallucination_reduction_claim",
+    "automatic_merge",
+    "real_world_side_effect",
+    "github_issue_comment",
+    "github_pr_comment",
+    "external_repo_write",
+    "production_neo4j_write",
+    "neo4j_delete",
+    "neo4j_reimport",
+    "docker_volume_delete",
+    "threshold_scope_expansion_without_future_human_review"
+  ]
+}
