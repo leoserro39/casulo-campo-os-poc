@@ -1,0 +1,100 @@
+{
+  "status": "PASS",
+  "phase": "PROD-7981..8020",
+  "decision": "EXP50_ALIGNED_READ_ONLY_RETRIEVAL_QUERY_GATE_READY_EXECUTION_PENDING",
+  "generated_at": "2026-07-02T04:22:19.271322+00:00",
+  "case_id": "EXP50_GRAPH_SET",
+  "exp50_aligned_retrieval_query_gate_packet": {
+    "version": "exp50_aligned_retrieval_query_gate_packet.v0.1",
+    "phase": "PROD-7981..8020",
+    "generated_at": "2026-07-02T04:22:19.271322+00:00",
+    "decision": "EXP50_ALIGNED_READ_ONLY_RETRIEVAL_QUERY_GATE_READY_EXECUTION_PENDING",
+    "source_alignment": "outputs/prod7941_7980_live_neo4j_actual_graph_evidence_ingestion_alignment.json",
+    "source_correction": "outputs/prod7901_correction_live_neo4j_actual_graph_state.json",
+    "neo4j_sandbox": {
+      "container": "casulo-neo4j-sandbox",
+      "browser_port": 7474,
+      "bolt_port": 7687,
+      "data_volume": "config_casulo_neo4j_data",
+      "graph_family": "EXP50",
+      "node_count": 313,
+      "relationship_count": 350
+    },
+    "retrieval_gate": {
+      "query_file": "product/graph/live_retrieval/prod7981_8020_exp50_aligned_read_only_query.cypher",
+      "runbook": "product/graph/live_retrieval/prod7981_8020_controlled_read_only_execution_runbook.md",
+      "expected_result_file": "product/graph/live_retrieval/prod7981_8020_exp50_aligned_read_only_result.txt",
+      "sample_case_id": "case:EXP50-001",
+      "query_mode": "READ_ONLY",
+      "execution_done_by_this_patcher": false,
+      "execution_pending": true
+    },
+    "evaluation": {
+      "checks": {
+        "prior_7941_status_pass": true,
+        "prior_7941_phase_ok": true,
+        "live_neo4j_sandbox_confirmed": true,
+        "actual_graph_family_exp50": true,
+        "node_count_313": true,
+        "relationship_count_350": true,
+        "stale_7901_superseded": true,
+        "ready_for_actual_graph_aligned_retrieval_gate": true,
+        "client_claim_blocked": true,
+        "production_blocked": true,
+        "commercial_claim_blocked": true,
+        "case_pattern_exp50": true
+      },
+      "ready_to_prepare_exp50_retrieval_gate": true,
+      "graph_family": "EXP50",
+      "sample_case_id": "case:EXP50-001",
+      "node_count": 313,
+      "relationship_count": 350,
+      "query_execution_done_by_this_patcher": false,
+      "read_only_query_ready": true,
+      "ready_for_controlled_read_only_execution": true,
+      "ready_for_client_claim": false,
+      "ready_for_production": false,
+      "commercial_claim_allowed": false,
+      "human_review_required_for_scope_expansion": true
+    },
+    "boundary": {
+      "client_claim_allowed": false,
+      "production_allowed": false,
+      "commercial_claim_allowed": false,
+      "validated_hallucination_reduction_claim_allowed": false,
+      "validated_model_gain_claim_allowed": false,
+      "production_write_executed": false,
+      "delete_executed": false,
+      "reimport_executed": false
+    },
+    "blocked_actions": [
+      "client_facing_validated_claim",
+      "production_activation",
+      "commercial_claim",
+      "validated_model_gain_claim",
+      "validated_hallucination_reduction_claim",
+      "automatic_merge",
+      "real_world_side_effect",
+      "github_issue_comment",
+      "github_pr_comment",
+      "external_repo_write",
+      "production_neo4j_write",
+      "neo4j_delete",
+      "neo4j_reimport",
+      "docker_volume_delete",
+      "threshold_scope_expansion_without_future_human_review"
+    ]
+  },
+  "calibration_decision": {
+    "exp50_aligned_query_gate_ready": true,
+    "controlled_read_only_execution_pending": true,
+    "query_execution_done_by_this_patcher": false,
+    "ready_for_controlled_read_only_execution": true,
+    "ready_for_exp50_result_ingestion": false,
+    "ready_for_client_claim": false,
+    "ready_for_production": false,
+    "commercial_claim_allowed": false,
+    "human_review_required_for_scope_expansion": true
+  },
+  "next": "PROD-8021..8060 - EXP50 Read-Only Retrieval Result Ingestion and Confirmation Gate"
+}

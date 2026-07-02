@@ -1,0 +1,37 @@
+{
+  "contract": "actual_graph_aligned_retrieval_query_gate_exp50_packet.contract.v0.1",
+  "phase": "PROD-7981..8020",
+  "requires": [
+    "outputs/prod7941_7980_live_neo4j_actual_graph_evidence_ingestion_alignment.json",
+    "outputs/prod7901_correction_live_neo4j_actual_graph_state.json",
+    "product/graph/live_retrieval/prod7901_7940_real_live_graph_probe.txt",
+    "product/graph/live_retrieval/safety/prod7901_correction_live_neo4j_preservation_evidence.txt"
+  ],
+  "status": "PASS",
+  "decision": "EXP50_ALIGNED_READ_ONLY_RETRIEVAL_QUERY_GATE_READY_EXECUTION_PENDING",
+  "graph_family": "EXP50",
+  "sample_case_id": "case:EXP50-001",
+  "read_only_query_file": "product/graph/live_retrieval/prod7981_8020_exp50_aligned_read_only_query.cypher",
+  "ready_for_controlled_read_only_execution": true,
+  "execution_done_by_this_patcher": false,
+  "client_claim_allowed": false,
+  "production_allowed": false,
+  "commercial_claim_allowed": false,
+  "blocked_actions": [
+    "client_facing_validated_claim",
+    "production_activation",
+    "commercial_claim",
+    "validated_model_gain_claim",
+    "validated_hallucination_reduction_claim",
+    "automatic_merge",
+    "real_world_side_effect",
+    "github_issue_comment",
+    "github_pr_comment",
+    "external_repo_write",
+    "production_neo4j_write",
+    "neo4j_delete",
+    "neo4j_reimport",
+    "docker_volume_delete",
+    "threshold_scope_expansion_without_future_human_review"
+  ]
+}
