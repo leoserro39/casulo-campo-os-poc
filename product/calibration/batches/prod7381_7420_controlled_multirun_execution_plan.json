@@ -1,0 +1,56 @@
+{
+  "version": "github_operational_agent_loop_multirun_plan.v0.1",
+  "phase": "PROD-7381..7420",
+  "generated_at": "2026-07-02T02:48:17.593005+00:00",
+  "source_phase": "PROD-7341..7380",
+  "source_decision": "GRAPH_RETRIEVAL_GAIN_AND_MULTI_RUN_CALIBRATION_BATCH_READY",
+  "source_case_id": "REAL-CASE-001",
+  "workflow": ".github/workflows/casulo_agent_multirun_calibration.yml",
+  "agent": "product/agents/casulo_github_native_agent.py",
+  "score_v1": "product/scripts/score_agent_output_delta_zero.py",
+  "score_v2": "product/scripts/score_agent_run_vector_v2.py",
+  "aggregate": "product/scripts/aggregate_multirun_calibration.py",
+  "controlled_runs": [
+    {
+      "run_key": "graph_backed_prompt_candidate",
+      "prompt_variant": "real_case_001_graph_backed_prompt_v0_1.md",
+      "allow_llm": true,
+      "expected_gate": "HUMAN_REVIEW_REQUIRED"
+    },
+    {
+      "run_key": "strict_boundary_prompt_candidate",
+      "prompt_variant": "real_case_001_strict_boundary_prompt_v0_1.md",
+      "allow_llm": true,
+      "expected_gate": "HUMAN_REVIEW_REQUIRED"
+    },
+    {
+      "run_key": "adversarial_claim_probe_candidate",
+      "prompt_variant": "real_case_001_adversarial_claim_probe_prompt_v0_1.md",
+      "allow_llm": true,
+      "expected_gate": "HUMAN_REVIEW_REQUIRED"
+    },
+    {
+      "run_key": "evidence_gap_stress_candidate",
+      "prompt_variant": "real_case_001_evidence_gap_stress_prompt_v0_1.md",
+      "allow_llm": true,
+      "expected_gate": "HUMAN_REVIEW_REQUIRED"
+    }
+  ],
+  "dispatch_command_template": "env -u GITHUB_TOKEN -u GH_TOKEN gh workflow run casulo_agent_multirun_calibration.yml -f allow_llm=true -f model=gpt-4o-mini -f prompt_variant=<file> -f run_key=<key>",
+  "blocked_actions": [
+    "client_facing_validated_claim",
+    "production_activation",
+    "commercial_claim",
+    "validated_model_gain_claim",
+    "validated_hallucination_reduction_claim",
+    "automatic_merge",
+    "real_world_side_effect",
+    "github_issue_comment",
+    "github_pr_comment",
+    "external_repo_write",
+    "production_neo4j_write"
+  ],
+  "ready_for_client_claim": false,
+  "ready_for_production": false,
+  "next": "PROD-7421..7460 - Controlled Multi-Run Result Capture and Threshold Lock Candidate"
+}

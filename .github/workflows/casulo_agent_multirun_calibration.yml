@@ -1,0 +1,68 @@
+name: CASULO Agent Multi-Run Calibration
+
+on:
+  workflow_dispatch:
+    inputs:
+      allow_llm:
+        description: "Allow real LLM call"
+        required: true
+        default: "false"
+      model:
+        description: "OpenAI model"
+        required: true
+        default: "gpt-4o-mini"
+      prompt_variant:
+        description: "Prompt variant file name under product/agents/prompt_variants"
+        required: true
+        default: "real_case_001_graph_backed_prompt_v0_1.md"
+      run_key:
+        description: "Run key/directory under product/agent_runs/real_case_001"
+        required: true
+        default: "graph_backed_prompt_candidate"
+
+permissions:
+  contents: read
+
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Agent
+        shell: bash
+        run: |
+          set -euo pipefail
+          ARGS=""
+          if [ "${{ inputs.allow_llm }}" = "true" ]; then
+            ARGS="--allow-llm"
+          fi
+          python3 product/agents/casulo_github_native_agent.py \
+            --case-id REAL-CASE-001 \
+            --model "${{ inputs.model }}" \
+            --prompt-file "product/agents/prompt_variants/${{ inputs.prompt_variant }}" \
+            --run-key "${{ inputs.run_key }}" \
+            $ARGS
+        env:
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+
+      - name: Delta Zero Score
+        shell: bash
+        run: |
+          set -euo pipefail
+          python3 product/scripts/score_agent_output_delta_zero.py \
+            --output-file "product/agent_runs/real_case_001/${{ inputs.run_key }}/model_output.md" \
+            --out "product/agent_runs/real_case_001/${{ inputs.run_key }}/delta_zero_score.json"
+
+      - name: Vector Score V2
+        shell: bash
+        run: |
+          set -euo pipefail
+          python3 product/scripts/score_agent_run_vector_v2.py \
+            --run-dir "product/agent_runs/real_case_001/${{ inputs.run_key }}"
+
+      - name: Upload artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: casulo-agent-${{ inputs.run_key }}
+          path: product/agent_runs/real_case_001/${{ inputs.run_key }}

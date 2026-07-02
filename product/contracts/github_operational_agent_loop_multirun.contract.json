@@ -1,0 +1,35 @@
+{
+  "contract": "github_operational_agent_loop_multirun.contract.v0.1",
+  "phase": "PROD-7381..7420",
+  "requires": [
+    "outputs/prod7341_7380_graph_retrieval_gain_multirun_calibration.json",
+    "product/calibration/batches/prod7341_7380_multi_run_calibration_batch.json",
+    "product/agents/prompt_variants/real_case_001_graph_backed_prompt_v0_1.md",
+    "product/agents/prompt_variants/real_case_001_strict_boundary_prompt_v0_1.md",
+    "product/agents/prompt_variants/real_case_001_adversarial_claim_probe_prompt_v0_1.md",
+    "product/agents/prompt_variants/real_case_001_evidence_gap_stress_prompt_v0_1.md",
+    "product/agents/casulo_github_native_agent.py",
+    "product/scripts/score_agent_output_delta_zero.py"
+  ],
+  "creates_workflow": true,
+  "workflow_dispatch_only": true,
+  "external_writes_allowed": false,
+  "github_issue_comment_allowed": false,
+  "github_pr_comment_allowed": false,
+  "production_neo4j_write_allowed": false,
+  "client_claim_allowed": false,
+  "production_allowed": false,
+  "blocked_actions": [
+    "client_facing_validated_claim",
+    "production_activation",
+    "commercial_claim",
+    "validated_model_gain_claim",
+    "validated_hallucination_reduction_claim",
+    "automatic_merge",
+    "real_world_side_effect",
+    "github_issue_comment",
+    "github_pr_comment",
+    "external_repo_write",
+    "production_neo4j_write"
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "status": "PASS",
+  "phase": "PROD-7381..7420",
+  "decision": "GITHUB_OPERATIONAL_AGENT_LOOP_READY_FOR_CONTROLLED_MULTI_RUN_EXECUTION",
+  "generated_at": "2026-07-02T02:48:17.593005+00:00",
+  "case_id": "REAL-CASE-001",
+  "source_batch_status": "READY_FOR_CONTROLLED_RUNS",
+  "workflow_created": ".github/workflows/casulo_agent_multirun_calibration.yml",
+  "agent_updated_for_prompt_variants": true,
+  "score_v2_created": true,
+  "aggregate_script_created": true,
+  "planned_live_runs": 4,
+  "calibration_decision": {
+    "ready_for_controlled_multirun_dispatch": true,
+    "ready_for_threshold_lock": false,
+    "ready_for_client_claim": false,
+    "ready_for_production": false,
+    "human_review_required": true
+  },
+  "next": "PROD-7421..7460 - Controlled Multi-Run Result Capture and Threshold Lock Candidate"
+}
