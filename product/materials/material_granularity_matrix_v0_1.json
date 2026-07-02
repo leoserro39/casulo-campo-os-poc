@@ -1,0 +1,14 @@
+{
+  "version": "material_granularity_matrix.v0.1",
+  "phase": "PROD-8501..8540",
+  "levels": {
+    "0": "raw_input",
+    "1": "material_class",
+    "2": "material_subtype",
+    "3": "common_dimensions",
+    "4": "relations_to_domain_state_gate_memory_action",
+    "5": "raw_field_audit_detail"
+  },
+  "default_level": 3,
+  "open_detail_rule": "Open detail only if it changes state, delta, gate, claim boundary or action boundary."
+}

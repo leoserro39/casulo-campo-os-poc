@@ -1,0 +1,49 @@
+{
+  "contract": "material_admission_matrices_method_canonization.contract.v0.1",
+  "phase": "PROD-8501..8540",
+  "requires": [
+    "outputs/prod8461_8500_controlled_business_case_calibration_loop.json",
+    "product/calibration_loop/business_case_suite_v0_1.json",
+    "product/services/operational_services.py",
+    "product/services/semantic_matrix_v0_1.json",
+    "product/services/telemetry_matrix_v0_1.json",
+    "product/cube/operational_cube_master_contract.json"
+  ],
+  "status": "PASS",
+  "decision": "CASULO_MATERIAL_ADMISSION_MATRICES_METHOD_CANONIZATION_START_READY",
+  "mode": "PRE_MICROGRAPH_MATERIAL_ADMISSION_MATRICES",
+  "matrices": [
+    "taxonomy",
+    "dimensions",
+    "drag_iaso",
+    "granularity",
+    "admission_gate",
+    "domain_material_intersection",
+    "claim_evidence_action"
+  ],
+  "blocked_actions": [
+    "client_facing_validated_claim",
+    "production_activation",
+    "commercial_claim",
+    "validated_model_gain_claim",
+    "validated_hallucination_reduction_claim",
+    "automatic_merge",
+    "real_world_side_effect",
+    "github_issue_comment",
+    "github_pr_comment",
+    "external_repo_write",
+    "production_neo4j_write",
+    "neo4j_delete",
+    "neo4j_reimport",
+    "docker_volume_delete",
+    "micrograph_runtime_claim",
+    "delta_matrix_runtime_claim",
+    "state_family_runtime_claim",
+    "multi_llm_braid_runtime_claim",
+    "invented_agent_concept_claim",
+    "cockpit_as_primary_system_claim",
+    "agent_as_primary_system_claim",
+    "threshold_lock_claim",
+    "material_matrix_final_calibrated_claim"
+  ]
+}

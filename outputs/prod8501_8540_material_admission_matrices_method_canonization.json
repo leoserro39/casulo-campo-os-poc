@@ -1,0 +1,34 @@
+{
+  "status": "PASS",
+  "phase": "PROD-8501..8540",
+  "decision": "CASULO_MATERIAL_ADMISSION_MATRICES_METHOD_CANONIZATION_START_READY",
+  "generated_at": "2026-07-02T18:35:33.557550+00:00",
+  "calibration_decision": {
+    "material_taxonomy_matrix_ready": true,
+    "material_dimensional_matrix_ready": true,
+    "material_drag_iaso_matrix_ready": true,
+    "material_granularity_matrix_ready": true,
+    "material_admission_gate_matrix_ready": true,
+    "domain_material_intersection_matrix_ready": true,
+    "claim_evidence_action_matrix_ready": true,
+    "material_admission_runtime_ready": true,
+    "methodology_canonization_start_ready": true,
+    "data_mapping_playbook_start_ready": true,
+    "api_v07_materials_ready": true,
+    "all_material_matrices_are_v0_1_seed_not_final": true,
+    "micrograph_runtime_current_poc": false,
+    "threshold_lock_ready": false,
+    "client_claim_allowed": false,
+    "production_allowed": false,
+    "commercial_claim_allowed": false,
+    "cockpit_priority": "DEFERRED"
+  },
+  "endpoints": [
+    "GET /materials/taxonomy",
+    "GET /materials/dimensions",
+    "POST /materials/admit",
+    "POST /materials/profile",
+    "POST /materials/gate"
+  ],
+  "next": "PROD-8541..8580 - Unified Agent API v0.7 with Material Admission and Calibration Loop"
+}

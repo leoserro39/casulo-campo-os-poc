@@ -1,0 +1,28 @@
+{
+  "version": "claim_evidence_action_matrix.v0.1",
+  "phase": "PROD-8501..8540",
+  "claim_classes": [
+    "SUPPORTED_FACT",
+    "VALID_INFERENCE",
+    "WEAK_INFERENCE",
+    "UNSUPPORTED_CLAIM",
+    "CONTRADICTION",
+    "ACTION_BLOCKED"
+  ],
+  "rules": {
+    "unsupported_claim_becomes_gap": true,
+    "gap_becomes_delta": true,
+    "delta_becomes_gate": true,
+    "action_is_subset_of_gate": true,
+    "internal_draft_is_not_validated_external_evidence": true,
+    "threshold_candidate_is_not_threshold_lock": true
+  },
+  "blocked_claims": [
+    "client_validated_evidence",
+    "production_ready",
+    "commercially_validated_result",
+    "validated_hallucination_reduction",
+    "validated_model_gain",
+    "threshold_locked"
+  ]
+}

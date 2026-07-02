@@ -1,0 +1,41 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "CASULO Material Admission Packet v0.1",
+  "type": "object",
+  "required": [
+    "version",
+    "raw_signal_treated_as_truth",
+    "material",
+    "dimensions",
+    "admission"
+  ],
+  "properties": {
+    "raw_signal_treated_as_truth": {
+      "type": "boolean",
+      "const": false
+    },
+    "material": {
+      "type": "object"
+    },
+    "dimensions": {
+      "type": "object",
+      "required": [
+        "volume",
+        "evidence_density",
+        "ambiguity",
+        "pressure",
+        "drag",
+        "risk",
+        "impact",
+        "traceability",
+        "confidence",
+        "reversibility",
+        "maturity",
+        "governance_need"
+      ]
+    },
+    "admission": {
+      "type": "object"
+    }
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "version": "material_drag_iaso_matrix.v0.1",
+  "phase": "PROD-8501..8540",
+  "formula_seed": "sigmoid(+ambiguity +risk +pressure +governance_need +impact -evidence_density -traceability -confidence -reversibility)",
+  "increases_drag": [
+    "ambiguity",
+    "risk",
+    "dependency_weight",
+    "pressure",
+    "governance_need",
+    "impact",
+    "low_evidence_density",
+    "low_traceability",
+    "low_reversibility"
+  ],
+  "reduces_drag": [
+    "evidence_density",
+    "traceability",
+    "confidence",
+    "reversibility",
+    "domain_fit",
+    "quality"
+  ],
+  "threshold_lock_ready": false
+}

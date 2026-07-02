@@ -1,0 +1,64 @@
+{
+  "version": "material_taxonomy_matrix.v0.1",
+  "phase": "PROD-8501..8540",
+  "material_classes": [
+    "EVIDENCE",
+    "INFERENCE",
+    "MEMORY",
+    "METRIC",
+    "RULE",
+    "ARTIFACT",
+    "ACTION",
+    "GATE",
+    "EVENT",
+    "GRAPH_OBJECT"
+  ],
+  "subtypes": {
+    "EVIDENCE": [
+      "EVIDENCE/log",
+      "EVIDENCE/document",
+      "EVIDENCE/test_result"
+    ],
+    "INFERENCE": [
+      "INFERENCE/llm_hypothesis",
+      "INFERENCE/human_hypothesis"
+    ],
+    "MEMORY": [
+      "MEMORY/prior_decision",
+      "MEMORY/chat_context"
+    ],
+    "METRIC": [
+      "METRIC/kpi",
+      "METRIC/telemetry"
+    ],
+    "RULE": [
+      "RULE/policy",
+      "RULE/threshold"
+    ],
+    "ARTIFACT": [
+      "ARTIFACT/report",
+      "ARTIFACT/script",
+      "ARTIFACT/commit"
+    ],
+    "ACTION": [
+      "ACTION/sandbox_script",
+      "ACTION/review_packet",
+      "ACTION/production_change"
+    ],
+    "GATE": [
+      "GATE/human_review",
+      "GATE/sandbox_only",
+      "GATE/production_blocked"
+    ],
+    "EVENT": [
+      "EVENT/incident",
+      "EVENT/change"
+    ],
+    "GRAPH_OBJECT": [
+      "GRAPH_OBJECT/node",
+      "GRAPH_OBJECT/relationship"
+    ]
+  },
+  "engineering_rule": "Open subtype only when it changes state, delta or gate.",
+  "micrograph_runtime_current_poc": false
+}

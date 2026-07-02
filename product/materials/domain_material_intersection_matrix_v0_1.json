@@ -1,0 +1,73 @@
+{
+  "version": "domain_material_intersection_matrix.v0.1",
+  "phase": "PROD-8501..8540",
+  "domains": {
+    "GENERAL_BUSINESS": {
+      "required_dimensions": [
+        "evidence_density",
+        "traceability",
+        "risk",
+        "governance_need"
+      ],
+      "accepted_materials": [
+        "EVIDENCE",
+        "METRIC",
+        "RULE",
+        "ARTIFACT",
+        "EVENT",
+        "MEMORY"
+      ],
+      "restricted_materials": [
+        "INFERENCE",
+        "ACTION"
+      ]
+    },
+    "TIC_SI": {
+      "required_dimensions": [
+        "evidence_density",
+        "traceability",
+        "risk",
+        "impact",
+        "reversibility",
+        "governance_need"
+      ],
+      "accepted_materials": [
+        "EVIDENCE",
+        "METRIC",
+        "RULE",
+        "ARTIFACT",
+        "EVENT",
+        "GRAPH_OBJECT"
+      ],
+      "restricted_materials": [
+        "INFERENCE",
+        "ACTION",
+        "MEMORY"
+      ]
+    },
+    "AGENT_SANDBOX": {
+      "required_dimensions": [
+        "evidence_density",
+        "traceability",
+        "ambiguity",
+        "risk",
+        "reversibility"
+      ],
+      "accepted_materials": [
+        "EVIDENCE",
+        "INFERENCE",
+        "MEMORY",
+        "METRIC",
+        "RULE",
+        "ARTIFACT",
+        "ACTION",
+        "GATE",
+        "EVENT",
+        "GRAPH_OBJECT"
+      ],
+      "restricted_materials": [
+        "ACTION"
+      ]
+    }
+  }
+}

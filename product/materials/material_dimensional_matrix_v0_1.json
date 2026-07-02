@@ -1,0 +1,20 @@
+{
+  "version": "material_dimensional_matrix.v0.1",
+  "phase": "PROD-8501..8540",
+  "dimensions": [
+    "volume",
+    "evidence_density",
+    "ambiguity",
+    "pressure",
+    "drag",
+    "risk",
+    "impact",
+    "traceability",
+    "confidence",
+    "reversibility",
+    "maturity",
+    "governance_need"
+  ],
+  "normalization": "0.0 to 1.0 seed values; thresholds are not final.",
+  "threshold_lock_ready": false
+}

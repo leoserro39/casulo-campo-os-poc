@@ -1,0 +1,55 @@
+{
+  "version": "material_admission_gate_matrix.v0.1",
+  "phase": "PROD-8501..8540",
+  "decisions": [
+    "ADMIT_AS_EVIDENCE",
+    "ADMIT_AS_INFERENCE",
+    "ADMIT_AS_MEMORY_SIGNAL",
+    "ADMIT_AS_METRIC",
+    "ADMIT_AS_RULE",
+    "ADMIT_AS_REVIEW_ITEM",
+    "ADMIT_AS_MATERIAL_SIGNAL",
+    "BLOCK_AS_UNSUPPORTED_CLAIM",
+    "BLOCK_AS_ACTION_OVERREACH"
+  ],
+  "gates": [
+    "INTERNAL_DIAGNOSTIC_ONLY",
+    "MATERIAL_REVIEW_REQUIRED",
+    "HUMAN_REVIEW_REQUIRED",
+    "SANDBOX_ONLY",
+    "PRODUCTION_BLOCKED"
+  ],
+  "rules": {
+    "inference_is_not_evidence": true,
+    "partial_evidence_is_not_validation": true,
+    "diagnostic_is_not_client_claim": true,
+    "sandbox_is_not_production": true,
+    "claim_requires_traceability": true,
+    "action_requires_gate_subset": true
+  },
+  "blocked_actions": [
+    "client_facing_validated_claim",
+    "production_activation",
+    "commercial_claim",
+    "validated_model_gain_claim",
+    "validated_hallucination_reduction_claim",
+    "automatic_merge",
+    "real_world_side_effect",
+    "github_issue_comment",
+    "github_pr_comment",
+    "external_repo_write",
+    "production_neo4j_write",
+    "neo4j_delete",
+    "neo4j_reimport",
+    "docker_volume_delete",
+    "micrograph_runtime_claim",
+    "delta_matrix_runtime_claim",
+    "state_family_runtime_claim",
+    "multi_llm_braid_runtime_claim",
+    "invented_agent_concept_claim",
+    "cockpit_as_primary_system_claim",
+    "agent_as_primary_system_claim",
+    "threshold_lock_claim",
+    "material_matrix_final_calibrated_claim"
+  ]
+}

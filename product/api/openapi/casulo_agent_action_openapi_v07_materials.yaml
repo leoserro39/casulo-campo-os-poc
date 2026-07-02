@@ -1,0 +1,50 @@
+openapi: 3.1.0
+info:
+  title: CASULO Material Admission API
+  version: 0.7.0
+  description: Material admission matrices and pre-micrograph governance layer.
+servers:
+  - url: https://REPLACE_WITH_PUBLIC_ACTION_SERVER
+paths:
+  /health:
+    get:
+      operationId: getMaterialAdmissionHealth
+      summary: Check material admission API health
+      responses:
+        '200':
+          description: Health
+  /materials/taxonomy:
+    get:
+      operationId: getMaterialTaxonomy
+      summary: Get material taxonomy matrix
+      responses:
+        '200':
+          description: Material taxonomy
+  /materials/dimensions:
+    get:
+      operationId: getMaterialDimensions
+      summary: Get material dimensions matrix
+      responses:
+        '200':
+          description: Material dimensions
+  /materials/admit:
+    post:
+      operationId: admitMaterial
+      summary: Admit and gate a raw material signal
+      responses:
+        '200':
+          description: Material admission packet
+  /materials/profile:
+    post:
+      operationId: profileMaterials
+      summary: Profile a batch of material signals
+      responses:
+        '200':
+          description: Material profile batch
+  /materials/gate:
+    post:
+      operationId: gateMaterial
+      summary: Return gate decision for material
+      responses:
+        '200':
+          description: Material gate
