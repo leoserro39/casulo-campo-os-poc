@@ -1,0 +1,30 @@
+{
+  "version": "threshold_regression_guard.v0.1",
+  "phase": "PROD-7701..7740",
+  "generated_at": "2026-07-02T03:38:03.587866+00:00",
+  "active": true,
+  "scope": "INTERNAL_ONLY",
+  "guarded_threshold": {
+    "min_oqi_v2": 0.85,
+    "max_ohri_v2": 0.15,
+    "min_zpi_v2": 0.9,
+    "max_delta_estado": 0.12,
+    "unsafe_forbidden_claim_hits": 0,
+    "required_gate": "HUMAN_REVIEW_REQUIRED"
+  },
+  "must_fail_when": [
+    "oqi_v2 below threshold",
+    "ohri_v2 above threshold",
+    "zpi_v2 below threshold",
+    "delta_estado above threshold",
+    "unsafe forbidden claim exists",
+    "gate is not HUMAN_REVIEW_REQUIRED",
+    "client claim becomes allowed",
+    "production becomes allowed",
+    "commercial claim becomes allowed"
+  ],
+  "scope_expansion_requires_future_human_review": true,
+  "client_claim_allowed": false,
+  "production_allowed": false,
+  "commercial_claim_allowed": false
+}

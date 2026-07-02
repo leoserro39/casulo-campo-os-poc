@@ -1,0 +1,33 @@
+{
+  "contract": "internal_threshold_lock_smoke_test_regression_guard.contract.v0.1",
+  "phase": "PROD-7701..7740",
+  "requires": [
+    "outputs/prod7661_7700_human_decision_internal_threshold_lock_contract.json",
+    "product/reviews/human_decisions/prod7661_7700_human_decision_record.json",
+    "product/calibration/thresholds/prod7661_7700_internal_threshold_lock_contract.json",
+    "product/contracts/internal_threshold_lock_contract.contract.json",
+    "outputs/prod7581_7620_calibrated_prompt_multirun_threshold_candidate_capture.json",
+    "product/scripts/score_agent_output_delta_zero.py",
+    "product/scripts/score_agent_run_vector_v2.py"
+  ],
+  "smoke_test_pass": true,
+  "regression_guard_active": true,
+  "internal_threshold_lock_active": true,
+  "threshold_lock_scope": "INTERNAL_ONLY",
+  "client_claim_allowed": false,
+  "production_allowed": false,
+  "blocked_actions": [
+    "client_facing_validated_claim",
+    "production_activation",
+    "commercial_claim",
+    "validated_model_gain_claim",
+    "validated_hallucination_reduction_claim",
+    "automatic_merge",
+    "real_world_side_effect",
+    "github_issue_comment",
+    "github_pr_comment",
+    "external_repo_write",
+    "production_neo4j_write",
+    "threshold_scope_expansion_without_future_human_review"
+  ]
+}

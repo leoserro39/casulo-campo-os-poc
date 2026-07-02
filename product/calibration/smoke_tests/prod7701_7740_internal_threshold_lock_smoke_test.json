@@ -1,0 +1,271 @@
+{
+  "version": "internal_threshold_lock_smoke_test.v0.1",
+  "phase": "PROD-7701..7740",
+  "generated_at": "2026-07-02T03:38:03.587866+00:00",
+  "source_lock_output": "outputs/prod7661_7700_human_decision_internal_threshold_lock_contract.json",
+  "source_decision": "HUMAN_DECISION_APPROVED_INTERNAL_THRESHOLD_LOCK_CONTRACT_CREATED",
+  "human_decision": "APPROVE_THRESHOLD_LOCK_INTERNAL_ONLY",
+  "threshold": {
+    "min_oqi_v2": 0.85,
+    "max_ohri_v2": 0.15,
+    "min_zpi_v2": 0.9,
+    "max_delta_estado": 0.12,
+    "unsafe_forbidden_claim_hits": 0,
+    "required_gate": "HUMAN_REVIEW_REQUIRED"
+  },
+  "contract_active": true,
+  "scope_internal_only": true,
+  "guardrails_ok": true,
+  "cases": [
+    {
+      "case_id": "SMOKE-PASS-STRICT-CANDIDATE",
+      "description": "Committed strict threshold candidate should pass internal-only threshold criteria.",
+      "metrics": {
+        "oqi_v2": 0.9917,
+        "ohri_v2": 0.0714,
+        "zpi_v2": 1.0,
+        "delta_estado": 0.0268,
+        "unsafe_forbidden_claim_hits": 0
+      },
+      "claims": {
+        "ready_for_client_claim": false,
+        "ready_for_production": false,
+        "commercial_claim_allowed": false
+      },
+      "gate": "HUMAN_REVIEW_REQUIRED",
+      "expected_result": "PASS"
+    },
+    {
+      "case_id": "REGRESSION-FAIL-LOW-OQI",
+      "description": "Low OQI must fail.",
+      "metrics": {
+        "oqi_v2": 0.8,
+        "ohri_v2": 0.0714,
+        "zpi_v2": 1.0,
+        "delta_estado": 0.0268,
+        "unsafe_forbidden_claim_hits": 0
+      },
+      "claims": {
+        "ready_for_client_claim": false,
+        "ready_for_production": false,
+        "commercial_claim_allowed": false
+      },
+      "gate": "HUMAN_REVIEW_REQUIRED",
+      "expected_result": "FAIL"
+    },
+    {
+      "case_id": "REGRESSION-FAIL-HIGH-OHRI",
+      "description": "High OHRI must fail.",
+      "metrics": {
+        "oqi_v2": 0.9917,
+        "ohri_v2": 0.2,
+        "zpi_v2": 1.0,
+        "delta_estado": 0.0268,
+        "unsafe_forbidden_claim_hits": 0
+      },
+      "claims": {
+        "ready_for_client_claim": false,
+        "ready_for_production": false,
+        "commercial_claim_allowed": false
+      },
+      "gate": "HUMAN_REVIEW_REQUIRED",
+      "expected_result": "FAIL"
+    },
+    {
+      "case_id": "REGRESSION-FAIL-LOW-ZPI",
+      "description": "Low ZPI must fail.",
+      "metrics": {
+        "oqi_v2": 0.9917,
+        "ohri_v2": 0.0714,
+        "zpi_v2": 0.85,
+        "delta_estado": 0.0268,
+        "unsafe_forbidden_claim_hits": 0
+      },
+      "claims": {
+        "ready_for_client_claim": false,
+        "ready_for_production": false,
+        "commercial_claim_allowed": false
+      },
+      "gate": "HUMAN_REVIEW_REQUIRED",
+      "expected_result": "FAIL"
+    },
+    {
+      "case_id": "REGRESSION-FAIL-HIGH-DELTA",
+      "description": "High Delta Estado must fail.",
+      "metrics": {
+        "oqi_v2": 0.9917,
+        "ohri_v2": 0.0714,
+        "zpi_v2": 1.0,
+        "delta_estado": 0.2,
+        "unsafe_forbidden_claim_hits": 0
+      },
+      "claims": {
+        "ready_for_client_claim": false,
+        "ready_for_production": false,
+        "commercial_claim_allowed": false
+      },
+      "gate": "HUMAN_REVIEW_REQUIRED",
+      "expected_result": "FAIL"
+    },
+    {
+      "case_id": "REGRESSION-FAIL-UNSAFE-CLAIM",
+      "description": "Unsafe forbidden claim must fail.",
+      "metrics": {
+        "oqi_v2": 0.9917,
+        "ohri_v2": 0.0714,
+        "zpi_v2": 1.0,
+        "delta_estado": 0.0268,
+        "unsafe_forbidden_claim_hits": 1
+      },
+      "claims": {
+        "ready_for_client_claim": false,
+        "ready_for_production": false,
+        "commercial_claim_allowed": false
+      },
+      "gate": "HUMAN_REVIEW_REQUIRED",
+      "expected_result": "FAIL"
+    },
+    {
+      "case_id": "REGRESSION-FAIL-CLIENT-CLAIM",
+      "description": "Client claim must stay blocked.",
+      "metrics": {
+        "oqi_v2": 0.9917,
+        "ohri_v2": 0.0714,
+        "zpi_v2": 1.0,
+        "delta_estado": 0.0268,
+        "unsafe_forbidden_claim_hits": 0
+      },
+      "claims": {
+        "ready_for_client_claim": true,
+        "ready_for_production": false,
+        "commercial_claim_allowed": false
+      },
+      "gate": "HUMAN_REVIEW_REQUIRED",
+      "expected_result": "FAIL"
+    },
+    {
+      "case_id": "REGRESSION-FAIL-PRODUCTION",
+      "description": "Production readiness must stay blocked.",
+      "metrics": {
+        "oqi_v2": 0.9917,
+        "ohri_v2": 0.0714,
+        "zpi_v2": 1.0,
+        "delta_estado": 0.0268,
+        "unsafe_forbidden_claim_hits": 0
+      },
+      "claims": {
+        "ready_for_client_claim": false,
+        "ready_for_production": true,
+        "commercial_claim_allowed": false
+      },
+      "gate": "HUMAN_REVIEW_REQUIRED",
+      "expected_result": "FAIL"
+    },
+    {
+      "case_id": "REGRESSION-FAIL-WRONG-GATE",
+      "description": "Wrong gate must fail.",
+      "metrics": {
+        "oqi_v2": 0.9917,
+        "ohri_v2": 0.0714,
+        "zpi_v2": 1.0,
+        "delta_estado": 0.0268,
+        "unsafe_forbidden_claim_hits": 0
+      },
+      "claims": {
+        "ready_for_client_claim": false,
+        "ready_for_production": false,
+        "commercial_claim_allowed": false
+      },
+      "gate": "AUTO_APPROVED",
+      "expected_result": "FAIL"
+    }
+  ],
+  "results": [
+    {
+      "case_id": "SMOKE-PASS-STRICT-CANDIDATE",
+      "expected_result": "PASS",
+      "actual_result": "PASS",
+      "passed_expectation": true,
+      "failures": []
+    },
+    {
+      "case_id": "REGRESSION-FAIL-LOW-OQI",
+      "expected_result": "FAIL",
+      "actual_result": "FAIL",
+      "passed_expectation": true,
+      "failures": [
+        "OQI_BELOW_THRESHOLD"
+      ]
+    },
+    {
+      "case_id": "REGRESSION-FAIL-HIGH-OHRI",
+      "expected_result": "FAIL",
+      "actual_result": "FAIL",
+      "passed_expectation": true,
+      "failures": [
+        "OHRI_ABOVE_THRESHOLD"
+      ]
+    },
+    {
+      "case_id": "REGRESSION-FAIL-LOW-ZPI",
+      "expected_result": "FAIL",
+      "actual_result": "FAIL",
+      "passed_expectation": true,
+      "failures": [
+        "ZPI_BELOW_THRESHOLD"
+      ]
+    },
+    {
+      "case_id": "REGRESSION-FAIL-HIGH-DELTA",
+      "expected_result": "FAIL",
+      "actual_result": "FAIL",
+      "passed_expectation": true,
+      "failures": [
+        "DELTA_ESTADO_ABOVE_THRESHOLD"
+      ]
+    },
+    {
+      "case_id": "REGRESSION-FAIL-UNSAFE-CLAIM",
+      "expected_result": "FAIL",
+      "actual_result": "FAIL",
+      "passed_expectation": true,
+      "failures": [
+        "UNSAFE_FORBIDDEN_CLAIM_PRESENT"
+      ]
+    },
+    {
+      "case_id": "REGRESSION-FAIL-CLIENT-CLAIM",
+      "expected_result": "FAIL",
+      "actual_result": "FAIL",
+      "passed_expectation": true,
+      "failures": [
+        "CLIENT_CLAIM_NOT_BLOCKED"
+      ]
+    },
+    {
+      "case_id": "REGRESSION-FAIL-PRODUCTION",
+      "expected_result": "FAIL",
+      "actual_result": "FAIL",
+      "passed_expectation": true,
+      "failures": [
+        "PRODUCTION_NOT_BLOCKED"
+      ]
+    },
+    {
+      "case_id": "REGRESSION-FAIL-WRONG-GATE",
+      "expected_result": "FAIL",
+      "actual_result": "FAIL",
+      "passed_expectation": true,
+      "failures": [
+        "GATE_MISMATCH"
+      ]
+    }
+  ],
+  "summary": {
+    "total_cases": 9,
+    "expectations_passed": 9,
+    "all_expectations_passed": true,
+    "pass_case_ok": true,
+    "fail_cases_ok": true
+  }
+}
