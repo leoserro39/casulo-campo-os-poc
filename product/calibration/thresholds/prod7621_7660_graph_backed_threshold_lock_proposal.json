@@ -1,0 +1,119 @@
+{
+  "version": "graph_backed_threshold_lock_proposal.v0.1",
+  "phase": "PROD-7621..7660",
+  "generated_at": "2026-07-02T03:30:46.244721+00:00",
+  "case_id": "REAL-CASE-001",
+  "proposal_status": "READY_FOR_HUMAN_REVIEW",
+  "proposal_type": "STRICT_THRESHOLD_LOCK_INTERNAL_ONLY",
+  "source_evidence": {
+    "prod7421_capture": {
+      "controlled_multirun_capture_complete": true,
+      "raw_forbidden_hit_count": 5,
+      "contextual_false_positive_forbidden_hit_count": 5
+    },
+    "prod7461_contextual_hardening": {
+      "score_hardening_complete": true,
+      "ready_for_controlled_multirun_rerun": true
+    },
+    "prod7501_contextual_rerun": {
+      "controlled_contextual_rerun_capture_complete": true,
+      "unsafe_forbidden_claim_count": 0,
+      "ready_for_strict_threshold_lock": false
+    },
+    "prod7541_vector_calibration": {
+      "vector_weight_calibration_complete": true,
+      "prompt_boundary_refinement_complete": true,
+      "min_calibrated_oqi_v2": 0.9917,
+      "max_calibrated_ohri_v2": 0.0714,
+      "min_calibrated_zpi_v2": 1.0,
+      "max_calibrated_delta_estado": 0.0268
+    },
+    "prod7581_threshold_candidate": {
+      "calibrated_prompt_multirun_capture_complete": true,
+      "ready_for_strict_threshold_candidate": true,
+      "ready_for_threshold_lock": false,
+      "ready_for_client_claim": false,
+      "ready_for_production": false,
+      "runs_captured": 4,
+      "runs_total": 4,
+      "runs_llm_executed": 4,
+      "all_required_sections_present": true,
+      "unsafe_forbidden_claim_count": 0,
+      "min_oqi_v2": 0.9917,
+      "max_ohri_v2": 0.0714,
+      "min_zpi_v2": 1.0,
+      "max_delta_estado": 0.0268,
+      "threshold_candidate_reason": "Strict calibrated threshold candidate is ready, but threshold lock remains blocked pending human review and graph/live evidence confirmation."
+    }
+  },
+  "graph_evidence": {
+    "graph_evidence_mode": "OFFLINE_COMMITTED_GRAPH_PAYLOAD",
+    "neo4j_live_query_executed": false,
+    "production_write_executed": false,
+    "node_count": 3,
+    "relationship_count": 2,
+    "node_ids": [
+      "REAL-CASE-001",
+      "GITHUB-AGENT-FOUNDATION-v0.1",
+      "P0-MATRIX-BATCH01"
+    ],
+    "relationship_types": [
+      "RUNS_CASE",
+      "MEASURED_BY"
+    ],
+    "required_node_presence": {
+      "REAL-CASE-001": true,
+      "GITHUB-AGENT-FOUNDATION-v0.1": true,
+      "P0-MATRIX-BATCH01": true
+    },
+    "required_relationship_presence": {
+      "RUNS_CASE": true,
+      "MEASURED_BY": true
+    },
+    "preview_cypher_present": true,
+    "graph_path_claim": "GITHUB-AGENT-FOUNDATION-v0.1 -> RUNS_CASE -> REAL-CASE-001 -> MEASURED_BY -> P0-MATRIX-BATCH01"
+  },
+  "review_readiness": {
+    "checks": {
+      "strict_threshold_candidate_ready": true,
+      "threshold_lock_not_activated": true,
+      "client_claim_blocked": true,
+      "production_blocked": true,
+      "all_runs_captured": true,
+      "all_runs_llm_executed": true,
+      "all_required_sections_present": true,
+      "unsafe_forbidden_claim_count_zero": true,
+      "graph_payload_complete": true,
+      "neo4j_live_query_not_claimed": true,
+      "production_write_not_executed": true
+    },
+    "all_checks_passed": true,
+    "review_packet_ready": true,
+    "graph_backed_threshold_lock_proposal_ready": true,
+    "allowed_human_review_decisions": [
+      "APPROVE_THRESHOLD_LOCK_INTERNAL_ONLY",
+      "REQUEST_MORE_EVIDENCE",
+      "REJECT_THRESHOLD_LOCK"
+    ],
+    "default_recommendation": "APPROVE_THRESHOLD_LOCK_INTERNAL_ONLY",
+    "threshold_lock_activation_allowed_now": false,
+    "client_claim_allowed": false,
+    "production_allowed": false
+  },
+  "proposed_threshold": {
+    "min_oqi_v2": 0.85,
+    "max_ohri_v2": 0.15,
+    "min_zpi_v2": 0.9,
+    "max_delta_estado": 0.12,
+    "unsafe_forbidden_claim_hits": 0,
+    "required_gate": "HUMAN_REVIEW_REQUIRED"
+  },
+  "activation_boundary": {
+    "threshold_lock_activation_allowed_now": false,
+    "requires_human_decision_record": true,
+    "requires_internal_only_scope": true,
+    "client_claim_allowed": false,
+    "production_allowed": false,
+    "commercial_claim_allowed": false
+  }
+}

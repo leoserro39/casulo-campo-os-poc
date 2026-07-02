@@ -1,0 +1,41 @@
+{
+  "contract": "human_review_graph_threshold_lock_proposal.contract.v0.1",
+  "phase": "PROD-7621..7660",
+  "requires": [
+    "outputs/prod7581_7620_calibrated_prompt_multirun_threshold_candidate_capture.json",
+    "product/calibration/batches/prod7581_7620_calibrated_prompt_multirun_capture.json",
+    "product/calibration/thresholds/prod7581_7620_strict_threshold_candidate_capture.json",
+    "product/contracts/calibrated_prompt_multirun_threshold_candidate_capture.contract.json",
+    "outputs/prod7541_7580_vector_weight_calibration_prompt_boundary_refinement.json",
+    "outputs/prod7501_7540_controlled_multirun_rerun_threshold_lock_eval.json",
+    "outputs/prod7461_7500_delta_zero_contextual_scoring_hardening.json",
+    "outputs/prod7421_7460_controlled_multirun_result_capture_threshold_lock.json",
+    "product/graph/neo4j_payloads/real_case_001_nodes_v0_1.json",
+    "product/graph/neo4j_payloads/real_case_001_relationships_v0_1.json",
+    "product/graph/neo4j_payloads/real_case_001_preview_v0_1.cypher"
+  ],
+  "human_review_required": true,
+  "allowed_human_decisions": [
+    "APPROVE_THRESHOLD_LOCK_INTERNAL_ONLY",
+    "REQUEST_MORE_EVIDENCE",
+    "REJECT_THRESHOLD_LOCK"
+  ],
+  "threshold_lock_activation_allowed": false,
+  "threshold_lock_proposal_ready": true,
+  "client_claim_allowed": false,
+  "production_allowed": false,
+  "blocked_actions": [
+    "client_facing_validated_claim",
+    "production_activation",
+    "commercial_claim",
+    "validated_model_gain_claim",
+    "validated_hallucination_reduction_claim",
+    "automatic_merge",
+    "real_world_side_effect",
+    "github_issue_comment",
+    "github_pr_comment",
+    "external_repo_write",
+    "production_neo4j_write",
+    "threshold_lock_activation_without_human_decision"
+  ]
+}
