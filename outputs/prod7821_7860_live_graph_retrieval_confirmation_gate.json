@@ -1,0 +1,103 @@
+{
+  "status": "PASS",
+  "phase": "PROD-7821..7860",
+  "decision": "LIVE_GRAPH_RETRIEVAL_GATE_EXECUTED_NOT_CONFIRMED_CLAIM_BOUNDARY_REASSESSMENT_REQUIRED",
+  "generated_at": "2026-07-02T03:50:03.730251+00:00",
+  "case_id": "REAL-CASE-001",
+  "live_graph_retrieval_confirmation_gate": {
+    "version": "live_graph_retrieval_confirmation_gate.v0.1",
+    "phase": "PROD-7821..7860",
+    "generated_at": "2026-07-02T03:50:03.730251+00:00",
+    "case_id": "REAL-CASE-001",
+    "source_operator_packet": "outputs/prod7781_7820_evidence_export_operator_review_packet.json",
+    "operator_packet_ready": true,
+    "offline_graph_summary": {
+      "mode": "OFFLINE_COMMITTED_GRAPH_PAYLOAD",
+      "node_count": 3,
+      "relationship_count": 2,
+      "node_ids": [
+        "REAL-CASE-001",
+        "GITHUB-AGENT-FOUNDATION-v0.1",
+        "P0-MATRIX-BATCH01"
+      ],
+      "relationship_types": [
+        "RUNS_CASE",
+        "MEASURED_BY"
+      ],
+      "required_node_presence": {
+        "REAL-CASE-001": true,
+        "GITHUB-AGENT-FOUNDATION-v0.1": true,
+        "P0-MATRIX-BATCH01": true
+      },
+      "required_relationship_presence": {
+        "RUNS_CASE": true,
+        "MEASURED_BY": true
+      },
+      "preview_cypher_present": true,
+      "preview_cypher_path": "product/graph/neo4j_payloads/real_case_001_preview_v0_1.cypher",
+      "graph_path_claim": "GITHUB-AGENT-FOUNDATION-v0.1 -> RUNS_CASE -> REAL-CASE-001 -> MEASURED_BY -> P0-MATRIX-BATCH01"
+    },
+    "live_retrieval_summary": {
+      "live_evidence_path": null,
+      "live_evidence_present": false,
+      "live_query_executed": false,
+      "neo4j_environment": null,
+      "production_write_executed": false,
+      "graph_path_confirmed": false,
+      "reason": "No live evidence file supplied."
+    },
+    "gate_evaluation": {
+      "checks": {
+        "offline_graph_payload_complete": true,
+        "live_evidence_present": false,
+        "live_query_executed": false,
+        "live_graph_path_confirmed": false,
+        "live_required_nodes_present": false,
+        "live_required_relationships_present": false,
+        "live_node_count_matches": false,
+        "live_relationship_count_matches": false,
+        "production_write_not_executed": true
+      },
+      "offline_graph_payload_complete": true,
+      "live_graph_retrieval_confirmed": false,
+      "gate_executed": true,
+      "gate_status": "NOT_CONFIRMED",
+      "ready_for_claim_boundary_reassessment": true,
+      "ready_for_client_claim": false,
+      "ready_for_production": false,
+      "human_review_required_for_scope_expansion": true
+    },
+    "read_only_cypher_plan_path": "product/graph/retrieval_gates/prod7821_7860_live_graph_retrieval_confirmation_plan.cypher",
+    "boundary": {
+      "client_claim_allowed": false,
+      "production_allowed": false,
+      "commercial_claim_allowed": false,
+      "validated_hallucination_reduction_claim_allowed": false,
+      "production_neo4j_write_allowed": false
+    },
+    "blocked_actions": [
+      "client_facing_validated_claim",
+      "production_activation",
+      "commercial_claim",
+      "validated_model_gain_claim",
+      "validated_hallucination_reduction_claim",
+      "automatic_merge",
+      "real_world_side_effect",
+      "github_issue_comment",
+      "github_pr_comment",
+      "external_repo_write",
+      "production_neo4j_write",
+      "threshold_scope_expansion_without_future_human_review"
+    ]
+  },
+  "calibration_decision": {
+    "live_graph_retrieval_confirmation_gate_executed": true,
+    "live_graph_retrieval_confirmed": false,
+    "offline_graph_payload_complete": true,
+    "ready_for_claim_boundary_reassessment": true,
+    "ready_for_client_claim": false,
+    "ready_for_production": false,
+    "human_review_required_for_scope_expansion": true
+  },
+  "next": "PROD-7861..7900 - Client/Production Claim Boundary Reassessment"
+}
