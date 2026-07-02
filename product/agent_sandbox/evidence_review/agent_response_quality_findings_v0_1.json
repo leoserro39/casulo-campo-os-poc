@@ -1,0 +1,34 @@
+{
+  "version": "agent_response_quality_findings.v0.1",
+  "phase": "PROD-8621..8660",
+  "critical_failures_count": 0,
+  "instruction_hardening_required": true,
+  "quality_findings": [
+    {
+      "id": "AQF-001",
+      "severity": "medium",
+      "finding": "Chat-only input was partially summarized with evidence-like/documental wording.",
+      "required_hardening": "Force chat-only input to remain unverified signal/inference unless a real artifact is supplied."
+    },
+    {
+      "id": "AQF-002",
+      "severity": "medium",
+      "finding": "Evidence density and confidence appeared too high for unverified user signal.",
+      "required_hardening": "Require explicit caveat and limited evidence language for chat-only inputs."
+    },
+    {
+      "id": "AQF-003",
+      "severity": "low",
+      "finding": "Response displayed ranges and multiple delta values without source labels.",
+      "required_hardening": "Require exact values and source labels from tool responses."
+    }
+  ],
+  "passed_controls": [
+    "material-first flow observed",
+    "raw signal not treated as truth",
+    "production blocked",
+    "client claim blocked",
+    "commercial claim blocked",
+    "threshold lock blocked"
+  ]
+}

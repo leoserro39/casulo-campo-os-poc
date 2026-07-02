@@ -1,0 +1,33 @@
+{
+  "version": "sandbox_agent_test_001_observed_response_summary.v0.1",
+  "phase": "PROD-8621..8660",
+  "observed_at": "2026-07-02T20:03:23.344168+00:00",
+  "source": "manual ChatGPT Agent test output pasted by operator",
+  "agent_name": "CASULO Campo OS Agent Sandbox",
+  "api_base_url": "https://ominous-journey-xrwvv79x4qr9f9xg-8541.app.github.dev",
+  "agent_called_external_api": true,
+  "operations_observed": [
+    "getUnifiedAgentHealth",
+    "createMaterialFirstDiagnostic",
+    "material-first diagnostic flow through external API"
+  ],
+  "material_first_observed": true,
+  "raw_input_treated_as_truth": false,
+  "hypothesis_promoted_to_evidence": false,
+  "production_allowed": false,
+  "client_claim_allowed": false,
+  "commercial_claim_allowed": false,
+  "threshold_lock_ready": false,
+  "notable_good_behaviors": [
+    "Agent stated that the input is raw signal, not operational truth.",
+    "Agent called the external API successfully.",
+    "Agent kept production and client claims blocked.",
+    "Agent returned internal sandbox diagnostic language.",
+    "Agent preserved human/material review gate."
+  ],
+  "notable_review_findings": [
+    "Response used evidence-like wording for a chat-only input in one section.",
+    "Response showed high evidence density/confidence for unverified user signal.",
+    "Response showed value ranges and two delta references without clearly separating tool sources."
+  ]
+}

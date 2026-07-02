@@ -1,0 +1,14 @@
+{
+  "version": "sandbox_agent_test_001_decision.v0.1",
+  "phase": "PROD-8621..8660",
+  "decision": "PASS_WITH_HARDENING",
+  "rationale": "The first manual sandbox Agent test successfully called the external API, preserved material-first flow, and blocked production/client/commercial claims. Instruction hardening is required because chat-only input received evidence-like wording and high evidence density/confidence.",
+  "retest_required": true,
+  "methodology_pack_draft_allowed": true,
+  "client_case_study_allowed": false,
+  "client_claim_allowed": false,
+  "production_allowed": false,
+  "commercial_claim_allowed": false,
+  "threshold_lock_ready": false,
+  "next": "PROD-8661..8700 - Hardened Agent Sandbox Retest and Evidence Capture"
+}
