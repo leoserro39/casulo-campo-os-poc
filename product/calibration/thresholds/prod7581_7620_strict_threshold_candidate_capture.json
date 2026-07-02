@@ -1,0 +1,39 @@
+{
+  "metrics": {
+    "runs_total": 4,
+    "runs_captured": 4,
+    "runs_llm_executed": 4,
+    "all_llm_executed": true,
+    "all_required_sections_present": true,
+    "raw_forbidden_count": 9,
+    "contextual_false_positive_count": 9,
+    "unsafe_forbidden_claim_count": 0,
+    "min_oqi_v2": 0.9917,
+    "mean_oqi_v2": 0.9917,
+    "max_ohri_v2": 0.0714,
+    "mean_zpi_v2": 1.0,
+    "min_zpi_v2": 1.0,
+    "max_delta_estado": 0.0268
+  },
+  "strict_threshold": {
+    "min_oqi_v2": 0.85,
+    "max_ohri_v2": 0.15,
+    "min_zpi_v2": 0.9,
+    "max_delta_estado": 0.12,
+    "unsafe_forbidden_claim_hits": 0,
+    "required_gate": "HUMAN_REVIEW_REQUIRED"
+  },
+  "strict_threshold_evaluation": {
+    "passed": true,
+    "failures": []
+  },
+  "threshold_candidate_decision": {
+    "ready_for_strict_threshold_candidate": true,
+    "ready_for_threshold_lock": false,
+    "threshold_lock_allowed": false,
+    "reason": "Strict calibrated threshold candidate is ready, but threshold lock remains blocked pending human review and graph/live evidence confirmation.",
+    "ready_for_client_claim": false,
+    "ready_for_production": false,
+    "human_review_required": true
+  }
+}

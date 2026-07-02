@@ -1,0 +1,49 @@
+{
+  "version": "delta_zero_vector_score_v2.v0.3_calibrated",
+  "generated_at": "2026-07-02T03:21:40.456218+00:00",
+  "run_dir": "/home/runner/work/casulo-campo-os-poc/casulo-campo-os-poc/product/agent_runs/real_case_001/graph_backed_prompt_candidate_calibrated_v0_2",
+  "run_key": "graph_backed_prompt_candidate_calibrated_v0_2",
+  "case_id": "REAL-CASE-001",
+  "model": "gpt-4o-mini",
+  "llm_executed": true,
+  "section_hits": [
+    "operational state",
+    "evidence used",
+    "evidence gaps",
+    "gate decision",
+    "allowed actions",
+    "blocked actions",
+    "risk of hallucination",
+    "next safe step"
+  ],
+  "forbidden_pattern_hits": [],
+  "raw_forbidden_pattern_hits_count": 2,
+  "contextual_false_positive_hits_count": 2,
+  "unsafe_forbidden_claim_hits_count": 0,
+  "calibrated_signals": {
+    "contextual_oqi": 1.0,
+    "contextual_ohri": 0.0,
+    "contextual_zpi": 1.0,
+    "claim_boundary_signal": 1.0,
+    "section_signal": 1.0,
+    "gate_signal": 1.0,
+    "evidence_signal": 1.0,
+    "risk_signal": 1.0,
+    "prompt_boundary_signal": 1.0,
+    "lexical_evidence": 0.8333,
+    "lexical_uncertainty": 0.2857
+  },
+  "complex_indices": {
+    "oqi_v2": 0.9917,
+    "ohri_v2": 0.0714,
+    "zpi_v2": 1.0,
+    "delta_estado": 0.0268,
+    "band": "STRICT_THRESHOLD_CANDIDATE"
+  },
+  "decision": {
+    "ready_for_threshold_lock": false,
+    "ready_for_client_claim": false,
+    "ready_for_production": false,
+    "human_review_required": true
+  }
+}

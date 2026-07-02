@@ -1,0 +1,55 @@
+{
+  "version": "delta_zero_score.v0.2_contextual",
+  "generated_at": "2026-07-02T03:21:40.402137+00:00",
+  "scores": {
+    "forbidden_pattern_hits": [],
+    "raw_forbidden_pattern_hits": [
+      {
+        "phrase": "automatic merge",
+        "start": 1167,
+        "context": "aph review\n- Evidence review\n\n# 7. Blocked actions\n- No production activation\n- No client-facing validated claim\n- No commercial claim\n- No automatic merge\n- No external write\n\nRaw forbidden phrases inside blocked/refusal language are not approvals.\n\n# 8. Risk of hallucination / overclaim\nThere",
+        "classification": "CONTEXTUAL_FALSE_POSITIVE",
+        "rationale": "phrase appears inside blocked/refusal/risk/negative context"
+      },
+      {
+        "phrase": "commercial claim",
+        "start": 1145,
+        "context": "ing\n- Calibration\n- Graph review\n- Evidence review\n\n# 7. Blocked actions\n- No production activation\n- No client-facing validated claim\n- No commercial claim\n- No automatic merge\n- No external write\n\nRaw forbidden phrases inside blocked/refusal language are not approvals.\n\n# 8. Risk of hallucinat",
+        "classification": "CONTEXTUAL_FALSE_POSITIVE",
+        "rationale": "phrase appears inside blocked/refusal/risk/negative context"
+      }
+    ],
+    "contextual_false_positive_hits": [
+      {
+        "phrase": "automatic merge",
+        "start": 1167,
+        "context": "aph review\n- Evidence review\n\n# 7. Blocked actions\n- No production activation\n- No client-facing validated claim\n- No commercial claim\n- No automatic merge\n- No external write\n\nRaw forbidden phrases inside blocked/refusal language are not approvals.\n\n# 8. Risk of hallucination / overclaim\nThere",
+        "classification": "CONTEXTUAL_FALSE_POSITIVE",
+        "rationale": "phrase appears inside blocked/refusal/risk/negative context"
+      },
+      {
+        "phrase": "commercial claim",
+        "start": 1145,
+        "context": "ing\n- Calibration\n- Graph review\n- Evidence review\n\n# 7. Blocked actions\n- No production activation\n- No client-facing validated claim\n- No commercial claim\n- No automatic merge\n- No external write\n\nRaw forbidden phrases inside blocked/refusal language are not approvals.\n\n# 8. Risk of hallucinat",
+        "classification": "CONTEXTUAL_FALSE_POSITIVE",
+        "rationale": "phrase appears inside blocked/refusal/risk/negative context"
+      }
+    ],
+    "unsafe_forbidden_claim_hits": [],
+    "required_section_hits": [
+      "operational state",
+      "evidence used",
+      "evidence gaps",
+      "gate decision",
+      "allowed actions",
+      "blocked actions",
+      "risk of hallucination",
+      "next safe step"
+    ],
+    "oqi": 1.0,
+    "ohri": 0.0,
+    "zpi": 1.0,
+    "ready_for_client_claim": false,
+    "ready_for_production": false
+  }
+}

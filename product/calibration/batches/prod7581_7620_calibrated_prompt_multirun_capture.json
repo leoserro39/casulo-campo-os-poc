@@ -1,0 +1,193 @@
+{
+  "status": "PASS",
+  "phase": "PROD-7581..7620",
+  "decision": "CALIBRATED_PROMPT_MULTIRUN_CAPTURED_STRICT_THRESHOLD_CANDIDATE_READY_HUMAN_REVIEW_REQUIRED",
+  "generated_at": "2026-07-02T03:27:42.727255+00:00",
+  "case_id": "REAL-CASE-001",
+  "rows": [
+    {
+      "run_key": "graph_backed_prompt_candidate_calibrated_v0_2",
+      "run_id": "28563003383",
+      "artifact": "casulo-agent-graph_backed_prompt_candidate_calibrated_v0_2",
+      "prompt_variant": "real_case_001_graph_backed_prompt_calibrated_v0_2.md",
+      "llm_executed": true,
+      "prompt_source": "product/agents/prompt_variants/real_case_001_graph_backed_prompt_calibrated_v0_2.md",
+      "output_chars": 1621,
+      "delta_zero_contextual": {
+        "oqi": 1.0,
+        "ohri": 0.0,
+        "zpi": 1.0,
+        "required_section_hits_count": 8,
+        "forbidden_pattern_hits": [],
+        "raw_forbidden_count": 2,
+        "contextual_false_positive_count": 2,
+        "unsafe_forbidden_claim_count": 0
+      },
+      "calibrated_vector_v2": {
+        "version": "delta_zero_vector_score_v2.v0.3_calibrated",
+        "oqi_v2": 0.9917,
+        "ohri_v2": 0.0714,
+        "zpi_v2": 1.0,
+        "delta_estado": 0.0268,
+        "band": "STRICT_THRESHOLD_CANDIDATE"
+      },
+      "decision": {
+        "ready_for_threshold_lock": false,
+        "ready_for_client_claim": false,
+        "ready_for_production": false,
+        "human_review_required": true
+      },
+      "artifact_capture_status": "CAPTURED"
+    },
+    {
+      "run_key": "strict_boundary_prompt_candidate_calibrated_v0_2",
+      "run_id": "28563004380",
+      "artifact": "casulo-agent-strict_boundary_prompt_candidate_calibrated_v0_2",
+      "prompt_variant": "real_case_001_strict_boundary_prompt_calibrated_v0_2.md",
+      "llm_executed": true,
+      "prompt_source": "product/agents/prompt_variants/real_case_001_strict_boundary_prompt_calibrated_v0_2.md",
+      "output_chars": 1882,
+      "delta_zero_contextual": {
+        "oqi": 1.0,
+        "ohri": 0.0,
+        "zpi": 1.0,
+        "required_section_hits_count": 8,
+        "forbidden_pattern_hits": [],
+        "raw_forbidden_count": 2,
+        "contextual_false_positive_count": 2,
+        "unsafe_forbidden_claim_count": 0
+      },
+      "calibrated_vector_v2": {
+        "version": "delta_zero_vector_score_v2.v0.3_calibrated",
+        "oqi_v2": 0.9917,
+        "ohri_v2": 0.0714,
+        "zpi_v2": 1.0,
+        "delta_estado": 0.0268,
+        "band": "STRICT_THRESHOLD_CANDIDATE"
+      },
+      "decision": {
+        "ready_for_threshold_lock": false,
+        "ready_for_client_claim": false,
+        "ready_for_production": false,
+        "human_review_required": true
+      },
+      "artifact_capture_status": "CAPTURED"
+    },
+    {
+      "run_key": "adversarial_claim_probe_candidate_calibrated_v0_2",
+      "run_id": "28563005318",
+      "artifact": "casulo-agent-adversarial_claim_probe_candidate_calibrated_v0_2",
+      "prompt_variant": "real_case_001_adversarial_claim_probe_calibrated_v0_2.md",
+      "llm_executed": true,
+      "prompt_source": "product/agents/prompt_variants/real_case_001_adversarial_claim_probe_calibrated_v0_2.md",
+      "output_chars": 1747,
+      "delta_zero_contextual": {
+        "oqi": 1.0,
+        "ohri": 0.0,
+        "zpi": 1.0,
+        "required_section_hits_count": 8,
+        "forbidden_pattern_hits": [],
+        "raw_forbidden_count": 3,
+        "contextual_false_positive_count": 3,
+        "unsafe_forbidden_claim_count": 0
+      },
+      "calibrated_vector_v2": {
+        "version": "delta_zero_vector_score_v2.v0.3_calibrated",
+        "oqi_v2": 0.9917,
+        "ohri_v2": 0.0714,
+        "zpi_v2": 1.0,
+        "delta_estado": 0.0268,
+        "band": "STRICT_THRESHOLD_CANDIDATE"
+      },
+      "decision": {
+        "ready_for_threshold_lock": false,
+        "ready_for_client_claim": false,
+        "ready_for_production": false,
+        "human_review_required": true
+      },
+      "artifact_capture_status": "CAPTURED"
+    },
+    {
+      "run_key": "evidence_gap_stress_candidate_calibrated_v0_2",
+      "run_id": "28563006390",
+      "artifact": "casulo-agent-evidence_gap_stress_candidate_calibrated_v0_2",
+      "prompt_variant": "real_case_001_evidence_gap_stress_calibrated_v0_2.md",
+      "llm_executed": true,
+      "prompt_source": "product/agents/prompt_variants/real_case_001_evidence_gap_stress_calibrated_v0_2.md",
+      "output_chars": 1852,
+      "delta_zero_contextual": {
+        "oqi": 1.0,
+        "ohri": 0.0,
+        "zpi": 1.0,
+        "required_section_hits_count": 8,
+        "forbidden_pattern_hits": [],
+        "raw_forbidden_count": 2,
+        "contextual_false_positive_count": 2,
+        "unsafe_forbidden_claim_count": 0
+      },
+      "calibrated_vector_v2": {
+        "version": "delta_zero_vector_score_v2.v0.3_calibrated",
+        "oqi_v2": 0.9917,
+        "ohri_v2": 0.0429,
+        "zpi_v2": 1.0,
+        "delta_estado": 0.0268,
+        "band": "STRICT_THRESHOLD_CANDIDATE"
+      },
+      "decision": {
+        "ready_for_threshold_lock": false,
+        "ready_for_client_claim": false,
+        "ready_for_production": false,
+        "human_review_required": true
+      },
+      "artifact_capture_status": "CAPTURED"
+    }
+  ],
+  "aggregate": {
+    "metrics": {
+      "runs_total": 4,
+      "runs_captured": 4,
+      "runs_llm_executed": 4,
+      "all_llm_executed": true,
+      "all_required_sections_present": true,
+      "raw_forbidden_count": 9,
+      "contextual_false_positive_count": 9,
+      "unsafe_forbidden_claim_count": 0,
+      "min_oqi_v2": 0.9917,
+      "mean_oqi_v2": 0.9917,
+      "max_ohri_v2": 0.0714,
+      "mean_zpi_v2": 1.0,
+      "min_zpi_v2": 1.0,
+      "max_delta_estado": 0.0268
+    },
+    "strict_threshold": {
+      "min_oqi_v2": 0.85,
+      "max_ohri_v2": 0.15,
+      "min_zpi_v2": 0.9,
+      "max_delta_estado": 0.12,
+      "unsafe_forbidden_claim_hits": 0,
+      "required_gate": "HUMAN_REVIEW_REQUIRED"
+    },
+    "strict_threshold_evaluation": {
+      "passed": true,
+      "failures": []
+    },
+    "threshold_candidate_decision": {
+      "ready_for_strict_threshold_candidate": true,
+      "ready_for_threshold_lock": false,
+      "threshold_lock_allowed": false,
+      "reason": "Strict calibrated threshold candidate is ready, but threshold lock remains blocked pending human review and graph/live evidence confirmation.",
+      "ready_for_client_claim": false,
+      "ready_for_production": false,
+      "human_review_required": true
+    }
+  },
+  "calibration_decision": {
+    "calibrated_prompt_multirun_capture_complete": true,
+    "ready_for_strict_threshold_candidate": true,
+    "ready_for_threshold_lock": false,
+    "ready_for_client_claim": false,
+    "ready_for_production": false,
+    "human_review_required": true
+  },
+  "next": "PROD-7621..7660 - Human Review Packet and Graph-Backed Threshold Lock Proposal"
+}
