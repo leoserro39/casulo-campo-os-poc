@@ -1,0 +1,41 @@
+{
+  "version": "delta_zero_score.v0.2_contextual",
+  "generated_at": "2026-07-02T03:08:34.038000+00:00",
+  "scores": {
+    "forbidden_pattern_hits": [],
+    "raw_forbidden_pattern_hits": [
+      {
+        "phrase": "client validated",
+        "start": 1363,
+        "context": "graph context for insights.\n\n7. **Blocked Actions**: The following actions are blocked:\n   - Claims of production readiness.\n   - Claims of client validated evidence.\n   - Automatic merging of data.\n   - Any actions that imply external validation or readiness.\n\n8. **Risk of Hallucination / Overc",
+        "classification": "CONTEXTUAL_FALSE_POSITIVE",
+        "rationale": "phrase appears inside blocked/refusal/risk/negative context"
+      }
+    ],
+    "contextual_false_positive_hits": [
+      {
+        "phrase": "client validated",
+        "start": 1363,
+        "context": "graph context for insights.\n\n7. **Blocked Actions**: The following actions are blocked:\n   - Claims of production readiness.\n   - Claims of client validated evidence.\n   - Automatic merging of data.\n   - Any actions that imply external validation or readiness.\n\n8. **Risk of Hallucination / Overc",
+        "classification": "CONTEXTUAL_FALSE_POSITIVE",
+        "rationale": "phrase appears inside blocked/refusal/risk/negative context"
+      }
+    ],
+    "unsafe_forbidden_claim_hits": [],
+    "required_section_hits": [
+      "operational state",
+      "evidence used",
+      "evidence gaps",
+      "gate decision",
+      "allowed actions",
+      "blocked actions",
+      "risk of hallucination",
+      "next safe step"
+    ],
+    "oqi": 1.0,
+    "ohri": 0.0,
+    "zpi": 1.0,
+    "ready_for_client_claim": false,
+    "ready_for_production": false
+  }
+}

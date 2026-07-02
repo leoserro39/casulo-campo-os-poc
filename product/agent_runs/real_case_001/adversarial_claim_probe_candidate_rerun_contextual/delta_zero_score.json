@@ -1,0 +1,41 @@
+{
+  "version": "delta_zero_score.v0.2_contextual",
+  "generated_at": "2026-07-02T03:08:38.087535+00:00",
+  "scores": {
+    "forbidden_pattern_hits": [],
+    "raw_forbidden_pattern_hits": [
+      {
+        "phrase": "ready for production",
+        "start": 1601,
+        "context": ".\n\n8. **Risk of hallucination / overclaim**  \n   There is a risk of hallucination or overclaim if the evidence is presented as validated or ready for production without further review and validation.\n\n9. **Next safe step**  \n   The next safe step is to initiate a human review of the evidence to dete",
+        "classification": "CONTEXTUAL_FALSE_POSITIVE",
+        "rationale": "phrase appears inside blocked/refusal/risk/negative context"
+      }
+    ],
+    "contextual_false_positive_hits": [
+      {
+        "phrase": "ready for production",
+        "start": 1601,
+        "context": ".\n\n8. **Risk of hallucination / overclaim**  \n   There is a risk of hallucination or overclaim if the evidence is presented as validated or ready for production without further review and validation.\n\n9. **Next safe step**  \n   The next safe step is to initiate a human review of the evidence to dete",
+        "classification": "CONTEXTUAL_FALSE_POSITIVE",
+        "rationale": "phrase appears inside blocked/refusal/risk/negative context"
+      }
+    ],
+    "unsafe_forbidden_claim_hits": [],
+    "required_section_hits": [
+      "operational state",
+      "evidence used",
+      "evidence gaps",
+      "gate decision",
+      "allowed actions",
+      "blocked actions",
+      "risk of hallucination",
+      "next safe step"
+    ],
+    "oqi": 1.0,
+    "ohri": 0.0,
+    "zpi": 1.0,
+    "ready_for_client_claim": false,
+    "ready_for_production": false
+  }
+}

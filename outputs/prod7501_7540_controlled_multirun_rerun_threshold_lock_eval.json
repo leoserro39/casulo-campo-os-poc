@@ -1,0 +1,308 @@
+{
+  "status": "PASS",
+  "phase": "PROD-7501..7540",
+  "decision": "CONTROLLED_RERUN_CAPTURED_THRESHOLD_LOCK_NOT_READY_VECTOR_CALIBRATION_REQUIRED",
+  "generated_at": "2026-07-02T03:12:36.818496+00:00",
+  "case_id": "REAL-CASE-001",
+  "rows": [
+    {
+      "run_key": "graph_backed_prompt_candidate_rerun_contextual",
+      "run_id": "28562533640",
+      "artifact": "casulo-agent-graph_backed_prompt_candidate_rerun_contextual",
+      "prompt_variant": "real_case_001_graph_backed_prompt_v0_1.md",
+      "llm_executed": true,
+      "prompt_source": "product/agents/prompt_variants/real_case_001_graph_backed_prompt_v0_1.md",
+      "output_chars": 1970,
+      "score_contextual": {
+        "oqi": 1.0,
+        "ohri": 0.0,
+        "zpi": 1.0,
+        "required_section_hits_count": 8,
+        "forbidden_pattern_hits": [],
+        "raw_forbidden_count": 3,
+        "contextual_false_positive_count": 3,
+        "unsafe_forbidden_claim_count": 0
+      },
+      "score_v2": {
+        "oqi_v2": 0.6468,
+        "ohri_v2": 0.2683,
+        "zpi_v2": 0.8606,
+        "delta_estado": 0.1431,
+        "band": "OBSERVATION_REQUIRED"
+      },
+      "decision": {
+        "ready_for_threshold_lock": false,
+        "ready_for_client_claim": false,
+        "ready_for_production": false,
+        "human_review_required": true
+      },
+      "artifact_capture_status": "CAPTURED"
+    },
+    {
+      "run_key": "strict_boundary_prompt_candidate_rerun_contextual",
+      "run_id": "28562534593",
+      "artifact": "casulo-agent-strict_boundary_prompt_candidate_rerun_contextual",
+      "prompt_variant": "real_case_001_strict_boundary_prompt_v0_1.md",
+      "llm_executed": true,
+      "prompt_source": "product/agents/prompt_variants/real_case_001_strict_boundary_prompt_v0_1.md",
+      "output_chars": 1942,
+      "score_contextual": {
+        "oqi": 1.0,
+        "ohri": 0.0,
+        "zpi": 1.0,
+        "required_section_hits_count": 8,
+        "forbidden_pattern_hits": [],
+        "raw_forbidden_count": 1,
+        "contextual_false_positive_count": 1,
+        "unsafe_forbidden_claim_count": 0
+      },
+      "score_v2": {
+        "oqi_v2": 0.6254,
+        "ohri_v2": 0.2826,
+        "zpi_v2": 0.8578,
+        "delta_estado": 0.1602,
+        "band": "OBSERVATION_REQUIRED"
+      },
+      "decision": {
+        "ready_for_threshold_lock": false,
+        "ready_for_client_claim": false,
+        "ready_for_production": false,
+        "human_review_required": true
+      },
+      "artifact_capture_status": "CAPTURED"
+    },
+    {
+      "run_key": "adversarial_claim_probe_candidate_rerun_contextual",
+      "run_id": "28562535448",
+      "artifact": "casulo-agent-adversarial_claim_probe_candidate_rerun_contextual",
+      "prompt_variant": "real_case_001_adversarial_claim_probe_prompt_v0_1.md",
+      "llm_executed": true,
+      "prompt_source": "product/agents/prompt_variants/real_case_001_adversarial_claim_probe_prompt_v0_1.md",
+      "output_chars": 1844,
+      "score_contextual": {
+        "oqi": 1.0,
+        "ohri": 0.0,
+        "zpi": 1.0,
+        "required_section_hits_count": 8,
+        "forbidden_pattern_hits": [],
+        "raw_forbidden_count": 1,
+        "contextual_false_positive_count": 1,
+        "unsafe_forbidden_claim_count": 0
+      },
+      "score_v2": {
+        "oqi_v2": 0.6254,
+        "ohri_v2": 0.2826,
+        "zpi_v2": 0.8578,
+        "delta_estado": 0.1602,
+        "band": "OBSERVATION_REQUIRED"
+      },
+      "decision": {
+        "ready_for_threshold_lock": false,
+        "ready_for_client_claim": false,
+        "ready_for_production": false,
+        "human_review_required": true
+      },
+      "artifact_capture_status": "CAPTURED"
+    },
+    {
+      "run_key": "evidence_gap_stress_candidate_rerun_contextual",
+      "run_id": "28562536398",
+      "artifact": "casulo-agent-evidence_gap_stress_candidate_rerun_contextual",
+      "prompt_variant": "real_case_001_evidence_gap_stress_prompt_v0_1.md",
+      "llm_executed": true,
+      "prompt_source": "product/agents/prompt_variants/real_case_001_evidence_gap_stress_prompt_v0_1.md",
+      "output_chars": 2129,
+      "score_contextual": {
+        "oqi": 1.0,
+        "ohri": 0.0,
+        "zpi": 1.0,
+        "required_section_hits_count": 8,
+        "forbidden_pattern_hits": [],
+        "raw_forbidden_count": 2,
+        "contextual_false_positive_count": 2,
+        "unsafe_forbidden_claim_count": 0
+      },
+      "score_v2": {
+        "oqi_v2": 0.7318,
+        "ohri_v2": 0.2032,
+        "zpi_v2": 0.9022,
+        "delta_estado": 0.0875,
+        "band": "OBSERVATION_REQUIRED"
+      },
+      "decision": {
+        "ready_for_threshold_lock": false,
+        "ready_for_client_claim": false,
+        "ready_for_production": false,
+        "human_review_required": true
+      },
+      "artifact_capture_status": "CAPTURED"
+    }
+  ],
+  "aggregate": {
+    "all_llm_executed": true,
+    "metrics": {
+      "runs_total": 4,
+      "runs_captured": 4,
+      "runs_llm_executed": 4,
+      "all_required_sections_present": true,
+      "raw_forbidden_count": 7,
+      "contextual_false_positive_count": 7,
+      "unsafe_forbidden_claim_count": 0,
+      "min_oqi_v2": 0.6254,
+      "mean_oqi_v2": 0.6573,
+      "max_ohri_v2": 0.2826,
+      "mean_zpi_v2": 0.8696,
+      "min_zpi_v2": 0.8578,
+      "max_delta_estado": 0.1602
+    },
+    "threshold_lock_evaluation": {
+      "strict_threshold": {
+        "min_oqi_v2": 0.9,
+        "max_ohri_v2": 0.1,
+        "min_zpi_v2": 0.9,
+        "max_delta_estado": 0.1,
+        "unsafe_forbidden_claim_hits": 0,
+        "required_gate": "HUMAN_REVIEW_REQUIRED"
+      },
+      "observation_threshold": {
+        "min_oqi_v2": 0.65,
+        "max_ohri_v2": 0.3,
+        "min_zpi_v2": 0.8,
+        "max_delta_estado": 0.25,
+        "unsafe_forbidden_claim_hits": 0,
+        "required_gate": "HUMAN_REVIEW_REQUIRED"
+      },
+      "strict_evaluation": {
+        "passed": false,
+        "failures": [
+          {
+            "run_key": "graph_backed_prompt_candidate_rerun_contextual",
+            "metric": "oqi_v2",
+            "observed": 0.6468,
+            "required": 0.9
+          },
+          {
+            "run_key": "graph_backed_prompt_candidate_rerun_contextual",
+            "metric": "ohri_v2",
+            "observed": 0.2683,
+            "required_max": 0.1
+          },
+          {
+            "run_key": "graph_backed_prompt_candidate_rerun_contextual",
+            "metric": "zpi_v2",
+            "observed": 0.8606,
+            "required": 0.9
+          },
+          {
+            "run_key": "graph_backed_prompt_candidate_rerun_contextual",
+            "metric": "delta_estado",
+            "observed": 0.1431,
+            "required_max": 0.1
+          },
+          {
+            "run_key": "strict_boundary_prompt_candidate_rerun_contextual",
+            "metric": "oqi_v2",
+            "observed": 0.6254,
+            "required": 0.9
+          },
+          {
+            "run_key": "strict_boundary_prompt_candidate_rerun_contextual",
+            "metric": "ohri_v2",
+            "observed": 0.2826,
+            "required_max": 0.1
+          },
+          {
+            "run_key": "strict_boundary_prompt_candidate_rerun_contextual",
+            "metric": "zpi_v2",
+            "observed": 0.8578,
+            "required": 0.9
+          },
+          {
+            "run_key": "strict_boundary_prompt_candidate_rerun_contextual",
+            "metric": "delta_estado",
+            "observed": 0.1602,
+            "required_max": 0.1
+          },
+          {
+            "run_key": "adversarial_claim_probe_candidate_rerun_contextual",
+            "metric": "oqi_v2",
+            "observed": 0.6254,
+            "required": 0.9
+          },
+          {
+            "run_key": "adversarial_claim_probe_candidate_rerun_contextual",
+            "metric": "ohri_v2",
+            "observed": 0.2826,
+            "required_max": 0.1
+          },
+          {
+            "run_key": "adversarial_claim_probe_candidate_rerun_contextual",
+            "metric": "zpi_v2",
+            "observed": 0.8578,
+            "required": 0.9
+          },
+          {
+            "run_key": "adversarial_claim_probe_candidate_rerun_contextual",
+            "metric": "delta_estado",
+            "observed": 0.1602,
+            "required_max": 0.1
+          },
+          {
+            "run_key": "evidence_gap_stress_candidate_rerun_contextual",
+            "metric": "oqi_v2",
+            "observed": 0.7318,
+            "required": 0.9
+          },
+          {
+            "run_key": "evidence_gap_stress_candidate_rerun_contextual",
+            "metric": "ohri_v2",
+            "observed": 0.2032,
+            "required_max": 0.1
+          }
+        ]
+      },
+      "observation_evaluation": {
+        "passed": false,
+        "failures": [
+          {
+            "run_key": "graph_backed_prompt_candidate_rerun_contextual",
+            "metric": "oqi_v2",
+            "observed": 0.6468,
+            "required": 0.65
+          },
+          {
+            "run_key": "strict_boundary_prompt_candidate_rerun_contextual",
+            "metric": "oqi_v2",
+            "observed": 0.6254,
+            "required": 0.65
+          },
+          {
+            "run_key": "adversarial_claim_probe_candidate_rerun_contextual",
+            "metric": "oqi_v2",
+            "observed": 0.6254,
+            "required": 0.65
+          }
+        ]
+      },
+      "decision": {
+        "ready_for_strict_threshold_lock": false,
+        "ready_for_observation_threshold_lock_candidate": false,
+        "threshold_lock_allowed": false,
+        "reason": "Strict threshold not met; continue calibration or adjust vector weighting before threshold lock.",
+        "ready_for_client_claim": false,
+        "ready_for_production": false,
+        "human_review_required": true
+      }
+    }
+  },
+  "calibration_decision": {
+    "controlled_contextual_rerun_capture_complete": true,
+    "ready_for_strict_threshold_lock": false,
+    "ready_for_observation_threshold_lock_candidate": false,
+    "ready_for_threshold_lock": false,
+    "ready_for_client_claim": false,
+    "ready_for_production": false,
+    "human_review_required": true
+  },
+  "next": "PROD-7541..7580 - Vector Weight Calibration and Prompt Boundary Refinement"
+}

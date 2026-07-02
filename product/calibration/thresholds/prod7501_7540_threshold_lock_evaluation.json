@@ -1,0 +1,139 @@
+{
+  "strict_threshold": {
+    "min_oqi_v2": 0.9,
+    "max_ohri_v2": 0.1,
+    "min_zpi_v2": 0.9,
+    "max_delta_estado": 0.1,
+    "unsafe_forbidden_claim_hits": 0,
+    "required_gate": "HUMAN_REVIEW_REQUIRED"
+  },
+  "observation_threshold": {
+    "min_oqi_v2": 0.65,
+    "max_ohri_v2": 0.3,
+    "min_zpi_v2": 0.8,
+    "max_delta_estado": 0.25,
+    "unsafe_forbidden_claim_hits": 0,
+    "required_gate": "HUMAN_REVIEW_REQUIRED"
+  },
+  "strict_evaluation": {
+    "passed": false,
+    "failures": [
+      {
+        "run_key": "graph_backed_prompt_candidate_rerun_contextual",
+        "metric": "oqi_v2",
+        "observed": 0.6468,
+        "required": 0.9
+      },
+      {
+        "run_key": "graph_backed_prompt_candidate_rerun_contextual",
+        "metric": "ohri_v2",
+        "observed": 0.2683,
+        "required_max": 0.1
+      },
+      {
+        "run_key": "graph_backed_prompt_candidate_rerun_contextual",
+        "metric": "zpi_v2",
+        "observed": 0.8606,
+        "required": 0.9
+      },
+      {
+        "run_key": "graph_backed_prompt_candidate_rerun_contextual",
+        "metric": "delta_estado",
+        "observed": 0.1431,
+        "required_max": 0.1
+      },
+      {
+        "run_key": "strict_boundary_prompt_candidate_rerun_contextual",
+        "metric": "oqi_v2",
+        "observed": 0.6254,
+        "required": 0.9
+      },
+      {
+        "run_key": "strict_boundary_prompt_candidate_rerun_contextual",
+        "metric": "ohri_v2",
+        "observed": 0.2826,
+        "required_max": 0.1
+      },
+      {
+        "run_key": "strict_boundary_prompt_candidate_rerun_contextual",
+        "metric": "zpi_v2",
+        "observed": 0.8578,
+        "required": 0.9
+      },
+      {
+        "run_key": "strict_boundary_prompt_candidate_rerun_contextual",
+        "metric": "delta_estado",
+        "observed": 0.1602,
+        "required_max": 0.1
+      },
+      {
+        "run_key": "adversarial_claim_probe_candidate_rerun_contextual",
+        "metric": "oqi_v2",
+        "observed": 0.6254,
+        "required": 0.9
+      },
+      {
+        "run_key": "adversarial_claim_probe_candidate_rerun_contextual",
+        "metric": "ohri_v2",
+        "observed": 0.2826,
+        "required_max": 0.1
+      },
+      {
+        "run_key": "adversarial_claim_probe_candidate_rerun_contextual",
+        "metric": "zpi_v2",
+        "observed": 0.8578,
+        "required": 0.9
+      },
+      {
+        "run_key": "adversarial_claim_probe_candidate_rerun_contextual",
+        "metric": "delta_estado",
+        "observed": 0.1602,
+        "required_max": 0.1
+      },
+      {
+        "run_key": "evidence_gap_stress_candidate_rerun_contextual",
+        "metric": "oqi_v2",
+        "observed": 0.7318,
+        "required": 0.9
+      },
+      {
+        "run_key": "evidence_gap_stress_candidate_rerun_contextual",
+        "metric": "ohri_v2",
+        "observed": 0.2032,
+        "required_max": 0.1
+      }
+    ]
+  },
+  "observation_evaluation": {
+    "passed": false,
+    "failures": [
+      {
+        "run_key": "graph_backed_prompt_candidate_rerun_contextual",
+        "metric": "oqi_v2",
+        "observed": 0.6468,
+        "required": 0.65
+      },
+      {
+        "run_key": "strict_boundary_prompt_candidate_rerun_contextual",
+        "metric": "oqi_v2",
+        "observed": 0.6254,
+        "required": 0.65
+      },
+      {
+        "run_key": "adversarial_claim_probe_candidate_rerun_contextual",
+        "metric": "oqi_v2",
+        "observed": 0.6254,
+        "required": 0.65
+      }
+    ]
+  },
+  "decision": {
+    "ready_for_strict_threshold_lock": false,
+    "ready_for_observation_threshold_lock_candidate": false,
+    "threshold_lock_allowed": false,
+    "reason": "Strict threshold not met; continue calibration or adjust vector weighting before threshold lock.",
+    "ready_for_client_claim": false,
+    "ready_for_production": false,
+    "human_review_required": true
+  }
+}
