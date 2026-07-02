@@ -1,0 +1,55 @@
+{
+  "contract": "read_only_adapters_git_repo_outputs_neo4j.contract.v0.1",
+  "phase": "PROD-8301..8340",
+  "requires": [
+    "outputs/prod8261_8300_casulo_agent_api_server_action_scaffold.json",
+    "product/api/casulo_agent_api_server.py",
+    "product/api/openapi/casulo_agent_action_openapi.json",
+    "product/cube/operational_cube_master_contract.json",
+    "product/calibration/casulo_kpi_vector_telemetry_inventory.json",
+    "product/audits/prod8221_8260_integrated_repo_timeline_audit.json"
+  ],
+  "status": "PASS",
+  "decision": "READ_ONLY_ADAPTERS_GIT_REPO_OUTPUTS_NEO4J_READY_FOR_LOCAL_ENDPOINT_VALIDATION",
+  "mode": "READ_ONLY_ADAPTERS",
+  "blocked_actions": [
+    "client_facing_validated_claim",
+    "production_activation",
+    "commercial_claim",
+    "validated_model_gain_claim",
+    "validated_hallucination_reduction_claim",
+    "automatic_merge",
+    "real_world_side_effect",
+    "github_issue_comment",
+    "github_pr_comment",
+    "external_repo_write",
+    "production_neo4j_write",
+    "neo4j_delete",
+    "neo4j_reimport",
+    "docker_volume_delete",
+    "micrograph_runtime_claim",
+    "delta_matrix_runtime_claim",
+    "state_family_runtime_claim",
+    "multi_llm_braid_runtime_claim",
+    "invented_agent_concept_claim",
+    "cockpit_as_primary_system_claim",
+    "agent_as_primary_system_claim"
+  ],
+  "implemented_endpoints": [
+    "GET /adapters/git/status",
+    "GET /adapters/git/timeline",
+    "GET /adapters/repo/artifact-index",
+    "GET /adapters/repo/find?q=...",
+    "GET /adapters/graph/summary",
+    "GET /adapters/evidence/trace?case_id=REAL-CASE-001"
+  ],
+  "not_implemented_yet": [
+    "live Neo4j driver connection",
+    "public ChatGPT Action deployment",
+    "diagnostic service endpoint",
+    "monitoring service endpoint",
+    "solutions service endpoint",
+    "calibration service endpoint",
+    "business-case input runtime"
+  ]
+}

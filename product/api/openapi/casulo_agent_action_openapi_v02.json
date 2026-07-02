@@ -1,0 +1,101 @@
+{
+  "openapi": "3.1.0",
+  "info": {
+    "title": "CASULO Agent Action API v0.2 Read-Only Adapters",
+    "version": "0.2.0",
+    "description": "Read-only adapter endpoints for Git, repo artifacts, offline Neo4j payloads and evidence trace."
+  },
+  "servers": [
+    {
+      "url": "https://REPLACE_WITH_PUBLIC_ACTION_SERVER"
+    }
+  ],
+  "paths": {
+    "/adapters/git/status": {
+      "get": {
+        "operationId": "getGitStatus",
+        "summary": "Read local Git status",
+        "responses": {
+          "200": {
+            "description": "Git status"
+          }
+        }
+      }
+    },
+    "/adapters/git/timeline": {
+      "get": {
+        "operationId": "getGitTimeline",
+        "summary": "Read local Git timeline",
+        "responses": {
+          "200": {
+            "description": "Git timeline"
+          }
+        }
+      }
+    },
+    "/adapters/repo/artifact-index": {
+      "get": {
+        "operationId": "getArtifactIndex",
+        "summary": "Read repo artifact index",
+        "responses": {
+          "200": {
+            "description": "Artifact index"
+          }
+        }
+      }
+    },
+    "/adapters/repo/find": {
+      "get": {
+        "operationId": "findArtifacts",
+        "summary": "Find artifacts by query",
+        "parameters": [
+          {
+            "name": "q",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Artifact search results"
+          }
+        }
+      }
+    },
+    "/adapters/graph/summary": {
+      "get": {
+        "operationId": "getGraphSummary",
+        "summary": "Read offline graph summary",
+        "responses": {
+          "200": {
+            "description": "Graph summary"
+          }
+        }
+      }
+    },
+    "/adapters/evidence/trace": {
+      "get": {
+        "operationId": "getEvidenceTrace",
+        "summary": "Read evidence trace by case_id",
+        "parameters": [
+          {
+            "name": "case_id",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Evidence trace"
+          }
+        }
+      }
+    }
+  }
+}
