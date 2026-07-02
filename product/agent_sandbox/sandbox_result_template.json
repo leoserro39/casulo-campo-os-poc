@@ -1,0 +1,17 @@
+{
+  "phase": "PROD-8581..8620",
+  "date": null,
+  "tester": null,
+  "api_base_url": null,
+  "agent_name": null,
+  "repo_commit": null,
+  "live_chatgpt_agent_configured_by_this_pack": false,
+  "material_first_observed": false,
+  "production_allowed": false,
+  "client_claim_allowed": false,
+  "commercial_claim_allowed": false,
+  "threshold_lock_ready": false,
+  "prompt_results": [],
+  "decision": "NOT_RUN",
+  "notes": ""
+}

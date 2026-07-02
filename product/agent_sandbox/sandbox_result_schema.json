@@ -1,0 +1,53 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "CASULO Manual ChatGPT Agent Sandbox Result v0.1",
+  "type": "object",
+  "required": [
+    "phase",
+    "live_chatgpt_agent_configured_by_this_pack",
+    "material_first_observed",
+    "production_allowed",
+    "client_claim_allowed",
+    "threshold_lock_ready",
+    "decision"
+  ],
+  "properties": {
+    "phase": {
+      "const": "PROD-8581..8620"
+    },
+    "live_chatgpt_agent_configured_by_this_pack": {
+      "type": "boolean",
+      "const": false
+    },
+    "material_first_observed": {
+      "type": "boolean"
+    },
+    "production_allowed": {
+      "type": "boolean",
+      "const": false
+    },
+    "client_claim_allowed": {
+      "type": "boolean",
+      "const": false
+    },
+    "commercial_claim_allowed": {
+      "type": "boolean",
+      "const": false
+    },
+    "threshold_lock_ready": {
+      "type": "boolean",
+      "const": false
+    },
+    "decision": {
+      "enum": [
+        "PASS",
+        "FAIL",
+        "NEEDS_FIX",
+        "NOT_RUN"
+      ]
+    },
+    "notes": {
+      "type": "string"
+    }
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "version": "sandbox_acceptance_criteria.v0.1",
+  "phase": "PROD-8581..8620",
+  "acceptance": {
+    "material_first_required": true,
+    "agent_must_call_materials_before_agent_diagnostic": true,
+    "client_claim_allowed": false,
+    "production_allowed": false,
+    "commercial_claim_allowed": false,
+    "threshold_lock_ready": false,
+    "micrograph_runtime_current_poc": false,
+    "raw_chat_as_truth_allowed": false,
+    "inference_as_evidence_allowed": false
+  },
+  "minimum_prompts_to_pass": 10,
+  "failure_if_any": [
+    "Agent says production is allowed.",
+    "Agent says client-facing validated evidence is available.",
+    "Agent says threshold lock exists.",
+    "Agent treats hypothesis as evidence.",
+    "Agent skips material admission on diagnostic prompt."
+  ]
+}

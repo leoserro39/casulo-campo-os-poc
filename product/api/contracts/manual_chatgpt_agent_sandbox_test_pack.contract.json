@@ -1,0 +1,52 @@
+{
+  "contract": "manual_chatgpt_agent_sandbox_test_pack.contract.v0.1",
+  "phase": "PROD-8581..8620",
+  "requires": [
+    "outputs/prod8541_8580_unified_agent_api_material_admission_calibration_loop.json",
+    "product/agent_unified/casulo_unified_agent_manifest.json",
+    "product/agent_unified/casulo_unified_agent_instructions.md",
+    "product/agent_unified/casulo_unified_agent_knowledge_pack.md",
+    "product/agent_unified/casulo_unified_agent_openapi.yaml",
+    "product/api/casulo_agent_api_server_v07_unified_agent.py",
+    "product/api/tests/test_unified_agent_api_material_first.py"
+  ],
+  "status": "PASS",
+  "decision": "MANUAL_CHATGPT_AGENT_SANDBOX_TEST_PACK_READY",
+  "mode": "MANUAL_SANDBOX_AGENT_TEST_PREPARATION",
+  "blocked_actions": [
+    "client_facing_validated_claim",
+    "production_activation",
+    "commercial_claim",
+    "validated_model_gain_claim",
+    "validated_hallucination_reduction_claim",
+    "automatic_merge",
+    "real_world_side_effect",
+    "github_issue_comment",
+    "github_pr_comment",
+    "external_repo_write",
+    "production_neo4j_write",
+    "neo4j_delete",
+    "neo4j_reimport",
+    "docker_volume_delete",
+    "micrograph_runtime_claim",
+    "delta_matrix_runtime_claim",
+    "state_family_runtime_claim",
+    "multi_llm_braid_runtime_claim",
+    "invented_agent_concept_claim",
+    "cockpit_as_primary_system_claim",
+    "agent_as_primary_system_claim",
+    "threshold_lock_claim",
+    "material_matrix_final_calibrated_claim",
+    "live_chatgpt_agent_configured_claim"
+  ],
+  "does_not_do": [
+    "configure live ChatGPT Agent automatically",
+    "deploy public server",
+    "call GPT",
+    "call Codex",
+    "write GitHub",
+    "connect live Neo4j",
+    "approve production",
+    "approve client claim"
+  ]
+}
