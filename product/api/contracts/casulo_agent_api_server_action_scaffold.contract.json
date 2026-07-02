@@ -1,0 +1,58 @@
+{
+  "contract": "casulo_agent_api_server_action_scaffold.contract.v0.1",
+  "phase": "PROD-8261..8300",
+  "requires": [
+    "outputs/prod8221_8260_operational_cube_master_contract_agent_readiness_audit.json",
+    "product/cube/operational_cube_master_contract.json",
+    "product/agent_manifest/chatgpt_agent_readiness_manifest.json",
+    "product/actions/casulo_chatgpt_action_requirements.json",
+    "product/memory/chat_memory_boundary_context_rebuild_gate.contract.json",
+    "product/calibration/casulo_kpi_vector_telemetry_inventory.json",
+    "product/audits/prod8221_8260_integrated_repo_timeline_audit.json"
+  ],
+  "status": "PASS",
+  "decision": "CASULO_AGENT_API_SERVER_ACTION_SCAFFOLD_READY_FOR_LOCAL_ENDPOINT_VALIDATION",
+  "server_mode": "local_read_only_scaffold",
+  "blocked_actions": [
+    "client_facing_validated_claim",
+    "production_activation",
+    "commercial_claim",
+    "validated_model_gain_claim",
+    "validated_hallucination_reduction_claim",
+    "automatic_merge",
+    "real_world_side_effect",
+    "github_issue_comment",
+    "github_pr_comment",
+    "external_repo_write",
+    "production_neo4j_write",
+    "neo4j_delete",
+    "neo4j_reimport",
+    "docker_volume_delete",
+    "micrograph_runtime_claim",
+    "delta_matrix_runtime_claim",
+    "state_family_runtime_claim",
+    "multi_llm_braid_runtime_claim",
+    "invented_agent_concept_claim",
+    "cockpit_as_primary_system_claim",
+    "agent_as_primary_system_claim"
+  ],
+  "implemented_endpoints": [
+    "GET /health",
+    "GET /state/current",
+    "GET /repo/timeline",
+    "GET /actions/requirements",
+    "GET /calibration/inventory",
+    "GET /openapi.json",
+    "POST /context/rebuild"
+  ],
+  "not_implemented_yet": [
+    "public deployment for ChatGPT Actions",
+    "Neo4j read-only adapter",
+    "GitHub read-only adapter",
+    "diagnostic service endpoint",
+    "monitoring service endpoint",
+    "solutions service endpoint",
+    "calibration service endpoint",
+    "business case input runtime"
+  ]
+}

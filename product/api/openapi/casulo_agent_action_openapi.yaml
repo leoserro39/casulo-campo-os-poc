@@ -1,0 +1,61 @@
+openapi: 3.1.0
+info:
+  title: CASULO Agent Action API
+  version: 0.1.0
+  description: Read-only CASULO Agent API scaffold for ChatGPT/Agents integration. Operational Cube governs all state.
+servers:
+  - url: https://REPLACE_WITH_PUBLIC_ACTION_SERVER
+paths:
+  /health:
+    get:
+      operationId: getHealth
+      summary: Check CASULO API health
+      responses:
+        '200':
+          description: Health status
+  /state/current:
+    get:
+      operationId: getCurrentState
+      summary: Get current governed CASULO state
+      responses:
+        '200':
+          description: Current governed state
+  /repo/timeline:
+    get:
+      operationId: getRepoTimeline
+      summary: Get local repository timeline audit
+      responses:
+        '200':
+          description: Repo timeline snapshot
+  /calibration/inventory:
+    get:
+      operationId: getCalibrationInventory
+      summary: Get KPI/vector/telemetry inventory
+      responses:
+        '200':
+          description: Calibration inventory
+  /actions/requirements:
+    get:
+      operationId: getActionRequirements
+      summary: Get next Action/API requirements
+      responses:
+        '200':
+          description: Action requirements
+  /context/rebuild:
+    post:
+      operationId: rebuildContext
+      summary: Rebuild clean CASULO context from chat message as raw signal
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                message:
+                  type: string
+              required:
+                - message
+      responses:
+        '200':
+          description: Draft context packet
