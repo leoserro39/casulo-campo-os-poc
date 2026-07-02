@@ -1,0 +1,42 @@
+{
+  "phase": "PROD-7021..7060",
+  "controlled_real_test_run_capture_review": true,
+  "automatic_gpt_call_by_script": false,
+  "manual_controlled_interaction_allowed": true,
+  "captured_output_present": true,
+  "human_scoring_required": true,
+  "real_world_execution_allowed": false,
+  "production_claims_allowed": false,
+  "client_claims_allowed": false,
+  "commercial_claims_allowed": false,
+  "validated_model_gain_claim_blocked": true,
+  "hallucination_reduction_claim_blocked": true,
+  "allowed_actions": [
+    "prepare_controlled_real_test_run_packet",
+    "provide_manual_model_output_template",
+    "review_captured_output_if_present",
+    "create_capture_review_checklist",
+    "create_scoring_review_template",
+    "create_scoring_result_draft",
+    "prepare_post_run_client_style_preview",
+    "roadmap_update"
+  ],
+  "blocked_actions": [
+    "automatic_gpt_call_by_script",
+    "automatic_external_network_call",
+    "github_issue_comment",
+    "code_patch",
+    "automatic_merge",
+    "production_activation",
+    "client_facing_validated_claim",
+    "commercial_claim",
+    "validated_model_gain_claim",
+    "validated_hallucination_reduction_claim",
+    "delta_zero_ready_validated_claim",
+    "dataset_acceptance",
+    "canonical_token_acceptance",
+    "temporal_trajectory_claim",
+    "pii_or_secret_storage",
+    "real_world_side_effect"
+  ]
+}

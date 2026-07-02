@@ -1,0 +1,16 @@
+{
+  "version": "real_case_001_controlled_run_packet.v0.3",
+  "phase": "PROD-7021..7060",
+  "generated_at": "2026-07-01T23:59:51.043106+00:00",
+  "real_case_id": "REAL-CASE-001",
+  "selected_candidate_id": "GITHUB-ISSUE-pandas-dev-pandas-66104",
+  "execution_gate_status": "APPROVED_FOR_NEXT_PHASE_CONTROLLED_SANDBOX_RUN",
+  "manual_run_required": true,
+  "automatic_gpt_call_by_script": false,
+  "captured_output_present": true,
+  "capture_report_present": true,
+  "input_bundle_ref": "product/evaluation/real_tests/real_case_001/real_case_001_execution_input_bundle_v0_3.json",
+  "review_prompt_ref": "product/evaluation/real_tests/real_case_001/real_case_001_controlled_review_prompt_v0_3.md",
+  "output_capture_contract_ref": "product/evaluation/real_tests/real_case_001/real_case_001_output_capture_contract_v0_3.json",
+  "scoring_rubric_ref": "product/evaluation/real_tests/real_case_001/real_case_001_execution_scoring_rubric_v0_3.json"
+}

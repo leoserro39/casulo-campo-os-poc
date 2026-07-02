@@ -1,0 +1,13 @@
+{
+  "version": "real_case_001_execution_scoring_result_DRAFT.v0.3",
+  "phase": "PROD-7021..7060",
+  "generated_at": "2026-07-01T23:59:51.043542+00:00",
+  "real_case_id": "REAL-CASE-001",
+  "status": "PENDING_HUMAN_SCORING",
+  "captured_output_present": true,
+  "scores": {},
+  "flags": {},
+  "automatic_acceptance_blocked": true,
+  "validated_model_gain_claim_allowed": false,
+  "validated_hallucination_reduction_claim_allowed": false
+}

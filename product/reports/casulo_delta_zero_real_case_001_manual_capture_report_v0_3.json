@@ -1,0 +1,11 @@
+{
+  "version": "casulo_delta_zero_real_case_001_manual_capture_report.v0.3",
+  "generated_at": "2026-07-01T23:59:14.999910+00:00",
+  "real_case_id": "REAL-CASE-001",
+  "operator": "Leonardo Serro",
+  "source_file": "/tmp/casulo_manual_outputs/real_case_001_manual_model_output.md",
+  "captured_output": "product/evaluation/real_tests/real_case_001/real_case_001_model_output_CAPTURED_v0_3.md",
+  "live_gpt_call_executed_by_script": false,
+  "ready_for_scoring_review": true,
+  "next_phase": "PROD-7021..7060 - Controlled Real Test Run and Output Capture Review"
+}

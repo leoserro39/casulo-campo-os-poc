@@ -1,0 +1,33 @@
+{
+  "version": "casulo_delta_zero_real_case_001_output_capture_review.v0.3",
+  "phase": "PROD-7021..7060",
+  "generated_at": "2026-07-01T23:59:51.043546+00:00",
+  "status": "PASS",
+  "real_case_id": "REAL-CASE-001",
+  "selected_candidate_id": "GITHUB-ISSUE-pandas-dev-pandas-66104",
+  "captured_output_present": true,
+  "capture_report_present": true,
+  "capture_review": {
+    "captured_output_present": true,
+    "captured_output_chars": 3284,
+    "required_section_presence": {
+      "evidence_bounded_summary": true,
+      "source_limitations": true,
+      "missing_evidence": true,
+      "expected_gate": true,
+      "allowed_actions": true,
+      "blocked_actions": true,
+      "recommendations": true,
+      "claim_boundary": true
+    },
+    "required_section_count": 8,
+    "forbidden_pattern_hits": [],
+    "basic_review_status": "PASS_BASIC_CAPTURE_REVIEW",
+    "human_scoring_required": true
+  },
+  "human_scoring_required": true,
+  "ready_for_client_style_review_report": true,
+  "ready_for_real_world_execution": false,
+  "ready_for_production": false,
+  "errors": []
+}

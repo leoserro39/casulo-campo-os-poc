@@ -1,0 +1,13 @@
+{
+  "version": "casulo_delta_zero_controlled_real_test_run_status.v0.3",
+  "phase": "PROD-7021..7060",
+  "generated_at": "2026-07-01T23:59:51.043551+00:00",
+  "status": "PASS",
+  "mode": "MANUAL_CONTROLLED_RUN_PACKET_AND_CAPTURE_REVIEW",
+  "automatic_gpt_call_by_script": false,
+  "captured_output_present": true,
+  "require_captured_output": true,
+  "ready_for_scoring_review": true,
+  "ready_for_client_style_review_report": true,
+  "claims_still_blocked": true
+}
