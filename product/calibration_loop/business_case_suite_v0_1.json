@@ -1,0 +1,57 @@
+{
+  "version": "business_case_suite.v0.1",
+  "phase": "PROD-8461..8500",
+  "purpose": "Seed controlled business cases for CASULO internal calibration.",
+  "cases": [
+    {
+      "case_id": "COMMON-COMPANY-001",
+      "title": "Scattered data and rework",
+      "message": "Company with data spread across spreadsheets, separate financial system, inconsistent customer service, rework and no reliable indicators.",
+      "expected_domains": [
+        "data_mapping",
+        "process_mapping",
+        "evidence_quality"
+      ]
+    },
+    {
+      "case_id": "COMMON-COMPANY-002",
+      "title": "Critical systems with unmapped integrations",
+      "message": "Medium company with critical systems, poorly mapped integrations, manual changes and no formal rollback.",
+      "expected_domains": [
+        "systems_integration",
+        "operational_risk",
+        "governance"
+      ]
+    },
+    {
+      "case_id": "COMMON-COMPANY-003",
+      "title": "Multi-channel service without operational state",
+      "message": "Company with multi-channel service, inconsistent records, no process owner and decisions based on informal memory.",
+      "expected_domains": [
+        "process_mapping",
+        "monitoring",
+        "governance"
+      ]
+    },
+    {
+      "case_id": "COMMON-COMPANY-004",
+      "title": "Owner-managed business with informal controls",
+      "message": "Small business controlled by owner memory, suppliers in messages, stock in spreadsheet and no computable operational state.",
+      "expected_domains": [
+        "data_mapping",
+        "solution_design",
+        "monitoring"
+      ]
+    },
+    {
+      "case_id": "COMMON-COMPANY-005",
+      "title": "Department with dashboards but no state governance",
+      "message": "Department has dashboards and reports, but no gate, no evidence boundary, no clear owner and no action trace.",
+      "expected_domains": [
+        "operational_risk",
+        "evidence_quality",
+        "governance"
+      ]
+    }
+  ]
+}

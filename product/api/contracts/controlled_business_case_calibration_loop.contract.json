@@ -1,0 +1,51 @@
+{
+  "contract": "controlled_business_case_calibration_loop.contract.v0.1",
+  "phase": "PROD-8461..8500",
+  "requires": [
+    "outputs/prod8421_8460_chatgpt_agent_actions_integration_pack.json",
+    "product/agent_integration/chatgpt_agent_action_manifest.json",
+    "product/services/operational_services.py",
+    "product/services/common_business_cases_v0_1.json",
+    "product/services/semantic_matrix_v0_1.json",
+    "product/services/telemetry_matrix_v0_1.json",
+    "product/cube/operational_cube_master_contract.json"
+  ],
+  "status": "PASS",
+  "decision": "CONTROLLED_BUSINESS_CASE_CALIBRATION_LOOP_READY_FOR_INTERNAL_METHOD_CANONIZATION",
+  "mode": "INTERNAL_CONTROLLED_BUSINESS_CASE_CALIBRATION_LOOP",
+  "implemented_endpoints": [
+    "GET /calibration-loop/cases",
+    "POST /calibration-loop/run"
+  ],
+  "blocked_actions": [
+    "client_facing_validated_claim",
+    "production_activation",
+    "commercial_claim",
+    "validated_model_gain_claim",
+    "validated_hallucination_reduction_claim",
+    "automatic_merge",
+    "real_world_side_effect",
+    "github_issue_comment",
+    "github_pr_comment",
+    "external_repo_write",
+    "production_neo4j_write",
+    "neo4j_delete",
+    "neo4j_reimport",
+    "docker_volume_delete",
+    "micrograph_runtime_claim",
+    "delta_matrix_runtime_claim",
+    "state_family_runtime_claim",
+    "multi_llm_braid_runtime_claim",
+    "invented_agent_concept_claim",
+    "cockpit_as_primary_system_claim",
+    "agent_as_primary_system_claim",
+    "threshold_lock_claim"
+  ],
+  "not_implemented_yet": [
+    "threshold lock",
+    "validated client claim",
+    "production deployment",
+    "methodology canonization final document",
+    "data mapping playbook final document"
+  ]
+}

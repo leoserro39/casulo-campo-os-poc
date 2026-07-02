@@ -1,0 +1,38 @@
+openapi: 3.1.0
+info:
+  title: CASULO Controlled Business Case Calibration Loop API
+  version: 0.6.0
+  description: Internal controlled calibration loop over common business cases. No production or client claim.
+servers:
+  - url: https://REPLACE_WITH_PUBLIC_ACTION_SERVER
+paths:
+  /health:
+    get:
+      operationId: getCalibrationLoopHealth
+      summary: Check calibration loop API health
+      responses:
+        '200':
+          description: Health
+  /calibration-loop/cases:
+    get:
+      operationId: listControlledBusinessCases
+      summary: List internal controlled business cases
+      responses:
+        '200':
+          description: Case list
+  /calibration-loop/run:
+    post:
+      operationId: runControlledCalibrationLoop
+      summary: Run internal controlled calibration loop
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                max_cases:
+                  type: integer
+      responses:
+        '200':
+          description: Calibration loop result
