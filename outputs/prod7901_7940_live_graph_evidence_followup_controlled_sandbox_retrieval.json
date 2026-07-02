@@ -1,0 +1,79 @@
+{
+  "status": "PASS",
+  "phase": "PROD-7901..7940",
+  "decision": "LIVE_GRAPH_EVIDENCE_FOLLOWUP_PACK_READY_CONTROLLED_SANDBOX_RETRIEVAL_PENDING",
+  "generated_at": "2026-07-02T03:56:49.123536+00:00",
+  "case_id": "REAL-CASE-001",
+  "live_graph_evidence_followup": {
+    "version": "live_graph_evidence_followup_controlled_sandbox_retrieval.v0.1",
+    "phase": "PROD-7901..7940",
+    "generated_at": "2026-07-02T03:56:49.123536+00:00",
+    "case_id": "REAL-CASE-001",
+    "source_claim_boundary_reassessment": "outputs/prod7861_7900_client_production_claim_boundary_reassessment.json",
+    "source_live_graph_gate": "outputs/prod7821_7860_live_graph_retrieval_confirmation_gate.json",
+    "prior_state": {
+      "claim_boundary_reassessment_complete": true,
+      "internal_status_reporting_allowed": true,
+      "ready_for_live_graph_evidence_followup": true,
+      "prior_live_graph_retrieval_confirmed": false,
+      "offline_graph_payload_complete": true,
+      "ready_for_client_claim": false,
+      "ready_for_production": false
+    },
+    "controlled_sandbox_retrieval": {
+      "prepared": true,
+      "executed_by_this_patcher": false,
+      "requires_external_sandbox_neo4j_read_only_run": true,
+      "query_file": "product/graph/live_retrieval/prod7901_7940_read_only_query.cypher",
+      "evidence_template": "product/graph/live_retrieval/prod7901_7940_live_graph_evidence_template.json",
+      "validator": "product/scripts/validate_live_graph_retrieval_evidence.py",
+      "runbook": "product/graph/live_retrieval/prod7901_7940_controlled_sandbox_retrieval_runbook.md"
+    },
+    "expected_confirmation": {
+      "node_count": 3,
+      "relationship_count": 2,
+      "required_nodes": [
+        "REAL-CASE-001",
+        "GITHUB-AGENT-FOUNDATION-v0.1",
+        "P0-MATRIX-BATCH01"
+      ],
+      "required_relationships": [
+        "RUNS_CASE",
+        "MEASURED_BY"
+      ],
+      "production_write_executed": false,
+      "query_mode": "READ_ONLY"
+    },
+    "boundary": {
+      "client_claim_allowed": false,
+      "production_allowed": false,
+      "commercial_claim_allowed": false,
+      "validated_hallucination_reduction_claim_allowed": false,
+      "human_review_required_for_scope_expansion": true
+    },
+    "blocked_actions": [
+      "client_facing_validated_claim",
+      "production_activation",
+      "commercial_claim",
+      "validated_model_gain_claim",
+      "validated_hallucination_reduction_claim",
+      "automatic_merge",
+      "real_world_side_effect",
+      "github_issue_comment",
+      "github_pr_comment",
+      "external_repo_write",
+      "production_neo4j_write",
+      "threshold_scope_expansion_without_future_human_review"
+    ]
+  },
+  "calibration_decision": {
+    "live_graph_evidence_followup_pack_ready": true,
+    "controlled_sandbox_retrieval_executed": false,
+    "ready_for_live_graph_evidence_capture": true,
+    "live_graph_retrieval_confirmed": false,
+    "ready_for_client_claim": false,
+    "ready_for_production": false,
+    "human_review_required_for_scope_expansion": true
+  },
+  "next": "PROD-7941..7980 - Live Graph Evidence Capture Ingestion and Confirmation Evaluation"
+}

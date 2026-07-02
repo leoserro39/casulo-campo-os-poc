@@ -1,0 +1,44 @@
+{
+  "version": "live_graph_retrieval_evidence.v0.1",
+  "phase": "PROD-7901..7940",
+  "case_id": "REAL-CASE-001",
+  "captured_at": null,
+  "captured_by": null,
+  "neo4j_environment": "sandbox",
+  "query_mode": "READ_ONLY",
+  "production_write_executed": false,
+  "live_query_executed": false,
+  "query_file": "product/graph/live_retrieval/prod7901_7940_read_only_query.cypher",
+  "expected": {
+    "node_count": 3,
+    "relationship_count": 2,
+    "node_ids": [
+      "REAL-CASE-001",
+      "GITHUB-AGENT-FOUNDATION-v0.1",
+      "P0-MATRIX-BATCH01"
+    ],
+    "relationship_types": [
+      "RUNS_CASE",
+      "MEASURED_BY"
+    ],
+    "graph_path": "GITHUB-AGENT-FOUNDATION-v0.1 -> RUNS_CASE -> REAL-CASE-001 -> MEASURED_BY -> P0-MATRIX-BATCH01"
+  },
+  "observed": {
+    "node_count": null,
+    "relationship_count": null,
+    "node_ids": [],
+    "relationship_types": [],
+    "rows_returned": null,
+    "graph_path_confirmed": false
+  },
+  "validation": {
+    "live_evidence_validated": false,
+    "validator": "product/scripts/validate_live_graph_retrieval_evidence.py",
+    "notes": "Fill observed values after executing the read-only sandbox query."
+  },
+  "boundary": {
+    "client_claim_allowed": false,
+    "production_allowed": false,
+    "commercial_claim_allowed": false
+  }
+}

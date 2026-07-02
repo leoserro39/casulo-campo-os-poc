@@ -1,0 +1,32 @@
+{
+  "contract": "live_graph_evidence_followup_controlled_sandbox_retrieval.contract.v0.1",
+  "phase": "PROD-7901..7940",
+  "requires": [
+    "outputs/prod7861_7900_client_production_claim_boundary_reassessment.json",
+    "product/claim_boundaries/prod7861_7900_client_production_claim_boundary_reassessment.json",
+    "product/release_boundaries/prod7861_7900_client_production_release_boundary.json",
+    "product/contracts/client_production_claim_boundary_reassessment.contract.json",
+    "outputs/prod7821_7860_live_graph_retrieval_confirmation_gate.json",
+    "product/graph/retrieval_gates/prod7821_7860_live_graph_retrieval_confirmation_plan.cypher"
+  ],
+  "live_graph_evidence_followup_pack_ready": true,
+  "controlled_sandbox_retrieval_executed": false,
+  "ready_for_live_graph_evidence_capture": true,
+  "live_graph_retrieval_confirmed": false,
+  "client_claim_allowed": false,
+  "production_allowed": false,
+  "blocked_actions": [
+    "client_facing_validated_claim",
+    "production_activation",
+    "commercial_claim",
+    "validated_model_gain_claim",
+    "validated_hallucination_reduction_claim",
+    "automatic_merge",
+    "real_world_side_effect",
+    "github_issue_comment",
+    "github_pr_comment",
+    "external_repo_write",
+    "production_neo4j_write",
+    "threshold_scope_expansion_without_future_human_review"
+  ]
+}
