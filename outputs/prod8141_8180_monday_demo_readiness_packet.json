@@ -1,0 +1,52 @@
+{
+  "status": "PASS",
+  "phase": "PROD-8141..8180",
+  "decision": "MONDAY_DEMO_READINESS_PACKET_READY_FOR_COCKPIT_CHAT_SCAFFOLD",
+  "generated_at": "2026-07-02T15:08:06.967857+00:00",
+  "evaluation": {
+    "checks": {
+      "prior_8101_status_pass": true,
+      "agent_instruction_pack_ready": true,
+      "runtime_context_packet_ready": true,
+      "inference_gate_prompt_ready": true,
+      "internal_demo_script_ready": true,
+      "diagnostic_report_model_ready": true,
+      "monitoring_summary_model_ready": true,
+      "simple_solution_recommendation_model_ready": true,
+      "ready_for_cockpit_chat_scaffold": true,
+      "client_claim_blocked": true,
+      "production_blocked": true,
+      "commercial_claim_blocked": true,
+      "micrographs_not_implemented": true,
+      "delta_matrix_not_implemented": true
+    },
+    "monday_demo_readiness_packet_ready": true,
+    "executive_story_ready": true,
+    "demo_qa_bank_ready": true,
+    "cockpit_chat_handoff_ready": true,
+    "ready_for_cockpit_chat_scaffold": true,
+    "ready_for_local_diagnostic_monitor_prototype": true,
+    "ready_for_client_claim": false,
+    "ready_for_production": false,
+    "commercial_claim_allowed": false,
+    "micrographs_implemented": false,
+    "delta_matrix_implemented": false,
+    "production_cockpit_implemented": false,
+    "next_phase": "PROD-8181..8220 - Cockpit Chat Scaffold and Diagnostic Monitor Prototype"
+  },
+  "calibration_decision": {
+    "monday_demo_readiness_packet_ready": true,
+    "executive_story_ready": true,
+    "demo_qa_bank_ready": true,
+    "cockpit_chat_handoff_ready": true,
+    "ready_for_cockpit_chat_scaffold": true,
+    "ready_for_local_diagnostic_monitor_prototype": true,
+    "ready_for_client_claim": false,
+    "ready_for_production": false,
+    "commercial_claim_allowed": false,
+    "micrographs_implemented": false,
+    "delta_matrix_implemented": false,
+    "production_cockpit_implemented": false
+  },
+  "next": "PROD-8181..8220 - Cockpit Chat Scaffold and Diagnostic Monitor Prototype"
+}

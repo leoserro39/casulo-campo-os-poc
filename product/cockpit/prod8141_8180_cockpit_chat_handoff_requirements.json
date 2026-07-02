@@ -1,0 +1,27 @@
+{
+  "version": "cockpit_chat_handoff_requirements.v0.1",
+  "phase": "PROD-8141..8180",
+  "goal": "Prepare next phase: a local/static cockpit chat scaffold for diagnostic reports, monitoring and simple solution recommendations.",
+  "minimum_surfaces": [
+    "Status header: phase, gate, readiness, blocked claims",
+    "Chat panel: operator asks state/diagnostic/monitoring/solution questions",
+    "Evidence panel: key evidence refs and graph state summary",
+    "Diagnostic report panel",
+    "Monitoring summary panel",
+    "Simple solution options panel",
+    "Boundary panel: allowed and blocked actions"
+  ],
+  "minimum_inputs": [
+    "Runtime Context Packet JSON",
+    "Agent Instruction Pack JSON",
+    "Inference Gate Prompt",
+    "Evaluate model JSON"
+  ],
+  "runtime_boundary": {
+    "static_or_local_only": true,
+    "no_live_gpt_required": true,
+    "no_neo4j_write": true,
+    "no_production_action": true,
+    "no_client_claim": true
+  }
+}

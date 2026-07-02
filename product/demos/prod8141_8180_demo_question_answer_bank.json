@@ -1,0 +1,26 @@
+{
+  "version": "demo_question_answer_bank.v0.1",
+  "phase": "PROD-8141..8180",
+  "questions": [
+    {
+      "q": "Isso ja esta em producao?",
+      "a": "Nao. E uma POC interna controlada com retrieval read-only, Exocortex Foundation, runtime context e boundaries ativos."
+    },
+    {
+      "q": "O que o Exocortex faz agora?",
+      "a": "Ele esta registrado como fundacao: memoria como malha, estado como grafo vivo, contexto limpo e boundaries. O runtime completo de memory governor ainda vem depois."
+    },
+    {
+      "q": "Tem micrografos agora?",
+      "a": "Nao. Micrografos nao estao implementados nesta POC. Entram em epico posterior."
+    },
+    {
+      "q": "Que tipo de solucao simples pode recomendar?",
+      "a": "Matriz, checklist, relatorio, plano sandbox, fluxo de revisao humana ou scaffold de dashboard, sempre com gate e sem acao produtiva."
+    },
+    {
+      "q": "Qual a diferenca para Codex?",
+      "a": "Codex executa artefatos; CASULO governa estado, memoria, evidencia, gate e limite de acao."
+    }
+  ]
+}

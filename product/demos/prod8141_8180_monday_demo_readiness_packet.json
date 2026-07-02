@@ -1,0 +1,49 @@
+{
+  "version": "monday_demo_readiness_packet.v0.1",
+  "phase": "PROD-8141..8180",
+  "title": "CASULO Campo OS - Exocortex Foundation Demo",
+  "positioning": "Controlled internal POC for operational state, memory mesh, evidence, gates, diagnostic report, monitoring summary and simple solution recommendations.",
+  "three_phase_story": [
+    {
+      "phase": "1 - Exocortex Foundation",
+      "message": "CASULO preserves and retrieves governed operational state from evidence and graph."
+    },
+    {
+      "phase": "2 - Agent Instruction + Runtime Context",
+      "message": "CASULO reconstructs clean context for GPT/Codex and forces inference triage before recommendations."
+    },
+    {
+      "phase": "3 - Cockpit Chat + Diagnostic Monitor",
+      "message": "CASULO turns the governed state into an operator surface for reports, monitoring and simple solutions."
+    }
+  ],
+  "demo_flow": [
+    "Open with the problem: agents answer with context, but operations need state.",
+    "Show EXP50 read-only retrieval and Exocortex Foundation boundaries.",
+    "Show Runtime Context Packet and memory domains.",
+    "Show Inference Gate Prompt v0.1.",
+    "Ask for a diagnostic report.",
+    "Ask for monitoring summary.",
+    "Ask for simple solution options.",
+    "Close with Cockpit Chat Scaffold as next operational surface."
+  ],
+  "allowed_claims": [
+    "Controlled internal POC",
+    "Exocortex Foundation active",
+    "Memory modeled as governed mesh",
+    "Runtime Context Packet ready",
+    "Inference Gate prompt ready",
+    "Diagnostic/monitoring/simple-solution model ready",
+    "Cockpit chat scaffold ready to be built next"
+  ],
+  "blocked_claims": [
+    "Production ready",
+    "Client validated",
+    "Commercially validated",
+    "Validated hallucination reduction",
+    "Validated model gain",
+    "Micrograph runtime implemented",
+    "Delta Matrix runtime implemented",
+    "Production cockpit implemented"
+  ]
+}
