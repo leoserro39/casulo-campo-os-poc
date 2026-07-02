@@ -1,0 +1,47 @@
+{
+  "version": "diagnostic_monitoring_solution_evaluate_model.v0.1",
+  "phase": "PROD-8101..8140",
+  "purpose": "Internal reports, monitoring and simple solution recommendations before cockpit chat implementation.",
+  "diagnostic_report_sections": [
+    "executive_state_summary",
+    "supported_facts",
+    "valid_inferences",
+    "gaps",
+    "contradictions",
+    "risks",
+    "gate",
+    "allowed_actions",
+    "blocked_actions",
+    "simple_solution_options",
+    "human_review_required",
+    "next_safe_action"
+  ],
+  "monitoring_summary_sections": [
+    "current_state",
+    "state_changes_since_last_snapshot",
+    "open_gaps",
+    "blocked_claims",
+    "readiness",
+    "risk_level",
+    "evidence_density",
+    "recommended_follow_up"
+  ],
+  "simple_solution_recommendation_rules": [
+    "Recommend only internal/reviewable solutions.",
+    "Prefer matrix, checklist, report, dashboard scaffold, sandbox script or human review workflow.",
+    "Do not recommend irreversible production action.",
+    "Every solution must include evidence, gate, scope, rollback/reversibility and blocked actions."
+  ],
+  "improvement_index_v0": {
+    "status": "PLANNED_NOT_VALIDATED",
+    "dimensions": [
+      "gap_reduction",
+      "evidence_density_increase",
+      "readiness_increase",
+      "risk_reduction",
+      "operator_decision_clarity"
+    ],
+    "allowed_use": "internal demo placeholder only",
+    "blocked_use": "validated business gain claim"
+  }
+}

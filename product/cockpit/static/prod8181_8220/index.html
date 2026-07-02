@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>CASULO Cockpit Chat - Exocortex Foundation</title>
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div>
+      <p class="eyebrow">CASULO Campo OS</p>
+      <h1>Cockpit Chat — Exocortex Foundation</h1>
+      <p class="subtitle">Protótipo local/static para diagnóstico, monitoramento e soluções simples internas.</p>
+    </div>
+    <div class="status-pill">SANDBOX / INTERNAL ONLY</div>
+  </header>
+
+  <main class="layout">
+    <section class="card span-2">
+      <h2>Estado atual</h2>
+      <div id="stateGrid" class="grid"></div>
+    </section>
+
+    <section class="card">
+      <h2>Boundary</h2>
+      <ul id="blockedClaims"></ul>
+    </section>
+
+    <section class="card chat-card">
+      <h2>Cockpit Chat</h2>
+      <div class="quick-actions">
+        <button data-prompt="estado">Estado</button>
+        <button data-prompt="diagnostico">Diagnóstico</button>
+        <button data-prompt="monitoramento">Monitoramento</button>
+        <button data-prompt="solucoes">Soluções simples</button>
+      </div>
+      <textarea id="operatorInput" placeholder="Pergunte sobre estado, diagnóstico, monitoramento ou solução simples..."></textarea>
+      <button id="askBtn">Gerar resposta controlada</button>
+      <div id="chatOutput" class="chat-output"></div>
+    </section>
+
+    <section class="card">
+      <h2>Evidências</h2>
+      <ul id="evidenceRefs"></ul>
+    </section>
+
+    <section class="card span-2">
+      <h2>Relatório de diagnóstico</h2>
+      <div id="diagnosticPanel"></div>
+    </section>
+
+    <section class="card">
+      <h2>Monitoramento</h2>
+      <div id="monitorPanel"></div>
+    </section>
+
+    <section class="card">
+      <h2>Soluções simples</h2>
+      <div id="solutionPanel"></div>
+    </section>
+  </main>
+
+  <footer>
+    Não usa GPT ao vivo. Não escreve no Neo4j. Não ativa produção. Não libera claim comercial/cliente.
+  </footer>
+
+  <script src="./app.js"></script>
+</body>
+</html>

@@ -1,0 +1,43 @@
+{
+  "version": "cockpit_chat_scaffold.v0.1",
+  "phase": "PROD-8181..8220",
+  "purpose": "Local/static operator cockpit for CASULO Exocortex Foundation demo.",
+  "surfaces": [
+    {
+      "name": "Status Header",
+      "purpose": "Show phase, gate, readiness and blocked claims."
+    },
+    {
+      "name": "Cockpit Chat",
+      "purpose": "Operator asks for state, diagnostic report, monitoring summary or simple solution options."
+    },
+    {
+      "name": "Evidence Panel",
+      "purpose": "Show runtime context packet evidence refs and graph summary."
+    },
+    {
+      "name": "Diagnostic Report Panel",
+      "purpose": "Show supported facts, gaps, risks, gate, allowed and blocked actions."
+    },
+    {
+      "name": "Monitoring Panel",
+      "purpose": "Show current state, readiness, blocked claims, risk and follow-up."
+    },
+    {
+      "name": "Simple Solution Panel",
+      "purpose": "Show internal/reviewable solution options only."
+    },
+    {
+      "name": "Boundary Panel",
+      "purpose": "Keep client, production and commercial claims blocked."
+    }
+  ],
+  "runtime_mode": {
+    "static_local_only": true,
+    "deterministic_canned_responses": true,
+    "live_gpt": false,
+    "codex_execution": false,
+    "neo4j_write": false,
+    "production": false
+  }
+}
