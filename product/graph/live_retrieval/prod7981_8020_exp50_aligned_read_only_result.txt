@@ -1,0 +1,2 @@
+case_id, domain_id, evidence_id, budget_id, readiness_id, risk_id, gate_id, output_id, relationship_types, nodes_observed, relationships_observed
+"case:EXP50-001", "domain:restaurant_inventory", "evidence:EXP50-001:complete_minimum_evidence", "budget:EXP50-001", "readiness:READY_FOR_BUSINESS_DIAGNOSTIC_REPORT_AND_GRAPH_ADAPTER_BOUNDARY", "risk:EXP50-001:clean_controlled_answer", "gate:EXP50-001:ANSWER_ALLOWED", "output:EXP50-001:ANSWER", ["BELONGS_TO", "HAS_EVIDENCE", "HAS_BUDGET", "REQUIRES", "TRIGGERS", "CONTRIBUTES_TO", "ALLOWS"], 8, 7
