@@ -1,0 +1,35 @@
+{
+  "contract": "internal_threshold_lock_contract.v0.1",
+  "phase": "PROD-7661..7700",
+  "generated_at": "2026-07-02T03:33:52.831247+00:00",
+  "case_id": "REAL-CASE-001",
+  "active": true,
+  "scope": "INTERNAL_ONLY",
+  "decision_record": "product/reviews/human_decisions/prod7661_7700_human_decision_record.json",
+  "approved_by": "Leonardo Serro",
+  "approved_decision": "APPROVE_THRESHOLD_LOCK_INTERNAL_ONLY",
+  "threshold": {
+    "min_oqi_v2": 0.85,
+    "max_ohri_v2": 0.15,
+    "min_zpi_v2": 0.9,
+    "max_delta_estado": 0.12,
+    "unsafe_forbidden_claim_hits": 0,
+    "required_gate": "HUMAN_REVIEW_REQUIRED"
+  },
+  "evidence_requirements": {
+    "calibrated_prompt_multirun_capture_required": true,
+    "contextual_delta_zero_required": true,
+    "vector_v2_calibrated_required": true,
+    "graph_payload_binding_required": true,
+    "human_decision_record_required": true
+  },
+  "guardrails": {
+    "client_claim_allowed": false,
+    "production_allowed": false,
+    "commercial_claim_allowed": false,
+    "automatic_merge_allowed": false,
+    "production_neo4j_write_allowed": false,
+    "external_side_effect_allowed": false
+  },
+  "ready_for_internal_threshold_smoke_test": true
+}
