@@ -1,0 +1,14 @@
+{
+  "contract": "hardened_agent_retest_chat_only_normalization.contract.v0.1",
+  "phase": "PROD-8661..8700",
+  "status": "PASS",
+  "runtime_normalization_required": true,
+  "chat_only_sources_cannot_support_claim": true,
+  "not_allowed": [
+    "client claim",
+    "production",
+    "commercial claim",
+    "threshold lock",
+    "public release"
+  ]
+}

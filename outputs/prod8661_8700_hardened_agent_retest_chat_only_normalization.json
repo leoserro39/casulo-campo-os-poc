@@ -1,0 +1,18 @@
+{
+  "status": "PASS",
+  "phase": "PROD-8661..8700",
+  "decision": "PASS_WITH_RUNTIME_NORMALIZATION",
+  "generated_at": "2026-07-02T20:51:51.841396+00:00",
+  "hardened_agent_retest_reviewed": true,
+  "agent_response_layer_passed": true,
+  "runtime_chat_only_normalization_applied": true,
+  "chat_only_source_forced_to_inference": true,
+  "chat_only_can_support_claim_forced_false": true,
+  "chat_only_evidence_density_capped": true,
+  "retest_required_after_runtime_patch": true,
+  "ready_for_client_claim": false,
+  "ready_for_production": false,
+  "commercial_claim_allowed": false,
+  "threshold_lock_ready": false,
+  "micrograph_runtime_current_poc": false
+}

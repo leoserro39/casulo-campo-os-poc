@@ -1,0 +1,10 @@
+{
+  "version": "hardened_agent_retest_001_decision.v0.1",
+  "phase": "PROD-8661..8700",
+  "decision": "PASS_WITH_RUNTIME_NORMALIZATION",
+  "retest_required_after_runtime_patch": true,
+  "client_claim_allowed": false,
+  "production_allowed": false,
+  "commercial_claim_allowed": false,
+  "threshold_lock_ready": false
+}
